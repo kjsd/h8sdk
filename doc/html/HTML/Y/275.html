@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>idx</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/7.html#L387'>idx</a>               387 music.c            _UBYTE idx;</span>
+<span class='curline'><a href='../S/7.html#L400'>idx</a>               400 music.c            _SWORD idx;</span>
+<span class='curline'><a href='../S/7.html#L414'>idx</a>               414 music.c            _UBYTE idx;</span>
+<span class='curline'><a href='../S/7.html#L417'>idx</a>               417 music.c            idx = _hash(req_id, size);</span>
+<span class='curline'><a href='../S/7.html#L420'>idx</a>               420 music.c                if (rec_param_[idx].reqid == MUSIC_RECREQID_INVALID)</span>
+<span class='curline'><a href='../S/7.html#L427'>idx</a>               427 music.c                    rec_param_[idx].reqid = req_id;</span>
+<span class='curline'><a href='../S/7.html#L428'>idx</a>               428 music.c                    rec_param_[idx].part_idx = rec_part_;</span>
+<span class='curline'><a href='../S/7.html#L429'>idx</a>               429 music.c                    rec_param_[idx].note_idx = rec_position_.</span>
+<span class='curline'><a href='../S/7.html#L430'>idx</a>               430 music.c                        note[rec_param_[idx].part_idx];</span>
+<span class='curline'><a href='../S/7.html#L431'>idx</a>               431 music.c                    rec_notes_[rec_param_[idx].part_idx][rec_param_[idx].note_idx].</span>
+<span class='curline'><a href='../S/7.html#L434'>idx</a>               434 music.c                    _memcpy(&amp;rec_notes_[rec_param_[idx].part_idx]</span>
+<span class='curline'><a href='../S/7.html#L435'>idx</a>               435 music.c                            [rec_param_[idx].note_idx].tone,</span>
+<span class='curline'><a href='../S/7.html#L440'>idx</a>               440 music.c                    rec_position_.note[rec_param_[idx].part_idx]++;</span>
+<span class='curline'><a href='../S/7.html#L442'>idx</a>               442 music.c                    rec_parts_[rec_param_[idx].part_idx].size++;</span>
+<span class='curline'><a href='../S/7.html#L452'>idx</a>               452 music.c                    return rec_param_[idx].reqid;</span>
+<span class='curline'><a href='../S/7.html#L455'>idx</a>               455 music.c                idx = _next_ring(idx, _sizeof_array(rec_param_) - 1);</span>
+<span class='curline'><a href='../S/7.html#L463'>idx</a>               463 music.c            _UBYTE idx;</span>
+<span class='curline'><a href='../S/7.html#L466'>idx</a>               466 music.c            idx = _hash(key, size);</span>
+<span class='curline'><a href='../S/7.html#L469'>idx</a>               469 music.c                if (rec_param_[idx].reqid == key)</span>
+<span class='curline'><a href='../S/7.html#L471'>idx</a>               471 music.c                    rec_param_[idx].reqid = MUSIC_RECREQID_INVALID;</span>
+<span class='curline'><a href='../S/7.html#L474'>idx</a>               474 music.c                    return &amp;rec_notes_[rec_param_[idx].part_idx]</span>
+<span class='curline'><a href='../S/7.html#L475'>idx</a>               475 music.c                        [rec_param_[idx].note_idx];</span>
+<span class='curline'><a href='../S/7.html#L478'>idx</a>               478 music.c                idx = _next_ring(idx, _sizeof_array(rec_param_) - 1);</span>
+<span class='curline'><a href='../S/12.html#L98'>idx</a>                98 sound.c        static void deleteTone_(_UBYTE idx);</span>
+<span class='curline'><a href='../S/12.html#L138'>idx</a>               138 sound.c        void SOUND_setTone(_UBYTE idx, const SOUND_Tone* tone)</span>
+<span class='curline'><a href='../S/12.html#L140'>idx</a>               140 sound.c            _assert(idx &lt; SOUND_MAX_PRONOUNCE);</span>
+<span class='curline'><a href='../S/12.html#L146'>idx</a>               146 sound.c            if (tones_[idx].freq == SOUND_NA)</span>
+<span class='curline'><a href='../S/12.html#L150'>idx</a>               150 sound.c            tones_[idx] = *tone;</span>
+<span class='curline'><a href='../S/12.html#L151'>idx</a>               151 sound.c            is_reverb_[idx] = _FALSE;</span>
+<span class='curline'><a href='../S/12.html#L152'>idx</a>               152 sound.c            remove_tone_[idx] = _FALSE;</span>
+<span class='curline'><a href='../S/12.html#L156'>idx</a>               156 sound.c                tone_pos_ = idx;</span>
+<span class='curline'><a href='../S/12.html#L162'>idx</a>               162 sound.c                evlp_pos_[idx] = 0;</span>
+<span class='curline'><a href='../S/12.html#L174'>idx</a>               174 sound.c                evlp_pos_[idx] = tones_[idx].evlp-&gt;size - 1;</span>
+<span class='curline'><a href='../S/12.html#L192'>idx</a>               192 sound.c        void SOUND_removeTone(_UBYTE idx)</span>
+<span class='curline'><a href='../S/12.html#L196'>idx</a>               196 sound.c            _assert(idx &lt; SOUND_MAX_PRONOUNCE);</span>
+<span class='curline'><a href='../S/12.html#L198'>idx</a>               198 sound.c            if (tones_[idx].freq == SOUND_NA)</span>
+<span class='curline'><a href='../S/12.html#L208'>idx</a>               208 sound.c                if (!is_reverb_[idx] &amp;&amp; (tones_[idx].reverb != NULL))</span>
+<span class='curline'><a href='../S/12.html#L210'>idx</a>               210 sound.c                    evlp_pos_[idx] = 0;</span>
+<span class='curline'><a href='../S/12.html#L211'>idx</a>               211 sound.c                    is_reverb_[idx] = _TRUE;</span>
+<span class='curline'><a href='../S/12.html#L214'>idx</a>               214 sound.c                remove_tone_[idx] = _TRUE;</span>
+<span class='curline'><a href='../S/12.html#L220'>idx</a>               220 sound.c                deleteTone_(idx);</span>
+<span class='curline'><a href='../S/12.html#L422'>idx</a>               422 sound.c        static void deleteTone_(_UBYTE idx)</span>
+<span class='curline'><a href='../S/12.html#L424'>idx</a>               424 sound.c            _assert(idx &lt; SOUND_MAX_PRONOUNCE);</span>
+<span class='curline'><a href='../S/12.html#L425'>idx</a>               425 sound.c            _assert((tones_[idx].freq != SOUND_NA) &amp;&amp;</span>
+<span class='curline'><a href='../S/12.html#L426'>idx</a>               426 sound.c                        (tones_[idx].evlp != NULL));</span>
+<span class='curline'><a href='../S/12.html#L430'>idx</a>               430 sound.c            tones_[idx].freq = SOUND_NA;</span>
+<span class='curline'><a href='../S/12.html#L431'>idx</a>               431 sound.c            tones_[idx].evlp = NULL;</span>
+<span class='curline'><a href='../S/12.html#L432'>idx</a>               432 sound.c            tones_[idx].reverb = NULL;</span>
+<span class='curline'><a href='../S/12.html#L433'>idx</a>               433 sound.c            tones_[idx].loop = _FALSE;</span>
+<span class='curline'><a href='../S/12.html#L436'>idx</a>               436 sound.c            if ((num_of_tones_ &gt; 0) &amp;&amp; (tone_pos_ == idx))</span>
+<span class='curline'><a href='../S/13.html#L108'>idx</a>               108 ssrp.c         SSRP_Address SSRP_getNode(_UBYTE idx)</span>
+<span class='curline'><a href='../S/13.html#L118'>idx</a>               118 ssrp.c                     if (num++ == idx)</span>
+<span class='curline'><a href='../S/13.html#L518'>idx</a>               518 ssrp.c             _SWORD idx = _hash(addr, SSRP_MAX_NODE);</span>
+<span class='curline'><a href='../S/13.html#L523'>idx</a>               523 ssrp.c                 if (pear_.addr[idx] == addr)</span>
+<span class='curline'><a href='../S/13.html#L525'>idx</a>               525 ssrp.c                     rtn = idx;</span>
+<span class='curline'><a href='../S/13.html#L528'>idx</a>               528 ssrp.c                 idx++;</span>
+<span class='curline'><a href='../S/13.html#L537'>idx</a>               537 ssrp.c             _SWORD idx = _hash(addr, SSRP_MAX_NODE);</span>
+<span class='curline'><a href='../S/13.html#L542'>idx</a>               542 ssrp.c                 if (pear_.addr[idx] == SSRP_ADDR_INVALID)</span>
+<span class='curline'><a href='../S/13.html#L544'>idx</a>               544 ssrp.c                     pear_.addr[idx] = addr;</span>
+<span class='curline'><a href='../S/13.html#L549'>idx</a>               549 ssrp.c                 else if (pear_.addr[idx] == addr)</span>
+<span class='curline'><a href='../S/13.html#L553'>idx</a>               553 ssrp.c                 idx++;</span>
+<span class='curline'><a href='../S/13.html#L562'>idx</a>               562 ssrp.c             _SWORD idx = _hash(addr, SSRP_MAX_NODE);</span>
+<span class='curline'><a href='../S/13.html#L567'>idx</a>               567 ssrp.c                 if (pear_.addr[idx] == addr)</span>
+<span class='curline'><a href='../S/13.html#L569'>idx</a>               569 ssrp.c                     pear_.addr[idx] = SSRP_ADDR_INVALID;</span>
+<span class='curline'><a href='../S/13.html#L574'>idx</a>               574 ssrp.c                 idx++;</span>
+</pre>
+</body>
+</html>

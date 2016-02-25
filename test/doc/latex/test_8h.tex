@@ -1,0 +1,567 @@
+\subsection{test.\+h ファイル}
+\label{test_8h}\index{test.\+h@{test.\+h}}
+
+
+H8\+S\+D\+Kユニットテストモジュール  
+
+
+test.\+h の依存先関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=134pt]{test_8h__incl}
+\end{center}
+\end{figure}
+\subsubsection*{マクロ定義}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{test_8h_acefd270dacb1cf3685e5069fb5ea292c_acefd270dacb1cf3685e5069fb5ea292c}{T\+E\+S\+T\+\_\+\+F\+A\+I\+L\+U\+R\+E}(x)~\+\_\+printf(\char`\"{}$\ast$$\ast$$\ast$ Failed\+: \%s\textbackslash{}r\textbackslash{}n\char`\"{}, (x));
+\end{DoxyCompactItemize}
+\subsubsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{test_8h_a6288eba0f8e8ad3ab1544ad731eb7667_a6288eba0f8e8ad3ab1544ad731eb7667}{main} (void)
+\begin{DoxyCompactList}\small\item\em ユーザーエントリ関数 \end{DoxyCompactList}\item 
+static char $\ast$ \hyperlink{test_8h_aa0788b0471ba5280e8f26585f5963d1b_aa0788b0471ba5280e8f26585f5963d1b}{test\+\_\+sci} ()
+\begin{DoxyCompactList}\small\item\em シルアルドライバテスト \end{DoxyCompactList}\item 
+static char $\ast$ \hyperlink{test_8h_a61cf385a427a8b54117135ece9266ae7_a61cf385a427a8b54117135ece9266ae7}{test\+\_\+stdio} ()
+\begin{DoxyCompactList}\small\item\em stdioモジュールテスト \end{DoxyCompactList}\item 
+static char $\ast$ \hyperlink{test_8h_af086b0dcce5bab007fee47e1793bf0d4_af086b0dcce5bab007fee47e1793bf0d4}{test\+\_\+stdlib} ()
+\begin{DoxyCompactList}\small\item\em stdlibモジュールテスト \end{DoxyCompactList}\item 
+static char $\ast$ \hyperlink{test_8h_a601f526180e9f9e0a07e0e4c4e448d35_a601f526180e9f9e0a07e0e4c4e448d35}{test\+\_\+string} ()
+\begin{DoxyCompactList}\small\item\em stringモジュールテスト \end{DoxyCompactList}\item 
+static char $\ast$ \hyperlink{test_8h_a8cb2e931c1f097d0256c2298d745435e_a8cb2e931c1f097d0256c2298d745435e}{test\+\_\+assert} ()
+\begin{DoxyCompactList}\small\item\em assertモジュールテスト \end{DoxyCompactList}\item 
+static char $\ast$ \hyperlink{test_8h_a0efc2b36ae8892928aac1e39b1ac9fa6_a0efc2b36ae8892928aac1e39b1ac9fa6}{test\+\_\+ioctl} ()
+\begin{DoxyCompactList}\small\item\em I\+O\+C\+T\+Lドライバテスト \end{DoxyCompactList}\item 
+static char $\ast$ \hyperlink{test_8h_a38b2597531d6d1e45414207f17fd0deb_a38b2597531d6d1e45414207f17fd0deb}{test\+\_\+led} ()
+\begin{DoxyCompactList}\small\item\em L\+E\+Dドライバテスト \end{DoxyCompactList}\item 
+static char $\ast$ \hyperlink{test_8h_a13f79636806047012a2ea964e4900942_a13f79636806047012a2ea964e4900942}{test\+\_\+lcd} ()
+\begin{DoxyCompactList}\small\item\em L\+C\+Dドライバテスト \end{DoxyCompactList}\item 
+static char $\ast$ \hyperlink{test_8h_a1f9df45f5d579406ea4ffb5d9d3d6a58_a1f9df45f5d579406ea4ffb5d9d3d6a58}{test\+\_\+push\+\_\+switch} ()
+\begin{DoxyCompactList}\small\item\em プッシュスイッチドライバテスト \end{DoxyCompactList}\item 
+static char $\ast$ \hyperlink{test_8h_a9a12ecf1356a7470997321c8a64ee7b7_a9a12ecf1356a7470997321c8a64ee7b7}{test\+\_\+adc} ()
+\begin{DoxyCompactList}\small\item\em A/\+Dコンバータドライバテスト \end{DoxyCompactList}\item 
+static char $\ast$ \hyperlink{test_8h_acf1fa7d64313a77314c05da8bebef6e6_acf1fa7d64313a77314c05da8bebef6e6}{test\+\_\+ps2} ()
+\begin{DoxyCompactList}\small\item\em P\+S/2ドライバテスト \end{DoxyCompactList}\item 
+static char $\ast$ \hyperlink{test_8h_a05b2818bcfa967ac105d6624ec854909_a05b2818bcfa967ac105d6624ec854909}{test\+\_\+sound} ()
+\begin{DoxyCompactList}\small\item\em サウンドドライバテスト \end{DoxyCompactList}\item 
+static char $\ast$ \hyperlink{test_8h_ab83bade3caf130990bf5516b6455e715_ab83bade3caf130990bf5516b6455e715}{test\+\_\+music} ()
+\begin{DoxyCompactList}\small\item\em 楽曲演奏モジュールテスト \end{DoxyCompactList}\item 
+static char $\ast$ \hyperlink{test_8h_a81969d7889d0add7566986d3ada39730_a81969d7889d0add7566986d3ada39730}{test\+\_\+ssrp} ()
+\begin{DoxyCompactList}\small\item\em S\+S\+R\+Pモジュールテスト \end{DoxyCompactList}\item 
+static char $\ast$ \hyperlink{test_8h_a9ae0c310318e7e033f6501180bf2db63_a9ae0c310318e7e033f6501180bf2db63}{test\+\_\+run} (const U\+T\+E\+S\+T\+\_\+\+Func $\ast$test\+\_\+list, \+\_\+\+U\+W\+O\+R\+D num)
+\begin{DoxyCompactList}\small\item\em テスト実行 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{変数}
+\begin{DoxyCompactItemize}
+\item 
+static const U\+T\+E\+S\+T\+\_\+\+Func \hyperlink{test_8h_aecea56d22e41e21655d6b3ec2a285773_aecea56d22e41e21655d6b3ec2a285773}{test\+\_\+basic\+\_\+drivers\+\_\+} \mbox{[}$\,$\mbox{]}
+\item 
+static const U\+T\+E\+S\+T\+\_\+\+Func \hyperlink{test_8h_abe2ed58a39ac6eb45ded0391dbcc40e7_abe2ed58a39ac6eb45ded0391dbcc40e7}{test\+\_\+drivers\+\_\+} \mbox{[}$\,$\mbox{]}
+\item 
+static const U\+T\+E\+S\+T\+\_\+\+Func \hyperlink{test_8h_af4c691f85a9ae8b544bc41f208273702_af4c691f85a9ae8b544bc41f208273702}{test\+\_\+modules\+\_\+} \mbox{[}$\,$\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsubsection{詳解}
+H8\+S\+D\+Kユニットテストモジュール 
+
+H8\+S\+D\+Kインタフェースのテストを行う。実行する前に\+H8基板と\+P\+Cをシリアル ポートで接続し、シリアル出力を\+P\+Cからモニタリングすること。接続設定 は\+S\+C\+I\+\_\+initを参照。~\newline
+テスト対象となるモジュールはコンパイルスイッチによって決定する。マ クロ定義は以下。
+
+\begin{DoxyItemize}
+\item {\ttfamily T\+E\+S\+T\+\_\+\+A\+S\+S\+E\+R\+T} assert.\+hのテストを有効 \item {\ttfamily T\+E\+S\+T\+\_\+\+S\+T\+D\+C} stdio.\+h, stdlib.\+h, string.\+h のテストを有効 \item {\ttfamily T\+E\+S\+T\+\_\+\+L\+C\+D} lcd.\+hのテストを有効 \item {\ttfamily T\+E\+S\+T\+\_\+\+P\+U\+S\+H\+\_\+\+S\+W\+I\+T\+C\+H} push\+\_\+switch.\+hのテストを有効 \item {\ttfamily T\+E\+S\+T\+\_\+\+A\+D\+C} adc.\+hのテストを有効 \item {\ttfamily T\+E\+S\+T\+\_\+\+P\+S2} ps2.\+hのテストを有効 \item {\ttfamily T\+E\+S\+T\+\_\+\+S\+O\+U\+N\+D} sound.\+hのテストを有効 \item {\ttfamily T\+E\+S\+T\+\_\+\+M\+U\+S\+I\+C} music.\+hのテストを有効 \item {\ttfamily T\+E\+S\+T\+\_\+\+S\+S\+R\+P} ssrp.\+hのテストを有効\end{DoxyItemize}
+\begin{DoxyNote}{覚え書き}
+\begin{DoxyItemize}
+\item music.\+hのテストをするときは\+U\+S\+E\+\_\+\+M\+U\+S\+I\+C\+\_\+\+R\+E\+C\+O\+R\+D、ssrp.\+hのテストをす るときは\+U\+S\+E\+\_\+\+L\+O\+O\+P\+B\+A\+C\+K\+\_\+\+S\+S\+R\+Pをdefineしてコンパイルした\+H8\+S\+D\+Kを用意する こと。 \item P\+S/2ドライバをテストするときは基板から\+E8aエミュレータを外すこと。 \item assertモジュールをテストするときは他のドライバとモジュールのテ ストは行われず、確認方法もデバッガ(H\+E\+Wなど)を使うしかない。 \item 全てのモジュールをテストすることはメモリ容量上できないので、テ スト対象ではないモジュールはh8sdk.\+libから外しておく。\end{DoxyItemize}
+ 
+\end{DoxyNote}
+
+
+\subsubsection{マクロ定義詳解}
+\index{test.\+h@{test.\+h}!T\+E\+S\+T\+\_\+\+F\+A\+I\+L\+U\+R\+E@{T\+E\+S\+T\+\_\+\+F\+A\+I\+L\+U\+R\+E}}
+\index{T\+E\+S\+T\+\_\+\+F\+A\+I\+L\+U\+R\+E@{T\+E\+S\+T\+\_\+\+F\+A\+I\+L\+U\+R\+E}!test.\+h@{test.\+h}}
+\paragraph[{T\+E\+S\+T\+\_\+\+F\+A\+I\+L\+U\+R\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+E\+S\+T\+\_\+\+F\+A\+I\+L\+U\+R\+E(
+\begin{DoxyParamCaption}
+\item[{}]{x}
+\end{DoxyParamCaption}
+)~\+\_\+printf(\char`\"{}$\ast$$\ast$$\ast$ Failed\+: \%s\textbackslash{}r\textbackslash{}n\char`\"{}, (x));}\label{test_8h_acefd270dacb1cf3685e5069fb5ea292c_acefd270dacb1cf3685e5069fb5ea292c}
+
+
+ test.\+h の 56 行目に定義があります。
+
+
+
+\subsubsection{関数詳解}
+\index{test.\+h@{test.\+h}!main@{main}}
+\index{main@{main}!test.\+h@{test.\+h}}
+\paragraph[{main(void)}]{\setlength{\rightskip}{0pt plus 5cm}void main (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{test_8h_a6288eba0f8e8ad3ab1544ad731eb7667_a6288eba0f8e8ad3ab1544ad731eb7667}
+
+
+ユーザーエントリ関数 
+
+\index{test.\+h@{test.\+h}!test\+\_\+sci@{test\+\_\+sci}}
+\index{test\+\_\+sci@{test\+\_\+sci}!test.\+h@{test.\+h}}
+\paragraph[{test\+\_\+sci()}]{\setlength{\rightskip}{0pt plus 5cm}static char$\ast$ test\+\_\+sci (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{test_8h_aa0788b0471ba5280e8f26585f5963d1b_aa0788b0471ba5280e8f26585f5963d1b}
+
+
+シルアルドライバテスト 
+
+\begin{DoxyParagraph}{テスト項目}
+\begin{DoxyItemize}
+\item 正しく初期化されている \item N\+U\+L終端文字列を送信できる。また、返り値は送信文字数になっている \item バイトストリームを送信できる。また、返り値は送信データ数になっ ている \item バイトストリームを受信できる。また、返り値は受信データ数になっ ている \item 非同期データ送信が機能する \item 非同期データ受信が機能する\end{DoxyItemize}
+
+\end{DoxyParagraph}
+
+\begin{DoxyRetVals}{戻り値}
+{\em 0} & テスト成功 \\
+\hline
+{\em 0以外} & テスト失敗。エラーメッセージ\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxySeeAlso}{参照}
+h8sdk/sci.\+h 
+\end{DoxySeeAlso}
+\index{test.\+h@{test.\+h}!test\+\_\+stdio@{test\+\_\+stdio}}
+\index{test\+\_\+stdio@{test\+\_\+stdio}!test.\+h@{test.\+h}}
+\paragraph[{test\+\_\+stdio()}]{\setlength{\rightskip}{0pt plus 5cm}static char$\ast$ test\+\_\+stdio (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{test_8h_a61cf385a427a8b54117135ece9266ae7_a61cf385a427a8b54117135ece9266ae7}
+
+
+stdioモジュールテスト 
+
+\begin{DoxyParagraph}{テスト項目}
+\begin{DoxyItemize}
+\item 固定文字列を出力できる \item 符号有り10進数値を出力できる \item 符号なし10進数値を出力できる \item 符号なし16進数値を出力できる \item 符号なし8進数値を出力できる \item \textquotesingle{}\textquotesingle{}を出力できる \item 上記全てを含む文字列を出力できる\end{DoxyItemize}
+
+\end{DoxyParagraph}
+
+\begin{DoxyRetVals}{戻り値}
+{\em 0} & テスト成功 \\
+\hline
+{\em 0以外} & テスト失敗。エラーメッセージ\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxySeeAlso}{参照}
+h8sdk/stdio.\+h 
+\end{DoxySeeAlso}
+\index{test.\+h@{test.\+h}!test\+\_\+stdlib@{test\+\_\+stdlib}}
+\index{test\+\_\+stdlib@{test\+\_\+stdlib}!test.\+h@{test.\+h}}
+\paragraph[{test\+\_\+stdlib()}]{\setlength{\rightskip}{0pt plus 5cm}static char$\ast$ test\+\_\+stdlib (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{test_8h_af086b0dcce5bab007fee47e1793bf0d4_af086b0dcce5bab007fee47e1793bf0d4}
+
+
+stdlibモジュールテスト 
+
+\begin{DoxyParagraph}{テスト項目}
+\begin{DoxyItemize}
+\item 1秒のスリープ機能が動作する。目視確認。 \item 次のリングバッファのインデックス値が取得できる。また、最大値の 次は0が返る。 \item 前のリングバッファのインデックス値が取得できるか。また、0の次は 最大値が返る。 \item size=素数で、size未満のキーを与えたときのハッシュ値は一意的 \item チェックサム値が正しく計算できる \item 16bit数値を10進文字列に変換できる \item 16bit数値を16進文字列に変換できる \item 16bit数値を8進文字列に変換できる \item 乱数値が取得できる。 \item 種を変えると乱数値が変化する\end{DoxyItemize}
+
+\end{DoxyParagraph}
+
+\begin{DoxyRetVals}{戻り値}
+{\em 0} & テスト成功 \\
+\hline
+{\em 0以外} & テスト失敗。エラーメッセージ\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxySeeAlso}{参照}
+h8sdk/stdlib.\+h 
+\end{DoxySeeAlso}
+\index{test.\+h@{test.\+h}!test\+\_\+string@{test\+\_\+string}}
+\index{test\+\_\+string@{test\+\_\+string}!test.\+h@{test.\+h}}
+\paragraph[{test\+\_\+string()}]{\setlength{\rightskip}{0pt plus 5cm}static char$\ast$ test\+\_\+string (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{test_8h_a601f526180e9f9e0a07e0e4c4e448d35_a601f526180e9f9e0a07e0e4c4e448d35}
+
+
+stringモジュールテスト 
+
+\begin{DoxyParagraph}{テスト項目}
+\begin{DoxyItemize}
+\item 文字列の長さを取得できる。終端文字は含まない。 \item 値が正しくメモリセットできる \item 値が正しくメモリコピーできる\end{DoxyItemize}
+
+\end{DoxyParagraph}
+
+\begin{DoxyRetVals}{戻り値}
+{\em 0} & テスト成功 \\
+\hline
+{\em 0以外} & テスト失敗。エラーメッセージ\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxySeeAlso}{参照}
+h8sdk/string.\+h 
+\end{DoxySeeAlso}
+\index{test.\+h@{test.\+h}!test\+\_\+assert@{test\+\_\+assert}}
+\index{test\+\_\+assert@{test\+\_\+assert}!test.\+h@{test.\+h}}
+\paragraph[{test\+\_\+assert()}]{\setlength{\rightskip}{0pt plus 5cm}static char$\ast$ test\+\_\+assert (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{test_8h_a8cb2e931c1f097d0256c2298d745435e_a8cb2e931c1f097d0256c2298d745435e}
+
+
+assertモジュールテスト 
+
+\begin{DoxyParagraph}{テスト項目}
+\begin{DoxyItemize}
+\item 真値を与えた場合はスルーする \item 偽値を与えた場合は処理が停止する\end{DoxyItemize}
+
+\end{DoxyParagraph}
+
+\begin{DoxyRetVals}{戻り値}
+{\em 0} & テスト成功 \\
+\hline
+{\em 0以外} & テスト失敗。エラーメッセージ\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxySeeAlso}{参照}
+h8sdk/assert.\+h 
+\end{DoxySeeAlso}
+\index{test.\+h@{test.\+h}!test\+\_\+ioctl@{test\+\_\+ioctl}}
+\index{test\+\_\+ioctl@{test\+\_\+ioctl}!test.\+h@{test.\+h}}
+\paragraph[{test\+\_\+ioctl()}]{\setlength{\rightskip}{0pt plus 5cm}static char$\ast$ test\+\_\+ioctl (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{test_8h_a0efc2b36ae8892928aac1e39b1ac9fa6_a0efc2b36ae8892928aac1e39b1ac9fa6}
+
+
+I\+O\+C\+T\+Lドライバテスト 
+
+\begin{DoxyParagraph}{テスト項目}
+\begin{DoxyItemize}
+\item 初期化でレジスタ値が0クリアされる \item セットした値を正しく取得できる\end{DoxyItemize}
+
+\end{DoxyParagraph}
+
+\begin{DoxyRetVals}{戻り値}
+{\em 0} & テスト成功 \\
+\hline
+{\em 0以外} & テスト失敗。エラーメッセージ\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxySeeAlso}{参照}
+h8sdk/ioctl.\+h 
+\end{DoxySeeAlso}
+\index{test.\+h@{test.\+h}!test\+\_\+led@{test\+\_\+led}}
+\index{test\+\_\+led@{test\+\_\+led}!test.\+h@{test.\+h}}
+\paragraph[{test\+\_\+led()}]{\setlength{\rightskip}{0pt plus 5cm}static char$\ast$ test\+\_\+led (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{test_8h_a38b2597531d6d1e45414207f17fd0deb_a38b2597531d6d1e45414207f17fd0deb}
+
+
+L\+E\+Dドライバテスト 
+
+\begin{DoxyParagraph}{テスト項目}
+\begin{DoxyItemize}
+\item 初期化で全\+L\+E\+Dポートのビットが立つ(\+O\+F\+F) \item L\+E\+D別に点灯できる \item L\+E\+D別に消灯できる \item L\+E\+D別に点灯状態を反転できる\end{DoxyItemize}
+
+\end{DoxyParagraph}
+
+\begin{DoxyRetVals}{戻り値}
+{\em 0} & テスト成功 \\
+\hline
+{\em 0以外} & テスト失敗。エラーメッセージ\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxySeeAlso}{参照}
+h8sdk/led.\+h 
+\end{DoxySeeAlso}
+\index{test.\+h@{test.\+h}!test\+\_\+lcd@{test\+\_\+lcd}}
+\index{test\+\_\+lcd@{test\+\_\+lcd}!test.\+h@{test.\+h}}
+\paragraph[{test\+\_\+lcd()}]{\setlength{\rightskip}{0pt plus 5cm}static char$\ast$ test\+\_\+lcd (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{test_8h_a13f79636806047012a2ea964e4900942_a13f79636806047012a2ea964e4900942}
+
+
+L\+C\+Dドライバテスト 
+
+\begin{DoxyParagraph}{テスト項目}
+\begin{DoxyItemize}
+\item 初期化後\+L\+C\+Dデータは全て0x20(空白)になる \item カーソル現在位置を設定/取得できる \item N\+U\+L終端文字列を出力できる。横の最大幅を越えた場合は自動改行され る。 \item 現在の\+L\+C\+D表示データを正しく取得できる \item バイトストリームデータを出力できる \item 設定最大値までのユーザー文字データを登録できる \item ユーザー文字データを出力できる\end{DoxyItemize}
+
+\end{DoxyParagraph}
+
+\begin{DoxyRetVals}{戻り値}
+{\em 0} & テスト成功 \\
+\hline
+{\em 0以外} & テスト失敗。エラーメッセージ\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxySeeAlso}{参照}
+h8sdk/lcd.\+h 
+\end{DoxySeeAlso}
+\index{test.\+h@{test.\+h}!test\+\_\+push\+\_\+switch@{test\+\_\+push\+\_\+switch}}
+\index{test\+\_\+push\+\_\+switch@{test\+\_\+push\+\_\+switch}!test.\+h@{test.\+h}}
+\paragraph[{test\+\_\+push\+\_\+switch()}]{\setlength{\rightskip}{0pt plus 5cm}static char$\ast$ test\+\_\+push\+\_\+switch (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{test_8h_a1f9df45f5d579406ea4ffb5d9d3d6a58_a1f9df45f5d579406ea4ffb5d9d3d6a58}
+
+
+プッシュスイッチドライバテスト 
+
+\begin{DoxyParagraph}{テスト項目}
+\begin{DoxyItemize}
+\item 初期化が正しく行える \item 瞬間の押下状態が取得でき、チャタリング防止できている \item 押下時に一度だけ状態を取得できる。 \item 押下時に一定間隔で状態を取得できる。\end{DoxyItemize}
+
+\end{DoxyParagraph}
+
+\begin{DoxyRetVals}{戻り値}
+{\em 0} & テスト成功 \\
+\hline
+{\em 0以外} & テスト失敗。エラーメッセージ\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxySeeAlso}{参照}
+h8sdk/push\+\_\+switch.\+h 
+\end{DoxySeeAlso}
+\index{test.\+h@{test.\+h}!test\+\_\+adc@{test\+\_\+adc}}
+\index{test\+\_\+adc@{test\+\_\+adc}!test.\+h@{test.\+h}}
+\paragraph[{test\+\_\+adc()}]{\setlength{\rightskip}{0pt plus 5cm}static char$\ast$ test\+\_\+adc (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{test_8h_a9a12ecf1356a7470997321c8a64ee7b7_a9a12ecf1356a7470997321c8a64ee7b7}
+
+
+A/\+Dコンバータドライバテスト 
+
+\begin{DoxyParagraph}{テスト項目}
+\begin{DoxyItemize}
+\item 初期化が正しく行える \item 無効のポートからはデータ取得できない \item 変換スタートしていないとデータ取得できない \item ノーマルモードで全ポートの最小値/最大値が取得できる \item スキャンモードで全ポートの最小値/最大値が取得できる \item ノーマルモードの場合はスタート後一度データを取得するとその後は もう一度スタートするまでデータ取得できない \item スキャンモードの場合は一度スタートすると明示的にストップするま でデータが取得できる\end{DoxyItemize}
+
+\end{DoxyParagraph}
+
+\begin{DoxyRetVals}{戻り値}
+{\em 0} & テスト成功 \\
+\hline
+{\em 0以外} & テスト失敗。エラーメッセージ\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxySeeAlso}{参照}
+h8sdk/adc.\+h 
+\end{DoxySeeAlso}
+\index{test.\+h@{test.\+h}!test\+\_\+ps2@{test\+\_\+ps2}}
+\index{test\+\_\+ps2@{test\+\_\+ps2}!test.\+h@{test.\+h}}
+\paragraph[{test\+\_\+ps2()}]{\setlength{\rightskip}{0pt plus 5cm}static char$\ast$ test\+\_\+ps2 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{test_8h_acf1fa7d64313a77314c05da8bebef6e6_acf1fa7d64313a77314c05da8bebef6e6}
+
+
+P\+S/2ドライバテスト 
+
+\begin{DoxyParagraph}{テスト項目}
+\begin{DoxyItemize}
+\item 初期化が正しく行える \item P\+S/2キーボード スキャンコードセット2のデータを取得できる\end{DoxyItemize}
+
+\end{DoxyParagraph}
+
+\begin{DoxyRetVals}{戻り値}
+{\em 0} & テスト成功 \\
+\hline
+{\em 0以外} & テスト失敗。エラーメッセージ\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxySeeAlso}{参照}
+h8sdk/ps2.\+h 
+\end{DoxySeeAlso}
+\index{test.\+h@{test.\+h}!test\+\_\+sound@{test\+\_\+sound}}
+\index{test\+\_\+sound@{test\+\_\+sound}!test.\+h@{test.\+h}}
+\paragraph[{test\+\_\+sound()}]{\setlength{\rightskip}{0pt plus 5cm}static char$\ast$ test\+\_\+sound (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{test_8h_a05b2818bcfa967ac105d6624ec854909_a05b2818bcfa967ac105d6624ec854909}
+
+
+サウンドドライバテスト 
+
+\begin{DoxyParagraph}{テスト項目}
+\begin{DoxyItemize}
+\item 初期化が正しく行える \item リバーブ、ループなしの単音を再生できる \item 音を停止できる \item リバーブあり、ループなしの単音を再生できる \item リバーブあり、ループありの単音を再生できる \item 3和音を再生できる \item ボリューム調節ができる \item 単音を逆再生できる \item 和音を逆再生できる\end{DoxyItemize}
+
+\end{DoxyParagraph}
+
+\begin{DoxyRetVals}{戻り値}
+{\em 0} & テスト成功 \\
+\hline
+{\em 0以外} & テスト失敗。エラーメッセージ\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxySeeAlso}{参照}
+h8sdk/sound.\+h 
+\end{DoxySeeAlso}
+\index{test.\+h@{test.\+h}!test\+\_\+music@{test\+\_\+music}}
+\index{test\+\_\+music@{test\+\_\+music}!test.\+h@{test.\+h}}
+\paragraph[{test\+\_\+music()}]{\setlength{\rightskip}{0pt plus 5cm}static char$\ast$ test\+\_\+music (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{test_8h_ab83bade3caf130990bf5516b6455e715_ab83bade3caf130990bf5516b6455e715}
+
+
+楽曲演奏モジュールテスト 
+
+\begin{DoxyParagraph}{テスト項目}
+\begin{DoxyItemize}
+\item 初期化が正しく行える \item 楽曲登録ができる \item 登録済みの楽曲を取得できる \item シングルパートの楽曲を再生できる \item 再生後自動的にストップ状態になる。 \item マルチパートの楽曲を再生できる \item 楽曲を逆再生できる \item 単音を録音できる \item 和音を録音できる \item 録音された楽曲を再生できる \item 録音された楽曲を逆再生できる \item 楽曲再生中に一時停止できる \item 楽曲のループ再生ができる\end{DoxyItemize}
+
+\end{DoxyParagraph}
+
+\begin{DoxyRetVals}{戻り値}
+{\em 0} & テスト成功 \\
+\hline
+{\em 0以外} & テスト失敗。エラーメッセージ\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxySeeAlso}{参照}
+h8sdk/music.\+h 
+\end{DoxySeeAlso}
+\index{test.\+h@{test.\+h}!test\+\_\+ssrp@{test\+\_\+ssrp}}
+\index{test\+\_\+ssrp@{test\+\_\+ssrp}!test.\+h@{test.\+h}}
+\paragraph[{test\+\_\+ssrp()}]{\setlength{\rightskip}{0pt plus 5cm}static char$\ast$ test\+\_\+ssrp (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{test_8h_a81969d7889d0add7566986d3ada39730_a81969d7889d0add7566986d3ada39730}
+
+
+S\+S\+R\+Pモジュールテスト 
+
+\begin{DoxyParagraph}{テスト項目}
+\begin{DoxyItemize}
+\item 初期化後、自ノードアドレスの数値文字列が設定されている \item 接続スタート前は接続数ゼロ \item 接続スタート前は接続ノードなし \item 接続スタート前は送信準備ができていない \item 接続スタート後、10数カウントでテストノードとの接続が完了する \item このとき、接続数が正しく取得できる \item このとき、接続ノードアドレスが正しく取得できる \item パラメータを指定してパケット送信ができる。返り値は送信ペイロー ドサイズと一致する \item パケットヘッダを指定してパケット送信ができる。返り値は送信ペイロー ドサイズと一致する \item パケットを受信できる \item 接続終了後は接続数ゼロ \item 接続終了後は接続ノードなし \item 接続終了後は送信準備ができていない\end{DoxyItemize}
+
+\end{DoxyParagraph}
+
+\begin{DoxyRetVals}{戻り値}
+{\em 0} & テスト成功 \\
+\hline
+{\em 0以外} & テスト失敗。エラーメッセージ\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxySeeAlso}{参照}
+h8sdk/ssrp.\+h 
+\end{DoxySeeAlso}
+\index{test.\+h@{test.\+h}!test\+\_\+run@{test\+\_\+run}}
+\index{test\+\_\+run@{test\+\_\+run}!test.\+h@{test.\+h}}
+\paragraph[{test\+\_\+run(const U\+T\+E\+S\+T\+\_\+\+Func $\ast$test\+\_\+list, \+\_\+\+U\+W\+O\+R\+D num)}]{\setlength{\rightskip}{0pt plus 5cm}static char$\ast$ test\+\_\+run (
+\begin{DoxyParamCaption}
+\item[{const U\+T\+E\+S\+T\+\_\+\+Func $\ast$}]{test\+\_\+list, }
+\item[{\+\_\+\+U\+W\+O\+R\+D}]{num}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{test_8h_a9ae0c310318e7e033f6501180bf2db63_a9ae0c310318e7e033f6501180bf2db63}
+
+
+テスト実行 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\tt in}  & {\em test\+\_\+list} & テストする関数リスト \\
+\hline
+\mbox{\tt in}  & {\em num} & テスト関数の個数\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em 0} & 全テスト成功 \\
+\hline
+{\em 0以外} & テスト失敗。エラーメッセージ \\
+\hline
+\end{DoxyRetVals}
+
+
+\subsubsection{変数詳解}
+\index{test.\+h@{test.\+h}!test\+\_\+basic\+\_\+drivers\+\_\+@{test\+\_\+basic\+\_\+drivers\+\_\+}}
+\index{test\+\_\+basic\+\_\+drivers\+\_\+@{test\+\_\+basic\+\_\+drivers\+\_\+}!test.\+h@{test.\+h}}
+\paragraph[{test\+\_\+basic\+\_\+drivers\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}const U\+T\+E\+S\+T\+\_\+\+Func test\+\_\+basic\+\_\+drivers\+\_\+\mbox{[}$\,$\mbox{]}\hspace{0.3cm}{\ttfamily [static]}}\label{test_8h_aecea56d22e41e21655d6b3ec2a285773_aecea56d22e41e21655d6b3ec2a285773}
+{\bfseries 初期値\+:}
+\begin{DoxyCode}
+= \{
+    test_ioctl,
+    test_led,
+    test_sci
+\}
+\end{DoxyCode}
+
+
+ test.\+h の 338 行目に定義があります。
+
+\index{test.\+h@{test.\+h}!test\+\_\+drivers\+\_\+@{test\+\_\+drivers\+\_\+}}
+\index{test\+\_\+drivers\+\_\+@{test\+\_\+drivers\+\_\+}!test.\+h@{test.\+h}}
+\paragraph[{test\+\_\+drivers\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}const U\+T\+E\+S\+T\+\_\+\+Func test\+\_\+drivers\+\_\+\mbox{[}$\,$\mbox{]}\hspace{0.3cm}{\ttfamily [static]}}\label{test_8h_abe2ed58a39ac6eb45ded0391dbcc40e7_abe2ed58a39ac6eb45ded0391dbcc40e7}
+{\bfseries 初期値\+:}
+\begin{DoxyCode}
+= \{
+
+    test_assert,
+
+
+    test_stdio,
+    test_stdlib,
+    test_string,
+
+
+    test_lcd,
+
+
+    test_push_switch,
+
+
+    test_adc,
+
+
+    test_ps2,
+
+
+    test_sound
+
+\}
+\end{DoxyCode}
+
+
+ test.\+h の 344 行目に定義があります。
+
+\index{test.\+h@{test.\+h}!test\+\_\+modules\+\_\+@{test\+\_\+modules\+\_\+}}
+\index{test\+\_\+modules\+\_\+@{test\+\_\+modules\+\_\+}!test.\+h@{test.\+h}}
+\paragraph[{test\+\_\+modules\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}const U\+T\+E\+S\+T\+\_\+\+Func test\+\_\+modules\+\_\+\mbox{[}$\,$\mbox{]}\hspace{0.3cm}{\ttfamily [static]}}\label{test_8h_af4c691f85a9ae8b544bc41f208273702_af4c691f85a9ae8b544bc41f208273702}
+{\bfseries 初期値\+:}
+\begin{DoxyCode}
+= \{
+
+    test_music,
+
+
+    test_ssrp
+
+\}
+\end{DoxyCode}
+
+
+ test.\+h の 370 行目に定義があります。
+

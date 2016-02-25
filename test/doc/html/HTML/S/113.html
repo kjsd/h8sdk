@@ -1,0 +1,969 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>test/test.c</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<a id='TOP' name='TOP'></a><h2 class='header'><a href='../mains.html'>root</a>/<a href='../files/121.html'>test</a>/test.c</h2>
+<em class='comment'>/* [&lt;][&gt;]<a href='#L160'>[^]</a><a href='#L897'>[v]</a>[top]<a href='#BOTTOM'>[bottom]</a><a href='../mains.html'>[index]</a><a href='../help.html'>[help]</a> */</em>
+<hr />
+<h2 class='header'>DEFINITIONS</h2>
+This source file includes following definitions.
+<ol>
+<li><a href='#L160' title='Defined at 160.'>test_sci</a></li>
+<li><a href='#L190' title='Defined at 190.'>test_ioctl</a></li>
+<li><a href='#L211' title='Defined at 211.'>test_led</a></li>
+<li><a href='#L235' title='Defined at 235.'>test_stdio</a></li>
+<li><a href='#L251' title='Defined at 251.'>test_stdlib</a></li>
+<li><a href='#L302' title='Defined at 302.'>test_string</a></li>
+<li><a href='#L331' title='Defined at 331.'>test_assert</a></li>
+<li><a href='#L341' title='Defined at 341.'>test_lcd</a></li>
+<li><a href='#L404' title='Defined at 404.'>test_push_switch</a></li>
+<li><a href='#L446' title='Defined at 446.'>test_adc</a></li>
+<li><a href='#L548' title='Defined at 548.'>test_ps2</a></li>
+<li><a href='#L575' title='Defined at 575.'>test_sound</a></li>
+<li><a href='#L676' title='Defined at 676.'>test_music</a></li>
+<li><a href='#L818' title='Defined at 818.'>test_ssrp</a></li>
+<li><a href='#L886' title='Defined at 886.'>test_run</a></li>
+<li><a href='#L897' title='Defined at 897.'>main</a></li>
+</ol>
+<hr />
+<pre>
+<a id='L1' name='L1'></a>   1 <em class='comment'>/**</em>
+<a id='L2' name='L2'></a>   2 <em class='comment'> * @file test.c</em>
+<a id='L3' name='L3'></a>   3 <em class='comment'> *</em>
+<a id='L4' name='L4'></a>   4 <em class='comment'> * @version $Id: test.c 157 2009-03-19 08:40:01Z minoru $</em>
+<a id='L5' name='L5'></a>   5 <em class='comment'> * @version $Name:$</em>
+<a id='L6' name='L6'></a>   6 <em class='comment'> *</em>
+<a id='L7' name='L7'></a>   7 <em class='comment'> * @brief This file contains the implementation of modules which are</em>
+<a id='L8' name='L8'></a>   8 <em class='comment'> * unit test for H8SDK.</em>
+<a id='L9' name='L9'></a>   9 <em class='comment'> *</em>
+<a id='L10' name='L10'></a>  10 <em class='comment'> * @author Kenji MINOURA / kenji@kandj.org</em>
+<a id='L11' name='L11'></a>  11 <em class='comment'> *</em>
+<a id='L12' name='L12'></a>  12 <em class='comment'> * Copyright (c) 2008 K&amp;J Software Design, Ltd All rights reserved.</em>
+<a id='L13' name='L13'></a>  13 <em class='comment'> *</em>
+<a id='L14' name='L14'></a>  14 <em class='comment'> * @see &lt;related_items&gt;</em>
+<a id='L15' name='L15'></a>  15 <em class='comment'> ***********************************************************************/</em>
+<a id='L16' name='L16'></a>  16 <em class='sharp'>#include</em> &lt;h8sdk/ioctl.h&gt;
+<a id='L17' name='L17'></a>  17 <em class='sharp'>#include</em> &lt;h8sdk/led.h&gt;
+<a id='L18' name='L18'></a>  18 <em class='sharp'>#include</em> &lt;h8sdk/sci.h&gt;
+<a id='L19' name='L19'></a>  19 
+<a id='L20' name='L20'></a>  20 <em class='sharp'>#ifdef</em> <a href='../Y/165.html' title='Multiple used in 3 places.'>TEST_STDC</a>
+<a id='L21' name='L21'></a>  21 <em class='sharp'>#include</em> &lt;h8sdk/stdio.h&gt;
+<a id='L22' name='L22'></a>  22 <em class='sharp'>#include</em> &lt;h8sdk/stdlib.h&gt;
+<a id='L23' name='L23'></a>  23 <em class='sharp'>#include</em> &lt;h8sdk/string.h&gt;
+<a id='L24' name='L24'></a>  24 <em class='sharp'>#endif</em> <em class='comment'>/* TEST_STDC */</em>
+<a id='L25' name='L25'></a>  25 
+<a id='L26' name='L26'></a>  26 <em class='sharp'>#ifdef</em> <a href='../Y/158.html' title='Multiple used in 3 places.'>TEST_ASSERT</a>
+<a id='L27' name='L27'></a>  27 <em class='sharp'>#include</em> &lt;h8sdk/assert.h&gt;
+<a id='L28' name='L28'></a>  28 <em class='sharp'>#endif</em> <em class='comment'>/* TEST_ASSERT */</em>
+<a id='L29' name='L29'></a>  29 
+<a id='L30' name='L30'></a>  30 <em class='sharp'>#ifdef</em> <a href='../Y/159.html' title='Multiple used in 3 places.'>TEST_LCD</a>
+<a id='L31' name='L31'></a>  31 <em class='sharp'>#include</em> &lt;h8sdk/lcd.h&gt;
+<a id='L32' name='L32'></a>  32 <em class='sharp'>#endif</em> <em class='comment'>/* TEST_LCD */</em>
+<a id='L33' name='L33'></a>  33 
+<a id='L34' name='L34'></a>  34 <em class='sharp'>#ifdef</em> <a href='../Y/162.html' title='Multiple used in 3 places.'>TEST_PUSH_SWITCH</a>
+<a id='L35' name='L35'></a>  35 <em class='sharp'>#include</em> &lt;h8sdk/push_switch.h&gt;
+<a id='L36' name='L36'></a>  36 <em class='sharp'>#endif</em> <em class='comment'>/* TEST_PUSH_SWITCH */</em>
+<a id='L37' name='L37'></a>  37 
+<a id='L38' name='L38'></a>  38 <em class='sharp'>#ifdef</em> <a href='../Y/157.html' title='Multiple used in 3 places.'>TEST_ADC</a>
+<a id='L39' name='L39'></a>  39 <em class='sharp'>#include</em> &lt;h8sdk/adc.h&gt;
+<a id='L40' name='L40'></a>  40 <em class='sharp'>#endif</em> <em class='comment'>/* TEST_ADC */</em>
+<a id='L41' name='L41'></a>  41 
+<a id='L42' name='L42'></a>  42 <em class='sharp'>#ifdef</em> <a href='../Y/161.html' title='Multiple used in 4 places.'>TEST_PS2</a>
+<a id='L43' name='L43'></a>  43 <em class='sharp'>#include</em> &lt;h8sdk/ps2.h&gt;
+<a id='L44' name='L44'></a>  44 <em class='sharp'>#include</em> &lt;h8sdk/kbd_jp106.h&gt;
+<a id='L45' name='L45'></a>  45 <em class='sharp'>#endif</em> <em class='comment'>/* TEST_PS2 */</em>
+<a id='L46' name='L46'></a>  46 
+<a id='L47' name='L47'></a>  47 <em class='sharp'>#ifdef</em> <a href='../Y/163.html' title='Multiple used in 7 places.'>TEST_SOUND</a>
+<a id='L48' name='L48'></a>  48 <em class='sharp'>#include</em> &lt;h8sdk/sound.h&gt;
+<a id='L49' name='L49'></a>  49 <em class='sharp'>#endif</em> <em class='comment'>/* TEST_SOUND */</em>
+<a id='L50' name='L50'></a>  50 
+<a id='L51' name='L51'></a>  51 <em class='sharp'>#if</em> <strong class='reserved'>defined</strong>(<a href='../Y/163.html' title='Multiple used in 7 places.'>TEST_SOUND</a>) || <strong class='reserved'>defined</strong>(<a href='../Y/160.html' title='Multiple used in 7 places.'>TEST_MUSIC</a>)
+<a id='L52' name='L52'></a>  52 <em class='sharp'>#include</em> &lt;h8sdk/envelope.h&gt;
+<a id='L53' name='L53'></a>  53 <em class='sharp'>#endif</em>
+<a id='L54' name='L54'></a>  54 
+<a id='L55' name='L55'></a>  55 <em class='sharp'>#ifdef</em> <a href='../Y/160.html' title='Multiple used in 7 places.'>TEST_MUSIC</a>
+<a id='L56' name='L56'></a>  56 <em class='sharp'>#include</em> &lt;h8sdk/music.h&gt;
+<a id='L57' name='L57'></a>  57 <em class='sharp'>#endif</em> <em class='comment'>/* TEST_MUSIC */</em>
+<a id='L58' name='L58'></a>  58 
+<a id='L59' name='L59'></a>  59 <em class='sharp'>#ifdef</em> <a href='../Y/164.html' title='Multiple used in 3 places.'>TEST_SSRP</a>
+<a id='L60' name='L60'></a>  60 <em class='sharp'>#include</em> &lt;h8sdk/ssrp.h&gt;
+<a id='L61' name='L61'></a>  61 <em class='sharp'>#include</em> &lt;h8sdk/ssrp_skel.h&gt;
+<a id='L62' name='L62'></a>  62 <em class='sharp'>#endif</em> <em class='comment'>/* TEST_SSRP */</em>
+<a id='L63' name='L63'></a>  63 
+<a id='L64' name='L64'></a>  64 <em class='sharp'>#include</em> "<a href='114.html'>test.h</a>"
+<a id='L65' name='L65'></a>  65 
+<a id='L66' name='L66'></a>  66 
+<a id='L67' name='L67'></a>  67 <strong class='reserved'>int</strong> <a href='../Y/170.html' title='Multiple used in 2 places.'>UTEST_run_count</a> = 0;
+<a id='L68' name='L68'></a>  68 
+<a id='L69' name='L69'></a>  69 <em class='sharp'>#ifdef</em> <a href='../Y/160.html' title='Multiple used in 7 places.'>TEST_MUSIC</a>
+<a id='L70' name='L70'></a>  70 <em class='sharp'>#define</em> <a href='../R/4.html' title='Multiple referred from 27 places.'>TS_BAR_LEN</a> MUSIC_L0
+<a id='L71' name='L71'></a>  71 
+<a id='L72' name='L72'></a>  72 <strong class='reserved'>static</strong> <strong class='reserved'>const</strong> <a href='../Y/64.html' title='Multiple used in 3 places.'>MUSIC_Note</a> <a href='../Y/238.html' title='Multiple used in 2 places.'>ts_notes_a</a>[] = <em class='brace'>{</em>
+<a id='L73' name='L73'></a>  73     <em class='brace'>{</em> <em class='brace'>{</em> <a href='../Y/114.html' title='Multiple used in 4 places.'>SOUND_E2</a>, &amp;<a href='../Y/16.html' title='Multiple used in 34 places.'>ENVELOPE_harp</a>, &amp;<a href='../Y/17.html' title='Multiple used in 34 places.'>ENVELOPE_harp_reverb</a>, <a href='../Y/171.html' title='Multiple used in 49 places.'>_FALSE</a> <em class='brace'>}</em>,
+<a id='L74' name='L74'></a>  74       0, <a href='../Y/62.html' title='Multiple used in 19 places.'>MUSIC_L4</a> <em class='brace'>}</em>,
+<a id='L75' name='L75'></a>  75     <em class='brace'>{</em> <em class='brace'>{</em> <a href='../Y/114.html' title='Multiple used in 4 places.'>SOUND_E2</a>, &amp;<a href='../Y/16.html' title='Multiple used in 34 places.'>ENVELOPE_harp</a>, &amp;<a href='../Y/17.html' title='Multiple used in 34 places.'>ENVELOPE_harp_reverb</a>, <a href='../Y/171.html' title='Multiple used in 49 places.'>_FALSE</a> <em class='brace'>}</em>,
+<a id='L76' name='L76'></a>  76       <a href='../Y/62.html' title='Multiple used in 19 places.'>MUSIC_L4</a>, <a href='../Y/63.html' title='Multiple used in 10 places.'>MUSIC_L8</a> <em class='brace'>}</em>,
+<a id='L77' name='L77'></a>  77     <em class='brace'>{</em> <em class='brace'>{</em> <a href='../Y/117.html' title='Multiple used in 3 places.'>SOUND_F2</a>, &amp;<a href='../Y/16.html' title='Multiple used in 34 places.'>ENVELOPE_harp</a>, &amp;<a href='../Y/17.html' title='Multiple used in 34 places.'>ENVELOPE_harp_reverb</a>, <a href='../Y/171.html' title='Multiple used in 49 places.'>_FALSE</a> <em class='brace'>}</em>,
+<a id='L78' name='L78'></a>  78       <a href='../Y/62.html' title='Multiple used in 19 places.'>MUSIC_L4</a> + <a href='../Y/63.html' title='Multiple used in 10 places.'>MUSIC_L8</a>, <a href='../Y/63.html' title='Multiple used in 10 places.'>MUSIC_L8</a> <em class='brace'>}</em>,
+<a id='L79' name='L79'></a>  79     <em class='brace'>{</em> <em class='brace'>{</em> <a href='../Y/120.html' title='Multiple used in 3 places.'>SOUND_G2</a>, &amp;<a href='../Y/16.html' title='Multiple used in 34 places.'>ENVELOPE_harp</a>, &amp;<a href='../Y/17.html' title='Multiple used in 34 places.'>ENVELOPE_harp_reverb</a>, <a href='../Y/171.html' title='Multiple used in 49 places.'>_FALSE</a> <em class='brace'>}</em>,
+<a id='L80' name='L80'></a>  80       <a href='../Y/61.html' title='Multiple used in 17 places.'>MUSIC_L2</a>, <a href='../Y/62.html' title='Multiple used in 19 places.'>MUSIC_L4</a> <em class='brace'>}</em>,
+<a id='L81' name='L81'></a>  81     <em class='brace'>{</em> <em class='brace'>{</em> <a href='../Y/108.html' title='Multiple used in 5 places.'>SOUND_C2</a>, &amp;<a href='../Y/16.html' title='Multiple used in 34 places.'>ENVELOPE_harp</a>, &amp;<a href='../Y/17.html' title='Multiple used in 34 places.'>ENVELOPE_harp_reverb</a>, <a href='../Y/171.html' title='Multiple used in 49 places.'>_FALSE</a> <em class='brace'>}</em>,
+<a id='L82' name='L82'></a>  82       <a href='../Y/61.html' title='Multiple used in 17 places.'>MUSIC_L2</a> + <a href='../Y/62.html' title='Multiple used in 19 places.'>MUSIC_L4</a>, <a href='../Y/62.html' title='Multiple used in 19 places.'>MUSIC_L4</a> <em class='brace'>}</em>,
+<a id='L83' name='L83'></a>  83                                                 
+<a id='L84' name='L84'></a>  84     <em class='brace'>{</em> <em class='brace'>{</em> SOUND_A2, &amp;<a href='../Y/16.html' title='Multiple used in 34 places.'>ENVELOPE_harp</a>, &amp;<a href='../Y/17.html' title='Multiple used in 34 places.'>ENVELOPE_harp_reverb</a>, <a href='../Y/171.html' title='Multiple used in 49 places.'>_FALSE</a> <em class='brace'>}</em>,
+<a id='L85' name='L85'></a>  85       <a href='../S/113.html#L70' title='Defined at 70 in test/test.c.'>TS_BAR_LEN</a>, <a href='../Y/62.html' title='Multiple used in 19 places.'>MUSIC_L4</a> <em class='brace'>}</em>,
+<a id='L86' name='L86'></a>  86     <em class='brace'>{</em> <em class='brace'>{</em> <a href='../Y/120.html' title='Multiple used in 3 places.'>SOUND_G2</a>, &amp;<a href='../Y/16.html' title='Multiple used in 34 places.'>ENVELOPE_harp</a>, &amp;<a href='../Y/17.html' title='Multiple used in 34 places.'>ENVELOPE_harp_reverb</a>, <a href='../Y/171.html' title='Multiple used in 49 places.'>_FALSE</a> <em class='brace'>}</em>,
+<a id='L87' name='L87'></a>  87       <a href='../S/113.html#L70' title='Defined at 70 in test/test.c.'>TS_BAR_LEN</a> + <a href='../Y/62.html' title='Multiple used in 19 places.'>MUSIC_L4</a>, <a href='../Y/63.html' title='Multiple used in 10 places.'>MUSIC_L8</a> <em class='brace'>}</em>,
+<a id='L88' name='L88'></a>  88     <em class='brace'>{</em> <em class='brace'>{</em> <a href='../Y/117.html' title='Multiple used in 3 places.'>SOUND_F2</a>, &amp;<a href='../Y/16.html' title='Multiple used in 34 places.'>ENVELOPE_harp</a>, &amp;<a href='../Y/17.html' title='Multiple used in 34 places.'>ENVELOPE_harp_reverb</a>, <a href='../Y/171.html' title='Multiple used in 49 places.'>_FALSE</a> <em class='brace'>}</em>,
+<a id='L89' name='L89'></a>  89       <a href='../S/113.html#L70' title='Defined at 70 in test/test.c.'>TS_BAR_LEN</a> + <a href='../Y/62.html' title='Multiple used in 19 places.'>MUSIC_L4</a> + <a href='../Y/63.html' title='Multiple used in 10 places.'>MUSIC_L8</a>, <a href='../Y/63.html' title='Multiple used in 10 places.'>MUSIC_L8</a> <em class='brace'>}</em>,
+<a id='L90' name='L90'></a>  90     <em class='brace'>{</em> <em class='brace'>{</em> <a href='../Y/120.html' title='Multiple used in 3 places.'>SOUND_G2</a>, &amp;<a href='../Y/16.html' title='Multiple used in 34 places.'>ENVELOPE_harp</a>, &amp;<a href='../Y/17.html' title='Multiple used in 34 places.'>ENVELOPE_harp_reverb</a>, <a href='../Y/171.html' title='Multiple used in 49 places.'>_FALSE</a> <em class='brace'>}</em>,
+<a id='L91' name='L91'></a>  91       <a href='../S/113.html#L70' title='Defined at 70 in test/test.c.'>TS_BAR_LEN</a> + <a href='../Y/61.html' title='Multiple used in 17 places.'>MUSIC_L2</a>, <a href='../Y/62.html' title='Multiple used in 19 places.'>MUSIC_L4</a> <em class='brace'>}</em>,
+<a id='L92' name='L92'></a>  92     <em class='brace'>{</em> <em class='brace'>{</em> <a href='../Y/108.html' title='Multiple used in 5 places.'>SOUND_C2</a>, &amp;<a href='../Y/16.html' title='Multiple used in 34 places.'>ENVELOPE_harp</a>, &amp;<a href='../Y/17.html' title='Multiple used in 34 places.'>ENVELOPE_harp_reverb</a>, <a href='../Y/171.html' title='Multiple used in 49 places.'>_FALSE</a> <em class='brace'>}</em>,
+<a id='L93' name='L93'></a>  93       <a href='../S/113.html#L70' title='Defined at 70 in test/test.c.'>TS_BAR_LEN</a> + <a href='../Y/61.html' title='Multiple used in 17 places.'>MUSIC_L2</a> + <a href='../Y/62.html' title='Multiple used in 19 places.'>MUSIC_L4</a>, <a href='../Y/62.html' title='Multiple used in 19 places.'>MUSIC_L4</a> <em class='brace'>}</em>,
+<a id='L94' name='L94'></a>  94                                                 
+<a id='L95' name='L95'></a>  95     <em class='brace'>{</em> <em class='brace'>{</em> <a href='../Y/117.html' title='Multiple used in 3 places.'>SOUND_F2</a>, &amp;<a href='../Y/16.html' title='Multiple used in 34 places.'>ENVELOPE_harp</a>, &amp;<a href='../Y/17.html' title='Multiple used in 34 places.'>ENVELOPE_harp_reverb</a>, <a href='../Y/171.html' title='Multiple used in 49 places.'>_FALSE</a> <em class='brace'>}</em>,
+<a id='L96' name='L96'></a>  96       (<a href='../S/113.html#L70' title='Defined at 70 in test/test.c.'>TS_BAR_LEN</a> * 2), <a href='../Y/62.html' title='Multiple used in 19 places.'>MUSIC_L4</a> <em class='brace'>}</em>,
+<a id='L97' name='L97'></a>  97     <em class='brace'>{</em> <em class='brace'>{</em> <a href='../Y/114.html' title='Multiple used in 4 places.'>SOUND_E2</a>, &amp;<a href='../Y/16.html' title='Multiple used in 34 places.'>ENVELOPE_harp</a>, &amp;<a href='../Y/17.html' title='Multiple used in 34 places.'>ENVELOPE_harp_reverb</a>, <a href='../Y/171.html' title='Multiple used in 49 places.'>_FALSE</a> <em class='brace'>}</em>,
+<a id='L98' name='L98'></a>  98       (<a href='../S/113.html#L70' title='Defined at 70 in test/test.c.'>TS_BAR_LEN</a> * 2) + <a href='../Y/62.html' title='Multiple used in 19 places.'>MUSIC_L4</a>, <a href='../Y/63.html' title='Multiple used in 10 places.'>MUSIC_L8</a> <em class='brace'>}</em>,
+<a id='L99' name='L99'></a>  99     <em class='brace'>{</em> <em class='brace'>{</em> <a href='../Y/111.html' title='Multiple used in 2 places.'>SOUND_D2</a>, &amp;<a href='../Y/16.html' title='Multiple used in 34 places.'>ENVELOPE_harp</a>, &amp;<a href='../Y/17.html' title='Multiple used in 34 places.'>ENVELOPE_harp_reverb</a>, <a href='../Y/171.html' title='Multiple used in 49 places.'>_FALSE</a> <em class='brace'>}</em>,
+<a id='L100' name='L100'></a> 100       (<a href='../S/113.html#L70' title='Defined at 70 in test/test.c.'>TS_BAR_LEN</a> * 2) + <a href='../Y/62.html' title='Multiple used in 19 places.'>MUSIC_L4</a> + <a href='../Y/63.html' title='Multiple used in 10 places.'>MUSIC_L8</a>, <a href='../Y/63.html' title='Multiple used in 10 places.'>MUSIC_L8</a> <em class='brace'>}</em>,
+<a id='L101' name='L101'></a> 101     <em class='brace'>{</em> <em class='brace'>{</em> <a href='../Y/114.html' title='Multiple used in 4 places.'>SOUND_E2</a>, &amp;<a href='../Y/16.html' title='Multiple used in 34 places.'>ENVELOPE_harp</a>, &amp;<a href='../Y/17.html' title='Multiple used in 34 places.'>ENVELOPE_harp_reverb</a>, <a href='../Y/171.html' title='Multiple used in 49 places.'>_FALSE</a> <em class='brace'>}</em>,
+<a id='L102' name='L102'></a> 102       (<a href='../S/113.html#L70' title='Defined at 70 in test/test.c.'>TS_BAR_LEN</a> * 2) + <a href='../Y/61.html' title='Multiple used in 17 places.'>MUSIC_L2</a>, <a href='../Y/62.html' title='Multiple used in 19 places.'>MUSIC_L4</a> <em class='brace'>}</em>,
+<a id='L103' name='L103'></a> 103     <em class='brace'>{</em> <em class='brace'>{</em> <a href='../Y/108.html' title='Multiple used in 5 places.'>SOUND_C2</a>, &amp;<a href='../Y/16.html' title='Multiple used in 34 places.'>ENVELOPE_harp</a>, &amp;<a href='../Y/17.html' title='Multiple used in 34 places.'>ENVELOPE_harp_reverb</a>, <a href='../Y/171.html' title='Multiple used in 49 places.'>_FALSE</a> <em class='brace'>}</em>,
+<a id='L104' name='L104'></a> 104       (<a href='../S/113.html#L70' title='Defined at 70 in test/test.c.'>TS_BAR_LEN</a> * 2) + <a href='../Y/61.html' title='Multiple used in 17 places.'>MUSIC_L2</a> + <a href='../Y/62.html' title='Multiple used in 19 places.'>MUSIC_L4</a>, <a href='../Y/62.html' title='Multiple used in 19 places.'>MUSIC_L4</a> <em class='brace'>}</em>,
+<a id='L105' name='L105'></a> 105                                                 
+<a id='L106' name='L106'></a> 106     <em class='brace'>{</em> <em class='brace'>{</em> <a href='../Y/104.html' title='Multiple used in 2 places.'>SOUND_A1</a>, &amp;<a href='../Y/16.html' title='Multiple used in 34 places.'>ENVELOPE_harp</a>, &amp;<a href='../Y/17.html' title='Multiple used in 34 places.'>ENVELOPE_harp_reverb</a>, <a href='../Y/171.html' title='Multiple used in 49 places.'>_FALSE</a> <em class='brace'>}</em>,
+<a id='L107' name='L107'></a> 107       (<a href='../S/113.html#L70' title='Defined at 70 in test/test.c.'>TS_BAR_LEN</a> * 3), <a href='../Y/63.html' title='Multiple used in 10 places.'>MUSIC_L8</a> <em class='brace'>}</em>,
+<a id='L108' name='L108'></a> 108     <em class='brace'>{</em> <em class='brace'>{</em> <a href='../Y/108.html' title='Multiple used in 5 places.'>SOUND_C2</a>, &amp;<a href='../Y/16.html' title='Multiple used in 34 places.'>ENVELOPE_harp</a>, &amp;<a href='../Y/17.html' title='Multiple used in 34 places.'>ENVELOPE_harp_reverb</a>, <a href='../Y/171.html' title='Multiple used in 49 places.'>_FALSE</a> <em class='brace'>}</em>,
+<a id='L109' name='L109'></a> 109       (<a href='../S/113.html#L70' title='Defined at 70 in test/test.c.'>TS_BAR_LEN</a> * 3) + <a href='../Y/63.html' title='Multiple used in 10 places.'>MUSIC_L8</a>, <a href='../Y/63.html' title='Multiple used in 10 places.'>MUSIC_L8</a> <em class='brace'>}</em>,
+<a id='L110' name='L110'></a> 110     <em class='brace'>{</em> <em class='brace'>{</em> SOUND_H1, &amp;<a href='../Y/16.html' title='Multiple used in 34 places.'>ENVELOPE_harp</a>, &amp;<a href='../Y/17.html' title='Multiple used in 34 places.'>ENVELOPE_harp_reverb</a>, <a href='../Y/171.html' title='Multiple used in 49 places.'>_FALSE</a> <em class='brace'>}</em>,
+<a id='L111' name='L111'></a> 111       (<a href='../S/113.html#L70' title='Defined at 70 in test/test.c.'>TS_BAR_LEN</a> * 3) + <a href='../Y/62.html' title='Multiple used in 19 places.'>MUSIC_L4</a>, <a href='../Y/63.html' title='Multiple used in 10 places.'>MUSIC_L8</a> <em class='brace'>}</em>,
+<a id='L112' name='L112'></a> 112     <em class='brace'>{</em> <em class='brace'>{</em> <a href='../Y/111.html' title='Multiple used in 2 places.'>SOUND_D2</a>, &amp;<a href='../Y/16.html' title='Multiple used in 34 places.'>ENVELOPE_harp</a>, &amp;<a href='../Y/17.html' title='Multiple used in 34 places.'>ENVELOPE_harp_reverb</a>, <a href='../Y/171.html' title='Multiple used in 49 places.'>_FALSE</a> <em class='brace'>}</em>,
+<a id='L113' name='L113'></a> 113       (<a href='../S/113.html#L70' title='Defined at 70 in test/test.c.'>TS_BAR_LEN</a> * 3) + <a href='../Y/62.html' title='Multiple used in 19 places.'>MUSIC_L4</a> + <a href='../Y/63.html' title='Multiple used in 10 places.'>MUSIC_L8</a>, <a href='../Y/63.html' title='Multiple used in 10 places.'>MUSIC_L8</a> <em class='brace'>}</em>,
+<a id='L114' name='L114'></a> 114     <em class='brace'>{</em> <em class='brace'>{</em> <a href='../Y/108.html' title='Multiple used in 5 places.'>SOUND_C2</a>, &amp;<a href='../Y/16.html' title='Multiple used in 34 places.'>ENVELOPE_harp</a>, &amp;<a href='../Y/17.html' title='Multiple used in 34 places.'>ENVELOPE_harp_reverb</a>, <a href='../Y/171.html' title='Multiple used in 49 places.'>_FALSE</a> <em class='brace'>}</em>,
+<a id='L115' name='L115'></a> 115       (<a href='../S/113.html#L70' title='Defined at 70 in test/test.c.'>TS_BAR_LEN</a> * 3) + <a href='../Y/61.html' title='Multiple used in 17 places.'>MUSIC_L2</a>, <a href='../Y/61.html' title='Multiple used in 17 places.'>MUSIC_L2</a> <em class='brace'>}</em>
+<a id='L116' name='L116'></a> 116 <em class='brace'>}</em>;
+<a id='L117' name='L117'></a> 117 
+<a id='L118' name='L118'></a> 118 <strong class='reserved'>static</strong> <strong class='reserved'>const</strong> <a href='../Y/64.html' title='Multiple used in 3 places.'>MUSIC_Note</a> <a href='../Y/239.html' title='Multiple used in 2 places.'>ts_notes_b</a>[] = <em class='brace'>{</em>
+<a id='L119' name='L119'></a> 119     <em class='brace'>{</em> <em class='brace'>{</em> <a href='../Y/107.html' title='Multiple used in 3 places.'>SOUND_C1</a>, &amp;<a href='../Y/16.html' title='Multiple used in 34 places.'>ENVELOPE_harp</a>, &amp;<a href='../Y/17.html' title='Multiple used in 34 places.'>ENVELOPE_harp_reverb</a>, <a href='../Y/171.html' title='Multiple used in 49 places.'>_FALSE</a> <em class='brace'>}</em>,
+<a id='L120' name='L120'></a> 120       (<a href='../S/113.html#L70' title='Defined at 70 in test/test.c.'>TS_BAR_LEN</a> * 0), <a href='../Y/61.html' title='Multiple used in 17 places.'>MUSIC_L2</a> <em class='brace'>}</em>,
+<a id='L121' name='L121'></a> 121     <em class='brace'>{</em> <em class='brace'>{</em> <a href='../Y/113.html' title='Multiple used in 3 places.'>SOUND_E1</a>, &amp;<a href='../Y/16.html' title='Multiple used in 34 places.'>ENVELOPE_harp</a>, &amp;<a href='../Y/17.html' title='Multiple used in 34 places.'>ENVELOPE_harp_reverb</a>, <a href='../Y/171.html' title='Multiple used in 49 places.'>_FALSE</a> <em class='brace'>}</em>,
+<a id='L122' name='L122'></a> 122       (<a href='../S/113.html#L70' title='Defined at 70 in test/test.c.'>TS_BAR_LEN</a> * 0) + <a href='../Y/61.html' title='Multiple used in 17 places.'>MUSIC_L2</a>, <a href='../Y/61.html' title='Multiple used in 17 places.'>MUSIC_L2</a> <em class='brace'>}</em>,
+<a id='L123' name='L123'></a> 123    
+<a id='L124' name='L124'></a> 124     <em class='brace'>{</em> <em class='brace'>{</em> SOUND_F1, &amp;<a href='../Y/16.html' title='Multiple used in 34 places.'>ENVELOPE_harp</a>, &amp;<a href='../Y/17.html' title='Multiple used in 34 places.'>ENVELOPE_harp_reverb</a>, <a href='../Y/171.html' title='Multiple used in 49 places.'>_FALSE</a> <em class='brace'>}</em>,
+<a id='L125' name='L125'></a> 125       (<a href='../S/113.html#L70' title='Defined at 70 in test/test.c.'>TS_BAR_LEN</a> * 1), <a href='../Y/61.html' title='Multiple used in 17 places.'>MUSIC_L2</a> <em class='brace'>}</em>,
+<a id='L126' name='L126'></a> 126     <em class='brace'>{</em> <em class='brace'>{</em> <a href='../Y/113.html' title='Multiple used in 3 places.'>SOUND_E1</a>, &amp;<a href='../Y/16.html' title='Multiple used in 34 places.'>ENVELOPE_harp</a>, &amp;<a href='../Y/17.html' title='Multiple used in 34 places.'>ENVELOPE_harp_reverb</a>, <a href='../Y/171.html' title='Multiple used in 49 places.'>_FALSE</a> <em class='brace'>}</em>,
+<a id='L127' name='L127'></a> 127       (<a href='../S/113.html#L70' title='Defined at 70 in test/test.c.'>TS_BAR_LEN</a> * 1) + <a href='../Y/61.html' title='Multiple used in 17 places.'>MUSIC_L2</a>, <a href='../Y/61.html' title='Multiple used in 17 places.'>MUSIC_L2</a> <em class='brace'>}</em>,
+<a id='L128' name='L128'></a> 128 
+<a id='L129' name='L129'></a> 129     <em class='brace'>{</em> <em class='brace'>{</em> <a href='../Y/104.html' title='Multiple used in 2 places.'>SOUND_A1</a>, &amp;<a href='../Y/16.html' title='Multiple used in 34 places.'>ENVELOPE_harp</a>, &amp;<a href='../Y/17.html' title='Multiple used in 34 places.'>ENVELOPE_harp_reverb</a>, <a href='../Y/171.html' title='Multiple used in 49 places.'>_FALSE</a> <em class='brace'>}</em>,
+<a id='L130' name='L130'></a> 130       (<a href='../S/113.html#L70' title='Defined at 70 in test/test.c.'>TS_BAR_LEN</a> * 2), <a href='../Y/61.html' title='Multiple used in 17 places.'>MUSIC_L2</a> <em class='brace'>}</em>,
+<a id='L131' name='L131'></a> 131     <em class='brace'>{</em> <em class='brace'>{</em> SOUND_G1, &amp;<a href='../Y/16.html' title='Multiple used in 34 places.'>ENVELOPE_harp</a>, &amp;<a href='../Y/17.html' title='Multiple used in 34 places.'>ENVELOPE_harp_reverb</a>, <a href='../Y/171.html' title='Multiple used in 49 places.'>_FALSE</a> <em class='brace'>}</em>,
+<a id='L132' name='L132'></a> 132       (<a href='../S/113.html#L70' title='Defined at 70 in test/test.c.'>TS_BAR_LEN</a> * 2) + <a href='../Y/61.html' title='Multiple used in 17 places.'>MUSIC_L2</a>, <a href='../Y/61.html' title='Multiple used in 17 places.'>MUSIC_L2</a> <em class='brace'>}</em>,
+<a id='L133' name='L133'></a> 133 
+<a id='L134' name='L134'></a> 134     <em class='brace'>{</em> <em class='brace'>{</em> SOUND_F0, &amp;<a href='../Y/16.html' title='Multiple used in 34 places.'>ENVELOPE_harp</a>, &amp;<a href='../Y/17.html' title='Multiple used in 34 places.'>ENVELOPE_harp_reverb</a>, <a href='../Y/171.html' title='Multiple used in 49 places.'>_FALSE</a> <em class='brace'>}</em>,
+<a id='L135' name='L135'></a> 135       (<a href='../S/113.html#L70' title='Defined at 70 in test/test.c.'>TS_BAR_LEN</a> * 3), <a href='../Y/62.html' title='Multiple used in 19 places.'>MUSIC_L4</a> <em class='brace'>}</em>,
+<a id='L136' name='L136'></a> 136     <em class='brace'>{</em> <em class='brace'>{</em> SOUND_G0, &amp;<a href='../Y/16.html' title='Multiple used in 34 places.'>ENVELOPE_harp</a>, &amp;<a href='../Y/17.html' title='Multiple used in 34 places.'>ENVELOPE_harp_reverb</a>, <a href='../Y/171.html' title='Multiple used in 49 places.'>_FALSE</a> <em class='brace'>}</em>,
+<a id='L137' name='L137'></a> 137       (<a href='../S/113.html#L70' title='Defined at 70 in test/test.c.'>TS_BAR_LEN</a> * 3) + <a href='../Y/62.html' title='Multiple used in 19 places.'>MUSIC_L4</a>, <a href='../Y/62.html' title='Multiple used in 19 places.'>MUSIC_L4</a> <em class='brace'>}</em>,
+<a id='L138' name='L138'></a> 138     <em class='brace'>{</em> <em class='brace'>{</em> <a href='../Y/113.html' title='Multiple used in 3 places.'>SOUND_E1</a>, &amp;<a href='../Y/16.html' title='Multiple used in 34 places.'>ENVELOPE_harp</a>, &amp;<a href='../Y/17.html' title='Multiple used in 34 places.'>ENVELOPE_harp_reverb</a>, <a href='../Y/171.html' title='Multiple used in 49 places.'>_FALSE</a> <em class='brace'>}</em>,
+<a id='L139' name='L139'></a> 139       (<a href='../S/113.html#L70' title='Defined at 70 in test/test.c.'>TS_BAR_LEN</a> * 3) + <a href='../Y/61.html' title='Multiple used in 17 places.'>MUSIC_L2</a>, <a href='../Y/61.html' title='Multiple used in 17 places.'>MUSIC_L2</a> <em class='brace'>}</em>
+<a id='L140' name='L140'></a> 140 <em class='brace'>}</em>;
+<a id='L141' name='L141'></a> 141 
+<a id='L142' name='L142'></a> 142 <strong class='reserved'>static</strong> <strong class='reserved'>const</strong> <a href='../Y/64.html' title='Multiple used in 3 places.'>MUSIC_Note</a> <a href='../Y/240.html' title='Multiple used in 2 places.'>ts_notes_c</a>[] = <em class='brace'>{</em>
+<a id='L143' name='L143'></a> 143     <em class='brace'>{</em> <em class='brace'>{</em> SOUND_D1, &amp;<a href='../Y/16.html' title='Multiple used in 34 places.'>ENVELOPE_harp</a>, &amp;<a href='../Y/17.html' title='Multiple used in 34 places.'>ENVELOPE_harp_reverb</a>, <a href='../Y/171.html' title='Multiple used in 49 places.'>_FALSE</a> <em class='brace'>}</em>,
+<a id='L144' name='L144'></a> 144       (<a href='../S/113.html#L70' title='Defined at 70 in test/test.c.'>TS_BAR_LEN</a> * 2), <a href='../Y/61.html' title='Multiple used in 17 places.'>MUSIC_L2</a> <em class='brace'>}</em>,
+<a id='L145' name='L145'></a> 145     <em class='brace'>{</em> <em class='brace'>{</em> <a href='../Y/107.html' title='Multiple used in 3 places.'>SOUND_C1</a>, &amp;<a href='../Y/16.html' title='Multiple used in 34 places.'>ENVELOPE_harp</a>, &amp;<a href='../Y/17.html' title='Multiple used in 34 places.'>ENVELOPE_harp_reverb</a>, <a href='../Y/171.html' title='Multiple used in 49 places.'>_FALSE</a> <em class='brace'>}</em>,
+<a id='L146' name='L146'></a> 146       (<a href='../S/113.html#L70' title='Defined at 70 in test/test.c.'>TS_BAR_LEN</a> * 2) + <a href='../Y/61.html' title='Multiple used in 17 places.'>MUSIC_L2</a>, <a href='../Y/61.html' title='Multiple used in 17 places.'>MUSIC_L2</a> <em class='brace'>}</em>,
+<a id='L147' name='L147'></a> 147    
+<a id='L148' name='L148'></a> 148     <em class='brace'>{</em> <em class='brace'>{</em> <a href='../Y/107.html' title='Multiple used in 3 places.'>SOUND_C1</a>, &amp;<a href='../Y/16.html' title='Multiple used in 34 places.'>ENVELOPE_harp</a>, &amp;<a href='../Y/17.html' title='Multiple used in 34 places.'>ENVELOPE_harp_reverb</a>, <a href='../Y/171.html' title='Multiple used in 49 places.'>_FALSE</a> <em class='brace'>}</em>,
+<a id='L149' name='L149'></a> 149       (<a href='../S/113.html#L70' title='Defined at 70 in test/test.c.'>TS_BAR_LEN</a> * 3) + <a href='../Y/61.html' title='Multiple used in 17 places.'>MUSIC_L2</a>, <a href='../Y/61.html' title='Multiple used in 17 places.'>MUSIC_L2</a> <em class='brace'>}</em>
+<a id='L150' name='L150'></a> 150 <em class='brace'>}</em>;
+<a id='L151' name='L151'></a> 151 
+<a id='L152' name='L152'></a> 152 <strong class='reserved'>static</strong> <strong class='reserved'>const</strong> MUSIC_Part <a href='../Y/241.html' title='Multiple used in 2 places.'>ts_parts</a>[] = <em class='brace'>{</em>
+<a id='L153' name='L153'></a> 153     <em class='brace'>{</em> <a href='../Y/239.html' title='Multiple used in 2 places.'>ts_notes_b</a>, <a href='../Y/194.html' title='Multiple used in 9 places.'>_sizeof_array</a>(<a href='../Y/239.html' title='Multiple used in 2 places.'>ts_notes_b</a>) <em class='brace'>}</em>,
+<a id='L154' name='L154'></a> 154     <em class='brace'>{</em> <a href='../Y/238.html' title='Multiple used in 2 places.'>ts_notes_a</a>, <a href='../Y/194.html' title='Multiple used in 9 places.'>_sizeof_array</a>(<a href='../Y/238.html' title='Multiple used in 2 places.'>ts_notes_a</a>) <em class='brace'>}</em>,
+<a id='L155' name='L155'></a> 155     <em class='brace'>{</em> <a href='../Y/240.html' title='Multiple used in 2 places.'>ts_notes_c</a>, <a href='../Y/194.html' title='Multiple used in 9 places.'>_sizeof_array</a>(<a href='../Y/240.html' title='Multiple used in 2 places.'>ts_notes_c</a>) <em class='brace'>}</em>
+<a id='L156' name='L156'></a> 156 <em class='brace'>}</em>;
+<a id='L157' name='L157'></a> 157 <em class='sharp'>#endif</em> <em class='comment'>/* TEST_MUSIC */</em>
+<a id='L158' name='L158'></a> 158 
+<a id='L159' name='L159'></a> 159 
+<a id='L160' name='L160'></a> 160 <strong class='reserved'>static</strong> <strong class='reserved'>char</strong>* <a href='../R/15.html' title='Multiple referred from 2 places.'>test_sci</a>()
+<a id='L161' name='L161'></a> 161 <em class='brace'>{</em>
+<a id='L162' name='L162'></a> 162     <strong class='reserved'>const</strong> <strong class='reserved'>char</strong> <a href='../Y/231.html' title='Multiple used in 22 places.'>str</a>[] = "ABCabc\r\n";
+<a id='L163' name='L163'></a> 163     <strong class='reserved'>unsigned</strong> <strong class='reserved'>char</strong> <a href='../Y/201.html' title='Multiple used in 41 places.'>buf</a>[5] = <em class='brace'>{</em> 0 <em class='brace'>}</em>;
+<a id='L164' name='L164'></a> 164 
+<a id='L165' name='L165'></a> 165     SCI_init();
+<a id='L166' name='L166'></a> 166     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_sci: SMR != 0", <a href='../Y/175.html' title='Multiple used in 3 places.'>_SCI3</a>.SMR.<a href='../Y/14.html' title='Multiple used in 9 places.'>BYTE</a> == 0);
+<a id='L167' name='L167'></a> 167     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_sci: BRR != 0x20", <a href='../Y/175.html' title='Multiple used in 3 places.'>_SCI3</a>.BRR == 0x20);
+<a id='L168' name='L168'></a> 168     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_sci: PMR1 != 1", <a href='../Y/173.html' title='Multiple used in 8 places.'>_IO</a>.PMR1.<a href='../Y/11.html' title='Multiple used in 3 places.'>BIT</a>.TXD == 1);
+<a id='L169' name='L169'></a> 169     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_sci: SCR3 != 0x70", <a href='../Y/175.html' title='Multiple used in 3 places.'>_SCI3</a>.SCR3.<a href='../Y/14.html' title='Multiple used in 9 places.'>BYTE</a> == 0x70);
+<a id='L170' name='L170'></a> 170 
+<a id='L171' name='L171'></a> 171     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_sci: SCI_puts", <a href='../Y/99.html' title='Multiple used in 3 places.'>SCI_puts</a>(<a href='../Y/231.html' title='Multiple used in 22 places.'>str</a>) == (<strong class='reserved'>sizeof</strong>(<a href='../Y/231.html' title='Multiple used in 22 places.'>str</a>) - 1));
+<a id='L172' name='L172'></a> 172     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_sci: SCI_write(1)",
+<a id='L173' name='L173'></a> 173                  <a href='../Y/101.html' title='Multiple used in 2 places.'>SCI_write</a>((<a href='../Y/177.html' title='Multiple used in 10 places.'>_UBYTE</a>*)<a href='../Y/231.html' title='Multiple used in 22 places.'>str</a>, <strong class='reserved'>sizeof</strong>(<a href='../Y/231.html' title='Multiple used in 22 places.'>str</a>) - 1, <a href='../Y/176.html' title='Multiple used in 40 places.'>_TRUE</a>, -1) ==
+<a id='L174' name='L174'></a> 174                  (<strong class='reserved'>sizeof</strong>(<a href='../Y/231.html' title='Multiple used in 22 places.'>str</a>) - 1));
+<a id='L175' name='L175'></a> 175 
+<a id='L176' name='L176'></a> 176     <a href='../Y/99.html' title='Multiple used in 3 places.'>SCI_puts</a>("test_sci: Reading serial port... Press 'q' to quit.\r\n");
+<a id='L177' name='L177'></a> 177     <strong class='reserved'>while</strong> (<a href='../Y/201.html' title='Multiple used in 41 places.'>buf</a>[0] != 'q')
+<a id='L178' name='L178'></a> 178     <em class='brace'>{</em>
+<a id='L179' name='L179'></a> 179         <strong class='reserved'>if</strong> (<a href='../Y/100.html' title='Multiple used in 5 places.'>SCI_read</a>(<a href='../Y/201.html' title='Multiple used in 41 places.'>buf</a>, 1, <a href='../Y/171.html' title='Multiple used in 49 places.'>_FALSE</a>, -1) == 1)
+<a id='L180' name='L180'></a> 180         <em class='brace'>{</em>
+<a id='L181' name='L181'></a> 181             <a href='../Y/101.html' title='Multiple used in 2 places.'>SCI_write</a>(<a href='../Y/201.html' title='Multiple used in 41 places.'>buf</a>, 1, <a href='../Y/171.html' title='Multiple used in 49 places.'>_FALSE</a>, -1);
+<a id='L182' name='L182'></a> 182         <em class='brace'>}</em>
+<a id='L183' name='L183'></a> 183     <em class='brace'>}</em>
+<a id='L184' name='L184'></a> 184     <a href='../Y/99.html' title='Multiple used in 3 places.'>SCI_puts</a>("\r\n");
+<a id='L185' name='L185'></a> 185 
+<a id='L186' name='L186'></a> 186     <a href='../Y/192.html' title='Multiple used in 77 places.'>_printf</a>("test_sci: ALL OK.\r\n");
+<a id='L187' name='L187'></a> 187     <strong class='reserved'>return</strong> 0;
+<a id='L188' name='L188'></a> 188 <em class='brace'>}</em>
+<a id='L189' name='L189'></a> 189 
+<a id='L190' name='L190'></a> 190 <strong class='reserved'>static</strong> <strong class='reserved'>char</strong>* <a href='../R/8.html' title='Multiple referred from 2 places.'>test_ioctl</a>()
+<a id='L191' name='L191'></a> 191 <em class='brace'>{</em>
+<a id='L192' name='L192'></a> 192     <strong class='reserved'>unsigned</strong> <strong class='reserved'>char</strong> <a href='../Y/242.html' title='Multiple used in 17 places.'>val</a>;
+<a id='L193' name='L193'></a> 193     <strong class='reserved'>int</strong> <a href='../Y/214.html' title='Multiple used in 32 places.'>i</a>;
+<a id='L194' name='L194'></a> 194 
+<a id='L195' name='L195'></a> 195     IOCTL_init();
+<a id='L196' name='L196'></a> 196     <strong class='reserved'>for</strong> (<a href='../Y/214.html' title='Multiple used in 32 places.'>i</a> = 0; <a href='../Y/214.html' title='Multiple used in 32 places.'>i</a> &lt; IOCTL_NUM_OF_REG; <a href='../Y/214.html' title='Multiple used in 32 places.'>i</a>++)
+<a id='L197' name='L197'></a> 197     <em class='brace'>{</em>
+<a id='L198' name='L198'></a> 198         <a href='../Y/242.html' title='Multiple used in 17 places.'>val</a> = <a href='../Y/37.html' title='Multiple used in 3 places.'>IOCTL_get</a>(<a href='../Y/214.html' title='Multiple used in 32 places.'>i</a>);
+<a id='L199' name='L199'></a> 199         <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("IOCTL_get", <a href='../Y/242.html' title='Multiple used in 17 places.'>val</a> == 0);
+<a id='L200' name='L200'></a> 200 
+<a id='L201' name='L201'></a> 201         <a href='../Y/39.html' title='Multiple used in 3 places.'>IOCTL_set</a>(<a href='../Y/214.html' title='Multiple used in 32 places.'>i</a>, 0xf0, 0xaa);
+<a id='L202' name='L202'></a> 202         <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("IOCTL_set(a)", <a href='../Y/37.html' title='Multiple used in 3 places.'>IOCTL_get</a>(<a href='../Y/214.html' title='Multiple used in 32 places.'>i</a>) == 0xa0);
+<a id='L203' name='L203'></a> 203         <a href='../Y/39.html' title='Multiple used in 3 places.'>IOCTL_set</a>(<a href='../Y/214.html' title='Multiple used in 32 places.'>i</a>, 0xff, 0xaa);
+<a id='L204' name='L204'></a> 204         <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("IOCTL_set(b)", <a href='../Y/37.html' title='Multiple used in 3 places.'>IOCTL_get</a>(<a href='../Y/214.html' title='Multiple used in 32 places.'>i</a>) == 0xaa);
+<a id='L205' name='L205'></a> 205         <a href='../Y/39.html' title='Multiple used in 3 places.'>IOCTL_set</a>(<a href='../Y/214.html' title='Multiple used in 32 places.'>i</a>, 0xff, <a href='../Y/242.html' title='Multiple used in 17 places.'>val</a>);
+<a id='L206' name='L206'></a> 206     <em class='brace'>}</em>
+<a id='L207' name='L207'></a> 207 
+<a id='L208' name='L208'></a> 208     <strong class='reserved'>return</strong> 0;
+<a id='L209' name='L209'></a> 209 <em class='brace'>}</em>
+<a id='L210' name='L210'></a> 210 
+<a id='L211' name='L211'></a> 211 <strong class='reserved'>static</strong> <strong class='reserved'>char</strong>* <a href='../R/10.html' title='Multiple referred from 2 places.'>test_led</a>()
+<a id='L212' name='L212'></a> 212 <em class='brace'>{</em>
+<a id='L213' name='L213'></a> 213     LED_INIT;
+<a id='L214' name='L214'></a> 214     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_led: LED_INIT", (<a href='../Y/173.html' title='Multiple used in 8 places.'>_IO</a>.<a href='../Y/84.html' title='Multiple used in 7 places.'>PDR8</a>.<a href='../Y/14.html' title='Multiple used in 9 places.'>BYTE</a> &amp; 0x06) == 0x06);
+<a id='L215' name='L215'></a> 215 
+<a id='L216' name='L216'></a> 216     <a href='../Y/58.html' title='Multiple used in 2 places.'>LED_ON</a>(<a href='../Y/54.html' title='Multiple used in 3 places.'>LED_D5</a>);
+<a id='L217' name='L217'></a> 217     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_led: LED_ON(1)", (<a href='../Y/173.html' title='Multiple used in 8 places.'>_IO</a>.<a href='../Y/84.html' title='Multiple used in 7 places.'>PDR8</a>.<a href='../Y/14.html' title='Multiple used in 9 places.'>BYTE</a> &amp; 0x06) == 0x04);
+<a id='L218' name='L218'></a> 218     <a href='../Y/58.html' title='Multiple used in 2 places.'>LED_ON</a>(<a href='../Y/55.html' title='Multiple used in 3 places.'>LED_D6</a>);
+<a id='L219' name='L219'></a> 219     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_led: LED_ON(2)", (<a href='../Y/173.html' title='Multiple used in 8 places.'>_IO</a>.<a href='../Y/84.html' title='Multiple used in 7 places.'>PDR8</a>.<a href='../Y/14.html' title='Multiple used in 9 places.'>BYTE</a> &amp; 0x06) == 0x00);
+<a id='L220' name='L220'></a> 220 
+<a id='L221' name='L221'></a> 221     <a href='../Y/57.html' title='Multiple used in 2 places.'>LED_OFF</a>(<a href='../Y/54.html' title='Multiple used in 3 places.'>LED_D5</a>);
+<a id='L222' name='L222'></a> 222     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_led: LED_OFF(1)", (<a href='../Y/173.html' title='Multiple used in 8 places.'>_IO</a>.<a href='../Y/84.html' title='Multiple used in 7 places.'>PDR8</a>.<a href='../Y/14.html' title='Multiple used in 9 places.'>BYTE</a> &amp; 0x06) == 0x02);
+<a id='L223' name='L223'></a> 223     <a href='../Y/57.html' title='Multiple used in 2 places.'>LED_OFF</a>(<a href='../Y/55.html' title='Multiple used in 3 places.'>LED_D6</a>);
+<a id='L224' name='L224'></a> 224     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_led: LED_OFF(2)", (<a href='../Y/173.html' title='Multiple used in 8 places.'>_IO</a>.<a href='../Y/84.html' title='Multiple used in 7 places.'>PDR8</a>.<a href='../Y/14.html' title='Multiple used in 9 places.'>BYTE</a> &amp; 0x06) == 0x06);
+<a id='L225' name='L225'></a> 225 
+<a id='L226' name='L226'></a> 226     <a href='../Y/59.html' title='Multiple used in 2 places.'>LED_TURN</a>(<a href='../Y/54.html' title='Multiple used in 3 places.'>LED_D5</a>);
+<a id='L227' name='L227'></a> 227     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_led: LED_TURN(1)", (<a href='../Y/173.html' title='Multiple used in 8 places.'>_IO</a>.<a href='../Y/84.html' title='Multiple used in 7 places.'>PDR8</a>.<a href='../Y/14.html' title='Multiple used in 9 places.'>BYTE</a> &amp; 0x06) == 0x04);
+<a id='L228' name='L228'></a> 228     <a href='../Y/59.html' title='Multiple used in 2 places.'>LED_TURN</a>(<a href='../Y/55.html' title='Multiple used in 3 places.'>LED_D6</a>);
+<a id='L229' name='L229'></a> 229     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_led: LED_TURN(2)", (<a href='../Y/173.html' title='Multiple used in 8 places.'>_IO</a>.<a href='../Y/84.html' title='Multiple used in 7 places.'>PDR8</a>.<a href='../Y/14.html' title='Multiple used in 9 places.'>BYTE</a> &amp; 0x06) == 0x00);
+<a id='L230' name='L230'></a> 230 
+<a id='L231' name='L231'></a> 231     <strong class='reserved'>return</strong> 0;
+<a id='L232' name='L232'></a> 232 <em class='brace'>}</em>
+<a id='L233' name='L233'></a> 233 
+<a id='L234' name='L234'></a> 234 <em class='sharp'>#ifdef</em> <a href='../Y/165.html' title='Multiple used in 3 places.'>TEST_STDC</a>
+<a id='L235' name='L235'></a> 235 <strong class='reserved'>static</strong> <strong class='reserved'>char</strong>* <a href='../R/18.html' title='Multiple referred from 2 places.'>test_stdio</a>()
+<a id='L236' name='L236'></a> 236 <em class='brace'>{</em>
+<a id='L237' name='L237'></a> 237     <strong class='reserved'>const</strong> <strong class='reserved'>char</strong>* <a href='../Y/231.html' title='Multiple used in 22 places.'>str</a> = "ABCabc";
+<a id='L238' name='L238'></a> 238     <strong class='reserved'>const</strong> <strong class='reserved'>int</strong> <a href='../Y/214.html' title='Multiple used in 32 places.'>i</a> = -127;
+<a id='L239' name='L239'></a> 239 
+<a id='L240' name='L240'></a> 240     <a href='../Y/192.html' title='Multiple used in 77 places.'>_printf</a>("test_stdio:\r\n");
+<a id='L241' name='L241'></a> 241     <a href='../Y/192.html' title='Multiple used in 77 places.'>_printf</a>("test_stdio: %s\r\n", <a href='../Y/231.html' title='Multiple used in 22 places.'>str</a>);
+<a id='L242' name='L242'></a> 242     <a href='../Y/192.html' title='Multiple used in 77 places.'>_printf</a>("test_stdio: %s %d\r\n", <a href='../Y/231.html' title='Multiple used in 22 places.'>str</a>, <a href='../Y/214.html' title='Multiple used in 32 places.'>i</a>);
+<a id='L243' name='L243'></a> 243     <a href='../Y/192.html' title='Multiple used in 77 places.'>_printf</a>("test_stdio: %s %d %u\r\n", <a href='../Y/231.html' title='Multiple used in 22 places.'>str</a>, <a href='../Y/214.html' title='Multiple used in 32 places.'>i</a>, <a href='../Y/214.html' title='Multiple used in 32 places.'>i</a>);
+<a id='L244' name='L244'></a> 244     <a href='../Y/192.html' title='Multiple used in 77 places.'>_printf</a>("test_stdio: %s %d %u %x\r\n", <a href='../Y/231.html' title='Multiple used in 22 places.'>str</a>, <a href='../Y/214.html' title='Multiple used in 32 places.'>i</a>, <a href='../Y/214.html' title='Multiple used in 32 places.'>i</a>, <a href='../Y/214.html' title='Multiple used in 32 places.'>i</a>);
+<a id='L245' name='L245'></a> 245     <a href='../Y/192.html' title='Multiple used in 77 places.'>_printf</a>("test_stdio: %s %d %u %x %%\r\n", <a href='../Y/231.html' title='Multiple used in 22 places.'>str</a>, <a href='../Y/214.html' title='Multiple used in 32 places.'>i</a>, <a href='../Y/214.html' title='Multiple used in 32 places.'>i</a>, <a href='../Y/214.html' title='Multiple used in 32 places.'>i</a>);
+<a id='L246' name='L246'></a> 246 
+<a id='L247' name='L247'></a> 247     <a href='../Y/192.html' title='Multiple used in 77 places.'>_printf</a>("test_stdio: ALL OK.\r\n");
+<a id='L248' name='L248'></a> 248     <strong class='reserved'>return</strong> 0;
+<a id='L249' name='L249'></a> 249 <em class='brace'>}</em>
+<a id='L250' name='L250'></a> 250 
+<a id='L251' name='L251'></a> 251 <strong class='reserved'>static</strong> <strong class='reserved'>char</strong>* <a href='../R/19.html' title='Multiple referred from 2 places.'>test_stdlib</a>()
+<a id='L252' name='L252'></a> 252 <em class='brace'>{</em>
+<a id='L253' name='L253'></a> 253     <strong class='reserved'>const</strong> <strong class='reserved'>unsigned</strong> <strong class='reserved'>char</strong> <a href='../Y/197.html' title='Multiple used in 2 places.'>ary</a>[4] = <em class='brace'>{</em> 0x01, 0x01, 0x01, 0x01 <em class='brace'>}</em>;
+<a id='L254' name='L254'></a> 254     <strong class='reserved'>char</strong> <a href='../Y/231.html' title='Multiple used in 22 places.'>str</a>[5] = <em class='brace'>{</em> '\0' <em class='brace'>}</em>;
+<a id='L255' name='L255'></a> 255     <strong class='reserved'>int</strong> <a href='../Y/217.html' title='Multiple used in 13 places.'>num</a> = 0;
+<a id='L256' name='L256'></a> 256     <strong class='reserved'>long</strong> <a href='../Y/219.html' title='Multiple used in 4 places.'>rand_val</a> = 0;
+<a id='L257' name='L257'></a> 257 
+<a id='L258' name='L258'></a> 258     <a href='../Y/192.html' title='Multiple used in 77 places.'>_printf</a>("test_stdlib: _msleep(1000) start\r\n");
+<a id='L259' name='L259'></a> 259     <a href='../Y/189.html' title='Multiple used in 30 places.'>_msleep</a>(1000);
+<a id='L260' name='L260'></a> 260     <a href='../Y/192.html' title='Multiple used in 77 places.'>_printf</a>("test_stdlib: _msleep(1000) end\r\n");
+<a id='L261' name='L261'></a> 261 
+<a id='L262' name='L262'></a> 262     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_stdlib: _next_ring(1)", <a href='../Y/190.html' title='Multiple used in 2 places.'>_next_ring</a>(0, 1) == 1);
+<a id='L263' name='L263'></a> 263     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_stdlib: _next_ring(2)", <a href='../Y/190.html' title='Multiple used in 2 places.'>_next_ring</a>(0, 0) == 0);
+<a id='L264' name='L264'></a> 264 
+<a id='L265' name='L265'></a> 265     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_stdlib: _prev_ring(1)", <a href='../Y/191.html' title='Multiple used in 2 places.'>_prev_ring</a>(0, 1) == 1);
+<a id='L266' name='L266'></a> 266     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_stdlib: _prev_ring(2)", <a href='../Y/191.html' title='Multiple used in 2 places.'>_prev_ring</a>(0, 0) == 0);
+<a id='L267' name='L267'></a> 267 
+<a id='L268' name='L268'></a> 268     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_stdlib: _hash(1)", <a href='../Y/185.html' title='Multiple used in 5 places.'>_hash</a>(0, 5) == 0);
+<a id='L269' name='L269'></a> 269     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_stdlib: _hash(2)", <a href='../Y/185.html' title='Multiple used in 5 places.'>_hash</a>(1, 5) == 1);
+<a id='L270' name='L270'></a> 270     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_stdlib: _hash(3)", <a href='../Y/185.html' title='Multiple used in 5 places.'>_hash</a>(2, 5) == 2);
+<a id='L271' name='L271'></a> 271     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_stdlib: _hash(4)", <a href='../Y/185.html' title='Multiple used in 5 places.'>_hash</a>(3, 5) == 3);
+<a id='L272' name='L272'></a> 272     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_stdlib: _hash(5)", <a href='../Y/185.html' title='Multiple used in 5 places.'>_hash</a>(4, 5) == 4);
+<a id='L273' name='L273'></a> 273 
+<a id='L274' name='L274'></a> 274     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_stdlib: _check_sum(1)",
+<a id='L275' name='L275'></a> 275                  _check_sum(<a href='../Y/197.html' title='Multiple used in 2 places.'>ary</a>, <strong class='reserved'>sizeof</strong>(<a href='../Y/197.html' title='Multiple used in 2 places.'>ary</a>) / <strong class='reserved'>sizeof</strong>(<a href='../Y/178.html' title='Multiple used in 4 places.'>_UWORD</a>)) == 0x0202U);
+<a id='L276' name='L276'></a> 276 
+<a id='L277' name='L277'></a> 277     <a href='../Y/217.html' title='Multiple used in 13 places.'>num</a> = <a href='../Y/186.html' title='Multiple used in 3 places.'>_itoa</a>(10, 10, <a href='../Y/231.html' title='Multiple used in 22 places.'>str</a>, <a href='../Y/194.html' title='Multiple used in 9 places.'>_sizeof_array</a>(<a href='../Y/231.html' title='Multiple used in 22 places.'>str</a>));
+<a id='L278' name='L278'></a> 278     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_stdlib: _itoa(1)", <a href='../Y/217.html' title='Multiple used in 13 places.'>num</a> == 2);
+<a id='L279' name='L279'></a> 279     <a href='../Y/231.html' title='Multiple used in 22 places.'>str</a>[<a href='../Y/217.html' title='Multiple used in 13 places.'>num</a>] = '\0';
+<a id='L280' name='L280'></a> 280     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_stdlib: _itoa(2)", <a href='../Y/231.html' title='Multiple used in 22 places.'>str</a>[0] == 0x31);
+<a id='L281' name='L281'></a> 281     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_stdlib: _itoa(3)", <a href='../Y/231.html' title='Multiple used in 22 places.'>str</a>[1] == 0x30);
+<a id='L282' name='L282'></a> 282 
+<a id='L283' name='L283'></a> 283     <a href='../Y/217.html' title='Multiple used in 13 places.'>num</a> = <a href='../Y/186.html' title='Multiple used in 3 places.'>_itoa</a>(10, 16, <a href='../Y/231.html' title='Multiple used in 22 places.'>str</a>, <a href='../Y/194.html' title='Multiple used in 9 places.'>_sizeof_array</a>(<a href='../Y/231.html' title='Multiple used in 22 places.'>str</a>));
+<a id='L284' name='L284'></a> 284     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_stdlib: _itoa(4)", <a href='../Y/217.html' title='Multiple used in 13 places.'>num</a> == 1);
+<a id='L285' name='L285'></a> 285     <a href='../Y/231.html' title='Multiple used in 22 places.'>str</a>[<a href='../Y/217.html' title='Multiple used in 13 places.'>num</a>] = '\0';
+<a id='L286' name='L286'></a> 286     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_stdlib: _itoa(5)", <a href='../Y/231.html' title='Multiple used in 22 places.'>str</a>[0] == 0x41);
+<a id='L287' name='L287'></a> 287 
+<a id='L288' name='L288'></a> 288     <a href='../Y/217.html' title='Multiple used in 13 places.'>num</a> = <a href='../Y/186.html' title='Multiple used in 3 places.'>_itoa</a>(10, 8, <a href='../Y/231.html' title='Multiple used in 22 places.'>str</a>, <a href='../Y/194.html' title='Multiple used in 9 places.'>_sizeof_array</a>(<a href='../Y/231.html' title='Multiple used in 22 places.'>str</a>));
+<a id='L289' name='L289'></a> 289     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_stdlib: _itoa(6)", <a href='../Y/217.html' title='Multiple used in 13 places.'>num</a> == 2);
+<a id='L290' name='L290'></a> 290     <a href='../Y/231.html' title='Multiple used in 22 places.'>str</a>[<a href='../Y/217.html' title='Multiple used in 13 places.'>num</a>] = '\0';
+<a id='L291' name='L291'></a> 291     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_stdlib: _itoa(7)", <a href='../Y/231.html' title='Multiple used in 22 places.'>str</a>[0] == 0x31);
+<a id='L292' name='L292'></a> 292     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_stdlib: _itoa(8)", <a href='../Y/231.html' title='Multiple used in 22 places.'>str</a>[1] == 0x32);
+<a id='L293' name='L293'></a> 293 
+<a id='L294' name='L294'></a> 294     <a href='../Y/219.html' title='Multiple used in 4 places.'>rand_val</a> = <a href='../Y/193.html' title='Multiple used in 2 places.'>_rand</a>();
+<a id='L295' name='L295'></a> 295     _srand(<a href='../Y/219.html' title='Multiple used in 4 places.'>rand_val</a>);
+<a id='L296' name='L296'></a> 296     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_stdlib: _rand, _srand(1)", <a href='../Y/193.html' title='Multiple used in 2 places.'>_rand</a>() != <a href='../Y/219.html' title='Multiple used in 4 places.'>rand_val</a>);
+<a id='L297' name='L297'></a> 297 
+<a id='L298' name='L298'></a> 298     <a href='../Y/192.html' title='Multiple used in 77 places.'>_printf</a>("test_stdlib: ALL OK.\r\n");
+<a id='L299' name='L299'></a> 299     <strong class='reserved'>return</strong> 0;
+<a id='L300' name='L300'></a> 300 <em class='brace'>}</em>
+<a id='L301' name='L301'></a> 301 
+<a id='L302' name='L302'></a> 302 <strong class='reserved'>static</strong> <strong class='reserved'>char</strong>* <a href='../R/20.html' title='Multiple referred from 2 places.'>test_string</a>()
+<a id='L303' name='L303'></a> 303 <em class='brace'>{</em>
+<a id='L304' name='L304'></a> 304     <strong class='reserved'>unsigned</strong> <strong class='reserved'>char</strong> <a href='../Y/230.html' title='Multiple used in 5 places.'>src</a>[32];
+<a id='L305' name='L305'></a> 305     <strong class='reserved'>unsigned</strong> <strong class='reserved'>char</strong> <a href='../Y/206.html' title='Multiple used in 4 places.'>dst</a>[32];
+<a id='L306' name='L306'></a> 306     <strong class='reserved'>int</strong> <a href='../Y/214.html' title='Multiple used in 32 places.'>i</a>;
+<a id='L307' name='L307'></a> 307 
+<a id='L308' name='L308'></a> 308     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_string: _strlen(1)", <a href='../Y/196.html' title='Multiple used in 2 places.'>_strlen</a>("") == 0);
+<a id='L309' name='L309'></a> 309     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_string: _strlen(2)", <a href='../Y/196.html' title='Multiple used in 2 places.'>_strlen</a>("aaa") == 3);
+<a id='L310' name='L310'></a> 310 
+<a id='L311' name='L311'></a> 311     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_string: _memset(1)", 
+<a id='L312' name='L312'></a> 312                  <a href='../Y/188.html' title='Multiple used in 3 places.'>_memset</a>(<a href='../Y/230.html' title='Multiple used in 5 places.'>src</a>, 'a', <strong class='reserved'>sizeof</strong>(<a href='../Y/230.html' title='Multiple used in 5 places.'>src</a>)) == <a href='../Y/230.html' title='Multiple used in 5 places.'>src</a>);
+<a id='L313' name='L313'></a> 313     <strong class='reserved'>for</strong> (<a href='../Y/214.html' title='Multiple used in 32 places.'>i</a> = 0; <a href='../Y/214.html' title='Multiple used in 32 places.'>i</a> &lt; <strong class='reserved'>sizeof</strong>(<a href='../Y/230.html' title='Multiple used in 5 places.'>src</a>); <a href='../Y/214.html' title='Multiple used in 32 places.'>i</a>++)
+<a id='L314' name='L314'></a> 314     <em class='brace'>{</em>
+<a id='L315' name='L315'></a> 315         <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_string: _memset(2)", <a href='../Y/230.html' title='Multiple used in 5 places.'>src</a>[<a href='../Y/214.html' title='Multiple used in 32 places.'>i</a>] == 'a');
+<a id='L316' name='L316'></a> 316     <em class='brace'>}</em>
+<a id='L317' name='L317'></a> 317 
+<a id='L318' name='L318'></a> 318     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_string: _memcpy(1)",
+<a id='L319' name='L319'></a> 319                  _memcpy(<a href='../Y/206.html' title='Multiple used in 4 places.'>dst</a>, <a href='../Y/230.html' title='Multiple used in 5 places.'>src</a>, <strong class='reserved'>sizeof</strong>(<a href='../Y/230.html' title='Multiple used in 5 places.'>src</a>)) == <a href='../Y/206.html' title='Multiple used in 4 places.'>dst</a>);
+<a id='L320' name='L320'></a> 320     <strong class='reserved'>for</strong> (<a href='../Y/214.html' title='Multiple used in 32 places.'>i</a> = 0; <a href='../Y/214.html' title='Multiple used in 32 places.'>i</a> &lt; <strong class='reserved'>sizeof</strong>(<a href='../Y/206.html' title='Multiple used in 4 places.'>dst</a>); <a href='../Y/214.html' title='Multiple used in 32 places.'>i</a>++)
+<a id='L321' name='L321'></a> 321     <em class='brace'>{</em>
+<a id='L322' name='L322'></a> 322         <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_string: _memcpy(2)", <a href='../Y/206.html' title='Multiple used in 4 places.'>dst</a>[<a href='../Y/214.html' title='Multiple used in 32 places.'>i</a>] == 'a');
+<a id='L323' name='L323'></a> 323     <em class='brace'>}</em>
+<a id='L324' name='L324'></a> 324 
+<a id='L325' name='L325'></a> 325     <a href='../Y/192.html' title='Multiple used in 77 places.'>_printf</a>("test_string: ALL OK.\r\n");
+<a id='L326' name='L326'></a> 326     <strong class='reserved'>return</strong> 0;
+<a id='L327' name='L327'></a> 327 <em class='brace'>}</em>
+<a id='L328' name='L328'></a> 328 <em class='sharp'>#endif</em> <em class='comment'>/* TEST_STDC */</em>
+<a id='L329' name='L329'></a> 329 
+<a id='L330' name='L330'></a> 330 <em class='sharp'>#ifdef</em> <a href='../Y/158.html' title='Multiple used in 3 places.'>TEST_ASSERT</a>
+<a id='L331' name='L331'></a> 331 <strong class='reserved'>static</strong> <strong class='reserved'>char</strong>* <a href='../R/7.html' title='Multiple referred from 2 places.'>test_assert</a>()
+<a id='L332' name='L332'></a> 332 <em class='brace'>{</em>
+<a id='L333' name='L333'></a> 333     <a href='../Y/183.html' title='Multiple used in 2 places.'>_assert</a>(<a href='../Y/176.html' title='Multiple used in 40 places.'>_TRUE</a>);
+<a id='L334' name='L334'></a> 334     <a href='../Y/183.html' title='Multiple used in 2 places.'>_assert</a>(<a href='../Y/171.html' title='Multiple used in 49 places.'>_FALSE</a>);
+<a id='L335' name='L335'></a> 335 
+<a id='L336' name='L336'></a> 336     <strong class='reserved'>return</strong> 0;
+<a id='L337' name='L337'></a> 337 <em class='brace'>}</em>
+<a id='L338' name='L338'></a> 338 <em class='sharp'>#endif</em> <em class='comment'>/* TEST_ASSERT */</em>
+<a id='L339' name='L339'></a> 339 
+<a id='L340' name='L340'></a> 340 <em class='sharp'>#ifdef</em> <a href='../Y/159.html' title='Multiple used in 3 places.'>TEST_LCD</a>
+<a id='L341' name='L341'></a> 341 <strong class='reserved'>static</strong> <strong class='reserved'>char</strong>* <a href='../R/9.html' title='Multiple referred from 2 places.'>test_lcd</a>()
+<a id='L342' name='L342'></a> 342 <em class='brace'>{</em>
+<a id='L343' name='L343'></a> 343     <strong class='reserved'>int</strong> <a href='../Y/214.html' title='Multiple used in 32 places.'>i</a>;
+<a id='L344' name='L344'></a> 344     <strong class='reserved'>unsigned</strong> <strong class='reserved'>char</strong> <a href='../Y/201.html' title='Multiple used in 41 places.'>buf</a>[<a href='../Y/45.html' title='Multiple used in 2 places.'>LCD_MAX_COLS</a> * <a href='../Y/46.html' title='Multiple used in 2 places.'>LCD_MAX_ROWS</a>];
+<a id='L345' name='L345'></a> 345     <strong class='reserved'>int</strong> <a href='../Y/244.html' title='Multiple used in 8 places.'>x</a>, <a href='../Y/245.html' title='Multiple used in 7 places.'>y</a>;
+<a id='L346' name='L346'></a> 346     <strong class='reserved'>unsigned</strong> <strong class='reserved'>char</strong> <a href='../Y/202.html' title='Multiple used in 3 places.'>ch</a>[LCD_CG_ROWS] = <em class='brace'>{</em> 0 <em class='brace'>}</em>;
+<a id='L347' name='L347'></a> 347 
+<a id='L348' name='L348'></a> 348     LCD_init();
+<a id='L349' name='L349'></a> 349     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_lcd: LCD_init(1)",
+<a id='L350' name='L350'></a> 350                  <a href='../Y/50.html' title='Multiple used in 3 places.'>LCD_read</a>(<a href='../Y/201.html' title='Multiple used in 41 places.'>buf</a>, <strong class='reserved'>sizeof</strong>(<a href='../Y/201.html' title='Multiple used in 41 places.'>buf</a>)) == <strong class='reserved'>sizeof</strong>(<a href='../Y/201.html' title='Multiple used in 41 places.'>buf</a>));
+<a id='L351' name='L351'></a> 351     <strong class='reserved'>for</strong> (<a href='../Y/214.html' title='Multiple used in 32 places.'>i</a> = 0; <a href='../Y/214.html' title='Multiple used in 32 places.'>i</a> &lt; <strong class='reserved'>sizeof</strong>(<a href='../Y/201.html' title='Multiple used in 41 places.'>buf</a>); <a href='../Y/214.html' title='Multiple used in 32 places.'>i</a>++)
+<a id='L352' name='L352'></a> 352     <em class='brace'>{</em>
+<a id='L353' name='L353'></a> 353         <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_lcd: LCD_init(2)", <a href='../Y/201.html' title='Multiple used in 41 places.'>buf</a>[<a href='../Y/214.html' title='Multiple used in 32 places.'>i</a>] == ' ');
+<a id='L354' name='L354'></a> 354     <em class='brace'>}</em>
+<a id='L355' name='L355'></a> 355 
+<a id='L356' name='L356'></a> 356     <a href='../Y/52.html' title='Multiple used in 7 places.'>LCD_setCursor</a>(0, 0);
+<a id='L357' name='L357'></a> 357     <a href='../Y/47.html' title='Multiple used in 3 places.'>LCD_getCursor</a>(&amp;<a href='../Y/244.html' title='Multiple used in 8 places.'>x</a>, &amp;<a href='../Y/245.html' title='Multiple used in 7 places.'>y</a>);
+<a id='L358' name='L358'></a> 358     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_lcd: LCD_(set|get)Cursor(1)", (<a href='../Y/244.html' title='Multiple used in 8 places.'>x</a> == 0) &amp;&amp; (<a href='../Y/245.html' title='Multiple used in 7 places.'>y</a> == 0));
+<a id='L359' name='L359'></a> 359     <a href='../Y/52.html' title='Multiple used in 7 places.'>LCD_setCursor</a>(<a href='../Y/45.html' title='Multiple used in 2 places.'>LCD_MAX_COLS</a>, <a href='../Y/46.html' title='Multiple used in 2 places.'>LCD_MAX_ROWS</a>);
+<a id='L360' name='L360'></a> 360     <a href='../Y/47.html' title='Multiple used in 3 places.'>LCD_getCursor</a>(&amp;<a href='../Y/244.html' title='Multiple used in 8 places.'>x</a>, &amp;<a href='../Y/245.html' title='Multiple used in 7 places.'>y</a>);
+<a id='L361' name='L361'></a> 361     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_lcd: LCD_(set|get)Cursor(2)", (<a href='../Y/244.html' title='Multiple used in 8 places.'>x</a> == 0) &amp;&amp; (<a href='../Y/245.html' title='Multiple used in 7 places.'>y</a> == 0));
+<a id='L362' name='L362'></a> 362 
+<a id='L363' name='L363'></a> 363     <a href='../Y/52.html' title='Multiple used in 7 places.'>LCD_setCursor</a>(0, 0);
+<a id='L364' name='L364'></a> 364     LCD_puts("aaa\n");
+<a id='L365' name='L365'></a> 365     <a href='../Y/47.html' title='Multiple used in 3 places.'>LCD_getCursor</a>(&amp;<a href='../Y/244.html' title='Multiple used in 8 places.'>x</a>, &amp;<a href='../Y/245.html' title='Multiple used in 7 places.'>y</a>);
+<a id='L366' name='L366'></a> 366     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_lcd: LCD_(set|get)Cursor(3)", (<a href='../Y/244.html' title='Multiple used in 8 places.'>x</a> == 0) &amp;&amp; (<a href='../Y/245.html' title='Multiple used in 7 places.'>y</a> == 1));
+<a id='L367' name='L367'></a> 367 
+<a id='L368' name='L368'></a> 368     <a href='../Y/52.html' title='Multiple used in 7 places.'>LCD_setCursor</a>(0, 0);
+<a id='L369' name='L369'></a> 369     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_lcd: LCD_puts(1)", <a href='../Y/50.html' title='Multiple used in 3 places.'>LCD_read</a>(<a href='../Y/201.html' title='Multiple used in 41 places.'>buf</a>, 3) == 3);
+<a id='L370' name='L370'></a> 370     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_lcd: LCD_puts(2)",
+<a id='L371' name='L371'></a> 371                  (<a href='../Y/201.html' title='Multiple used in 41 places.'>buf</a>[0] == 'a') &amp;&amp; (<a href='../Y/201.html' title='Multiple used in 41 places.'>buf</a>[1] == 'a') &amp;&amp; (<a href='../Y/201.html' title='Multiple used in 41 places.'>buf</a>[2] == 'a'));
+<a id='L372' name='L372'></a> 372     
+<a id='L373' name='L373'></a> 373     <a href='../Y/52.html' title='Multiple used in 7 places.'>LCD_setCursor</a>(0, 0);
+<a id='L374' name='L374'></a> 374     <a href='../Y/188.html' title='Multiple used in 3 places.'>_memset</a>(<a href='../Y/201.html' title='Multiple used in 41 places.'>buf</a>, 'a', <strong class='reserved'>sizeof</strong>(<a href='../Y/201.html' title='Multiple used in 41 places.'>buf</a>));
+<a id='L375' name='L375'></a> 375     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_lcd: LCD_write(1)",
+<a id='L376' name='L376'></a> 376                  <a href='../Y/53.html' title='Multiple used in 2 places.'>LCD_write</a>(<a href='../Y/201.html' title='Multiple used in 41 places.'>buf</a>, <strong class='reserved'>sizeof</strong>(<a href='../Y/201.html' title='Multiple used in 41 places.'>buf</a>)) == <strong class='reserved'>sizeof</strong>(<a href='../Y/201.html' title='Multiple used in 41 places.'>buf</a>));
+<a id='L377' name='L377'></a> 377 
+<a id='L378' name='L378'></a> 378     <a href='../Y/52.html' title='Multiple used in 7 places.'>LCD_setCursor</a>(0, 0);
+<a id='L379' name='L379'></a> 379     <a href='../Y/188.html' title='Multiple used in 3 places.'>_memset</a>(<a href='../Y/201.html' title='Multiple used in 41 places.'>buf</a>, 0, <strong class='reserved'>sizeof</strong>(<a href='../Y/201.html' title='Multiple used in 41 places.'>buf</a>));
+<a id='L380' name='L380'></a> 380     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_lcd: LCD_read(1)",
+<a id='L381' name='L381'></a> 381                  <a href='../Y/50.html' title='Multiple used in 3 places.'>LCD_read</a>(<a href='../Y/201.html' title='Multiple used in 41 places.'>buf</a>, <strong class='reserved'>sizeof</strong>(<a href='../Y/201.html' title='Multiple used in 41 places.'>buf</a>)) == <strong class='reserved'>sizeof</strong>(<a href='../Y/201.html' title='Multiple used in 41 places.'>buf</a>));
+<a id='L382' name='L382'></a> 382     <strong class='reserved'>for</strong> (<a href='../Y/214.html' title='Multiple used in 32 places.'>i</a> = 0; <a href='../Y/214.html' title='Multiple used in 32 places.'>i</a> &lt; <strong class='reserved'>sizeof</strong>(<a href='../Y/201.html' title='Multiple used in 41 places.'>buf</a>); <a href='../Y/214.html' title='Multiple used in 32 places.'>i</a>++)
+<a id='L383' name='L383'></a> 383     <em class='brace'>{</em>
+<a id='L384' name='L384'></a> 384         <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_lcd: LCD_read(2)", <a href='../Y/201.html' title='Multiple used in 41 places.'>buf</a>[<a href='../Y/214.html' title='Multiple used in 32 places.'>i</a>] == 'a');
+<a id='L385' name='L385'></a> 385     <em class='brace'>}</em>
+<a id='L386' name='L386'></a> 386 
+<a id='L387' name='L387'></a> 387     <strong class='reserved'>for</strong> (<a href='../Y/214.html' title='Multiple used in 32 places.'>i</a> = 0; <a href='../Y/214.html' title='Multiple used in 32 places.'>i</a> &lt; <a href='../Y/43.html' title='Multiple used in 2 places.'>LCD_CG_MAXCHAR</a>; <a href='../Y/214.html' title='Multiple used in 32 places.'>i</a>++)
+<a id='L388' name='L388'></a> 388     <em class='brace'>{</em>
+<a id='L389' name='L389'></a> 389         LCD_setChar(<a href='../Y/214.html' title='Multiple used in 32 places.'>i</a>, <a href='../Y/202.html' title='Multiple used in 3 places.'>ch</a>);
+<a id='L390' name='L390'></a> 390         <a href='../Y/201.html' title='Multiple used in 41 places.'>buf</a>[<a href='../Y/214.html' title='Multiple used in 32 places.'>i</a>] = <a href='../Y/214.html' title='Multiple used in 32 places.'>i</a>;
+<a id='L391' name='L391'></a> 391         <a href='../Y/202.html' title='Multiple used in 3 places.'>ch</a>[0]++;
+<a id='L392' name='L392'></a> 392     <em class='brace'>}</em>
+<a id='L393' name='L393'></a> 393 
+<a id='L394' name='L394'></a> 394     <a href='../Y/52.html' title='Multiple used in 7 places.'>LCD_setCursor</a>(0, 0);
+<a id='L395' name='L395'></a> 395     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_lcd: LCD_write(1)",
+<a id='L396' name='L396'></a> 396                  <a href='../Y/53.html' title='Multiple used in 2 places.'>LCD_write</a>(<a href='../Y/201.html' title='Multiple used in 41 places.'>buf</a>, <a href='../Y/43.html' title='Multiple used in 2 places.'>LCD_CG_MAXCHAR</a>) == <a href='../Y/43.html' title='Multiple used in 2 places.'>LCD_CG_MAXCHAR</a>);
+<a id='L397' name='L397'></a> 397 
+<a id='L398' name='L398'></a> 398     <a href='../Y/192.html' title='Multiple used in 77 places.'>_printf</a>("test_lcd: ALL OK.\r\n");
+<a id='L399' name='L399'></a> 399     <strong class='reserved'>return</strong> 0;
+<a id='L400' name='L400'></a> 400 <em class='brace'>}</em>
+<a id='L401' name='L401'></a> 401 <em class='sharp'>#endif</em> <em class='comment'>/* TEST_LCD */</em>
+<a id='L402' name='L402'></a> 402 
+<a id='L403' name='L403'></a> 403 <em class='sharp'>#ifdef</em> <a href='../Y/162.html' title='Multiple used in 3 places.'>TEST_PUSH_SWITCH</a>
+<a id='L404' name='L404'></a> 404 <strong class='reserved'>static</strong> <strong class='reserved'>char</strong>* <a href='../R/13.html' title='Multiple referred from 2 places.'>test_push_switch</a>()
+<a id='L405' name='L405'></a> 405 <em class='brace'>{</em>
+<a id='L406' name='L406'></a> 406     <strong class='reserved'>int</strong> <a href='../Y/214.html' title='Multiple used in 32 places.'>i</a>;
+<a id='L407' name='L407'></a> 407 
+<a id='L408' name='L408'></a> 408     PSW_init(<a href='../Y/171.html' title='Multiple used in 49 places.'>_FALSE</a>);
+<a id='L409' name='L409'></a> 409 
+<a id='L410' name='L410'></a> 410     <a href='../Y/192.html' title='Multiple used in 77 places.'>_printf</a>("test_push_switch: Please push S1\r\n");
+<a id='L411' name='L411'></a> 411     <strong class='reserved'>while</strong> (!<a href='../Y/95.html' title='Multiple used in 4 places.'>PSW_snapShot</a>(<a href='../Y/90.html' title='Multiple used in 9 places.'>PSW_SW1</a>));
+<a id='L412' name='L412'></a> 412     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_push_switch: PSW_oneShot(1)", <a href='../Y/94.html' title='Multiple used in 6 places.'>PSW_oneShot</a>(<a href='../Y/90.html' title='Multiple used in 9 places.'>PSW_SW1</a>));
+<a id='L413' name='L413'></a> 413     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_push_switch: PSW_oneShot(2)", !<a href='../Y/94.html' title='Multiple used in 6 places.'>PSW_oneShot</a>(<a href='../Y/90.html' title='Multiple used in 9 places.'>PSW_SW1</a>));
+<a id='L414' name='L414'></a> 414     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_push_switch: PSW_get(1)", <a href='../Y/92.html' title='Multiple used in 8 places.'>PSW_get</a>(<a href='../Y/90.html' title='Multiple used in 9 places.'>PSW_SW1</a>));
+<a id='L415' name='L415'></a> 415     <strong class='reserved'>for</strong> (<a href='../Y/214.html' title='Multiple used in 32 places.'>i</a> = 1; <a href='../Y/214.html' title='Multiple used in 32 places.'>i</a> &lt; <a href='../Y/89.html' title='Multiple used in 2 places.'>PSW_BORDER</a>; <a href='../Y/214.html' title='Multiple used in 32 places.'>i</a>++)
+<a id='L416' name='L416'></a> 416     <em class='brace'>{</em>
+<a id='L417' name='L417'></a> 417         <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_push_switch: PSW_get(2)", !<a href='../Y/92.html' title='Multiple used in 8 places.'>PSW_get</a>(<a href='../Y/90.html' title='Multiple used in 9 places.'>PSW_SW1</a>));
+<a id='L418' name='L418'></a> 418     <em class='brace'>}</em>
+<a id='L419' name='L419'></a> 419     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_push_switch: PSW_get(3)", <a href='../Y/92.html' title='Multiple used in 8 places.'>PSW_get</a>(<a href='../Y/90.html' title='Multiple used in 9 places.'>PSW_SW1</a>));
+<a id='L420' name='L420'></a> 420     <a href='../Y/192.html' title='Multiple used in 77 places.'>_printf</a>("test_push_switch: Please release S1\r\n");
+<a id='L421' name='L421'></a> 421     <strong class='reserved'>while</strong> (<a href='../Y/95.html' title='Multiple used in 4 places.'>PSW_snapShot</a>(<a href='../Y/90.html' title='Multiple used in 9 places.'>PSW_SW1</a>));
+<a id='L422' name='L422'></a> 422     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_push_switch: PSW_get(4)", !<a href='../Y/92.html' title='Multiple used in 8 places.'>PSW_get</a>(<a href='../Y/90.html' title='Multiple used in 9 places.'>PSW_SW1</a>));
+<a id='L423' name='L423'></a> 423     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_push_switch: PSW_oneShot(3)", !<a href='../Y/94.html' title='Multiple used in 6 places.'>PSW_oneShot</a>(<a href='../Y/90.html' title='Multiple used in 9 places.'>PSW_SW1</a>));
+<a id='L424' name='L424'></a> 424 
+<a id='L425' name='L425'></a> 425     <a href='../Y/192.html' title='Multiple used in 77 places.'>_printf</a>("test_push_switch: Please push S2\r\n");
+<a id='L426' name='L426'></a> 426     <strong class='reserved'>while</strong> (!<a href='../Y/95.html' title='Multiple used in 4 places.'>PSW_snapShot</a>(<a href='../Y/91.html' title='Multiple used in 9 places.'>PSW_SW2</a>));
+<a id='L427' name='L427'></a> 427     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_push_switch: PSW_oneShot(4)", <a href='../Y/94.html' title='Multiple used in 6 places.'>PSW_oneShot</a>(<a href='../Y/91.html' title='Multiple used in 9 places.'>PSW_SW2</a>));
+<a id='L428' name='L428'></a> 428     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_push_switch: PSW_oneShot(5)", !<a href='../Y/94.html' title='Multiple used in 6 places.'>PSW_oneShot</a>(<a href='../Y/91.html' title='Multiple used in 9 places.'>PSW_SW2</a>));
+<a id='L429' name='L429'></a> 429     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_push_switch: PSW_get(5)", <a href='../Y/92.html' title='Multiple used in 8 places.'>PSW_get</a>(<a href='../Y/91.html' title='Multiple used in 9 places.'>PSW_SW2</a>));
+<a id='L430' name='L430'></a> 430     <strong class='reserved'>for</strong> (<a href='../Y/214.html' title='Multiple used in 32 places.'>i</a> = 1; <a href='../Y/214.html' title='Multiple used in 32 places.'>i</a> &lt; <a href='../Y/89.html' title='Multiple used in 2 places.'>PSW_BORDER</a>; <a href='../Y/214.html' title='Multiple used in 32 places.'>i</a>++)
+<a id='L431' name='L431'></a> 431     <em class='brace'>{</em>
+<a id='L432' name='L432'></a> 432         <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_push_switch: PSW_get(6)", !<a href='../Y/92.html' title='Multiple used in 8 places.'>PSW_get</a>(<a href='../Y/91.html' title='Multiple used in 9 places.'>PSW_SW2</a>));
+<a id='L433' name='L433'></a> 433     <em class='brace'>}</em>
+<a id='L434' name='L434'></a> 434     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_push_switch: PSW_get(7)", <a href='../Y/92.html' title='Multiple used in 8 places.'>PSW_get</a>(<a href='../Y/91.html' title='Multiple used in 9 places.'>PSW_SW2</a>));
+<a id='L435' name='L435'></a> 435     <a href='../Y/192.html' title='Multiple used in 77 places.'>_printf</a>("test_push_switch: Please release S1\r\n");
+<a id='L436' name='L436'></a> 436     <strong class='reserved'>while</strong> (<a href='../Y/95.html' title='Multiple used in 4 places.'>PSW_snapShot</a>(<a href='../Y/91.html' title='Multiple used in 9 places.'>PSW_SW2</a>));
+<a id='L437' name='L437'></a> 437     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_push_switch: PSW_get(8)", !<a href='../Y/92.html' title='Multiple used in 8 places.'>PSW_get</a>(<a href='../Y/91.html' title='Multiple used in 9 places.'>PSW_SW2</a>));
+<a id='L438' name='L438'></a> 438     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_push_switch: PSW_oneShot(6)", !<a href='../Y/94.html' title='Multiple used in 6 places.'>PSW_oneShot</a>(<a href='../Y/91.html' title='Multiple used in 9 places.'>PSW_SW2</a>));
+<a id='L439' name='L439'></a> 439 
+<a id='L440' name='L440'></a> 440     <a href='../Y/192.html' title='Multiple used in 77 places.'>_printf</a>("test_push_switch: ALL OK.\r\n");
+<a id='L441' name='L441'></a> 441     <strong class='reserved'>return</strong> 0;
+<a id='L442' name='L442'></a> 442 <em class='brace'>}</em>
+<a id='L443' name='L443'></a> 443 <em class='sharp'>#endif</em> <em class='comment'>/* TEST_PUSH_SWITCH */</em>
+<a id='L444' name='L444'></a> 444 
+<a id='L445' name='L445'></a> 445 <em class='sharp'>#ifdef</em> <a href='../Y/157.html' title='Multiple used in 3 places.'>TEST_ADC</a>
+<a id='L446' name='L446'></a> 446 <strong class='reserved'>static</strong> <strong class='reserved'>char</strong>* <a href='../R/6.html' title='Multiple referred from 2 places.'>test_adc</a>()
+<a id='L447' name='L447'></a> 447 <em class='brace'>{</em>
+<a id='L448' name='L448'></a> 448     <strong class='reserved'>unsigned</strong> <strong class='reserved'>char</strong> <a href='../Y/201.html' title='Multiple used in 41 places.'>buf</a> = 0;
+<a id='L449' name='L449'></a> 449     <strong class='reserved'>long</strong> <a href='../Y/242.html' title='Multiple used in 17 places.'>val</a> = -1;
+<a id='L450' name='L450'></a> 450 
+<a id='L451' name='L451'></a> 451     <a href='../Y/8.html' title='Multiple used in 2 places.'>ADC_init</a>(ADC_NORMAL, <a href='../Y/171.html' title='Multiple used in 49 places.'>_FALSE</a>);
+<a id='L452' name='L452'></a> 452 
+<a id='L453' name='L453'></a> 453     <a href='../Y/6.html' title='Multiple used in 3 places.'>ADC_enable</a>(<a href='../Y/1.html' title='Multiple used in 7 places.'>ADC_AN0</a>);
+<a id='L454' name='L454'></a> 454 
+<a id='L455' name='L455'></a> 455     <a href='../Y/192.html' title='Multiple used in 77 places.'>_printf</a>("test_adc: Please set RV3 to max left.\r\n");
+<a id='L456' name='L456'></a> 456     <a href='../Y/192.html' title='Multiple used in 77 places.'>_printf</a>("test_adc: Press 'q' to ready.\r\n");
+<a id='L457' name='L457'></a> 457     <strong class='reserved'>do</strong>
+<a id='L458' name='L458'></a> 458     <em class='brace'>{</em>
+<a id='L459' name='L459'></a> 459         <a href='../Y/100.html' title='Multiple used in 5 places.'>SCI_read</a>(&amp;<a href='../Y/201.html' title='Multiple used in 41 places.'>buf</a>, 1, <a href='../Y/171.html' title='Multiple used in 49 places.'>_FALSE</a>, -1);
+<a id='L460' name='L460'></a> 460     <em class='brace'>}</em>
+<a id='L461' name='L461'></a> 461     <strong class='reserved'>while</strong> (<a href='../Y/201.html' title='Multiple used in 41 places.'>buf</a> != 'q');
+<a id='L462' name='L462'></a> 462     <a href='../Y/201.html' title='Multiple used in 41 places.'>buf</a> = 0;
+<a id='L463' name='L463'></a> 463 
+<a id='L464' name='L464'></a> 464     <a href='../Y/9.html' title='Multiple used in 3 places.'>ADC_start</a>();
+<a id='L465' name='L465'></a> 465     <strong class='reserved'>do</strong>
+<a id='L466' name='L466'></a> 466     <em class='brace'>{</em>
+<a id='L467' name='L467'></a> 467         <a href='../Y/242.html' title='Multiple used in 17 places.'>val</a> = <a href='../Y/7.html' title='Multiple used in 10 places.'>ADC_get</a>(<a href='../Y/1.html' title='Multiple used in 7 places.'>ADC_AN0</a>, <a href='../Y/176.html' title='Multiple used in 40 places.'>_TRUE</a>);
+<a id='L468' name='L468'></a> 468     <em class='brace'>}</em>
+<a id='L469' name='L469'></a> 469     <strong class='reserved'>while</strong> (<a href='../Y/242.html' title='Multiple used in 17 places.'>val</a> &lt; 0);
+<a id='L470' name='L470'></a> 470 
+<a id='L471' name='L471'></a> 471     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_adc: ADC_get(1)", <a href='../Y/242.html' title='Multiple used in 17 places.'>val</a> == 0);
+<a id='L472' name='L472'></a> 472     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_adc: ADC_get(2)", <a href='../Y/7.html' title='Multiple used in 10 places.'>ADC_get</a>(<a href='../Y/1.html' title='Multiple used in 7 places.'>ADC_AN0</a>, <a href='../Y/176.html' title='Multiple used in 40 places.'>_TRUE</a>) &lt; 0);
+<a id='L473' name='L473'></a> 473 
+<a id='L474' name='L474'></a> 474     <a href='../Y/6.html' title='Multiple used in 3 places.'>ADC_enable</a>(<a href='../Y/2.html' title='Multiple used in 9 places.'>ADC_AN1</a>);
+<a id='L475' name='L475'></a> 475 
+<a id='L476' name='L476'></a> 476     <a href='../Y/192.html' title='Multiple used in 77 places.'>_printf</a>("test_adc: Please set RV2 to max left.\r\n");
+<a id='L477' name='L477'></a> 477     <a href='../Y/192.html' title='Multiple used in 77 places.'>_printf</a>("test_adc: Press 'q' to ready.\r\n");
+<a id='L478' name='L478'></a> 478     <strong class='reserved'>do</strong>
+<a id='L479' name='L479'></a> 479     <em class='brace'>{</em>
+<a id='L480' name='L480'></a> 480         <a href='../Y/100.html' title='Multiple used in 5 places.'>SCI_read</a>(&amp;<a href='../Y/201.html' title='Multiple used in 41 places.'>buf</a>, 1, <a href='../Y/171.html' title='Multiple used in 49 places.'>_FALSE</a>, -1);
+<a id='L481' name='L481'></a> 481     <em class='brace'>}</em>
+<a id='L482' name='L482'></a> 482     <strong class='reserved'>while</strong> (<a href='../Y/201.html' title='Multiple used in 41 places.'>buf</a> != 'q');
+<a id='L483' name='L483'></a> 483     <a href='../Y/201.html' title='Multiple used in 41 places.'>buf</a> = 0;
+<a id='L484' name='L484'></a> 484 
+<a id='L485' name='L485'></a> 485     <a href='../Y/9.html' title='Multiple used in 3 places.'>ADC_start</a>();
+<a id='L486' name='L486'></a> 486     <strong class='reserved'>do</strong>
+<a id='L487' name='L487'></a> 487     <em class='brace'>{</em>
+<a id='L488' name='L488'></a> 488         <a href='../Y/242.html' title='Multiple used in 17 places.'>val</a> = <a href='../Y/7.html' title='Multiple used in 10 places.'>ADC_get</a>(<a href='../Y/2.html' title='Multiple used in 9 places.'>ADC_AN1</a>, <a href='../Y/176.html' title='Multiple used in 40 places.'>_TRUE</a>);
+<a id='L489' name='L489'></a> 489     <em class='brace'>}</em>
+<a id='L490' name='L490'></a> 490     <strong class='reserved'>while</strong> (<a href='../Y/242.html' title='Multiple used in 17 places.'>val</a> &lt; 0);
+<a id='L491' name='L491'></a> 491 
+<a id='L492' name='L492'></a> 492     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_adc: ADC_get(3)", <a href='../Y/242.html' title='Multiple used in 17 places.'>val</a> == 0);
+<a id='L493' name='L493'></a> 493     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_adc: ADC_get(4)", <a href='../Y/7.html' title='Multiple used in 10 places.'>ADC_get</a>(<a href='../Y/2.html' title='Multiple used in 9 places.'>ADC_AN1</a>, <a href='../Y/176.html' title='Multiple used in 40 places.'>_TRUE</a>) &lt; 0);
+<a id='L494' name='L494'></a> 494 
+<a id='L495' name='L495'></a> 495     <a href='../Y/5.html' title='Multiple used in 3 places.'>ADC_disable</a>(<a href='../Y/1.html' title='Multiple used in 7 places.'>ADC_AN0</a>);
+<a id='L496' name='L496'></a> 496     <a href='../Y/5.html' title='Multiple used in 3 places.'>ADC_disable</a>(<a href='../Y/2.html' title='Multiple used in 9 places.'>ADC_AN1</a>);
+<a id='L497' name='L497'></a> 497     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_adc: ADC_get(5)", <a href='../Y/7.html' title='Multiple used in 10 places.'>ADC_get</a>(<a href='../Y/1.html' title='Multiple used in 7 places.'>ADC_AN0</a>, <a href='../Y/176.html' title='Multiple used in 40 places.'>_TRUE</a>) &lt; 0);
+<a id='L498' name='L498'></a> 498     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_adc: ADC_get(6)", <a href='../Y/7.html' title='Multiple used in 10 places.'>ADC_get</a>(<a href='../Y/2.html' title='Multiple used in 9 places.'>ADC_AN1</a>, <a href='../Y/176.html' title='Multiple used in 40 places.'>_TRUE</a>) &lt; 0);
+<a id='L499' name='L499'></a> 499 
+<a id='L500' name='L500'></a> 500     <a href='../Y/8.html' title='Multiple used in 2 places.'>ADC_init</a>(ADC_SCAN, <a href='../Y/171.html' title='Multiple used in 49 places.'>_FALSE</a>);
+<a id='L501' name='L501'></a> 501     <a href='../Y/6.html' title='Multiple used in 3 places.'>ADC_enable</a>(<a href='../Y/2.html' title='Multiple used in 9 places.'>ADC_AN1</a>);
+<a id='L502' name='L502'></a> 502     <a href='../Y/9.html' title='Multiple used in 3 places.'>ADC_start</a>();
+<a id='L503' name='L503'></a> 503 
+<a id='L504' name='L504'></a> 504     <a href='../Y/192.html' title='Multiple used in 77 places.'>_printf</a>("test_adc: Please set RV3 to max right.\r\n");
+<a id='L505' name='L505'></a> 505     <a href='../Y/192.html' title='Multiple used in 77 places.'>_printf</a>("test_adc: Press 'q' to ready.\r\n");
+<a id='L506' name='L506'></a> 506     <strong class='reserved'>do</strong>
+<a id='L507' name='L507'></a> 507     <em class='brace'>{</em>
+<a id='L508' name='L508'></a> 508         <a href='../Y/100.html' title='Multiple used in 5 places.'>SCI_read</a>(&amp;<a href='../Y/201.html' title='Multiple used in 41 places.'>buf</a>, 1, <a href='../Y/171.html' title='Multiple used in 49 places.'>_FALSE</a>, -1);
+<a id='L509' name='L509'></a> 509     <em class='brace'>}</em>
+<a id='L510' name='L510'></a> 510     <strong class='reserved'>while</strong> (<a href='../Y/201.html' title='Multiple used in 41 places.'>buf</a> != 'q');
+<a id='L511' name='L511'></a> 511     <a href='../Y/201.html' title='Multiple used in 41 places.'>buf</a> = 0;
+<a id='L512' name='L512'></a> 512 
+<a id='L513' name='L513'></a> 513     <strong class='reserved'>do</strong>
+<a id='L514' name='L514'></a> 514     <em class='brace'>{</em>
+<a id='L515' name='L515'></a> 515         <a href='../Y/242.html' title='Multiple used in 17 places.'>val</a> = <a href='../Y/7.html' title='Multiple used in 10 places.'>ADC_get</a>(<a href='../Y/1.html' title='Multiple used in 7 places.'>ADC_AN0</a>, <a href='../Y/171.html' title='Multiple used in 49 places.'>_FALSE</a>);
+<a id='L516' name='L516'></a> 516     <em class='brace'>}</em>
+<a id='L517' name='L517'></a> 517     <strong class='reserved'>while</strong> (<a href='../Y/242.html' title='Multiple used in 17 places.'>val</a> &lt; 0);
+<a id='L518' name='L518'></a> 518     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_adc: ADC_get(7)", <a href='../Y/242.html' title='Multiple used in 17 places.'>val</a> == ((1U &lt;&lt; 9) - 1));
+<a id='L519' name='L519'></a> 519 
+<a id='L520' name='L520'></a> 520     <a href='../Y/192.html' title='Multiple used in 77 places.'>_printf</a>("test_adc: Please set RV2 to max right.\r\n");
+<a id='L521' name='L521'></a> 521     <a href='../Y/192.html' title='Multiple used in 77 places.'>_printf</a>("test_adc: Press 'q' to ready.\r\n");
+<a id='L522' name='L522'></a> 522     <strong class='reserved'>do</strong>
+<a id='L523' name='L523'></a> 523     <em class='brace'>{</em>
+<a id='L524' name='L524'></a> 524         <a href='../Y/100.html' title='Multiple used in 5 places.'>SCI_read</a>(&amp;<a href='../Y/201.html' title='Multiple used in 41 places.'>buf</a>, 1, <a href='../Y/171.html' title='Multiple used in 49 places.'>_FALSE</a>, -1);
+<a id='L525' name='L525'></a> 525     <em class='brace'>}</em>
+<a id='L526' name='L526'></a> 526     <strong class='reserved'>while</strong> (<a href='../Y/201.html' title='Multiple used in 41 places.'>buf</a> != 'q');
+<a id='L527' name='L527'></a> 527     <a href='../Y/201.html' title='Multiple used in 41 places.'>buf</a> = 0;
+<a id='L528' name='L528'></a> 528 
+<a id='L529' name='L529'></a> 529     <strong class='reserved'>do</strong>
+<a id='L530' name='L530'></a> 530     <em class='brace'>{</em>
+<a id='L531' name='L531'></a> 531         <a href='../Y/242.html' title='Multiple used in 17 places.'>val</a> = <a href='../Y/7.html' title='Multiple used in 10 places.'>ADC_get</a>(<a href='../Y/2.html' title='Multiple used in 9 places.'>ADC_AN1</a>, <a href='../Y/176.html' title='Multiple used in 40 places.'>_TRUE</a>);
+<a id='L532' name='L532'></a> 532     <em class='brace'>}</em>
+<a id='L533' name='L533'></a> 533     <strong class='reserved'>while</strong> (<a href='../Y/242.html' title='Multiple used in 17 places.'>val</a> &lt; 0);
+<a id='L534' name='L534'></a> 534     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_adc: ADC_get(8)", <a href='../Y/242.html' title='Multiple used in 17 places.'>val</a> == ((1U &lt;&lt; 9) - 1));
+<a id='L535' name='L535'></a> 535 
+<a id='L536' name='L536'></a> 536     ADC_stop();
+<a id='L537' name='L537'></a> 537     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_adc: ADC_get(9)", <a href='../Y/7.html' title='Multiple used in 10 places.'>ADC_get</a>(<a href='../Y/1.html' title='Multiple used in 7 places.'>ADC_AN0</a>, <a href='../Y/176.html' title='Multiple used in 40 places.'>_TRUE</a>) &lt; 0);
+<a id='L538' name='L538'></a> 538     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_adc: ADC_get(10)", <a href='../Y/7.html' title='Multiple used in 10 places.'>ADC_get</a>(<a href='../Y/2.html' title='Multiple used in 9 places.'>ADC_AN1</a>, <a href='../Y/176.html' title='Multiple used in 40 places.'>_TRUE</a>) &lt; 0);
+<a id='L539' name='L539'></a> 539 
+<a id='L540' name='L540'></a> 540     <a href='../Y/5.html' title='Multiple used in 3 places.'>ADC_disable</a>(<a href='../Y/2.html' title='Multiple used in 9 places.'>ADC_AN1</a>);
+<a id='L541' name='L541'></a> 541 
+<a id='L542' name='L542'></a> 542     <a href='../Y/192.html' title='Multiple used in 77 places.'>_printf</a>("test_adc: ALL OK.\r\n");
+<a id='L543' name='L543'></a> 543     <strong class='reserved'>return</strong> 0;
+<a id='L544' name='L544'></a> 544 <em class='brace'>}</em>
+<a id='L545' name='L545'></a> 545 <em class='sharp'>#endif</em> <em class='comment'>/* TEST_ADC */</em>
+<a id='L546' name='L546'></a> 546 
+<a id='L547' name='L547'></a> 547 <em class='sharp'>#ifdef</em> <a href='../Y/161.html' title='Multiple used in 4 places.'>TEST_PS2</a>
+<a id='L548' name='L548'></a> 548 <strong class='reserved'>static</strong> <strong class='reserved'>char</strong>* <a href='../R/12.html' title='Multiple referred from 2 places.'>test_ps2</a>()
+<a id='L549' name='L549'></a> 549 <em class='brace'>{</em>
+<a id='L550' name='L550'></a> 550     <strong class='reserved'>unsigned</strong> <strong class='reserved'>char</strong> <a href='../Y/201.html' title='Multiple used in 41 places.'>buf</a>[3];
+<a id='L551' name='L551'></a> 551 
+<a id='L552' name='L552'></a> 552     PS2_init();
+<a id='L553' name='L553'></a> 553 
+<a id='L554' name='L554'></a> 554     <a href='../Y/192.html' title='Multiple used in 77 places.'>_printf</a>("test_ps2: One shot PS/2 keybord.\r\n");
+<a id='L555' name='L555'></a> 555     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_ps2: PS2_read(1)",
+<a id='L556' name='L556'></a> 556                  <a href='../Y/88.html' title='Multiple used in 2 places.'>PS2_read</a>(<a href='../Y/201.html' title='Multiple used in 41 places.'>buf</a>, <strong class='reserved'>sizeof</strong>(<a href='../Y/201.html' title='Multiple used in 41 places.'>buf</a>), <a href='../Y/176.html' title='Multiple used in 40 places.'>_TRUE</a>, -1) == <strong class='reserved'>sizeof</strong>(<a href='../Y/201.html' title='Multiple used in 41 places.'>buf</a>));
+<a id='L557' name='L557'></a> 557     <a href='../Y/192.html' title='Multiple used in 77 places.'>_printf</a>("test_ps2: %x %x %x\r\n", <a href='../Y/201.html' title='Multiple used in 41 places.'>buf</a>[0], <a href='../Y/201.html' title='Multiple used in 41 places.'>buf</a>[1], <a href='../Y/201.html' title='Multiple used in 41 places.'>buf</a>[2]);
+<a id='L558' name='L558'></a> 558 
+<a id='L559' name='L559'></a> 559     <a href='../Y/192.html' title='Multiple used in 77 places.'>_printf</a>("test_ps2: Press PS/2 keybord... 'q' to quit.\r\n");
+<a id='L560' name='L560'></a> 560     <strong class='reserved'>while</strong> (<a href='../Y/201.html' title='Multiple used in 41 places.'>buf</a>[0] != KBD_JP106_Q)
+<a id='L561' name='L561'></a> 561     <em class='brace'>{</em>
+<a id='L562' name='L562'></a> 562         <strong class='reserved'>if</strong> (<a href='../Y/88.html' title='Multiple used in 2 places.'>PS2_read</a>(<a href='../Y/201.html' title='Multiple used in 41 places.'>buf</a>, 1, <a href='../Y/171.html' title='Multiple used in 49 places.'>_FALSE</a>, -1) == 1)
+<a id='L563' name='L563'></a> 563         <em class='brace'>{</em>
+<a id='L564' name='L564'></a> 564             <a href='../Y/192.html' title='Multiple used in 77 places.'>_printf</a>("%x ", <a href='../Y/201.html' title='Multiple used in 41 places.'>buf</a>[0]);
+<a id='L565' name='L565'></a> 565         <em class='brace'>}</em>
+<a id='L566' name='L566'></a> 566     <em class='brace'>}</em>
+<a id='L567' name='L567'></a> 567     <a href='../Y/192.html' title='Multiple used in 77 places.'>_printf</a>("\r\n");
+<a id='L568' name='L568'></a> 568 
+<a id='L569' name='L569'></a> 569     <a href='../Y/192.html' title='Multiple used in 77 places.'>_printf</a>("test_ps2: ALL OK.\r\n");
+<a id='L570' name='L570'></a> 570     <strong class='reserved'>return</strong> 0;
+<a id='L571' name='L571'></a> 571 <em class='brace'>}</em>
+<a id='L572' name='L572'></a> 572 <em class='sharp'>#endif</em> <em class='comment'>/* TEST_PS2 */</em>
+<a id='L573' name='L573'></a> 573 
+<a id='L574' name='L574'></a> 574 <em class='sharp'>#ifdef</em> <a href='../Y/163.html' title='Multiple used in 7 places.'>TEST_SOUND</a>
+<a id='L575' name='L575'></a> 575 <strong class='reserved'>static</strong> <strong class='reserved'>char</strong>* <a href='../R/16.html' title='Multiple referred from 2 places.'>test_sound</a>()
+<a id='L576' name='L576'></a> 576 <em class='brace'>{</em>
+<a id='L577' name='L577'></a> 577     <a href='../Y/126.html' title='Multiple used in 2 places.'>SOUND_Tone</a> <a href='../Y/237.html' title='Multiple used in 36 places.'>tone</a> = <em class='brace'>{</em> <a href='../Y/106.html' title='Multiple used in 5 places.'>SOUND_C0</a>, &amp;<a href='../Y/16.html' title='Multiple used in 34 places.'>ENVELOPE_harp</a>, <a href='../Y/83.html' title='Multiple used in 8 places.'>NULL</a>, <a href='../Y/171.html' title='Multiple used in 49 places.'>_FALSE</a> <em class='brace'>}</em>;
+<a id='L578' name='L578'></a> 578 
+<a id='L579' name='L579'></a> 579     SOUND_init();
+<a id='L580' name='L580'></a> 580 
+<a id='L581' name='L581'></a> 581     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_sound: SOUND_init", SOUND_getState() == SOUND_ST_STOP);
+<a id='L582' name='L582'></a> 582     
+<a id='L583' name='L583'></a> 583     <a href='../Y/192.html' title='Multiple used in 77 places.'>_printf</a>("test_sound: Pronounce C0 no reverb and no loop. \r\n");
+<a id='L584' name='L584'></a> 584     <a href='../Y/134.html' title='Multiple used in 12 places.'>SOUND_setTone</a>(0, &amp;<a href='../Y/237.html' title='Multiple used in 36 places.'>tone</a>);
+<a id='L585' name='L585'></a> 585     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_sound: SOUND_play", <a href='../Y/130.html' title='Multiple used in 5 places.'>SOUND_play</a>() == <a href='../Y/176.html' title='Multiple used in 40 places.'>_TRUE</a>);
+<a id='L586' name='L586'></a> 586     <a href='../Y/189.html' title='Multiple used in 30 places.'>_msleep</a>(500);
+<a id='L587' name='L587'></a> 587     <a href='../Y/192.html' title='Multiple used in 77 places.'>_printf</a>("test_sound: Stop. \r\n");
+<a id='L588' name='L588'></a> 588     <a href='../Y/132.html' title='Multiple used in 8 places.'>SOUND_removeTone</a>(0);
+<a id='L589' name='L589'></a> 589     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_sound: SOUND_stop", <a href='../Y/136.html' title='Multiple used in 5 places.'>SOUND_stop</a>() == <a href='../Y/176.html' title='Multiple used in 40 places.'>_TRUE</a>);
+<a id='L590' name='L590'></a> 590     <a href='../Y/189.html' title='Multiple used in 30 places.'>_msleep</a>(500);
+<a id='L591' name='L591'></a> 591     
+<a id='L592' name='L592'></a> 592     <a href='../Y/192.html' title='Multiple used in 77 places.'>_printf</a>("test_sound: Pronounce C0 reverb on and no loop. \r\n");
+<a id='L593' name='L593'></a> 593     <a href='../Y/237.html' title='Multiple used in 36 places.'>tone</a>.reverb = &amp;<a href='../Y/17.html' title='Multiple used in 34 places.'>ENVELOPE_harp_reverb</a>;
+<a id='L594' name='L594'></a> 594     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_sound: SOUND_play", <a href='../Y/130.html' title='Multiple used in 5 places.'>SOUND_play</a>() == <a href='../Y/176.html' title='Multiple used in 40 places.'>_TRUE</a>);
+<a id='L595' name='L595'></a> 595     <a href='../Y/134.html' title='Multiple used in 12 places.'>SOUND_setTone</a>(0, &amp;<a href='../Y/237.html' title='Multiple used in 36 places.'>tone</a>);
+<a id='L596' name='L596'></a> 596     <a href='../Y/189.html' title='Multiple used in 30 places.'>_msleep</a>(1000);
+<a id='L597' name='L597'></a> 597     <a href='../Y/192.html' title='Multiple used in 77 places.'>_printf</a>("test_sound: Stop. \r\n");
+<a id='L598' name='L598'></a> 598     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_sound: SOUND_stop", <a href='../Y/136.html' title='Multiple used in 5 places.'>SOUND_stop</a>() == <a href='../Y/176.html' title='Multiple used in 40 places.'>_TRUE</a>);
+<a id='L599' name='L599'></a> 599     <a href='../Y/189.html' title='Multiple used in 30 places.'>_msleep</a>(100);
+<a id='L600' name='L600'></a> 600 
+<a id='L601' name='L601'></a> 601     <a href='../Y/192.html' title='Multiple used in 77 places.'>_printf</a>("test_sound: Pronounce C0 reverb on and loop on. \r\n");
+<a id='L602' name='L602'></a> 602     <a href='../Y/237.html' title='Multiple used in 36 places.'>tone</a>.<a href='../Y/215.html' title='Multiple used in 2 places.'>loop</a> = <a href='../Y/176.html' title='Multiple used in 40 places.'>_TRUE</a>;
+<a id='L603' name='L603'></a> 603     <a href='../Y/134.html' title='Multiple used in 12 places.'>SOUND_setTone</a>(0, &amp;<a href='../Y/237.html' title='Multiple used in 36 places.'>tone</a>);
+<a id='L604' name='L604'></a> 604     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_sound: SOUND_play", <a href='../Y/130.html' title='Multiple used in 5 places.'>SOUND_play</a>() == <a href='../Y/176.html' title='Multiple used in 40 places.'>_TRUE</a>);
+<a id='L605' name='L605'></a> 605     <a href='../Y/189.html' title='Multiple used in 30 places.'>_msleep</a>(500);
+<a id='L606' name='L606'></a> 606     <a href='../Y/192.html' title='Multiple used in 77 places.'>_printf</a>("test_sound: Volume to 0. \r\n");
+<a id='L607' name='L607'></a> 607     <a href='../Y/135.html' title='Multiple used in 4 places.'>SOUND_setVolume</a>(0);
+<a id='L608' name='L608'></a> 608     <a href='../Y/189.html' title='Multiple used in 30 places.'>_msleep</a>(500);
+<a id='L609' name='L609'></a> 609     <a href='../Y/192.html' title='Multiple used in 77 places.'>_printf</a>("test_sound: Volume to max. \r\n");
+<a id='L610' name='L610'></a> 610     <a href='../Y/135.html' title='Multiple used in 4 places.'>SOUND_setVolume</a>(SOUND_MAX_VOLUME);
+<a id='L611' name='L611'></a> 611     <a href='../Y/189.html' title='Multiple used in 30 places.'>_msleep</a>(500);
+<a id='L612' name='L612'></a> 612     <a href='../Y/192.html' title='Multiple used in 77 places.'>_printf</a>("test_sound: Volume to default. \r\n");
+<a id='L613' name='L613'></a> 613     <a href='../Y/135.html' title='Multiple used in 4 places.'>SOUND_setVolume</a>(128);
+<a id='L614' name='L614'></a> 614     <a href='../Y/189.html' title='Multiple used in 30 places.'>_msleep</a>(500);
+<a id='L615' name='L615'></a> 615     <a href='../Y/192.html' title='Multiple used in 77 places.'>_printf</a>("test_sound: Stop. \r\n");
+<a id='L616' name='L616'></a> 616     <a href='../Y/132.html' title='Multiple used in 8 places.'>SOUND_removeTone</a>(0);
+<a id='L617' name='L617'></a> 617     <a href='../Y/189.html' title='Multiple used in 30 places.'>_msleep</a>(100);
+<a id='L618' name='L618'></a> 618 
+<a id='L619' name='L619'></a> 619     <a href='../Y/192.html' title='Multiple used in 77 places.'>_printf</a>("test_sound: Reverse C0 reverb on and loop on. \r\n");
+<a id='L620' name='L620'></a> 620     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_sound: SOUND_reverse", <a href='../Y/133.html' title='Multiple used in 2 places.'>SOUND_reverse</a>() == <a href='../Y/176.html' title='Multiple used in 40 places.'>_TRUE</a>);
+<a id='L621' name='L621'></a> 621     <a href='../Y/134.html' title='Multiple used in 12 places.'>SOUND_setTone</a>(0, &amp;<a href='../Y/237.html' title='Multiple used in 36 places.'>tone</a>);
+<a id='L622' name='L622'></a> 622     <a href='../Y/189.html' title='Multiple used in 30 places.'>_msleep</a>(1000);
+<a id='L623' name='L623'></a> 623     <a href='../Y/192.html' title='Multiple used in 77 places.'>_printf</a>("test_sound: Stop. \r\n");
+<a id='L624' name='L624'></a> 624     <a href='../Y/132.html' title='Multiple used in 8 places.'>SOUND_removeTone</a>(0);
+<a id='L625' name='L625'></a> 625     <a href='../Y/189.html' title='Multiple used in 30 places.'>_msleep</a>(100);
+<a id='L626' name='L626'></a> 626 
+<a id='L627' name='L627'></a> 627     <a href='../Y/192.html' title='Multiple used in 77 places.'>_printf</a>("test_sound: Pronounce chord (C0, D0) \r\n");
+<a id='L628' name='L628'></a> 628     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_sound: SOUND_play", <a href='../Y/130.html' title='Multiple used in 5 places.'>SOUND_play</a>() == <a href='../Y/176.html' title='Multiple used in 40 places.'>_TRUE</a>);
+<a id='L629' name='L629'></a> 629     <a href='../Y/237.html' title='Multiple used in 36 places.'>tone</a>.<a href='../Y/215.html' title='Multiple used in 2 places.'>loop</a> = <a href='../Y/171.html' title='Multiple used in 49 places.'>_FALSE</a>;
+<a id='L630' name='L630'></a> 630     <a href='../Y/134.html' title='Multiple used in 12 places.'>SOUND_setTone</a>(0, &amp;<a href='../Y/237.html' title='Multiple used in 36 places.'>tone</a>);
+<a id='L631' name='L631'></a> 631     <a href='../Y/237.html' title='Multiple used in 36 places.'>tone</a>.<a href='../Y/209.html' title='Multiple used in 13 places.'>freq</a> = <a href='../Y/109.html' title='Multiple used in 5 places.'>SOUND_D0</a>;
+<a id='L632' name='L632'></a> 632     <a href='../Y/134.html' title='Multiple used in 12 places.'>SOUND_setTone</a>(1, &amp;<a href='../Y/237.html' title='Multiple used in 36 places.'>tone</a>);
+<a id='L633' name='L633'></a> 633     <a href='../Y/189.html' title='Multiple used in 30 places.'>_msleep</a>(1000);
+<a id='L634' name='L634'></a> 634     <a href='../Y/192.html' title='Multiple used in 77 places.'>_printf</a>("test_sound: Stop. \r\n");
+<a id='L635' name='L635'></a> 635     <a href='../Y/132.html' title='Multiple used in 8 places.'>SOUND_removeTone</a>(0);
+<a id='L636' name='L636'></a> 636     <a href='../Y/132.html' title='Multiple used in 8 places.'>SOUND_removeTone</a>(1);
+<a id='L637' name='L637'></a> 637     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_sound: SOUND_stop", <a href='../Y/136.html' title='Multiple used in 5 places.'>SOUND_stop</a>() == <a href='../Y/176.html' title='Multiple used in 40 places.'>_TRUE</a>);
+<a id='L638' name='L638'></a> 638     <a href='../Y/189.html' title='Multiple used in 30 places.'>_msleep</a>(100);
+<a id='L639' name='L639'></a> 639 
+<a id='L640' name='L640'></a> 640     <a href='../Y/192.html' title='Multiple used in 77 places.'>_printf</a>("test_sound: Pronounce chord (C0, D0, E0) \r\n");
+<a id='L641' name='L641'></a> 641     <a href='../Y/237.html' title='Multiple used in 36 places.'>tone</a>.<a href='../Y/209.html' title='Multiple used in 13 places.'>freq</a> = <a href='../Y/106.html' title='Multiple used in 5 places.'>SOUND_C0</a>;
+<a id='L642' name='L642'></a> 642     <a href='../Y/134.html' title='Multiple used in 12 places.'>SOUND_setTone</a>(0, &amp;<a href='../Y/237.html' title='Multiple used in 36 places.'>tone</a>);
+<a id='L643' name='L643'></a> 643     <a href='../Y/237.html' title='Multiple used in 36 places.'>tone</a>.<a href='../Y/209.html' title='Multiple used in 13 places.'>freq</a> = <a href='../Y/109.html' title='Multiple used in 5 places.'>SOUND_D0</a>;
+<a id='L644' name='L644'></a> 644     <a href='../Y/134.html' title='Multiple used in 12 places.'>SOUND_setTone</a>(1, &amp;<a href='../Y/237.html' title='Multiple used in 36 places.'>tone</a>);
+<a id='L645' name='L645'></a> 645     <a href='../Y/237.html' title='Multiple used in 36 places.'>tone</a>.<a href='../Y/209.html' title='Multiple used in 13 places.'>freq</a> = <a href='../Y/112.html' title='Multiple used in 4 places.'>SOUND_E0</a>;
+<a id='L646' name='L646'></a> 646     <a href='../Y/134.html' title='Multiple used in 12 places.'>SOUND_setTone</a>(2, &amp;<a href='../Y/237.html' title='Multiple used in 36 places.'>tone</a>);
+<a id='L647' name='L647'></a> 647     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_sound: SOUND_play", <a href='../Y/130.html' title='Multiple used in 5 places.'>SOUND_play</a>() == <a href='../Y/176.html' title='Multiple used in 40 places.'>_TRUE</a>);
+<a id='L648' name='L648'></a> 648     <a href='../Y/189.html' title='Multiple used in 30 places.'>_msleep</a>(1000);
+<a id='L649' name='L649'></a> 649     <a href='../Y/192.html' title='Multiple used in 77 places.'>_printf</a>("test_sound: Stop. \r\n");
+<a id='L650' name='L650'></a> 650     <a href='../Y/136.html' title='Multiple used in 5 places.'>SOUND_stop</a>();
+<a id='L651' name='L651'></a> 651     <a href='../Y/189.html' title='Multiple used in 30 places.'>_msleep</a>(100);
+<a id='L652' name='L652'></a> 652 
+<a id='L653' name='L653'></a> 653     <a href='../Y/192.html' title='Multiple used in 77 places.'>_printf</a>("test_sound: Reverse chord (C0, D0, E0)\r\n");
+<a id='L654' name='L654'></a> 654     <a href='../Y/237.html' title='Multiple used in 36 places.'>tone</a>.<a href='../Y/209.html' title='Multiple used in 13 places.'>freq</a> = <a href='../Y/106.html' title='Multiple used in 5 places.'>SOUND_C0</a>;
+<a id='L655' name='L655'></a> 655     <a href='../Y/134.html' title='Multiple used in 12 places.'>SOUND_setTone</a>(0, &amp;<a href='../Y/237.html' title='Multiple used in 36 places.'>tone</a>);
+<a id='L656' name='L656'></a> 656     <a href='../Y/237.html' title='Multiple used in 36 places.'>tone</a>.<a href='../Y/209.html' title='Multiple used in 13 places.'>freq</a> = <a href='../Y/109.html' title='Multiple used in 5 places.'>SOUND_D0</a>;
+<a id='L657' name='L657'></a> 657     <a href='../Y/134.html' title='Multiple used in 12 places.'>SOUND_setTone</a>(1, &amp;<a href='../Y/237.html' title='Multiple used in 36 places.'>tone</a>);
+<a id='L658' name='L658'></a> 658     <a href='../Y/237.html' title='Multiple used in 36 places.'>tone</a>.<a href='../Y/209.html' title='Multiple used in 13 places.'>freq</a> = <a href='../Y/112.html' title='Multiple used in 4 places.'>SOUND_E0</a>;
+<a id='L659' name='L659'></a> 659     <a href='../Y/134.html' title='Multiple used in 12 places.'>SOUND_setTone</a>(2, &amp;<a href='../Y/237.html' title='Multiple used in 36 places.'>tone</a>);
+<a id='L660' name='L660'></a> 660     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_sound: SOUND_reverse", <a href='../Y/133.html' title='Multiple used in 2 places.'>SOUND_reverse</a>() == <a href='../Y/176.html' title='Multiple used in 40 places.'>_TRUE</a>);
+<a id='L661' name='L661'></a> 661     <a href='../Y/189.html' title='Multiple used in 30 places.'>_msleep</a>(1000);
+<a id='L662' name='L662'></a> 662     <a href='../Y/192.html' title='Multiple used in 77 places.'>_printf</a>("test_sound: Stop. \r\n");
+<a id='L663' name='L663'></a> 663     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_sound: SOUND_stop", <a href='../Y/136.html' title='Multiple used in 5 places.'>SOUND_stop</a>() == <a href='../Y/176.html' title='Multiple used in 40 places.'>_TRUE</a>);
+<a id='L664' name='L664'></a> 664     <a href='../Y/189.html' title='Multiple used in 30 places.'>_msleep</a>(100);
+<a id='L665' name='L665'></a> 665 
+<a id='L666' name='L666'></a> 666     <a href='../Y/132.html' title='Multiple used in 8 places.'>SOUND_removeTone</a>(0);
+<a id='L667' name='L667'></a> 667     <a href='../Y/132.html' title='Multiple used in 8 places.'>SOUND_removeTone</a>(1);
+<a id='L668' name='L668'></a> 668     <a href='../Y/132.html' title='Multiple used in 8 places.'>SOUND_removeTone</a>(2);
+<a id='L669' name='L669'></a> 669 
+<a id='L670' name='L670'></a> 670     <a href='../Y/192.html' title='Multiple used in 77 places.'>_printf</a>("test_sound: ALL OK.\r\n");
+<a id='L671' name='L671'></a> 671     <strong class='reserved'>return</strong> 0;
+<a id='L672' name='L672'></a> 672 <em class='brace'>}</em>
+<a id='L673' name='L673'></a> 673 <em class='sharp'>#endif</em> <em class='comment'>/* TEST_SOUND */</em>
+<a id='L674' name='L674'></a> 674 
+<a id='L675' name='L675'></a> 675 <em class='sharp'>#ifdef</em> <a href='../Y/160.html' title='Multiple used in 7 places.'>TEST_MUSIC</a>
+<a id='L676' name='L676'></a> 676 <strong class='reserved'>static</strong> <strong class='reserved'>char</strong>* <a href='../R/11.html' title='Multiple referred from 2 places.'>test_music</a>()
+<a id='L677' name='L677'></a> 677 <em class='brace'>{</em>
+<a id='L678' name='L678'></a> 678     <a href='../Y/126.html' title='Multiple used in 2 places.'>SOUND_Tone</a> <a href='../Y/237.html' title='Multiple used in 36 places.'>tone</a> = <em class='brace'>{</em>
+<a id='L679' name='L679'></a> 679         SOUND_NA, &amp;<a href='../Y/16.html' title='Multiple used in 34 places.'>ENVELOPE_harp</a>, &amp;<a href='../Y/17.html' title='Multiple used in 34 places.'>ENVELOPE_harp_reverb</a>, <a href='../Y/171.html' title='Multiple used in 49 places.'>_FALSE</a>
+<a id='L680' name='L680'></a> 680     <em class='brace'>}</em>;
+<a id='L681' name='L681'></a> 681     MUSIC_Score <a href='../Y/225.html' title='Multiple used in 8 places.'>score</a> = <em class='brace'>{</em> <a href='../Y/241.html' title='Multiple used in 2 places.'>ts_parts</a>, 0 <em class='brace'>}</em>;
+<a id='L682' name='L682'></a> 682     MUSIC_RecordReqId <a href='../Y/220.html' title='Multiple used in 23 places.'>rec_id</a>[3];
+<a id='L683' name='L683'></a> 683 
+<a id='L684' name='L684'></a> 684     MUSIC_init();
+<a id='L685' name='L685'></a> 685     <a href='../Y/135.html' title='Multiple used in 4 places.'>SOUND_setVolume</a>(16);
+<a id='L686' name='L686'></a> 686     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_music: MUSIC_init", <a href='../Y/71.html' title='Multiple used in 8 places.'>MUSIC_getState</a>() == <a href='../Y/68.html' title='Multiple used in 8 places.'>MUSIC_ST_STOP</a>);
+<a id='L687' name='L687'></a> 687 
+<a id='L688' name='L688'></a> 688     <a href='../Y/192.html' title='Multiple used in 77 places.'>_printf</a>("test_music: Playing single part score. \r\n");
+<a id='L689' name='L689'></a> 689     <a href='../Y/225.html' title='Multiple used in 8 places.'>score</a>.<a href='../Y/228.html' title='Multiple used in 3 places.'>size</a> = 1;
+<a id='L690' name='L690'></a> 690     <a href='../Y/81.html' title='Multiple used in 3 places.'>MUSIC_setScore</a>(&amp;<a href='../Y/225.html' title='Multiple used in 8 places.'>score</a>);
+<a id='L691' name='L691'></a> 691     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_music: MUSIC_getScore", MUSIC_getScore() == &amp;<a href='../Y/225.html' title='Multiple used in 8 places.'>score</a>);
+<a id='L692' name='L692'></a> 692 
+<a id='L693' name='L693'></a> 693     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_music: MUSIC_play(1)", <a href='../Y/74.html' title='Multiple used in 5 places.'>MUSIC_play</a>() == <a href='../Y/176.html' title='Multiple used in 40 places.'>_TRUE</a>);
+<a id='L694' name='L694'></a> 694 
+<a id='L695' name='L695'></a> 695     <strong class='reserved'>while</strong> (<a href='../Y/71.html' title='Multiple used in 8 places.'>MUSIC_getState</a>() != <a href='../Y/68.html' title='Multiple used in 8 places.'>MUSIC_ST_STOP</a>)
+<a id='L696' name='L696'></a> 696     <em class='brace'>{</em>
+<a id='L697' name='L697'></a> 697         <a href='../Y/189.html' title='Multiple used in 30 places.'>_msleep</a>(500);
+<a id='L698' name='L698'></a> 698     <em class='brace'>}</em>
+<a id='L699' name='L699'></a> 699 
+<a id='L700' name='L700'></a> 700     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_music: MUSIC_play(2)",
+<a id='L701' name='L701'></a> 701                  <a href='../Y/71.html' title='Multiple used in 8 places.'>MUSIC_getState</a>() == <a href='../Y/68.html' title='Multiple used in 8 places.'>MUSIC_ST_STOP</a>);
+<a id='L702' name='L702'></a> 702     <a href='../Y/192.html' title='Multiple used in 77 places.'>_printf</a>("test_music: Stop. \r\n");
+<a id='L703' name='L703'></a> 703 
+<a id='L704' name='L704'></a> 704     <a href='../Y/192.html' title='Multiple used in 77 places.'>_printf</a>("test_music: Playing multi part score. \r\n");
+<a id='L705' name='L705'></a> 705     <a href='../Y/225.html' title='Multiple used in 8 places.'>score</a>.<a href='../Y/228.html' title='Multiple used in 3 places.'>size</a> = 3;
+<a id='L706' name='L706'></a> 706     <a href='../Y/81.html' title='Multiple used in 3 places.'>MUSIC_setScore</a>(&amp;<a href='../Y/225.html' title='Multiple used in 8 places.'>score</a>);
+<a id='L707' name='L707'></a> 707     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_music: MUSIC_play(1)", <a href='../Y/74.html' title='Multiple used in 5 places.'>MUSIC_play</a>() == <a href='../Y/176.html' title='Multiple used in 40 places.'>_TRUE</a>);
+<a id='L708' name='L708'></a> 708 
+<a id='L709' name='L709'></a> 709     <strong class='reserved'>while</strong> (<a href='../Y/71.html' title='Multiple used in 8 places.'>MUSIC_getState</a>() != <a href='../Y/68.html' title='Multiple used in 8 places.'>MUSIC_ST_STOP</a>)
+<a id='L710' name='L710'></a> 710     <em class='brace'>{</em>
+<a id='L711' name='L711'></a> 711         <a href='../Y/189.html' title='Multiple used in 30 places.'>_msleep</a>(500);
+<a id='L712' name='L712'></a> 712     <em class='brace'>}</em>
+<a id='L713' name='L713'></a> 713 
+<a id='L714' name='L714'></a> 714     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_music: MUSIC_play(2)",
+<a id='L715' name='L715'></a> 715                  <a href='../Y/71.html' title='Multiple used in 8 places.'>MUSIC_getState</a>() == <a href='../Y/68.html' title='Multiple used in 8 places.'>MUSIC_ST_STOP</a>);
+<a id='L716' name='L716'></a> 716     <a href='../Y/192.html' title='Multiple used in 77 places.'>_printf</a>("test_music: Stop. \r\n");
+<a id='L717' name='L717'></a> 717 
+<a id='L718' name='L718'></a> 718     <a href='../Y/192.html' title='Multiple used in 77 places.'>_printf</a>("test_music: Reverse. \r\n");
+<a id='L719' name='L719'></a> 719     <a href='../Y/225.html' title='Multiple used in 8 places.'>score</a>.<a href='../Y/228.html' title='Multiple used in 3 places.'>size</a> = 3;
+<a id='L720' name='L720'></a> 720     <a href='../Y/81.html' title='Multiple used in 3 places.'>MUSIC_setScore</a>(&amp;<a href='../Y/225.html' title='Multiple used in 8 places.'>score</a>);
+<a id='L721' name='L721'></a> 721     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_music: MUSIC_reverse(1)", <a href='../Y/79.html' title='Multiple used in 2 places.'>MUSIC_reverse</a>() == <a href='../Y/176.html' title='Multiple used in 40 places.'>_TRUE</a>);
+<a id='L722' name='L722'></a> 722 
+<a id='L723' name='L723'></a> 723     <strong class='reserved'>while</strong> (<a href='../Y/71.html' title='Multiple used in 8 places.'>MUSIC_getState</a>() != <a href='../Y/68.html' title='Multiple used in 8 places.'>MUSIC_ST_STOP</a>)
+<a id='L724' name='L724'></a> 724     <em class='brace'>{</em>
+<a id='L725' name='L725'></a> 725         <a href='../Y/189.html' title='Multiple used in 30 places.'>_msleep</a>(500);
+<a id='L726' name='L726'></a> 726     <em class='brace'>}</em>
+<a id='L727' name='L727'></a> 727 
+<a id='L728' name='L728'></a> 728     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_music: MUSIC_reverse(2)",
+<a id='L729' name='L729'></a> 729                  <a href='../Y/71.html' title='Multiple used in 8 places.'>MUSIC_getState</a>() == <a href='../Y/68.html' title='Multiple used in 8 places.'>MUSIC_ST_STOP</a>);
+<a id='L730' name='L730'></a> 730     <a href='../Y/192.html' title='Multiple used in 77 places.'>_printf</a>("test_music: Stop. \r\n");
+<a id='L731' name='L731'></a> 731 
+<a id='L732' name='L732'></a> 732     <a href='../Y/192.html' title='Multiple used in 77 places.'>_printf</a>("test_music: Recording start. \r\n");
+<a id='L733' name='L733'></a> 733     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_music: MUSIC_record", MUSIC_record() == <a href='../Y/176.html' title='Multiple used in 40 places.'>_TRUE</a>);
+<a id='L734' name='L734'></a> 734 
+<a id='L735' name='L735'></a> 735     <a href='../Y/192.html' title='Multiple used in 77 places.'>_printf</a>("test_music: Record C0... \r\n");
+<a id='L736' name='L736'></a> 736     <a href='../Y/237.html' title='Multiple used in 36 places.'>tone</a>.<a href='../Y/209.html' title='Multiple used in 13 places.'>freq</a> = <a href='../Y/106.html' title='Multiple used in 5 places.'>SOUND_C0</a>;
+<a id='L737' name='L737'></a> 737     <a href='../Y/220.html' title='Multiple used in 23 places.'>rec_id</a>[0] = <a href='../Y/75.html' title='Multiple used in 6 places.'>MUSIC_recStart</a>(&amp;<a href='../Y/237.html' title='Multiple used in 36 places.'>tone</a>);
+<a id='L738' name='L738'></a> 738     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_music: MUSIC_recStart",
+<a id='L739' name='L739'></a> 739                  <a href='../Y/220.html' title='Multiple used in 23 places.'>rec_id</a>[0] != <a href='../Y/66.html' title='Multiple used in 6 places.'>MUSIC_RECREQID_INVALID</a>);
+<a id='L740' name='L740'></a> 740     <a href='../Y/189.html' title='Multiple used in 30 places.'>_msleep</a>(10);
+<a id='L741' name='L741'></a> 741     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_music: MUSIC_recStop",
+<a id='L742' name='L742'></a> 742                  <a href='../Y/76.html' title='Multiple used in 6 places.'>MUSIC_recStop</a>(<a href='../Y/220.html' title='Multiple used in 23 places.'>rec_id</a>[0]) != <a href='../Y/83.html' title='Multiple used in 8 places.'>NULL</a>);
+<a id='L743' name='L743'></a> 743     <a href='../Y/192.html' title='Multiple used in 77 places.'>_printf</a>("test_music: Stop C0. rec_id = %d\r\n", <a href='../Y/220.html' title='Multiple used in 23 places.'>rec_id</a>[0]);
+<a id='L744' name='L744'></a> 744 
+<a id='L745' name='L745'></a> 745     <a href='../Y/192.html' title='Multiple used in 77 places.'>_printf</a>("test_music: Record D0... \r\n");
+<a id='L746' name='L746'></a> 746     <a href='../Y/237.html' title='Multiple used in 36 places.'>tone</a>.<a href='../Y/209.html' title='Multiple used in 13 places.'>freq</a> = <a href='../Y/109.html' title='Multiple used in 5 places.'>SOUND_D0</a>;
+<a id='L747' name='L747'></a> 747     <a href='../Y/220.html' title='Multiple used in 23 places.'>rec_id</a>[0] = <a href='../Y/75.html' title='Multiple used in 6 places.'>MUSIC_recStart</a>(&amp;<a href='../Y/237.html' title='Multiple used in 36 places.'>tone</a>);
+<a id='L748' name='L748'></a> 748     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_music: MUSIC_recStart",
+<a id='L749' name='L749'></a> 749                  <a href='../Y/220.html' title='Multiple used in 23 places.'>rec_id</a>[0] != <a href='../Y/66.html' title='Multiple used in 6 places.'>MUSIC_RECREQID_INVALID</a>);
+<a id='L750' name='L750'></a> 750     <a href='../Y/189.html' title='Multiple used in 30 places.'>_msleep</a>(10);
+<a id='L751' name='L751'></a> 751     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_music: MUSIC_recStop",
+<a id='L752' name='L752'></a> 752                  <a href='../Y/76.html' title='Multiple used in 6 places.'>MUSIC_recStop</a>(<a href='../Y/220.html' title='Multiple used in 23 places.'>rec_id</a>[0]) != <a href='../Y/83.html' title='Multiple used in 8 places.'>NULL</a>);
+<a id='L753' name='L753'></a> 753     <a href='../Y/192.html' title='Multiple used in 77 places.'>_printf</a>("test_music: Stop D0. rec_id = %d\r\n", <a href='../Y/220.html' title='Multiple used in 23 places.'>rec_id</a>[0]);
+<a id='L754' name='L754'></a> 754 
+<a id='L755' name='L755'></a> 755     <a href='../Y/192.html' title='Multiple used in 77 places.'>_printf</a>("test_music: Record E0... \r\n");
+<a id='L756' name='L756'></a> 756     <a href='../Y/237.html' title='Multiple used in 36 places.'>tone</a>.<a href='../Y/209.html' title='Multiple used in 13 places.'>freq</a> = <a href='../Y/112.html' title='Multiple used in 4 places.'>SOUND_E0</a>;
+<a id='L757' name='L757'></a> 757     <a href='../Y/220.html' title='Multiple used in 23 places.'>rec_id</a>[0] = <a href='../Y/75.html' title='Multiple used in 6 places.'>MUSIC_recStart</a>(&amp;<a href='../Y/237.html' title='Multiple used in 36 places.'>tone</a>);
+<a id='L758' name='L758'></a> 758     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_music: MUSIC_recStart",
+<a id='L759' name='L759'></a> 759                  <a href='../Y/220.html' title='Multiple used in 23 places.'>rec_id</a>[0] != <a href='../Y/66.html' title='Multiple used in 6 places.'>MUSIC_RECREQID_INVALID</a>);
+<a id='L760' name='L760'></a> 760     <a href='../Y/189.html' title='Multiple used in 30 places.'>_msleep</a>(10);
+<a id='L761' name='L761'></a> 761     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_music: MUSIC_recStop",
+<a id='L762' name='L762'></a> 762                  <a href='../Y/76.html' title='Multiple used in 6 places.'>MUSIC_recStop</a>(<a href='../Y/220.html' title='Multiple used in 23 places.'>rec_id</a>[0]) != <a href='../Y/83.html' title='Multiple used in 8 places.'>NULL</a>);
+<a id='L763' name='L763'></a> 763     <a href='../Y/192.html' title='Multiple used in 77 places.'>_printf</a>("test_music: Stop E0. rec_id = %d\r\n", <a href='../Y/220.html' title='Multiple used in 23 places.'>rec_id</a>[0]);
+<a id='L764' name='L764'></a> 764 
+<a id='L765' name='L765'></a> 765     <a href='../Y/192.html' title='Multiple used in 77 places.'>_printf</a>("test_music: Record chord (C0, D0, E0)... \r\n");
+<a id='L766' name='L766'></a> 766     <a href='../Y/237.html' title='Multiple used in 36 places.'>tone</a>.<a href='../Y/209.html' title='Multiple used in 13 places.'>freq</a> = <a href='../Y/106.html' title='Multiple used in 5 places.'>SOUND_C0</a>;
+<a id='L767' name='L767'></a> 767     <a href='../Y/220.html' title='Multiple used in 23 places.'>rec_id</a>[0] = <a href='../Y/75.html' title='Multiple used in 6 places.'>MUSIC_recStart</a>(&amp;<a href='../Y/237.html' title='Multiple used in 36 places.'>tone</a>);
+<a id='L768' name='L768'></a> 768     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_music: MUSIC_recStart",
+<a id='L769' name='L769'></a> 769                  <a href='../Y/220.html' title='Multiple used in 23 places.'>rec_id</a>[0] != <a href='../Y/66.html' title='Multiple used in 6 places.'>MUSIC_RECREQID_INVALID</a>);
+<a id='L770' name='L770'></a> 770     <a href='../Y/237.html' title='Multiple used in 36 places.'>tone</a>.<a href='../Y/209.html' title='Multiple used in 13 places.'>freq</a> = <a href='../Y/109.html' title='Multiple used in 5 places.'>SOUND_D0</a>;
+<a id='L771' name='L771'></a> 771     <a href='../Y/220.html' title='Multiple used in 23 places.'>rec_id</a>[1] = <a href='../Y/75.html' title='Multiple used in 6 places.'>MUSIC_recStart</a>(&amp;<a href='../Y/237.html' title='Multiple used in 36 places.'>tone</a>);
+<a id='L772' name='L772'></a> 772     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_music: MUSIC_recStart",
+<a id='L773' name='L773'></a> 773                  <a href='../Y/220.html' title='Multiple used in 23 places.'>rec_id</a>[1] != <a href='../Y/66.html' title='Multiple used in 6 places.'>MUSIC_RECREQID_INVALID</a>);
+<a id='L774' name='L774'></a> 774     <a href='../Y/237.html' title='Multiple used in 36 places.'>tone</a>.<a href='../Y/209.html' title='Multiple used in 13 places.'>freq</a> = <a href='../Y/112.html' title='Multiple used in 4 places.'>SOUND_E0</a>;
+<a id='L775' name='L775'></a> 775     <a href='../Y/220.html' title='Multiple used in 23 places.'>rec_id</a>[2] = <a href='../Y/75.html' title='Multiple used in 6 places.'>MUSIC_recStart</a>(&amp;<a href='../Y/237.html' title='Multiple used in 36 places.'>tone</a>);
+<a id='L776' name='L776'></a> 776     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_music: MUSIC_recStart",
+<a id='L777' name='L777'></a> 777                  <a href='../Y/220.html' title='Multiple used in 23 places.'>rec_id</a>[2] != <a href='../Y/66.html' title='Multiple used in 6 places.'>MUSIC_RECREQID_INVALID</a>);
+<a id='L778' name='L778'></a> 778     <a href='../Y/189.html' title='Multiple used in 30 places.'>_msleep</a>(10);
+<a id='L779' name='L779'></a> 779     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_music: MUSIC_recStop",
+<a id='L780' name='L780'></a> 780                  <a href='../Y/76.html' title='Multiple used in 6 places.'>MUSIC_recStop</a>(<a href='../Y/220.html' title='Multiple used in 23 places.'>rec_id</a>[2]) != <a href='../Y/83.html' title='Multiple used in 8 places.'>NULL</a>);
+<a id='L781' name='L781'></a> 781     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_music: MUSIC_recStop",
+<a id='L782' name='L782'></a> 782                  <a href='../Y/76.html' title='Multiple used in 6 places.'>MUSIC_recStop</a>(<a href='../Y/220.html' title='Multiple used in 23 places.'>rec_id</a>[1]) != <a href='../Y/83.html' title='Multiple used in 8 places.'>NULL</a>);
+<a id='L783' name='L783'></a> 783     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_music: MUSIC_recStop",
+<a id='L784' name='L784'></a> 784                  <a href='../Y/76.html' title='Multiple used in 6 places.'>MUSIC_recStop</a>(<a href='../Y/220.html' title='Multiple used in 23 places.'>rec_id</a>[0]) != <a href='../Y/83.html' title='Multiple used in 8 places.'>NULL</a>);
+<a id='L785' name='L785'></a> 785     <a href='../Y/192.html' title='Multiple used in 77 places.'>_printf</a>("test_music: Stop (C0, D0, E0). rec_id = %d %d %d\r\n",
+<a id='L786' name='L786'></a> 786             <a href='../Y/220.html' title='Multiple used in 23 places.'>rec_id</a>[0], <a href='../Y/220.html' title='Multiple used in 23 places.'>rec_id</a>[1], <a href='../Y/220.html' title='Multiple used in 23 places.'>rec_id</a>[2]);
+<a id='L787' name='L787'></a> 787 
+<a id='L788' name='L788'></a> 788     <a href='../Y/192.html' title='Multiple used in 77 places.'>_printf</a>("test_music: Stop recording. play start. \r\n");
+<a id='L789' name='L789'></a> 789     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_music: MUSIC_play", <a href='../Y/74.html' title='Multiple used in 5 places.'>MUSIC_play</a>() == <a href='../Y/176.html' title='Multiple used in 40 places.'>_TRUE</a>);
+<a id='L790' name='L790'></a> 790     <strong class='reserved'>while</strong> (<a href='../Y/71.html' title='Multiple used in 8 places.'>MUSIC_getState</a>() != <a href='../Y/68.html' title='Multiple used in 8 places.'>MUSIC_ST_STOP</a>)
+<a id='L791' name='L791'></a> 791     <em class='brace'>{</em>
+<a id='L792' name='L792'></a> 792         <a href='../Y/189.html' title='Multiple used in 30 places.'>_msleep</a>(500);
+<a id='L793' name='L793'></a> 793     <em class='brace'>}</em>
+<a id='L794' name='L794'></a> 794 
+<a id='L795' name='L795'></a> 795     <a href='../Y/192.html' title='Multiple used in 77 places.'>_printf</a>("test_music: Set loop. once more. \r\n");
+<a id='L796' name='L796'></a> 796     MUSIC_setLoop(<a href='../Y/176.html' title='Multiple used in 40 places.'>_TRUE</a>);
+<a id='L797' name='L797'></a> 797     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_music: MUSIC_play", <a href='../Y/74.html' title='Multiple used in 5 places.'>MUSIC_play</a>() == <a href='../Y/176.html' title='Multiple used in 40 places.'>_TRUE</a>);
+<a id='L798' name='L798'></a> 798     <a href='../Y/189.html' title='Multiple used in 30 places.'>_msleep</a>(1000);
+<a id='L799' name='L799'></a> 799     <a href='../Y/192.html' title='Multiple used in 77 places.'>_printf</a>("test_music: Pause. \r\n");
+<a id='L800' name='L800'></a> 800     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_music: MUSIC_pause", MUSIC_pause() == <a href='../Y/176.html' title='Multiple used in 40 places.'>_TRUE</a>);
+<a id='L801' name='L801'></a> 801     <a href='../Y/189.html' title='Multiple used in 30 places.'>_msleep</a>(500);
+<a id='L802' name='L802'></a> 802     <a href='../Y/192.html' title='Multiple used in 77 places.'>_printf</a>("test_music: Play. \r\n");
+<a id='L803' name='L803'></a> 803     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_music: MUSIC_play", <a href='../Y/74.html' title='Multiple used in 5 places.'>MUSIC_play</a>() == <a href='../Y/176.html' title='Multiple used in 40 places.'>_TRUE</a>);
+<a id='L804' name='L804'></a> 804     <a href='../Y/189.html' title='Multiple used in 30 places.'>_msleep</a>(1000);
+<a id='L805' name='L805'></a> 805     <a href='../Y/192.html' title='Multiple used in 77 places.'>_printf</a>("test_music: Reverse. \r\n");
+<a id='L806' name='L806'></a> 806     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_music: MUSIC_reverse", <a href='../Y/79.html' title='Multiple used in 2 places.'>MUSIC_reverse</a>() == <a href='../Y/176.html' title='Multiple used in 40 places.'>_TRUE</a>);
+<a id='L807' name='L807'></a> 807     <a href='../Y/189.html' title='Multiple used in 30 places.'>_msleep</a>(1000);
+<a id='L808' name='L808'></a> 808 
+<a id='L809' name='L809'></a> 809     <a href='../Y/192.html' title='Multiple used in 77 places.'>_printf</a>("test_music: Stop. \r\n");
+<a id='L810' name='L810'></a> 810     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_music: MUSIC_stop", MUSIC_stop() == <a href='../Y/176.html' title='Multiple used in 40 places.'>_TRUE</a>);
+<a id='L811' name='L811'></a> 811 
+<a id='L812' name='L812'></a> 812     <a href='../Y/192.html' title='Multiple used in 77 places.'>_printf</a>("test_music: ALL OK.\r\n");
+<a id='L813' name='L813'></a> 813     <strong class='reserved'>return</strong> 0;
+<a id='L814' name='L814'></a> 814 <em class='brace'>}</em>
+<a id='L815' name='L815'></a> 815 <em class='sharp'>#endif</em> <em class='comment'>/* TEST_MUSIC */</em>
+<a id='L816' name='L816'></a> 816 
+<a id='L817' name='L817'></a> 817 <em class='sharp'>#ifdef</em> <a href='../Y/164.html' title='Multiple used in 3 places.'>TEST_SSRP</a>
+<a id='L818' name='L818'></a> 818 <strong class='reserved'>static</strong> <strong class='reserved'>char</strong>* <a href='../R/17.html' title='Multiple referred from 2 places.'>test_ssrp</a>()
+<a id='L819' name='L819'></a> 819 <em class='brace'>{</em>
+<a id='L820' name='L820'></a> 820     <strong class='reserved'>const</strong> SSRP_Address <a href='../Y/216.html' title='Multiple used in 4 places.'>myaddr</a> = 0x01;
+<a id='L821' name='L821'></a> 821     <a href='../Y/144.html' title='Multiple used in 2 places.'>SSRP_Header</a> <a href='../Y/212.html' title='Multiple used in 7 places.'>header</a>;
+<a id='L822' name='L822'></a> 822     <a href='../Y/177.html' title='Multiple used in 10 places.'>_UBYTE</a> <a href='../Y/201.html' title='Multiple used in 41 places.'>buf</a>[5] = <em class='brace'>{</em> 0 <em class='brace'>}</em>;
+<a id='L823' name='L823'></a> 823     <a href='../Y/178.html' title='Multiple used in 4 places.'>_UWORD</a> <a href='../Y/203.html' title='Multiple used in 2 places.'>cnt</a> = 0x10;
+<a id='L824' name='L824'></a> 824     <a href='../Y/144.html' title='Multiple used in 2 places.'>SSRP_Header</a>* <a href='../Y/213.html' title='Multiple used in 4 places.'>hp</a>;
+<a id='L825' name='L825'></a> 825     <a href='../Y/177.html' title='Multiple used in 10 places.'>_UBYTE</a>* <a href='../Y/200.html' title='Multiple used in 2 places.'>bp</a>;
+<a id='L826' name='L826'></a> 826 
+<a id='L827' name='L827'></a> 827     SSRP_init(<a href='../Y/216.html' title='Multiple used in 4 places.'>myaddr</a>);
+<a id='L828' name='L828'></a> 828     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_ssrp: SSRP_init", (SSRP_my_addr[0] == 0x31));
+<a id='L829' name='L829'></a> 829 
+<a id='L830' name='L830'></a> 830     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_ssrp: SSRP_getPear(1)",
+<a id='L831' name='L831'></a> 831                  <a href='../Y/148.html' title='Multiple used in 6 places.'>SSRP_getPear</a>(<a href='../Y/142.html' title='Multiple used in 3 places.'>SSRP_CON_FRONT</a>) == <a href='../Y/138.html' title='Multiple used in 4 places.'>SSRP_ADDR_INVALID</a>);
+<a id='L832' name='L832'></a> 832     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_ssrp: SSRP_getPear(2)",
+<a id='L833' name='L833'></a> 833                  <a href='../Y/148.html' title='Multiple used in 6 places.'>SSRP_getPear</a>(<a href='../Y/141.html' title='Multiple used in 3 places.'>SSRP_CON_BACK</a>) == <a href='../Y/138.html' title='Multiple used in 4 places.'>SSRP_ADDR_INVALID</a>);
+<a id='L834' name='L834'></a> 834     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_ssrp: SSRP_ready(1)", <a href='../Y/152.html' title='Multiple used in 3 places.'>SSRP_ready</a>() == <a href='../Y/171.html' title='Multiple used in 49 places.'>_FALSE</a>);
+<a id='L835' name='L835'></a> 835     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_ssrp: SSRP_getTotalPear(1)", <a href='../Y/149.html' title='Multiple used in 4 places.'>SSRP_getTotalPear</a>() == 0);
+<a id='L836' name='L836'></a> 836 
+<a id='L837' name='L837'></a> 837     SSRP_start();
+<a id='L838' name='L838'></a> 838     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_ssrp: SSRP_getTotalPear(2)", <a href='../Y/149.html' title='Multiple used in 4 places.'>SSRP_getTotalPear</a>() == 1);
+<a id='L839' name='L839'></a> 839 
+<a id='L840' name='L840'></a> 840     <strong class='reserved'>while</strong> (<a href='../Y/203.html' title='Multiple used in 2 places.'>cnt</a>--)
+<a id='L841' name='L841'></a> 841     <em class='brace'>{</em>
+<a id='L842' name='L842'></a> 842         <a href='../Y/147.html' title='Multiple used in 2 places.'>SSRP_exec</a>();
+<a id='L843' name='L843'></a> 843     <em class='brace'>}</em>
+<a id='L844' name='L844'></a> 844 
+<a id='L845' name='L845'></a> 845     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_ssrp: SSRP_ready(2)", <a href='../Y/152.html' title='Multiple used in 3 places.'>SSRP_ready</a>() == <a href='../Y/176.html' title='Multiple used in 40 places.'>_TRUE</a>);
+<a id='L846' name='L846'></a> 846     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_ssrp: SSRP_getPear(3)",
+<a id='L847' name='L847'></a> 847                  <a href='../Y/148.html' title='Multiple used in 6 places.'>SSRP_getPear</a>(<a href='../Y/142.html' title='Multiple used in 3 places.'>SSRP_CON_FRONT</a>) == <a href='../Y/145.html' title='Multiple used in 3 places.'>SSRP_SKEL_LOOPBACK_ADDR</a>);
+<a id='L848' name='L848'></a> 848     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_ssrp: SSRP_getPear(4)",
+<a id='L849' name='L849'></a> 849                  <a href='../Y/148.html' title='Multiple used in 6 places.'>SSRP_getPear</a>(<a href='../Y/141.html' title='Multiple used in 3 places.'>SSRP_CON_BACK</a>) == <a href='../Y/145.html' title='Multiple used in 3 places.'>SSRP_SKEL_LOOPBACK_ADDR</a>);
+<a id='L850' name='L850'></a> 850     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_ssrp: SSRP_getTotalPear(3)", <a href='../Y/149.html' title='Multiple used in 4 places.'>SSRP_getTotalPear</a>() == 2);
+<a id='L851' name='L851'></a> 851 
+<a id='L852' name='L852'></a> 852     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_ssrp: SSRP_sendto",
+<a id='L853' name='L853'></a> 853                  SSRP_sendto(<a href='../Y/137.html' title='Multiple used in 3 places.'>SSRP_ADDR_BROADCAST</a>, <a href='../Y/140.html' title='Multiple used in 2 places.'>SSRP_CMD_EX</a>, <a href='../Y/143.html' title='Multiple used in 2 places.'>SSRP_FLG_EVT</a>,
+<a id='L854' name='L854'></a> 854                              <a href='../Y/201.html' title='Multiple used in 41 places.'>buf</a>, <strong class='reserved'>sizeof</strong>(<a href='../Y/201.html' title='Multiple used in 41 places.'>buf</a>), <a href='../Y/83.html' title='Multiple used in 8 places.'>NULL</a>, <a href='../Y/176.html' title='Multiple used in 40 places.'>_TRUE</a>) == <strong class='reserved'>sizeof</strong>(<a href='../Y/201.html' title='Multiple used in 41 places.'>buf</a>));
+<a id='L855' name='L855'></a> 855 
+<a id='L856' name='L856'></a> 856     <a href='../Y/212.html' title='Multiple used in 7 places.'>header</a>.<a href='../Y/210.html' title='Multiple used in 2 places.'>from</a> = <a href='../Y/216.html' title='Multiple used in 4 places.'>myaddr</a>;
+<a id='L857' name='L857'></a> 857     <a href='../Y/212.html' title='Multiple used in 7 places.'>header</a>.<a href='../Y/236.html' title='Multiple used in 2 places.'>to</a> = <a href='../Y/137.html' title='Multiple used in 3 places.'>SSRP_ADDR_BROADCAST</a>;
+<a id='L858' name='L858'></a> 858     <a href='../Y/212.html' title='Multiple used in 7 places.'>header</a>.command = <a href='../Y/140.html' title='Multiple used in 2 places.'>SSRP_CMD_EX</a>;
+<a id='L859' name='L859'></a> 859     <a href='../Y/212.html' title='Multiple used in 7 places.'>header</a>.flag = <a href='../Y/143.html' title='Multiple used in 2 places.'>SSRP_FLG_EVT</a>;
+<a id='L860' name='L860'></a> 860     <a href='../Y/212.html' title='Multiple used in 7 places.'>header</a>.data_length = <strong class='reserved'>sizeof</strong>(<a href='../Y/201.html' title='Multiple used in 41 places.'>buf</a>);
+<a id='L861' name='L861'></a> 861 
+<a id='L862' name='L862'></a> 862     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_ssrp: SSRP_send",
+<a id='L863' name='L863'></a> 863                  SSRP_send(&amp;<a href='../Y/212.html' title='Multiple used in 7 places.'>header</a>, <a href='../Y/201.html' title='Multiple used in 41 places.'>buf</a>, <strong class='reserved'>sizeof</strong>(<a href='../Y/201.html' title='Multiple used in 41 places.'>buf</a>), <a href='../Y/176.html' title='Multiple used in 40 places.'>_TRUE</a>) == <strong class='reserved'>sizeof</strong>(<a href='../Y/201.html' title='Multiple used in 41 places.'>buf</a>));
+<a id='L864' name='L864'></a> 864 
+<a id='L865' name='L865'></a> 865     <a href='../Y/147.html' title='Multiple used in 2 places.'>SSRP_exec</a>();
+<a id='L866' name='L866'></a> 866     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_ssrp: SSRP_recvfrom(1)", SSRP_recvfrom(&amp;<a href='../Y/213.html' title='Multiple used in 4 places.'>hp</a>, &amp;<a href='../Y/200.html' title='Multiple used in 2 places.'>bp</a>) &gt;= 0);
+<a id='L867' name='L867'></a> 867     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_ssrp: SSRP_recvfrom(2)", 
+<a id='L868' name='L868'></a> 868                  (<a href='../Y/213.html' title='Multiple used in 4 places.'>hp</a>-&gt;<a href='../Y/236.html' title='Multiple used in 2 places.'>to</a> == <a href='../Y/216.html' title='Multiple used in 4 places.'>myaddr</a>) || (<a href='../Y/213.html' title='Multiple used in 4 places.'>hp</a>-&gt;<a href='../Y/236.html' title='Multiple used in 2 places.'>to</a> == <a href='../Y/137.html' title='Multiple used in 3 places.'>SSRP_ADDR_BROADCAST</a>));
+<a id='L869' name='L869'></a> 869     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_ssrp: SSRP_recvfrom(3)",
+<a id='L870' name='L870'></a> 870                  <a href='../Y/213.html' title='Multiple used in 4 places.'>hp</a>-&gt;<a href='../Y/210.html' title='Multiple used in 2 places.'>from</a> == <a href='../Y/145.html' title='Multiple used in 3 places.'>SSRP_SKEL_LOOPBACK_ADDR</a>);
+<a id='L871' name='L871'></a> 871 
+<a id='L872' name='L872'></a> 872     SSRP_end();
+<a id='L873' name='L873'></a> 873 
+<a id='L874' name='L874'></a> 874     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_ssrp: SSRP_getPear(5)",
+<a id='L875' name='L875'></a> 875                  <a href='../Y/148.html' title='Multiple used in 6 places.'>SSRP_getPear</a>(<a href='../Y/142.html' title='Multiple used in 3 places.'>SSRP_CON_FRONT</a>) == <a href='../Y/138.html' title='Multiple used in 4 places.'>SSRP_ADDR_INVALID</a>);
+<a id='L876' name='L876'></a> 876     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_ssrp: SSRP_getPear(6)",
+<a id='L877' name='L877'></a> 877                  <a href='../Y/148.html' title='Multiple used in 6 places.'>SSRP_getPear</a>(<a href='../Y/141.html' title='Multiple used in 3 places.'>SSRP_CON_BACK</a>) == <a href='../Y/138.html' title='Multiple used in 4 places.'>SSRP_ADDR_INVALID</a>);
+<a id='L878' name='L878'></a> 878     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_ssrp: SSRP_ready(3)", <a href='../Y/152.html' title='Multiple used in 3 places.'>SSRP_ready</a>() == <a href='../Y/171.html' title='Multiple used in 49 places.'>_FALSE</a>);
+<a id='L879' name='L879'></a> 879     <a href='../Y/168.html' title='Multiple used in 135 places.'>UTEST_assert</a>("test_ssrp: SSRP_getTotalPear(4)", <a href='../Y/149.html' title='Multiple used in 4 places.'>SSRP_getTotalPear</a>() == 0);
+<a id='L880' name='L880'></a> 880 
+<a id='L881' name='L881'></a> 881     <a href='../Y/192.html' title='Multiple used in 77 places.'>_printf</a>("test_ssrp: ALL OK.\r\n");
+<a id='L882' name='L882'></a> 882     <strong class='reserved'>return</strong> 0;
+<a id='L883' name='L883'></a> 883 <em class='brace'>}</em>
+<a id='L884' name='L884'></a> 884 <em class='sharp'>#endif</em> <em class='comment'>/* TEST_SSRP */</em>
+<a id='L885' name='L885'></a> 885 
+<a id='L886' name='L886'></a> 886 <strong class='reserved'>static</strong> <strong class='reserved'>char</strong>* <a href='../R/14.html' title='Multiple referred from 4 places.'>test_run</a>(<strong class='reserved'>const</strong> <a href='../Y/167.html' title='Multiple used in 6 places.'>UTEST_Func</a>* <a href='../Y/234.html' title='Multiple used in 3 places.'>test_list</a>, <a href='../Y/178.html' title='Multiple used in 4 places.'>_UWORD</a> <a href='../Y/217.html' title='Multiple used in 13 places.'>num</a>)
+<a id='L887' name='L887'></a> 887 <em class='brace'>{</em>
+<a id='L888' name='L888'></a> 888     <strong class='reserved'>int</strong> <a href='../Y/214.html' title='Multiple used in 32 places.'>i</a>;
+<a id='L889' name='L889'></a> 889 
+<a id='L890' name='L890'></a> 890     <strong class='reserved'>for</strong> (<a href='../Y/214.html' title='Multiple used in 32 places.'>i</a> = 0; <a href='../Y/214.html' title='Multiple used in 32 places.'>i</a> &lt; <a href='../Y/217.html' title='Multiple used in 13 places.'>num</a>; <a href='../Y/214.html' title='Multiple used in 32 places.'>i</a>++)
+<a id='L891' name='L891'></a> 891     <em class='brace'>{</em>
+<a id='L892' name='L892'></a> 892         UTEST_run(<a href='../Y/234.html' title='Multiple used in 3 places.'>test_list</a>[<a href='../Y/214.html' title='Multiple used in 32 places.'>i</a>]);
+<a id='L893' name='L893'></a> 893     <em class='brace'>}</em>
+<a id='L894' name='L894'></a> 894     <strong class='reserved'>return</strong> 0;
+<a id='L895' name='L895'></a> 895 <em class='brace'>}</em>
+<a id='L896' name='L896'></a> 896 
+<a id='L897' name='L897'></a> 897 <strong class='reserved'>void</strong> <a href='../R/5.html' title='Multiple referred from 3 places.'>main</a>(<strong class='reserved'>void</strong>)
+<a id='L898' name='L898'></a> 898 <em class='brace'>{</em>
+<a id='L899' name='L899'></a> 899     <strong class='reserved'>char</strong>* <a href='../Y/221.html' title='Multiple used in 9 places.'>result</a> = 0;
+<a id='L900' name='L900'></a> 900     <a href='../Y/167.html' title='Multiple used in 6 places.'>UTEST_Func</a> f;
+<a id='L901' name='L901'></a> 901 
+<a id='L902' name='L902'></a> 902     <a href='../Y/221.html' title='Multiple used in 9 places.'>result</a> = <a href='../S/113.html#L886' title='Defined at 886 in test/test.c.'>test_run</a>(<a href='../Y/232.html' title='Multiple used in 2 places.'>test_basic_drivers_</a>, <a href='../Y/194.html' title='Multiple used in 9 places.'>_sizeof_array</a>(<a href='../Y/232.html' title='Multiple used in 2 places.'>test_basic_drivers_</a>));
+<a id='L903' name='L903'></a> 903     <strong class='reserved'>if</strong> (<a href='../Y/221.html' title='Multiple used in 9 places.'>result</a> != 0)
+<a id='L904' name='L904'></a> 904     <em class='brace'>{</em>
+<a id='L905' name='L905'></a> 905         <strong class='reserved'>while</strong> (<a href='../Y/176.html' title='Multiple used in 40 places.'>_TRUE</a>);
+<a id='L906' name='L906'></a> 906     <em class='brace'>}</em>
+<a id='L907' name='L907'></a> 907 
+<a id='L908' name='L908'></a> 908     <a href='../Y/221.html' title='Multiple used in 9 places.'>result</a> = <a href='../S/113.html#L886' title='Defined at 886 in test/test.c.'>test_run</a>(<a href='../Y/233.html' title='Multiple used in 2 places.'>test_drivers_</a>, <a href='../Y/194.html' title='Multiple used in 9 places.'>_sizeof_array</a>(<a href='../Y/233.html' title='Multiple used in 2 places.'>test_drivers_</a>));
+<a id='L909' name='L909'></a> 909     <strong class='reserved'>if</strong> (<a href='../Y/221.html' title='Multiple used in 9 places.'>result</a> != 0)
+<a id='L910' name='L910'></a> 910     <em class='brace'>{</em>
+<a id='L911' name='L911'></a> 911         <a href='../S/114.html#L56' title='Defined at 56 in test/test.h.'>TEST_FAILURE</a>(<a href='../Y/221.html' title='Multiple used in 9 places.'>result</a>);
+<a id='L912' name='L912'></a> 912         <strong class='reserved'>goto</strong> <a href='../Y/211.html' title='Multiple used in 3 places.'>func_END</a>;
+<a id='L913' name='L913'></a> 913     <em class='brace'>}</em>
+<a id='L914' name='L914'></a> 914 
+<a id='L915' name='L915'></a> 915     <a href='../Y/221.html' title='Multiple used in 9 places.'>result</a> = <a href='../S/113.html#L886' title='Defined at 886 in test/test.c.'>test_run</a>(<a href='../Y/235.html' title='Multiple used in 2 places.'>test_modules_</a>, <a href='../Y/194.html' title='Multiple used in 9 places.'>_sizeof_array</a>(<a href='../Y/235.html' title='Multiple used in 2 places.'>test_modules_</a>));
+<a id='L916' name='L916'></a> 916     <strong class='reserved'>if</strong> (<a href='../Y/221.html' title='Multiple used in 9 places.'>result</a> != 0)
+<a id='L917' name='L917'></a> 917     <em class='brace'>{</em>
+<a id='L918' name='L918'></a> 918         <a href='../S/114.html#L56' title='Defined at 56 in test/test.h.'>TEST_FAILURE</a>(<a href='../Y/221.html' title='Multiple used in 9 places.'>result</a>);
+<a id='L919' name='L919'></a> 919         <strong class='reserved'>goto</strong> <a href='../Y/211.html' title='Multiple used in 3 places.'>func_END</a>;
+<a id='L920' name='L920'></a> 920     <em class='brace'>}</em>
+<a id='L921' name='L921'></a> 921 
+<a id='L922' name='L922'></a> 922     <a href='../Y/192.html' title='Multiple used in 77 places.'>_printf</a>("ALL TESTS PASSED\r\n");
+<a id='L923' name='L923'></a> 923 
+<a id='L924' name='L924'></a> 924 <a href='../Y/211.html' title='Multiple used in 3 places.'>func_END</a>:
+<a id='L925' name='L925'></a> 925     <a href='../Y/192.html' title='Multiple used in 77 places.'>_printf</a>("Tests run: %d\r\n", <a href='../Y/170.html' title='Multiple used in 2 places.'>UTEST_run_count</a>);
+<a id='L926' name='L926'></a> 926 
+<a id='L927' name='L927'></a> 927     <strong class='reserved'>while</strong> (<a href='../Y/176.html' title='Multiple used in 40 places.'>_TRUE</a>);
+<a id='L928' name='L928'></a> 928 <em class='brace'>}</em>
+</pre>
+<hr />
+<a id='BOTTOM' name='BOTTOM'></a>
+<em class='comment'>/* [&lt;][&gt;]<a href='#L160'>[^]</a><a href='#L897'>[v]</a><a href='#TOP'>[top]</a>[bottom]<a href='../mains.html'>[index]</a><a href='../help.html'>[help]</a> */</em>
+</body>
+</html>

@@ -1,0 +1,406 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>test/test.h</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<a id='TOP' name='TOP'></a><h2 class='header'><a href='../mains.html'>root</a>/<a href='../files/121.html'>test</a>/test.h</h2>
+<em class='comment'>/* [&lt;][&gt;][^][v][top]<a href='#BOTTOM'>[bottom]</a><a href='../mains.html'>[index]</a><a href='../help.html'>[help]</a> */</em>
+<hr />
+<h2 class='header'><a href='113.html#L64' title='Included from 64 in test/test.c.'>INCLUDED FROM</a></h2>
+<hr />
+<pre>
+<a id='L1' name='L1'></a>   1 <em class='comment'>/**</em>
+<a id='L2' name='L2'></a>   2 <em class='comment'> * @file test.h</em>
+<a id='L3' name='L3'></a>   3 <em class='comment'> *</em>
+<a id='L4' name='L4'></a>   4 <em class='comment'> * @brief H8SDKユニットテストモジュール</em>
+<a id='L5' name='L5'></a>   5 <em class='comment'> *</em>
+<a id='L6' name='L6'></a>   6 <em class='comment'> * H8SDKインタフェースのテストを行う。実行する前にH8基板とPCをシリアル</em>
+<a id='L7' name='L7'></a>   7 <em class='comment'> * ポートで接続し、シリアル出力をPCからモニタリングすること。接続設定</em>
+<a id='L8' name='L8'></a>   8 <em class='comment'> * はSCI_initを参照。@n</em>
+<a id='L9' name='L9'></a>   9 <em class='comment'> * テスト対象となるモジュールはコンパイルスイッチによって決定する。マ</em>
+<a id='L10' name='L10'></a>  10 <em class='comment'> * クロ定義は以下。</em>
+<a id='L11' name='L11'></a>  11 <em class='comment'> *</em>
+<a id='L12' name='L12'></a>  12 <em class='comment'> * @li @p TEST_ASSERT assert.hのテストを有効</em>
+<a id='L13' name='L13'></a>  13 <em class='comment'> * @li @p TEST_STDC stdio.h, stdlib.h, string.h のテストを有効</em>
+<a id='L14' name='L14'></a>  14 <em class='comment'> * @li @p TEST_LCD lcd.hのテストを有効</em>
+<a id='L15' name='L15'></a>  15 <em class='comment'> * @li @p TEST_PUSH_SWITCH push_switch.hのテストを有効</em>
+<a id='L16' name='L16'></a>  16 <em class='comment'> * @li @p TEST_ADC adc.hのテストを有効</em>
+<a id='L17' name='L17'></a>  17 <em class='comment'> * @li @p TEST_PS2 ps2.hのテストを有効</em>
+<a id='L18' name='L18'></a>  18 <em class='comment'> * @li @p TEST_SOUND sound.hのテストを有効</em>
+<a id='L19' name='L19'></a>  19 <em class='comment'> * @li @p TEST_MUSIC music.hのテストを有効</em>
+<a id='L20' name='L20'></a>  20 <em class='comment'> * @li @p TEST_SSRP ssrp.hのテストを有効</em>
+<a id='L21' name='L21'></a>  21 <em class='comment'> *</em>
+<a id='L22' name='L22'></a>  22 <em class='comment'> * @note</em>
+<a id='L23' name='L23'></a>  23 <em class='comment'> * @li music.hのテストをするときはUSE_MUSIC_RECORD、ssrp.hのテストをす</em>
+<a id='L24' name='L24'></a>  24 <em class='comment'> * るときはUSE_LOOPBACK_SSRPをdefineしてコンパイルしたH8SDKを用意する</em>
+<a id='L25' name='L25'></a>  25 <em class='comment'> * こと。</em>
+<a id='L26' name='L26'></a>  26 <em class='comment'> * @li PS/2ドライバをテストするときは基板からE8aエミュレータを外すこと。</em>
+<a id='L27' name='L27'></a>  27 <em class='comment'> * @li assertモジュールをテストするときは他のドライバとモジュールのテ</em>
+<a id='L28' name='L28'></a>  28 <em class='comment'> * ストは行われず、確認方法もデバッガ(HEWなど)を使うしかない。</em>
+<a id='L29' name='L29'></a>  29 <em class='comment'> * @li 全てのモジュールをテストすることはメモリ容量上できないので、テ</em>
+<a id='L30' name='L30'></a>  30 <em class='comment'> * スト対象ではないモジュールはh8sdk.libから外しておく。</em>
+<a id='L31' name='L31'></a>  31 <em class='comment'> *</em>
+<a id='L32' name='L32'></a>  32 <em class='comment'> * @htmlonly</em>
+<a id='L33' name='L33'></a>  33 <em class='comment'> * @version $Id:$</em>
+<a id='L34' name='L34'></a>  34 <em class='comment'> *</em>
+<a id='L35' name='L35'></a>  35 <em class='comment'> * @author Kenji MINOURA / kenji@kandj.org</em>
+<a id='L36' name='L36'></a>  36 <em class='comment'> *</em>
+<a id='L37' name='L37'></a>  37 <em class='comment'> * Copyright (c) 2008 K&amp;J Software Design, Ltd All rights reserved.</em>
+<a id='L38' name='L38'></a>  38 <em class='comment'> * @endhtmlonly</em>
+<a id='L39' name='L39'></a>  39 <em class='comment'> *</em>
+<a id='L40' name='L40'></a>  40 <em class='comment'> ***********************************************************************/</em>
+<a id='L41' name='L41'></a>  41 <em class='sharp'>#ifndef</em> <a href='../S/114.html#L42' title='Defined at 42 in test/test.h.'>TEST_H_</a>
+<a id='L42' name='L42'></a>  42 <em class='sharp'>#define</em> <a href='../S/114.html#L41' title='Referred from 41 in test/test.h.'>TEST_H_</a>
+<a id='L43' name='L43'></a>  43 
+<a id='L44' name='L44'></a>  44 <em class='sharp'>#ifdef</em> <a href='../Y/179.html' title='Multiple used in 2 places.'>__cplusplus</a>
+<a id='L45' name='L45'></a>  45 <strong class='reserved'>extern</strong> "C" <em class='brace'>{</em>
+<a id='L46' name='L46'></a>  46 <em class='sharp'>#endif</em>
+<a id='L47' name='L47'></a>  47 
+<a id='L48' name='L48'></a>  48 <em class='sharp'>#include</em> &lt;h8sdk/unit_test.h&gt;
+<a id='L49' name='L49'></a>  49 
+<a id='L50' name='L50'></a>  50 <em class='sharp'>#if</em> <strong class='reserved'>defined</strong>(<a href='../Y/163.html' title='Multiple used in 7 places.'>TEST_SOUND</a>) || <strong class='reserved'>defined</strong>(<a href='../Y/160.html' title='Multiple used in 7 places.'>TEST_MUSIC</a>)
+<a id='L51' name='L51'></a>  51 <em class='sharp'>#if</em> SOUND_MAX_PRONOUNCE &lt; 3
+<a id='L52' name='L52'></a>  52 <em class='sharp'>#error</em> "Please define the SOUND_MAX_PRONOUNCE &gt;= 3."
+<a id='L53' name='L53'></a>  53 <em class='sharp'>#endif</em>
+<a id='L54' name='L54'></a>  54 <em class='sharp'>#endif</em>
+<a id='L55' name='L55'></a>  55 
+<a id='L56' name='L56'></a>  56 <em class='sharp'>#define</em> <a href='../R/2.html' title='Multiple referred from 2 places.'>TEST_FAILURE</a>(<a href='../Y/244.html' title='Multiple used in 8 places.'>x</a>) <a href='../Y/192.html' title='Multiple used in 77 places.'>_printf</a>("*** Failed: %s\r\n", (<a href='../Y/244.html' title='Multiple used in 8 places.'>x</a>));
+<a id='L57' name='L57'></a>  57 
+<a id='L58' name='L58'></a>  58 <em class='comment'>/** ユーザーエントリ関数 */</em>
+<a id='L59' name='L59'></a>  59 <strong class='reserved'>void</strong> <a href='../S/113.html#L897' title='Defined at 897 in test/test.c.'>main</a>(<strong class='reserved'>void</strong>);
+<a id='L60' name='L60'></a>  60 
+<a id='L61' name='L61'></a>  61 <em class='comment'>/** </em>
+<a id='L62' name='L62'></a>  62 <em class='comment'> * @brief シルアルドライバテスト</em>
+<a id='L63' name='L63'></a>  63 <em class='comment'> *</em>
+<a id='L64' name='L64'></a>  64 <em class='comment'> * @par テスト項目</em>
+<a id='L65' name='L65'></a>  65 <em class='comment'> * @li 正しく初期化されている</em>
+<a id='L66' name='L66'></a>  66 <em class='comment'> * @li NUL終端文字列を送信できる。また、返り値は送信文字数になっている</em>
+<a id='L67' name='L67'></a>  67 <em class='comment'> * @li バイトストリームを送信できる。また、返り値は送信データ数になっ</em>
+<a id='L68' name='L68'></a>  68 <em class='comment'> * ている</em>
+<a id='L69' name='L69'></a>  69 <em class='comment'> * @li バイトストリームを受信できる。また、返り値は受信データ数になっ</em>
+<a id='L70' name='L70'></a>  70 <em class='comment'> * ている</em>
+<a id='L71' name='L71'></a>  71 <em class='comment'> * @li 非同期データ送信が機能する</em>
+<a id='L72' name='L72'></a>  72 <em class='comment'> * @li 非同期データ受信が機能する</em>
+<a id='L73' name='L73'></a>  73 <em class='comment'> * </em>
+<a id='L74' name='L74'></a>  74 <em class='comment'> * @retval 0 テスト成功</em>
+<a id='L75' name='L75'></a>  75 <em class='comment'> * @retval 0以外 テスト失敗。エラーメッセージ</em>
+<a id='L76' name='L76'></a>  76 <em class='comment'> *</em>
+<a id='L77' name='L77'></a>  77 <em class='comment'> * @see h8sdk/sci.h</em>
+<a id='L78' name='L78'></a>  78 <em class='comment'> */</em>
+<a id='L79' name='L79'></a>  79 <strong class='reserved'>static</strong> <strong class='reserved'>char</strong>* <a href='../S/113.html#L160' title='Defined at 160 in test/test.c.'>test_sci</a>();
+<a id='L80' name='L80'></a>  80 
+<a id='L81' name='L81'></a>  81 <em class='comment'>/** </em>
+<a id='L82' name='L82'></a>  82 <em class='comment'> * @brief stdioモジュールテスト</em>
+<a id='L83' name='L83'></a>  83 <em class='comment'> *</em>
+<a id='L84' name='L84'></a>  84 <em class='comment'> * @par テスト項目</em>
+<a id='L85' name='L85'></a>  85 <em class='comment'> * @li 固定文字列を出力できる</em>
+<a id='L86' name='L86'></a>  86 <em class='comment'> * @li 符号有り10進数値を出力できる</em>
+<a id='L87' name='L87'></a>  87 <em class='comment'> * @li 符号なし10進数値を出力できる</em>
+<a id='L88' name='L88'></a>  88 <em class='comment'> * @li 符号なし16進数値を出力できる</em>
+<a id='L89' name='L89'></a>  89 <em class='comment'> * @li 符号なし8進数値を出力できる</em>
+<a id='L90' name='L90'></a>  90 <em class='comment'> * @li '%'を出力できる</em>
+<a id='L91' name='L91'></a>  91 <em class='comment'> * @li 上記全てを含む文字列を出力できる</em>
+<a id='L92' name='L92'></a>  92 <em class='comment'> * </em>
+<a id='L93' name='L93'></a>  93 <em class='comment'> * @retval 0 テスト成功</em>
+<a id='L94' name='L94'></a>  94 <em class='comment'> * @retval 0以外 テスト失敗。エラーメッセージ</em>
+<a id='L95' name='L95'></a>  95 <em class='comment'> *</em>
+<a id='L96' name='L96'></a>  96 <em class='comment'> * @see h8sdk/stdio.h</em>
+<a id='L97' name='L97'></a>  97 <em class='comment'> */</em>
+<a id='L98' name='L98'></a>  98 <strong class='reserved'>static</strong> <strong class='reserved'>char</strong>* <a href='../S/113.html#L235' title='Defined at 235 in test/test.c.'>test_stdio</a>();
+<a id='L99' name='L99'></a>  99 
+<a id='L100' name='L100'></a> 100 <em class='comment'>/** </em>
+<a id='L101' name='L101'></a> 101 <em class='comment'> * @brief stdlibモジュールテスト</em>
+<a id='L102' name='L102'></a> 102 <em class='comment'> *</em>
+<a id='L103' name='L103'></a> 103 <em class='comment'> * @par テスト項目</em>
+<a id='L104' name='L104'></a> 104 <em class='comment'> * @li 1秒のスリープ機能が動作する。目視確認。</em>
+<a id='L105' name='L105'></a> 105 <em class='comment'> * @li 次のリングバッファのインデックス値が取得できる。また、最大値の</em>
+<a id='L106' name='L106'></a> 106 <em class='comment'> * 次は0が返る。</em>
+<a id='L107' name='L107'></a> 107 <em class='comment'> * @li 前のリングバッファのインデックス値が取得できるか。また、0の次は</em>
+<a id='L108' name='L108'></a> 108 <em class='comment'> * 最大値が返る。</em>
+<a id='L109' name='L109'></a> 109 <em class='comment'> * @li size=素数で、size未満のキーを与えたときのハッシュ値は一意的</em>
+<a id='L110' name='L110'></a> 110 <em class='comment'> * @li チェックサム値が正しく計算できる</em>
+<a id='L111' name='L111'></a> 111 <em class='comment'> * @li 16bit数値を10進文字列に変換できる</em>
+<a id='L112' name='L112'></a> 112 <em class='comment'> * @li 16bit数値を16進文字列に変換できる</em>
+<a id='L113' name='L113'></a> 113 <em class='comment'> * @li 16bit数値を8進文字列に変換できる</em>
+<a id='L114' name='L114'></a> 114 <em class='comment'> * @li 乱数値が取得できる。</em>
+<a id='L115' name='L115'></a> 115 <em class='comment'> * @li 種を変えると乱数値が変化する</em>
+<a id='L116' name='L116'></a> 116 <em class='comment'> *</em>
+<a id='L117' name='L117'></a> 117 <em class='comment'> * @retval 0 テスト成功</em>
+<a id='L118' name='L118'></a> 118 <em class='comment'> * @retval 0以外 テスト失敗。エラーメッセージ</em>
+<a id='L119' name='L119'></a> 119 <em class='comment'> *</em>
+<a id='L120' name='L120'></a> 120 <em class='comment'> * @see h8sdk/stdlib.h</em>
+<a id='L121' name='L121'></a> 121 <em class='comment'> */</em>
+<a id='L122' name='L122'></a> 122 <strong class='reserved'>static</strong> <strong class='reserved'>char</strong>* <a href='../S/113.html#L251' title='Defined at 251 in test/test.c.'>test_stdlib</a>();
+<a id='L123' name='L123'></a> 123 
+<a id='L124' name='L124'></a> 124 <em class='comment'>/** </em>
+<a id='L125' name='L125'></a> 125 <em class='comment'> * @brief stringモジュールテスト</em>
+<a id='L126' name='L126'></a> 126 <em class='comment'> *</em>
+<a id='L127' name='L127'></a> 127 <em class='comment'> * @par テスト項目</em>
+<a id='L128' name='L128'></a> 128 <em class='comment'> * @li 文字列の長さを取得できる。終端文字は含まない。</em>
+<a id='L129' name='L129'></a> 129 <em class='comment'> * @li 値が正しくメモリセットできる</em>
+<a id='L130' name='L130'></a> 130 <em class='comment'> * @li 値が正しくメモリコピーできる</em>
+<a id='L131' name='L131'></a> 131 <em class='comment'> *</em>
+<a id='L132' name='L132'></a> 132 <em class='comment'> * @retval 0 テスト成功</em>
+<a id='L133' name='L133'></a> 133 <em class='comment'> * @retval 0以外 テスト失敗。エラーメッセージ</em>
+<a id='L134' name='L134'></a> 134 <em class='comment'> *</em>
+<a id='L135' name='L135'></a> 135 <em class='comment'> * @see h8sdk/string.h</em>
+<a id='L136' name='L136'></a> 136 <em class='comment'> */</em>
+<a id='L137' name='L137'></a> 137 <strong class='reserved'>static</strong> <strong class='reserved'>char</strong>* <a href='../S/113.html#L302' title='Defined at 302 in test/test.c.'>test_string</a>();
+<a id='L138' name='L138'></a> 138 
+<a id='L139' name='L139'></a> 139 <em class='comment'>/** </em>
+<a id='L140' name='L140'></a> 140 <em class='comment'> * @brief assertモジュールテスト</em>
+<a id='L141' name='L141'></a> 141 <em class='comment'> *</em>
+<a id='L142' name='L142'></a> 142 <em class='comment'> * @par テスト項目</em>
+<a id='L143' name='L143'></a> 143 <em class='comment'> * @li 真値を与えた場合はスルーする</em>
+<a id='L144' name='L144'></a> 144 <em class='comment'> * @li 偽値を与えた場合は処理が停止する</em>
+<a id='L145' name='L145'></a> 145 <em class='comment'> *</em>
+<a id='L146' name='L146'></a> 146 <em class='comment'> * @retval 0 テスト成功</em>
+<a id='L147' name='L147'></a> 147 <em class='comment'> * @retval 0以外 テスト失敗。エラーメッセージ</em>
+<a id='L148' name='L148'></a> 148 <em class='comment'> *</em>
+<a id='L149' name='L149'></a> 149 <em class='comment'> * @see h8sdk/assert.h</em>
+<a id='L150' name='L150'></a> 150 <em class='comment'> */</em>
+<a id='L151' name='L151'></a> 151 <strong class='reserved'>static</strong> <strong class='reserved'>char</strong>* <a href='../S/113.html#L331' title='Defined at 331 in test/test.c.'>test_assert</a>();
+<a id='L152' name='L152'></a> 152 
+<a id='L153' name='L153'></a> 153 <em class='comment'>/** </em>
+<a id='L154' name='L154'></a> 154 <em class='comment'> * @brief IOCTLドライバテスト</em>
+<a id='L155' name='L155'></a> 155 <em class='comment'> *</em>
+<a id='L156' name='L156'></a> 156 <em class='comment'> * @par テスト項目</em>
+<a id='L157' name='L157'></a> 157 <em class='comment'> * @li 初期化でレジスタ値が0クリアされる</em>
+<a id='L158' name='L158'></a> 158 <em class='comment'> * @li セットした値を正しく取得できる</em>
+<a id='L159' name='L159'></a> 159 <em class='comment'> *</em>
+<a id='L160' name='L160'></a> 160 <em class='comment'> * @retval 0 テスト成功</em>
+<a id='L161' name='L161'></a> 161 <em class='comment'> * @retval 0以外 テスト失敗。エラーメッセージ</em>
+<a id='L162' name='L162'></a> 162 <em class='comment'> *</em>
+<a id='L163' name='L163'></a> 163 <em class='comment'> * @see h8sdk/ioctl.h</em>
+<a id='L164' name='L164'></a> 164 <em class='comment'> */</em>
+<a id='L165' name='L165'></a> 165 <strong class='reserved'>static</strong> <strong class='reserved'>char</strong>* <a href='../S/113.html#L190' title='Defined at 190 in test/test.c.'>test_ioctl</a>();
+<a id='L166' name='L166'></a> 166 
+<a id='L167' name='L167'></a> 167 <em class='comment'>/** </em>
+<a id='L168' name='L168'></a> 168 <em class='comment'> * @brief LEDドライバテスト</em>
+<a id='L169' name='L169'></a> 169 <em class='comment'> *</em>
+<a id='L170' name='L170'></a> 170 <em class='comment'> * @par テスト項目</em>
+<a id='L171' name='L171'></a> 171 <em class='comment'> * @li 初期化で全LEDポートのビットが立つ(OFF)</em>
+<a id='L172' name='L172'></a> 172 <em class='comment'> * @li LED別に点灯できる</em>
+<a id='L173' name='L173'></a> 173 <em class='comment'> * @li LED別に消灯できる</em>
+<a id='L174' name='L174'></a> 174 <em class='comment'> * @li LED別に点灯状態を反転できる</em>
+<a id='L175' name='L175'></a> 175 <em class='comment'> *</em>
+<a id='L176' name='L176'></a> 176 <em class='comment'> * @retval 0 テスト成功</em>
+<a id='L177' name='L177'></a> 177 <em class='comment'> * @retval 0以外 テスト失敗。エラーメッセージ</em>
+<a id='L178' name='L178'></a> 178 <em class='comment'> *</em>
+<a id='L179' name='L179'></a> 179 <em class='comment'> * @see h8sdk/led.h</em>
+<a id='L180' name='L180'></a> 180 <em class='comment'> */</em>
+<a id='L181' name='L181'></a> 181 <strong class='reserved'>static</strong> <strong class='reserved'>char</strong>* <a href='../S/113.html#L211' title='Defined at 211 in test/test.c.'>test_led</a>();
+<a id='L182' name='L182'></a> 182 
+<a id='L183' name='L183'></a> 183 <em class='comment'>/** </em>
+<a id='L184' name='L184'></a> 184 <em class='comment'> * @brief LCDドライバテスト</em>
+<a id='L185' name='L185'></a> 185 <em class='comment'> *</em>
+<a id='L186' name='L186'></a> 186 <em class='comment'> * @par テスト項目</em>
+<a id='L187' name='L187'></a> 187 <em class='comment'> * @li 初期化後LCDデータは全て0x20(空白)になる</em>
+<a id='L188' name='L188'></a> 188 <em class='comment'> * @li カーソル現在位置を設定/取得できる</em>
+<a id='L189' name='L189'></a> 189 <em class='comment'> * @li NUL終端文字列を出力できる。横の最大幅を越えた場合は自動改行され</em>
+<a id='L190' name='L190'></a> 190 <em class='comment'> * る。</em>
+<a id='L191' name='L191'></a> 191 <em class='comment'> * @li 現在のLCD表示データを正しく取得できる</em>
+<a id='L192' name='L192'></a> 192 <em class='comment'> * @li バイトストリームデータを出力できる</em>
+<a id='L193' name='L193'></a> 193 <em class='comment'> * @li 設定最大値までのユーザー文字データを登録できる</em>
+<a id='L194' name='L194'></a> 194 <em class='comment'> * @li ユーザー文字データを出力できる</em>
+<a id='L195' name='L195'></a> 195 <em class='comment'> *</em>
+<a id='L196' name='L196'></a> 196 <em class='comment'> * @retval 0 テスト成功</em>
+<a id='L197' name='L197'></a> 197 <em class='comment'> * @retval 0以外 テスト失敗。エラーメッセージ</em>
+<a id='L198' name='L198'></a> 198 <em class='comment'> *</em>
+<a id='L199' name='L199'></a> 199 <em class='comment'> * @see h8sdk/lcd.h</em>
+<a id='L200' name='L200'></a> 200 <em class='comment'> */</em>
+<a id='L201' name='L201'></a> 201 <strong class='reserved'>static</strong> <strong class='reserved'>char</strong>* <a href='../S/113.html#L341' title='Defined at 341 in test/test.c.'>test_lcd</a>();
+<a id='L202' name='L202'></a> 202 
+<a id='L203' name='L203'></a> 203 <em class='comment'>/** </em>
+<a id='L204' name='L204'></a> 204 <em class='comment'> * @brief プッシュスイッチドライバテスト</em>
+<a id='L205' name='L205'></a> 205 <em class='comment'> *</em>
+<a id='L206' name='L206'></a> 206 <em class='comment'> * @par テスト項目</em>
+<a id='L207' name='L207'></a> 207 <em class='comment'> * @li 初期化が正しく行える</em>
+<a id='L208' name='L208'></a> 208 <em class='comment'> * @li 瞬間の押下状態が取得でき、チャタリング防止できている</em>
+<a id='L209' name='L209'></a> 209 <em class='comment'> * @li 押下時に一度だけ状態を取得できる。</em>
+<a id='L210' name='L210'></a> 210 <em class='comment'> * @li 押下時に一定間隔で状態を取得できる。</em>
+<a id='L211' name='L211'></a> 211 <em class='comment'> *</em>
+<a id='L212' name='L212'></a> 212 <em class='comment'> * @retval 0 テスト成功</em>
+<a id='L213' name='L213'></a> 213 <em class='comment'> * @retval 0以外 テスト失敗。エラーメッセージ</em>
+<a id='L214' name='L214'></a> 214 <em class='comment'> *</em>
+<a id='L215' name='L215'></a> 215 <em class='comment'> * @see h8sdk/push_switch.h</em>
+<a id='L216' name='L216'></a> 216 <em class='comment'> */</em>
+<a id='L217' name='L217'></a> 217 <strong class='reserved'>static</strong> <strong class='reserved'>char</strong>* <a href='../S/113.html#L404' title='Defined at 404 in test/test.c.'>test_push_switch</a>();
+<a id='L218' name='L218'></a> 218 
+<a id='L219' name='L219'></a> 219 <em class='comment'>/** </em>
+<a id='L220' name='L220'></a> 220 <em class='comment'> * @brief A/Dコンバータドライバテスト</em>
+<a id='L221' name='L221'></a> 221 <em class='comment'> *</em>
+<a id='L222' name='L222'></a> 222 <em class='comment'> * @par テスト項目</em>
+<a id='L223' name='L223'></a> 223 <em class='comment'> * @li 初期化が正しく行える</em>
+<a id='L224' name='L224'></a> 224 <em class='comment'> * @li 無効のポートからはデータ取得できない</em>
+<a id='L225' name='L225'></a> 225 <em class='comment'> * @li 変換スタートしていないとデータ取得できない</em>
+<a id='L226' name='L226'></a> 226 <em class='comment'> * @li ノーマルモードで全ポートの最小値/最大値が取得できる</em>
+<a id='L227' name='L227'></a> 227 <em class='comment'> * @li スキャンモードで全ポートの最小値/最大値が取得できる</em>
+<a id='L228' name='L228'></a> 228 <em class='comment'> * @li ノーマルモードの場合はスタート後一度データを取得するとその後は</em>
+<a id='L229' name='L229'></a> 229 <em class='comment'> * もう一度スタートするまでデータ取得できない</em>
+<a id='L230' name='L230'></a> 230 <em class='comment'> * @li スキャンモードの場合は一度スタートすると明示的にストップするま</em>
+<a id='L231' name='L231'></a> 231 <em class='comment'> * でデータが取得できる</em>
+<a id='L232' name='L232'></a> 232 <em class='comment'> *</em>
+<a id='L233' name='L233'></a> 233 <em class='comment'> * @retval 0 テスト成功</em>
+<a id='L234' name='L234'></a> 234 <em class='comment'> * @retval 0以外 テスト失敗。エラーメッセージ</em>
+<a id='L235' name='L235'></a> 235 <em class='comment'> *</em>
+<a id='L236' name='L236'></a> 236 <em class='comment'> * @see h8sdk/adc.h</em>
+<a id='L237' name='L237'></a> 237 <em class='comment'> */</em>
+<a id='L238' name='L238'></a> 238 <strong class='reserved'>static</strong> <strong class='reserved'>char</strong>* <a href='../S/113.html#L446' title='Defined at 446 in test/test.c.'>test_adc</a>();
+<a id='L239' name='L239'></a> 239 
+<a id='L240' name='L240'></a> 240 <em class='comment'>/** </em>
+<a id='L241' name='L241'></a> 241 <em class='comment'> * @brief PS/2ドライバテスト</em>
+<a id='L242' name='L242'></a> 242 <em class='comment'> *</em>
+<a id='L243' name='L243'></a> 243 <em class='comment'> * @par テスト項目</em>
+<a id='L244' name='L244'></a> 244 <em class='comment'> * @li 初期化が正しく行える</em>
+<a id='L245' name='L245'></a> 245 <em class='comment'> * @li PS/2キーボード スキャンコードセット2のデータを取得できる</em>
+<a id='L246' name='L246'></a> 246 <em class='comment'> *</em>
+<a id='L247' name='L247'></a> 247 <em class='comment'> * @retval 0 テスト成功</em>
+<a id='L248' name='L248'></a> 248 <em class='comment'> * @retval 0以外 テスト失敗。エラーメッセージ</em>
+<a id='L249' name='L249'></a> 249 <em class='comment'> *</em>
+<a id='L250' name='L250'></a> 250 <em class='comment'> * @see h8sdk/ps2.h</em>
+<a id='L251' name='L251'></a> 251 <em class='comment'> */</em>
+<a id='L252' name='L252'></a> 252 <strong class='reserved'>static</strong> <strong class='reserved'>char</strong>* <a href='../S/113.html#L548' title='Defined at 548 in test/test.c.'>test_ps2</a>();
+<a id='L253' name='L253'></a> 253 
+<a id='L254' name='L254'></a> 254 <em class='comment'>/** </em>
+<a id='L255' name='L255'></a> 255 <em class='comment'> * @brief サウンドドライバテスト</em>
+<a id='L256' name='L256'></a> 256 <em class='comment'> *</em>
+<a id='L257' name='L257'></a> 257 <em class='comment'> * @par テスト項目</em>
+<a id='L258' name='L258'></a> 258 <em class='comment'> * @li 初期化が正しく行える</em>
+<a id='L259' name='L259'></a> 259 <em class='comment'> * @li リバーブ、ループなしの単音を再生できる</em>
+<a id='L260' name='L260'></a> 260 <em class='comment'> * @li 音を停止できる</em>
+<a id='L261' name='L261'></a> 261 <em class='comment'> * @li リバーブあり、ループなしの単音を再生できる</em>
+<a id='L262' name='L262'></a> 262 <em class='comment'> * @li リバーブあり、ループありの単音を再生できる</em>
+<a id='L263' name='L263'></a> 263 <em class='comment'> * @li 3和音を再生できる</em>
+<a id='L264' name='L264'></a> 264 <em class='comment'> * @li ボリューム調節ができる</em>
+<a id='L265' name='L265'></a> 265 <em class='comment'> * @li 単音を逆再生できる</em>
+<a id='L266' name='L266'></a> 266 <em class='comment'> * @li 和音を逆再生できる</em>
+<a id='L267' name='L267'></a> 267 <em class='comment'> *</em>
+<a id='L268' name='L268'></a> 268 <em class='comment'> * @retval 0 テスト成功</em>
+<a id='L269' name='L269'></a> 269 <em class='comment'> * @retval 0以外 テスト失敗。エラーメッセージ</em>
+<a id='L270' name='L270'></a> 270 <em class='comment'> *</em>
+<a id='L271' name='L271'></a> 271 <em class='comment'> * @see h8sdk/sound.h</em>
+<a id='L272' name='L272'></a> 272 <em class='comment'> */</em>
+<a id='L273' name='L273'></a> 273 <strong class='reserved'>static</strong> <strong class='reserved'>char</strong>* <a href='../S/113.html#L575' title='Defined at 575 in test/test.c.'>test_sound</a>();
+<a id='L274' name='L274'></a> 274 
+<a id='L275' name='L275'></a> 275 <em class='comment'>/** </em>
+<a id='L276' name='L276'></a> 276 <em class='comment'> * @brief 楽曲演奏モジュールテスト</em>
+<a id='L277' name='L277'></a> 277 <em class='comment'> *</em>
+<a id='L278' name='L278'></a> 278 <em class='comment'> * @par テスト項目</em>
+<a id='L279' name='L279'></a> 279 <em class='comment'> * @li 初期化が正しく行える</em>
+<a id='L280' name='L280'></a> 280 <em class='comment'> * @li 楽曲登録ができる</em>
+<a id='L281' name='L281'></a> 281 <em class='comment'> * @li 登録済みの楽曲を取得できる</em>
+<a id='L282' name='L282'></a> 282 <em class='comment'> * @li シングルパートの楽曲を再生できる</em>
+<a id='L283' name='L283'></a> 283 <em class='comment'> * @li 再生後自動的にストップ状態になる。</em>
+<a id='L284' name='L284'></a> 284 <em class='comment'> * @li マルチパートの楽曲を再生できる</em>
+<a id='L285' name='L285'></a> 285 <em class='comment'> * @li 楽曲を逆再生できる</em>
+<a id='L286' name='L286'></a> 286 <em class='comment'> * @li 単音を録音できる</em>
+<a id='L287' name='L287'></a> 287 <em class='comment'> * @li 和音を録音できる</em>
+<a id='L288' name='L288'></a> 288 <em class='comment'> * @li 録音された楽曲を再生できる</em>
+<a id='L289' name='L289'></a> 289 <em class='comment'> * @li 録音された楽曲を逆再生できる</em>
+<a id='L290' name='L290'></a> 290 <em class='comment'> * @li 楽曲再生中に一時停止できる</em>
+<a id='L291' name='L291'></a> 291 <em class='comment'> * @li 楽曲のループ再生ができる</em>
+<a id='L292' name='L292'></a> 292 <em class='comment'> *</em>
+<a id='L293' name='L293'></a> 293 <em class='comment'> * @retval 0 テスト成功</em>
+<a id='L294' name='L294'></a> 294 <em class='comment'> * @retval 0以外 テスト失敗。エラーメッセージ</em>
+<a id='L295' name='L295'></a> 295 <em class='comment'> *</em>
+<a id='L296' name='L296'></a> 296 <em class='comment'> * @see h8sdk/music.h</em>
+<a id='L297' name='L297'></a> 297 <em class='comment'> */</em>
+<a id='L298' name='L298'></a> 298 <strong class='reserved'>static</strong> <strong class='reserved'>char</strong>* <a href='../S/113.html#L676' title='Defined at 676 in test/test.c.'>test_music</a>();
+<a id='L299' name='L299'></a> 299 
+<a id='L300' name='L300'></a> 300 <em class='comment'>/** </em>
+<a id='L301' name='L301'></a> 301 <em class='comment'> * @brief SSRPモジュールテスト</em>
+<a id='L302' name='L302'></a> 302 <em class='comment'> *</em>
+<a id='L303' name='L303'></a> 303 <em class='comment'> * @par テスト項目</em>
+<a id='L304' name='L304'></a> 304 <em class='comment'> * @li 初期化後、自ノードアドレスの数値文字列が設定されている</em>
+<a id='L305' name='L305'></a> 305 <em class='comment'> * @li 接続スタート前は接続数ゼロ</em>
+<a id='L306' name='L306'></a> 306 <em class='comment'> * @li 接続スタート前は接続ノードなし</em>
+<a id='L307' name='L307'></a> 307 <em class='comment'> * @li 接続スタート前は送信準備ができていない</em>
+<a id='L308' name='L308'></a> 308 <em class='comment'> * @li 接続スタート後、10数カウントでテストノードとの接続が完了する</em>
+<a id='L309' name='L309'></a> 309 <em class='comment'> * @li このとき、接続数が正しく取得できる</em>
+<a id='L310' name='L310'></a> 310 <em class='comment'> * @li このとき、接続ノードアドレスが正しく取得できる</em>
+<a id='L311' name='L311'></a> 311 <em class='comment'> * @li パラメータを指定してパケット送信ができる。返り値は送信ペイロー</em>
+<a id='L312' name='L312'></a> 312 <em class='comment'> * ドサイズと一致する</em>
+<a id='L313' name='L313'></a> 313 <em class='comment'> * @li パケットヘッダを指定してパケット送信ができる。返り値は送信ペイロー</em>
+<a id='L314' name='L314'></a> 314 <em class='comment'> * ドサイズと一致する</em>
+<a id='L315' name='L315'></a> 315 <em class='comment'> * @li パケットを受信できる</em>
+<a id='L316' name='L316'></a> 316 <em class='comment'> * @li 接続終了後は接続数ゼロ</em>
+<a id='L317' name='L317'></a> 317 <em class='comment'> * @li 接続終了後は接続ノードなし</em>
+<a id='L318' name='L318'></a> 318 <em class='comment'> * @li 接続終了後は送信準備ができていない</em>
+<a id='L319' name='L319'></a> 319 <em class='comment'> *</em>
+<a id='L320' name='L320'></a> 320 <em class='comment'> * @retval 0 テスト成功</em>
+<a id='L321' name='L321'></a> 321 <em class='comment'> * @retval 0以外 テスト失敗。エラーメッセージ</em>
+<a id='L322' name='L322'></a> 322 <em class='comment'> *</em>
+<a id='L323' name='L323'></a> 323 <em class='comment'> * @see h8sdk/ssrp.h</em>
+<a id='L324' name='L324'></a> 324 <em class='comment'> */</em>
+<a id='L325' name='L325'></a> 325 <strong class='reserved'>static</strong> <strong class='reserved'>char</strong>* <a href='../S/113.html#L818' title='Defined at 818 in test/test.c.'>test_ssrp</a>();
+<a id='L326' name='L326'></a> 326 
+<a id='L327' name='L327'></a> 327 <em class='comment'>/** </em>
+<a id='L328' name='L328'></a> 328 <em class='comment'> * @brief テスト実行</em>
+<a id='L329' name='L329'></a> 329 <em class='comment'> *</em>
+<a id='L330' name='L330'></a> 330 <em class='comment'> * @param[in] test_list テストする関数リスト</em>
+<a id='L331' name='L331'></a> 331 <em class='comment'> * @param[in] num テスト関数の個数</em>
+<a id='L332' name='L332'></a> 332 <em class='comment'> *</em>
+<a id='L333' name='L333'></a> 333 <em class='comment'> * @retval 0 全テスト成功</em>
+<a id='L334' name='L334'></a> 334 <em class='comment'> * @retval 0以外 テスト失敗。エラーメッセージ</em>
+<a id='L335' name='L335'></a> 335 <em class='comment'> */</em>
+<a id='L336' name='L336'></a> 336 <strong class='reserved'>static</strong> <strong class='reserved'>char</strong>* <a href='../S/113.html#L886' title='Defined at 886 in test/test.c.'>test_run</a>(<strong class='reserved'>const</strong> <a href='../Y/167.html' title='Multiple used in 6 places.'>UTEST_Func</a>* <a href='../Y/234.html' title='Multiple used in 3 places.'>test_list</a>, <a href='../Y/178.html' title='Multiple used in 4 places.'>_UWORD</a> <a href='../Y/217.html' title='Multiple used in 13 places.'>num</a>);
+<a id='L337' name='L337'></a> 337 
+<a id='L338' name='L338'></a> 338 <strong class='reserved'>static</strong> <strong class='reserved'>const</strong> <a href='../Y/167.html' title='Multiple used in 6 places.'>UTEST_Func</a> <a href='../Y/232.html' title='Multiple used in 2 places.'>test_basic_drivers_</a>[] = <em class='brace'>{</em>
+<a id='L339' name='L339'></a> 339     <a href='../S/113.html#L190' title='Defined at 190 in test/test.c.'>test_ioctl</a>,
+<a id='L340' name='L340'></a> 340     <a href='../S/113.html#L211' title='Defined at 211 in test/test.c.'>test_led</a>,
+<a id='L341' name='L341'></a> 341     <a href='../S/113.html#L160' title='Defined at 160 in test/test.c.'>test_sci</a>
+<a id='L342' name='L342'></a> 342 <em class='brace'>}</em>;
+<a id='L343' name='L343'></a> 343 
+<a id='L344' name='L344'></a> 344 <strong class='reserved'>static</strong> <strong class='reserved'>const</strong> <a href='../Y/167.html' title='Multiple used in 6 places.'>UTEST_Func</a> <a href='../Y/233.html' title='Multiple used in 2 places.'>test_drivers_</a>[] = <em class='brace'>{</em>
+<a id='L345' name='L345'></a> 345 <em class='sharp'>#ifdef</em> <a href='../Y/158.html' title='Multiple used in 3 places.'>TEST_ASSERT</a>
+<a id='L346' name='L346'></a> 346     <a href='../S/113.html#L331' title='Defined at 331 in test/test.c.'>test_assert</a>,
+<a id='L347' name='L347'></a> 347 <em class='sharp'>#endif</em> <em class='comment'>/* TEST_ASSERT */</em>
+<a id='L348' name='L348'></a> 348 <em class='sharp'>#ifdef</em> <a href='../Y/165.html' title='Multiple used in 3 places.'>TEST_STDC</a>
+<a id='L349' name='L349'></a> 349     <a href='../S/113.html#L235' title='Defined at 235 in test/test.c.'>test_stdio</a>,
+<a id='L350' name='L350'></a> 350     <a href='../S/113.html#L251' title='Defined at 251 in test/test.c.'>test_stdlib</a>,
+<a id='L351' name='L351'></a> 351     <a href='../S/113.html#L302' title='Defined at 302 in test/test.c.'>test_string</a>,
+<a id='L352' name='L352'></a> 352 <em class='sharp'>#endif</em> <em class='comment'>/* TEST_STDC */</em>
+<a id='L353' name='L353'></a> 353 <em class='sharp'>#ifdef</em> <a href='../Y/159.html' title='Multiple used in 3 places.'>TEST_LCD</a>
+<a id='L354' name='L354'></a> 354     <a href='../S/113.html#L341' title='Defined at 341 in test/test.c.'>test_lcd</a>,
+<a id='L355' name='L355'></a> 355 <em class='sharp'>#endif</em> <em class='comment'>/* TEST_PS2 */</em>
+<a id='L356' name='L356'></a> 356 <em class='sharp'>#ifdef</em> <a href='../Y/162.html' title='Multiple used in 3 places.'>TEST_PUSH_SWITCH</a>
+<a id='L357' name='L357'></a> 357     <a href='../S/113.html#L404' title='Defined at 404 in test/test.c.'>test_push_switch</a>,
+<a id='L358' name='L358'></a> 358 <em class='sharp'>#endif</em> <em class='comment'>/* TEST_PUSH_SWITCH */</em>
+<a id='L359' name='L359'></a> 359 <em class='sharp'>#ifdef</em> <a href='../Y/157.html' title='Multiple used in 3 places.'>TEST_ADC</a>
+<a id='L360' name='L360'></a> 360     <a href='../S/113.html#L446' title='Defined at 446 in test/test.c.'>test_adc</a>,
+<a id='L361' name='L361'></a> 361 <em class='sharp'>#endif</em> <em class='comment'>/* TEST_ADC */</em>
+<a id='L362' name='L362'></a> 362 <em class='sharp'>#ifdef</em> <a href='../Y/161.html' title='Multiple used in 4 places.'>TEST_PS2</a>
+<a id='L363' name='L363'></a> 363     <a href='../S/113.html#L548' title='Defined at 548 in test/test.c.'>test_ps2</a>,
+<a id='L364' name='L364'></a> 364 <em class='sharp'>#endif</em> <em class='comment'>/* TEST_PS2 */</em>
+<a id='L365' name='L365'></a> 365 <em class='sharp'>#ifdef</em> <a href='../Y/163.html' title='Multiple used in 7 places.'>TEST_SOUND</a>
+<a id='L366' name='L366'></a> 366     <a href='../S/113.html#L575' title='Defined at 575 in test/test.c.'>test_sound</a>
+<a id='L367' name='L367'></a> 367 <em class='sharp'>#endif</em> <em class='comment'>/* TEST_SOUND */</em>
+<a id='L368' name='L368'></a> 368 <em class='brace'>}</em>;
+<a id='L369' name='L369'></a> 369 
+<a id='L370' name='L370'></a> 370 <strong class='reserved'>static</strong> <strong class='reserved'>const</strong> <a href='../Y/167.html' title='Multiple used in 6 places.'>UTEST_Func</a> <a href='../Y/235.html' title='Multiple used in 2 places.'>test_modules_</a>[] = <em class='brace'>{</em>
+<a id='L371' name='L371'></a> 371 <em class='sharp'>#ifdef</em> <a href='../Y/160.html' title='Multiple used in 7 places.'>TEST_MUSIC</a>
+<a id='L372' name='L372'></a> 372     <a href='../S/113.html#L676' title='Defined at 676 in test/test.c.'>test_music</a>,
+<a id='L373' name='L373'></a> 373 <em class='sharp'>#endif</em> <em class='comment'>/* TEST_MUSIC */</em>
+<a id='L374' name='L374'></a> 374 <em class='sharp'>#ifdef</em> <a href='../Y/164.html' title='Multiple used in 3 places.'>TEST_SSRP</a>
+<a id='L375' name='L375'></a> 375     <a href='../S/113.html#L818' title='Defined at 818 in test/test.c.'>test_ssrp</a>
+<a id='L376' name='L376'></a> 376 <em class='sharp'>#endif</em> <em class='comment'>/* TEST_SSRP */</em>
+<a id='L377' name='L377'></a> 377 <em class='brace'>}</em>;
+<a id='L378' name='L378'></a> 378 
+<a id='L379' name='L379'></a> 379 
+<a id='L380' name='L380'></a> 380 <em class='sharp'>#ifdef</em> <a href='../Y/179.html' title='Multiple used in 2 places.'>__cplusplus</a>
+<a id='L381' name='L381'></a> 381 <em class='brace'>}</em>
+<a id='L382' name='L382'></a> 382 <em class='sharp'>#endif</em>
+<a id='L383' name='L383'></a> 383 
+<a id='L384' name='L384'></a> 384 <em class='sharp'>#endif</em> <em class='comment'>/* TEST_H_ */</em>
+</pre>
+<hr />
+<a id='BOTTOM' name='BOTTOM'></a>
+<em class='comment'>/* [&lt;][&gt;][^][v]<a href='#TOP'>[top]</a>[bottom]<a href='../mains.html'>[index]</a><a href='../help.html'>[help]</a> */</em>
+</body>
+</html>

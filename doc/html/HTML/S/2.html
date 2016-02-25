@@ -1,0 +1,259 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>envelope.c</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<a id='TOP' name='TOP'></a><h2 class='header'><a href='../mains.html'>root</a>/envelope.c</h2>
+<em class='comment'>/* [&lt;][&gt;][^][v][top]<a href='#BOTTOM'>[bottom]</a><a href='../mains.html'>[index]</a><a href='../help.html'>[help]</a> */</em>
+<hr />
+<pre>
+<a id='L1' name='L1'></a>   1 <em class='comment'>/**</em>
+<a id='L2' name='L2'></a>   2 <em class='comment'> * @file envelope.c</em>
+<a id='L3' name='L3'></a>   3 <em class='comment'> *</em>
+<a id='L4' name='L4'></a>   4 <em class='comment'> * @brief This header file declares the definitions that are Sound Envelope</em>
+<a id='L5' name='L5'></a>   5 <em class='comment'> * Data.</em>
+<a id='L6' name='L6'></a>   6 <em class='comment'> *</em>
+<a id='L7' name='L7'></a>   7 <em class='comment'> * @htmlonly</em>
+<a id='L8' name='L8'></a>   8 <em class='comment'> * @version $Id:$</em>
+<a id='L9' name='L9'></a>   9 <em class='comment'> *</em>
+<a id='L10' name='L10'></a>  10 <em class='comment'> * @author Kenji MINOURA / kenji@kandj.org</em>
+<a id='L11' name='L11'></a>  11 <em class='comment'> *</em>
+<a id='L12' name='L12'></a>  12 <em class='comment'> * Copyright (c) 2008 K&amp;J Software Design, Ltd All rights reserved.</em>
+<a id='L13' name='L13'></a>  13 <em class='comment'> * @endhtmlonly</em>
+<a id='L14' name='L14'></a>  14 <em class='comment'> *</em>
+<a id='L15' name='L15'></a>  15 <em class='comment'> ***********************************************************************/</em>
+<a id='L16' name='L16'></a>  16 <em class='sharp'>#include</em> "stddef.h"
+<a id='L17' name='L17'></a>  17 <em class='sharp'>#include</em> "../include/h8sdk/envelope.h"
+<a id='L18' name='L18'></a>  18 
+<a id='L19' name='L19'></a>  19 
+<a id='L20' name='L20'></a>  20 <strong class='reserved'>static</strong> <strong class='reserved'>const</strong> <a href='../Y/206.html' title='Multiple used in 114 places.'>_UBYTE</a> <a href='../Y/247.html' title='Multiple used in 2 places.'>dataNA_</a>[] = <em class='brace'>{</em> 0 <em class='brace'>}</em>;
+<a id='L21' name='L21'></a>  21 
+<a id='L22' name='L22'></a>  22 <strong class='reserved'>static</strong> <strong class='reserved'>const</strong> <a href='../Y/206.html' title='Multiple used in 114 places.'>_UBYTE</a> <a href='../Y/249.html' title='Multiple used in 2 places.'>dataPiano_</a>[] = <em class='brace'>{</em>
+<a id='L23' name='L23'></a>  23     12,22,30,41,51,60,67,77,85,94,
+<a id='L24' name='L24'></a>  24     102,109,114,123,129,134,144,151,158,162,
+<a id='L25' name='L25'></a>  25     171,175,179,184,190,195,199,203,208,211,
+<a id='L26' name='L26'></a>  26     217,220,225,229,232,236,240,243,247,250,
+<a id='L27' name='L27'></a>  27     253,255,252,248,245,241,238,235,230,228,
+<a id='L28' name='L28'></a>  28     223,221,218,215,212,210,208,205,203,202,
+<a id='L29' name='L29'></a>  29     199,197,195,193,191,188,187,185,184,182,
+<a id='L30' name='L30'></a>  30     180,178,177,175,174,173,171,169,168,167,
+<a id='L31' name='L31'></a>  31     165,164,162,161,160,159,158,156,156,154,
+<a id='L32' name='L32'></a>  32     153,152,151,150,149,149,148,147,146,145,
+<a id='L33' name='L33'></a>  33     145,144,143,143,142,141,140,140,138,138,
+<a id='L34' name='L34'></a>  34     138,137,136,136,135,134,134,133,133,132,
+<a id='L35' name='L35'></a>  35     132,132,131,131,130,130,130,129,129,129,
+<a id='L36' name='L36'></a>  36     128,128,127,127,127,127,126,126,126,125,
+<a id='L37' name='L37'></a>  37     125,125,125,124,124,123,123,123,123,123,
+<a id='L38' name='L38'></a>  38     122,121,121,121,121,121,121,121,121,121,
+<a id='L39' name='L39'></a>  39     121,119,119,119,119,119,119,119,119,119,
+<a id='L40' name='L40'></a>  40     119,119,119,119,119,119,117,117,117,117,
+<a id='L41' name='L41'></a>  41     117,117,117,117,117,117,117,117,116,116,
+<a id='L42' name='L42'></a>  42     116,116
+<a id='L43' name='L43'></a>  43 <em class='brace'>}</em>;
+<a id='L44' name='L44'></a>  44 <strong class='reserved'>static</strong> <strong class='reserved'>const</strong> <a href='../Y/206.html' title='Multiple used in 114 places.'>_UBYTE</a> <a href='../Y/248.html' title='Multiple used in 2 places.'>dataPianoReverb_</a>[] = <em class='brace'>{</em>
+<a id='L45' name='L45'></a>  45     109,103,98,93,87,84,79,75,71,68,
+<a id='L46' name='L46'></a>  46     63,61,57,54,52,49,47,45,43,40,
+<a id='L47' name='L47'></a>  47     38,36,35,33,31,30,29,26,26,25,
+<a id='L48' name='L48'></a>  48     24,23,22,20,20,18,18,17,16,15,
+<a id='L49' name='L49'></a>  49     15,14,14,13,12,12,11,10,10,10,
+<a id='L50' name='L50'></a>  50     10,8,8,8,8,8,8,7,6,6,
+<a id='L51' name='L51'></a>  51     6,5,5,6,5,5,4,4,4,4,
+<a id='L52' name='L52'></a>  52     3,3,3,3,3,3,3,2,2,2,
+<a id='L53' name='L53'></a>  53     2,2,2,2,2,1,1,1,1,1,
+<a id='L54' name='L54'></a>  54     1,1,1,1,1,0
+<a id='L55' name='L55'></a>  55 <em class='brace'>}</em>;
+<a id='L56' name='L56'></a>  56 
+<a id='L57' name='L57'></a>  57 <strong class='reserved'>static</strong> <strong class='reserved'>const</strong> <a href='../Y/206.html' title='Multiple used in 114 places.'>_UBYTE</a> <a href='../Y/244.html' title='Multiple used in 2 places.'>dataFlute_</a>[] = <em class='brace'>{</em>
+<a id='L58' name='L58'></a>  58     0,0,0,0,0,0,0,14,17,17,
+<a id='L59' name='L59'></a>  59     17,18,28,47,46,64,75,76,75,86,
+<a id='L60' name='L60'></a>  60     87,89,98,97,108,112,119,132,133,134,
+<a id='L61' name='L61'></a>  61     133,133,133,133,135,134,133,123,121,121,
+<a id='L62' name='L62'></a>  62     121,121,121,121,121,121,121,122,122,132,
+<a id='L63' name='L63'></a>  63     133,133,133,133,143,145,146,145,145,145,
+<a id='L64' name='L64'></a>  64     145,145,145,145,145,143,134,133,133,133,
+<a id='L65' name='L65'></a>  65     133,133,133,133,133,133,133,133,135,145,
+<a id='L66' name='L66'></a>  66     154,155,143,144,145,146,156,147,145,143,
+<a id='L67' name='L67'></a>  67     145,145,145,145,145,145,145,145,145,145,
+<a id='L68' name='L68'></a>  68     145,145,146,146,157,156,158,157,157,157,
+<a id='L69' name='L69'></a>  69     157,157,156,157,156,154,138,135,133,133,
+<a id='L70' name='L70'></a>  70     144,143,145,145,145,145,144,146,153,157,
+<a id='L71' name='L71'></a>  71     168,178,181,181,189,193,193,202,203,193,
+<a id='L72' name='L72'></a>  72     190,181,180,181,178,174,169,158,156,150,
+<a id='L73' name='L73'></a>  73     146,144,145,145,145,145,146,146,155,154,
+<a id='L74' name='L74'></a>  74     146,144,144,147,156,155,157,157,157,157,
+<a id='L75' name='L75'></a>  75     157,157,157,157,157,157,160,167,168,175,
+<a id='L76' name='L76'></a>  76     181,182,189,190,190,182,181,179,179,179,
+<a id='L77' name='L77'></a>  77     172,167,159,153,146,143,141,133,133,133,
+<a id='L78' name='L78'></a>  78     133,133,134,138,143,145,143,150,156,156,
+<a id='L79' name='L79'></a>  79     162,167,169,171,178,181,181,179,179,179,
+<a id='L80' name='L80'></a>  80     177,170,167,168,166,159,158,157,157,167,
+<a id='L81' name='L81'></a>  81     167,169,167,158,158,156,158,164,168,169,
+<a id='L82' name='L82'></a>  82     161,157,157,157,154,146,146,143,145,143,
+<a id='L83' name='L83'></a>  83     145,153,157,166,168,175,181,190,194,202,
+<a id='L84' name='L84'></a>  84     204,202,203,204,204,212,214,205,202,202,
+<a id='L85' name='L85'></a>  85     194,181,179,168,157,150,144,144,143,146,
+<a id='L86' name='L86'></a>  86     155,150,144,145,143,154,155,158,155,156,
+<a id='L87' name='L87'></a>  87     155,158,158,168,179,170,168,168,168,168,
+<a id='L88' name='L88'></a>  88     168,168,168,168,169,169,169,181,189,191,
+<a id='L89' name='L89'></a>  89     181,179,181,181,191,191,190,181,170,168,
+<a id='L90' name='L90'></a>  90     168,169,159,157,146,144,145,145,145,145,
+<a id='L91' name='L91'></a>  91     145,146,144,144,156,156,157,167,177,181,
+<a id='L92' name='L92'></a>  92     191,192,208,208,226,226,225,215,205,202,
+<a id='L93' name='L93'></a>  93     190,181,180,178,169,169,167,157,157,156,
+<a id='L94' name='L94'></a>  94     145,145,145,145,145,145,145,145,145,157,
+<a id='L95' name='L95'></a>  95     156,146,144,143,144,157,157,157,157,157,
+<a id='L96' name='L96'></a>  96     157,157,157,157
+<a id='L97' name='L97'></a>  97 <em class='brace'>}</em>;
+<a id='L98' name='L98'></a>  98 <strong class='reserved'>static</strong> <strong class='reserved'>const</strong> <a href='../Y/206.html' title='Multiple used in 114 places.'>_UBYTE</a> <a href='../Y/243.html' title='Multiple used in 2 places.'>dataFluteReverb_</a>[] = <em class='brace'>{</em>
+<a id='L99' name='L99'></a>  99     155,156,155,158,158,168,179,170,168,168,
+<a id='L100' name='L100'></a> 100     168,168,168,168,168,168,169,169,169,181,
+<a id='L101' name='L101'></a> 101     189,191,181,179,181,181,191,191,190,181,
+<a id='L102' name='L102'></a> 102     170,168,168,169,159,157,146,144,145,145,
+<a id='L103' name='L103'></a> 103     145,145,145,146,144,144,156,156,157,167,
+<a id='L104' name='L104'></a> 104     177,181,191,192,208,208,226,226,225,215,
+<a id='L105' name='L105'></a> 105     205,202,190,181,180,178,169,169,167,157,
+<a id='L106' name='L106'></a> 106     157,156,145,145,145,145,145,145,145,145,
+<a id='L107' name='L107'></a> 107     145,157,156,146,144,143,144,157,157,157,
+<a id='L108' name='L108'></a> 108     157,157,157,157,157,157
+<a id='L109' name='L109'></a> 109 <em class='brace'>}</em>;
+<a id='L110' name='L110'></a> 110 
+<a id='L111' name='L111'></a> 111 <strong class='reserved'>static</strong> <strong class='reserved'>const</strong> <a href='../Y/206.html' title='Multiple used in 114 places.'>_UBYTE</a> <a href='../Y/242.html' title='Multiple used in 2 places.'>dataDrum_</a>[] = <em class='brace'>{</em>
+<a id='L112' name='L112'></a> 112     104,104,104,203,203,203,162,162,162,122,
+<a id='L113' name='L113'></a> 113     122,122,87,87,75,75,75,58,58,58,
+<a id='L114' name='L114'></a> 114     29,29,29,40,40,40,40,40,17,17,
+<a id='L115' name='L115'></a> 115     17,17,17,17,17,17,17,17,17,17,
+<a id='L116' name='L116'></a> 116     17,17,17,17,17,5,5,5,
+<a id='L117' name='L117'></a> 117 <em class='brace'>}</em>;
+<a id='L118' name='L118'></a> 118 
+<a id='L119' name='L119'></a> 119 <strong class='reserved'>static</strong> <strong class='reserved'>const</strong> <a href='../Y/206.html' title='Multiple used in 114 places.'>_UBYTE</a> <a href='../Y/251.html' title='Multiple used in 2 places.'>dataTrumpet_</a>[] = <em class='brace'>{</em>
+<a id='L120' name='L120'></a> 120     11,11,81,145,145,186,238,238,238,226,
+<a id='L121' name='L121'></a> 121     226,226,226,226,226,226,226,226,226,226,
+<a id='L122' name='L122'></a> 122     226,226,226,238,238,238,226,215,215,215,
+<a id='L123' name='L123'></a> 123     215,215,203,203,203,203,203,203,203,203,
+<a id='L124' name='L124'></a> 124     203,203,203,215,215,203,203,203,203,203,
+<a id='L125' name='L125'></a> 125     203,203,203,203,203,203,203,203,203,203,
+<a id='L126' name='L126'></a> 126     203,203,203,203,203,203,203,203,203,203,
+<a id='L127' name='L127'></a> 127     203,203,203,203,203,203,203,203,203,203,
+<a id='L128' name='L128'></a> 128     215,215,215,203,203,203,203,203,203,215,
+<a id='L129' name='L129'></a> 129     203,203,203,203,203,203,203,203,203,203,
+<a id='L130' name='L130'></a> 130     203,203,203,203,203,215,203,203,203,203,
+<a id='L131' name='L131'></a> 131     203,203,203,203,203,203,203,203,191,191,
+<a id='L132' name='L132'></a> 132     191,191,203,203,203,203,203,203,203,203,
+<a id='L133' name='L133'></a> 133     203,203,191,191,191,191,191,191,191,203,
+<a id='L134' name='L134'></a> 134     191,191,191,191,191,191,191,191,191,203,
+<a id='L135' name='L135'></a> 135     203,203,203,203,203,203,203,203,203,203,
+<a id='L136' name='L136'></a> 136     203,203,203,191,191,191,191,191,191,191,
+<a id='L137' name='L137'></a> 137     191,191,191,191,191,203,203,203,203,203,
+<a id='L138' name='L138'></a> 138     203,203,203,203,203,203,203,203,203,203,
+<a id='L139' name='L139'></a> 139     203,203,191,191,191,191,191,191,191,191,
+<a id='L140' name='L140'></a> 140     191,191,191,191,191,191,203,203,203,191,
+<a id='L141' name='L141'></a> 141     191,191,191,191,191,191,203,203,203,203,
+<a id='L142' name='L142'></a> 142     203,203,203,191,191,191,191,191,191,191,
+<a id='L143' name='L143'></a> 143     191,191,191,191,191,191,191,191,191,191,
+<a id='L144' name='L144'></a> 144     191,191,191,191,203,203,203,203,191,191,
+<a id='L145' name='L145'></a> 145     191,191,203,203,203,203,203,203,203,203,
+<a id='L146' name='L146'></a> 146     203,191,191,191,191,191,191,191,203,203,
+<a id='L147' name='L147'></a> 147     203,203,203,203,203,203,203,203,203,203,
+<a id='L148' name='L148'></a> 148     203,203,203,203,203,191,191,191,191,191,
+<a id='L149' name='L149'></a> 149     191,191,191,191,191,191,191,191,191,191,
+<a id='L150' name='L150'></a> 150     191,191,191,191,191,191,191,191,191,191,
+<a id='L151' name='L151'></a> 151     191,191,191,191,191,203,203,203,203,203,
+<a id='L152' name='L152'></a> 152     203,203,203,203,203,203,203,203,203,203,
+<a id='L153' name='L153'></a> 153     203,203,203,203,203,203,203,203,203,203,
+<a id='L154' name='L154'></a> 154     203,203,203,203,203,203,203,215,203,203,
+<a id='L155' name='L155'></a> 155     203,203,191,191,191,191,191,191,191,191,
+<a id='L156' name='L156'></a> 156     191,191,191,191,191,191,191,191,203,203,
+<a id='L157' name='L157'></a> 157     203,203,203,203,191,191,191,191,191,191,
+<a id='L158' name='L158'></a> 158     191,191,191,191
+<a id='L159' name='L159'></a> 159 <em class='brace'>}</em>;
+<a id='L160' name='L160'></a> 160 <strong class='reserved'>static</strong> <strong class='reserved'>const</strong> <a href='../Y/206.html' title='Multiple used in 114 places.'>_UBYTE</a> <a href='../Y/250.html' title='Multiple used in 2 places.'>dataTrumpetReverb_</a>[] = <em class='brace'>{</em>
+<a id='L161' name='L161'></a> 161     191,191,191,191,191,191,191,191,191,191,
+<a id='L162' name='L162'></a> 162     191,191,191,191,191,191,191,191,191,191,
+<a id='L163' name='L163'></a> 163     191,191,191,191,191,203,203,203,203,203,
+<a id='L164' name='L164'></a> 164     203,203,203,203,203,203,203,203,203,203,
+<a id='L165' name='L165'></a> 165     203,203,203,203,203,203,203,203,203,203,
+<a id='L166' name='L166'></a> 166     203,203,203,203,203,203,203,215,203,203,
+<a id='L167' name='L167'></a> 167     203,203,191,191,191,191,191,191,191,191,
+<a id='L168' name='L168'></a> 168     191,191,191,191,191,191,191,191,203,203,
+<a id='L169' name='L169'></a> 169     203,203,203,203,191,191,191,191,191,191,
+<a id='L170' name='L170'></a> 170     191,191,191,191,191
+<a id='L171' name='L171'></a> 171 <em class='brace'>}</em>;
+<a id='L172' name='L172'></a> 172 
+<a id='L173' name='L173'></a> 173 <strong class='reserved'>static</strong> <strong class='reserved'>const</strong> <a href='../Y/206.html' title='Multiple used in 114 places.'>_UBYTE</a> <a href='../Y/246.html' title='Multiple used in 2 places.'>dataHarp_</a>[] = <em class='brace'>{</em>
+<a id='L174' name='L174'></a> 174     6, 22, 37, 68, 100, 116, 147, 163, 194, 225,
+<a id='L175' name='L175'></a> 175     234, 255
+<a id='L176' name='L176'></a> 176 <em class='brace'>}</em>;
+<a id='L177' name='L177'></a> 177 <strong class='reserved'>static</strong> <strong class='reserved'>const</strong> <a href='../Y/206.html' title='Multiple used in 114 places.'>_UBYTE</a> <a href='../Y/245.html' title='Multiple used in 2 places.'>dataHarpReverb_</a>[] = <em class='brace'>{</em>
+<a id='L178' name='L178'></a> 178     255,249,240,237,233,228,224,224,219,215,210,206,202,198,195,190,187,183,
+<a id='L179' name='L179'></a> 179     180,176,176,173,171,167,164,161,159,156,153,150,148,146,143,143,141,139,
+<a id='L180' name='L180'></a> 180     137,135,133,132,129,128,126,124,124,121,121,119,118,116,115,114,112,110,
+<a id='L181' name='L181'></a> 181     109,109,107,106,105,105,103,102,101,100,99,98,97,95,95,94,93,92,92,91,91,
+<a id='L182' name='L182'></a> 182     89,89,88,87,86,86,84,84,83,82,82,82,81,80,79,79,78,77,76,76,75,74,75,75,
+<a id='L183' name='L183'></a> 183     74,73,73,72,72,71,70,69,68,69,67,68,68,68,67,66,66,65,65,65,64,63,63,63,
+<a id='L184' name='L184'></a> 184     62,62,62,61,61,60,60,60,60,59,59,58,57,56,56,57,56,56,55,55,55,54,54,53,
+<a id='L185' name='L185'></a> 185     54,53,53,53,53,52,52,52,51,51,51,50,50,50,49,49,49,49,49,49,48,48,48,47,
+<a id='L186' name='L186'></a> 186     47,46,47,46,46,46,45,46,45,45,45,45,44,44,44,44,43,43,43,43,43,42,43,41,
+<a id='L187' name='L187'></a> 187     41,41,41,41,40,41,40,40,40,40,40,39,39,39,39,38,39,38,38,38,38,38,38,37,
+<a id='L188' name='L188'></a> 188     37,37,37,37,36,36,36,36,36,36,36,35,35,35,35,35,35,34,35,34,34,34,34,34,
+<a id='L189' name='L189'></a> 189     33,33,33,33,33,33,32,32,33,32,32,32,32,32,31,32,31,31,31,31,31,31,31,30,
+<a id='L190' name='L190'></a> 190     30,30,30,30,30,29,30,30,29,30,29,29,29,29,29,29,28,28,28,28,28,27,28,27,
+<a id='L191' name='L191'></a> 191     27,27,27,27,27,27,27,26,26,26,26,26,26,26,26,26,25,26,26,25,25,25,25,25,
+<a id='L192' name='L192'></a> 192     25,24,24,25,25,24,24,24,24,24,24,24,23,24,23,23,23,23,23,23,23,23,23,23,
+<a id='L193' name='L193'></a> 193     23,23,22,23,22,22,22,22,22,22,22,22,22,22,21,22,22,21,21,21,21,21,21,21,
+<a id='L194' name='L194'></a> 194     20,20,21,21,20,21,20,20,20,20,20,20,20,20,20,19,19,19,19,19,19,19,19,19,
+<a id='L195' name='L195'></a> 195     19,19,19,18,18,18,19,19,19,18,18,18,18,18,18,18,18,18,17,17,17,18,17,17,
+<a id='L196' name='L196'></a> 196     17,18,17,17,17,17,17,17,17,17,16,16,16,16,16,17,17,16,17,16,16,16,16,16,
+<a id='L197' name='L197'></a> 197     16,16,16,16,15,15,15,15,16,15,16,15,15,15,15,15,15,15,15,15,15,14,15,14,
+<a id='L198' name='L198'></a> 198     15,14,15,14,14,14,13,14,13,14,13,14,13,13,13,13,13,13,13,13,13,13,13,13,
+<a id='L199' name='L199'></a> 199     13,13,13,13,13,13,13,13,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,
+<a id='L200' name='L200'></a> 200     12,12,12,12,11,11,11,11,11,11,11,11,11,11,11,11,10,10,11,10,11,11,10,11,
+<a id='L201' name='L201'></a> 201     11,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,
+<a id='L202' name='L202'></a> 202     9,9,9,9,9,9,9,9,9,9,9,9,9,8,8,9,9,9,9,9,9,9,8,8,8,8,8,8,8,8,8,8,8,8,8,7,
+<a id='L203' name='L203'></a> 203     8,8,8,8,8,7,8,8,7,8,7,7,7,7,7,7,7,7,7,7,7,7,7,6,6,6,6,6,6,6,6,6,6,7,6,6,
+<a id='L204' name='L204'></a> 204     6,6,6,6,6,6,6,6,6,6,6,6,5,6,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,
+<a id='L205' name='L205'></a> 205     4,4,5,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,3,3,3,3,3,3,3,3,3,
+<a id='L206' name='L206'></a> 206     3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,2,2,3,2,2,2,2,2,2,2,2,2,3,2,2,2,2,2,2,
+<a id='L207' name='L207'></a> 207     2,2,2,2,2,2,2,2,1,2,1,1,1,1,1,1,1,1,1,2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+<a id='L208' name='L208'></a> 208 <em class='brace'>}</em>;
+<a id='L209' name='L209'></a> 209 
+<a id='L210' name='L210'></a> 210 <strong class='reserved'>const</strong> <a href='../Y/120.html' title='Multiple used in 11 places.'>SOUND_Envelope</a> ENVELOPE_na = <em class='brace'>{</em>
+<a id='L211' name='L211'></a> 211     <a href='../Y/247.html' title='Multiple used in 2 places.'>dataNA_</a>, <a href='../Y/214.html' title='Multiple used in 21 places.'>_sizeof_array</a>(<a href='../Y/247.html' title='Multiple used in 2 places.'>dataNA_</a>)
+<a id='L212' name='L212'></a> 212 <em class='brace'>}</em>;
+<a id='L213' name='L213'></a> 213 <strong class='reserved'>const</strong> <a href='../Y/120.html' title='Multiple used in 11 places.'>SOUND_Envelope</a> ENVELOPE_piano = <em class='brace'>{</em>
+<a id='L214' name='L214'></a> 214     <a href='../Y/249.html' title='Multiple used in 2 places.'>dataPiano_</a>, <a href='../Y/214.html' title='Multiple used in 21 places.'>_sizeof_array</a>(<a href='../Y/249.html' title='Multiple used in 2 places.'>dataPiano_</a>)
+<a id='L215' name='L215'></a> 215 <em class='brace'>}</em>;
+<a id='L216' name='L216'></a> 216 <strong class='reserved'>const</strong> <a href='../Y/120.html' title='Multiple used in 11 places.'>SOUND_Envelope</a> ENVELOPE_piano_reverb = <em class='brace'>{</em>
+<a id='L217' name='L217'></a> 217     <a href='../Y/248.html' title='Multiple used in 2 places.'>dataPianoReverb_</a>, <a href='../Y/214.html' title='Multiple used in 21 places.'>_sizeof_array</a>(<a href='../Y/248.html' title='Multiple used in 2 places.'>dataPianoReverb_</a>)
+<a id='L218' name='L218'></a> 218 <em class='brace'>}</em>;
+<a id='L219' name='L219'></a> 219 <strong class='reserved'>const</strong> <a href='../Y/120.html' title='Multiple used in 11 places.'>SOUND_Envelope</a> ENVELOPE_flute = <em class='brace'>{</em>
+<a id='L220' name='L220'></a> 220     <a href='../Y/244.html' title='Multiple used in 2 places.'>dataFlute_</a>, <a href='../Y/214.html' title='Multiple used in 21 places.'>_sizeof_array</a>(<a href='../Y/244.html' title='Multiple used in 2 places.'>dataFlute_</a>)
+<a id='L221' name='L221'></a> 221 <em class='brace'>}</em>;
+<a id='L222' name='L222'></a> 222 <strong class='reserved'>const</strong> <a href='../Y/120.html' title='Multiple used in 11 places.'>SOUND_Envelope</a> ENVELOPE_flute_reverb = <em class='brace'>{</em>
+<a id='L223' name='L223'></a> 223     <a href='../Y/243.html' title='Multiple used in 2 places.'>dataFluteReverb_</a>, <a href='../Y/214.html' title='Multiple used in 21 places.'>_sizeof_array</a>(<a href='../Y/243.html' title='Multiple used in 2 places.'>dataFluteReverb_</a>)
+<a id='L224' name='L224'></a> 224 <em class='brace'>}</em>;
+<a id='L225' name='L225'></a> 225 <strong class='reserved'>const</strong> <a href='../Y/120.html' title='Multiple used in 11 places.'>SOUND_Envelope</a> ENVELOPE_drum = <em class='brace'>{</em>
+<a id='L226' name='L226'></a> 226     <a href='../Y/242.html' title='Multiple used in 2 places.'>dataDrum_</a>, <a href='../Y/214.html' title='Multiple used in 21 places.'>_sizeof_array</a>(<a href='../Y/242.html' title='Multiple used in 2 places.'>dataDrum_</a>)
+<a id='L227' name='L227'></a> 227 <em class='brace'>}</em>;
+<a id='L228' name='L228'></a> 228 <strong class='reserved'>const</strong> <a href='../Y/120.html' title='Multiple used in 11 places.'>SOUND_Envelope</a> ENVELOPE_trumpet = <em class='brace'>{</em>
+<a id='L229' name='L229'></a> 229     <a href='../Y/251.html' title='Multiple used in 2 places.'>dataTrumpet_</a>, <a href='../Y/214.html' title='Multiple used in 21 places.'>_sizeof_array</a>(<a href='../Y/251.html' title='Multiple used in 2 places.'>dataTrumpet_</a>)
+<a id='L230' name='L230'></a> 230 <em class='brace'>}</em>;
+<a id='L231' name='L231'></a> 231 <strong class='reserved'>const</strong> <a href='../Y/120.html' title='Multiple used in 11 places.'>SOUND_Envelope</a> ENVELOPE_trumpet_reverb = <em class='brace'>{</em>
+<a id='L232' name='L232'></a> 232     <a href='../Y/250.html' title='Multiple used in 2 places.'>dataTrumpetReverb_</a>, <a href='../Y/214.html' title='Multiple used in 21 places.'>_sizeof_array</a>(<a href='../Y/250.html' title='Multiple used in 2 places.'>dataTrumpetReverb_</a>)
+<a id='L233' name='L233'></a> 233 <em class='brace'>}</em>;
+<a id='L234' name='L234'></a> 234 <strong class='reserved'>const</strong> <a href='../Y/120.html' title='Multiple used in 11 places.'>SOUND_Envelope</a> ENVELOPE_harp = <em class='brace'>{</em>
+<a id='L235' name='L235'></a> 235     <a href='../Y/246.html' title='Multiple used in 2 places.'>dataHarp_</a>, <a href='../Y/214.html' title='Multiple used in 21 places.'>_sizeof_array</a>(<a href='../Y/246.html' title='Multiple used in 2 places.'>dataHarp_</a>)
+<a id='L236' name='L236'></a> 236 <em class='brace'>}</em>;
+<a id='L237' name='L237'></a> 237 <strong class='reserved'>const</strong> <a href='../Y/120.html' title='Multiple used in 11 places.'>SOUND_Envelope</a> ENVELOPE_harp_reverb = <em class='brace'>{</em>
+<a id='L238' name='L238'></a> 238     <a href='../Y/245.html' title='Multiple used in 2 places.'>dataHarpReverb_</a>, <a href='../Y/214.html' title='Multiple used in 21 places.'>_sizeof_array</a>(<a href='../Y/245.html' title='Multiple used in 2 places.'>dataHarpReverb_</a>)
+<a id='L239' name='L239'></a> 239 <em class='brace'>}</em>;
+</pre>
+<hr />
+<a id='BOTTOM' name='BOTTOM'></a>
+<em class='comment'>/* [&lt;][&gt;][^][v]<a href='#TOP'>[top]</a>[bottom]<a href='../mains.html'>[index]</a><a href='../help.html'>[help]</a> */</em>
+</body>
+</html>

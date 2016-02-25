@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>push_switch.c</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<a id='TOP' name='TOP'></a><h2 class='header'><a href='../mains.html'>root</a>/push_switch.c</h2>
+<em class='comment'>/* [&lt;][&gt;]<a href='#L25'>[^]</a><a href='#L82'>[v]</a>[top]<a href='#BOTTOM'>[bottom]</a><a href='../mains.html'>[index]</a><a href='../help.html'>[help]</a> */</em>
+<hr />
+<h2 class='header'>DEFINITIONS</h2>
+This source file includes following definitions.
+<ol>
+<li><a href='#L25' title='Defined at 25.'>PSW_init</a></li>
+<li><a href='#L39' title='Defined at 39.'>PSW_get</a></li>
+<li><a href='#L66' title='Defined at 66.'>PSW_oneShot</a></li>
+<li><a href='#L82' title='Defined at 82.'>PSW_snapShot</a></li>
+</ol>
+<hr />
+<pre>
+<a id='L1' name='L1'></a>   1 <em class='comment'>/**</em>
+<a id='L2' name='L2'></a>   2 <em class='comment'> * @file push_switch.c</em>
+<a id='L3' name='L3'></a>   3 <em class='comment'> *</em>
+<a id='L4' name='L4'></a>   4 <em class='comment'> * @version $Id: push_switch.c 156 2009-03-19 08:04:25Z minoru $</em>
+<a id='L5' name='L5'></a>   5 <em class='comment'> * @version $Name:$</em>
+<a id='L6' name='L6'></a>   6 <em class='comment'> *</em>
+<a id='L7' name='L7'></a>   7 <em class='comment'> * @brief This file contains the implementation of modules which are</em>
+<a id='L8' name='L8'></a>   8 <em class='comment'> * drived Push Switch.</em>
+<a id='L9' name='L9'></a>   9 <em class='comment'> *</em>
+<a id='L10' name='L10'></a>  10 <em class='comment'> * @component H8 development platform</em>
+<a id='L11' name='L11'></a>  11 <em class='comment'> *</em>
+<a id='L12' name='L12'></a>  12 <em class='comment'> * @author Kenji MINOURA / kenji@kandj.org</em>
+<a id='L13' name='L13'></a>  13 <em class='comment'> *</em>
+<a id='L14' name='L14'></a>  14 <em class='comment'> * Copyright (c) 2008 K&amp;J Software Design, Ltd All rights reserved.</em>
+<a id='L15' name='L15'></a>  15 <em class='comment'> *</em>
+<a id='L16' name='L16'></a>  16 <em class='comment'> * @see &lt;related_items&gt;</em>
+<a id='L17' name='L17'></a>  17 <em class='comment'> ***********************************************************************/</em>
+<a id='L18' name='L18'></a>  18 <em class='sharp'>#include</em> "../include/h8sdk/3694s.h"
+<a id='L19' name='L19'></a>  19 <em class='sharp'>#include</em> "../include/h8sdk/ioctl.h"
+<a id='L20' name='L20'></a>  20 <em class='sharp'>#include</em> "../include/h8sdk/push_switch.h"
+<a id='L21' name='L21'></a>  21 
+<a id='L22' name='L22'></a>  22 <em class='sharp'>#define</em> <a href='../S/10.html#L88' title='Referred from 88 in push_switch.c.'>DATA_MASK_</a>(<a href='../Y/381.html' title='Multiple used in 10 places.'>x</a>) (1U &lt;&lt; ((<a href='../Y/381.html' title='Multiple used in 10 places.'>x</a>) + 6))
+<a id='L23' name='L23'></a>  23 
+<a id='L24' name='L24'></a>  24 
+<a id='L25' name='L25'></a>  25 <strong class='reserved'>void</strong> PSW_init(<a href='../Y/188.html' title='Multiple used in 64 places.'>_BOOL</a> <a href='../Y/279.html' title='Multiple used in 4 places.'>interrupt</a>)
+<a id='L26' name='L26'></a>  26 <em class='brace'>{</em>
+<a id='L27' name='L27'></a>  27     <a href='../Y/206.html' title='Multiple used in 114 places.'>_UBYTE</a> <a href='../Y/222.html' title='Multiple used in 7 places.'>b</a> = (<a href='../Y/279.html' title='Multiple used in 4 places.'>interrupt</a>) ? 1: 0;
+<a id='L28' name='L28'></a>  28 
+<a id='L29' name='L29'></a>  29     <a href='../S/4.html#L44' title='Defined at 44 in ioctl.c.'>IOCTL_set</a>(<a href='../Y/55.html' title='Multiple used in 5 places.'>IOCTL_REG_PCR1</a>, 0xc0, 0);
+<a id='L30' name='L30'></a>  30 
+<a id='L31' name='L31'></a>  31     <a href='../Y/192.html' title='Multiple used in 18 places.'>_IO</a>.<a href='../Y/99.html' title='Multiple used in 5 places.'>PMR1</a>.<a href='../Y/18.html' title='Multiple used in 65 places.'>BIT</a>.IRQ2 = <a href='../Y/222.html' title='Multiple used in 7 places.'>b</a>;
+<a id='L32' name='L32'></a>  32     <a href='../Y/190.html' title='Multiple used in 3 places.'>_IEGR1</a>.<a href='../Y/18.html' title='Multiple used in 65 places.'>BIT</a>.IEG2 = <a href='../Y/222.html' title='Multiple used in 7 places.'>b</a>;
+<a id='L33' name='L33'></a>  33     <a href='../Y/191.html' title='Multiple used in 11 places.'>_IENR1</a>.<a href='../Y/18.html' title='Multiple used in 65 places.'>BIT</a>.IEN2 = <a href='../Y/222.html' title='Multiple used in 7 places.'>b</a>;
+<a id='L34' name='L34'></a>  34     <a href='../Y/192.html' title='Multiple used in 18 places.'>_IO</a>.<a href='../Y/99.html' title='Multiple used in 5 places.'>PMR1</a>.<a href='../Y/18.html' title='Multiple used in 65 places.'>BIT</a>.IRQ3 = <a href='../Y/222.html' title='Multiple used in 7 places.'>b</a>;
+<a id='L35' name='L35'></a>  35     <a href='../Y/190.html' title='Multiple used in 3 places.'>_IEGR1</a>.<a href='../Y/18.html' title='Multiple used in 65 places.'>BIT</a>.IEG3 = <a href='../Y/222.html' title='Multiple used in 7 places.'>b</a>;
+<a id='L36' name='L36'></a>  36     <a href='../Y/191.html' title='Multiple used in 11 places.'>_IENR1</a>.<a href='../Y/18.html' title='Multiple used in 65 places.'>BIT</a>.IEN3 = <a href='../Y/222.html' title='Multiple used in 7 places.'>b</a>;
+<a id='L37' name='L37'></a>  37 <em class='brace'>}</em>
+<a id='L38' name='L38'></a>  38 
+<a id='L39' name='L39'></a>  39 <a href='../Y/188.html' title='Multiple used in 64 places.'>_BOOL</a> PSW_get(<a href='../Y/107.html' title='Multiple used in 3 places.'>PSW_Type</a> <a href='../Y/359.html' title='Multiple used in 19 places.'>t</a>)
+<a id='L40' name='L40'></a>  40 <em class='brace'>{</em>
+<a id='L41' name='L41'></a>  41     <strong class='reserved'>static</strong> <a href='../Y/208.html' title='Multiple used in 34 places.'>_UWORD</a> <a href='../Y/236.html' title='Multiple used in 7 places.'>counter</a>[<a href='../Y/106.html' title='Multiple used in 4 places.'>PSW_NUM_OF_TYPE</a>] = <em class='brace'>{</em> 0 <em class='brace'>}</em>;
+<a id='L42' name='L42'></a>  42     <strong class='reserved'>static</strong> <a href='../Y/188.html' title='Multiple used in 64 places.'>_BOOL</a> <a href='../Y/379.html' title='Multiple used in 5 places.'>wait</a>[<a href='../Y/106.html' title='Multiple used in 4 places.'>PSW_NUM_OF_TYPE</a>] = <em class='brace'>{</em> <a href='../Y/189.html' title='Multiple used in 72 places.'>_FALSE</a> <em class='brace'>}</em>;
+<a id='L43' name='L43'></a>  43     <a href='../Y/188.html' title='Multiple used in 64 places.'>_BOOL</a> <a href='../Y/334.html' title='Multiple used in 15 places.'>s</a>;
+<a id='L44' name='L44'></a>  44     <a href='../Y/188.html' title='Multiple used in 64 places.'>_BOOL</a> <a href='../Y/330.html' title='Multiple used in 34 places.'>rtn</a> = <a href='../Y/189.html' title='Multiple used in 72 places.'>_FALSE</a>;
+<a id='L45' name='L45'></a>  45     <a href='../Y/197.html' title='Multiple used in 74 places.'>_SINT</a> <a href='../Y/273.html' title='Multiple used in 130 places.'>i</a>;
+<a id='L46' name='L46'></a>  46 
+<a id='L47' name='L47'></a>  47     <a href='../Y/334.html' title='Multiple used in 15 places.'>s</a> = <a href='../S/10.html#L82' title='Defined at 82 in push_switch.c.'>PSW_snapShot</a>(<a href='../Y/359.html' title='Multiple used in 19 places.'>t</a>);
+<a id='L48' name='L48'></a>  48     <strong class='reserved'>if</strong> (<a href='../Y/334.html' title='Multiple used in 15 places.'>s</a> &amp;&amp; !<a href='../Y/379.html' title='Multiple used in 5 places.'>wait</a>[<a href='../Y/359.html' title='Multiple used in 19 places.'>t</a>])
+<a id='L49' name='L49'></a>  49     <em class='brace'>{</em>
+<a id='L50' name='L50'></a>  50         <a href='../Y/330.html' title='Multiple used in 34 places.'>rtn</a> = <a href='../Y/334.html' title='Multiple used in 15 places.'>s</a>;
+<a id='L51' name='L51'></a>  51         <a href='../Y/379.html' title='Multiple used in 5 places.'>wait</a>[<a href='../Y/359.html' title='Multiple used in 19 places.'>t</a>] = <a href='../Y/203.html' title='Multiple used in 56 places.'>_TRUE</a>;
+<a id='L52' name='L52'></a>  52     <em class='brace'>}</em>
+<a id='L53' name='L53'></a>  53 
+<a id='L54' name='L54'></a>  54     <strong class='reserved'>if</strong> (<a href='../Y/379.html' title='Multiple used in 5 places.'>wait</a>[<a href='../Y/359.html' title='Multiple used in 19 places.'>t</a>])
+<a id='L55' name='L55'></a>  55     <em class='brace'>{</em>
+<a id='L56' name='L56'></a>  56         <strong class='reserved'>if</strong> (++<a href='../Y/236.html' title='Multiple used in 7 places.'>counter</a>[<a href='../Y/359.html' title='Multiple used in 19 places.'>t</a>] == PSW_BORDER)
+<a id='L57' name='L57'></a>  57         <em class='brace'>{</em>
+<a id='L58' name='L58'></a>  58             <a href='../Y/379.html' title='Multiple used in 5 places.'>wait</a>[<a href='../Y/359.html' title='Multiple used in 19 places.'>t</a>] = <a href='../Y/189.html' title='Multiple used in 72 places.'>_FALSE</a>;
+<a id='L59' name='L59'></a>  59             <a href='../Y/236.html' title='Multiple used in 7 places.'>counter</a>[<a href='../Y/359.html' title='Multiple used in 19 places.'>t</a>] = 0;
+<a id='L60' name='L60'></a>  60         <em class='brace'>}</em>
+<a id='L61' name='L61'></a>  61     <em class='brace'>}</em>
+<a id='L62' name='L62'></a>  62 
+<a id='L63' name='L63'></a>  63     <strong class='reserved'>return</strong> <a href='../Y/330.html' title='Multiple used in 34 places.'>rtn</a>;
+<a id='L64' name='L64'></a>  64 <em class='brace'>}</em>
+<a id='L65' name='L65'></a>  65 
+<a id='L66' name='L66'></a>  66 <a href='../Y/188.html' title='Multiple used in 64 places.'>_BOOL</a> PSW_oneShot(<a href='../Y/107.html' title='Multiple used in 3 places.'>PSW_Type</a> <a href='../Y/359.html' title='Multiple used in 19 places.'>t</a>)
+<a id='L67' name='L67'></a>  67 <em class='brace'>{</em>
+<a id='L68' name='L68'></a>  68     <strong class='reserved'>static</strong> <a href='../Y/188.html' title='Multiple used in 64 places.'>_BOOL</a> <a href='../Y/313.html' title='Multiple used in 12 places.'>prev</a>[<a href='../Y/106.html' title='Multiple used in 4 places.'>PSW_NUM_OF_TYPE</a>] = <em class='brace'>{</em> <a href='../Y/189.html' title='Multiple used in 72 places.'>_FALSE</a> <em class='brace'>}</em>;
+<a id='L69' name='L69'></a>  69     <a href='../Y/188.html' title='Multiple used in 64 places.'>_BOOL</a> <a href='../Y/334.html' title='Multiple used in 15 places.'>s</a>;
+<a id='L70' name='L70'></a>  70     <a href='../Y/188.html' title='Multiple used in 64 places.'>_BOOL</a> <a href='../Y/330.html' title='Multiple used in 34 places.'>rtn</a> = <a href='../Y/189.html' title='Multiple used in 72 places.'>_FALSE</a>;
+<a id='L71' name='L71'></a>  71 
+<a id='L72' name='L72'></a>  72     <a href='../Y/334.html' title='Multiple used in 15 places.'>s</a> = <a href='../S/10.html#L82' title='Defined at 82 in push_switch.c.'>PSW_snapShot</a>(<a href='../Y/359.html' title='Multiple used in 19 places.'>t</a>);
+<a id='L73' name='L73'></a>  73     <strong class='reserved'>if</strong> (<a href='../Y/334.html' title='Multiple used in 15 places.'>s</a> &amp;&amp; !<a href='../Y/313.html' title='Multiple used in 12 places.'>prev</a>[<a href='../Y/359.html' title='Multiple used in 19 places.'>t</a>])
+<a id='L74' name='L74'></a>  74     <em class='brace'>{</em>
+<a id='L75' name='L75'></a>  75         <a href='../Y/330.html' title='Multiple used in 34 places.'>rtn</a> = <a href='../Y/203.html' title='Multiple used in 56 places.'>_TRUE</a>;
+<a id='L76' name='L76'></a>  76     <em class='brace'>}</em>
+<a id='L77' name='L77'></a>  77     <a href='../Y/313.html' title='Multiple used in 12 places.'>prev</a>[<a href='../Y/359.html' title='Multiple used in 19 places.'>t</a>] = <a href='../Y/334.html' title='Multiple used in 15 places.'>s</a>;
+<a id='L78' name='L78'></a>  78 
+<a id='L79' name='L79'></a>  79     <strong class='reserved'>return</strong> <a href='../Y/330.html' title='Multiple used in 34 places.'>rtn</a>;
+<a id='L80' name='L80'></a>  80 <em class='brace'>}</em>
+<a id='L81' name='L81'></a>  81 
+<a id='L82' name='L82'></a>  82 <a href='../Y/188.html' title='Multiple used in 64 places.'>_BOOL</a> <a href='../R/45.html' title='Multiple referred from 2 places.'>PSW_snapShot</a>(<a href='../Y/107.html' title='Multiple used in 3 places.'>PSW_Type</a> <a href='../Y/359.html' title='Multiple used in 19 places.'>t</a>)
+<a id='L83' name='L83'></a>  83 <em class='brace'>{</em>
+<a id='L84' name='L84'></a>  84     <strong class='reserved'>static</strong> <a href='../Y/188.html' title='Multiple used in 64 places.'>_BOOL</a> <a href='../Y/313.html' title='Multiple used in 12 places.'>prev</a>[<a href='../Y/106.html' title='Multiple used in 4 places.'>PSW_NUM_OF_TYPE</a>] = <em class='brace'>{</em> <a href='../Y/189.html' title='Multiple used in 72 places.'>_FALSE</a> <em class='brace'>}</em>;
+<a id='L85' name='L85'></a>  85     <a href='../Y/188.html' title='Multiple used in 64 places.'>_BOOL</a> <a href='../Y/334.html' title='Multiple used in 15 places.'>s</a>;
+<a id='L86' name='L86'></a>  86     <a href='../Y/188.html' title='Multiple used in 64 places.'>_BOOL</a> <a href='../Y/330.html' title='Multiple used in 34 places.'>rtn</a> = <a href='../Y/189.html' title='Multiple used in 72 places.'>_FALSE</a>;
+<a id='L87' name='L87'></a>  87 
+<a id='L88' name='L88'></a>  88     <a href='../Y/334.html' title='Multiple used in 15 places.'>s</a> = (<a href='../Y/192.html' title='Multiple used in 18 places.'>_IO</a>.<a href='../Y/96.html' title='Multiple used in 5 places.'>PDR1</a>.<a href='../Y/20.html' title='Multiple used in 19 places.'>BYTE</a> &amp; <a href='../S/10.html#L22' title='Defined at 22 in push_switch.c.'>DATA_MASK_</a>(<a href='../Y/359.html' title='Multiple used in 19 places.'>t</a>)) ? <a href='../Y/203.html' title='Multiple used in 56 places.'>_TRUE</a>: <a href='../Y/189.html' title='Multiple used in 72 places.'>_FALSE</a>;
+<a id='L89' name='L89'></a>  89     <strong class='reserved'>if</strong> (<a href='../Y/334.html' title='Multiple used in 15 places.'>s</a> &amp;&amp; <a href='../Y/313.html' title='Multiple used in 12 places.'>prev</a>[<a href='../Y/359.html' title='Multiple used in 19 places.'>t</a>])
+<a id='L90' name='L90'></a>  90     <em class='brace'>{</em>
+<a id='L91' name='L91'></a>  91         <a href='../Y/330.html' title='Multiple used in 34 places.'>rtn</a> = <a href='../Y/334.html' title='Multiple used in 15 places.'>s</a>;
+<a id='L92' name='L92'></a>  92     <em class='brace'>}</em>
+<a id='L93' name='L93'></a>  93     <a href='../Y/313.html' title='Multiple used in 12 places.'>prev</a>[<a href='../Y/359.html' title='Multiple used in 19 places.'>t</a>] = <a href='../Y/334.html' title='Multiple used in 15 places.'>s</a>;
+<a id='L94' name='L94'></a>  94 
+<a id='L95' name='L95'></a>  95     <strong class='reserved'>return</strong> <a href='../Y/330.html' title='Multiple used in 34 places.'>rtn</a>;
+<a id='L96' name='L96'></a>  96 <em class='brace'>}</em>
+</pre>
+<hr />
+<a id='BOTTOM' name='BOTTOM'></a>
+<em class='comment'>/* [&lt;][&gt;]<a href='#L25'>[^]</a><a href='#L82'>[v]</a><a href='#TOP'>[top]</a>[bottom]<a href='../mains.html'>[index]</a><a href='../help.html'>[help]</a> */</em>
+</body>
+</html>

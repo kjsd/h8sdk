@@ -1,0 +1,10 @@
+-cpu=300HN
+-define=USE_MUSIC_RECORD
+-change_message=information
+-object="C:\cygwin\home\minoru\work\h8sdk\build\h8sdk\Debug\string.obj"
+-debug
+-nolist
+-chgincpath
+"C:\cygwin\home\minoru\work\h8sdk\src\string.c"
+-lang=c
+-nologo

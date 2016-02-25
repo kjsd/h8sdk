@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>SSRP_TRX_SEND</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/13.html#L150'>SSRP_TRX_SEND</a>     150 ssrp.c             for (i = trx_[SSRP_TRX_SEND].state; i &lt; NUM_OF_TRXST_; i++)</span>
+<span class='curline'><a href='../S/13.html#L188'>SSRP_TRX_SEND</a>     188 ssrp.c                 trx_[SSRP_TRX_SEND].state = (rsize &lt; len) ?</span>
+<span class='curline'><a href='../S/13.html#L193'>SSRP_TRX_SEND</a>     193 ssrp.c                 trx_[SSRP_TRX_SEND].state = i;</span>
+<span class='curline'><a href='../S/13.html#L206'>SSRP_TRX_SEND</a>     206 ssrp.c             trx_[SSRP_TRX_SEND].header.from = my_addr_;</span>
+<span class='curline'><a href='../S/13.html#L207'>SSRP_TRX_SEND</a>     207 ssrp.c             trx_[SSRP_TRX_SEND].header.to = to;</span>
+<span class='curline'><a href='../S/13.html#L208'>SSRP_TRX_SEND</a>     208 ssrp.c             trx_[SSRP_TRX_SEND].header.command = cmd;</span>
+<span class='curline'><a href='../S/13.html#L209'>SSRP_TRX_SEND</a>     209 ssrp.c             trx_[SSRP_TRX_SEND].header.flag = flg;</span>
+<span class='curline'><a href='../S/13.html#L210'>SSRP_TRX_SEND</a>     210 ssrp.c             trx_[SSRP_TRX_SEND].header.data_length = len;</span>
+<span class='curline'><a href='../S/13.html#L212'>SSRP_TRX_SEND</a>     212 ssrp.c             rtn = SSRP_send(&amp;trx_[SSRP_TRX_SEND].header, data, len, sync);</span>
+<span class='curline'><a href='../S/13.html#L215'>SSRP_TRX_SEND</a>     215 ssrp.c                 *trx_id = trx_[SSRP_TRX_SEND].header.trx_id;</span>
+</pre>
+</body>
+</html>

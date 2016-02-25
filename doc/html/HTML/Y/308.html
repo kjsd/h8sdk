@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>pear_</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/13.html#L25'>pear_</a>              25 ssrp.c         static Pear_ pear_ = {</span>
+<span class='curline'><a href='../S/13.html#L90'>pear_</a>              90 ssrp.c                 pear_.addr[i] = SSRP_ADDR_INVALID;</span>
+<span class='curline'><a href='../S/13.html#L94'>pear_</a>              94 ssrp.c                 pear_.con[i] = SSRP_ADDR_INVALID;</span>
+<span class='curline'><a href='../S/13.html#L96'>pear_</a>              96 ssrp.c             pear_.total = 0;</span>
+<span class='curline'><a href='../S/13.html#L97'>pear_</a>              97 ssrp.c             pear_.addr_count = 0;</span>
+<span class='curline'><a href='../S/13.html#L116'>pear_</a>             116 ssrp.c                 if (pear_.addr[i] != SSRP_ADDR_INVALID)</span>
+<span class='curline'><a href='../S/13.html#L120'>pear_</a>             120 ssrp.c                         rtn = pear_.addr[i];</span>
+<span class='curline'><a href='../S/13.html#L133'>pear_</a>             133 ssrp.c             return pear_.con[con];</span>
+<span class='curline'><a href='../S/13.html#L138'>pear_</a>             138 ssrp.c             return pear_.total + (start_ ? 1: 0);</span>
+<span class='curline'><a href='../S/13.html#L287'>pear_</a>             287 ssrp.c             if (trx_[SSRP_TRX_RECV].header.hop &gt;= pear_.total) return;</span>
+<span class='curline'><a href='../S/13.html#L379'>pear_</a>             379 ssrp.c                     pear_.total = trx_[SSRP_TRX_RECV].header.hop;</span>
+<span class='curline'><a href='../S/13.html#L406'>pear_</a>             406 ssrp.c                 pear_.con[*(trx_[SSRP_TRX_RECV].buffer)] =</span>
+<span class='curline'><a href='../S/13.html#L414'>pear_</a>             414 ssrp.c             if (pear_.addr_count == pear_.total)</span>
+<span class='curline'><a href='../S/13.html#L418'>pear_</a>             418 ssrp.c                     if (pear_.con[i] == SSRP_ADDR_INVALID)</span>
+<span class='curline'><a href='../S/13.html#L442'>pear_</a>             442 ssrp.c             if (pear_.addr_count != pear_.total)</span>
+<span class='curline'><a href='../S/13.html#L446'>pear_</a>             446 ssrp.c                     pear_.addr[i] = SSRP_ADDR_INVALID;</span>
+<span class='curline'><a href='../S/13.html#L450'>pear_</a>             450 ssrp.c                     pear_.con[i] = SSRP_ADDR_INVALID;</span>
+<span class='curline'><a href='../S/13.html#L452'>pear_</a>             452 ssrp.c                 pear_.total = 0;</span>
+<span class='curline'><a href='../S/13.html#L453'>pear_</a>             453 ssrp.c                 pear_.addr_count = 0;</span>
+<span class='curline'><a href='../S/13.html#L481'>pear_</a>             481 ssrp.c                         pear_.con[SSRP_CON_BACK] =</span>
+<span class='curline'><a href='../S/13.html#L486'>pear_</a>             486 ssrp.c                 if (trx_[SSRP_TRX_RECV].header.hop == (pear_.total - 1))</span>
+<span class='curline'><a href='../S/13.html#L494'>pear_</a>             494 ssrp.c                         pear_.con[SSRP_CON_FRONT] = trx_[SSRP_TRX_RECV].header.from;</span>
+<span class='curline'><a href='../S/13.html#L505'>pear_</a>             505 ssrp.c                     if (pear_.con[i] == trx_[SSRP_TRX_RECV].header.from)</span>
+<span class='curline'><a href='../S/13.html#L507'>pear_</a>             507 ssrp.c                         pear_.con[i] = SSRP_ADDR_INVALID;</span>
+<span class='curline'><a href='../S/13.html#L523'>pear_</a>             523 ssrp.c                 if (pear_.addr[idx] == addr)</span>
+<span class='curline'><a href='../S/13.html#L542'>pear_</a>             542 ssrp.c                 if (pear_.addr[idx] == SSRP_ADDR_INVALID)</span>
+<span class='curline'><a href='../S/13.html#L544'>pear_</a>             544 ssrp.c                     pear_.addr[idx] = addr;</span>
+<span class='curline'><a href='../S/13.html#L545'>pear_</a>             545 ssrp.c                     pear_.addr_count++;</span>
+<span class='curline'><a href='../S/13.html#L549'>pear_</a>             549 ssrp.c                 else if (pear_.addr[idx] == addr)</span>
+<span class='curline'><a href='../S/13.html#L567'>pear_</a>             567 ssrp.c                 if (pear_.addr[idx] == addr)</span>
+<span class='curline'><a href='../S/13.html#L569'>pear_</a>             569 ssrp.c                     pear_.addr[idx] = SSRP_ADDR_INVALID;</span>
+<span class='curline'><a href='../S/13.html#L570'>pear_</a>             570 ssrp.c                     --pear_.addr_count;</span>
+</pre>
+</body>
+</html>

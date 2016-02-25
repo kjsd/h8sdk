@@ -1,0 +1,9 @@
+-cpu=300HN
+-define=NDEBUG,USE_MUSIC_RECORD
+-object="C:\cygwin\home\minoru\work\h8sdk\build\h8sdk\Release\sci.obj"
+-nolist
+-speed=register,switch,shift,struct,expression,loop=2,inline
+-chgincpath
+"C:\cygwin\home\minoru\work\h8sdk\src\sci.c"
+-lang=c
+-nologo

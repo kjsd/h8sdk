@@ -1,0 +1,220 @@
+\subsection{src/lcd\+\_\+def.h ファイル}
+\label{lcd__def_8h}\index{src/lcd\+\_\+def.\+h@{src/lcd\+\_\+def.\+h}}
+
+
+L\+C\+Dドライバ内部構造  
+
+
+{\ttfamily \#include \char`\"{}../include/h8sdk/stdlib.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../include/h8sdk/3694s.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../include/h8sdk/ioctl.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../include/h8sdk/assert.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../include/h8sdk/lcd.\+h\char`\"{}}\\*
+lcd\+\_\+def.\+h の依存先関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dd/de3/lcd__def_8h__incl}
+\end{center}
+\end{figure}
+\subsubsection*{マクロ定義}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{lcd__def_8h_aa18b7c557b2b495f552189b74340f7a1_aa18b7c557b2b495f552189b74340f7a1}{R\+E\+G\+\_\+\+R\+S\+\_\+}~\+\_\+\+I\+O.\+P\+D\+R1.\+B\+I\+T.\+B0
+\begin{DoxyCompactList}\small\item\em レジスタの\+R\+Sフラグ \end{DoxyCompactList}\item 
+\#define \hyperlink{lcd__def_8h_ac8bbcd8783d3c1fb361aaafc6da6c1c6_ac8bbcd8783d3c1fb361aaafc6da6c1c6}{R\+E\+G\+\_\+\+R\+W\+\_\+}~\+\_\+\+I\+O.\+P\+D\+R1.\+B\+I\+T.\+B1
+\begin{DoxyCompactList}\small\item\em レジスタの\+R\+Wフラグ \end{DoxyCompactList}\item 
+\#define \hyperlink{lcd__def_8h_a450bb88fc561fac83cf5bbd024ce9747_a450bb88fc561fac83cf5bbd024ce9747}{R\+E\+G\+\_\+\+E\+\_\+}~\+\_\+\+I\+O.\+P\+D\+R1.\+B\+I\+T.\+B2
+\begin{DoxyCompactList}\small\item\em レジスタの\+Eフラグ \end{DoxyCompactList}\item 
+\#define \hyperlink{lcd__def_8h_a777575796174476e6a20bed751e7b143_a777575796174476e6a20bed751e7b143}{R\+E\+G\+\_\+\+D\+A\+T\+A\+\_\+}~\+\_\+\+I\+O.\+P\+D\+R5.\+B\+Y\+T\+E
+\begin{DoxyCompactList}\small\item\em データレジスタ \end{DoxyCompactList}\item 
+\#define \hyperlink{lcd__def_8h_afad612e1d187e74acde49431c5f7e8d1_afad612e1d187e74acde49431c5f7e8d1}{F\+L\+G\+\_\+\+W\+R\+I\+T\+E\+\_\+}~0
+\begin{DoxyCompactList}\small\item\em レジスタ書き込みを表すリテラル \end{DoxyCompactList}\item 
+\#define \hyperlink{lcd__def_8h_a36018355603fcc742f68a89ffadbebff_a36018355603fcc742f68a89ffadbebff}{F\+L\+G\+\_\+\+R\+E\+A\+D\+\_\+}~1
+\begin{DoxyCompactList}\small\item\em レジスタ読み込みを表すリテラル \end{DoxyCompactList}\item 
+\#define \hyperlink{lcd__def_8h_a9100335c5d732aad2e1b5182b6c7faf3_a9100335c5d732aad2e1b5182b6c7faf3}{F\+L\+G\+\_\+\+B\+U\+S\+Y\+\_\+}~0x80
+\begin{DoxyCompactList}\small\item\em ビジー状態 \end{DoxyCompactList}\item 
+\#define \hyperlink{lcd__def_8h_af4591d8d08f59c8a79670f263ad94797_af4591d8d08f59c8a79670f263ad94797}{F\+L\+G\+\_\+\+C\+G\+R\+A\+M\+\_\+}~0x40
+\item 
+\#define \hyperlink{lcd__def_8h_af6f68567aec0375dc1de52a4a63723b5_af6f68567aec0375dc1de52a4a63723b5}{F\+L\+G\+\_\+\+D\+D\+R\+A\+M\+\_\+}~0x80
+\item 
+\#define \hyperlink{lcd__def_8h_a5acf862063659f53ff393baf0a3c084c_a5acf862063659f53ff393baf0a3c084c}{C\+T\+R\+L\+\_\+\+I\+N\+\_\+}~I\+O\+C\+T\+L\+\_\+set(I\+O\+C\+T\+L\+\_\+\+R\+E\+G\+\_\+\+P\+C\+R1, 0x07, 0)
+\begin{DoxyCompactList}\small\item\em L\+C\+Dコントロールレジスタのポート設定にアクセス \end{DoxyCompactList}\item 
+\#define \hyperlink{lcd__def_8h_a700244d375fe1b64b6403beed6f3d07e_a700244d375fe1b64b6403beed6f3d07e}{C\+T\+R\+L\+\_\+\+O\+U\+T\+\_\+}~I\+O\+C\+T\+L\+\_\+set(I\+O\+C\+T\+L\+\_\+\+R\+E\+G\+\_\+\+P\+C\+R1, 0x07, 0x07)
+\item 
+\#define \hyperlink{lcd__def_8h_a93040b09391e6633c7229744479c0648_a93040b09391e6633c7229744479c0648}{D\+A\+T\+A\+\_\+\+I\+N\+\_\+}~I\+O\+C\+T\+L\+\_\+set(I\+O\+C\+T\+L\+\_\+\+R\+E\+G\+\_\+\+P\+C\+R5, 0xff, 0)
+\begin{DoxyCompactList}\small\item\em L\+C\+Dデータレジスタのポート設定にアクセス \end{DoxyCompactList}\item 
+\#define \hyperlink{lcd__def_8h_a7fae5e07acd0bb4bfa6786ccbc5d964b_a7fae5e07acd0bb4bfa6786ccbc5d964b}{D\+A\+T\+A\+\_\+\+O\+U\+T\+\_\+}~I\+O\+C\+T\+L\+\_\+set(I\+O\+C\+T\+L\+\_\+\+R\+E\+G\+\_\+\+P\+C\+R5, 0xff, 0xff)
+\end{DoxyCompactItemize}
+\subsubsection*{列挙型}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{lcd__def_8h_a409a9c208df333e5f6cf67c0866df0df_a409a9c208df333e5f6cf67c0866df0df}{Registor\+\_\+} \{ \\*
+\hyperlink{lcd__def_8h_a409a9c208df333e5f6cf67c0866df0df_a409a9c208df333e5f6cf67c0866df0dfac4d4880849422ed699296cb735855884}{S\+Y\+M\+\_\+\+I\+N\+S\+T\+\_\+} = 0, 
+\\*
+\hyperlink{lcd__def_8h_a409a9c208df333e5f6cf67c0866df0df_a409a9c208df333e5f6cf67c0866df0dfaef83c96025f52216a682cc3d05b255cf}{S\+Y\+M\+\_\+\+D\+A\+T\+A\+\_\+} = 1
+ \}
+\end{DoxyCompactItemize}
+
+
+\subsubsection{詳解}
+L\+C\+Dドライバ内部構造 
+
+このファイルには\+L\+C\+Dドライバモジュールの内部構造が定義されている。
+
+ 
+
+\subsubsection{マクロ定義詳解}
+\index{lcd\+\_\+def.\+h@{lcd\+\_\+def.\+h}!R\+E\+G\+\_\+\+R\+S\+\_\+@{R\+E\+G\+\_\+\+R\+S\+\_\+}}
+\index{R\+E\+G\+\_\+\+R\+S\+\_\+@{R\+E\+G\+\_\+\+R\+S\+\_\+}!lcd\+\_\+def.\+h@{lcd\+\_\+def.\+h}}
+\paragraph[{R\+E\+G\+\_\+\+R\+S\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+E\+G\+\_\+\+R\+S\+\_\+~\+\_\+\+I\+O.\+P\+D\+R1.\+B\+I\+T.\+B0}\label{lcd__def_8h_aa18b7c557b2b495f552189b74340f7a1_aa18b7c557b2b495f552189b74340f7a1}
+
+
+レジスタの\+R\+Sフラグ 
+
+
+
+ lcd\+\_\+def.\+h の 31 行目に定義があります。
+
+\index{lcd\+\_\+def.\+h@{lcd\+\_\+def.\+h}!R\+E\+G\+\_\+\+R\+W\+\_\+@{R\+E\+G\+\_\+\+R\+W\+\_\+}}
+\index{R\+E\+G\+\_\+\+R\+W\+\_\+@{R\+E\+G\+\_\+\+R\+W\+\_\+}!lcd\+\_\+def.\+h@{lcd\+\_\+def.\+h}}
+\paragraph[{R\+E\+G\+\_\+\+R\+W\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+E\+G\+\_\+\+R\+W\+\_\+~\+\_\+\+I\+O.\+P\+D\+R1.\+B\+I\+T.\+B1}\label{lcd__def_8h_ac8bbcd8783d3c1fb361aaafc6da6c1c6_ac8bbcd8783d3c1fb361aaafc6da6c1c6}
+
+
+レジスタの\+R\+Wフラグ 
+
+
+
+ lcd\+\_\+def.\+h の 33 行目に定義があります。
+
+\index{lcd\+\_\+def.\+h@{lcd\+\_\+def.\+h}!R\+E\+G\+\_\+\+E\+\_\+@{R\+E\+G\+\_\+\+E\+\_\+}}
+\index{R\+E\+G\+\_\+\+E\+\_\+@{R\+E\+G\+\_\+\+E\+\_\+}!lcd\+\_\+def.\+h@{lcd\+\_\+def.\+h}}
+\paragraph[{R\+E\+G\+\_\+\+E\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+E\+G\+\_\+\+E\+\_\+~\+\_\+\+I\+O.\+P\+D\+R1.\+B\+I\+T.\+B2}\label{lcd__def_8h_a450bb88fc561fac83cf5bbd024ce9747_a450bb88fc561fac83cf5bbd024ce9747}
+
+
+レジスタの\+Eフラグ 
+
+
+
+ lcd\+\_\+def.\+h の 35 行目に定義があります。
+
+\index{lcd\+\_\+def.\+h@{lcd\+\_\+def.\+h}!R\+E\+G\+\_\+\+D\+A\+T\+A\+\_\+@{R\+E\+G\+\_\+\+D\+A\+T\+A\+\_\+}}
+\index{R\+E\+G\+\_\+\+D\+A\+T\+A\+\_\+@{R\+E\+G\+\_\+\+D\+A\+T\+A\+\_\+}!lcd\+\_\+def.\+h@{lcd\+\_\+def.\+h}}
+\paragraph[{R\+E\+G\+\_\+\+D\+A\+T\+A\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+E\+G\+\_\+\+D\+A\+T\+A\+\_\+~\+\_\+\+I\+O.\+P\+D\+R5.\+B\+Y\+T\+E}\label{lcd__def_8h_a777575796174476e6a20bed751e7b143_a777575796174476e6a20bed751e7b143}
+
+
+データレジスタ 
+
+
+
+ lcd\+\_\+def.\+h の 37 行目に定義があります。
+
+\index{lcd\+\_\+def.\+h@{lcd\+\_\+def.\+h}!F\+L\+G\+\_\+\+W\+R\+I\+T\+E\+\_\+@{F\+L\+G\+\_\+\+W\+R\+I\+T\+E\+\_\+}}
+\index{F\+L\+G\+\_\+\+W\+R\+I\+T\+E\+\_\+@{F\+L\+G\+\_\+\+W\+R\+I\+T\+E\+\_\+}!lcd\+\_\+def.\+h@{lcd\+\_\+def.\+h}}
+\paragraph[{F\+L\+G\+\_\+\+W\+R\+I\+T\+E\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\+L\+G\+\_\+\+W\+R\+I\+T\+E\+\_\+~0}\label{lcd__def_8h_afad612e1d187e74acde49431c5f7e8d1_afad612e1d187e74acde49431c5f7e8d1}
+
+
+レジスタ書き込みを表すリテラル 
+
+
+
+ lcd\+\_\+def.\+h の 40 行目に定義があります。
+
+\index{lcd\+\_\+def.\+h@{lcd\+\_\+def.\+h}!F\+L\+G\+\_\+\+R\+E\+A\+D\+\_\+@{F\+L\+G\+\_\+\+R\+E\+A\+D\+\_\+}}
+\index{F\+L\+G\+\_\+\+R\+E\+A\+D\+\_\+@{F\+L\+G\+\_\+\+R\+E\+A\+D\+\_\+}!lcd\+\_\+def.\+h@{lcd\+\_\+def.\+h}}
+\paragraph[{F\+L\+G\+\_\+\+R\+E\+A\+D\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\+L\+G\+\_\+\+R\+E\+A\+D\+\_\+~1}\label{lcd__def_8h_a36018355603fcc742f68a89ffadbebff_a36018355603fcc742f68a89ffadbebff}
+
+
+レジスタ読み込みを表すリテラル 
+
+
+
+ lcd\+\_\+def.\+h の 42 行目に定義があります。
+
+\index{lcd\+\_\+def.\+h@{lcd\+\_\+def.\+h}!F\+L\+G\+\_\+\+B\+U\+S\+Y\+\_\+@{F\+L\+G\+\_\+\+B\+U\+S\+Y\+\_\+}}
+\index{F\+L\+G\+\_\+\+B\+U\+S\+Y\+\_\+@{F\+L\+G\+\_\+\+B\+U\+S\+Y\+\_\+}!lcd\+\_\+def.\+h@{lcd\+\_\+def.\+h}}
+\paragraph[{F\+L\+G\+\_\+\+B\+U\+S\+Y\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\+L\+G\+\_\+\+B\+U\+S\+Y\+\_\+~0x80}\label{lcd__def_8h_a9100335c5d732aad2e1b5182b6c7faf3_a9100335c5d732aad2e1b5182b6c7faf3}
+
+
+ビジー状態 
+
+
+
+ lcd\+\_\+def.\+h の 44 行目に定義があります。
+
+\index{lcd\+\_\+def.\+h@{lcd\+\_\+def.\+h}!F\+L\+G\+\_\+\+C\+G\+R\+A\+M\+\_\+@{F\+L\+G\+\_\+\+C\+G\+R\+A\+M\+\_\+}}
+\index{F\+L\+G\+\_\+\+C\+G\+R\+A\+M\+\_\+@{F\+L\+G\+\_\+\+C\+G\+R\+A\+M\+\_\+}!lcd\+\_\+def.\+h@{lcd\+\_\+def.\+h}}
+\paragraph[{F\+L\+G\+\_\+\+C\+G\+R\+A\+M\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\+L\+G\+\_\+\+C\+G\+R\+A\+M\+\_\+~0x40}\label{lcd__def_8h_af4591d8d08f59c8a79670f263ad94797_af4591d8d08f59c8a79670f263ad94797}
+
+
+ lcd\+\_\+def.\+h の 45 行目に定義があります。
+
+\index{lcd\+\_\+def.\+h@{lcd\+\_\+def.\+h}!F\+L\+G\+\_\+\+D\+D\+R\+A\+M\+\_\+@{F\+L\+G\+\_\+\+D\+D\+R\+A\+M\+\_\+}}
+\index{F\+L\+G\+\_\+\+D\+D\+R\+A\+M\+\_\+@{F\+L\+G\+\_\+\+D\+D\+R\+A\+M\+\_\+}!lcd\+\_\+def.\+h@{lcd\+\_\+def.\+h}}
+\paragraph[{F\+L\+G\+\_\+\+D\+D\+R\+A\+M\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\+L\+G\+\_\+\+D\+D\+R\+A\+M\+\_\+~0x80}\label{lcd__def_8h_af6f68567aec0375dc1de52a4a63723b5_af6f68567aec0375dc1de52a4a63723b5}
+
+
+ lcd\+\_\+def.\+h の 46 行目に定義があります。
+
+\index{lcd\+\_\+def.\+h@{lcd\+\_\+def.\+h}!C\+T\+R\+L\+\_\+\+I\+N\+\_\+@{C\+T\+R\+L\+\_\+\+I\+N\+\_\+}}
+\index{C\+T\+R\+L\+\_\+\+I\+N\+\_\+@{C\+T\+R\+L\+\_\+\+I\+N\+\_\+}!lcd\+\_\+def.\+h@{lcd\+\_\+def.\+h}}
+\paragraph[{C\+T\+R\+L\+\_\+\+I\+N\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+T\+R\+L\+\_\+\+I\+N\+\_\+~I\+O\+C\+T\+L\+\_\+set(I\+O\+C\+T\+L\+\_\+\+R\+E\+G\+\_\+\+P\+C\+R1, 0x07, 0)}\label{lcd__def_8h_a5acf862063659f53ff393baf0a3c084c_a5acf862063659f53ff393baf0a3c084c}
+
+
+L\+C\+Dコントロールレジスタのポート設定にアクセス 
+
+
+
+ lcd\+\_\+def.\+h の 51 行目に定義があります。
+
+\index{lcd\+\_\+def.\+h@{lcd\+\_\+def.\+h}!C\+T\+R\+L\+\_\+\+O\+U\+T\+\_\+@{C\+T\+R\+L\+\_\+\+O\+U\+T\+\_\+}}
+\index{C\+T\+R\+L\+\_\+\+O\+U\+T\+\_\+@{C\+T\+R\+L\+\_\+\+O\+U\+T\+\_\+}!lcd\+\_\+def.\+h@{lcd\+\_\+def.\+h}}
+\paragraph[{C\+T\+R\+L\+\_\+\+O\+U\+T\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+T\+R\+L\+\_\+\+O\+U\+T\+\_\+~I\+O\+C\+T\+L\+\_\+set(I\+O\+C\+T\+L\+\_\+\+R\+E\+G\+\_\+\+P\+C\+R1, 0x07, 0x07)}\label{lcd__def_8h_a700244d375fe1b64b6403beed6f3d07e_a700244d375fe1b64b6403beed6f3d07e}
+
+
+ lcd\+\_\+def.\+h の 52 行目に定義があります。
+
+\index{lcd\+\_\+def.\+h@{lcd\+\_\+def.\+h}!D\+A\+T\+A\+\_\+\+I\+N\+\_\+@{D\+A\+T\+A\+\_\+\+I\+N\+\_\+}}
+\index{D\+A\+T\+A\+\_\+\+I\+N\+\_\+@{D\+A\+T\+A\+\_\+\+I\+N\+\_\+}!lcd\+\_\+def.\+h@{lcd\+\_\+def.\+h}}
+\paragraph[{D\+A\+T\+A\+\_\+\+I\+N\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+A\+T\+A\+\_\+\+I\+N\+\_\+~I\+O\+C\+T\+L\+\_\+set(I\+O\+C\+T\+L\+\_\+\+R\+E\+G\+\_\+\+P\+C\+R5, 0xff, 0)}\label{lcd__def_8h_a93040b09391e6633c7229744479c0648_a93040b09391e6633c7229744479c0648}
+
+
+L\+C\+Dデータレジスタのポート設定にアクセス 
+
+
+
+ lcd\+\_\+def.\+h の 57 行目に定義があります。
+
+\index{lcd\+\_\+def.\+h@{lcd\+\_\+def.\+h}!D\+A\+T\+A\+\_\+\+O\+U\+T\+\_\+@{D\+A\+T\+A\+\_\+\+O\+U\+T\+\_\+}}
+\index{D\+A\+T\+A\+\_\+\+O\+U\+T\+\_\+@{D\+A\+T\+A\+\_\+\+O\+U\+T\+\_\+}!lcd\+\_\+def.\+h@{lcd\+\_\+def.\+h}}
+\paragraph[{D\+A\+T\+A\+\_\+\+O\+U\+T\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+A\+T\+A\+\_\+\+O\+U\+T\+\_\+~I\+O\+C\+T\+L\+\_\+set(I\+O\+C\+T\+L\+\_\+\+R\+E\+G\+\_\+\+P\+C\+R5, 0xff, 0xff)}\label{lcd__def_8h_a7fae5e07acd0bb4bfa6786ccbc5d964b_a7fae5e07acd0bb4bfa6786ccbc5d964b}
+
+
+ lcd\+\_\+def.\+h の 58 行目に定義があります。
+
+
+
+\subsubsection{列挙型詳解}
+\index{lcd\+\_\+def.\+h@{lcd\+\_\+def.\+h}!Registor\+\_\+@{Registor\+\_\+}}
+\index{Registor\+\_\+@{Registor\+\_\+}!lcd\+\_\+def.\+h@{lcd\+\_\+def.\+h}}
+\paragraph[{Registor\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Registor\+\_\+}}\label{lcd__def_8h_a409a9c208df333e5f6cf67c0866df0df_a409a9c208df333e5f6cf67c0866df0df}
+\begin{Desc}
+\item[列挙値]\par
+\begin{description}
+\index{S\+Y\+M\+\_\+\+I\+N\+S\+T\+\_\+@{S\+Y\+M\+\_\+\+I\+N\+S\+T\+\_\+}!lcd\+\_\+def.\+h@{lcd\+\_\+def.\+h}}\index{lcd\+\_\+def.\+h@{lcd\+\_\+def.\+h}!S\+Y\+M\+\_\+\+I\+N\+S\+T\+\_\+@{S\+Y\+M\+\_\+\+I\+N\+S\+T\+\_\+}}\item[{\em 
+S\+Y\+M\+\_\+\+I\+N\+S\+T\+\_\+\label{lcd__def_8h_a409a9c208df333e5f6cf67c0866df0df_a409a9c208df333e5f6cf67c0866df0dfac4d4880849422ed699296cb735855884}
+}]\index{S\+Y\+M\+\_\+\+D\+A\+T\+A\+\_\+@{S\+Y\+M\+\_\+\+D\+A\+T\+A\+\_\+}!lcd\+\_\+def.\+h@{lcd\+\_\+def.\+h}}\index{lcd\+\_\+def.\+h@{lcd\+\_\+def.\+h}!S\+Y\+M\+\_\+\+D\+A\+T\+A\+\_\+@{S\+Y\+M\+\_\+\+D\+A\+T\+A\+\_\+}}\item[{\em 
+S\+Y\+M\+\_\+\+D\+A\+T\+A\+\_\+\label{lcd__def_8h_a409a9c208df333e5f6cf67c0866df0df_a409a9c208df333e5f6cf67c0866df0dfaef83c96025f52216a682cc3d05b255cf}
+}]\end{description}
+\end{Desc}
+
+
+ lcd\+\_\+def.\+h の 61 行目に定義があります。
+
+
+\begin{DoxyCode}
+62 \{
+63     SYM_INST_ = 0,
+64     SYM_DATA_ = 1
+65 \} Registor_;
+\end{DoxyCode}

@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>data</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/1.html#L63'>data</a>               63 adc.c              _UWORD data = 0;</span>
+<span class='curline'><a href='../S/1.html#L68'>data</a>               68 adc.c                  data = (((volatile _UWORD *)(ADC_BASE))[anx]) &gt;&gt; 6;</span>
+<span class='curline'><a href='../S/1.html#L69'>data</a>               69 adc.c                  rtn = (data + prev[anx]) &gt;&gt; 1;</span>
+<span class='curline'><a href='../S/1.html#L70'>data</a>               70 adc.c                  prev[anx] = data;</span>
+<span class='curline'><a href='../S/5.html#L87'>data</a>               87 lcd.c          _SINT LCD_write(const _UBYTE* data, _SINT size)</span>
+<span class='curline'><a href='../S/5.html#L89'>data</a>               89 lcd.c              _UBYTE* p = data;</span>
+<span class='curline'><a href='../S/5.html#L102'>data</a>              102 lcd.c              return p - data;</span>
+<span class='curline'><a href='../S/5.html#L159'>data</a>              159 lcd.c          void LCD_setChar(_UBYTE no, const _UBYTE* data)</span>
+<span class='curline'><a href='../S/5.html#L170'>data</a>              170 lcd.c                  writeReg_(*data++, SYM_DATA_);</span>
+<span class='curline'><a href='../S/5.html#L189'>data</a>              189 lcd.c              _UBYTE data = 0;</span>
+<span class='curline'><a href='../S/5.html#L195'>data</a>              195 lcd.c              data = REG_DATA_;</span>
+<span class='curline'><a href='../S/5.html#L200'>data</a>              200 lcd.c              return data;</span>
+<span class='curline'><a href='../S/5.html#L203'>data</a>              203 lcd.c          static void writeReg_(_UBYTE data, Registor_ rs)</span>
+<span class='curline'><a href='../S/5.html#L211'>data</a>              211 lcd.c              REG_DATA_ = data;</span>
+<span class='curline'><a href='../S/6.html#L71'>data</a>               71 lcd_def.h      static void writeReg_(_UBYTE data, Registor_ rs);</span>
+<span class='curline'><a href='../S/9.html#L84'>data</a>               84 ps2.c              static _UBYTE data = 0;</span>
+<span class='curline'><a href='../S/9.html#L93'>data</a>               93 ps2.c                  data = 0;</span>
+<span class='curline'><a href='../S/9.html#L120'>data</a>              120 ps2.c                  data |= (PIN_DATA_ &lt;&lt; shift);</span>
+<span class='curline'><a href='../S/9.html#L146'>data</a>              146 ps2.c                      rx_buf_[rx_in_] = data;</span>
+<span class='curline'><a href='../S/11.html#L112'>data</a>              112 sci.c          _SINT SCI_write(const _UBYTE* data, _UBYTE size, _BOOL sync, _SINT tmo_ms)</span>
+<span class='curline'><a href='../S/11.html#L114'>data</a>              114 sci.c              _UBYTE* p = data;</span>
+<span class='curline'><a href='../S/11.html#L131'>data</a>              131 sci.c              if (p - data)</span>
+<span class='curline'><a href='../S/11.html#L135'>data</a>              135 sci.c              return p - data;</span>
+<span class='curline'><a href='../S/12.html#L165'>data</a>              165 sound.c                    evlp_ = tones_[tone_pos_].evlp-&gt;data[evlp_pos_[tone_pos_]] *</span>
+<span class='curline'><a href='../S/12.html#L177'>data</a>              177 sound.c                    evlp_ = tones_[tone_pos_].evlp-&gt;data[evlp_pos_[tone_pos_]] *</span>
+<span class='curline'><a href='../S/12.html#L351'>data</a>              351 sound.c                    evlp_ = p-&gt;data[evlp_pos_[tone_pos_]] * volume_;</span>
+<span class='curline'><a href='../S/12.html#L380'>data</a>              380 sound.c                        evlp_ = p-&gt;data[evlp_pos_[tone_pos_]] * volume_;</span>
+<span class='curline'><a href='../S/12.html#L389'>data</a>              389 sound.c                        evlp_ = p-&gt;data[evlp_pos_[tone_pos_]] * volume_;</span>
+<span class='curline'><a href='../S/13.html#L141'>data</a>              141 ssrp.c         _SINT SSRP_send(SSRP_Header* header, const _UBYTE* data, _UBYTE len, _BOOL sync)</span>
+<span class='curline'><a href='../S/13.html#L175'>data</a>              175 ssrp.c                     rsize = stub_-&gt;write(data, len, sync, SSRP_TMO_SEND);</span>
+<span class='curline'><a href='../S/13.html#L201'>data</a>              201 ssrp.c                           const _UBYTE* data, _UBYTE len,</span>
+<span class='curline'><a href='../S/13.html#L212'>data</a>              212 ssrp.c             rtn = SSRP_send(&amp;trx_[SSRP_TRX_SEND].header, data, len, sync);</span>
+<span class='curline'><a href='../S/15.html#L39'>data</a>               39 ssrp_skel.c    _SINT SSRP_SKEL_write(const _UBYTE* data, _UBYTE size,</span>
+<span class='curline'><a href='../S/15.html#L44'>data</a>               44 ssrp_skel.c        _assert(data);</span>
+<span class='curline'><a href='../S/15.html#L52'>data</a>               52 ssrp_skel.c            if ((((SSRP_Header*)data)-&gt;command == SSRP_CMD_LOOP) &amp;&amp;</span>
+<span class='curline'><a href='../S/15.html#L53'>data</a>               53 ssrp_skel.c                (((SSRP_Header*)data)-&gt;flag == SSRP_FLG_EVT))</span>
+<span class='curline'><a href='../S/15.html#L56'>data</a>               56 ssrp_skel.c                _memcpy(&amp;header_, data, sizeof(header_));</span>
+<span class='curline'><a href='../S/15.html#L58'>data</a>               58 ssrp_skel.c            else if ((((SSRP_Header*)data)-&gt;command == SSRP_CMD_JOIN) &amp;&amp;</span>
+<span class='curline'><a href='../S/15.html#L59'>data</a>               59 ssrp_skel.c                     (((SSRP_Header*)data)-&gt;flag == SSRP_FLG_REQ))</span>
+<span class='curline'><a href='../S/15.html#L63'>data</a>               63 ssrp_skel.c                _memcpy(&amp;header_, data, sizeof(header_));</span>
+<span class='curline'><a href='../S/15.html#L65'>data</a>               65 ssrp_skel.c            else if ((((SSRP_Header*)data)-&gt;command == SSRP_CMD_LEAVE) &amp;&amp;</span>
+<span class='curline'><a href='../S/15.html#L66'>data</a>               66 ssrp_skel.c                     (((SSRP_Header*)data)-&gt;flag == SSRP_FLG_EVT))</span>
+</pre>
+</body>
+</html>

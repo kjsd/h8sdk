@@ -1,0 +1,9 @@
+-cpu=300HN
+-include="C:\cygwin\home\minoru\work\h8sdk\test\..\include"
+-define=NDEBUG,USE_MUSIC_RECORD
+-object="C:\cygwin\home\minoru\work\h8sdk\test\test\Release\resetprg.obj"
+-nolist
+-chgincpath
+"C:\cygwin\home\minoru\work\h8sdk\test\test\resetprg.c"
+-lang=c
+-nologo

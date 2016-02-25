@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>SSRP_TRX_RECV</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/13.html#L223'>SSRP_TRX_RECV</a>     223 ssrp.c             if ((trx_[SSRP_TRX_RECV].header.to != my_addr_) &amp;&amp;</span>
+<span class='curline'><a href='../S/13.html#L224'>SSRP_TRX_RECV</a>     224 ssrp.c                 (trx_[SSRP_TRX_RECV].header.to != SSRP_ADDR_BROADCAST))</span>
+<span class='curline'><a href='../S/13.html#L228'>SSRP_TRX_RECV</a>     228 ssrp.c             if (trx_[SSRP_TRX_RECV].state != TRXST_PREAMBLE_)</span>
+<span class='curline'><a href='../S/13.html#L233'>SSRP_TRX_RECV</a>     233 ssrp.c             *header_p = &amp;trx_[SSRP_TRX_RECV].header;</span>
+<span class='curline'><a href='../S/13.html#L234'>SSRP_TRX_RECV</a>     234 ssrp.c             *data_p = trx_[SSRP_TRX_RECV].buffer;</span>
+<span class='curline'><a href='../S/13.html#L236'>SSRP_TRX_RECV</a>     236 ssrp.c             return trx_[SSRP_TRX_RECV].header.data_length;</span>
+<span class='curline'><a href='../S/13.html#L251'>SSRP_TRX_RECV</a>     251 ssrp.c             SSRP_INVALIDATE_PACKET(&amp;trx_[SSRP_TRX_RECV].header);</span>
+<span class='curline'><a href='../S/13.html#L253'>SSRP_TRX_RECV</a>     253 ssrp.c             rtn = recv_(trx_[SSRP_TRX_RECV].buffer, SSRP_MAX_DATA, _FALSE);</span>
+<span class='curline'><a href='../S/13.html#L257'>SSRP_TRX_RECV</a>     257 ssrp.c                      rsize &lt; trx_[SSRP_TRX_RECV].header.data_length;</span>
+<span class='curline'><a href='../S/13.html#L260'>SSRP_TRX_RECV</a>     260 ssrp.c                     rtn = recv_(trx_[SSRP_TRX_RECV].buffer + rsize,</span>
+<span class='curline'><a href='../S/13.html#L261'>SSRP_TRX_RECV</a>     261 ssrp.c                                     trx_[SSRP_TRX_RECV].header.data_length - rsize,</span>
+<span class='curline'><a href='../S/13.html#L265'>SSRP_TRX_RECV</a>     265 ssrp.c                         SSRP_shutdown(SSRP_TRX_RECV);</span>
+<span class='curline'><a href='../S/13.html#L272'>SSRP_TRX_RECV</a>     272 ssrp.c                 SSRP_shutdown(SSRP_TRX_RECV);</span>
+<span class='curline'><a href='../S/13.html#L283'>SSRP_TRX_RECV</a>     283 ssrp.c             if (SSRP_IS_INVALID_PACKET(&amp;trx_[SSRP_TRX_RECV].header)) return;</span>
+<span class='curline'><a href='../S/13.html#L285'>SSRP_TRX_RECV</a>     285 ssrp.c             if (trx_[SSRP_TRX_RECV].header.from == my_addr_) return;</span>
+<span class='curline'><a href='../S/13.html#L286'>SSRP_TRX_RECV</a>     286 ssrp.c             if (trx_[SSRP_TRX_RECV].header.to == my_addr_) return;</span>
+<span class='curline'><a href='../S/13.html#L287'>SSRP_TRX_RECV</a>     287 ssrp.c             if (trx_[SSRP_TRX_RECV].header.hop &gt;= pear_.total) return;</span>
+<span class='curline'><a href='../S/13.html#L291'>SSRP_TRX_RECV</a>     291 ssrp.c                 trx_[SSRP_TRX_RECV].header.hop++;</span>
+<span class='curline'><a href='../S/13.html#L293'>SSRP_TRX_RECV</a>     293 ssrp.c             SSRP_send(&amp;trx_[SSRP_TRX_RECV].header,</span>
+<span class='curline'><a href='../S/13.html#L294'>SSRP_TRX_RECV</a>     294 ssrp.c                       trx_[SSRP_TRX_RECV].buffer,</span>
+<span class='curline'><a href='../S/13.html#L295'>SSRP_TRX_RECV</a>     295 ssrp.c                       trx_[SSRP_TRX_RECV].header.data_length,</span>
+<span class='curline'><a href='../S/13.html#L308'>SSRP_TRX_RECV</a>     308 ssrp.c             for (i = trx_[SSRP_TRX_RECV].state; i &lt; NUM_OF_TRXST_; i++)</span>
+<span class='curline'><a href='../S/13.html#L321'>SSRP_TRX_RECV</a>     321 ssrp.c                     rsize = stub_-&gt;read((_UBYTE*)&amp;trx_[SSRP_TRX_RECV].header,</span>
+<span class='curline'><a href='../S/13.html#L330'>SSRP_TRX_RECV</a>     330 ssrp.c                     if (_check_sum(&amp;trx_[SSRP_TRX_RECV].header,</span>
+<span class='curline'><a href='../S/13.html#L338'>SSRP_TRX_RECV</a>     338 ssrp.c                     if (len &gt; trx_[SSRP_TRX_RECV].header.data_length)</span>
+<span class='curline'><a href='../S/13.html#L340'>SSRP_TRX_RECV</a>     340 ssrp.c                         len = trx_[SSRP_TRX_RECV].header.data_length;</span>
+<span class='curline'><a href='../S/13.html#L355'>SSRP_TRX_RECV</a>     355 ssrp.c                 trx_[SSRP_TRX_RECV].state = (rsize &lt; len) ?</span>
+<span class='curline'><a href='../S/13.html#L360'>SSRP_TRX_RECV</a>     360 ssrp.c                 trx_[SSRP_TRX_RECV].state = i;</span>
+<span class='curline'><a href='../S/13.html#L373'>SSRP_TRX_RECV</a>     373 ssrp.c             if (!SSRP_IS_INVALID_PACKET(&amp;trx_[SSRP_TRX_RECV].header))</span>
+<span class='curline'><a href='../S/13.html#L375'>SSRP_TRX_RECV</a>     375 ssrp.c                 if ((trx_[SSRP_TRX_RECV].header.from == my_addr_) &amp;&amp;</span>
+<span class='curline'><a href='../S/13.html#L376'>SSRP_TRX_RECV</a>     376 ssrp.c                     SSRP_COMMAND_EQ(&amp;trx_[SSRP_TRX_RECV].header,</span>
+<span class='curline'><a href='../S/13.html#L379'>SSRP_TRX_RECV</a>     379 ssrp.c                     pear_.total = trx_[SSRP_TRX_RECV].header.hop;</span>
+<span class='curline'><a href='../S/13.html#L400'>SSRP_TRX_RECV</a>     400 ssrp.c             if ((trx_[SSRP_TRX_RECV].header.to == my_addr_) &amp;&amp;</span>
+<span class='curline'><a href='../S/13.html#L401'>SSRP_TRX_RECV</a>     401 ssrp.c                 SSRP_COMMAND_EQ(&amp;trx_[SSRP_TRX_RECV].header,</span>
+<span class='curline'><a href='../S/13.html#L404'>SSRP_TRX_RECV</a>     404 ssrp.c                 insertNode_(trx_[SSRP_TRX_RECV].header.from);</span>
+<span class='curline'><a href='../S/13.html#L406'>SSRP_TRX_RECV</a>     406 ssrp.c                 pear_.con[*(trx_[SSRP_TRX_RECV].buffer)] =</span>
+<span class='curline'><a href='../S/13.html#L407'>SSRP_TRX_RECV</a>     407 ssrp.c                     trx_[SSRP_TRX_RECV].header.from;</span>
+<span class='curline'><a href='../S/13.html#L465'>SSRP_TRX_RECV</a>     465 ssrp.c             if (SSRP_IS_INVALID_PACKET(&amp;trx_[SSRP_TRX_RECV].header)) return;</span>
+<span class='curline'><a href='../S/13.html#L466'>SSRP_TRX_RECV</a>     466 ssrp.c             if (trx_[SSRP_TRX_RECV].header.from == my_addr_) return;</span>
+<span class='curline'><a href='../S/13.html#L468'>SSRP_TRX_RECV</a>     468 ssrp.c             if (SSRP_COMMAND_EQ(&amp;trx_[SSRP_TRX_RECV].header,</span>
+<span class='curline'><a href='../S/13.html#L471'>SSRP_TRX_RECV</a>     471 ssrp.c                 insertNode_(trx_[SSRP_TRX_RECV].header.from);</span>
+<span class='curline'><a href='../S/13.html#L473'>SSRP_TRX_RECV</a>     473 ssrp.c                 if (trx_[SSRP_TRX_RECV].header.hop == 0)</span>
+<span class='curline'><a href='../S/13.html#L476'>SSRP_TRX_RECV</a>     476 ssrp.c                     rsize = SSRP_sendto(trx_[SSRP_TRX_RECV].header.from,</span>
+<span class='curline'><a href='../S/13.html#L482'>SSRP_TRX_RECV</a>     482 ssrp.c                             trx_[SSRP_TRX_RECV].header.from;</span>
+<span class='curline'><a href='../S/13.html#L486'>SSRP_TRX_RECV</a>     486 ssrp.c                 if (trx_[SSRP_TRX_RECV].header.hop == (pear_.total - 1))</span>
+<span class='curline'><a href='../S/13.html#L489'>SSRP_TRX_RECV</a>     489 ssrp.c                     rsize = SSRP_sendto(trx_[SSRP_TRX_RECV].header.from,</span>
+<span class='curline'><a href='../S/13.html#L494'>SSRP_TRX_RECV</a>     494 ssrp.c                         pear_.con[SSRP_CON_FRONT] = trx_[SSRP_TRX_RECV].header.from;</span>
+<span class='curline'><a href='../S/13.html#L498'>SSRP_TRX_RECV</a>     498 ssrp.c             else if (SSRP_COMMAND_EQ(&amp;trx_[SSRP_TRX_RECV].header,</span>
+<span class='curline'><a href='../S/13.html#L505'>SSRP_TRX_RECV</a>     505 ssrp.c                     if (pear_.con[i] == trx_[SSRP_TRX_RECV].header.from)</span>
+<span class='curline'><a href='../S/13.html#L511'>SSRP_TRX_RECV</a>     511 ssrp.c                 deleteNode_(trx_[SSRP_TRX_RECV].header.from);</span>
+</pre>
+</body>
+</html>

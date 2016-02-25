@@ -1,0 +1,149 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>UTEST_assert</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/113.html#L166'>UTEST_assert</a>      166 test/test.c        UTEST_assert("test_sci: SMR != 0", _SCI3.SMR.BYTE == 0);</span>
+<span class='curline'><a href='../S/113.html#L167'>UTEST_assert</a>      167 test/test.c        UTEST_assert("test_sci: BRR != 0x20", _SCI3.BRR == 0x20);</span>
+<span class='curline'><a href='../S/113.html#L168'>UTEST_assert</a>      168 test/test.c        UTEST_assert("test_sci: PMR1 != 1", _IO.PMR1.BIT.TXD == 1);</span>
+<span class='curline'><a href='../S/113.html#L169'>UTEST_assert</a>      169 test/test.c        UTEST_assert("test_sci: SCR3 != 0x70", _SCI3.SCR3.BYTE == 0x70);</span>
+<span class='curline'><a href='../S/113.html#L171'>UTEST_assert</a>      171 test/test.c        UTEST_assert("test_sci: SCI_puts", SCI_puts(str) == (sizeof(str) - 1));</span>
+<span class='curline'><a href='../S/113.html#L172'>UTEST_assert</a>      172 test/test.c        UTEST_assert("test_sci: SCI_write(1)",</span>
+<span class='curline'><a href='../S/113.html#L199'>UTEST_assert</a>      199 test/test.c            UTEST_assert("IOCTL_get", val == 0);</span>
+<span class='curline'><a href='../S/113.html#L202'>UTEST_assert</a>      202 test/test.c            UTEST_assert("IOCTL_set(a)", IOCTL_get(i) == 0xa0);</span>
+<span class='curline'><a href='../S/113.html#L204'>UTEST_assert</a>      204 test/test.c            UTEST_assert("IOCTL_set(b)", IOCTL_get(i) == 0xaa);</span>
+<span class='curline'><a href='../S/113.html#L214'>UTEST_assert</a>      214 test/test.c        UTEST_assert("test_led: LED_INIT", (_IO.PDR8.BYTE &amp; 0x06) == 0x06);</span>
+<span class='curline'><a href='../S/113.html#L217'>UTEST_assert</a>      217 test/test.c        UTEST_assert("test_led: LED_ON(1)", (_IO.PDR8.BYTE &amp; 0x06) == 0x04);</span>
+<span class='curline'><a href='../S/113.html#L219'>UTEST_assert</a>      219 test/test.c        UTEST_assert("test_led: LED_ON(2)", (_IO.PDR8.BYTE &amp; 0x06) == 0x00);</span>
+<span class='curline'><a href='../S/113.html#L222'>UTEST_assert</a>      222 test/test.c        UTEST_assert("test_led: LED_OFF(1)", (_IO.PDR8.BYTE &amp; 0x06) == 0x02);</span>
+<span class='curline'><a href='../S/113.html#L224'>UTEST_assert</a>      224 test/test.c        UTEST_assert("test_led: LED_OFF(2)", (_IO.PDR8.BYTE &amp; 0x06) == 0x06);</span>
+<span class='curline'><a href='../S/113.html#L227'>UTEST_assert</a>      227 test/test.c        UTEST_assert("test_led: LED_TURN(1)", (_IO.PDR8.BYTE &amp; 0x06) == 0x04);</span>
+<span class='curline'><a href='../S/113.html#L229'>UTEST_assert</a>      229 test/test.c        UTEST_assert("test_led: LED_TURN(2)", (_IO.PDR8.BYTE &amp; 0x06) == 0x00);</span>
+<span class='curline'><a href='../S/113.html#L262'>UTEST_assert</a>      262 test/test.c        UTEST_assert("test_stdlib: _next_ring(1)", _next_ring(0, 1) == 1);</span>
+<span class='curline'><a href='../S/113.html#L263'>UTEST_assert</a>      263 test/test.c        UTEST_assert("test_stdlib: _next_ring(2)", _next_ring(0, 0) == 0);</span>
+<span class='curline'><a href='../S/113.html#L265'>UTEST_assert</a>      265 test/test.c        UTEST_assert("test_stdlib: _prev_ring(1)", _prev_ring(0, 1) == 1);</span>
+<span class='curline'><a href='../S/113.html#L266'>UTEST_assert</a>      266 test/test.c        UTEST_assert("test_stdlib: _prev_ring(2)", _prev_ring(0, 0) == 0);</span>
+<span class='curline'><a href='../S/113.html#L268'>UTEST_assert</a>      268 test/test.c        UTEST_assert("test_stdlib: _hash(1)", _hash(0, 5) == 0);</span>
+<span class='curline'><a href='../S/113.html#L269'>UTEST_assert</a>      269 test/test.c        UTEST_assert("test_stdlib: _hash(2)", _hash(1, 5) == 1);</span>
+<span class='curline'><a href='../S/113.html#L270'>UTEST_assert</a>      270 test/test.c        UTEST_assert("test_stdlib: _hash(3)", _hash(2, 5) == 2);</span>
+<span class='curline'><a href='../S/113.html#L271'>UTEST_assert</a>      271 test/test.c        UTEST_assert("test_stdlib: _hash(4)", _hash(3, 5) == 3);</span>
+<span class='curline'><a href='../S/113.html#L272'>UTEST_assert</a>      272 test/test.c        UTEST_assert("test_stdlib: _hash(5)", _hash(4, 5) == 4);</span>
+<span class='curline'><a href='../S/113.html#L274'>UTEST_assert</a>      274 test/test.c        UTEST_assert("test_stdlib: _check_sum(1)",</span>
+<span class='curline'><a href='../S/113.html#L278'>UTEST_assert</a>      278 test/test.c        UTEST_assert("test_stdlib: _itoa(1)", num == 2);</span>
+<span class='curline'><a href='../S/113.html#L280'>UTEST_assert</a>      280 test/test.c        UTEST_assert("test_stdlib: _itoa(2)", str[0] == 0x31);</span>
+<span class='curline'><a href='../S/113.html#L281'>UTEST_assert</a>      281 test/test.c        UTEST_assert("test_stdlib: _itoa(3)", str[1] == 0x30);</span>
+<span class='curline'><a href='../S/113.html#L284'>UTEST_assert</a>      284 test/test.c        UTEST_assert("test_stdlib: _itoa(4)", num == 1);</span>
+<span class='curline'><a href='../S/113.html#L286'>UTEST_assert</a>      286 test/test.c        UTEST_assert("test_stdlib: _itoa(5)", str[0] == 0x41);</span>
+<span class='curline'><a href='../S/113.html#L289'>UTEST_assert</a>      289 test/test.c        UTEST_assert("test_stdlib: _itoa(6)", num == 2);</span>
+<span class='curline'><a href='../S/113.html#L291'>UTEST_assert</a>      291 test/test.c        UTEST_assert("test_stdlib: _itoa(7)", str[0] == 0x31);</span>
+<span class='curline'><a href='../S/113.html#L292'>UTEST_assert</a>      292 test/test.c        UTEST_assert("test_stdlib: _itoa(8)", str[1] == 0x32);</span>
+<span class='curline'><a href='../S/113.html#L296'>UTEST_assert</a>      296 test/test.c        UTEST_assert("test_stdlib: _rand, _srand(1)", _rand() != rand_val);</span>
+<span class='curline'><a href='../S/113.html#L308'>UTEST_assert</a>      308 test/test.c        UTEST_assert("test_string: _strlen(1)", _strlen("") == 0);</span>
+<span class='curline'><a href='../S/113.html#L309'>UTEST_assert</a>      309 test/test.c        UTEST_assert("test_string: _strlen(2)", _strlen("aaa") == 3);</span>
+<span class='curline'><a href='../S/113.html#L311'>UTEST_assert</a>      311 test/test.c        UTEST_assert("test_string: _memset(1)", </span>
+<span class='curline'><a href='../S/113.html#L315'>UTEST_assert</a>      315 test/test.c            UTEST_assert("test_string: _memset(2)", src[i] == 'a');</span>
+<span class='curline'><a href='../S/113.html#L318'>UTEST_assert</a>      318 test/test.c        UTEST_assert("test_string: _memcpy(1)",</span>
+<span class='curline'><a href='../S/113.html#L322'>UTEST_assert</a>      322 test/test.c            UTEST_assert("test_string: _memcpy(2)", dst[i] == 'a');</span>
+<span class='curline'><a href='../S/113.html#L349'>UTEST_assert</a>      349 test/test.c        UTEST_assert("test_lcd: LCD_init(1)",</span>
+<span class='curline'><a href='../S/113.html#L353'>UTEST_assert</a>      353 test/test.c            UTEST_assert("test_lcd: LCD_init(2)", buf[i] == ' ');</span>
+<span class='curline'><a href='../S/113.html#L358'>UTEST_assert</a>      358 test/test.c        UTEST_assert("test_lcd: LCD_(set|get)Cursor(1)", (x == 0) &amp;&amp; (y == 0));</span>
+<span class='curline'><a href='../S/113.html#L361'>UTEST_assert</a>      361 test/test.c        UTEST_assert("test_lcd: LCD_(set|get)Cursor(2)", (x == 0) &amp;&amp; (y == 0));</span>
+<span class='curline'><a href='../S/113.html#L366'>UTEST_assert</a>      366 test/test.c        UTEST_assert("test_lcd: LCD_(set|get)Cursor(3)", (x == 0) &amp;&amp; (y == 1));</span>
+<span class='curline'><a href='../S/113.html#L369'>UTEST_assert</a>      369 test/test.c        UTEST_assert("test_lcd: LCD_puts(1)", LCD_read(buf, 3) == 3);</span>
+<span class='curline'><a href='../S/113.html#L370'>UTEST_assert</a>      370 test/test.c        UTEST_assert("test_lcd: LCD_puts(2)",</span>
+<span class='curline'><a href='../S/113.html#L375'>UTEST_assert</a>      375 test/test.c        UTEST_assert("test_lcd: LCD_write(1)",</span>
+<span class='curline'><a href='../S/113.html#L380'>UTEST_assert</a>      380 test/test.c        UTEST_assert("test_lcd: LCD_read(1)",</span>
+<span class='curline'><a href='../S/113.html#L384'>UTEST_assert</a>      384 test/test.c            UTEST_assert("test_lcd: LCD_read(2)", buf[i] == 'a');</span>
+<span class='curline'><a href='../S/113.html#L395'>UTEST_assert</a>      395 test/test.c        UTEST_assert("test_lcd: LCD_write(1)",</span>
+<span class='curline'><a href='../S/113.html#L412'>UTEST_assert</a>      412 test/test.c        UTEST_assert("test_push_switch: PSW_oneShot(1)", PSW_oneShot(PSW_SW1));</span>
+<span class='curline'><a href='../S/113.html#L413'>UTEST_assert</a>      413 test/test.c        UTEST_assert("test_push_switch: PSW_oneShot(2)", !PSW_oneShot(PSW_SW1));</span>
+<span class='curline'><a href='../S/113.html#L414'>UTEST_assert</a>      414 test/test.c        UTEST_assert("test_push_switch: PSW_get(1)", PSW_get(PSW_SW1));</span>
+<span class='curline'><a href='../S/113.html#L417'>UTEST_assert</a>      417 test/test.c            UTEST_assert("test_push_switch: PSW_get(2)", !PSW_get(PSW_SW1));</span>
+<span class='curline'><a href='../S/113.html#L419'>UTEST_assert</a>      419 test/test.c        UTEST_assert("test_push_switch: PSW_get(3)", PSW_get(PSW_SW1));</span>
+<span class='curline'><a href='../S/113.html#L422'>UTEST_assert</a>      422 test/test.c        UTEST_assert("test_push_switch: PSW_get(4)", !PSW_get(PSW_SW1));</span>
+<span class='curline'><a href='../S/113.html#L423'>UTEST_assert</a>      423 test/test.c        UTEST_assert("test_push_switch: PSW_oneShot(3)", !PSW_oneShot(PSW_SW1));</span>
+<span class='curline'><a href='../S/113.html#L427'>UTEST_assert</a>      427 test/test.c        UTEST_assert("test_push_switch: PSW_oneShot(4)", PSW_oneShot(PSW_SW2));</span>
+<span class='curline'><a href='../S/113.html#L428'>UTEST_assert</a>      428 test/test.c        UTEST_assert("test_push_switch: PSW_oneShot(5)", !PSW_oneShot(PSW_SW2));</span>
+<span class='curline'><a href='../S/113.html#L429'>UTEST_assert</a>      429 test/test.c        UTEST_assert("test_push_switch: PSW_get(5)", PSW_get(PSW_SW2));</span>
+<span class='curline'><a href='../S/113.html#L432'>UTEST_assert</a>      432 test/test.c            UTEST_assert("test_push_switch: PSW_get(6)", !PSW_get(PSW_SW2));</span>
+<span class='curline'><a href='../S/113.html#L434'>UTEST_assert</a>      434 test/test.c        UTEST_assert("test_push_switch: PSW_get(7)", PSW_get(PSW_SW2));</span>
+<span class='curline'><a href='../S/113.html#L437'>UTEST_assert</a>      437 test/test.c        UTEST_assert("test_push_switch: PSW_get(8)", !PSW_get(PSW_SW2));</span>
+<span class='curline'><a href='../S/113.html#L438'>UTEST_assert</a>      438 test/test.c        UTEST_assert("test_push_switch: PSW_oneShot(6)", !PSW_oneShot(PSW_SW2));</span>
+<span class='curline'><a href='../S/113.html#L471'>UTEST_assert</a>      471 test/test.c        UTEST_assert("test_adc: ADC_get(1)", val == 0);</span>
+<span class='curline'><a href='../S/113.html#L472'>UTEST_assert</a>      472 test/test.c        UTEST_assert("test_adc: ADC_get(2)", ADC_get(ADC_AN0, _TRUE) &lt; 0);</span>
+<span class='curline'><a href='../S/113.html#L492'>UTEST_assert</a>      492 test/test.c        UTEST_assert("test_adc: ADC_get(3)", val == 0);</span>
+<span class='curline'><a href='../S/113.html#L493'>UTEST_assert</a>      493 test/test.c        UTEST_assert("test_adc: ADC_get(4)", ADC_get(ADC_AN1, _TRUE) &lt; 0);</span>
+<span class='curline'><a href='../S/113.html#L497'>UTEST_assert</a>      497 test/test.c        UTEST_assert("test_adc: ADC_get(5)", ADC_get(ADC_AN0, _TRUE) &lt; 0);</span>
+<span class='curline'><a href='../S/113.html#L498'>UTEST_assert</a>      498 test/test.c        UTEST_assert("test_adc: ADC_get(6)", ADC_get(ADC_AN1, _TRUE) &lt; 0);</span>
+<span class='curline'><a href='../S/113.html#L518'>UTEST_assert</a>      518 test/test.c        UTEST_assert("test_adc: ADC_get(7)", val == ((1U &lt;&lt; 9) - 1));</span>
+<span class='curline'><a href='../S/113.html#L534'>UTEST_assert</a>      534 test/test.c        UTEST_assert("test_adc: ADC_get(8)", val == ((1U &lt;&lt; 9) - 1));</span>
+<span class='curline'><a href='../S/113.html#L537'>UTEST_assert</a>      537 test/test.c        UTEST_assert("test_adc: ADC_get(9)", ADC_get(ADC_AN0, _TRUE) &lt; 0);</span>
+<span class='curline'><a href='../S/113.html#L538'>UTEST_assert</a>      538 test/test.c        UTEST_assert("test_adc: ADC_get(10)", ADC_get(ADC_AN1, _TRUE) &lt; 0);</span>
+<span class='curline'><a href='../S/113.html#L555'>UTEST_assert</a>      555 test/test.c        UTEST_assert("test_ps2: PS2_read(1)",</span>
+<span class='curline'><a href='../S/113.html#L581'>UTEST_assert</a>      581 test/test.c        UTEST_assert("test_sound: SOUND_init", SOUND_getState() == SOUND_ST_STOP);</span>
+<span class='curline'><a href='../S/113.html#L585'>UTEST_assert</a>      585 test/test.c        UTEST_assert("test_sound: SOUND_play", SOUND_play() == _TRUE);</span>
+<span class='curline'><a href='../S/113.html#L589'>UTEST_assert</a>      589 test/test.c        UTEST_assert("test_sound: SOUND_stop", SOUND_stop() == _TRUE);</span>
+<span class='curline'><a href='../S/113.html#L594'>UTEST_assert</a>      594 test/test.c        UTEST_assert("test_sound: SOUND_play", SOUND_play() == _TRUE);</span>
+<span class='curline'><a href='../S/113.html#L598'>UTEST_assert</a>      598 test/test.c        UTEST_assert("test_sound: SOUND_stop", SOUND_stop() == _TRUE);</span>
+<span class='curline'><a href='../S/113.html#L604'>UTEST_assert</a>      604 test/test.c        UTEST_assert("test_sound: SOUND_play", SOUND_play() == _TRUE);</span>
+<span class='curline'><a href='../S/113.html#L620'>UTEST_assert</a>      620 test/test.c        UTEST_assert("test_sound: SOUND_reverse", SOUND_reverse() == _TRUE);</span>
+<span class='curline'><a href='../S/113.html#L628'>UTEST_assert</a>      628 test/test.c        UTEST_assert("test_sound: SOUND_play", SOUND_play() == _TRUE);</span>
+<span class='curline'><a href='../S/113.html#L637'>UTEST_assert</a>      637 test/test.c        UTEST_assert("test_sound: SOUND_stop", SOUND_stop() == _TRUE);</span>
+<span class='curline'><a href='../S/113.html#L647'>UTEST_assert</a>      647 test/test.c        UTEST_assert("test_sound: SOUND_play", SOUND_play() == _TRUE);</span>
+<span class='curline'><a href='../S/113.html#L660'>UTEST_assert</a>      660 test/test.c        UTEST_assert("test_sound: SOUND_reverse", SOUND_reverse() == _TRUE);</span>
+<span class='curline'><a href='../S/113.html#L663'>UTEST_assert</a>      663 test/test.c        UTEST_assert("test_sound: SOUND_stop", SOUND_stop() == _TRUE);</span>
+<span class='curline'><a href='../S/113.html#L686'>UTEST_assert</a>      686 test/test.c        UTEST_assert("test_music: MUSIC_init", MUSIC_getState() == MUSIC_ST_STOP);</span>
+<span class='curline'><a href='../S/113.html#L691'>UTEST_assert</a>      691 test/test.c        UTEST_assert("test_music: MUSIC_getScore", MUSIC_getScore() == &amp;score);</span>
+<span class='curline'><a href='../S/113.html#L693'>UTEST_assert</a>      693 test/test.c        UTEST_assert("test_music: MUSIC_play(1)", MUSIC_play() == _TRUE);</span>
+<span class='curline'><a href='../S/113.html#L700'>UTEST_assert</a>      700 test/test.c        UTEST_assert("test_music: MUSIC_play(2)",</span>
+<span class='curline'><a href='../S/113.html#L707'>UTEST_assert</a>      707 test/test.c        UTEST_assert("test_music: MUSIC_play(1)", MUSIC_play() == _TRUE);</span>
+<span class='curline'><a href='../S/113.html#L714'>UTEST_assert</a>      714 test/test.c        UTEST_assert("test_music: MUSIC_play(2)",</span>
+<span class='curline'><a href='../S/113.html#L721'>UTEST_assert</a>      721 test/test.c        UTEST_assert("test_music: MUSIC_reverse(1)", MUSIC_reverse() == _TRUE);</span>
+<span class='curline'><a href='../S/113.html#L728'>UTEST_assert</a>      728 test/test.c        UTEST_assert("test_music: MUSIC_reverse(2)",</span>
+<span class='curline'><a href='../S/113.html#L733'>UTEST_assert</a>      733 test/test.c        UTEST_assert("test_music: MUSIC_record", MUSIC_record() == _TRUE);</span>
+<span class='curline'><a href='../S/113.html#L738'>UTEST_assert</a>      738 test/test.c        UTEST_assert("test_music: MUSIC_recStart",</span>
+<span class='curline'><a href='../S/113.html#L741'>UTEST_assert</a>      741 test/test.c        UTEST_assert("test_music: MUSIC_recStop",</span>
+<span class='curline'><a href='../S/113.html#L748'>UTEST_assert</a>      748 test/test.c        UTEST_assert("test_music: MUSIC_recStart",</span>
+<span class='curline'><a href='../S/113.html#L751'>UTEST_assert</a>      751 test/test.c        UTEST_assert("test_music: MUSIC_recStop",</span>
+<span class='curline'><a href='../S/113.html#L758'>UTEST_assert</a>      758 test/test.c        UTEST_assert("test_music: MUSIC_recStart",</span>
+<span class='curline'><a href='../S/113.html#L761'>UTEST_assert</a>      761 test/test.c        UTEST_assert("test_music: MUSIC_recStop",</span>
+<span class='curline'><a href='../S/113.html#L768'>UTEST_assert</a>      768 test/test.c        UTEST_assert("test_music: MUSIC_recStart",</span>
+<span class='curline'><a href='../S/113.html#L772'>UTEST_assert</a>      772 test/test.c        UTEST_assert("test_music: MUSIC_recStart",</span>
+<span class='curline'><a href='../S/113.html#L776'>UTEST_assert</a>      776 test/test.c        UTEST_assert("test_music: MUSIC_recStart",</span>
+<span class='curline'><a href='../S/113.html#L779'>UTEST_assert</a>      779 test/test.c        UTEST_assert("test_music: MUSIC_recStop",</span>
+<span class='curline'><a href='../S/113.html#L781'>UTEST_assert</a>      781 test/test.c        UTEST_assert("test_music: MUSIC_recStop",</span>
+<span class='curline'><a href='../S/113.html#L783'>UTEST_assert</a>      783 test/test.c        UTEST_assert("test_music: MUSIC_recStop",</span>
+<span class='curline'><a href='../S/113.html#L789'>UTEST_assert</a>      789 test/test.c        UTEST_assert("test_music: MUSIC_play", MUSIC_play() == _TRUE);</span>
+<span class='curline'><a href='../S/113.html#L797'>UTEST_assert</a>      797 test/test.c        UTEST_assert("test_music: MUSIC_play", MUSIC_play() == _TRUE);</span>
+<span class='curline'><a href='../S/113.html#L800'>UTEST_assert</a>      800 test/test.c        UTEST_assert("test_music: MUSIC_pause", MUSIC_pause() == _TRUE);</span>
+<span class='curline'><a href='../S/113.html#L803'>UTEST_assert</a>      803 test/test.c        UTEST_assert("test_music: MUSIC_play", MUSIC_play() == _TRUE);</span>
+<span class='curline'><a href='../S/113.html#L806'>UTEST_assert</a>      806 test/test.c        UTEST_assert("test_music: MUSIC_reverse", MUSIC_reverse() == _TRUE);</span>
+<span class='curline'><a href='../S/113.html#L810'>UTEST_assert</a>      810 test/test.c        UTEST_assert("test_music: MUSIC_stop", MUSIC_stop() == _TRUE);</span>
+<span class='curline'><a href='../S/113.html#L828'>UTEST_assert</a>      828 test/test.c        UTEST_assert("test_ssrp: SSRP_init", (SSRP_my_addr[0] == 0x31));</span>
+<span class='curline'><a href='../S/113.html#L830'>UTEST_assert</a>      830 test/test.c        UTEST_assert("test_ssrp: SSRP_getPear(1)",</span>
+<span class='curline'><a href='../S/113.html#L832'>UTEST_assert</a>      832 test/test.c        UTEST_assert("test_ssrp: SSRP_getPear(2)",</span>
+<span class='curline'><a href='../S/113.html#L834'>UTEST_assert</a>      834 test/test.c        UTEST_assert("test_ssrp: SSRP_ready(1)", SSRP_ready() == _FALSE);</span>
+<span class='curline'><a href='../S/113.html#L835'>UTEST_assert</a>      835 test/test.c        UTEST_assert("test_ssrp: SSRP_getTotalPear(1)", SSRP_getTotalPear() == 0);</span>
+<span class='curline'><a href='../S/113.html#L838'>UTEST_assert</a>      838 test/test.c        UTEST_assert("test_ssrp: SSRP_getTotalPear(2)", SSRP_getTotalPear() == 1);</span>
+<span class='curline'><a href='../S/113.html#L845'>UTEST_assert</a>      845 test/test.c        UTEST_assert("test_ssrp: SSRP_ready(2)", SSRP_ready() == _TRUE);</span>
+<span class='curline'><a href='../S/113.html#L846'>UTEST_assert</a>      846 test/test.c        UTEST_assert("test_ssrp: SSRP_getPear(3)",</span>
+<span class='curline'><a href='../S/113.html#L848'>UTEST_assert</a>      848 test/test.c        UTEST_assert("test_ssrp: SSRP_getPear(4)",</span>
+<span class='curline'><a href='../S/113.html#L850'>UTEST_assert</a>      850 test/test.c        UTEST_assert("test_ssrp: SSRP_getTotalPear(3)", SSRP_getTotalPear() == 2);</span>
+<span class='curline'><a href='../S/113.html#L852'>UTEST_assert</a>      852 test/test.c        UTEST_assert("test_ssrp: SSRP_sendto",</span>
+<span class='curline'><a href='../S/113.html#L862'>UTEST_assert</a>      862 test/test.c        UTEST_assert("test_ssrp: SSRP_send",</span>
+<span class='curline'><a href='../S/113.html#L866'>UTEST_assert</a>      866 test/test.c        UTEST_assert("test_ssrp: SSRP_recvfrom(1)", SSRP_recvfrom(&amp;hp, &amp;bp) &gt;= 0);</span>
+<span class='curline'><a href='../S/113.html#L867'>UTEST_assert</a>      867 test/test.c        UTEST_assert("test_ssrp: SSRP_recvfrom(2)", </span>
+<span class='curline'><a href='../S/113.html#L869'>UTEST_assert</a>      869 test/test.c        UTEST_assert("test_ssrp: SSRP_recvfrom(3)",</span>
+<span class='curline'><a href='../S/113.html#L874'>UTEST_assert</a>      874 test/test.c        UTEST_assert("test_ssrp: SSRP_getPear(5)",</span>
+<span class='curline'><a href='../S/113.html#L876'>UTEST_assert</a>      876 test/test.c        UTEST_assert("test_ssrp: SSRP_getPear(6)",</span>
+<span class='curline'><a href='../S/113.html#L878'>UTEST_assert</a>      878 test/test.c        UTEST_assert("test_ssrp: SSRP_ready(3)", SSRP_ready() == _FALSE);</span>
+<span class='curline'><a href='../S/113.html#L879'>UTEST_assert</a>      879 test/test.c        UTEST_assert("test_ssrp: SSRP_getTotalPear(4)", SSRP_getTotalPear() == 0);</span>
+</pre>
+</body>
+</html>

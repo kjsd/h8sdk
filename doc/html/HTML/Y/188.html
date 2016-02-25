@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>_BOOL</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/1.html#L24'>_BOOL</a>              24 adc.c          void ADC_init(ADC_Mode mode, _BOOL interrupt)</span>
+<span class='curline'><a href='../S/1.html#L60'>_BOOL</a>              60 adc.c          _SDWORD ADC_get(ADC_Channel anx, _BOOL last)</span>
+<span class='curline'><a href='../S/5.html#L176'>_BOOL</a>             176 lcd.c          void LCD_setVisual(_BOOL all, _BOOL cur, _BOOL blink)</span>
+<span class='curline'><a href='../S/7.html#L30'>_BOOL</a>              30 music.c        static const _BOOL state_mtx_[MUSIC_NUM_OF_STATE][MUSIC_NUM_OF_STATE] = {</span>
+<span class='curline'><a href='../S/7.html#L46'>_BOOL</a>              46 music.c        static _BOOL loop_ = _FALSE;</span>
+<span class='curline'><a href='../S/7.html#L92'>_BOOL</a>              92 music.c        void MUSIC_setLoop(_BOOL val)</span>
+<span class='curline'><a href='../S/7.html#L123'>_BOOL</a>             123 music.c        _BOOL MUSIC_play()</span>
+<span class='curline'><a href='../S/7.html#L135'>_BOOL</a>             135 music.c        _BOOL MUSIC_reverse()</span>
+<span class='curline'><a href='../S/7.html#L163'>_BOOL</a>             163 music.c        _BOOL MUSIC_pause()</span>
+<span class='curline'><a href='../S/7.html#L173'>_BOOL</a>             173 music.c        _BOOL MUSIC_stop()</span>
+<span class='curline'><a href='../S/7.html#L199'>_BOOL</a>             199 music.c        static _BOOL playFinalize_(MUSIC_State prev)</span>
+<span class='curline'><a href='../S/7.html#L231'>_BOOL</a>             231 music.c                    _BOOL tone_change = _FALSE;</span>
+<span class='curline'><a href='../S/7.html#L290'>_BOOL</a>             290 music.c                    _BOOL tone_change = _FALSE;</span>
+<span class='curline'><a href='../S/7.html#L343'>_BOOL</a>             343 music.c        _BOOL MUSIC_record()</span>
+<span class='curline'><a href='../S/8.html#L35'>_BOOL</a>              35 music_def.h    static const _BOOL state_mtx_[MUSIC_NUM_OF_STATE][MUSIC_NUM_OF_STATE];</span>
+<span class='curline'><a href='../S/8.html#L42'>_BOOL</a>              42 music_def.h    static _BOOL loop_;</span>
+<span class='curline'><a href='../S/8.html#L73'>_BOOL</a>              73 music_def.h    static _BOOL playFinalize_(MUSIC_State prev);</span>
+<span class='curline'><a href='../S/9.html#L159'>_BOOL</a>             159 ps2.c          _SINT PS2_read(_UBYTE* buf, _UBYTE size, _BOOL sync, _SINT tmo_ms)</span>
+<span class='curline'><a href='../S/10.html#L25'>_BOOL</a>              25 push_switch.c  void PSW_init(_BOOL interrupt)</span>
+<span class='curline'><a href='../S/10.html#L39'>_BOOL</a>              39 push_switch.c  _BOOL PSW_get(PSW_Type t)</span>
+<span class='curline'><a href='../S/10.html#L42'>_BOOL</a>              42 push_switch.c      static _BOOL wait[PSW_NUM_OF_TYPE] = { _FALSE };</span>
+<span class='curline'><a href='../S/10.html#L43'>_BOOL</a>              43 push_switch.c      _BOOL s;</span>
+<span class='curline'><a href='../S/10.html#L44'>_BOOL</a>              44 push_switch.c      _BOOL rtn = _FALSE;</span>
+<span class='curline'><a href='../S/10.html#L66'>_BOOL</a>              66 push_switch.c  _BOOL PSW_oneShot(PSW_Type t)</span>
+<span class='curline'><a href='../S/10.html#L68'>_BOOL</a>              68 push_switch.c      static _BOOL prev[PSW_NUM_OF_TYPE] = { _FALSE };</span>
+<span class='curline'><a href='../S/10.html#L69'>_BOOL</a>              69 push_switch.c      _BOOL s;</span>
+<span class='curline'><a href='../S/10.html#L70'>_BOOL</a>              70 push_switch.c      _BOOL rtn = _FALSE;</span>
+<span class='curline'><a href='../S/10.html#L82'>_BOOL</a>              82 push_switch.c  _BOOL PSW_snapShot(PSW_Type t)</span>
+<span class='curline'><a href='../S/10.html#L84'>_BOOL</a>              84 push_switch.c      static _BOOL prev[PSW_NUM_OF_TYPE] = { _FALSE };</span>
+<span class='curline'><a href='../S/10.html#L85'>_BOOL</a>              85 push_switch.c      _BOOL s;</span>
+<span class='curline'><a href='../S/10.html#L86'>_BOOL</a>              86 push_switch.c      _BOOL rtn = _FALSE;</span>
+<span class='curline'><a href='../S/11.html#L112'>_BOOL</a>             112 sci.c          _SINT SCI_write(const _UBYTE* data, _UBYTE size, _BOOL sync, _SINT tmo_ms)</span>
+<span class='curline'><a href='../S/11.html#L138'>_BOOL</a>             138 sci.c          _SINT SCI_read(_UBYTE* buf, _UBYTE size, _BOOL sync, _SINT tmo_ms)</span>
+<span class='curline'><a href='../S/12.html#L84'>_BOOL</a>              84 sound.c        static _BOOL is_reverb_[SOUND_MAX_PRONOUNCE] = { _FALSE };</span>
+<span class='curline'><a href='../S/12.html#L85'>_BOOL</a>              85 sound.c        static _BOOL remove_tone_[SOUND_MAX_PRONOUNCE] = { _FALSE };</span>
+<span class='curline'><a href='../S/12.html#L91'>_BOOL</a>              91 sound.c        static const _BOOL state_mtx_[SOUND_NUM_OF_STATE][SOUND_NUM_OF_STATE] = {</span>
+<span class='curline'><a href='../S/12.html#L225'>_BOOL</a>             225 sound.c        _BOOL SOUND_play()</span>
+<span class='curline'><a href='../S/12.html#L239'>_BOOL</a>             239 sound.c        _BOOL SOUND_reverse()</span>
+<span class='curline'><a href='../S/12.html#L253'>_BOOL</a>             253 sound.c        _BOOL SOUND_stop()</span>
+<span class='curline'><a href='../S/12.html#L289'>_BOOL</a>             289 sound.c            _BOOL tone_change = _FALSE;</span>
+<span class='curline'><a href='../S/13.html#L45'>_BOOL</a>              45 ssrp.c         static _SINT recv_(_UBYTE* buf, _UBYTE len, _BOOL sync);</span>
+<span class='curline'><a href='../S/13.html#L46'>_BOOL</a>              46 ssrp.c         static _BOOL stHdlCountPear_();</span>
+<span class='curline'><a href='../S/13.html#L47'>_BOOL</a>              47 ssrp.c         static _BOOL stHdlConnect_();</span>
+<span class='curline'><a href='../S/13.html#L48'>_BOOL</a>              48 ssrp.c         static _BOOL stHdlWatch_();</span>
+<span class='curline'><a href='../S/13.html#L51'>_BOOL</a>              51 ssrp.c         static _BOOL insertNode_(SSRP_Address addr);</span>
+<span class='curline'><a href='../S/13.html#L52'>_BOOL</a>              52 ssrp.c         static _BOOL deleteNode_(SSRP_Address addr);</span>
+<span class='curline'><a href='../S/13.html#L60'>_BOOL</a>              60 ssrp.c         static _BOOL start_ = _FALSE;</span>
+<span class='curline'><a href='../S/13.html#L103'>_BOOL</a>             103 ssrp.c         _BOOL SSRP_ready()</span>
+<span class='curline'><a href='../S/13.html#L141'>_BOOL</a>             141 ssrp.c         _SINT SSRP_send(SSRP_Header* header, const _UBYTE* data, _UBYTE len, _BOOL sync)</span>
+<span class='curline'><a href='../S/13.html#L202'>_BOOL</a>             202 ssrp.c                           SSRP_TransactionId* trx_id, _BOOL sync)</span>
+<span class='curline'><a href='../S/13.html#L299'>_BOOL</a>             299 ssrp.c         static _SINT recv_(_UBYTE* buf, _UBYTE len, _BOOL sync)</span>
+<span class='curline'><a href='../S/13.html#L367'>_BOOL</a>             367 ssrp.c         static _BOOL stHdlCountPear_()</span>
+<span class='curline'><a href='../S/13.html#L394'>_BOOL</a>             394 ssrp.c         static _BOOL stHdlConnect_()</span>
+<span class='curline'><a href='../S/13.html#L436'>_BOOL</a>             436 ssrp.c         static _BOOL stHdlWatch_()</span>
+<span class='curline'><a href='../S/13.html#L534'>_BOOL</a>             534 ssrp.c         static _BOOL insertNode_(SSRP_Address addr)</span>
+<span class='curline'><a href='../S/13.html#L536'>_BOOL</a>             536 ssrp.c             _BOOL rtn = _FALSE;</span>
+<span class='curline'><a href='../S/13.html#L559'>_BOOL</a>             559 ssrp.c         static _BOOL deleteNode_(SSRP_Address addr)</span>
+<span class='curline'><a href='../S/13.html#L561'>_BOOL</a>             561 ssrp.c             _BOOL rtn = _FALSE;</span>
+<span class='curline'><a href='../S/14.html#L48'>_BOOL</a>              48 ssrp_def.h     typedef _BOOL (*StateHandle_)();</span>
+<span class='curline'><a href='../S/15.html#L23'>_BOOL</a>              23 ssrp_skel.c    static _BOOL send_loop_ = _FALSE;</span>
+<span class='curline'><a href='../S/15.html#L24'>_BOOL</a>              24 ssrp_skel.c    static _BOOL send_join_ = _FALSE;</span>
+<span class='curline'><a href='../S/15.html#L40'>_BOOL</a>              40 ssrp_skel.c                          _BOOL sync, _SINT tmo_ms)</span>
+<span class='curline'><a href='../S/15.html#L84'>_BOOL</a>              84 ssrp_skel.c    _SINT SSRP_SKEL_read(_UBYTE* buf, _UBYTE size, _BOOL sync, _SINT tmo_ms)</span>
+<span class='curline'><a href='../S/17.html#L44'>_BOOL</a>              44 stdlib.c           _BOOL start = _FALSE;</span>
+</pre>
+</body>
+</html>

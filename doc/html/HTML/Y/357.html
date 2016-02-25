@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>sync</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/9.html#L159'>sync</a>              159 ps2.c          _SINT PS2_read(_UBYTE* buf, _UBYTE size, _BOOL sync, _SINT tmo_ms)</span>
+<span class='curline'><a href='../S/9.html#L167'>sync</a>              167 ps2.c                      if (!sync) goto func_END;</span>
+<span class='curline'><a href='../S/11.html#L112'>sync</a>              112 sci.c          _SINT SCI_write(const _UBYTE* data, _UBYTE size, _BOOL sync, _SINT tmo_ms)</span>
+<span class='curline'><a href='../S/11.html#L120'>sync</a>              120 sci.c                      if (!sync) goto func_END;</span>
+<span class='curline'><a href='../S/11.html#L138'>sync</a>              138 sci.c          _SINT SCI_read(_UBYTE* buf, _UBYTE size, _BOOL sync, _SINT tmo_ms)</span>
+<span class='curline'><a href='../S/11.html#L146'>sync</a>              146 sci.c                      if (!sync) goto func_END;</span>
+<span class='curline'><a href='../S/13.html#L45'>sync</a>               45 ssrp.c         static _SINT recv_(_UBYTE* buf, _UBYTE len, _BOOL sync);</span>
+<span class='curline'><a href='../S/13.html#L141'>sync</a>              141 ssrp.c         _SINT SSRP_send(SSRP_Header* header, const _UBYTE* data, _UBYTE len, _BOOL sync)</span>
+<span class='curline'><a href='../S/13.html#L155'>sync</a>              155 ssrp.c                     rsize = stub_-&gt;write(&amp;pre, sizeof(pre), sync, SSRP_TMO_SEND);</span>
+<span class='curline'><a href='../S/13.html#L175'>sync</a>              175 ssrp.c                     rsize = stub_-&gt;write(data, len, sync, SSRP_TMO_SEND);</span>
+<span class='curline'><a href='../S/13.html#L202'>sync</a>              202 ssrp.c                           SSRP_TransactionId* trx_id, _BOOL sync)</span>
+<span class='curline'><a href='../S/13.html#L212'>sync</a>              212 ssrp.c             rtn = SSRP_send(&amp;trx_[SSRP_TRX_SEND].header, data, len, sync);</span>
+<span class='curline'><a href='../S/13.html#L299'>sync</a>              299 ssrp.c         static _SINT recv_(_UBYTE* buf, _UBYTE len, _BOOL sync)</span>
+<span class='curline'><a href='../S/13.html#L313'>sync</a>              313 ssrp.c                     rsize = stub_-&gt;read(&amp;pre, sizeof(pre), sync, SSRP_TMO_RECV);</span>
+<span class='curline'><a href='../S/13.html#L342'>sync</a>              342 ssrp.c                     rsize = stub_-&gt;read(buf, len, sync, SSRP_TMO_RECV);</span>
+<span class='curline'><a href='../S/15.html#L40'>sync</a>               40 ssrp_skel.c                          _BOOL sync, _SINT tmo_ms)</span>
+<span class='curline'><a href='../S/15.html#L84'>sync</a>               84 ssrp_skel.c    _SINT SSRP_SKEL_read(_UBYTE* buf, _UBYTE size, _BOOL sync, _SINT tmo_ms)</span>
+</pre>
+</body>
+</html>

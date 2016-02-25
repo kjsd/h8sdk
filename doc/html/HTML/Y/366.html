@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>tone_pos_</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/12.html#L67'>tone_pos_</a>          67 sound.c                _TV.TCORA = tones_[tone_pos_].freq;                             \</span>
+<span class='curline'><a href='../S/12.html#L68'>tone_pos_</a>          68 sound.c                _TV.TCORB = tones_[tone_pos_].freq &gt;&gt; 1;                        \</span>
+<span class='curline'><a href='../S/12.html#L82'>tone_pos_</a>          82 sound.c        static _UBYTE tone_pos_ = 0;</span>
+<span class='curline'><a href='../S/12.html#L156'>tone_pos_</a>         156 sound.c                tone_pos_ = idx;</span>
+<span class='curline'><a href='../S/12.html#L165'>tone_pos_</a>         165 sound.c                    evlp_ = tones_[tone_pos_].evlp-&gt;data[evlp_pos_[tone_pos_]] *</span>
+<span class='curline'><a href='../S/12.html#L177'>tone_pos_</a>         177 sound.c                    evlp_ = tones_[tone_pos_].evlp-&gt;data[evlp_pos_[tone_pos_]] *</span>
+<span class='curline'><a href='../S/12.html#L303'>tone_pos_</a>         303 sound.c                        tone_pos_ = _next_ring(tone_pos_, SOUND_MAX_PRONOUNCE - 1);</span>
+<span class='curline'><a href='../S/12.html#L304'>tone_pos_</a>         304 sound.c                        if (tones_[tone_pos_].evlp != NULL)</span>
+<span class='curline'><a href='../S/12.html#L337'>tone_pos_</a>         337 sound.c            p = (is_reverb_[tone_pos_]) ?</span>
+<span class='curline'><a href='../S/12.html#L338'>tone_pos_</a>         338 sound.c                tones_[tone_pos_].reverb: tones_[tone_pos_].evlp;</span>
+<span class='curline'><a href='../S/12.html#L349'>tone_pos_</a>         349 sound.c                if (evlp_pos_[tone_pos_] &lt; p-&gt;size)</span>
+<span class='curline'><a href='../S/12.html#L351'>tone_pos_</a>         351 sound.c                    evlp_ = p-&gt;data[evlp_pos_[tone_pos_]] * volume_;</span>
+<span class='curline'><a href='../S/12.html#L352'>tone_pos_</a>         352 sound.c                    evlp_pos_[tone_pos_] += num_of_tones_;</span>
+<span class='curline'><a href='../S/12.html#L356'>tone_pos_</a>         356 sound.c                if (!is_reverb_[tone_pos_] &amp;&amp; (tones_[tone_pos_].reverb != NULL))</span>
+<span class='curline'><a href='../S/12.html#L358'>tone_pos_</a>         358 sound.c                    evlp_pos_[tone_pos_] = 0;</span>
+<span class='curline'><a href='../S/12.html#L359'>tone_pos_</a>         359 sound.c                    is_reverb_[tone_pos_] = _TRUE;</span>
+<span class='curline'><a href='../S/12.html#L363'>tone_pos_</a>         363 sound.c                    if (tones_[tone_pos_].loop &amp;&amp; !remove_tone_[tone_pos_])</span>
+<span class='curline'><a href='../S/12.html#L365'>tone_pos_</a>         365 sound.c                        evlp_pos_[tone_pos_] = 0;</span>
+<span class='curline'><a href='../S/12.html#L370'>tone_pos_</a>         370 sound.c                        deleteTone_(tone_pos_);</span>
+<span class='curline'><a href='../S/12.html#L376'>tone_pos_</a>         376 sound.c                if (is_reverb_[tone_pos_])</span>
+<span class='curline'><a href='../S/12.html#L378'>tone_pos_</a>         378 sound.c                    if (evlp_pos_[tone_pos_] &lt; p-&gt;size)</span>
+<span class='curline'><a href='../S/12.html#L380'>tone_pos_</a>         380 sound.c                        evlp_ = p-&gt;data[evlp_pos_[tone_pos_]] * volume_;</span>
+<span class='curline'><a href='../S/12.html#L381'>tone_pos_</a>         381 sound.c                        evlp_pos_[tone_pos_] += num_of_tones_;</span>
+<span class='curline'><a href='../S/12.html#L387'>tone_pos_</a>         387 sound.c                    if (evlp_pos_[tone_pos_] &gt;= num_of_tones_)</span>
+<span class='curline'><a href='../S/12.html#L389'>tone_pos_</a>         389 sound.c                        evlp_ = p-&gt;data[evlp_pos_[tone_pos_]] * volume_;</span>
+<span class='curline'><a href='../S/12.html#L390'>tone_pos_</a>         390 sound.c                        evlp_pos_[tone_pos_] -= num_of_tones_;</span>
+<span class='curline'><a href='../S/12.html#L395'>tone_pos_</a>         395 sound.c                if (!is_reverb_[tone_pos_] &amp;&amp; (tones_[tone_pos_].reverb != NULL))</span>
+<span class='curline'><a href='../S/12.html#L397'>tone_pos_</a>         397 sound.c                    evlp_pos_[tone_pos_] = 0;</span>
+<span class='curline'><a href='../S/12.html#L398'>tone_pos_</a>         398 sound.c                    is_reverb_[tone_pos_] = _TRUE;</span>
+<span class='curline'><a href='../S/12.html#L402'>tone_pos_</a>         402 sound.c                    if (tones_[tone_pos_].loop &amp;&amp; !remove_tone_[tone_pos_])</span>
+<span class='curline'><a href='../S/12.html#L404'>tone_pos_</a>         404 sound.c                        evlp_pos_[tone_pos_] = tones_[tone_pos_].evlp-&gt;size - 1;</span>
+<span class='curline'><a href='../S/12.html#L409'>tone_pos_</a>         409 sound.c                        deleteTone_(tone_pos_);</span>
+<span class='curline'><a href='../S/12.html#L436'>tone_pos_</a>         436 sound.c            if ((num_of_tones_ &gt; 0) &amp;&amp; (tone_pos_ == idx))</span>
+<span class='curline'><a href='../S/12.html#L444'>tone_pos_</a>         444 sound.c                        tone_pos_ = i;</span>
+</pre>
+</body>
+</html>

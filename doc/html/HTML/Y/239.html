@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>current_state_</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/7.html#L45'>current_state_</a>     45 music.c        static MUSIC_State current_state_ = MUSIC_ST_STOP;</span>
+<span class='curline'><a href='../S/7.html#L83'>current_state_</a>     83 music.c            return current_state_;</span>
+<span class='curline'><a href='../S/7.html#L125'>current_state_</a>    125 music.c            if (!state_mtx_[current_state_][MUSIC_ST_PLAY]) return _FALSE;</span>
+<span class='curline'><a href='../S/7.html#L129'>current_state_</a>    129 music.c            current_state_ = MUSIC_ST_PLAY;</span>
+<span class='curline'><a href='../S/7.html#L139'>current_state_</a>    139 music.c            if (!state_mtx_[current_state_][MUSIC_ST_REVERSE]) return _FALSE;</span>
+<span class='curline'><a href='../S/7.html#L145'>current_state_</a>    145 music.c            if (current_state_ == MUSIC_ST_STOP)</span>
+<span class='curline'><a href='../S/7.html#L157'>current_state_</a>    157 music.c            current_state_ = MUSIC_ST_REVERSE;</span>
+<span class='curline'><a href='../S/7.html#L165'>current_state_</a>    165 music.c            if (!state_mtx_[current_state_][MUSIC_ST_PAUSE]) return _FALSE;</span>
+<span class='curline'><a href='../S/7.html#L168'>current_state_</a>    168 music.c            current_state_ = MUSIC_ST_PAUSE;</span>
+<span class='curline'><a href='../S/7.html#L177'>current_state_</a>    177 music.c            if (!state_mtx_[current_state_][MUSIC_ST_STOP]) return _FALSE;</span>
+<span class='curline'><a href='../S/7.html#L189'>current_state_</a>    189 music.c            current_state_ = MUSIC_ST_STOP;</span>
+<span class='curline'><a href='../S/7.html#L196'>current_state_</a>    196 music.c            state_handle_tbl_[current_state_]();</span>
+<span class='curline'><a href='../S/7.html#L348'>current_state_</a>    348 music.c            if (!state_mtx_[current_state_][MUSIC_ST_RECORD]) return _FALSE;</span>
+<span class='curline'><a href='../S/7.html#L371'>current_state_</a>    371 music.c            current_state_ = MUSIC_ST_RECORD;</span>
+<span class='curline'><a href='../S/7.html#L393'>current_state_</a>    393 music.c            _assert(current_state_ == MUSIC_ST_RECORD);</span>
+<span class='curline'><a href='../S/7.html#L404'>current_state_</a>    404 music.c            _assert(current_state_ == MUSIC_ST_RECORD);</span>
+<span class='curline'><a href='../S/8.html#L37'>current_state_</a>     37 music_def.h    static MUSIC_State current_state_;</span>
+<span class='curline'><a href='../S/12.html#L78'>current_state_</a>     78 sound.c        static SOUND_State current_state_ = SOUND_ST_STOP;</span>
+<span class='curline'><a href='../S/12.html#L122'>current_state_</a>    122 sound.c            return current_state_;</span>
+<span class='curline'><a href='../S/12.html#L159'>current_state_</a>    159 sound.c            switch (current_state_)</span>
+<span class='curline'><a href='../S/12.html#L203'>current_state_</a>    203 sound.c            switch (current_state_)</span>
+<span class='curline'><a href='../S/12.html#L229'>current_state_</a>    229 sound.c            if (!state_mtx_[current_state_][SOUND_ST_PLAY]) return _FALSE;</span>
+<span class='curline'><a href='../S/12.html#L232'>current_state_</a>    232 sound.c            current_state_ = SOUND_ST_PLAY;</span>
+<span class='curline'><a href='../S/12.html#L243'>current_state_</a>    243 sound.c            if (!state_mtx_[current_state_][SOUND_ST_REVERSE]) return _FALSE;</span>
+<span class='curline'><a href='../S/12.html#L246'>current_state_</a>    246 sound.c            current_state_ = SOUND_ST_REVERSE;</span>
+<span class='curline'><a href='../S/12.html#L257'>current_state_</a>    257 sound.c            if (!state_mtx_[current_state_][SOUND_ST_STOP]) return _FALSE;</span>
+<span class='curline'><a href='../S/12.html#L261'>current_state_</a>    261 sound.c            current_state_ = SOUND_ST_STOP;</span>
+<span class='curline'><a href='../S/12.html#L267'>current_state_</a>    267 sound.c            if (!IS_PLAYING_STATE_(current_state_) || (num_of_tones_ == 0))</span>
+<span class='curline'><a href='../S/12.html#L291'>current_state_</a>    291 sound.c            if (!IS_PLAYING_STATE_(current_state_) || (num_of_tones_ == 0))</span>
+<span class='curline'><a href='../S/12.html#L346'>current_state_</a>    346 sound.c            switch (current_state_)</span>
+<span class='curline'><a href='../S/13.html#L59'>current_state_</a>     59 ssrp.c         static State_ current_state_ = ST_DEALLOCATE_;</span>
+<span class='curline'><a href='../S/13.html#L99'>current_state_</a>     99 ssrp.c             current_state_ = ST_DEALLOCATE_;</span>
+<span class='curline'><a href='../S/13.html#L105'>current_state_</a>    105 ssrp.c             return (current_state_ == ST_CONNECT_) ? _TRUE: _FALSE;</span>
+<span class='curline'><a href='../S/13.html#L277'>current_state_</a>    277 ssrp.c                 if (state_tbl_[current_state_].handle())</span>
+<span class='curline'><a href='../S/13.html#L279'>current_state_</a>    279 ssrp.c                     current_state_ = state_tbl_[current_state_].next;</span>
+<span class='curline'><a href='../S/15.html#L22'>current_state_</a>     22 ssrp_skel.c    static State_ current_state_ = ST_DEALLOCATE_;</span>
+<span class='curline'><a href='../S/15.html#L61'>current_state_</a>     61 ssrp_skel.c                current_state_ = ST_DISCONNECT_;</span>
+<span class='curline'><a href='../S/15.html#L68'>current_state_</a>     68 ssrp_skel.c                current_state_ = ST_DEALLOCATE_;</span>
+<span class='curline'><a href='../S/15.html#L91'>current_state_</a>     91 ssrp_skel.c        rsize = state_handlers_[current_state_](trst, buf);</span>
+<span class='curline'><a href='../S/15.html#L178'>current_state_</a>    178 ssrp_skel.c                current_state_ = ST_CONNECT_;</span>
+</pre>
+</body>
+</html>

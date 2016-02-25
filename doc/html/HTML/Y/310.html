@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>position_</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/7.html#L47'>position_</a>          47 music.c        static MUSIC_Position position_ = { 0, { 0 }, 0 };</span>
+<span class='curline'><a href='../S/7.html#L101'>position_</a>         101 music.c            *pos = position_;</span>
+<span class='curline'><a href='../S/7.html#L108'>position_</a>         108 music.c            position_ = *pos;</span>
+<span class='curline'><a href='../S/7.html#L149'>position_</a>         149 music.c                    position_.note[i] = PART_(i).size - 1;</span>
+<span class='curline'><a href='../S/7.html#L150'>position_</a>         150 music.c                    if (position_.count &lt; (NOTE_(i).begin + NOTE_(i).len))</span>
+<span class='curline'><a href='../S/7.html#L152'>position_</a>         152 music.c                        position_.count = (NOTE_(i).begin + NOTE_(i).len);</span>
+<span class='curline'><a href='../S/7.html#L188'>position_</a>         188 music.c            _memset(&amp;position_, 0, sizeof(position_));</span>
+<span class='curline'><a href='../S/7.html#L232'>position_</a>         232 music.c                    while (position_.count &gt; (NOTE_(i).begin + NOTE_(i).len))</span>
+<span class='curline'><a href='../S/7.html#L234'>position_</a>         234 music.c                        if (++position_.note[i] == PART_(i).size)</span>
+<span class='curline'><a href='../S/7.html#L245'>position_</a>         245 music.c                    if (position_.count &gt;= NOTE_(i).begin)</span>
+<span class='curline'><a href='../S/7.html#L264'>position_</a>         264 music.c                    if (position_.count &gt;= NOTE_(i).begin)</span>
+<span class='curline'><a href='../S/7.html#L275'>position_</a>         275 music.c            position_.count++;</span>
+<span class='curline'><a href='../S/7.html#L291'>position_</a>         291 music.c                    while (position_.count &lt;= NOTE_(i).begin)</span>
+<span class='curline'><a href='../S/7.html#L293'>position_</a>         293 music.c                        if (position_.note[i]-- == 0)</span>
+<span class='curline'><a href='../S/7.html#L304'>position_</a>         304 music.c                    if (position_.count &lt;= (NOTE_(i).begin + NOTE_(i).len))</span>
+<span class='curline'><a href='../S/7.html#L323'>position_</a>         323 music.c                    if (position_.count &lt;= (NOTE_(i).begin + NOTE_(i).len))</span>
+<span class='curline'><a href='../S/7.html#L334'>position_</a>         334 music.c            --position_.count;</span>
+<span class='curline'><a href='../S/7.html#L368'>position_</a>         368 music.c            _memset(&amp;position_, 0, sizeof(position_));</span>
+<span class='curline'><a href='../S/8.html#L32'>position_</a>          32 music_def.h    #define NOTE_(x) (PART_(x).notes[position_.note[(x)]])</span>
+<span class='curline'><a href='../S/8.html#L44'>position_</a>          44 music_def.h    static MUSIC_Position position_;</span>
+</pre>
+</body>
+</html>

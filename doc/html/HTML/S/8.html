@@ -1,0 +1,204 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>music_def.h</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<a id='TOP' name='TOP'></a><h2 class='header'><a href='../mains.html'>root</a>/music_def.h</h2>
+<em class='comment'>/* [&lt;][&gt;][^][v][top]<a href='#BOTTOM'>[bottom]</a><a href='../mains.html'>[index]</a><a href='../help.html'>[help]</a> */</em>
+<hr />
+<h2 class='header'><a href='7.html#L17' title='Included from 17 in music.c.'>INCLUDED FROM</a></h2>
+<hr />
+<pre>
+<a id='L1' name='L1'></a>   1 <em class='comment'>/**</em>
+<a id='L2' name='L2'></a>   2 <em class='comment'> * @file music_def.h</em>
+<a id='L3' name='L3'></a>   3 <em class='comment'> *</em>
+<a id='L4' name='L4'></a>   4 <em class='comment'> * @brief 楽曲演奏モジュールの内部設計</em>
+<a id='L5' name='L5'></a>   5 <em class='comment'> *</em>
+<a id='L6' name='L6'></a>   6 <em class='comment'> * @htmlonly</em>
+<a id='L7' name='L7'></a>   7 <em class='comment'> * @version $Id:$</em>
+<a id='L8' name='L8'></a>   8 <em class='comment'> *</em>
+<a id='L9' name='L9'></a>   9 <em class='comment'> * @author Kenji MINOURA / kenji@kandj.org</em>
+<a id='L10' name='L10'></a>  10 <em class='comment'> *</em>
+<a id='L11' name='L11'></a>  11 <em class='comment'> * Copyright (c) 2008 K&amp;J Software Design, Ltd All rights reserved.</em>
+<a id='L12' name='L12'></a>  12 <em class='comment'> * @endhtmlonly</em>
+<a id='L13' name='L13'></a>  13 <em class='comment'> *</em>
+<a id='L14' name='L14'></a>  14 <em class='comment'> ***********************************************************************/</em>
+<a id='L15' name='L15'></a>  15 <em class='sharp'>#ifndef</em> <a href='../S/8.html#L16' title='Defined at 16 in music_def.h.'>MUSIC_DEF_H_</a>
+<a id='L16' name='L16'></a>  16 <em class='sharp'>#define</em> <a href='../S/8.html#L15' title='Referred from 15 in music_def.h.'>MUSIC_DEF_H_</a>
+<a id='L17' name='L17'></a>  17 
+<a id='L18' name='L18'></a>  18 <em class='sharp'>#ifdef</em> <a href='../Y/209.html' title='Multiple used in 6 places.'>__cplusplus</a>
+<a id='L19' name='L19'></a>  19 <strong class='reserved'>extern</strong> "C" <em class='brace'>{</em>
+<a id='L20' name='L20'></a>  20 <em class='sharp'>#endif</em>
+<a id='L21' name='L21'></a>  21 
+<a id='L22' name='L22'></a>  22 <em class='sharp'>#include</em> "../include/h8sdk/stddef.h"
+<a id='L23' name='L23'></a>  23 <em class='sharp'>#include</em> "../include/h8sdk/stdlib.h"
+<a id='L24' name='L24'></a>  24 <em class='sharp'>#include</em> "../include/h8sdk/assert.h"
+<a id='L25' name='L25'></a>  25 <em class='sharp'>#include</em> "../include/h8sdk/string.h"
+<a id='L26' name='L26'></a>  26 <em class='sharp'>#include</em> "../include/h8sdk/envelope.h"
+<a id='L27' name='L27'></a>  27 <em class='sharp'>#include</em> "../include/h8sdk/music.h"
+<a id='L28' name='L28'></a>  28 
+<a id='L29' name='L29'></a>  29 <em class='comment'>/** 再生パートデータ取得 */</em>
+<a id='L30' name='L30'></a>  30 <em class='sharp'>#define</em> <a href='../R/42.html' title='Multiple referred from 3 places.'>PART_</a>(<a href='../Y/381.html' title='Multiple used in 10 places.'>x</a>) (<a href='../Y/336.html' title='Multiple used in 13 places.'>score_</a>-&gt;parts[(<a href='../Y/381.html' title='Multiple used in 10 places.'>x</a>)])
+<a id='L31' name='L31'></a>  31 <em class='comment'>/** 再生音データ取得 */</em>
+<a id='L32' name='L32'></a>  32 <em class='sharp'>#define</em> <a href='../R/38.html' title='Multiple referred from 16 places.'>NOTE_</a>(<a href='../Y/381.html' title='Multiple used in 10 places.'>x</a>) (<a href='../S/8.html#L30' title='Defined at 30 in music_def.h.'>PART_</a>(<a href='../Y/381.html' title='Multiple used in 10 places.'>x</a>).<a href='../Y/296.html' title='Multiple used in 2 places.'>notes</a>[<a href='../Y/310.html' title='Multiple used in 20 places.'>position_</a>.<a href='../Y/294.html' title='Multiple used in 7 places.'>note</a>[(<a href='../Y/381.html' title='Multiple used in 10 places.'>x</a>)]])
+<a id='L33' name='L33'></a>  33 
+<a id='L34' name='L34'></a>  34 <em class='comment'>/** 内部状態遷移マトリックス */</em>
+<a id='L35' name='L35'></a>  35 <strong class='reserved'>static</strong> <strong class='reserved'>const</strong> <a href='../Y/188.html' title='Multiple used in 64 places.'>_BOOL</a> <a href='../Y/351.html' title='Multiple used in 11 places.'>state_mtx_</a>[<a href='../Y/76.html' title='Multiple used in 5 places.'>MUSIC_NUM_OF_STATE</a>][<a href='../Y/76.html' title='Multiple used in 5 places.'>MUSIC_NUM_OF_STATE</a>];
+<a id='L36' name='L36'></a>  36 <em class='comment'>/** 現在の内部状態 */</em>
+<a id='L37' name='L37'></a>  37 <strong class='reserved'>static</strong> <a href='../Y/88.html' title='Multiple used in 5 places.'>MUSIC_State</a> <a href='../Y/239.html' title='Multiple used in 40 places.'>current_state_</a>;
+<a id='L38' name='L38'></a>  38 
+<a id='L39' name='L39'></a>  39 <em class='comment'>/** 再生する楽曲へのポインタ */</em>
+<a id='L40' name='L40'></a>  40 <strong class='reserved'>static</strong> <a href='../Y/87.html' title='Multiple used in 6 places.'>MUSIC_Score</a>* <a href='../Y/336.html' title='Multiple used in 13 places.'>score_</a>;
+<a id='L41' name='L41'></a>  41 <em class='comment'>/** 楽曲再生ループフラグ */</em>
+<a id='L42' name='L42'></a>  42 <strong class='reserved'>static</strong> <a href='../Y/188.html' title='Multiple used in 64 places.'>_BOOL</a> <a href='../Y/287.html' title='Multiple used in 4 places.'>loop_</a>;
+<a id='L43' name='L43'></a>  43 <em class='comment'>/** 現在の楽曲再生位置情報 */</em>
+<a id='L44' name='L44'></a>  44 <strong class='reserved'>static</strong> <a href='../Y/79.html' title='Multiple used in 6 places.'>MUSIC_Position</a> <a href='../Y/310.html' title='Multiple used in 20 places.'>position_</a>;
+<a id='L45' name='L45'></a>  45 
+<a id='L46' name='L46'></a>  46 <em class='comment'>/** </em>
+<a id='L47' name='L47'></a>  47 <em class='comment'> * @brief 再生終了パート識別フラグ</em>
+<a id='L48' name='L48'></a>  48 <em class='comment'> *</em>
+<a id='L49' name='L49'></a>  49 <em class='comment'> * LSBから順にパート1,パート2...の再生終了状態をビットで表す。</em>
+<a id='L50' name='L50'></a>  50 <em class='comment'> * 終了しているならビットが立つ。</em>
+<a id='L51' name='L51'></a>  51 <em class='comment'> */</em>
+<a id='L52' name='L52'></a>  52 <strong class='reserved'>static</strong> <a href='../Y/208.html' title='Multiple used in 34 places.'>_UWORD</a> <a href='../Y/302.html' title='Multiple used in 8 places.'>part_finish_</a>;
+<a id='L53' name='L53'></a>  53 <em class='comment'>/** </em>
+<a id='L54' name='L54'></a>  54 <em class='comment'> * @brief パート再生中状態識別フラグ</em>
+<a id='L55' name='L55'></a>  55 <em class='comment'> *</em>
+<a id='L56' name='L56'></a>  56 <em class='comment'> * LSBから順にパート1,パート2...の再生状態をビットで表す。</em>
+<a id='L57' name='L57'></a>  57 <em class='comment'> * 再生中ならばビットが立つ。</em>
+<a id='L58' name='L58'></a>  58 <em class='comment'> */</em>
+<a id='L59' name='L59'></a>  59 <strong class='reserved'>static</strong> <a href='../Y/208.html' title='Multiple used in 34 places.'>_UWORD</a> <a href='../Y/304.html' title='Multiple used in 9 places.'>part_pronounce_</a>;
+<a id='L60' name='L60'></a>  60 
+<a id='L61' name='L61'></a>  61 <em class='comment'>/** タイマ割り込み時に呼ばれる内部状態ハンドラテーブル */</em>
+<a id='L62' name='L62'></a>  62 <strong class='reserved'>static</strong> <strong class='reserved'>const</strong> <strong class='reserved'>void</strong> (*<a href='../Y/349.html' title='Multiple used in 3 places.'>state_handle_tbl_</a>[<a href='../Y/76.html' title='Multiple used in 5 places.'>MUSIC_NUM_OF_STATE</a>])();
+<a id='L63' name='L63'></a>  63 
+<a id='L64' name='L64'></a>  64 
+<a id='L65' name='L65'></a>  65 <em class='comment'>/** </em>
+<a id='L66' name='L66'></a>  66 <em class='comment'> * @brief 再生終了処理</em>
+<a id='L67' name='L67'></a>  67 <em class='comment'> *</em>
+<a id='L68' name='L68'></a>  68 <em class='comment'> * 全ての楽曲パートの再生終了チェックを行い、終了処理をする。</em>
+<a id='L69' name='L69'></a>  69 <em class='comment'> *</em>
+<a id='L70' name='L70'></a>  70 <em class='comment'> * @retval _TRUE 全パート楽曲再生終了済み</em>
+<a id='L71' name='L71'></a>  71 <em class='comment'> * @retval _FALSE 再生が終了していないパートがある</em>
+<a id='L72' name='L72'></a>  72 <em class='comment'> */</em>
+<a id='L73' name='L73'></a>  73 <strong class='reserved'>static</strong> <a href='../Y/188.html' title='Multiple used in 64 places.'>_BOOL</a> <a href='../S/7.html#L199' title='Defined at 199 in music.c.'>playFinalize_</a>(<a href='../Y/88.html' title='Multiple used in 5 places.'>MUSIC_State</a> <a href='../Y/313.html' title='Multiple used in 12 places.'>prev</a>);
+<a id='L74' name='L74'></a>  74 
+<a id='L75' name='L75'></a>  75 <em class='comment'>/** </em>
+<a id='L76' name='L76'></a>  76 <em class='comment'> * @brief 停止状態ハンドラ</em>
+<a id='L77' name='L77'></a>  77 <em class='comment'> *</em>
+<a id='L78' name='L78'></a>  78 <em class='comment'> * 内部状態がMUSIC_ST_STOP時にタイマ割り込みから呼ばれるハンドラ</em>
+<a id='L79' name='L79'></a>  79 <em class='comment'> *</em>
+<a id='L80' name='L80'></a>  80 <em class='comment'> * @see MUSIC_State, state_handle_tbl_</em>
+<a id='L81' name='L81'></a>  81 <em class='comment'> */</em>
+<a id='L82' name='L82'></a>  82 <strong class='reserved'>static</strong> <strong class='reserved'>void</strong> <a href='../S/7.html#L214' title='Defined at 214 in music.c.'>stStopHandle_</a>();
+<a id='L83' name='L83'></a>  83 <em class='comment'>/** </em>
+<a id='L84' name='L84'></a>  84 <em class='comment'> * @brief 再生状態ハンドラ</em>
+<a id='L85' name='L85'></a>  85 <em class='comment'> *</em>
+<a id='L86' name='L86'></a>  86 <em class='comment'> * 内部状態がMUSIC_ST_PLAY時にタイマ割り込みから呼ばれるハンドラ</em>
+<a id='L87' name='L87'></a>  87 <em class='comment'> *</em>
+<a id='L88' name='L88'></a>  88 <em class='comment'> * @see MUSIC_State, state_handle_tbl_</em>
+<a id='L89' name='L89'></a>  89 <em class='comment'> */</em>
+<a id='L90' name='L90'></a>  90 <strong class='reserved'>static</strong> <strong class='reserved'>void</strong> <a href='../S/7.html#L219' title='Defined at 219 in music.c.'>stPlayHandle_</a>();
+<a id='L91' name='L91'></a>  91 <em class='comment'>/** </em>
+<a id='L92' name='L92'></a>  92 <em class='comment'> * @brief 逆再生状態ハンドラ</em>
+<a id='L93' name='L93'></a>  93 <em class='comment'> *</em>
+<a id='L94' name='L94'></a>  94 <em class='comment'> * 内部状態がMUSIC_ST_REVERSE時にタイマ割り込みから呼ばれるハンドラ</em>
+<a id='L95' name='L95'></a>  95 <em class='comment'> *</em>
+<a id='L96' name='L96'></a>  96 <em class='comment'> * @see MUSIC_State, state_handle_tbl_</em>
+<a id='L97' name='L97'></a>  97 <em class='comment'> */</em>
+<a id='L98' name='L98'></a>  98 <strong class='reserved'>static</strong> <strong class='reserved'>void</strong> <a href='../S/7.html#L278' title='Defined at 278 in music.c.'>stReverseHandle_</a>();
+<a id='L99' name='L99'></a>  99 <em class='comment'>/** </em>
+<a id='L100' name='L100'></a> 100 <em class='comment'> * @brief 一時停止状態ハンドラ</em>
+<a id='L101' name='L101'></a> 101 <em class='comment'> *</em>
+<a id='L102' name='L102'></a> 102 <em class='comment'> * 内部状態がMUSIC_ST_PAUSE時にタイマ割り込みから呼ばれるハンドラ</em>
+<a id='L103' name='L103'></a> 103 <em class='comment'> *</em>
+<a id='L104' name='L104'></a> 104 <em class='comment'> * @see MUSIC_State, state_handle_tbl_</em>
+<a id='L105' name='L105'></a> 105 <em class='comment'> */</em>
+<a id='L106' name='L106'></a> 106 <strong class='reserved'>static</strong> <strong class='reserved'>void</strong> <a href='../S/7.html#L337' title='Defined at 337 in music.c.'>stPauseHandle_</a>();
+<a id='L107' name='L107'></a> 107 
+<a id='L108' name='L108'></a> 108 
+<a id='L109' name='L109'></a> 109 <em class='sharp'>#ifdef</em> <a href='../Y/186.html' title='Multiple used in 6 places.'>USE_MUSIC_RECORD</a>
+<a id='L110' name='L110'></a> 110 <em class='comment'>/**</em>
+<a id='L111' name='L111'></a> 111 <em class='comment'> * @brief 録音用パラメータ定義</em>
+<a id='L112' name='L112'></a> 112 <em class='comment'> *</em>
+<a id='L113' name='L113'></a> 113 <em class='comment'> * 録音時の処理に使われるデータ型</em>
+<a id='L114' name='L114'></a> 114 <em class='comment'> */</em>
+<a id='L115' name='L115'></a> 115 <strong class='reserved'>typedef</strong> <strong class='reserved'>struct</strong>
+<a id='L116' name='L116'></a> 116 <em class='brace'>{</em>
+<a id='L117' name='L117'></a> 117     <a href='../Y/81.html' title='Multiple used in 8 places.'>MUSIC_RecordReqId</a> <a href='../Y/326.html' title='Multiple used in 8 places.'>reqid</a>;
+<a id='L118' name='L118'></a> 118     <em class='comment'>/**&lt; 録音リクエストID */</em>
+<a id='L119' name='L119'></a> 119     <a href='../Y/208.html' title='Multiple used in 34 places.'>_UWORD</a> <a href='../Y/303.html' title='Multiple used in 9 places.'>part_idx</a>;
+<a id='L120' name='L120'></a> 120     <em class='comment'>/**&lt; 録音中のパート。rec_parts_のインデックス */</em>
+<a id='L121' name='L121'></a> 121     <a href='../Y/208.html' title='Multiple used in 34 places.'>_UWORD</a> <a href='../Y/295.html' title='Multiple used in 6 places.'>note_idx</a>;
+<a id='L122' name='L122'></a> 122     <em class='comment'>/**&lt; 録音中の音データ。rec_notes_[part_idx]のインデックス */</em>
+<a id='L123' name='L123'></a> 123 <em class='brace'>}</em> <a href='../R/53.html' title='Multiple referred from 2 places.'>RecordParam_</a>;
+<a id='L124' name='L124'></a> 124 
+<a id='L125' name='L125'></a> 125 <em class='comment'>/** 録音用楽曲 */</em>
+<a id='L126' name='L126'></a> 126 <strong class='reserved'>static</strong> <a href='../Y/87.html' title='Multiple used in 6 places.'>MUSIC_Score</a> <a href='../Y/322.html' title='Multiple used in 6 places.'>rec_score_</a>;
+<a id='L127' name='L127'></a> 127 <em class='comment'>/** 録音用楽曲パート */</em>
+<a id='L128' name='L128'></a> 128 <strong class='reserved'>static</strong> <a href='../Y/78.html' title='Multiple used in 2 places.'>MUSIC_Part</a> <a href='../Y/320.html' title='Multiple used in 7 places.'>rec_parts_</a>[<a href='../Y/74.html' title='Multiple used in 6 places.'>MUSIC_MAX_PART</a>];
+<a id='L129' name='L129'></a> 129 <em class='comment'>/** 録音用楽曲の音データ */</em>
+<a id='L130' name='L130'></a> 130 <strong class='reserved'>static</strong> <a href='../Y/77.html' title='Multiple used in 6 places.'>MUSIC_Note</a> <a href='../Y/317.html' title='Multiple used in 8 places.'>rec_notes_</a>[<a href='../Y/74.html' title='Multiple used in 6 places.'>MUSIC_MAX_PART</a>][<a href='../Y/75.html' title='Multiple used in 3 places.'>MUSIC_NOTE_OF_RECORD_PART</a>];
+<a id='L131' name='L131'></a> 131 <em class='comment'>/** 録音用パラメータ */</em>
+<a id='L132' name='L132'></a> 132 <strong class='reserved'>static</strong> <a href='../S/8.html#L123' title='Defined at 123 in music_def.h.'>RecordParam_</a> <a href='../Y/318.html' title='Multiple used in 25 places.'>rec_param_</a>[<a href='../Y/74.html' title='Multiple used in 6 places.'>MUSIC_MAX_PART</a>];
+<a id='L133' name='L133'></a> 133 <em class='comment'>/** 録音位置情報 */</em>
+<a id='L134' name='L134'></a> 134 <strong class='reserved'>static</strong> <a href='../Y/79.html' title='Multiple used in 6 places.'>MUSIC_Position</a> <a href='../Y/321.html' title='Multiple used in 8 places.'>rec_position_</a>;
+<a id='L135' name='L135'></a> 135 <em class='comment'>/** 録音パート情報 */</em>
+<a id='L136' name='L136'></a> 136 <strong class='reserved'>static</strong> <a href='../Y/208.html' title='Multiple used in 34 places.'>_UWORD</a> <a href='../Y/319.html' title='Multiple used in 9 places.'>rec_part_</a>;
+<a id='L137' name='L137'></a> 137 
+<a id='L138' name='L138'></a> 138 <em class='comment'>/** </em>
+<a id='L139' name='L139'></a> 139 <em class='comment'> * @brief 録音開始データ登録</em>
+<a id='L140' name='L140'></a> 140 <em class='comment'> *</em>
+<a id='L141' name='L141'></a> 141 <em class='comment'> * 指定された音データの録音を開始する。以後、タイマハンドラによって</em>
+<a id='L142' name='L142'></a> 142 <em class='comment'> * このデータの音長がカウントアップされていく。</em>
+<a id='L143' name='L143'></a> 143 <em class='comment'> *</em>
+<a id='L144' name='L144'></a> 144 <em class='comment'> * @param[in] tone 登録する録音データ</em>
+<a id='L145' name='L145'></a> 145 <em class='comment'> *</em>
+<a id='L146' name='L146'></a> 146 <em class='comment'> * @return リクエストID</em>
+<a id='L147' name='L147'></a> 147 <em class='comment'> * @retval MUSIC_RECREQID_INVALID 録音限界に達した</em>
+<a id='L148' name='L148'></a> 148 <em class='comment'> *</em>
+<a id='L149' name='L149'></a> 149 <em class='comment'> * @see MUSIC_recStart, deleteRecordNote_ </em>
+<a id='L150' name='L150'></a> 150 <em class='comment'> */</em>
+<a id='L151' name='L151'></a> 151 <strong class='reserved'>static</strong> <a href='../Y/81.html' title='Multiple used in 8 places.'>MUSIC_RecordReqId</a> <a href='../S/7.html#L410' title='Defined at 410 in music.c.'>newRecordNote_</a>(<strong class='reserved'>const</strong> <a href='../Y/130.html' title='Multiple used in 6 places.'>SOUND_Tone</a>* <a href='../Y/364.html' title='Multiple used in 20 places.'>tone</a>);
+<a id='L152' name='L152'></a> 152 
+<a id='L153' name='L153'></a> 153 <em class='comment'>/** </em>
+<a id='L154' name='L154'></a> 154 <em class='comment'> * @brief 録音開始データ削除</em>
+<a id='L155' name='L155'></a> 155 <em class='comment'> *</em>
+<a id='L156' name='L156'></a> 156 <em class='comment'> * 指定された音データの録音を停止し、登録を削除する。</em>
+<a id='L157' name='L157'></a> 157 <em class='comment'> *</em>
+<a id='L158' name='L158'></a> 158 <em class='comment'> * @param[in] key 削除する録音のリクエストID</em>
+<a id='L159' name='L159'></a> 159 <em class='comment'> *</em>
+<a id='L160' name='L160'></a> 160 <em class='comment'> * @retval 録音された音符データへのポインタ</em>
+<a id='L161' name='L161'></a> 161 <em class='comment'> * @retval NULL リクエストIDが不正</em>
+<a id='L162' name='L162'></a> 162 <em class='comment'> *</em>
+<a id='L163' name='L163'></a> 163 <em class='comment'> * @see MUSIC_recStop, newRecordNote_</em>
+<a id='L164' name='L164'></a> 164 <em class='comment'> */</em>
+<a id='L165' name='L165'></a> 165 <strong class='reserved'>static</strong> <a href='../Y/77.html' title='Multiple used in 6 places.'>MUSIC_Note</a>* <a href='../S/7.html#L461' title='Defined at 461 in music.c.'>deleteRecordNote_</a>(<a href='../Y/81.html' title='Multiple used in 8 places.'>MUSIC_RecordReqId</a> <a href='../Y/282.html' title='Multiple used in 4 places.'>key</a>);
+<a id='L166' name='L166'></a> 166 
+<a id='L167' name='L167'></a> 167 <em class='comment'>/** </em>
+<a id='L168' name='L168'></a> 168 <em class='comment'> * @brief 録音状態ハンドラ</em>
+<a id='L169' name='L169'></a> 169 <em class='comment'> *</em>
+<a id='L170' name='L170'></a> 170 <em class='comment'> * 内部状態がMUSIC_ST_RECORD時にタイマ割り込みから呼ばれるハンドラ</em>
+<a id='L171' name='L171'></a> 171 <em class='comment'> *</em>
+<a id='L172' name='L172'></a> 172 <em class='comment'> * @see MUSIC_State, state_handle_tbl_</em>
+<a id='L173' name='L173'></a> 173 <em class='comment'> */</em>
+<a id='L174' name='L174'></a> 174 <strong class='reserved'>static</strong> <strong class='reserved'>void</strong> <a href='../S/7.html#L484' title='Defined at 484 in music.c.'>stRecordHandle_</a>();
+<a id='L175' name='L175'></a> 175 
+<a id='L176' name='L176'></a> 176 <em class='sharp'>#endif</em> <em class='comment'>/* USE_MUSIC_RECORD */</em>
+<a id='L177' name='L177'></a> 177 
+<a id='L178' name='L178'></a> 178 <em class='sharp'>#ifdef</em> <a href='../Y/209.html' title='Multiple used in 6 places.'>__cplusplus</a>
+<a id='L179' name='L179'></a> 179 <em class='brace'>}</em>
+<a id='L180' name='L180'></a> 180 <em class='sharp'>#endif</em>
+<a id='L181' name='L181'></a> 181 
+<a id='L182' name='L182'></a> 182 <em class='sharp'>#endif</em> <em class='comment'>/* MUSIC_DEF_H_ */</em>
+</pre>
+<hr />
+<a id='BOTTOM' name='BOTTOM'></a>
+<em class='comment'>/* [&lt;][&gt;][^][v]<a href='#TOP'>[top]</a>[bottom]<a href='../mains.html'>[index]</a><a href='../help.html'>[help]</a> */</em>
+</body>
+</html>

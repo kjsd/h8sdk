@@ -1,0 +1,262 @@
+\subsection{src/ssrp\+\_\+def.h ファイル}
+\label{ssrp__def_8h}\index{src/ssrp\+\_\+def.\+h@{src/ssrp\+\_\+def.\+h}}
+
+
+This file contains the implementation of modules which are local definitions of Simple Single Ring Protocol.  
+
+
+{\ttfamily \#include \char`\"{}../include/h8sdk/ssrp.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../include/h8sdk/stdlib.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../include/h8sdk/assert.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../include/h8sdk/ifstub.\+h\char`\"{}}\\*
+ssrp\+\_\+def.\+h の依存先関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/d75/ssrp__def_8h__incl}
+\end{center}
+\end{figure}
+\subsubsection*{クラス}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{ssrp__def_8h_d0/de7/structPear__}{Pear\+\_\+}
+\begin{DoxyCompactList}\small\item\em ネットワーク上の他ノード定義型 \end{DoxyCompactList}\item 
+struct \hyperlink{ssrp__def_8h_d6/d95/structStateTable__}{State\+Table\+\_\+}
+\item 
+struct \hyperlink{ssrp__def_8h_d4/d30/structTransactionParam__}{Transaction\+Param\+\_\+}
+\end{DoxyCompactItemize}
+\subsubsection*{型定義}
+\begin{DoxyCompactItemize}
+\item 
+typedef \+\_\+\+B\+O\+O\+L($\ast$ \hyperlink{ssrp__def_8h_ac695a0ebfafafd2768e9c88bfd43f100_ac695a0ebfafafd2768e9c88bfd43f100}{State\+Handle\+\_\+}) ()
+\end{DoxyCompactItemize}
+\subsubsection*{列挙型}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{ssrp__def_8h_ab2e37133ccae2faa3b78d487d6a436f8_ab2e37133ccae2faa3b78d487d6a436f8}{Transaction\+State\+\_\+} \{ \\*
+\hyperlink{ssrp__def_8h_ab2e37133ccae2faa3b78d487d6a436f8_ab2e37133ccae2faa3b78d487d6a436f8a37f2e9011f8baaed01f9d52fa89e8fdf}{T\+R\+X\+S\+T\+\_\+\+P\+R\+E\+A\+M\+B\+L\+E\+\_\+} = 0, 
+\\*
+\hyperlink{ssrp__def_8h_ab2e37133ccae2faa3b78d487d6a436f8_ab2e37133ccae2faa3b78d487d6a436f8a65655ff3d32706a3c57090a549fe762f}{T\+R\+X\+S\+T\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+}, 
+\\*
+\hyperlink{ssrp__def_8h_ab2e37133ccae2faa3b78d487d6a436f8_ab2e37133ccae2faa3b78d487d6a436f8a05e9bfc4cc92bde3bc8fa198afaef2b0}{T\+R\+X\+S\+T\+\_\+\+D\+A\+T\+A\+\_\+}, 
+\\*
+\hyperlink{ssrp__def_8h_ab2e37133ccae2faa3b78d487d6a436f8_ab2e37133ccae2faa3b78d487d6a436f8a3e979d24d07bb3b497937841eb8d3eb2}{N\+U\+M\+\_\+\+O\+F\+\_\+\+T\+R\+X\+S\+T\+\_\+}
+ \}
+\item 
+enum \hyperlink{ssrp__def_8h_a98b969cbcea8731d863416b2a2330c70_a98b969cbcea8731d863416b2a2330c70}{State\+\_\+} \{ \\*
+\hyperlink{ssrp__def_8h_a98b969cbcea8731d863416b2a2330c70_a98b969cbcea8731d863416b2a2330c70a959c7926060a5acd417faab83e0765af}{S\+T\+\_\+\+D\+E\+A\+L\+L\+O\+C\+A\+T\+E\+\_\+} = 0, 
+\\*
+\hyperlink{ssrp__def_8h_a98b969cbcea8731d863416b2a2330c70_a98b969cbcea8731d863416b2a2330c70a1b1e8204bbdc0bc2d8c9d656730f3bf1}{S\+T\+\_\+\+D\+I\+S\+C\+O\+N\+N\+E\+C\+T\+\_\+}, 
+\\*
+\hyperlink{ssrp__def_8h_a98b969cbcea8731d863416b2a2330c70_a98b969cbcea8731d863416b2a2330c70a025dbc5860fa6a6de171d81aa74c3906}{S\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+}, 
+\\*
+\hyperlink{ssrp__def_8h_a98b969cbcea8731d863416b2a2330c70_a98b969cbcea8731d863416b2a2330c70a3bdd3d6188b35d8a1f65b9ca52484b3b}{N\+U\+M\+\_\+\+O\+F\+\_\+\+S\+T\+A\+T\+E\+\_\+}
+ \}
+\end{DoxyCompactItemize}
+
+
+\subsubsection{詳解}
+This file contains the implementation of modules which are local definitions of Simple Single Ring Protocol. 
+
+\begin{DoxyVersion}{バージョン}
+
+\end{DoxyVersion}
+\begin{DoxyParagraph}{Id}
+\hyperlink{ssrp__def_8h}{ssrp\+\_\+def.\+h} 156 2009-\/03-\/19 08\+:04\+:25\+Z minoru 
+\end{DoxyParagraph}
+\begin{DoxyVersion}{バージョン}
+\$\+Name\+:\$
+\end{DoxyVersion}
+H8 development platform.
+
+\begin{DoxyAuthor}{著者}
+Kenji M\+I\+N\+O\+U\+R\+A / \href{mailto:kenji@kandj.org}{\tt kenji@kandj.\+org}
+\end{DoxyAuthor}
+Copyright (c) 2008 K\&J Software Design, Ltd All rights reserved.
+
+\begin{DoxySeeAlso}{参照}
+$<$related\+\_\+items$>$ 
+\end{DoxySeeAlso}
+
+
+\subsubsection{クラス詳解}
+\index{Pear\+\_\+@{Pear\+\_\+}}\label{structPear__}
+\paragraph{struct Pear\+\_\+}
+ネットワーク上の他ノード定義型 
+
+プロトコルの管理に必要な接続ノードとリングに参加しているノードの総数が 定義される。 
+
+ ssrp\+\_\+def.\+h の 56 行目に定義があります。
+
+
+
+Pear\+\_\+ 連携図\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=217pt]{d6/d1f/structPear____coll__graph}
+\end{center}
+\end{figure}
+\begin{DoxyFields}{クラスメンバ}
+S\+S\+R\+P\+\_\+\+Address\label{ssrp__def_8h_a171360d4b9b2be90aa37e80a45590593}
+&
+addr\mbox{[}S\+S\+R\+P\+\_\+\+M\+A\+X\+\_\+\+N\+O\+D\+E\mbox{]}&
+ネットワークに繋がっている他ノードのアドレス \\
+\hline
+
+S\+S\+R\+P\+\_\+\+Address\label{ssrp__def_8h_a4bfe3861b9bc152209282ba8b21212c1}
+&
+con\mbox{[}S\+S\+R\+P\+\_\+\+N\+U\+M\+\_\+\+O\+F\+\_\+\+C\+O\+N\mbox{]}&
+自ノードと直に接続しているノードのアドレス \\
+\hline
+
+\+\_\+\+U\+B\+Y\+T\+E\label{ssrp__def_8h_a7d9673fe8d05730bc122c63f958da32c}
+&
+total&
+ネットワークに繋がっている他ノードの総数 \\
+\hline
+
+\+\_\+\+U\+B\+Y\+T\+E\label{ssrp__def_8h_a158a62fe3945b5938d9860cb6343a56c}
+&
+addr\+\_\+count&
+\\
+\hline
+
+\end{DoxyFields}
+\index{State\+Table\+\_\+@{State\+Table\+\_\+}}\label{structStateTable__}
+\paragraph{struct State\+Table\+\_\+}
+
+
+ ssrp\+\_\+def.\+h の 67 行目に定義があります。
+
+
+
+State\+Table\+\_\+ 連携図\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=174pt]{d9/d5c/structStateTable____coll__graph}
+\end{center}
+\end{figure}
+\begin{DoxyFields}{クラスメンバ}
+\hyperlink{ssrp__def_8h_ac695a0ebfafafd2768e9c88bfd43f100_ac695a0ebfafafd2768e9c88bfd43f100}{State\+Handle\+\_\+}\label{ssrp__def_8h_a53065e06f3305cdbf9a94c5dfafa88d8}
+&
+handle&
+\\
+\hline
+
+\hyperlink{ssrp__def_8h_a98b969cbcea8731d863416b2a2330c70_a98b969cbcea8731d863416b2a2330c70}{State\+\_\+}\label{ssrp__def_8h_ab157af8617cabc7193b3a2fdde33a637}
+&
+next&
+\\
+\hline
+
+\end{DoxyFields}
+\index{Transaction\+Param\+\_\+@{Transaction\+Param\+\_\+}}\label{structTransactionParam__}
+\paragraph{struct Transaction\+Param\+\_\+}
+
+
+ ssrp\+\_\+def.\+h の 73 行目に定義があります。
+
+
+
+Transaction\+Param\+\_\+ 連携図\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=316pt]{d1/d0e/structTransactionParam____coll__graph}
+\end{center}
+\end{figure}
+\begin{DoxyFields}{クラスメンバ}
+S\+S\+R\+P\+\_\+\+Header\label{ssrp__def_8h_a40c9420b893eef458836db614475be17}
+&
+header&
+\\
+\hline
+
+\+\_\+\+U\+B\+Y\+T\+E $\ast$\label{ssrp__def_8h_a05183929478e5ba2d4377b7b2cf1561f}
+&
+buffer&
+\\
+\hline
+
+\hyperlink{ssrp__def_8h_ab2e37133ccae2faa3b78d487d6a436f8_ab2e37133ccae2faa3b78d487d6a436f8}{Transaction\+State\+\_\+}\label{ssrp__def_8h_a597e4d4ef35a1572f488f461d35b3cdc}
+&
+state&
+\\
+\hline
+
+\end{DoxyFields}
+
+
+\subsubsection{型定義詳解}
+\index{ssrp\+\_\+def.\+h@{ssrp\+\_\+def.\+h}!State\+Handle\+\_\+@{State\+Handle\+\_\+}}
+\index{State\+Handle\+\_\+@{State\+Handle\+\_\+}!ssrp\+\_\+def.\+h@{ssrp\+\_\+def.\+h}}
+\paragraph[{State\+Handle\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}typedef \+\_\+\+B\+O\+O\+L($\ast$ State\+Handle\+\_\+) ()}\label{ssrp__def_8h_ac695a0ebfafafd2768e9c88bfd43f100_ac695a0ebfafafd2768e9c88bfd43f100}
+
+
+ ssrp\+\_\+def.\+h の 48 行目に定義があります。
+
+
+
+\subsubsection{列挙型詳解}
+\index{ssrp\+\_\+def.\+h@{ssrp\+\_\+def.\+h}!Transaction\+State\+\_\+@{Transaction\+State\+\_\+}}
+\index{Transaction\+State\+\_\+@{Transaction\+State\+\_\+}!ssrp\+\_\+def.\+h@{ssrp\+\_\+def.\+h}}
+\paragraph[{Transaction\+State\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Transaction\+State\+\_\+}}\label{ssrp__def_8h_ab2e37133ccae2faa3b78d487d6a436f8_ab2e37133ccae2faa3b78d487d6a436f8}
+\begin{Desc}
+\item[列挙値]\par
+\begin{description}
+\index{T\+R\+X\+S\+T\+\_\+\+P\+R\+E\+A\+M\+B\+L\+E\+\_\+@{T\+R\+X\+S\+T\+\_\+\+P\+R\+E\+A\+M\+B\+L\+E\+\_\+}!ssrp\+\_\+def.\+h@{ssrp\+\_\+def.\+h}}\index{ssrp\+\_\+def.\+h@{ssrp\+\_\+def.\+h}!T\+R\+X\+S\+T\+\_\+\+P\+R\+E\+A\+M\+B\+L\+E\+\_\+@{T\+R\+X\+S\+T\+\_\+\+P\+R\+E\+A\+M\+B\+L\+E\+\_\+}}\item[{\em 
+T\+R\+X\+S\+T\+\_\+\+P\+R\+E\+A\+M\+B\+L\+E\+\_\+\label{ssrp__def_8h_ab2e37133ccae2faa3b78d487d6a436f8_ab2e37133ccae2faa3b78d487d6a436f8a37f2e9011f8baaed01f9d52fa89e8fdf}
+}]\index{T\+R\+X\+S\+T\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+@{T\+R\+X\+S\+T\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+}!ssrp\+\_\+def.\+h@{ssrp\+\_\+def.\+h}}\index{ssrp\+\_\+def.\+h@{ssrp\+\_\+def.\+h}!T\+R\+X\+S\+T\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+@{T\+R\+X\+S\+T\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+}}\item[{\em 
+T\+R\+X\+S\+T\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\label{ssrp__def_8h_ab2e37133ccae2faa3b78d487d6a436f8_ab2e37133ccae2faa3b78d487d6a436f8a65655ff3d32706a3c57090a549fe762f}
+}]\index{T\+R\+X\+S\+T\+\_\+\+D\+A\+T\+A\+\_\+@{T\+R\+X\+S\+T\+\_\+\+D\+A\+T\+A\+\_\+}!ssrp\+\_\+def.\+h@{ssrp\+\_\+def.\+h}}\index{ssrp\+\_\+def.\+h@{ssrp\+\_\+def.\+h}!T\+R\+X\+S\+T\+\_\+\+D\+A\+T\+A\+\_\+@{T\+R\+X\+S\+T\+\_\+\+D\+A\+T\+A\+\_\+}}\item[{\em 
+T\+R\+X\+S\+T\+\_\+\+D\+A\+T\+A\+\_\+\label{ssrp__def_8h_ab2e37133ccae2faa3b78d487d6a436f8_ab2e37133ccae2faa3b78d487d6a436f8a05e9bfc4cc92bde3bc8fa198afaef2b0}
+}]\index{N\+U\+M\+\_\+\+O\+F\+\_\+\+T\+R\+X\+S\+T\+\_\+@{N\+U\+M\+\_\+\+O\+F\+\_\+\+T\+R\+X\+S\+T\+\_\+}!ssrp\+\_\+def.\+h@{ssrp\+\_\+def.\+h}}\index{ssrp\+\_\+def.\+h@{ssrp\+\_\+def.\+h}!N\+U\+M\+\_\+\+O\+F\+\_\+\+T\+R\+X\+S\+T\+\_\+@{N\+U\+M\+\_\+\+O\+F\+\_\+\+T\+R\+X\+S\+T\+\_\+}}\item[{\em 
+N\+U\+M\+\_\+\+O\+F\+\_\+\+T\+R\+X\+S\+T\+\_\+\label{ssrp__def_8h_ab2e37133ccae2faa3b78d487d6a436f8_ab2e37133ccae2faa3b78d487d6a436f8a3e979d24d07bb3b497937841eb8d3eb2}
+}]\end{description}
+\end{Desc}
+
+
+ ssrp\+\_\+def.\+h の 30 行目に定義があります。
+
+
+\begin{DoxyCode}
+31 \{
+32     TRXST_PREAMBLE_ = 0,
+33     TRXST_HEADER_,
+34     TRXST_DATA_,
+35 
+36     NUM_OF_TRXST_
+37 \} TransactionState_;
+\end{DoxyCode}
+\index{ssrp\+\_\+def.\+h@{ssrp\+\_\+def.\+h}!State\+\_\+@{State\+\_\+}}
+\index{State\+\_\+@{State\+\_\+}!ssrp\+\_\+def.\+h@{ssrp\+\_\+def.\+h}}
+\paragraph[{State\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf State\+\_\+}}\label{ssrp__def_8h_a98b969cbcea8731d863416b2a2330c70_a98b969cbcea8731d863416b2a2330c70}
+\begin{Desc}
+\item[列挙値]\par
+\begin{description}
+\index{S\+T\+\_\+\+D\+E\+A\+L\+L\+O\+C\+A\+T\+E\+\_\+@{S\+T\+\_\+\+D\+E\+A\+L\+L\+O\+C\+A\+T\+E\+\_\+}!ssrp\+\_\+def.\+h@{ssrp\+\_\+def.\+h}}\index{ssrp\+\_\+def.\+h@{ssrp\+\_\+def.\+h}!S\+T\+\_\+\+D\+E\+A\+L\+L\+O\+C\+A\+T\+E\+\_\+@{S\+T\+\_\+\+D\+E\+A\+L\+L\+O\+C\+A\+T\+E\+\_\+}}\item[{\em 
+S\+T\+\_\+\+D\+E\+A\+L\+L\+O\+C\+A\+T\+E\+\_\+\label{ssrp__def_8h_a98b969cbcea8731d863416b2a2330c70_a98b969cbcea8731d863416b2a2330c70a959c7926060a5acd417faab83e0765af}
+}]\index{S\+T\+\_\+\+D\+I\+S\+C\+O\+N\+N\+E\+C\+T\+\_\+@{S\+T\+\_\+\+D\+I\+S\+C\+O\+N\+N\+E\+C\+T\+\_\+}!ssrp\+\_\+def.\+h@{ssrp\+\_\+def.\+h}}\index{ssrp\+\_\+def.\+h@{ssrp\+\_\+def.\+h}!S\+T\+\_\+\+D\+I\+S\+C\+O\+N\+N\+E\+C\+T\+\_\+@{S\+T\+\_\+\+D\+I\+S\+C\+O\+N\+N\+E\+C\+T\+\_\+}}\item[{\em 
+S\+T\+\_\+\+D\+I\+S\+C\+O\+N\+N\+E\+C\+T\+\_\+\label{ssrp__def_8h_a98b969cbcea8731d863416b2a2330c70_a98b969cbcea8731d863416b2a2330c70a1b1e8204bbdc0bc2d8c9d656730f3bf1}
+}]\index{S\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+@{S\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+}!ssrp\+\_\+def.\+h@{ssrp\+\_\+def.\+h}}\index{ssrp\+\_\+def.\+h@{ssrp\+\_\+def.\+h}!S\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+@{S\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+}}\item[{\em 
+S\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+\label{ssrp__def_8h_a98b969cbcea8731d863416b2a2330c70_a98b969cbcea8731d863416b2a2330c70a025dbc5860fa6a6de171d81aa74c3906}
+}]\index{N\+U\+M\+\_\+\+O\+F\+\_\+\+S\+T\+A\+T\+E\+\_\+@{N\+U\+M\+\_\+\+O\+F\+\_\+\+S\+T\+A\+T\+E\+\_\+}!ssrp\+\_\+def.\+h@{ssrp\+\_\+def.\+h}}\index{ssrp\+\_\+def.\+h@{ssrp\+\_\+def.\+h}!N\+U\+M\+\_\+\+O\+F\+\_\+\+S\+T\+A\+T\+E\+\_\+@{N\+U\+M\+\_\+\+O\+F\+\_\+\+S\+T\+A\+T\+E\+\_\+}}\item[{\em 
+N\+U\+M\+\_\+\+O\+F\+\_\+\+S\+T\+A\+T\+E\+\_\+\label{ssrp__def_8h_a98b969cbcea8731d863416b2a2330c70_a98b969cbcea8731d863416b2a2330c70a3bdd3d6188b35d8a1f65b9ca52484b3b}
+}]\end{description}
+\end{Desc}
+
+
+ ssrp\+\_\+def.\+h の 39 行目に定義があります。
+
+
+\begin{DoxyCode}
+40 \{
+41     ST_DEALLOCATE_ = 0,
+42     ST_DISCONNECT_,
+43     ST_CONNECT_,
+44     
+45     NUM_OF_STATE_
+46 \} State_;
+\end{DoxyCode}

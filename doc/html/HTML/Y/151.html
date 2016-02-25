@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>SSRP_Header</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/13.html#L141'>SSRP_Header</a>       141 ssrp.c         _SINT SSRP_send(SSRP_Header* header, const _UBYTE* data, _UBYTE len, _BOOL sync)</span>
+<span class='curline'><a href='../S/13.html#L165'>SSRP_Header</a>       165 ssrp.c                                                (sizeof(SSRP_Header) -</span>
+<span class='curline'><a href='../S/13.html#L170'>SSRP_Header</a>       170 ssrp.c                     rsize = stub_-&gt;write((_UBYTE*)header, sizeof(SSRP_Header), _TRUE,</span>
+<span class='curline'><a href='../S/13.html#L221'>SSRP_Header</a>       221 ssrp.c         _SINT SSRP_recvfrom(SSRP_Header** header_p, _UBYTE** data_p)</span>
+<span class='curline'><a href='../S/13.html#L322'>SSRP_Header</a>       322 ssrp.c                                         sizeof(SSRP_Header), _TRUE, SSRP_TMO_RECV);</span>
+<span class='curline'><a href='../S/13.html#L324'>SSRP_Header</a>       324 ssrp.c                     if (rsize != sizeof(SSRP_Header))</span>
+<span class='curline'><a href='../S/13.html#L331'>SSRP_Header</a>       331 ssrp.c                                    sizeof(SSRP_Header) / sizeof(_UWORD)) != 0)</span>
+<span class='curline'><a href='../S/14.html#L75'>SSRP_Header</a>        75 ssrp_def.h         SSRP_Header header;</span>
+<span class='curline'><a href='../S/15.html#L25'>SSRP_Header</a>        25 ssrp_skel.c    static SSRP_Header header_;</span>
+<span class='curline'><a href='../S/15.html#L52'>SSRP_Header</a>        52 ssrp_skel.c            if ((((SSRP_Header*)data)-&gt;command == SSRP_CMD_LOOP) &amp;&amp;</span>
+<span class='curline'><a href='../S/15.html#L53'>SSRP_Header</a>        53 ssrp_skel.c                (((SSRP_Header*)data)-&gt;flag == SSRP_FLG_EVT))</span>
+<span class='curline'><a href='../S/15.html#L58'>SSRP_Header</a>        58 ssrp_skel.c            else if ((((SSRP_Header*)data)-&gt;command == SSRP_CMD_JOIN) &amp;&amp;</span>
+<span class='curline'><a href='../S/15.html#L59'>SSRP_Header</a>        59 ssrp_skel.c                     (((SSRP_Header*)data)-&gt;flag == SSRP_FLG_REQ))</span>
+<span class='curline'><a href='../S/15.html#L65'>SSRP_Header</a>        65 ssrp_skel.c            else if ((((SSRP_Header*)data)-&gt;command == SSRP_CMD_LEAVE) &amp;&amp;</span>
+<span class='curline'><a href='../S/15.html#L66'>SSRP_Header</a>        66 ssrp_skel.c                     (((SSRP_Header*)data)-&gt;flag == SSRP_FLG_EVT))</span>
+<span class='curline'><a href='../S/15.html#L120'>SSRP_Header</a>       120 ssrp_skel.c                                       (sizeof(SSRP_Header) -</span>
+<span class='curline'><a href='../S/15.html#L147'>SSRP_Header</a>       147 ssrp_skel.c        SSRP_Header* p;</span>
+<span class='curline'><a href='../S/15.html#L159'>SSRP_Header</a>       159 ssrp_skel.c            p = (SSRP_Header*)buf;</span>
+<span class='curline'><a href='../S/15.html#L167'>SSRP_Header</a>       167 ssrp_skel.c                                  (sizeof(SSRP_Header) - sizeof(p-&gt;cksum)) /</span>
+<span class='curline'><a href='../S/15.html#L170'>SSRP_Header</a>       170 ssrp_skel.c            size = sizeof(SSRP_Header);</span>
+<span class='curline'><a href='../S/15.html#L199'>SSRP_Header</a>       199 ssrp_skel.c        SSRP_Header* p;</span>
+<span class='curline'><a href='../S/15.html#L209'>SSRP_Header</a>       209 ssrp_skel.c            p = (SSRP_Header*)buf;</span>
+<span class='curline'><a href='../S/15.html#L217'>SSRP_Header</a>       217 ssrp_skel.c                                  (sizeof(SSRP_Header) - sizeof(p-&gt;cksum)) /</span>
+<span class='curline'><a href='../S/15.html#L220'>SSRP_Header</a>       220 ssrp_skel.c            size = sizeof(SSRP_Header);</span>
+</pre>
+</body>
+</html>

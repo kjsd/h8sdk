@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>argv</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/16.html#L27'>argv</a>               27 stdio.c        typedef _UBYTE (*format_handler_)(_UBYTE* argv);</span>
+<span class='curline'><a href='../S/16.html#L28'>argv</a>               28 stdio.c        static _UBYTE fmt_digit_(_UBYTE* argv);</span>
+<span class='curline'><a href='../S/16.html#L29'>argv</a>               29 stdio.c        static _UBYTE fmt_unsigned_(_UBYTE* argv);</span>
+<span class='curline'><a href='../S/16.html#L30'>argv</a>               30 stdio.c        static _UBYTE fmt_hexa_(_UBYTE* argv);</span>
+<span class='curline'><a href='../S/16.html#L31'>argv</a>               31 stdio.c        static _UBYTE fmt_octal_(_UBYTE* argv);</span>
+<span class='curline'><a href='../S/16.html#L32'>argv</a>               32 stdio.c        static _UBYTE fmt_string_(_UBYTE* argv);</span>
+<span class='curline'><a href='../S/16.html#L33'>argv</a>               33 stdio.c        static _UBYTE fmt_percent_(_UBYTE* argv);</span>
+<span class='curline'><a href='../S/16.html#L48'>argv</a>               48 stdio.c            _UBYTE* argv;</span>
+<span class='curline'><a href='../S/16.html#L52'>argv</a>               52 stdio.c            argv = (_UBYTE*)(&amp;format) + sizeof(format);</span>
+<span class='curline'><a href='../S/16.html#L53'>argv</a>               53 stdio.c            if (((_UINT)argv &amp; 1) == 1)</span>
+<span class='curline'><a href='../S/16.html#L55'>argv</a>               55 stdio.c                argv++;</span>
+<span class='curline'><a href='../S/16.html#L73'>argv</a>               73 stdio.c                        argv += format_hdl_table_[i](argv);</span>
+<span class='curline'><a href='../S/16.html#L74'>argv</a>               74 stdio.c                        if (((_UINT)argv &amp; 1) == 1)</span>
+<span class='curline'><a href='../S/16.html#L76'>argv</a>               76 stdio.c                            argv++;</span>
+<span class='curline'><a href='../S/16.html#L84'>argv</a>               84 stdio.c        static _UBYTE fmt_digit_(_UBYTE* argv)</span>
+<span class='curline'><a href='../S/16.html#L88'>argv</a>               88 stdio.c            _SINT num = *(_SINT*)argv;</span>
+<span class='curline'><a href='../S/16.html#L92'>argv</a>               92 stdio.c                i = _itoa(*(_UINT*)argv, 10, str, _sizeof_array(str));</span>
+<span class='curline'><a href='../S/16.html#L106'>argv</a>              106 stdio.c        static _UBYTE fmt_unsigned_(_UBYTE* argv)</span>
+<span class='curline'><a href='../S/16.html#L111'>argv</a>              111 stdio.c            i = _itoa(*(_UINT*)argv, 10, str, _sizeof_array(str));</span>
+<span class='curline'><a href='../S/16.html#L117'>argv</a>              117 stdio.c        static _UBYTE fmt_hexa_(_UBYTE* argv)</span>
+<span class='curline'><a href='../S/16.html#L122'>argv</a>              122 stdio.c            i = _itoa(*(_UINT*)argv, 16, str, _sizeof_array(str));</span>
+<span class='curline'><a href='../S/16.html#L128'>argv</a>              128 stdio.c        static _UBYTE fmt_octal_(_UBYTE* argv)</span>
+<span class='curline'><a href='../S/16.html#L133'>argv</a>              133 stdio.c            i = _itoa(*(_UINT*)argv, 8, str, _sizeof_array(str));</span>
+<span class='curline'><a href='../S/16.html#L139'>argv</a>              139 stdio.c        static _UBYTE fmt_string_(_UBYTE* argv)</span>
+<span class='curline'><a href='../S/16.html#L141'>argv</a>              141 stdio.c            _UWORD len = _strlen(*(_SBYTE**)argv);</span>
+<span class='curline'><a href='../S/16.html#L143'>argv</a>              143 stdio.c            IFSTUB_getInstance(_STDOUT)-&gt;write(*(_UBYTE**)argv, len, _TRUE, -1);</span>
+<span class='curline'><a href='../S/16.html#L148'>argv</a>              148 stdio.c        static _UBYTE fmt_percent_(_UBYTE* argv)</span>
+</pre>
+</body>
+</html>

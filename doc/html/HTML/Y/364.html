@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>tone</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/7.html#L247'>tone</a>              247 music.c                        if (NOTE_(i).tone.freq == SOUND_NA)</span>
+<span class='curline'><a href='../S/7.html#L253'>tone</a>              253 music.c                            SOUND_setTone(i, &amp;NOTE_(i).tone);</span>
+<span class='curline'><a href='../S/7.html#L266'>tone</a>              266 music.c                        if (NOTE_(i).tone.freq != SOUND_NA)</span>
+<span class='curline'><a href='../S/7.html#L268'>tone</a>              268 music.c                            SOUND_setTone(i, &amp;NOTE_(i).tone);</span>
+<span class='curline'><a href='../S/7.html#L306'>tone</a>              306 music.c                        if (NOTE_(i).tone.freq == SOUND_NA)</span>
+<span class='curline'><a href='../S/7.html#L312'>tone</a>              312 music.c                            SOUND_setTone(i, &amp;NOTE_(i).tone);</span>
+<span class='curline'><a href='../S/7.html#L325'>tone</a>              325 music.c                        if (NOTE_(i).tone.freq != SOUND_NA)</span>
+<span class='curline'><a href='../S/7.html#L327'>tone</a>              327 music.c                            SOUND_setTone(i, &amp;NOTE_(i).tone);</span>
+<span class='curline'><a href='../S/7.html#L385'>tone</a>              385 music.c        MUSIC_RecordReqId MUSIC_recStart(const SOUND_Tone* tone)</span>
+<span class='curline'><a href='../S/7.html#L391'>tone</a>              391 music.c            _assert(tone);</span>
+<span class='curline'><a href='../S/7.html#L392'>tone</a>              392 music.c            _assert(tone-&gt;evlp);</span>
+<span class='curline'><a href='../S/7.html#L395'>tone</a>              395 music.c            return newRecordNote_(tone);</span>
+<span class='curline'><a href='../S/7.html#L410'>tone</a>              410 music.c        static MUSIC_RecordReqId newRecordNote_(const SOUND_Tone* tone)</span>
+<span class='curline'><a href='../S/7.html#L435'>tone</a>              435 music.c                            [rec_param_[idx].note_idx].tone,</span>
+<span class='curline'><a href='../S/7.html#L436'>tone</a>              436 music.c                            tone,</span>
+<span class='curline'><a href='../S/8.html#L151'>tone</a>              151 music_def.h    static MUSIC_RecordReqId newRecordNote_(const SOUND_Tone* tone);</span>
+<span class='curline'><a href='../S/12.html#L138'>tone</a>              138 sound.c        void SOUND_setTone(_UBYTE idx, const SOUND_Tone* tone)</span>
+<span class='curline'><a href='../S/12.html#L141'>tone</a>              141 sound.c            _assert(tone != NULL);</span>
+<span class='curline'><a href='../S/12.html#L142'>tone</a>              142 sound.c            _assert((tone-&gt;freq != SOUND_NA) &amp;&amp; (tone-&gt;evlp != NULL));</span>
+<span class='curline'><a href='../S/12.html#L150'>tone</a>              150 sound.c            tones_[idx] = *tone;</span>
+</pre>
+</body>
+</html>

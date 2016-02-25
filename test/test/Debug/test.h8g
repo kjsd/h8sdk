@@ -1,0 +1,3 @@
+-cpu=300HN
+-output="C:\cygwin\home\minoru\work\h8sdk\test\test\Debug\test.lib"
+-head=runtime,new,stdio,stdlib

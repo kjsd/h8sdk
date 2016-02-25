@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>rx_in_</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/9.html#L46'>rx_in_</a>             46 ps2.c          static volatile _UINT rx_in_ = 0;</span>
+<span class='curline'><a href='../S/9.html#L143'>rx_in_</a>            143 ps2.c                  next = _next_ring(rx_in_, PS2_MAX_RXBUF - 1);</span>
+<span class='curline'><a href='../S/9.html#L146'>rx_in_</a>            146 ps2.c                      rx_buf_[rx_in_] = data;</span>
+<span class='curline'><a href='../S/9.html#L147'>rx_in_</a>            147 ps2.c                      rx_in_ = next;</span>
+<span class='curline'><a href='../S/9.html#L165'>rx_in_</a>            165 ps2.c                  while (rx_out_ == rx_in_)</span>
+<span class='curline'><a href='../S/11.html#L32'>rx_in_</a>             32 sci.c          static volatile _UINT rx_in_ = 0;</span>
+<span class='curline'><a href='../S/11.html#L72'>rx_in_</a>             72 sci.c                  _UINT next = _next_ring(rx_in_, SCI_MAX_RXBUF - 1);</span>
+<span class='curline'><a href='../S/11.html#L75'>rx_in_</a>             75 sci.c                      rx_buf_[rx_in_] = _SCI3.RDR;</span>
+<span class='curline'><a href='../S/11.html#L76'>rx_in_</a>             76 sci.c                      rx_in_ = next;</span>
+<span class='curline'><a href='../S/11.html#L144'>rx_in_</a>            144 sci.c                  while (rx_out_ == rx_in_)</span>
+</pre>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>t</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/3.html#L37'>t</a>                  37 ifstub.c       const IFSTUB_Class* IFSTUB_getInstance(IFSTUB_Type t)</span>
+<span class='curline'><a href='../S/3.html#L39'>t</a>                  39 ifstub.c           _assert(t &lt; IFSTUB_NUM_OF_TYPE);</span>
+<span class='curline'><a href='../S/3.html#L41'>t</a>                  41 ifstub.c           return &amp;instances_[t];</span>
+<span class='curline'><a href='../S/10.html#L39'>t</a>                  39 push_switch.c  _BOOL PSW_get(PSW_Type t)</span>
+<span class='curline'><a href='../S/10.html#L47'>t</a>                  47 push_switch.c      s = PSW_snapShot(t);</span>
+<span class='curline'><a href='../S/10.html#L48'>t</a>                  48 push_switch.c      if (s &amp;&amp; !wait[t])</span>
+<span class='curline'><a href='../S/10.html#L51'>t</a>                  51 push_switch.c          wait[t] = _TRUE;</span>
+<span class='curline'><a href='../S/10.html#L54'>t</a>                  54 push_switch.c      if (wait[t])</span>
+<span class='curline'><a href='../S/10.html#L56'>t</a>                  56 push_switch.c          if (++counter[t] == PSW_BORDER)</span>
+<span class='curline'><a href='../S/10.html#L58'>t</a>                  58 push_switch.c              wait[t] = _FALSE;</span>
+<span class='curline'><a href='../S/10.html#L59'>t</a>                  59 push_switch.c              counter[t] = 0;</span>
+<span class='curline'><a href='../S/10.html#L66'>t</a>                  66 push_switch.c  _BOOL PSW_oneShot(PSW_Type t)</span>
+<span class='curline'><a href='../S/10.html#L72'>t</a>                  72 push_switch.c      s = PSW_snapShot(t);</span>
+<span class='curline'><a href='../S/10.html#L73'>t</a>                  73 push_switch.c      if (s &amp;&amp; !prev[t])</span>
+<span class='curline'><a href='../S/10.html#L77'>t</a>                  77 push_switch.c      prev[t] = s;</span>
+<span class='curline'><a href='../S/10.html#L82'>t</a>                  82 push_switch.c  _BOOL PSW_snapShot(PSW_Type t)</span>
+<span class='curline'><a href='../S/10.html#L88'>t</a>                  88 push_switch.c      s = (_IO.PDR1.BYTE &amp; DATA_MASK_(t)) ? _TRUE: _FALSE;</span>
+<span class='curline'><a href='../S/10.html#L89'>t</a>                  89 push_switch.c      if (s &amp;&amp; prev[t])</span>
+<span class='curline'><a href='../S/10.html#L93'>t</a>                  93 push_switch.c      prev[t] = s;</span>
+</pre>
+</body>
+</html>

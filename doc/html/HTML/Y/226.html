@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>buf</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/5.html#L105'>buf</a>               105 lcd.c          _SINT LCD_read(_UBYTE* buf, _SINT size)</span>
+<span class='curline'><a href='../S/5.html#L107'>buf</a>               107 lcd.c              _UBYTE* p = buf;</span>
+<span class='curline'><a href='../S/5.html#L120'>buf</a>               120 lcd.c              return p - buf;</span>
+<span class='curline'><a href='../S/9.html#L159'>buf</a>               159 ps2.c          _SINT PS2_read(_UBYTE* buf, _UBYTE size, _BOOL sync, _SINT tmo_ms)</span>
+<span class='curline'><a href='../S/9.html#L161'>buf</a>               161 ps2.c              _UBYTE* p = buf;</span>
+<span class='curline'><a href='../S/9.html#L178'>buf</a>               178 ps2.c              return p - buf;</span>
+<span class='curline'><a href='../S/11.html#L138'>buf</a>               138 sci.c          _SINT SCI_read(_UBYTE* buf, _UBYTE size, _BOOL sync, _SINT tmo_ms)</span>
+<span class='curline'><a href='../S/11.html#L152'>buf</a>               152 sci.c                  *buf++ = rx_buf_[rx_out_];</span>
+<span class='curline'><a href='../S/13.html#L45'>buf</a>                45 ssrp.c         static _SINT recv_(_UBYTE* buf, _UBYTE len, _BOOL sync);</span>
+<span class='curline'><a href='../S/13.html#L82'>buf</a>                82 ssrp.c             _UBYTE buf = 0;</span>
+<span class='curline'><a href='../S/13.html#L86'>buf</a>                86 ssrp.c                         &amp;buf, sizeof(buf), NULL, _TRUE);</span>
+<span class='curline'><a href='../S/13.html#L249'>buf</a>               249 ssrp.c             _UBYTE buf;</span>
+<span class='curline'><a href='../S/13.html#L299'>buf</a>               299 ssrp.c         static _SINT recv_(_UBYTE* buf, _UBYTE len, _BOOL sync)</span>
+<span class='curline'><a href='../S/13.html#L342'>buf</a>               342 ssrp.c                     rsize = stub_-&gt;read(buf, len, sync, SSRP_TMO_RECV);</span>
+<span class='curline'><a href='../S/13.html#L370'>buf</a>               370 ssrp.c             _UBYTE buf = 0;</span>
+<span class='curline'><a href='../S/13.html#L388'>buf</a>               388 ssrp.c                             &amp;buf, sizeof(buf), NULL, _TRUE);</span>
+<span class='curline'><a href='../S/13.html#L397'>buf</a>               397 ssrp.c             _UBYTE buf = 0;</span>
+<span class='curline'><a href='../S/13.html#L430'>buf</a>               430 ssrp.c                             &amp;buf, sizeof(buf), NULL, _TRUE);</span>
+<span class='curline'><a href='../S/13.html#L462'>buf</a>               462 ssrp.c             _UBYTE buf;</span>
+<span class='curline'><a href='../S/13.html#L475'>buf</a>               475 ssrp.c                     buf = SSRP_CON_FRONT;</span>
+<span class='curline'><a href='../S/13.html#L478'>buf</a>               478 ssrp.c                                         &amp;buf, sizeof(buf), NULL, _TRUE);</span>
+<span class='curline'><a href='../S/13.html#L488'>buf</a>               488 ssrp.c                     buf = SSRP_CON_BACK;</span>
+<span class='curline'><a href='../S/13.html#L491'>buf</a>               491 ssrp.c                                         &amp;buf, sizeof(buf), NULL, _TRUE);</span>
+<span class='curline'><a href='../S/15.html#L27'>buf</a>                27 ssrp_skel.c    static _SINT stHdlDeallocate_(TransactionState_ st, _UBYTE* buf);</span>
+<span class='curline'><a href='../S/15.html#L28'>buf</a>                28 ssrp_skel.c    static _SINT stHdlDisconnect_(TransactionState_ st, _UBYTE* buf);</span>
+<span class='curline'><a href='../S/15.html#L29'>buf</a>                29 ssrp_skel.c    static _SINT stHdlConnect_(TransactionState_ st, _UBYTE* buf);</span>
+<span class='curline'><a href='../S/15.html#L32'>buf</a>                32 ssrp_skel.c                                                         _UBYTE* buf) = {</span>
+<span class='curline'><a href='../S/15.html#L84'>buf</a>                84 ssrp_skel.c    _SINT SSRP_SKEL_read(_UBYTE* buf, _UBYTE size, _BOOL sync, _SINT tmo_ms)</span>
+<span class='curline'><a href='../S/15.html#L89'>buf</a>                89 ssrp_skel.c        _assert(buf);</span>
+<span class='curline'><a href='../S/15.html#L91'>buf</a>                91 ssrp_skel.c        rsize = state_handlers_[current_state_](trst, buf);</span>
+<span class='curline'><a href='../S/15.html#L104'>buf</a>               104 ssrp_skel.c    static _SINT stHdlDeallocate_(TransactionState_ st, _UBYTE* buf)</span>
+<span class='curline'><a href='../S/15.html#L113'>buf</a>               113 ssrp_skel.c            *buf = SSRP_VAL_PREAMBLE;</span>
+<span class='curline'><a href='../S/15.html#L125'>buf</a>               125 ssrp_skel.c            _memcpy(buf, &amp;header_, sizeof(header_));</span>
+<span class='curline'><a href='../S/15.html#L130'>buf</a>               130 ssrp_skel.c            *buf = 0;</span>
+<span class='curline'><a href='../S/15.html#L143'>buf</a>               143 ssrp_skel.c    static _SINT stHdlDisconnect_(TransactionState_ st, _UBYTE* buf)</span>
+<span class='curline'><a href='../S/15.html#L154'>buf</a>               154 ssrp_skel.c            *buf = SSRP_VAL_PREAMBLE;</span>
+<span class='curline'><a href='../S/15.html#L159'>buf</a>               159 ssrp_skel.c            p = (SSRP_Header*)buf;</span>
+<span class='curline'><a href='../S/15.html#L176'>buf</a>               176 ssrp_skel.c                *buf = SSRP_CON_BACK;</span>
+<span class='curline'><a href='../S/15.html#L182'>buf</a>               182 ssrp_skel.c                *buf = SSRP_CON_FRONT;</span>
+<span class='curline'><a href='../S/15.html#L196'>buf</a>               196 ssrp_skel.c    static _SINT stHdlConnect_(TransactionState_ st, _UBYTE* buf)</span>
+<span class='curline'><a href='../S/15.html#L204'>buf</a>               204 ssrp_skel.c            *buf = SSRP_VAL_PREAMBLE;</span>
+<span class='curline'><a href='../S/15.html#L209'>buf</a>               209 ssrp_skel.c            p = (SSRP_Header*)buf;</span>
+<span class='curline'><a href='../S/15.html#L224'>buf</a>               224 ssrp_skel.c            *buf = 0;</span>
+</pre>
+</body>
+</html>

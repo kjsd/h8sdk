@@ -1,0 +1,73 @@
+Optimizing Linkage Editor (V.9.02.00.000)         19-Mar-2009 11:09:36
+
+*** Options ***
+
+-subcommand=C:\cygwin\home\minoru\work\h8sdk\build\h8sdk\Release\h8sdk.hlk
+-noprelink
+-form=library
+-nomessage
+-list="C:\cygwin\home\minoru\work\h8sdk\build\h8sdk\Release\h8sdk.lbp"
+-nologo
+-input="C:\cygwin\home\minoru\work\h8sdk\build\h8sdk\Release\adc.obj"
+-input="C:\cygwin\home\minoru\work\h8sdk\build\h8sdk\Release\envelope.obj"
+-input="C:\cygwin\home\minoru\work\h8sdk\build\h8sdk\Release\ifstub.obj"
+-input="C:\cygwin\home\minoru\work\h8sdk\build\h8sdk\Release\ioctl.obj"
+-input="C:\cygwin\home\minoru\work\h8sdk\build\h8sdk\Release\lcd.obj"
+-input="C:\cygwin\home\minoru\work\h8sdk\build\h8sdk\Release\music.obj"
+-input="C:\cygwin\home\minoru\work\h8sdk\build\h8sdk\Release\ps2.obj"
+-input="C:\cygwin\home\minoru\work\h8sdk\build\h8sdk\Release\push_switch.obj"
+-input="C:\cygwin\home\minoru\work\h8sdk\build\h8sdk\Release\sci.obj"
+-input="C:\cygwin\home\minoru\work\h8sdk\build\h8sdk\Release\sound.obj"
+-input="C:\cygwin\home\minoru\work\h8sdk\build\h8sdk\Release\ssrp.obj"
+-input="C:\cygwin\home\minoru\work\h8sdk\build\h8sdk\Release\stdio.obj"
+-input="C:\cygwin\home\minoru\work\h8sdk\build\h8sdk\Release\stdlib.obj"
+-input="C:\cygwin\home\minoru\work\h8sdk\build\h8sdk\Release\string.obj"
+-output="C:\cygwin\home\minoru\work\h8sdk\build\h8sdk\Release\h8sdk.lib"
+-exit
+
+*** Error information ***
+
+** L1200 (W) Backed up file "C:\cygwin\home\minoru\work\h8sdk\build\h8sdk\Release\h8sdk.lib" into "C:\cygwin\home\minoru\work\h8sdk\build\h8sdk\Release\h8sdk.lbk"
+
+*** Library Information ***
+
+LIBRARY NAME=C:\cygwin\home\minoru\work\h8sdk\build\h8sdk\Release\h8sdk.lib
+CPU=H8/300H
+ENDIAN=Big
+ATTRIBUTE=user
+NUMBER OF MODULE=14
+
+*** Library List ***
+
+MODULE    LAST UPDATE
+  SECTION
+    SYMBOL
+
+adc
+          19-Mar-2009 11:09:34
+envelope
+          19-Mar-2009 11:09:35
+ifstub
+          19-Mar-2009 11:09:36
+ioctl
+          19-Mar-2009 11:09:35
+lcd
+          19-Mar-2009 11:09:35
+music
+          19-Mar-2009 11:09:35
+ps2
+          19-Mar-2009 11:09:35
+push_switch
+          19-Mar-2009 11:09:35
+sci
+          19-Mar-2009 11:09:36
+sound
+          19-Mar-2009 11:09:36
+ssrp
+          19-Mar-2009 11:09:36
+stdio
+          19-Mar-2009 11:09:36
+stdlib
+          19-Mar-2009 10:25:58
+string
+          19-Mar-2009 10:25:58

@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>p</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/5.html#L62'>p</a>                  62 lcd.c              _SBYTE* p = str;</span>
+<span class='curline'><a href='../S/5.html#L64'>p</a>                  64 lcd.c              while (*p)</span>
+<span class='curline'><a href='../S/5.html#L66'>p</a>                  66 lcd.c                  _assert(p);</span>
+<span class='curline'><a href='../S/5.html#L68'>p</a>                  68 lcd.c                  if (*p == '\n')</span>
+<span class='curline'><a href='../S/5.html#L74'>p</a>                  74 lcd.c                      writeReg_(*p, SYM_DATA_);</span>
+<span class='curline'><a href='../S/5.html#L81'>p</a>                  81 lcd.c                  p++;</span>
+<span class='curline'><a href='../S/5.html#L84'>p</a>                  84 lcd.c              return p - str;</span>
+<span class='curline'><a href='../S/5.html#L89'>p</a>                  89 lcd.c              _UBYTE* p = data;</span>
+<span class='curline'><a href='../S/5.html#L93'>p</a>                  93 lcd.c                  _assert(p);</span>
+<span class='curline'><a href='../S/5.html#L95'>p</a>                  95 lcd.c                  writeReg_(*p++, SYM_DATA_);</span>
+<span class='curline'><a href='../S/5.html#L102'>p</a>                 102 lcd.c              return p - data;</span>
+<span class='curline'><a href='../S/5.html#L107'>p</a>                 107 lcd.c              _UBYTE* p = buf;</span>
+<span class='curline'><a href='../S/5.html#L111'>p</a>                 111 lcd.c                  _assert(p);</span>
+<span class='curline'><a href='../S/5.html#L113'>p</a>                 113 lcd.c                  *p++ = readReg_(SYM_DATA_);</span>
+<span class='curline'><a href='../S/5.html#L120'>p</a>                 120 lcd.c              return p - buf;</span>
+<span class='curline'><a href='../S/7.html#L401'>p</a>                 401 music.c            MUSIC_Note* p;</span>
+<span class='curline'><a href='../S/9.html#L161'>p</a>                 161 ps2.c              _UBYTE* p = buf;</span>
+<span class='curline'><a href='../S/9.html#L173'>p</a>                 173 ps2.c                  *p++ = rx_buf_[rx_out_];</span>
+<span class='curline'><a href='../S/9.html#L178'>p</a>                 178 ps2.c              return p - buf;</span>
+<span class='curline'><a href='../S/11.html#L94'>p</a>                  94 sci.c              _SBYTE* p = str;</span>
+<span class='curline'><a href='../S/11.html#L96'>p</a>                  96 sci.c              while (*p)</span>
+<span class='curline'><a href='../S/11.html#L103'>p</a>                 103 sci.c                  tx_buf_[tx_in_] = *p++;</span>
+<span class='curline'><a href='../S/11.html#L109'>p</a>                 109 sci.c              return p - str;</span>
+<span class='curline'><a href='../S/11.html#L114'>p</a>                 114 sci.c              _UBYTE* p = data;</span>
+<span class='curline'><a href='../S/11.html#L126'>p</a>                 126 sci.c                  tx_buf_[tx_in_] = *p++;</span>
+<span class='curline'><a href='../S/11.html#L131'>p</a>                 131 sci.c              if (p - data)</span>
+<span class='curline'><a href='../S/11.html#L135'>p</a>                 135 sci.c              return p - data;</span>
+<span class='curline'><a href='../S/12.html#L335'>p</a>                 335 sound.c            SOUND_Envelope* p;</span>
+<span class='curline'><a href='../S/12.html#L337'>p</a>                 337 sound.c            p = (is_reverb_[tone_pos_]) ?</span>
+<span class='curline'><a href='../S/12.html#L340'>p</a>                 340 sound.c            if (p == NULL)</span>
+<span class='curline'><a href='../S/12.html#L349'>p</a>                 349 sound.c                if (evlp_pos_[tone_pos_] &lt; p-&gt;size)</span>
+<span class='curline'><a href='../S/12.html#L351'>p</a>                 351 sound.c                    evlp_ = p-&gt;data[evlp_pos_[tone_pos_]] * volume_;</span>
+<span class='curline'><a href='../S/12.html#L378'>p</a>                 378 sound.c                    if (evlp_pos_[tone_pos_] &lt; p-&gt;size)</span>
+<span class='curline'><a href='../S/12.html#L380'>p</a>                 380 sound.c                        evlp_ = p-&gt;data[evlp_pos_[tone_pos_]] * volume_;</span>
+<span class='curline'><a href='../S/12.html#L389'>p</a>                 389 sound.c                        evlp_ = p-&gt;data[evlp_pos_[tone_pos_]] * volume_;</span>
+<span class='curline'><a href='../S/15.html#L147'>p</a>                 147 ssrp_skel.c        SSRP_Header* p;</span>
+<span class='curline'><a href='../S/15.html#L159'>p</a>                 159 ssrp_skel.c            p = (SSRP_Header*)buf;</span>
+<span class='curline'><a href='../S/15.html#L160'>p</a>                 160 ssrp_skel.c            p-&gt;from = SSRP_SKEL_LOOPBACK_ADDR;</span>
+<span class='curline'><a href='../S/15.html#L161'>p</a>                 161 ssrp_skel.c            p-&gt;to = header_.from;</span>
+<span class='curline'><a href='../S/15.html#L162'>p</a>                 162 ssrp_skel.c            p-&gt;command = SSRP_CMD_JOIN;</span>
+<span class='curline'><a href='../S/15.html#L163'>p</a>                 163 ssrp_skel.c            p-&gt;flag = SSRP_FLG_RES;</span>
+<span class='curline'><a href='../S/15.html#L164'>p</a>                 164 ssrp_skel.c            p-&gt;hop = 0;</span>
+<span class='curline'><a href='../S/15.html#L165'>p</a>                 165 ssrp_skel.c            p-&gt;data_length = 1;</span>
+<span class='curline'><a href='../S/15.html#L166'>p</a>                 166 ssrp_skel.c            p-&gt;cksum = _check_sum(p,</span>
+<span class='curline'><a href='../S/15.html#L167'>p</a>                 167 ssrp_skel.c                                  (sizeof(SSRP_Header) - sizeof(p-&gt;cksum)) /</span>
+<span class='curline'><a href='../S/15.html#L169'>p</a>                 169 ssrp_skel.c            p-&gt;cksum = ~(p-&gt;cksum) + 1;</span>
+<span class='curline'><a href='../S/15.html#L199'>p</a>                 199 ssrp_skel.c        SSRP_Header* p;</span>
+<span class='curline'><a href='../S/15.html#L209'>p</a>                 209 ssrp_skel.c            p = (SSRP_Header*)buf;</span>
+<span class='curline'><a href='../S/15.html#L210'>p</a>                 210 ssrp_skel.c            p-&gt;from = SSRP_SKEL_LOOPBACK_ADDR;</span>
+<span class='curline'><a href='../S/15.html#L211'>p</a>                 211 ssrp_skel.c            p-&gt;to = header_.from;</span>
+<span class='curline'><a href='../S/15.html#L212'>p</a>                 212 ssrp_skel.c            p-&gt;command = SSRP_CMD_EX;</span>
+<span class='curline'><a href='../S/15.html#L213'>p</a>                 213 ssrp_skel.c            p-&gt;flag = SSRP_FLG_EVT;</span>
+<span class='curline'><a href='../S/15.html#L214'>p</a>                 214 ssrp_skel.c            p-&gt;hop = 0;</span>
+<span class='curline'><a href='../S/15.html#L215'>p</a>                 215 ssrp_skel.c            p-&gt;data_length = 1;</span>
+<span class='curline'><a href='../S/15.html#L216'>p</a>                 216 ssrp_skel.c            p-&gt;cksum = _check_sum(p,</span>
+<span class='curline'><a href='../S/15.html#L217'>p</a>                 217 ssrp_skel.c                                  (sizeof(SSRP_Header) - sizeof(p-&gt;cksum)) /</span>
+<span class='curline'><a href='../S/15.html#L219'>p</a>                 219 ssrp_skel.c            p-&gt;cksum = ~(p-&gt;cksum) + 1;</span>
+<span class='curline'><a href='../S/16.html#L47'>p</a>                  47 stdio.c            _UBYTE* p;</span>
+<span class='curline'><a href='../S/16.html#L58'>p</a>                  58 stdio.c            for (p = (_UBYTE*)format; *p; p++)</span>
+<span class='curline'><a href='../S/16.html#L60'>p</a>                  60 stdio.c                if (*p != '%')</span>
+<span class='curline'><a href='../S/16.html#L62'>p</a>                  62 stdio.c                    IFSTUB_getInstance(_STDOUT)-&gt;write(p, 1, _TRUE, -1);</span>
+<span class='curline'><a href='../S/16.html#L66'>p</a>                  66 stdio.c                p++;</span>
+<span class='curline'><a href='../S/16.html#L67'>p</a>                  67 stdio.c                if (*p == '\0') return;</span>
+<span class='curline'><a href='../S/16.html#L71'>p</a>                  71 stdio.c                    if (*p == format_symbols_[i])</span>
+<span class='curline'><a href='../S/16.html#L150'>p</a>                 150 stdio.c            const _UBYTE p = '%';</span>
+<span class='curline'><a href='../S/16.html#L152'>p</a>                 152 stdio.c            IFSTUB_getInstance(_STDOUT)-&gt;write(&amp;p, 1, _TRUE, -1);</span>
+<span class='curline'><a href='../S/17.html#L26'>p</a>                  26 stdlib.c           _UWORD* p = (_UWORD*)ary;</span>
+<span class='curline'><a href='../S/17.html#L31'>p</a>                  31 stdlib.c               sum += *p++;</span>
+<span class='curline'><a href='../S/17.html#L39'>p</a>                  39 stdlib.c           _SBYTE* p = out;</span>
+<span class='curline'><a href='../S/17.html#L49'>p</a>                  49 stdlib.c               *p = 0x30;</span>
+<span class='curline'><a href='../S/17.html#L64'>p</a>                  64 stdlib.c                   *p = tmp | 0x30;</span>
+<span class='curline'><a href='../S/17.html#L65'>p</a>                  65 stdlib.c                   if (*p &gt; 0x39)</span>
+<span class='curline'><a href='../S/17.html#L67'>p</a>                  67 stdlib.c                       *p += 7;</span>
+<span class='curline'><a href='../S/17.html#L70'>p</a>                  70 stdlib.c                   *p++;</span>
+<span class='curline'><a href='../S/17.html#L75'>p</a>                  75 stdlib.c           return p - out;</span>
+<span class='curline'><a href='../S/18.html#L23'>p</a>                  23 string.c           _SBYTE* p;</span>
+<span class='curline'><a href='../S/18.html#L25'>p</a>                  25 string.c           for (p = str; *p; p++);</span>
+<span class='curline'><a href='../S/18.html#L27'>p</a>                  27 string.c           return p - str;</span>
+<span class='curline'><a href='../S/18.html#L45'>p</a>                  45 string.c           _UBYTE* p = (_UBYTE*)dst;</span>
+<span class='curline'><a href='../S/18.html#L50'>p</a>                  50 string.c               *p++ = ch;</span>
+</pre>
+</body>
+</html>

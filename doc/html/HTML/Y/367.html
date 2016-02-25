@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>tones_</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/12.html#L67'>tones_</a>             67 sound.c                _TV.TCORA = tones_[tone_pos_].freq;                             \</span>
+<span class='curline'><a href='../S/12.html#L68'>tones_</a>             68 sound.c                _TV.TCORB = tones_[tone_pos_].freq &gt;&gt; 1;                        \</span>
+<span class='curline'><a href='../S/12.html#L79'>tones_</a>             79 sound.c        static SOUND_Tone tones_[SOUND_MAX_PRONOUNCE] ={</span>
+<span class='curline'><a href='../S/12.html#L146'>tones_</a>            146 sound.c            if (tones_[idx].freq == SOUND_NA)</span>
+<span class='curline'><a href='../S/12.html#L150'>tones_</a>            150 sound.c            tones_[idx] = *tone;</span>
+<span class='curline'><a href='../S/12.html#L165'>tones_</a>            165 sound.c                    evlp_ = tones_[tone_pos_].evlp-&gt;data[evlp_pos_[tone_pos_]] *</span>
+<span class='curline'><a href='../S/12.html#L174'>tones_</a>            174 sound.c                evlp_pos_[idx] = tones_[idx].evlp-&gt;size - 1;</span>
+<span class='curline'><a href='../S/12.html#L177'>tones_</a>            177 sound.c                    evlp_ = tones_[tone_pos_].evlp-&gt;data[evlp_pos_[tone_pos_]] *</span>
+<span class='curline'><a href='../S/12.html#L198'>tones_</a>            198 sound.c            if (tones_[idx].freq == SOUND_NA)</span>
+<span class='curline'><a href='../S/12.html#L208'>tones_</a>            208 sound.c                if (!is_reverb_[idx] &amp;&amp; (tones_[idx].reverb != NULL))</span>
+<span class='curline'><a href='../S/12.html#L304'>tones_</a>            304 sound.c                        if (tones_[tone_pos_].evlp != NULL)</span>
+<span class='curline'><a href='../S/12.html#L338'>tones_</a>            338 sound.c                tones_[tone_pos_].reverb: tones_[tone_pos_].evlp;</span>
+<span class='curline'><a href='../S/12.html#L356'>tones_</a>            356 sound.c                if (!is_reverb_[tone_pos_] &amp;&amp; (tones_[tone_pos_].reverb != NULL))</span>
+<span class='curline'><a href='../S/12.html#L363'>tones_</a>            363 sound.c                    if (tones_[tone_pos_].loop &amp;&amp; !remove_tone_[tone_pos_])</span>
+<span class='curline'><a href='../S/12.html#L395'>tones_</a>            395 sound.c                if (!is_reverb_[tone_pos_] &amp;&amp; (tones_[tone_pos_].reverb != NULL))</span>
+<span class='curline'><a href='../S/12.html#L402'>tones_</a>            402 sound.c                    if (tones_[tone_pos_].loop &amp;&amp; !remove_tone_[tone_pos_])</span>
+<span class='curline'><a href='../S/12.html#L404'>tones_</a>            404 sound.c                        evlp_pos_[tone_pos_] = tones_[tone_pos_].evlp-&gt;size - 1;</span>
+<span class='curline'><a href='../S/12.html#L425'>tones_</a>            425 sound.c            _assert((tones_[idx].freq != SOUND_NA) &amp;&amp;</span>
+<span class='curline'><a href='../S/12.html#L426'>tones_</a>            426 sound.c                        (tones_[idx].evlp != NULL));</span>
+<span class='curline'><a href='../S/12.html#L430'>tones_</a>            430 sound.c            tones_[idx].freq = SOUND_NA;</span>
+<span class='curline'><a href='../S/12.html#L431'>tones_</a>            431 sound.c            tones_[idx].evlp = NULL;</span>
+<span class='curline'><a href='../S/12.html#L432'>tones_</a>            432 sound.c            tones_[idx].reverb = NULL;</span>
+<span class='curline'><a href='../S/12.html#L433'>tones_</a>            433 sound.c            tones_[idx].loop = _FALSE;</span>
+<span class='curline'><a href='../S/12.html#L442'>tones_</a>            442 sound.c                    if (tones_[i].evlp != NULL)</span>
+</pre>
+</body>
+</html>

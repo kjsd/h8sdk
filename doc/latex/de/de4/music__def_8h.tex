@@ -1,0 +1,65 @@
+\subsection{src/music\+\_\+def.h ファイル}
+\label{music__def_8h}\index{src/music\+\_\+def.\+h@{src/music\+\_\+def.\+h}}
+
+
+楽曲演奏モジュールの内部設計  
+
+
+{\ttfamily \#include \char`\"{}../include/h8sdk/stddef.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../include/h8sdk/stdlib.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../include/h8sdk/assert.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../include/h8sdk/string.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../include/h8sdk/envelope.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../include/h8sdk/music.\+h\char`\"{}}\\*
+music\+\_\+def.\+h の依存先関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{db/d44/music__def_8h__incl}
+\end{center}
+\end{figure}
+\subsubsection*{マクロ定義}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{music__def_8h_aee4ffe661b1b7158886542196a3d060d_aee4ffe661b1b7158886542196a3d060d}{P\+A\+R\+T\+\_\+}(x)~(score\+\_\+-\/$>$parts\mbox{[}(x)\mbox{]})
+\begin{DoxyCompactList}\small\item\em 再生パートデータ取得 \end{DoxyCompactList}\item 
+\#define \hyperlink{music__def_8h_a00d986cb49450423a34e06c798b9e18c_a00d986cb49450423a34e06c798b9e18c}{N\+O\+T\+E\+\_\+}(x)~(\hyperlink{music__def_8h_aee4ffe661b1b7158886542196a3d060d_aee4ffe661b1b7158886542196a3d060d}{P\+A\+R\+T\+\_\+}(x).notes\mbox{[}position\+\_\+.\+note\mbox{[}(x)\mbox{]}\mbox{]})
+\begin{DoxyCompactList}\small\item\em 再生音データ取得 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{詳解}
+楽曲演奏モジュールの内部設計 
+
+ 
+
+\subsubsection{マクロ定義詳解}
+\index{music\+\_\+def.\+h@{music\+\_\+def.\+h}!P\+A\+R\+T\+\_\+@{P\+A\+R\+T\+\_\+}}
+\index{P\+A\+R\+T\+\_\+@{P\+A\+R\+T\+\_\+}!music\+\_\+def.\+h@{music\+\_\+def.\+h}}
+\paragraph[{P\+A\+R\+T\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+A\+R\+T\+\_\+(
+\begin{DoxyParamCaption}
+\item[{}]{x}
+\end{DoxyParamCaption}
+)~(score\+\_\+-\/$>$parts\mbox{[}(x)\mbox{]})}\label{music__def_8h_aee4ffe661b1b7158886542196a3d060d_aee4ffe661b1b7158886542196a3d060d}
+
+
+再生パートデータ取得 
+
+
+
+ music\+\_\+def.\+h の 30 行目に定義があります。
+
+\index{music\+\_\+def.\+h@{music\+\_\+def.\+h}!N\+O\+T\+E\+\_\+@{N\+O\+T\+E\+\_\+}}
+\index{N\+O\+T\+E\+\_\+@{N\+O\+T\+E\+\_\+}!music\+\_\+def.\+h@{music\+\_\+def.\+h}}
+\paragraph[{N\+O\+T\+E\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}\#define N\+O\+T\+E\+\_\+(
+\begin{DoxyParamCaption}
+\item[{}]{x}
+\end{DoxyParamCaption}
+)~({\bf P\+A\+R\+T\+\_\+}(x).notes\mbox{[}position\+\_\+.\+note\mbox{[}(x)\mbox{]}\mbox{]})}\label{music__def_8h_a00d986cb49450423a34e06c798b9e18c_a00d986cb49450423a34e06c798b9e18c}
+
+
+再生音データ取得 
+
+
+
+ music\+\_\+def.\+h の 32 行目に定義があります。
+

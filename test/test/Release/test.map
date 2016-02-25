@@ -1,0 +1,25 @@
+Optimizing Linkage Editor (V.9.04.01.000)         18-Mar-2009 16:13:44
+
+*** Options ***
+
+-subcommand=C:\cygwin\home\minoru\work\h8sdk\test\test\Release\test.hlk
+-noprelink
+-nodebug
+-rom=D=R
+-nomessage
+-list="C:\cygwin\home\minoru\work\h8sdk\test\test\Release\test.map"
+-nooptimize
+-start=PResetPRG,PIntPRG/0400,P,C,C$DSEC,C$BSEC,D/0800,B,R/0FB80,S/0FE80
+-nologo
+-input="C:\cygwin\home\minoru\work\h8sdk\test\test\Release\dbsct.obj"
+-input="C:\cygwin\home\minoru\work\h8sdk\test\test\Release\intprg.obj"
+-input="C:\cygwin\home\minoru\work\h8sdk\test\test\Release\resetprg.obj"
+-input="C:\cygwin\home\minoru\work\h8sdk\test\test\Release\test.obj"
+-library="C:\cygwin\home\minoru\work\h8sdk\test\..\build\h8sdk\Release\h8sdk.lib"
+-library="C:\cygwin\home\minoru\work\h8sdk\test\test\Release\test.lib"
+-output="C:\cygwin\home\minoru\work\h8sdk\test\test\Release\test.abs"
+-end
+
+*** Error information ***
+
+** L3100 (F) Section address overflow out of range : "R"

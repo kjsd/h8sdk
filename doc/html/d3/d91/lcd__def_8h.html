@@ -1,0 +1,161 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.10"/>
+<title>H8SDK: src/lcd_def.h ファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">H8SDK
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.10 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="../../index.html"><span>総合概要</span></a></li>
+      <li><a href="../../annotated.html"><span>クラス</span></a></li>
+      <li class="current"><a href="../../files.html"><span>ファイル</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="../../files.html"><span>ファイル一覧</span></a></li>
+      <li><a href="../../globals.html"><span>ファイルメンバ</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('d3/d91/lcd__def_8h.html','../../');});
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#define-members">マクロ定義</a> &#124;
+<a href="#enum-members">列挙型</a>  </div>
+  <div class="headertitle">
+<div class="title">lcd_def.h ファイル</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>LCDドライバ内部構造  
+<a href="#details">[詳解]</a></p>
+<div class="textblock"><code>#include &quot;../include/h8sdk/stdlib.h&quot;</code><br />
+<code>#include &quot;../include/h8sdk/3694s.h&quot;</code><br />
+<code>#include &quot;../include/h8sdk/ioctl.h&quot;</code><br />
+<code>#include &quot;../include/h8sdk/assert.h&quot;</code><br />
+<code>#include &quot;../include/h8sdk/lcd.h&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+lcd_def.h の依存先関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dd/de3/lcd__def_8h__incl.png" border="0" usemap="#src_2lcd__def_8h" alt=""/></div>
+</div>
+</div>
+<p><a href="../../d3/d91/lcd__def_8h_source.html">[ソースコード]</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+マクロ定義</h2></td></tr>
+<tr class="memitem:aa18b7c557b2b495f552189b74340f7a1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d91/lcd__def_8h_aa18b7c557b2b495f552189b74340f7a1.html#aa18b7c557b2b495f552189b74340f7a1">REG_RS_</a>&#160;&#160;&#160;_IO.PDR1.BIT.B0</td></tr>
+<tr class="memdesc:aa18b7c557b2b495f552189b74340f7a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">レジスタのRSフラグ  <a href="../../d3/d91/lcd__def_8h_aa18b7c557b2b495f552189b74340f7a1.html#aa18b7c557b2b495f552189b74340f7a1">[詳解]</a><br /></td></tr>
+<tr class="separator:aa18b7c557b2b495f552189b74340f7a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8bbcd8783d3c1fb361aaafc6da6c1c6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d91/lcd__def_8h_ac8bbcd8783d3c1fb361aaafc6da6c1c6.html#ac8bbcd8783d3c1fb361aaafc6da6c1c6">REG_RW_</a>&#160;&#160;&#160;_IO.PDR1.BIT.B1</td></tr>
+<tr class="memdesc:ac8bbcd8783d3c1fb361aaafc6da6c1c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">レジスタのRWフラグ  <a href="../../d3/d91/lcd__def_8h_ac8bbcd8783d3c1fb361aaafc6da6c1c6.html#ac8bbcd8783d3c1fb361aaafc6da6c1c6">[詳解]</a><br /></td></tr>
+<tr class="separator:ac8bbcd8783d3c1fb361aaafc6da6c1c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a450bb88fc561fac83cf5bbd024ce9747"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d91/lcd__def_8h_a450bb88fc561fac83cf5bbd024ce9747.html#a450bb88fc561fac83cf5bbd024ce9747">REG_E_</a>&#160;&#160;&#160;_IO.PDR1.BIT.B2</td></tr>
+<tr class="memdesc:a450bb88fc561fac83cf5bbd024ce9747"><td class="mdescLeft">&#160;</td><td class="mdescRight">レジスタのEフラグ  <a href="../../d3/d91/lcd__def_8h_a450bb88fc561fac83cf5bbd024ce9747.html#a450bb88fc561fac83cf5bbd024ce9747">[詳解]</a><br /></td></tr>
+<tr class="separator:a450bb88fc561fac83cf5bbd024ce9747"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a777575796174476e6a20bed751e7b143"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d91/lcd__def_8h_a777575796174476e6a20bed751e7b143.html#a777575796174476e6a20bed751e7b143">REG_DATA_</a>&#160;&#160;&#160;_IO.PDR5.BYTE</td></tr>
+<tr class="memdesc:a777575796174476e6a20bed751e7b143"><td class="mdescLeft">&#160;</td><td class="mdescRight">データレジスタ  <a href="../../d3/d91/lcd__def_8h_a777575796174476e6a20bed751e7b143.html#a777575796174476e6a20bed751e7b143">[詳解]</a><br /></td></tr>
+<tr class="separator:a777575796174476e6a20bed751e7b143"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afad612e1d187e74acde49431c5f7e8d1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d91/lcd__def_8h_afad612e1d187e74acde49431c5f7e8d1.html#afad612e1d187e74acde49431c5f7e8d1">FLG_WRITE_</a>&#160;&#160;&#160;0</td></tr>
+<tr class="memdesc:afad612e1d187e74acde49431c5f7e8d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">レジスタ書き込みを表すリテラル  <a href="../../d3/d91/lcd__def_8h_afad612e1d187e74acde49431c5f7e8d1.html#afad612e1d187e74acde49431c5f7e8d1">[詳解]</a><br /></td></tr>
+<tr class="separator:afad612e1d187e74acde49431c5f7e8d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36018355603fcc742f68a89ffadbebff"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d91/lcd__def_8h_a36018355603fcc742f68a89ffadbebff.html#a36018355603fcc742f68a89ffadbebff">FLG_READ_</a>&#160;&#160;&#160;1</td></tr>
+<tr class="memdesc:a36018355603fcc742f68a89ffadbebff"><td class="mdescLeft">&#160;</td><td class="mdescRight">レジスタ読み込みを表すリテラル  <a href="../../d3/d91/lcd__def_8h_a36018355603fcc742f68a89ffadbebff.html#a36018355603fcc742f68a89ffadbebff">[詳解]</a><br /></td></tr>
+<tr class="separator:a36018355603fcc742f68a89ffadbebff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9100335c5d732aad2e1b5182b6c7faf3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d91/lcd__def_8h_a9100335c5d732aad2e1b5182b6c7faf3.html#a9100335c5d732aad2e1b5182b6c7faf3">FLG_BUSY_</a>&#160;&#160;&#160;0x80</td></tr>
+<tr class="memdesc:a9100335c5d732aad2e1b5182b6c7faf3"><td class="mdescLeft">&#160;</td><td class="mdescRight">ビジー状態  <a href="../../d3/d91/lcd__def_8h_a9100335c5d732aad2e1b5182b6c7faf3.html#a9100335c5d732aad2e1b5182b6c7faf3">[詳解]</a><br /></td></tr>
+<tr class="separator:a9100335c5d732aad2e1b5182b6c7faf3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4591d8d08f59c8a79670f263ad94797"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d91/lcd__def_8h_af4591d8d08f59c8a79670f263ad94797.html#af4591d8d08f59c8a79670f263ad94797">FLG_CGRAM_</a>&#160;&#160;&#160;0x40</td></tr>
+<tr class="separator:af4591d8d08f59c8a79670f263ad94797"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6f68567aec0375dc1de52a4a63723b5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d91/lcd__def_8h_af6f68567aec0375dc1de52a4a63723b5.html#af6f68567aec0375dc1de52a4a63723b5">FLG_DDRAM_</a>&#160;&#160;&#160;0x80</td></tr>
+<tr class="separator:af6f68567aec0375dc1de52a4a63723b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5acf862063659f53ff393baf0a3c084c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d91/lcd__def_8h_a5acf862063659f53ff393baf0a3c084c.html#a5acf862063659f53ff393baf0a3c084c">CTRL_IN_</a>&#160;&#160;&#160;IOCTL_set(IOCTL_REG_PCR1, 0x07, 0)</td></tr>
+<tr class="memdesc:a5acf862063659f53ff393baf0a3c084c"><td class="mdescLeft">&#160;</td><td class="mdescRight">LCDコントロールレジスタのポート設定にアクセス  <a href="../../d3/d91/lcd__def_8h_a5acf862063659f53ff393baf0a3c084c.html#a5acf862063659f53ff393baf0a3c084c">[詳解]</a><br /></td></tr>
+<tr class="separator:a5acf862063659f53ff393baf0a3c084c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a700244d375fe1b64b6403beed6f3d07e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d91/lcd__def_8h_a700244d375fe1b64b6403beed6f3d07e.html#a700244d375fe1b64b6403beed6f3d07e">CTRL_OUT_</a>&#160;&#160;&#160;IOCTL_set(IOCTL_REG_PCR1, 0x07, 0x07)</td></tr>
+<tr class="separator:a700244d375fe1b64b6403beed6f3d07e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93040b09391e6633c7229744479c0648"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d91/lcd__def_8h_a93040b09391e6633c7229744479c0648.html#a93040b09391e6633c7229744479c0648">DATA_IN_</a>&#160;&#160;&#160;IOCTL_set(IOCTL_REG_PCR5, 0xff, 0)</td></tr>
+<tr class="memdesc:a93040b09391e6633c7229744479c0648"><td class="mdescLeft">&#160;</td><td class="mdescRight">LCDデータレジスタのポート設定にアクセス  <a href="../../d3/d91/lcd__def_8h_a93040b09391e6633c7229744479c0648.html#a93040b09391e6633c7229744479c0648">[詳解]</a><br /></td></tr>
+<tr class="separator:a93040b09391e6633c7229744479c0648"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7fae5e07acd0bb4bfa6786ccbc5d964b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d91/lcd__def_8h_a7fae5e07acd0bb4bfa6786ccbc5d964b.html#a7fae5e07acd0bb4bfa6786ccbc5d964b">DATA_OUT_</a>&#160;&#160;&#160;IOCTL_set(IOCTL_REG_PCR5, 0xff, 0xff)</td></tr>
+<tr class="separator:a7fae5e07acd0bb4bfa6786ccbc5d964b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+列挙型</h2></td></tr>
+<tr class="memitem:a409a9c208df333e5f6cf67c0866df0df"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d91/lcd__def_8h_a409a9c208df333e5f6cf67c0866df0df.html#a409a9c208df333e5f6cf67c0866df0df">Registor_</a> { <br />
+&#160;&#160;<a class="el" href="../../d3/d91/lcd__def_8h_a409a9c208df333e5f6cf67c0866df0df.html#a409a9c208df333e5f6cf67c0866df0dfac4d4880849422ed699296cb735855884">SYM_INST_</a> = 0, 
+<br />
+&#160;&#160;<a class="el" href="../../d3/d91/lcd__def_8h_a409a9c208df333e5f6cf67c0866df0df.html#a409a9c208df333e5f6cf67c0866df0dfaef83c96025f52216a682cc3d05b255cf">SYM_DATA_</a> = 1
+<br />
+ }<tr class="separator:a409a9c208df333e5f6cf67c0866df0df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>LCDドライバ内部構造 </p>
+<p>このファイルにはLCDドライバモジュールの内部構造が定義されている。</p>
+<p> 
+@version $Id:$
+
+@author Kenji MINOURA / kenji@kandj.org
+
+Copyright (c) 2008 K&J Software Design, Ltd All rights reserved.
+ </p>
+
+<p> <a class="el" href="../../d3/d91/lcd__def_8h_source.html">lcd_def.h</a> に定義があります。</p>
+</div></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="../../d3/d91/lcd__def_8h.html">lcd_def.h</a></li>
+    <li class="footer">2016年02月25日(木) 23時29分09秒作成 - H8SDK / 構成: 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.10 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>i</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/4.html#L36'>i</a>                  36 ioctl.c            _SINT i;</span>
+<span class='curline'><a href='../S/4.html#L37'>i</a>                  37 ioctl.c            for (i = 0; i &lt; IOCTL_NUM_OF_REG; i++)</span>
+<span class='curline'><a href='../S/4.html#L39'>i</a>                  39 ioctl.c                pcr_[i].val = 0;</span>
+<span class='curline'><a href='../S/4.html#L40'>i</a>                  40 ioctl.c                *(pcr_[i].addr) = 0;</span>
+<span class='curline'><a href='../S/5.html#L161'>i</a>                 161 lcd.c              _UINT i;</span>
+<span class='curline'><a href='../S/5.html#L167'>i</a>                 167 lcd.c              for (i = 0; i &lt; LCD_CG_ROWS; i++)</span>
+<span class='curline'><a href='../S/5.html#L169'>i</a>                 169 lcd.c                  writeReg_(no | (i &amp; (LCD_CG_ROWS - 1)) | FLG_CGRAM_, SYM_INST_);</span>
+<span class='curline'><a href='../S/7.html#L137'>i</a>                 137 music.c            _SINT i, j;</span>
+<span class='curline'><a href='../S/7.html#L147'>i</a>                 147 music.c                for (i = 0; i &lt; score_-&gt;size; i++)</span>
+<span class='curline'><a href='../S/7.html#L149'>i</a>                 149 music.c                    position_.note[i] = PART_(i).size - 1;</span>
+<span class='curline'><a href='../S/7.html#L150'>i</a>                 150 music.c                    if (position_.count &lt; (NOTE_(i).begin + NOTE_(i).len))</span>
+<span class='curline'><a href='../S/7.html#L152'>i</a>                 152 music.c                        position_.count = (NOTE_(i).begin + NOTE_(i).len);</span>
+<span class='curline'><a href='../S/7.html#L175'>i</a>                 175 music.c            _SINT i;</span>
+<span class='curline'><a href='../S/7.html#L181'>i</a>                 181 music.c            for (i = 0; i &lt; score_-&gt;size; i++)</span>
+<span class='curline'><a href='../S/7.html#L183'>i</a>                 183 music.c                SOUND_removeTone(i);</span>
+<span class='curline'><a href='../S/7.html#L221'>i</a>                 221 music.c            _SINT i;</span>
+<span class='curline'><a href='../S/7.html#L225'>i</a>                 225 music.c            for (i = 0; i &lt; score_-&gt;size; i++)</span>
+<span class='curline'><a href='../S/7.html#L227'>i</a>                 227 music.c                if (part_finish_ &amp; (1U &lt;&lt; i)) continue;</span>
+<span class='curline'><a href='../S/7.html#L229'>i</a>                 229 music.c                if (part_pronounce_ &amp; (1U &lt;&lt; i))</span>
+<span class='curline'><a href='../S/7.html#L232'>i</a>                 232 music.c                    while (position_.count &gt; (NOTE_(i).begin + NOTE_(i).len))</span>
+<span class='curline'><a href='../S/7.html#L234'>i</a>                 234 music.c                        if (++position_.note[i] == PART_(i).size)</span>
+<span class='curline'><a href='../S/7.html#L236'>i</a>                 236 music.c                            part_finish_ |= (1U &lt;&lt; i);</span>
+<span class='curline'><a href='../S/7.html#L237'>i</a>                 237 music.c                            SOUND_removeTone(i);</span>
+<span class='curline'><a href='../S/7.html#L245'>i</a>                 245 music.c                    if (position_.count &gt;= NOTE_(i).begin)</span>
+<span class='curline'><a href='../S/7.html#L247'>i</a>                 247 music.c                        if (NOTE_(i).tone.freq == SOUND_NA)</span>
+<span class='curline'><a href='../S/7.html#L249'>i</a>                 249 music.c                            SOUND_removeTone(i);</span>
+<span class='curline'><a href='../S/7.html#L253'>i</a>                 253 music.c                            SOUND_setTone(i, &amp;NOTE_(i).tone);</span>
+<span class='curline'><a href='../S/7.html#L258'>i</a>                 258 music.c                        SOUND_removeTone(i);</span>
+<span class='curline'><a href='../S/7.html#L259'>i</a>                 259 music.c                        part_pronounce_ &amp;= ~(1U &lt;&lt; i);</span>
+<span class='curline'><a href='../S/7.html#L264'>i</a>                 264 music.c                    if (position_.count &gt;= NOTE_(i).begin)</span>
+<span class='curline'><a href='../S/7.html#L266'>i</a>                 266 music.c                        if (NOTE_(i).tone.freq != SOUND_NA)</span>
+<span class='curline'><a href='../S/7.html#L268'>i</a>                 268 music.c                            SOUND_setTone(i, &amp;NOTE_(i).tone);</span>
+<span class='curline'><a href='../S/7.html#L270'>i</a>                 270 music.c                        part_pronounce_ |= (1U &lt;&lt; i);</span>
+<span class='curline'><a href='../S/7.html#L280'>i</a>                 280 music.c            _SINT i;</span>
+<span class='curline'><a href='../S/7.html#L284'>i</a>                 284 music.c            for (i = 0; i &lt; score_-&gt;size; i++)</span>
+<span class='curline'><a href='../S/7.html#L286'>i</a>                 286 music.c                if (part_finish_ &amp; (1U &lt;&lt; i)) continue;</span>
+<span class='curline'><a href='../S/7.html#L288'>i</a>                 288 music.c                if (part_pronounce_ &amp; (1U &lt;&lt; i))</span>
+<span class='curline'><a href='../S/7.html#L291'>i</a>                 291 music.c                    while (position_.count &lt;= NOTE_(i).begin)</span>
+<span class='curline'><a href='../S/7.html#L293'>i</a>                 293 music.c                        if (position_.note[i]-- == 0)</span>
+<span class='curline'><a href='../S/7.html#L295'>i</a>                 295 music.c                            part_finish_ |= (1U &lt;&lt; i);</span>
+<span class='curline'><a href='../S/7.html#L296'>i</a>                 296 music.c                            SOUND_removeTone(i);</span>
+<span class='curline'><a href='../S/7.html#L304'>i</a>                 304 music.c                    if (position_.count &lt;= (NOTE_(i).begin + NOTE_(i).len))</span>
+<span class='curline'><a href='../S/7.html#L306'>i</a>                 306 music.c                        if (NOTE_(i).tone.freq == SOUND_NA)</span>
+<span class='curline'><a href='../S/7.html#L308'>i</a>                 308 music.c                            SOUND_removeTone(i);</span>
+<span class='curline'><a href='../S/7.html#L312'>i</a>                 312 music.c                            SOUND_setTone(i, &amp;NOTE_(i).tone);</span>
+<span class='curline'><a href='../S/7.html#L317'>i</a>                 317 music.c                        SOUND_removeTone(i);</span>
+<span class='curline'><a href='../S/7.html#L318'>i</a>                 318 music.c                        part_pronounce_ &amp;= ~(1U &lt;&lt; i);</span>
+<span class='curline'><a href='../S/7.html#L323'>i</a>                 323 music.c                    if (position_.count &lt;= (NOTE_(i).begin + NOTE_(i).len))</span>
+<span class='curline'><a href='../S/7.html#L325'>i</a>                 325 music.c                        if (NOTE_(i).tone.freq != SOUND_NA)</span>
+<span class='curline'><a href='../S/7.html#L327'>i</a>                 327 music.c                            SOUND_setTone(i, &amp;NOTE_(i).tone);</span>
+<span class='curline'><a href='../S/7.html#L329'>i</a>                 329 music.c                        part_pronounce_ |= (1U &lt;&lt; i);</span>
+<span class='curline'><a href='../S/7.html#L345'>i</a>                 345 music.c            _SINT i;</span>
+<span class='curline'><a href='../S/7.html#L358'>i</a>                 358 music.c            for (i = 0; i &lt; _sizeof_array(rec_parts_); i++)</span>
+<span class='curline'><a href='../S/7.html#L360'>i</a>                 360 music.c                rec_parts_[i].notes = rec_notes_[i];</span>
+<span class='curline'><a href='../S/7.html#L361'>i</a>                 361 music.c                rec_parts_[i].size = 0;</span>
+<span class='curline'><a href='../S/7.html#L413'>i</a>                 413 music.c            _SINT i;</span>
+<span class='curline'><a href='../S/7.html#L486'>i</a>                 486 music.c            _SINT i;</span>
+<span class='curline'><a href='../S/7.html#L490'>i</a>                 490 music.c            for (i = 0; i &lt; _sizeof_array(rec_param_); i++)</span>
+<span class='curline'><a href='../S/7.html#L492'>i</a>                 492 music.c                if (rec_param_[i].reqid != MUSIC_RECREQID_INVALID)</span>
+<span class='curline'><a href='../S/7.html#L494'>i</a>                 494 music.c                    rec_notes_[rec_param_[i].part_idx][rec_param_[i].note_idx].len++;</span>
+<span class='curline'><a href='../S/10.html#L45'>i</a>                  45 push_switch.c      _SINT i;</span>
+<span class='curline'><a href='../S/11.html#L140'>i</a>                 140 sci.c              _SINT i;</span>
+<span class='curline'><a href='../S/11.html#L142'>i</a>                 142 sci.c              for (i = 0; i &lt; size; i++)</span>
+<span class='curline'><a href='../S/11.html#L157'>i</a>                 157 sci.c              return i;</span>
+<span class='curline'><a href='../S/12.html#L194'>i</a>                 194 sound.c            _SINT i;</span>
+<span class='curline'><a href='../S/12.html#L227'>i</a>                 227 sound.c            _SINT i;</span>
+<span class='curline'><a href='../S/12.html#L241'>i</a>                 241 sound.c            _SINT i;</span>
+<span class='curline'><a href='../S/12.html#L255'>i</a>                 255 sound.c            _SINT i;</span>
+<span class='curline'><a href='../S/12.html#L300'>i</a>                 300 sound.c                    _SINT i;</span>
+<span class='curline'><a href='../S/12.html#L301'>i</a>                 301 sound.c                    for (i = 0; i &lt; SOUND_MAX_PRONOUNCE; i++)</span>
+<span class='curline'><a href='../S/12.html#L438'>i</a>                 438 sound.c                _SINT i;</span>
+<span class='curline'><a href='../S/12.html#L440'>i</a>                 440 sound.c                for (i = 0; i &lt; SOUND_MAX_PRONOUNCE; i++)</span>
+<span class='curline'><a href='../S/12.html#L442'>i</a>                 442 sound.c                    if (tones_[i].evlp != NULL)</span>
+<span class='curline'><a href='../S/12.html#L444'>i</a>                 444 sound.c                        tone_pos_ = i;</span>
+<span class='curline'><a href='../S/13.html#L83'>i</a>                  83 ssrp.c             _SINT i;</span>
+<span class='curline'><a href='../S/13.html#L88'>i</a>                  88 ssrp.c             for (i = 0; i &lt; SSRP_MAX_NODE; i++)</span>
+<span class='curline'><a href='../S/13.html#L90'>i</a>                  90 ssrp.c                 pear_.addr[i] = SSRP_ADDR_INVALID;</span>
+<span class='curline'><a href='../S/13.html#L92'>i</a>                  92 ssrp.c             for (i = 0; i &lt; SSRP_NUM_OF_CON; i++)</span>
+<span class='curline'><a href='../S/13.html#L94'>i</a>                  94 ssrp.c                 pear_.con[i] = SSRP_ADDR_INVALID;</span>
+<span class='curline'><a href='../S/13.html#L110'>i</a>                 110 ssrp.c             _UBYTE i = 0;</span>
+<span class='curline'><a href='../S/13.html#L114'>i</a>                 114 ssrp.c             for (i = 0; i &lt; SSRP_MAX_NODE; i++)</span>
+<span class='curline'><a href='../S/13.html#L116'>i</a>                 116 ssrp.c                 if (pear_.addr[i] != SSRP_ADDR_INVALID)</span>
+<span class='curline'><a href='../S/13.html#L120'>i</a>                 120 ssrp.c                         rtn = pear_.addr[i];</span>
+<span class='curline'><a href='../S/13.html#L145'>i</a>                 145 ssrp.c             _SINT i;</span>
+<span class='curline'><a href='../S/13.html#L150'>i</a>                 150 ssrp.c             for (i = trx_[SSRP_TRX_SEND].state; i &lt; NUM_OF_TRXST_; i++)</span>
+<span class='curline'><a href='../S/13.html#L152'>i</a>                 152 ssrp.c                 switch (i)</span>
+<span class='curline'><a href='../S/13.html#L186'>i</a>                 186 ssrp.c             if (i &gt; TRXST_DATA_)</span>
+<span class='curline'><a href='../S/13.html#L193'>i</a>                 193 ssrp.c                 trx_[SSRP_TRX_SEND].state = i;</span>
+<span class='curline'><a href='../S/13.html#L303'>i</a>                 303 ssrp.c             _SINT i;</span>
+<span class='curline'><a href='../S/13.html#L308'>i</a>                 308 ssrp.c             for (i = trx_[SSRP_TRX_RECV].state; i &lt; NUM_OF_TRXST_; i++)</span>
+<span class='curline'><a href='../S/13.html#L310'>i</a>                 310 ssrp.c                 switch (i)</span>
+<span class='curline'><a href='../S/13.html#L353'>i</a>                 353 ssrp.c             if (i &gt; TRXST_DATA_)</span>
+<span class='curline'><a href='../S/13.html#L360'>i</a>                 360 ssrp.c                 trx_[SSRP_TRX_RECV].state = i;</span>
+<span class='curline'><a href='../S/13.html#L398'>i</a>                 398 ssrp.c             _SINT i;</span>
+<span class='curline'><a href='../S/13.html#L416'>i</a>                 416 ssrp.c                 for (i = 0; i &lt; SSRP_NUM_OF_CON; i++)</span>
+<span class='curline'><a href='../S/13.html#L418'>i</a>                 418 ssrp.c                     if (pear_.con[i] == SSRP_ADDR_INVALID)</span>
+<span class='curline'><a href='../S/13.html#L438'>i</a>                 438 ssrp.c             _SINT i;</span>
+<span class='curline'><a href='../S/13.html#L444'>i</a>                 444 ssrp.c                 for (i = 0; i &lt; SSRP_MAX_NODE; i++)</span>
+<span class='curline'><a href='../S/13.html#L446'>i</a>                 446 ssrp.c                     pear_.addr[i] = SSRP_ADDR_INVALID;</span>
+<span class='curline'><a href='../S/13.html#L448'>i</a>                 448 ssrp.c                 for (i = 0; i &lt; SSRP_NUM_OF_CON; i++)</span>
+<span class='curline'><a href='../S/13.html#L450'>i</a>                 450 ssrp.c                     pear_.con[i] = SSRP_ADDR_INVALID;</span>
+<span class='curline'><a href='../S/13.html#L501'>i</a>                 501 ssrp.c                 _SINT i;</span>
+<span class='curline'><a href='../S/13.html#L503'>i</a>                 503 ssrp.c                 for (i = 0; i &lt; SSRP_NUM_OF_CON; i++)</span>
+<span class='curline'><a href='../S/13.html#L505'>i</a>                 505 ssrp.c                     if (pear_.con[i] == trx_[SSRP_TRX_RECV].header.from)</span>
+<span class='curline'><a href='../S/13.html#L507'>i</a>                 507 ssrp.c                         pear_.con[i] = SSRP_ADDR_INVALID;</span>
+<span class='curline'><a href='../S/13.html#L519'>i</a>                 519 ssrp.c             _SINT i = SSRP_MAX_NODE;</span>
+<span class='curline'><a href='../S/13.html#L521'>i</a>                 521 ssrp.c             while (i--)</span>
+<span class='curline'><a href='../S/13.html#L538'>i</a>                 538 ssrp.c             _SINT i = SSRP_MAX_NODE;</span>
+<span class='curline'><a href='../S/13.html#L540'>i</a>                 540 ssrp.c             while (i--)</span>
+<span class='curline'><a href='../S/13.html#L563'>i</a>                 563 ssrp.c             _SINT i = SSRP_MAX_NODE;</span>
+<span class='curline'><a href='../S/13.html#L565'>i</a>                 565 ssrp.c             while (i--)</span>
+<span class='curline'><a href='../S/16.html#L49'>i</a>                  49 stdio.c            _SINT i;</span>
+<span class='curline'><a href='../S/16.html#L69'>i</a>                  69 stdio.c                for (i = 0; i &lt; sizeof(format_symbols_); i++)</span>
+<span class='curline'><a href='../S/16.html#L71'>i</a>                  71 stdio.c                    if (*p == format_symbols_[i])</span>
+<span class='curline'><a href='../S/16.html#L73'>i</a>                  73 stdio.c                        argv += format_hdl_table_[i](argv);</span>
+<span class='curline'><a href='../S/16.html#L86'>i</a>                  86 stdio.c            _SINT i;</span>
+<span class='curline'><a href='../S/16.html#L92'>i</a>                  92 stdio.c                i = _itoa(*(_UINT*)argv, 10, str, _sizeof_array(str));</span>
+<span class='curline'><a href='../S/16.html#L98'>i</a>                  98 stdio.c                i = _itoa((_UINT)num, 10, &amp;str[1], _sizeof_array(str) - 1) + 1;</span>
+<span class='curline'><a href='../S/16.html#L101'>i</a>                 101 stdio.c            IFSTUB_getInstance(_STDOUT)-&gt;write((_UBYTE*)str, i, _TRUE, -1);</span>
+<span class='curline'><a href='../S/16.html#L108'>i</a>                 108 stdio.c            _SINT i;</span>
+<span class='curline'><a href='../S/16.html#L111'>i</a>                 111 stdio.c            i = _itoa(*(_UINT*)argv, 10, str, _sizeof_array(str));</span>
+<span class='curline'><a href='../S/16.html#L112'>i</a>                 112 stdio.c            IFSTUB_getInstance(_STDOUT)-&gt;write((_UBYTE*)str, i, _TRUE, -1);</span>
+<span class='curline'><a href='../S/16.html#L119'>i</a>                 119 stdio.c            _SINT i;</span>
+<span class='curline'><a href='../S/16.html#L122'>i</a>                 122 stdio.c            i = _itoa(*(_UINT*)argv, 16, str, _sizeof_array(str));</span>
+<span class='curline'><a href='../S/16.html#L123'>i</a>                 123 stdio.c            IFSTUB_getInstance(_STDOUT)-&gt;write((_UBYTE*)str, i, _TRUE, -1);</span>
+<span class='curline'><a href='../S/16.html#L130'>i</a>                 130 stdio.c            _SINT i;</span>
+<span class='curline'><a href='../S/16.html#L133'>i</a>                 133 stdio.c            i = _itoa(*(_UINT*)argv, 8, str, _sizeof_array(str));</span>
+<span class='curline'><a href='../S/16.html#L134'>i</a>                 134 stdio.c            IFSTUB_getInstance(_STDOUT)-&gt;write((_UBYTE*)str, i, _TRUE, -1);</span>
+<span class='curline'><a href='../S/17.html#L40'>i</a>                  40 stdlib.c           _SINT i;</span>
+<span class='curline'><a href='../S/17.html#L55'>i</a>                  55 stdlib.c               for (pow = 1, i = 0; i &lt; size; i++)</span>
+</pre>
+</body>
+</html>

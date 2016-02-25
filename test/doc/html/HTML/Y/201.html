@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>buf</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/113.html#L163'>buf</a>               163 test/test.c        unsigned char buf[5] = { 0 };</span>
+<span class='curline'><a href='../S/113.html#L177'>buf</a>               177 test/test.c        while (buf[0] != 'q')</span>
+<span class='curline'><a href='../S/113.html#L179'>buf</a>               179 test/test.c            if (SCI_read(buf, 1, _FALSE, -1) == 1)</span>
+<span class='curline'><a href='../S/113.html#L181'>buf</a>               181 test/test.c                SCI_write(buf, 1, _FALSE, -1);</span>
+<span class='curline'><a href='../S/113.html#L344'>buf</a>               344 test/test.c        unsigned char buf[LCD_MAX_COLS * LCD_MAX_ROWS];</span>
+<span class='curline'><a href='../S/113.html#L350'>buf</a>               350 test/test.c                     LCD_read(buf, sizeof(buf)) == sizeof(buf));</span>
+<span class='curline'><a href='../S/113.html#L351'>buf</a>               351 test/test.c        for (i = 0; i &lt; sizeof(buf); i++)</span>
+<span class='curline'><a href='../S/113.html#L353'>buf</a>               353 test/test.c            UTEST_assert("test_lcd: LCD_init(2)", buf[i] == ' ');</span>
+<span class='curline'><a href='../S/113.html#L369'>buf</a>               369 test/test.c        UTEST_assert("test_lcd: LCD_puts(1)", LCD_read(buf, 3) == 3);</span>
+<span class='curline'><a href='../S/113.html#L371'>buf</a>               371 test/test.c                     (buf[0] == 'a') &amp;&amp; (buf[1] == 'a') &amp;&amp; (buf[2] == 'a'));</span>
+<span class='curline'><a href='../S/113.html#L374'>buf</a>               374 test/test.c        _memset(buf, 'a', sizeof(buf));</span>
+<span class='curline'><a href='../S/113.html#L376'>buf</a>               376 test/test.c                     LCD_write(buf, sizeof(buf)) == sizeof(buf));</span>
+<span class='curline'><a href='../S/113.html#L379'>buf</a>               379 test/test.c        _memset(buf, 0, sizeof(buf));</span>
+<span class='curline'><a href='../S/113.html#L381'>buf</a>               381 test/test.c                     LCD_read(buf, sizeof(buf)) == sizeof(buf));</span>
+<span class='curline'><a href='../S/113.html#L382'>buf</a>               382 test/test.c        for (i = 0; i &lt; sizeof(buf); i++)</span>
+<span class='curline'><a href='../S/113.html#L384'>buf</a>               384 test/test.c            UTEST_assert("test_lcd: LCD_read(2)", buf[i] == 'a');</span>
+<span class='curline'><a href='../S/113.html#L390'>buf</a>               390 test/test.c            buf[i] = i;</span>
+<span class='curline'><a href='../S/113.html#L396'>buf</a>               396 test/test.c                     LCD_write(buf, LCD_CG_MAXCHAR) == LCD_CG_MAXCHAR);</span>
+<span class='curline'><a href='../S/113.html#L448'>buf</a>               448 test/test.c        unsigned char buf = 0;</span>
+<span class='curline'><a href='../S/113.html#L459'>buf</a>               459 test/test.c            SCI_read(&amp;buf, 1, _FALSE, -1);</span>
+<span class='curline'><a href='../S/113.html#L461'>buf</a>               461 test/test.c        while (buf != 'q');</span>
+<span class='curline'><a href='../S/113.html#L462'>buf</a>               462 test/test.c        buf = 0;</span>
+<span class='curline'><a href='../S/113.html#L480'>buf</a>               480 test/test.c            SCI_read(&amp;buf, 1, _FALSE, -1);</span>
+<span class='curline'><a href='../S/113.html#L482'>buf</a>               482 test/test.c        while (buf != 'q');</span>
+<span class='curline'><a href='../S/113.html#L483'>buf</a>               483 test/test.c        buf = 0;</span>
+<span class='curline'><a href='../S/113.html#L508'>buf</a>               508 test/test.c            SCI_read(&amp;buf, 1, _FALSE, -1);</span>
+<span class='curline'><a href='../S/113.html#L510'>buf</a>               510 test/test.c        while (buf != 'q');</span>
+<span class='curline'><a href='../S/113.html#L511'>buf</a>               511 test/test.c        buf = 0;</span>
+<span class='curline'><a href='../S/113.html#L524'>buf</a>               524 test/test.c            SCI_read(&amp;buf, 1, _FALSE, -1);</span>
+<span class='curline'><a href='../S/113.html#L526'>buf</a>               526 test/test.c        while (buf != 'q');</span>
+<span class='curline'><a href='../S/113.html#L527'>buf</a>               527 test/test.c        buf = 0;</span>
+<span class='curline'><a href='../S/113.html#L550'>buf</a>               550 test/test.c        unsigned char buf[3];</span>
+<span class='curline'><a href='../S/113.html#L556'>buf</a>               556 test/test.c                     PS2_read(buf, sizeof(buf), _TRUE, -1) == sizeof(buf));</span>
+<span class='curline'><a href='../S/113.html#L557'>buf</a>               557 test/test.c        _printf("test_ps2: %x %x %x\r\n", buf[0], buf[1], buf[2]);</span>
+<span class='curline'><a href='../S/113.html#L560'>buf</a>               560 test/test.c        while (buf[0] != KBD_JP106_Q)</span>
+<span class='curline'><a href='../S/113.html#L562'>buf</a>               562 test/test.c            if (PS2_read(buf, 1, _FALSE, -1) == 1)</span>
+<span class='curline'><a href='../S/113.html#L564'>buf</a>               564 test/test.c                _printf("%x ", buf[0]);</span>
+<span class='curline'><a href='../S/113.html#L822'>buf</a>               822 test/test.c        _UBYTE buf[5] = { 0 };</span>
+<span class='curline'><a href='../S/113.html#L854'>buf</a>               854 test/test.c                                 buf, sizeof(buf), NULL, _TRUE) == sizeof(buf));</span>
+<span class='curline'><a href='../S/113.html#L860'>buf</a>               860 test/test.c        header.data_length = sizeof(buf);</span>
+<span class='curline'><a href='../S/113.html#L863'>buf</a>               863 test/test.c                     SSRP_send(&amp;header, buf, sizeof(buf), _TRUE) == sizeof(buf));</span>
+</pre>
+</body>
+</html>

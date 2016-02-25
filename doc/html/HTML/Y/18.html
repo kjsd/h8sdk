@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>BIT</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/1.html#L32'>BIT</a>                32 adc.c              _AD.ADCSR.BIT.SCAN = mode;</span>
+<span class='curline'><a href='../S/1.html#L33'>BIT</a>                33 adc.c              _AD.ADCSR.BIT.ADIE = (interrupt) ? 1: 0;</span>
+<span class='curline'><a href='../S/1.html#L38'>BIT</a>                38 adc.c              _AD.ADCSR.BIT.CH |= ch;</span>
+<span class='curline'><a href='../S/1.html#L43'>BIT</a>                43 adc.c              _AD.ADCSR.BIT.CH ^= ch;</span>
+<span class='curline'><a href='../S/1.html#L48'>BIT</a>                48 adc.c              _AD.ADCSR.BIT.ADST = 1;</span>
+<span class='curline'><a href='../S/1.html#L53'>BIT</a>                53 adc.c              _AD.ADCSR.BIT.ADST = 0;</span>
+<span class='curline'><a href='../S/1.html#L54'>BIT</a>                54 adc.c              if (_AD.ADCSR.BIT.ADF)</span>
+<span class='curline'><a href='../S/1.html#L56'>BIT</a>                56 adc.c                  _AD.ADCSR.BIT.ADF = 0;</span>
+<span class='curline'><a href='../S/1.html#L66'>BIT</a>                66 adc.c              if (_AD.ADCSR.BIT.ADF)</span>
+<span class='curline'><a href='../S/1.html#L74'>BIT</a>                74 adc.c                      _AD.ADCSR.BIT.ADF = 0;</span>
+<span class='curline'><a href='../S/6.html#L31'>BIT</a>                31 lcd_def.h      #define REG_RS_ _IO.PDR1.BIT.B0</span>
+<span class='curline'><a href='../S/6.html#L33'>BIT</a>                33 lcd_def.h      #define REG_RW_ _IO.PDR1.BIT.B1</span>
+<span class='curline'><a href='../S/6.html#L35'>BIT</a>                35 lcd_def.h      #define REG_E_ _IO.PDR1.BIT.B2</span>
+<span class='curline'><a href='../S/9.html#L23'>BIT</a>                23 ps2.c          #define PIN_CLOCK_ _IO.PDR1.BIT.B5</span>
+<span class='curline'><a href='../S/9.html#L24'>BIT</a>                24 ps2.c          #define PIN_DATA_  _IO.PDR8.BIT.B7</span>
+<span class='curline'><a href='../S/9.html#L53'>BIT</a>                53 ps2.c              _IENR1.BIT.IEN1 = 0;</span>
+<span class='curline'><a href='../S/9.html#L55'>BIT</a>                55 ps2.c              _IO.PMR1.BIT.IRQ1 = 0;</span>
+<span class='curline'><a href='../S/9.html#L60'>BIT</a>                60 ps2.c              _IO.PMR1.BIT.IRQ1 = 1;</span>
+<span class='curline'><a href='../S/9.html#L63'>BIT</a>                63 ps2.c              _IRR1.BIT.IRRI1 = 0;</span>
+<span class='curline'><a href='../S/9.html#L64'>BIT</a>                64 ps2.c              _IEGR1.BIT.IEG1 = 0;</span>
+<span class='curline'><a href='../S/9.html#L65'>BIT</a>                65 ps2.c              _IENR1.BIT.IEN1 = 1;</span>
+<span class='curline'><a href='../S/10.html#L31'>BIT</a>                31 push_switch.c      _IO.PMR1.BIT.IRQ2 = b;</span>
+<span class='curline'><a href='../S/10.html#L32'>BIT</a>                32 push_switch.c      _IEGR1.BIT.IEG2 = b;</span>
+<span class='curline'><a href='../S/10.html#L33'>BIT</a>                33 push_switch.c      _IENR1.BIT.IEN2 = b;</span>
+<span class='curline'><a href='../S/10.html#L34'>BIT</a>                34 push_switch.c      _IO.PMR1.BIT.IRQ3 = b;</span>
+<span class='curline'><a href='../S/10.html#L35'>BIT</a>                35 push_switch.c      _IEGR1.BIT.IEG3 = b;</span>
+<span class='curline'><a href='../S/10.html#L36'>BIT</a>                36 push_switch.c      _IENR1.BIT.IEN3 = b;</span>
+<span class='curline'><a href='../S/11.html#L48'>BIT</a>                48 sci.c              _IO.PMR1.BIT.TXD = 1;</span>
+<span class='curline'><a href='../S/11.html#L66'>BIT</a>                66 sci.c                      _SCI3.SCR3.BIT.TIE = 0;</span>
+<span class='curline'><a href='../S/11.html#L80'>BIT</a>                80 sci.c                      _SCI3.SSR.BIT.RDRF = 0;</span>
+<span class='curline'><a href='../S/11.html#L106'>BIT</a>               106 sci.c                  _SCI3.SCR3.BIT.TIE = 1;</span>
+<span class='curline'><a href='../S/11.html#L133'>BIT</a>               133 sci.c                  _SCI3.SCR3.BIT.TIE = 1;</span>
+<span class='curline'><a href='../S/12.html#L30'>BIT</a>                30 sound.c                _TA.TMA.BIT.CKSI = 0xc;                 \</span>
+<span class='curline'><a href='../S/12.html#L33'>BIT</a>                33 sound.c                _TA.TMA.BIT.CKSI = 0x5;                 \</span>
+<span class='curline'><a href='../S/12.html#L34'>BIT</a>                34 sound.c                _IENR1.BIT.IENTA = 1;                   \</span>
+<span class='curline'><a href='../S/12.html#L35'>BIT</a>                35 sound.c                _TV.TCRV0.BIT.CMIEB = 1;                \</span>
+<span class='curline'><a href='../S/12.html#L36'>BIT</a>                36 sound.c                _TV.TCRV0.BIT.CMIEA = 1;                \</span>
+<span class='curline'><a href='../S/12.html#L43'>BIT</a>                43 sound.c                _TW.TMRW.BIT.PWMC = 0;                  \</span>
+<span class='curline'><a href='../S/12.html#L44'>BIT</a>                44 sound.c                _TV.TCRV0.BIT.CMIEA = 0;                \</span>
+<span class='curline'><a href='../S/12.html#L45'>BIT</a>                45 sound.c                _TV.TCRV0.BIT.CMIEB = 0;                \</span>
+<span class='curline'><a href='../S/12.html#L46'>BIT</a>                46 sound.c                _IENR1.BIT.IENTA = 0;                   \</span>
+<span class='curline'><a href='../S/12.html#L47'>BIT</a>                47 sound.c                _TW.TMRW.BIT.CTS = 0;                   \</span>
+<span class='curline'><a href='../S/12.html#L48'>BIT</a>                48 sound.c                _IRR1.BIT.IRRTA = 0;                    \</span>
+<span class='curline'><a href='../S/12.html#L49'>BIT</a>                49 sound.c                _TV.TCSRV.BIT.CMFA = 0;                 \</span>
+<span class='curline'><a href='../S/12.html#L50'>BIT</a>                50 sound.c                _TV.TCSRV.BIT.CMFB = 0;                 \</span>
+<span class='curline'><a href='../S/12.html#L60'>BIT</a>                60 sound.c                _TW.TMRW.BIT.CTS = 0;                                           \</span>
+<span class='curline'><a href='../S/12.html#L63'>BIT</a>                63 sound.c                _TW.TMRW.BIT.CTS = 1;                                           \</span>
+<span class='curline'><a href='../S/12.html#L65'>BIT</a>                65 sound.c                _TV.TCSRV.BIT.CMFA = 0;                                         \</span>
+<span class='curline'><a href='../S/12.html#L66'>BIT</a>                66 sound.c                _TV.TCSRV.BIT.CMFB = 0;                                         \</span>
+<span class='curline'><a href='../S/12.html#L105'>BIT</a>               105 sound.c            _IO.PDR8.BIT.B3 = 0;</span>
+<span class='curline'><a href='../S/12.html#L106'>BIT</a>               106 sound.c            _TW.TMRW.BIT.CTS = 0;</span>
+<span class='curline'><a href='../S/12.html#L107'>BIT</a>               107 sound.c            _TW.TMRW.BIT.PWMC = 0;</span>
+<span class='curline'><a href='../S/12.html#L108'>BIT</a>               108 sound.c            _TW.TCRW.BIT.CCLR = 1;</span>
+<span class='curline'><a href='../S/12.html#L109'>BIT</a>               109 sound.c            _TW.TCRW.BIT.CKS = 0;</span>
+<span class='curline'><a href='../S/12.html#L110'>BIT</a>               110 sound.c            _TW.TCRW.BIT.TOC = 1;</span>
+<span class='curline'><a href='../S/12.html#L269'>BIT</a>               269 sound.c                _TV.TCSRV.BIT.CMFA = 0;</span>
+<span class='curline'><a href='../S/12.html#L270'>BIT</a>               270 sound.c                _TV.TCSRV.BIT.CMFB = 0;</span>
+<span class='curline'><a href='../S/12.html#L274'>BIT</a>               274 sound.c            if (_TV.TCSRV.BIT.CMFA)</span>
+<span class='curline'><a href='../S/12.html#L276'>BIT</a>               276 sound.c                _TV.TCSRV.BIT.CMFA = 0;</span>
+<span class='curline'><a href='../S/12.html#L277'>BIT</a>               277 sound.c                _TW.TMRW.BIT.PWMC = evlp_ ? 1: 0;</span>
+<span class='curline'><a href='../S/12.html#L279'>BIT</a>               279 sound.c            if (_TV.TCSRV.BIT.CMFB)</span>
+<span class='curline'><a href='../S/12.html#L281'>BIT</a>               281 sound.c                _TV.TCSRV.BIT.CMFB = 0;</span>
+<span class='curline'><a href='../S/12.html#L282'>BIT</a>               282 sound.c                _TW.TMRW.BIT.PWMC = 0;</span>
+<span class='curline'><a href='../S/12.html#L318'>BIT</a>               318 sound.c                _TW.TMRW.BIT.PWMC = 0;</span>
+<span class='curline'><a href='../S/12.html#L320'>BIT</a>               320 sound.c                _TW.TMRW.BIT.PWMC = 1;</span>
+</pre>
+</body>
+</html>

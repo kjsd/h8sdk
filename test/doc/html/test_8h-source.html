@@ -1,0 +1,118 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>H8SDK UNIT TEST: test.h ソースファイル</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- 作成： Doxygen 1.5.5 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="main.html"><span>メインページ</span></a></li>
+      <li class="current"><a href="files.html"><span>ファイル</span></a></li>
+    </ul>
+  </div>
+<h1>test.h</h1><a href="test_8h.html">説明を見る。</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
+<a name="l00041"></a>00041 <span class="preprocessor">#ifndef TEST_H_</span>
+<a name="l00042"></a>00042 <span class="preprocessor"></span><span class="preprocessor">#define TEST_H_</span>
+<a name="l00043"></a>00043 <span class="preprocessor"></span>
+<a name="l00044"></a>00044 <span class="preprocessor">#ifdef __cplusplus</span>
+<a name="l00045"></a>00045 <span class="preprocessor"></span><span class="keyword">extern</span> <span class="stringliteral">"C"</span> {
+<a name="l00046"></a>00046 <span class="preprocessor">#endif</span>
+<a name="l00047"></a>00047 <span class="preprocessor"></span>
+<a name="l00048"></a>00048 <span class="preprocessor">#include &lt;h8sdk/unit_test.h&gt;</span>
+<a name="l00049"></a>00049 
+<a name="l00050"></a>00050 <span class="preprocessor">#if defined(TEST_SOUND) || defined(TEST_MUSIC)</span>
+<a name="l00051"></a>00051 <span class="preprocessor"></span><span class="preprocessor">#if SOUND_MAX_PRONOUNCE &lt; 3</span>
+<a name="l00052"></a>00052 <span class="preprocessor"></span><span class="preprocessor">#error "Please define the SOUND_MAX_PRONOUNCE &gt;= 3."</span>
+<a name="l00053"></a>00053 <span class="preprocessor"></span><span class="preprocessor">#endif</span>
+<a name="l00054"></a>00054 <span class="preprocessor"></span><span class="preprocessor">#endif</span>
+<a name="l00055"></a>00055 <span class="preprocessor"></span>
+<a name="l00056"></a><a class="code" href="test_8h_cefd270dacb1cf3685e5069fb5ea292c.html#cefd270dacb1cf3685e5069fb5ea292c">00056</a> <span class="preprocessor">#define TEST_FAILURE(x) _printf("*** Failed: %s\r\n", (x));</span>
+<a name="l00057"></a>00057 <span class="preprocessor"></span>
+<a name="l00059"></a>00059 <span class="keywordtype">void</span> <a class="code" href="test_8h_6288eba0f8e8ad3ab1544ad731eb7667.html#6288eba0f8e8ad3ab1544ad731eb7667" title="ユーザーエントリ関数">main</a>(<span class="keywordtype">void</span>);
+<a name="l00060"></a>00060 
+<a name="l00079"></a>00079 <span class="keyword">static</span> <span class="keywordtype">char</span>* <a class="code" href="test_8h_a0788b0471ba5280e8f26585f5963d1b.html#a0788b0471ba5280e8f26585f5963d1b" title="シルアルドライバテスト">test_sci</a>();
+<a name="l00080"></a>00080 
+<a name="l00098"></a>00098 <span class="keyword">static</span> <span class="keywordtype">char</span>* <a class="code" href="test_8h_61cf385a427a8b54117135ece9266ae7.html#61cf385a427a8b54117135ece9266ae7" title="stdioモジュールテスト">test_stdio</a>();
+<a name="l00099"></a>00099 
+<a name="l00122"></a>00122 <span class="keyword">static</span> <span class="keywordtype">char</span>* <a class="code" href="test_8h_f086b0dcce5bab007fee47e1793bf0d4.html#f086b0dcce5bab007fee47e1793bf0d4" title="stdlibモジュールテスト">test_stdlib</a>();
+<a name="l00123"></a>00123 
+<a name="l00137"></a>00137 <span class="keyword">static</span> <span class="keywordtype">char</span>* <a class="code" href="test_8h_601f526180e9f9e0a07e0e4c4e448d35.html#601f526180e9f9e0a07e0e4c4e448d35" title="stringモジュールテスト">test_string</a>();
+<a name="l00138"></a>00138 
+<a name="l00151"></a>00151 <span class="keyword">static</span> <span class="keywordtype">char</span>* <a class="code" href="test_8h_8cb2e931c1f097d0256c2298d745435e.html#8cb2e931c1f097d0256c2298d745435e" title="assertモジュールテスト">test_assert</a>();
+<a name="l00152"></a>00152 
+<a name="l00165"></a>00165 <span class="keyword">static</span> <span class="keywordtype">char</span>* <a class="code" href="test_8h_0efc2b36ae8892928aac1e39b1ac9fa6.html#0efc2b36ae8892928aac1e39b1ac9fa6" title="IOCTLドライバテスト">test_ioctl</a>();
+<a name="l00166"></a>00166 
+<a name="l00181"></a>00181 <span class="keyword">static</span> <span class="keywordtype">char</span>* <a class="code" href="test_8h_38b2597531d6d1e45414207f17fd0deb.html#38b2597531d6d1e45414207f17fd0deb" title="LEDドライバテスト">test_led</a>();
+<a name="l00182"></a>00182 
+<a name="l00201"></a>00201 <span class="keyword">static</span> <span class="keywordtype">char</span>* <a class="code" href="test_8h_13f79636806047012a2ea964e4900942.html#13f79636806047012a2ea964e4900942" title="LCDドライバテスト">test_lcd</a>();
+<a name="l00202"></a>00202 
+<a name="l00217"></a>00217 <span class="keyword">static</span> <span class="keywordtype">char</span>* <a class="code" href="test_8h_1f9df45f5d579406ea4ffb5d9d3d6a58.html#1f9df45f5d579406ea4ffb5d9d3d6a58" title="プッシュスイッチドライバテスト">test_push_switch</a>();
+<a name="l00218"></a>00218 
+<a name="l00238"></a>00238 <span class="keyword">static</span> <span class="keywordtype">char</span>* <a class="code" href="test_8h_9a12ecf1356a7470997321c8a64ee7b7.html#9a12ecf1356a7470997321c8a64ee7b7" title="A/Dコンバータドライバテスト">test_adc</a>();
+<a name="l00239"></a>00239 
+<a name="l00252"></a>00252 <span class="keyword">static</span> <span class="keywordtype">char</span>* <a class="code" href="test_8h_cf1fa7d64313a77314c05da8bebef6e6.html#cf1fa7d64313a77314c05da8bebef6e6" title="PS/2ドライバテスト">test_ps2</a>();
+<a name="l00253"></a>00253 
+<a name="l00273"></a>00273 <span class="keyword">static</span> <span class="keywordtype">char</span>* <a class="code" href="test_8h_05b2818bcfa967ac105d6624ec854909.html#05b2818bcfa967ac105d6624ec854909" title="サウンドドライバテスト">test_sound</a>();
+<a name="l00274"></a>00274 
+<a name="l00298"></a>00298 <span class="keyword">static</span> <span class="keywordtype">char</span>* <a class="code" href="test_8h_b83bade3caf130990bf5516b6455e715.html#b83bade3caf130990bf5516b6455e715" title="楽曲演奏モジュールテスト">test_music</a>();
+<a name="l00299"></a>00299 
+<a name="l00325"></a>00325 <span class="keyword">static</span> <span class="keywordtype">char</span>* <a class="code" href="test_8h_81969d7889d0add7566986d3ada39730.html#81969d7889d0add7566986d3ada39730" title="SSRPモジュールテスト">test_ssrp</a>();
+<a name="l00326"></a>00326 
+<a name="l00336"></a>00336 <span class="keyword">static</span> <span class="keywordtype">char</span>* <a class="code" href="test_8h_9ae0c310318e7e033f6501180bf2db63.html#9ae0c310318e7e033f6501180bf2db63" title="テスト実行">test_run</a>(<span class="keyword">const</span> UTEST_Func* test_list, _UWORD num);
+<a name="l00337"></a>00337 
+<a name="l00338"></a><a class="code" href="test_8h_ecea56d22e41e21655d6b3ec2a285773.html#ecea56d22e41e21655d6b3ec2a285773">00338</a> <span class="keyword">static</span> <span class="keyword">const</span> UTEST_Func <a class="code" href="test_8h_ecea56d22e41e21655d6b3ec2a285773.html#ecea56d22e41e21655d6b3ec2a285773">test_basic_drivers_</a>[] = {
+<a name="l00339"></a>00339     <a class="code" href="test_8h_0efc2b36ae8892928aac1e39b1ac9fa6.html#0efc2b36ae8892928aac1e39b1ac9fa6" title="IOCTLドライバテスト">test_ioctl</a>,
+<a name="l00340"></a>00340     <a class="code" href="test_8h_38b2597531d6d1e45414207f17fd0deb.html#38b2597531d6d1e45414207f17fd0deb" title="LEDドライバテスト">test_led</a>,
+<a name="l00341"></a>00341     <a class="code" href="test_8h_a0788b0471ba5280e8f26585f5963d1b.html#a0788b0471ba5280e8f26585f5963d1b" title="シルアルドライバテスト">test_sci</a>
+<a name="l00342"></a>00342 };
+<a name="l00343"></a>00343 
+<a name="l00344"></a><a class="code" href="test_8h_be2ed58a39ac6eb45ded0391dbcc40e7.html#be2ed58a39ac6eb45ded0391dbcc40e7">00344</a> <span class="keyword">static</span> <span class="keyword">const</span> UTEST_Func <a class="code" href="test_8h_be2ed58a39ac6eb45ded0391dbcc40e7.html#be2ed58a39ac6eb45ded0391dbcc40e7">test_drivers_</a>[] = {
+<a name="l00345"></a>00345 <span class="preprocessor">#ifdef TEST_ASSERT</span>
+<a name="l00346"></a>00346 <span class="preprocessor"></span>    <a class="code" href="test_8h_8cb2e931c1f097d0256c2298d745435e.html#8cb2e931c1f097d0256c2298d745435e" title="assertモジュールテスト">test_assert</a>,
+<a name="l00347"></a>00347 <span class="preprocessor">#endif </span><span class="comment">/* TEST_ASSERT */</span>
+<a name="l00348"></a>00348 <span class="preprocessor">#ifdef TEST_STDC</span>
+<a name="l00349"></a>00349 <span class="preprocessor"></span>    <a class="code" href="test_8h_61cf385a427a8b54117135ece9266ae7.html#61cf385a427a8b54117135ece9266ae7" title="stdioモジュールテスト">test_stdio</a>,
+<a name="l00350"></a>00350     <a class="code" href="test_8h_f086b0dcce5bab007fee47e1793bf0d4.html#f086b0dcce5bab007fee47e1793bf0d4" title="stdlibモジュールテスト">test_stdlib</a>,
+<a name="l00351"></a>00351     <a class="code" href="test_8h_601f526180e9f9e0a07e0e4c4e448d35.html#601f526180e9f9e0a07e0e4c4e448d35" title="stringモジュールテスト">test_string</a>,
+<a name="l00352"></a>00352 <span class="preprocessor">#endif </span><span class="comment">/* TEST_STDC */</span>
+<a name="l00353"></a>00353 <span class="preprocessor">#ifdef TEST_LCD</span>
+<a name="l00354"></a>00354 <span class="preprocessor"></span>    <a class="code" href="test_8h_13f79636806047012a2ea964e4900942.html#13f79636806047012a2ea964e4900942" title="LCDドライバテスト">test_lcd</a>,
+<a name="l00355"></a>00355 <span class="preprocessor">#endif </span><span class="comment">/* TEST_PS2 */</span>
+<a name="l00356"></a>00356 <span class="preprocessor">#ifdef TEST_PUSH_SWITCH</span>
+<a name="l00357"></a>00357 <span class="preprocessor"></span>    <a class="code" href="test_8h_1f9df45f5d579406ea4ffb5d9d3d6a58.html#1f9df45f5d579406ea4ffb5d9d3d6a58" title="プッシュスイッチドライバテスト">test_push_switch</a>,
+<a name="l00358"></a>00358 <span class="preprocessor">#endif </span><span class="comment">/* TEST_PUSH_SWITCH */</span>
+<a name="l00359"></a>00359 <span class="preprocessor">#ifdef TEST_ADC</span>
+<a name="l00360"></a>00360 <span class="preprocessor"></span>    <a class="code" href="test_8h_9a12ecf1356a7470997321c8a64ee7b7.html#9a12ecf1356a7470997321c8a64ee7b7" title="A/Dコンバータドライバテスト">test_adc</a>,
+<a name="l00361"></a>00361 <span class="preprocessor">#endif </span><span class="comment">/* TEST_ADC */</span>
+<a name="l00362"></a>00362 <span class="preprocessor">#ifdef TEST_PS2</span>
+<a name="l00363"></a>00363 <span class="preprocessor"></span>    <a class="code" href="test_8h_cf1fa7d64313a77314c05da8bebef6e6.html#cf1fa7d64313a77314c05da8bebef6e6" title="PS/2ドライバテスト">test_ps2</a>,
+<a name="l00364"></a>00364 <span class="preprocessor">#endif </span><span class="comment">/* TEST_PS2 */</span>
+<a name="l00365"></a>00365 <span class="preprocessor">#ifdef TEST_SOUND</span>
+<a name="l00366"></a>00366 <span class="preprocessor"></span>    <a class="code" href="test_8h_05b2818bcfa967ac105d6624ec854909.html#05b2818bcfa967ac105d6624ec854909" title="サウンドドライバテスト">test_sound</a>
+<a name="l00367"></a>00367 <span class="preprocessor">#endif </span><span class="comment">/* TEST_SOUND */</span>
+<a name="l00368"></a>00368 };
+<a name="l00369"></a>00369 
+<a name="l00370"></a><a class="code" href="test_8h_f4c691f85a9ae8b544bc41f208273702.html#f4c691f85a9ae8b544bc41f208273702">00370</a> <span class="keyword">static</span> <span class="keyword">const</span> UTEST_Func <a class="code" href="test_8h_f4c691f85a9ae8b544bc41f208273702.html#f4c691f85a9ae8b544bc41f208273702">test_modules_</a>[] = {
+<a name="l00371"></a>00371 <span class="preprocessor">#ifdef TEST_MUSIC</span>
+<a name="l00372"></a>00372 <span class="preprocessor"></span>    <a class="code" href="test_8h_b83bade3caf130990bf5516b6455e715.html#b83bade3caf130990bf5516b6455e715" title="楽曲演奏モジュールテスト">test_music</a>,
+<a name="l00373"></a>00373 <span class="preprocessor">#endif </span><span class="comment">/* TEST_MUSIC */</span>
+<a name="l00374"></a>00374 <span class="preprocessor">#ifdef TEST_SSRP</span>
+<a name="l00375"></a>00375 <span class="preprocessor"></span>    <a class="code" href="test_8h_81969d7889d0add7566986d3ada39730.html#81969d7889d0add7566986d3ada39730" title="SSRPモジュールテスト">test_ssrp</a>
+<a name="l00376"></a>00376 <span class="preprocessor">#endif </span><span class="comment">/* TEST_SSRP */</span>
+<a name="l00377"></a>00377 };
+<a name="l00378"></a>00378 
+<a name="l00379"></a>00379 
+<a name="l00380"></a>00380 <span class="preprocessor">#ifdef __cplusplus</span>
+<a name="l00381"></a>00381 <span class="preprocessor"></span>}
+<a name="l00382"></a>00382 <span class="preprocessor">#endif</span>
+<a name="l00383"></a>00383 <span class="preprocessor"></span>
+<a name="l00384"></a>00384 <span class="preprocessor">#endif </span><span class="comment">/* TEST_H_ */</span>
+<a name="l00385"></a>00385 
+</pre></div></div>
+<hr size="1"><address style="text-align: right;"><small>H8SDK UNIT TESTに対してThu Mar 19 17:06:00 2009に生成されました。&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.5 </small></address>
+</body>
+</html>

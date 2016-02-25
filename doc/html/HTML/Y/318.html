@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>rec_param_</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/7.html#L58'>rec_param_</a>         58 music.c        static RecordParam_ rec_param_[MUSIC_MAX_PART] = {</span>
+<span class='curline'><a href='../S/7.html#L364'>rec_param_</a>        364 music.c            _memset(rec_param_, 0, sizeof(rec_param_));</span>
+<span class='curline'><a href='../S/7.html#L415'>rec_param_</a>        415 music.c            _UWORD size = _sizeof_array(rec_param_);</span>
+<span class='curline'><a href='../S/7.html#L420'>rec_param_</a>        420 music.c                if (rec_param_[idx].reqid == MUSIC_RECREQID_INVALID)</span>
+<span class='curline'><a href='../S/7.html#L427'>rec_param_</a>        427 music.c                    rec_param_[idx].reqid = req_id;</span>
+<span class='curline'><a href='../S/7.html#L428'>rec_param_</a>        428 music.c                    rec_param_[idx].part_idx = rec_part_;</span>
+<span class='curline'><a href='../S/7.html#L429'>rec_param_</a>        429 music.c                    rec_param_[idx].note_idx = rec_position_.</span>
+<span class='curline'><a href='../S/7.html#L430'>rec_param_</a>        430 music.c                        note[rec_param_[idx].part_idx];</span>
+<span class='curline'><a href='../S/7.html#L431'>rec_param_</a>        431 music.c                    rec_notes_[rec_param_[idx].part_idx][rec_param_[idx].note_idx].</span>
+<span class='curline'><a href='../S/7.html#L434'>rec_param_</a>        434 music.c                    _memcpy(&amp;rec_notes_[rec_param_[idx].part_idx]</span>
+<span class='curline'><a href='../S/7.html#L435'>rec_param_</a>        435 music.c                            [rec_param_[idx].note_idx].tone,</span>
+<span class='curline'><a href='../S/7.html#L440'>rec_param_</a>        440 music.c                    rec_position_.note[rec_param_[idx].part_idx]++;</span>
+<span class='curline'><a href='../S/7.html#L442'>rec_param_</a>        442 music.c                    rec_parts_[rec_param_[idx].part_idx].size++;</span>
+<span class='curline'><a href='../S/7.html#L452'>rec_param_</a>        452 music.c                    return rec_param_[idx].reqid;</span>
+<span class='curline'><a href='../S/7.html#L455'>rec_param_</a>        455 music.c                idx = _next_ring(idx, _sizeof_array(rec_param_) - 1);</span>
+<span class='curline'><a href='../S/7.html#L464'>rec_param_</a>        464 music.c            _UWORD size = _sizeof_array(rec_param_);</span>
+<span class='curline'><a href='../S/7.html#L469'>rec_param_</a>        469 music.c                if (rec_param_[idx].reqid == key)</span>
+<span class='curline'><a href='../S/7.html#L471'>rec_param_</a>        471 music.c                    rec_param_[idx].reqid = MUSIC_RECREQID_INVALID;</span>
+<span class='curline'><a href='../S/7.html#L474'>rec_param_</a>        474 music.c                    return &amp;rec_notes_[rec_param_[idx].part_idx]</span>
+<span class='curline'><a href='../S/7.html#L475'>rec_param_</a>        475 music.c                        [rec_param_[idx].note_idx];</span>
+<span class='curline'><a href='../S/7.html#L478'>rec_param_</a>        478 music.c                idx = _next_ring(idx, _sizeof_array(rec_param_) - 1);</span>
+<span class='curline'><a href='../S/7.html#L490'>rec_param_</a>        490 music.c            for (i = 0; i &lt; _sizeof_array(rec_param_); i++)</span>
+<span class='curline'><a href='../S/7.html#L492'>rec_param_</a>        492 music.c                if (rec_param_[i].reqid != MUSIC_RECREQID_INVALID)</span>
+<span class='curline'><a href='../S/7.html#L494'>rec_param_</a>        494 music.c                    rec_notes_[rec_param_[i].part_idx][rec_param_[i].note_idx].len++;</span>
+<span class='curline'><a href='../S/8.html#L132'>rec_param_</a>        132 music_def.h    static RecordParam_ rec_param_[MUSIC_MAX_PART];</span>
+</pre>
+</body>
+</html>

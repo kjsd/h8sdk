@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>rsize</title>
+<meta name='robots' content='noindex,nofollow' />
+<meta name='generator' content='GLOBAL-6.5.2' />
+<meta http-equiv='Content-Style-Type' content='text/css' />
+<link rel='stylesheet' type='text/css' href='../style.css' />
+</head>
+<body>
+<pre>
+<span class='curline'><a href='../S/13.html#L143'>rsize</a>             143 ssrp.c             _SINT rsize = 0;</span>
+<span class='curline'><a href='../S/13.html#L155'>rsize</a>             155 ssrp.c                     rsize = stub_-&gt;write(&amp;pre, sizeof(pre), sync, SSRP_TMO_SEND);</span>
+<span class='curline'><a href='../S/13.html#L156'>rsize</a>             156 ssrp.c                     if (rsize != sizeof(pre)) rsize = -1;</span>
+<span class='curline'><a href='../S/13.html#L170'>rsize</a>             170 ssrp.c                     rsize = stub_-&gt;write((_UBYTE*)header, sizeof(SSRP_Header), _TRUE,</span>
+<span class='curline'><a href='../S/13.html#L175'>rsize</a>             175 ssrp.c                     rsize = stub_-&gt;write(data, len, sync, SSRP_TMO_SEND);</span>
+<span class='curline'><a href='../S/13.html#L183'>rsize</a>             183 ssrp.c                 if (rsize &lt; 0) goto func_END;</span>
+<span class='curline'><a href='../S/13.html#L188'>rsize</a>             188 ssrp.c                 trx_[SSRP_TRX_SEND].state = (rsize &lt; len) ?</span>
+<span class='curline'><a href='../S/13.html#L197'>rsize</a>             197 ssrp.c             return rsize;</span>
+<span class='curline'><a href='../S/13.html#L248'>rsize</a>             248 ssrp.c             _UBYTE rsize;</span>
+<span class='curline'><a href='../S/13.html#L256'>rsize</a>             256 ssrp.c                 for (rsize = rtn;</span>
+<span class='curline'><a href='../S/13.html#L257'>rsize</a>             257 ssrp.c                      rsize &lt; trx_[SSRP_TRX_RECV].header.data_length;</span>
+<span class='curline'><a href='../S/13.html#L258'>rsize</a>             258 ssrp.c                      rsize += rtn)</span>
+<span class='curline'><a href='../S/13.html#L260'>rsize</a>             260 ssrp.c                     rtn = recv_(trx_[SSRP_TRX_RECV].buffer + rsize,</span>
+<span class='curline'><a href='../S/13.html#L261'>rsize</a>             261 ssrp.c                                     trx_[SSRP_TRX_RECV].header.data_length - rsize,</span>
+<span class='curline'><a href='../S/13.html#L301'>rsize</a>             301 ssrp.c             _SINT rsize = 0;</span>
+<span class='curline'><a href='../S/13.html#L313'>rsize</a>             313 ssrp.c                     rsize = stub_-&gt;read(&amp;pre, sizeof(pre), sync, SSRP_TMO_RECV);</span>
+<span class='curline'><a href='../S/13.html#L316'>rsize</a>             316 ssrp.c                         rsize = -1;</span>
+<span class='curline'><a href='../S/13.html#L321'>rsize</a>             321 ssrp.c                     rsize = stub_-&gt;read((_UBYTE*)&amp;trx_[SSRP_TRX_RECV].header,</span>
+<span class='curline'><a href='../S/13.html#L324'>rsize</a>             324 ssrp.c                     if (rsize != sizeof(SSRP_Header))</span>
+<span class='curline'><a href='../S/13.html#L326'>rsize</a>             326 ssrp.c                         rsize = -1;</span>
+<span class='curline'><a href='../S/13.html#L333'>rsize</a>             333 ssrp.c                         rsize = -1;</span>
+<span class='curline'><a href='../S/13.html#L342'>rsize</a>             342 ssrp.c                     rsize = stub_-&gt;read(buf, len, sync, SSRP_TMO_RECV);</span>
+<span class='curline'><a href='../S/13.html#L350'>rsize</a>             350 ssrp.c                 if (rsize &lt; 0) goto func_END;</span>
+<span class='curline'><a href='../S/13.html#L355'>rsize</a>             355 ssrp.c                 trx_[SSRP_TRX_RECV].state = (rsize &lt; len) ?</span>
+<span class='curline'><a href='../S/13.html#L364'>rsize</a>             364 ssrp.c             return rsize;</span>
+<span class='curline'><a href='../S/13.html#L463'>rsize</a>             463 ssrp.c             _SINT rsize;</span>
+<span class='curline'><a href='../S/13.html#L476'>rsize</a>             476 ssrp.c                     rsize = SSRP_sendto(trx_[SSRP_TRX_RECV].header.from,</span>
+<span class='curline'><a href='../S/13.html#L479'>rsize</a>             479 ssrp.c                     if (rsize &gt; 0)</span>
+<span class='curline'><a href='../S/13.html#L489'>rsize</a>             489 ssrp.c                     rsize = SSRP_sendto(trx_[SSRP_TRX_RECV].header.from,</span>
+<span class='curline'><a href='../S/13.html#L492'>rsize</a>             492 ssrp.c                     if (rsize &gt; 0)</span>
+<span class='curline'><a href='../S/15.html#L87'>rsize</a>              87 ssrp_skel.c        _SINT rsize = -1;</span>
+<span class='curline'><a href='../S/15.html#L91'>rsize</a>              91 ssrp_skel.c        rsize = state_handlers_[current_state_](trst, buf);</span>
+<span class='curline'><a href='../S/15.html#L92'>rsize</a>              92 ssrp_skel.c        if (rsize &gt;= 0)</span>
+<span class='curline'><a href='../S/15.html#L98'>rsize</a>              98 ssrp_skel.c            rsize = 0;</span>
+<span class='curline'><a href='../S/15.html#L101'>rsize</a>             101 ssrp_skel.c        return rsize;</span>
+</pre>
+</body>
+</html>

@@ -1,0 +1,10 @@
+-cpu=300HN
+-include="C:\cygwin\home\minoru\work\h8sdk\test\..\include"
+-define=TEST_STDC,USE_MUSIC_RECORD,TEST_LCD,TEST_PUSH_SWITCH,TEST_ADC,TEST_SOUND,TEST_MUSIC
+-object="C:\cygwin\home\minoru\work\h8sdk\test\test\Debug\test.obj"
+-debug
+-nolist
+-chgincpath
+"C:\cygwin\home\minoru\work\h8sdk\test\test\test.c"
+-lang=c
+-nologo

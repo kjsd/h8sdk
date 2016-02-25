@@ -1,0 +1,70 @@
+Optimizing Linkage Editor (V.9.02.00.000)         19-Mar-2009 15:48:06
+
+*** Options ***
+
+-subcommand=C:\cygwin\home\minoru\work\h8sdk\build\h8sdk\Debug\h8sdk.hlk
+-noprelink
+-form=library
+-nomessage
+-list="C:\cygwin\home\minoru\work\h8sdk\build\h8sdk\Debug\h8sdk.lbp"
+-nologo
+-input="C:\cygwin\home\minoru\work\h8sdk\build\h8sdk\Debug\adc.obj"
+-input="C:\cygwin\home\minoru\work\h8sdk\build\h8sdk\Debug\envelope.obj"
+-input="C:\cygwin\home\minoru\work\h8sdk\build\h8sdk\Debug\ifstub.obj"
+-input="C:\cygwin\home\minoru\work\h8sdk\build\h8sdk\Debug\ioctl.obj"
+-input="C:\cygwin\home\minoru\work\h8sdk\build\h8sdk\Debug\lcd.obj"
+-input="C:\cygwin\home\minoru\work\h8sdk\build\h8sdk\Debug\music.obj"
+-input="C:\cygwin\home\minoru\work\h8sdk\build\h8sdk\Debug\ps2.obj"
+-input="C:\cygwin\home\minoru\work\h8sdk\build\h8sdk\Debug\push_switch.obj"
+-input="C:\cygwin\home\minoru\work\h8sdk\build\h8sdk\Debug\sci.obj"
+-input="C:\cygwin\home\minoru\work\h8sdk\build\h8sdk\Debug\sound.obj"
+-input="C:\cygwin\home\minoru\work\h8sdk\build\h8sdk\Debug\stdio.obj"
+-input="C:\cygwin\home\minoru\work\h8sdk\build\h8sdk\Debug\stdlib.obj"
+-input="C:\cygwin\home\minoru\work\h8sdk\build\h8sdk\Debug\string.obj"
+-output="C:\cygwin\home\minoru\work\h8sdk\build\h8sdk\Debug\h8sdk.lib"
+-exit
+
+*** Error information ***
+
+** L1200 (W) Backed up file "C:\cygwin\home\minoru\work\h8sdk\build\h8sdk\Debug\h8sdk.lib" into "C:\cygwin\home\minoru\work\h8sdk\build\h8sdk\Debug\h8sdk.lbk"
+
+*** Library Information ***
+
+LIBRARY NAME=C:\cygwin\home\minoru\work\h8sdk\build\h8sdk\Debug\h8sdk.lib
+CPU=H8/300H
+ENDIAN=Big
+ATTRIBUTE=user
+NUMBER OF MODULE=13
+
+*** Library List ***
+
+MODULE    LAST UPDATE
+  SECTION
+    SYMBOL
+
+adc
+          19-Mar-2009 15:48:04
+envelope
+          19-Mar-2009 15:48:04
+ifstub
+          19-Mar-2009 15:48:05
+ioctl
+          19-Mar-2009 15:48:04
+lcd
+          19-Mar-2009 15:48:04
+music
+          19-Mar-2009 15:48:06
+ps2
+          19-Mar-2009 15:48:06
+push_switch
+          19-Mar-2009 15:48:05
+sci
+          19-Mar-2009 15:48:05
+sound
+          19-Mar-2009 15:48:06
+stdio
+          19-Mar-2009 15:48:05
+stdlib
+          19-Mar-2009 15:48:05
+string
+          19-Mar-2009 15:48:05
