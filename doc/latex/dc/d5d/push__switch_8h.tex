@@ -1,0 +1,207 @@
+\subsection{include/h8sdk/push\+\_\+switch.h ファイル}
+\label{push__switch_8h}\index{include/h8sdk/push\+\_\+switch.\+h@{include/h8sdk/push\+\_\+switch.\+h}}
+
+
+プッシュスイッチドライバ  
+
+
+{\ttfamily \#include \char`\"{}stddef.\+h\char`\"{}}\\*
+push\+\_\+switch.\+h の依存先関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=146pt]{d7/d27/push__switch_8h__incl}
+\end{center}
+\end{figure}
+\subsubsection*{マクロ定義}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{push__switch_8h_aa47f0189e15d337406bc1bd760207db4_aa47f0189e15d337406bc1bd760207db4}{P\+S\+W\+\_\+\+B\+O\+R\+D\+E\+R}~0x800
+\begin{DoxyCompactList}\small\item\em 押下状態判定用のカウンタ \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{列挙型}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{push__switch_8h_a66564168132ca9f7124309ee5b555b0c_a66564168132ca9f7124309ee5b555b0c}{P\+S\+W\+\_\+\+Type} \{ \\*
+\hyperlink{push__switch_8h_a66564168132ca9f7124309ee5b555b0c_a66564168132ca9f7124309ee5b555b0cac1ec17c9c817febb900692b7025ebf0d}{P\+S\+W\+\_\+\+S\+W1} = 0, 
+\\*
+\hyperlink{push__switch_8h_a66564168132ca9f7124309ee5b555b0c_a66564168132ca9f7124309ee5b555b0cabdf66c87d4f6b20912cacee8492e318f}{P\+S\+W\+\_\+\+S\+W2}, 
+\\*
+\hyperlink{push__switch_8h_a66564168132ca9f7124309ee5b555b0c_a66564168132ca9f7124309ee5b555b0cad1e811a43a157b49b5f6d49725444817}{P\+S\+W\+\_\+\+N\+U\+M\+\_\+\+O\+F\+\_\+\+T\+Y\+P\+E}
+ \}\begin{DoxyCompactList}\small\item\em スイッチタイプ識別子 \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsubsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{push__switch_8h_a94048eedccacd964c5d7523ab9339619_a94048eedccacd964c5d7523ab9339619}{P\+S\+W\+\_\+init} (\hyperlink{stddef_8h_afbf708854fe02af8475a9ba02f3196cb_afbf708854fe02af8475a9ba02f3196cb}{\+\_\+\+B\+O\+O\+L} interrupt)
+\begin{DoxyCompactList}\small\item\em スイッチデバイス初期化。 \end{DoxyCompactList}\item 
+\hyperlink{stddef_8h_afbf708854fe02af8475a9ba02f3196cb_afbf708854fe02af8475a9ba02f3196cb}{\+\_\+\+B\+O\+O\+L} \hyperlink{push__switch_8h_a8f454027db6f5d98b8ee38f6efebc1d8_a8f454027db6f5d98b8ee38f6efebc1d8}{P\+S\+W\+\_\+get} (\hyperlink{push__switch_8h_a66564168132ca9f7124309ee5b555b0c_a66564168132ca9f7124309ee5b555b0c}{P\+S\+W\+\_\+\+Type} t)
+\begin{DoxyCompactList}\small\item\em スイッチ押下状態の取得 \end{DoxyCompactList}\item 
+\hyperlink{stddef_8h_afbf708854fe02af8475a9ba02f3196cb_afbf708854fe02af8475a9ba02f3196cb}{\+\_\+\+B\+O\+O\+L} \hyperlink{push__switch_8h_a4c4bdfcba186bc9b2a1e8769c88e4746_a4c4bdfcba186bc9b2a1e8769c88e4746}{P\+S\+W\+\_\+one\+Shot} (\hyperlink{push__switch_8h_a66564168132ca9f7124309ee5b555b0c_a66564168132ca9f7124309ee5b555b0c}{P\+S\+W\+\_\+\+Type} t)
+\begin{DoxyCompactList}\small\item\em スイッチ押下状態を一度だけ取得 \end{DoxyCompactList}\item 
+\hyperlink{stddef_8h_afbf708854fe02af8475a9ba02f3196cb_afbf708854fe02af8475a9ba02f3196cb}{\+\_\+\+B\+O\+O\+L} \hyperlink{push__switch_8h_a4059e91200d2a27e3e893c727cccfd5b_a4059e91200d2a27e3e893c727cccfd5b}{P\+S\+W\+\_\+snap\+Shot} (\hyperlink{push__switch_8h_a66564168132ca9f7124309ee5b555b0c_a66564168132ca9f7124309ee5b555b0c}{P\+S\+W\+\_\+\+Type} t)
+\begin{DoxyCompactList}\small\item\em スイッチ押下状態スナップショットの取得 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{詳解}
+プッシュスイッチドライバ 
+
+このモジュールはプッシュスイッチへのインタフェースを提供する。
+
+ 
+
+\subsubsection{マクロ定義詳解}
+\index{push\+\_\+switch.\+h@{push\+\_\+switch.\+h}!P\+S\+W\+\_\+\+B\+O\+R\+D\+E\+R@{P\+S\+W\+\_\+\+B\+O\+R\+D\+E\+R}}
+\index{P\+S\+W\+\_\+\+B\+O\+R\+D\+E\+R@{P\+S\+W\+\_\+\+B\+O\+R\+D\+E\+R}!push\+\_\+switch.\+h@{push\+\_\+switch.\+h}}
+\paragraph[{P\+S\+W\+\_\+\+B\+O\+R\+D\+E\+R}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+S\+W\+\_\+\+B\+O\+R\+D\+E\+R~0x800}\label{push__switch_8h_aa47f0189e15d337406bc1bd760207db4_aa47f0189e15d337406bc1bd760207db4}
+
+
+押下状態判定用のカウンタ 
+
+一度判定されたらこの値分カウントされるまで押下状態の判定は行わない 
+
+ push\+\_\+switch.\+h の 31 行目に定義があります。
+
+
+
+\subsubsection{列挙型詳解}
+\index{push\+\_\+switch.\+h@{push\+\_\+switch.\+h}!P\+S\+W\+\_\+\+Type@{P\+S\+W\+\_\+\+Type}}
+\index{P\+S\+W\+\_\+\+Type@{P\+S\+W\+\_\+\+Type}!push\+\_\+switch.\+h@{push\+\_\+switch.\+h}}
+\paragraph[{P\+S\+W\+\_\+\+Type}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf P\+S\+W\+\_\+\+Type}}\label{push__switch_8h_a66564168132ca9f7124309ee5b555b0c_a66564168132ca9f7124309ee5b555b0c}
+
+
+スイッチタイプ識別子 
+
+\begin{Desc}
+\item[列挙値]\par
+\begin{description}
+\index{P\+S\+W\+\_\+\+S\+W1@{P\+S\+W\+\_\+\+S\+W1}!push\+\_\+switch.\+h@{push\+\_\+switch.\+h}}\index{push\+\_\+switch.\+h@{push\+\_\+switch.\+h}!P\+S\+W\+\_\+\+S\+W1@{P\+S\+W\+\_\+\+S\+W1}}\item[{\em 
+P\+S\+W\+\_\+\+S\+W1\label{push__switch_8h_a66564168132ca9f7124309ee5b555b0c_a66564168132ca9f7124309ee5b555b0cac1ec17c9c817febb900692b7025ebf0d}
+}]S1番ポートのスイッチ \index{P\+S\+W\+\_\+\+S\+W2@{P\+S\+W\+\_\+\+S\+W2}!push\+\_\+switch.\+h@{push\+\_\+switch.\+h}}\index{push\+\_\+switch.\+h@{push\+\_\+switch.\+h}!P\+S\+W\+\_\+\+S\+W2@{P\+S\+W\+\_\+\+S\+W2}}\item[{\em 
+P\+S\+W\+\_\+\+S\+W2\label{push__switch_8h_a66564168132ca9f7124309ee5b555b0c_a66564168132ca9f7124309ee5b555b0cabdf66c87d4f6b20912cacee8492e318f}
+}]S2番ポートのスイッチ \index{P\+S\+W\+\_\+\+N\+U\+M\+\_\+\+O\+F\+\_\+\+T\+Y\+P\+E@{P\+S\+W\+\_\+\+N\+U\+M\+\_\+\+O\+F\+\_\+\+T\+Y\+P\+E}!push\+\_\+switch.\+h@{push\+\_\+switch.\+h}}\index{push\+\_\+switch.\+h@{push\+\_\+switch.\+h}!P\+S\+W\+\_\+\+N\+U\+M\+\_\+\+O\+F\+\_\+\+T\+Y\+P\+E@{P\+S\+W\+\_\+\+N\+U\+M\+\_\+\+O\+F\+\_\+\+T\+Y\+P\+E}}\item[{\em 
+P\+S\+W\+\_\+\+N\+U\+M\+\_\+\+O\+F\+\_\+\+T\+Y\+P\+E\label{push__switch_8h_a66564168132ca9f7124309ee5b555b0c_a66564168132ca9f7124309ee5b555b0cad1e811a43a157b49b5f6d49725444817}
+}]スイッチの数 \end{description}
+\end{Desc}
+
+
+ push\+\_\+switch.\+h の 36 行目に定義があります。
+
+
+\begin{DoxyCode}
+37 \{
+38     PSW_SW1 = 0,
+40     PSW_SW2,
+42 
+43     PSW_NUM_OF_TYPE
+45 \} PSW_Type;
+\end{DoxyCode}
+
+
+\subsubsection{関数詳解}
+\index{push\+\_\+switch.\+h@{push\+\_\+switch.\+h}!P\+S\+W\+\_\+init@{P\+S\+W\+\_\+init}}
+\index{P\+S\+W\+\_\+init@{P\+S\+W\+\_\+init}!push\+\_\+switch.\+h@{push\+\_\+switch.\+h}}
+\paragraph[{P\+S\+W\+\_\+init(\+\_\+\+B\+O\+O\+L interrupt)}]{\setlength{\rightskip}{0pt plus 5cm}void P\+S\+W\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{{\bf \+\_\+\+B\+O\+O\+L}}]{interrupt}
+\end{DoxyParamCaption}
+)}\label{push__switch_8h_a94048eedccacd964c5d7523ab9339619_a94048eedccacd964c5d7523ab9339619}
+
+
+スイッチデバイス初期化。 
+
+スイッチデバイスを使用可能に設定する。他\+A\+P\+I使用前に必ず実行する。
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\tt in}  & {\em interrupt} & \+\_\+\+T\+R\+U\+E：割り込みを使う。~\newline
+\+\_\+\+F\+A\+L\+S\+E：割り込みを使わない。\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{覚え書き}
+割り込みハンドラは外部で定義する。 
+\end{DoxyNote}
+\index{push\+\_\+switch.\+h@{push\+\_\+switch.\+h}!P\+S\+W\+\_\+get@{P\+S\+W\+\_\+get}}
+\index{P\+S\+W\+\_\+get@{P\+S\+W\+\_\+get}!push\+\_\+switch.\+h@{push\+\_\+switch.\+h}}
+\paragraph[{P\+S\+W\+\_\+get(\+P\+S\+W\+\_\+\+Type t)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \+\_\+\+B\+O\+O\+L} P\+S\+W\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+S\+W\+\_\+\+Type}}]{t}
+\end{DoxyParamCaption}
+)}\label{push__switch_8h_a8f454027db6f5d98b8ee38f6efebc1d8_a8f454027db6f5d98b8ee38f6efebc1d8}
+
+
+スイッチ押下状態の取得 
+
+スイッチの押下状態を得る。一度押下と判定された場合、\+P\+S\+W\+\_\+\+B\+O\+R\+D\+E\+Rカウ ント分呼び出されるまで次の状態判定は行われない。なので、定期的に一 定回数この\+A\+P\+Iを実行することで正確な状態を連続的に取得できるようにな る。ポーリング用。
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\tt in}  & {\em t} & 取得するスイッチのタイプ\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em \+\_\+\+T\+R\+U\+E} & 押されている \\
+\hline
+{\em \+\_\+\+F\+A\+L\+S\+E} & 押されていない\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{覚え書き}
+割り込みを使用する場合はこの\+A\+P\+Iを使う必要はない 
+\end{DoxyNote}
+\index{push\+\_\+switch.\+h@{push\+\_\+switch.\+h}!P\+S\+W\+\_\+one\+Shot@{P\+S\+W\+\_\+one\+Shot}}
+\index{P\+S\+W\+\_\+one\+Shot@{P\+S\+W\+\_\+one\+Shot}!push\+\_\+switch.\+h@{push\+\_\+switch.\+h}}
+\paragraph[{P\+S\+W\+\_\+one\+Shot(\+P\+S\+W\+\_\+\+Type t)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \+\_\+\+B\+O\+O\+L} P\+S\+W\+\_\+one\+Shot (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+S\+W\+\_\+\+Type}}]{t}
+\end{DoxyParamCaption}
+)}\label{push__switch_8h_a4c4bdfcba186bc9b2a1e8769c88e4746_a4c4bdfcba186bc9b2a1e8769c88e4746}
+
+
+スイッチ押下状態を一度だけ取得 
+
+スイッチの押下状態を得る。一度押下と判定されたらスイッチがオフにな るまで押下判定は行われない
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\tt in}  & {\em t} & 取得するスイッチのタイプ\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em \+\_\+\+T\+R\+U\+E} & 押されている \\
+\hline
+{\em \+\_\+\+F\+A\+L\+S\+E} & 押されていない\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{覚え書き}
+割り込みを使用する場合はこの\+A\+P\+Iを使う必要はない 
+\end{DoxyNote}
+\index{push\+\_\+switch.\+h@{push\+\_\+switch.\+h}!P\+S\+W\+\_\+snap\+Shot@{P\+S\+W\+\_\+snap\+Shot}}
+\index{P\+S\+W\+\_\+snap\+Shot@{P\+S\+W\+\_\+snap\+Shot}!push\+\_\+switch.\+h@{push\+\_\+switch.\+h}}
+\paragraph[{P\+S\+W\+\_\+snap\+Shot(\+P\+S\+W\+\_\+\+Type t)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \+\_\+\+B\+O\+O\+L} P\+S\+W\+\_\+snap\+Shot (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+S\+W\+\_\+\+Type}}]{t}
+\end{DoxyParamCaption}
+)}\label{push__switch_8h_a4059e91200d2a27e3e893c727cccfd5b_a4059e91200d2a27e3e893c727cccfd5b}
+
+
+スイッチ押下状態スナップショットの取得 
+
+スイッチの押下状態を得る。取得されるのはその瞬間の状態。
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\tt in}  & {\em t} & 取得するスイッチのタイプ\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em \+\_\+\+T\+R\+U\+E} & 押されている \\
+\hline
+{\em \+\_\+\+F\+A\+L\+S\+E} & 押されていない\\
+\hline
+\end{DoxyRetVals}
+\begin{DoxyNote}{覚え書き}
+割り込みを使用する場合はこの\+A\+P\+Iを使う必要はない 
+\end{DoxyNote}

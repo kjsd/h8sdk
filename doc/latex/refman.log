@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.6-141210-2.6 (utf8.euc) (TeX Live 2015/MacPorts 2015_8) (preloaded format=platex 2016.2.25)  25 FEB 2016 23:29
+This is e-pTeX, Version 3.14159265-p3.6-141210-2.6 (utf8.euc) (TeX Live 2015/MacPorts 2015_8) (preloaded format=platex 2016.2.25)  27 FEB 2016 00:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -452,7 +452,680 @@ Package: svn 2007/09/25 r43 Typeset Subversion keywords.
 
 
 Writing index file refman.idx
-(./refman.aux)
+(./refman.aux
+
+LaTeX Warning: Label `3694s_8h_ae409eb2ba6eb6801f52763ae370c350e' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_adb957fdc8000e1eef04a243f5199aa52' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_aa87deb01c5f539e6bda34829c8ef2368' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_ae409eb2ba6eb6801f52763ae370c350e' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_adb957fdc8000e1eef04a243f5199aa52' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_ae409eb2ba6eb6801f52763ae370c350e' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_adb957fdc8000e1eef04a243f5199aa52' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_aa87deb01c5f539e6bda34829c8ef2368' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_ae409eb2ba6eb6801f52763ae370c350e' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_adb957fdc8000e1eef04a243f5199aa52' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_aa87deb01c5f539e6bda34829c8ef2368' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_ae409eb2ba6eb6801f52763ae370c350e' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_adb957fdc8000e1eef04a243f5199aa52' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_ae409eb2ba6eb6801f52763ae370c350e' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_adb957fdc8000e1eef04a243f5199aa52' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_ae409eb2ba6eb6801f52763ae370c350e' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_adb957fdc8000e1eef04a243f5199aa52' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_ae409eb2ba6eb6801f52763ae370c350e' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_adb957fdc8000e1eef04a243f5199aa52' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_aa87deb01c5f539e6bda34829c8ef2368' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_ae409eb2ba6eb6801f52763ae370c350e' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_adb957fdc8000e1eef04a243f5199aa52' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_a62e08e3df930b3022644f9943263a758' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_ae409eb2ba6eb6801f52763ae370c350e' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_adb957fdc8000e1eef04a243f5199aa52' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_aa87deb01c5f539e6bda34829c8ef2368' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_ae409eb2ba6eb6801f52763ae370c350e' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_adb957fdc8000e1eef04a243f5199aa52' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_aa87deb01c5f539e6bda34829c8ef2368' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_ae409eb2ba6eb6801f52763ae370c350e' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_adb957fdc8000e1eef04a243f5199aa52' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_aa87deb01c5f539e6bda34829c8ef2368' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_ae409eb2ba6eb6801f52763ae370c350e' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_adb957fdc8000e1eef04a243f5199aa52' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_aa87deb01c5f539e6bda34829c8ef2368' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_ae409eb2ba6eb6801f52763ae370c350e' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_adb957fdc8000e1eef04a243f5199aa52' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_aa87deb01c5f539e6bda34829c8ef2368' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_ae409eb2ba6eb6801f52763ae370c350e' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_adb957fdc8000e1eef04a243f5199aa52' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_ae409eb2ba6eb6801f52763ae370c350e' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_adb957fdc8000e1eef04a243f5199aa52' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_ae409eb2ba6eb6801f52763ae370c350e' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_adb957fdc8000e1eef04a243f5199aa52' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_aa87deb01c5f539e6bda34829c8ef2368' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_ae409eb2ba6eb6801f52763ae370c350e' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_adb957fdc8000e1eef04a243f5199aa52' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_ae409eb2ba6eb6801f52763ae370c350e' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_adb957fdc8000e1eef04a243f5199aa52' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_aa7afa262de6b4b0558b9e572e0f886a3' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_ac3edc53cb9cfad8845e25009abc6d8f9' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_a62e08e3df930b3022644f9943263a758' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_ae409eb2ba6eb6801f52763ae370c350e' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_adb957fdc8000e1eef04a243f5199aa52' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_a7f74ef1b079020a932a9f48bcaf217b0' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_aa87deb01c5f539e6bda34829c8ef2368' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_ae409eb2ba6eb6801f52763ae370c350e' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_adb957fdc8000e1eef04a243f5199aa52' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_aa87deb01c5f539e6bda34829c8ef2368' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_ae409eb2ba6eb6801f52763ae370c350e' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_adb957fdc8000e1eef04a243f5199aa52' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_aa87deb01c5f539e6bda34829c8ef2368' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_ae409eb2ba6eb6801f52763ae370c350e' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_adb957fdc8000e1eef04a243f5199aa52' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_a615a46af313786fc4e349f34118be111' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_a62e08e3df930b3022644f9943263a758' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_ae409eb2ba6eb6801f52763ae370c350e' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_adb957fdc8000e1eef04a243f5199aa52' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_a8eb6c56ba51924a4cf185ec29e22be22' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_a73cf42509991cff6949aa0431ce86b00' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_ab89346c173959f39be466817e44ef2b6' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_ae409eb2ba6eb6801f52763ae370c350e' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_adb957fdc8000e1eef04a243f5199aa52' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_a1eac1fe6afb8bd4be047e55fbdc3d0ec' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_a42d1e8ea37c83c47da6dcbedfb3b8571' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_a21c0d9578949b414fbab707ce221eb75' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_ae409eb2ba6eb6801f52763ae370c350e' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_adb957fdc8000e1eef04a243f5199aa52' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_a62e08e3df930b3022644f9943263a758' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_ae409eb2ba6eb6801f52763ae370c350e' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_adb957fdc8000e1eef04a243f5199aa52' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_a899687deda79b404dc72076da2c1ac1f' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_ae409eb2ba6eb6801f52763ae370c350e' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_adb957fdc8000e1eef04a243f5199aa52' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_ae409eb2ba6eb6801f52763ae370c350e' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_adb957fdc8000e1eef04a243f5199aa52' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_aa87deb01c5f539e6bda34829c8ef2368' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_a62e08e3df930b3022644f9943263a758' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_ae409eb2ba6eb6801f52763ae370c350e' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_adb957fdc8000e1eef04a243f5199aa52' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_ae409eb2ba6eb6801f52763ae370c350e' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_adb957fdc8000e1eef04a243f5199aa52' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_ae409eb2ba6eb6801f52763ae370c350e' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_adb957fdc8000e1eef04a243f5199aa52' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_aa87deb01c5f539e6bda34829c8ef2368' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_ae409eb2ba6eb6801f52763ae370c350e' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_adb957fdc8000e1eef04a243f5199aa52' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_aa87deb01c5f539e6bda34829c8ef2368' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_a2a1ab298edf0162a3305e599b47cbeee' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_ad5d4cc7b09d1843517acc9361f8f665e' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_abbd97b00c539801e32317ab550867ec4' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_ac9512565ef6194ca664dc41ec0de7a53' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_a4c769c2c9989abb9fa024ab9930270e5' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_ae409eb2ba6eb6801f52763ae370c350e' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_adb957fdc8000e1eef04a243f5199aa52' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_ad8498108dd603522047564a8da7be94c' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_a68b1f1cc15d8987eafe633c9488bdc05' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_a2a1ab298edf0162a3305e599b47cbeee' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_ad5d4cc7b09d1843517acc9361f8f665e' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_aa87deb01c5f539e6bda34829c8ef2368' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_abbd97b00c539801e32317ab550867ec4' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_ac9512565ef6194ca664dc41ec0de7a53' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_a4c769c2c9989abb9fa024ab9930270e5' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_ae409eb2ba6eb6801f52763ae370c350e' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_adb957fdc8000e1eef04a243f5199aa52' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_aa87deb01c5f539e6bda34829c8ef2368' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_abbd97b00c539801e32317ab550867ec4' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_ac9512565ef6194ca664dc41ec0de7a53' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_a4c769c2c9989abb9fa024ab9930270e5' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_ae409eb2ba6eb6801f52763ae370c350e' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_adb957fdc8000e1eef04a243f5199aa52' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_ad8498108dd603522047564a8da7be94c' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_a68b1f1cc15d8987eafe633c9488bdc05' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_a2a1ab298edf0162a3305e599b47cbeee' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_ad5d4cc7b09d1843517acc9361f8f665e' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_a0c4ecd7b59ebc5b9f47974cb9845fd02' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_abbd97b00c539801e32317ab550867ec4' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_ac9512565ef6194ca664dc41ec0de7a53' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_a4c769c2c9989abb9fa024ab9930270e5' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_ae409eb2ba6eb6801f52763ae370c350e' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_adb957fdc8000e1eef04a243f5199aa52' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_aa87deb01c5f539e6bda34829c8ef2368' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_a68b1f1cc15d8987eafe633c9488bdc05' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_a2a1ab298edf0162a3305e599b47cbeee' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_ad5d4cc7b09d1843517acc9361f8f665e' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_ae409eb2ba6eb6801f52763ae370c350e' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_adb957fdc8000e1eef04a243f5199aa52' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_ad8498108dd603522047564a8da7be94c' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_a68b1f1cc15d8987eafe633c9488bdc05' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_a2a1ab298edf0162a3305e599b47cbeee' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_ad5d4cc7b09d1843517acc9361f8f665e' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_a0c4ecd7b59ebc5b9f47974cb9845fd02' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_abbd97b00c539801e32317ab550867ec4' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_ac9512565ef6194ca664dc41ec0de7a53' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_a4c769c2c9989abb9fa024ab9930270e5' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_ae409eb2ba6eb6801f52763ae370c350e' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_adb957fdc8000e1eef04a243f5199aa52' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_ad8498108dd603522047564a8da7be94c' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_a68b1f1cc15d8987eafe633c9488bdc05' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_a2a1ab298edf0162a3305e599b47cbeee' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_ad5d4cc7b09d1843517acc9361f8f665e' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_a0c4ecd7b59ebc5b9f47974cb9845fd02' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_abbd97b00c539801e32317ab550867ec4' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_ac9512565ef6194ca664dc41ec0de7a53' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_a4c769c2c9989abb9fa024ab9930270e5' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_ae409eb2ba6eb6801f52763ae370c350e' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_adb957fdc8000e1eef04a243f5199aa52' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_aa87deb01c5f539e6bda34829c8ef2368' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_ae409eb2ba6eb6801f52763ae370c350e' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_adb957fdc8000e1eef04a243f5199aa52' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_aa87deb01c5f539e6bda34829c8ef2368' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_aa87deb01c5f539e6bda34829c8ef2368' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_aa87deb01c5f539e6bda34829c8ef2368' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_aa87deb01c5f539e6bda34829c8ef2368' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_aa87deb01c5f539e6bda34829c8ef2368' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_aa87deb01c5f539e6bda34829c8ef2368' multiply defi
+ned.
+
+
+LaTeX Warning: Label `3694s_8h_aa87deb01c5f539e6bda34829c8ef2368' multiply defi
+ned.
+
+
+LaTeX Warning: Label `kbd__jp106_8h_a6ddac9f757f187d45626571f90c4a14b_a6ddac9f7
+57f187d45626571f90c4a14b' multiply defined.
+
+)
 \openout1 = `refman.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 69.
@@ -519,18 +1192,15 @@ LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
 (Font)              scaled to size 13.83836pt on input line 72.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
 (Font)              scaled to size 13.83836pt on input line 72.
- (./refman.toc)
-\tf@toc=\write4
-\openout4 = `refman.toc'.
-
+ (./refman.toc
 LaTeX Font Info:    Font shape `JT1/mc/m/sl' in size <10> not available
-(Font)              Font shape `JT1/mc/m/n' tried instead on input line 73.
+(Font)              Font shape `JT1/mc/m/n' tried instead on input line 290.
 LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
-(Font)              scaled to size 9.60999pt on input line 73.
+(Font)              scaled to size 9.60999pt on input line 290.
 LaTeX Font Info:    Font shape `JY1/mc/m/sl' in size <10> not available
-(Font)              Font shape `JY1/mc/m/n' tried instead on input line 73.
+(Font)              Font shape `JY1/mc/m/n' tried instead on input line 290.
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 9.60999pt on input line 73.
+(Font)              scaled to size 9.60999pt on input line 290.
 
 
 Package Fancyhdr Warning: \headheight is too small (5.0pt): 
@@ -539,30 +1209,48 @@ Package Fancyhdr Warning: \headheight is too small (5.0pt):
  This may cause the page layout to be inconsistent, however.
 
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <10> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 73.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 290.
 LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 9.60999pt on input line 73.
+(Font)              scaled to size 9.60999pt on input line 290.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <10> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 73.
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 290.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 9.60999pt on input line 73.
+(Font)              scaled to size 9.60999pt on input line 290.
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <7> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 73.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 290.
 LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 6.72699pt on input line 73.
+(Font)              scaled to size 6.72699pt on input line 290.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <7> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 73.
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 290.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 6.72699pt on input line 73.
+(Font)              scaled to size 6.72699pt on input line 290.
 LaTeX Font Info:    Font shape `JT1/mc/bx/it' in size <7> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 73.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 290.
 LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 6.72699pt on input line 73.
+(Font)              scaled to size 6.72699pt on input line 290.
 LaTeX Font Info:    Font shape `JY1/mc/bx/it' in size <7> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 73.
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 290.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 6.72699pt on input line 73.
-[1] (./d3/d91/lcd__def_8h.tex
+(Font)              scaled to size 6.72699pt on input line 290.
+[1]
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[2])
+\tf@toc=\write4
+\openout4 = `refman.toc'.
+
+
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[3] (./index.tex
 LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
 (Font)              scaled to size 11.53198pt on input line 1.
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
@@ -571,40 +1259,19 @@ LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
 (Font)              scaled to size 11.53198pt on input line 1.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
 (Font)              scaled to size 11.53198pt on input line 1.
-File: dd/de3/lcd__def_8h__incl.eps Graphic file (type eps)
- <dd/de3/lcd__def_8h__incl.eps>
-LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
-(Font)              scaled to size 8.64899pt on input line 24.
-LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 8.64899pt on input line 24.
-LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 8.64899pt on input line 24.
-LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 8.64899pt on input line 24.
-LaTeX Font Info:    Font shape `JT1/gt/m/it' in size <9> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 24.
-LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 8.64899pt on input line 24.
-LaTeX Font Info:    Font shape `JY1/gt/m/it' in size <9> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 24.
-LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 8.64899pt on input line 24.
-LaTeX Font Info:    Font shape `JT1/gt/m/it' in size <7> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 24.
-LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 6.72699pt on input line 24.
-LaTeX Font Info:    Font shape `JY1/gt/m/it' in size <7> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 24.
-LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 6.72699pt on input line 24.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 52.
 
-(/opt/local/share/texmf-texlive/tex/latex/base/omscmr.fd
-File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 52.
+Underfull \hbox (badness 10000) detected at line 7
+[][][]
+ []
 
+) (./de/da5/bug.tex
+Overfull \hbox (4.62343pt too wide) in paragraph at lines 5--6
+[]
+ []
+
+) (./d6/de8/3694s_8h.tex
+File: d4/dca/3694s_8h__dep__incl.eps Graphic file (type eps)
+ <d4/dca/3694s_8h__dep__incl.eps>
 
 Package Fancyhdr Warning: \headheight is too small (5.0pt): 
  Make it at least 16.0pt.
@@ -612,56 +1279,44 @@ Package Fancyhdr Warning: \headheight is too small (5.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [1]
-Underfull \hbox (badness 10000) detected at line 202
-[][][]
- []
-
-LaTeX Font Info:    Font shape `JT1/gt/m/it' in size <10> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 206.
-LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 9.60999pt on input line 206.
-LaTeX Font Info:    Font shape `JY1/gt/m/it' in size <10> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 206.
-LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 9.60999pt on input line 206.
-
-LaTeX Font Warning: Font shape `OT1/cmss/m/it' in size <10> not available
-(Font)              Font shape `OT1/cmss/m/sl' tried instead on input line 206.
-
-
-
-LaTeX Font Warning: Font shape `OT1/cmss/m/it' in size <7> not available
-(Font)              Font shape `OT1/cmss/m/sl' tried instead on input line 206.
-
-
-LaTeX Font Info:    Try loading font information for OMS+cmtt on input line 216
-.
-LaTeX Font Info:    No file OMScmtt.fd. on input line 216.
-
-LaTeX Font Warning: Font shape `OMS/cmtt/m/n' undefined
-(Font)              using `OMS/cmsy/m/n' instead
-(Font)              for symbol `textbraceleft' on input line 216.
-
-LaTeX Font Info:    Font shape `JT1/mc/m/sl' in size <7> not available
-(Font)              Font shape `JT1/mc/m/n' tried instead on input line 216.
 LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
-(Font)              scaled to size 6.72699pt on input line 216.
-LaTeX Font Info:    Font shape `JY1/mc/m/sl' in size <7> not available
-(Font)              Font shape `JY1/mc/m/n' tried instead on input line 216.
+(Font)              scaled to size 8.64899pt on input line 20.
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 6.72699pt on input line 216.
+(Font)              scaled to size 8.64899pt on input line 20.
+LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
+(Font)              scaled to size 8.64899pt on input line 20.
+LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
+(Font)              scaled to size 8.64899pt on input line 20.
+LaTeX Font Info:    Font shape `JT1/gt/m/it' in size <9> not available
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 20.
+LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
+(Font)              scaled to size 8.64899pt on input line 20.
+LaTeX Font Info:    Font shape `JY1/gt/m/it' in size <9> not available
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 20.
+LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
+(Font)              scaled to size 8.64899pt on input line 20.
+LaTeX Font Info:    Font shape `JT1/gt/m/it' in size <7> not available
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 20.
+LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
+(Font)              scaled to size 6.72699pt on input line 20.
+LaTeX Font Info:    Font shape `JY1/gt/m/it' in size <7> not available
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 20.
+LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
+(Font)              scaled to size 6.72699pt on input line 20.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <9> on input line 52.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 52.
+LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
+(Font)              scaled to size 5.76599pt on input line 52.
+
 
 Package Fancyhdr Warning: \headheight is too small (5.0pt): 
  Make it at least 16.0pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[2]) (./de/de4/music__def_8h.tex
-File: db/d44/music__def_8h__incl.eps Graphic file (type eps)
- <db/d44/music__def_8h__incl.eps>)
-(./da/d19/ssrp__def_8h.tex
-File: d2/d75/ssrp__def_8h__incl.eps Graphic file (type eps)
- <d2/d75/ssrp__def_8h__incl.eps>
+[2]
 
 Package Fancyhdr Warning: \headheight is too small (5.0pt): 
  Make it at least 16.0pt.
@@ -669,18 +1324,150 @@ Package Fancyhdr Warning: \headheight is too small (5.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [3]
-Underfull \hbox (badness 10000) detected at line 61
-[][][]
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[4]
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[5]
+File: da/dbb/struct__st__lvd__coll__graph.eps Graphic file (type eps)
+ <da/dbb/struct__st__lvd__coll__graph.eps>
+
+LaTeX Font Warning: Font shape `JT1/mc/bc/n' undefined
+(Font)              using `JT1/mc/m/n' instead on input line 306.
+
+
+LaTeX Font Warning: Font shape `JY1/mc/bc/n' undefined
+(Font)              using `JY1/mc/m/n' instead on input line 306.
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/bc/n' undefined
+(Font)              using `OT1/cmr/m/n' instead on input line 306.
+
+LaTeX Font Info:    Font shape `JT1/mc/bc/n' will be
+(Font)              scaled to size 9.60999pt on input line 306.
+LaTeX Font Info:    Font shape `JY1/mc/bc/n' will be
+(Font)              scaled to size 9.60999pt on input line 306.
+
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 306--321
+[]
  []
 
+File: d2/d78/struct__st__iic2__coll__graph.eps Graphic file (type eps)
+<d2/d78/struct__st__iic2__coll__graph.eps>
 
-Underfull \hbox (badness 10000) detected at line 64
-[][][]
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[6]
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 336--387
+[]
  []
 
+File: d9/dee/struct__st__tw__coll__graph.eps Graphic file (type eps)
+<d9/dee/struct__st__tw__coll__graph.eps>
 
-Underfull \hbox (badness 10000) detected at line 67
-[][][]
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[7]
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 402--471
+[]
+ []
+
+File: db/d3e/struct__st__flash__coll__graph.eps Graphic file (type eps)
+<db/d3e/struct__st__flash__coll__graph.eps>
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 486--525
+[]
+ []
+
+File: dd/d88/struct__st__tv__coll__graph.eps Graphic file (type eps)
+<dd/d88/struct__st__tv__coll__graph.eps>
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[8]
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 540--579
+[]
+ []
+
+File: dd/d40/struct__st__ta__coll__graph.eps Graphic file (type eps)
+<dd/d40/struct__st__ta__coll__graph.eps>
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[9]
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 594--609
+[]
+ []
+
+File: da/d55/struct__st__sci3__coll__graph.eps Graphic file (type eps)
+<da/d55/struct__st__sci3__coll__graph.eps>
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[10]
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 624--663
+[]
+ []
+
+File: d5/d8b/struct__st__ad__coll__graph.eps Graphic file (type eps)
+<d5/d8b/struct__st__ad__coll__graph.eps>
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 678--717
+[]
+ []
+
+File: d7/d0a/struct__st__wdt__coll__graph.eps Graphic file (type eps)
+<d7/d0a/struct__st__wdt__coll__graph.eps>
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[11]
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 732--753
+[]
+ []
+
+File: d9/d5b/struct__st__abrk__coll__graph.eps Graphic file (type eps)
+<d9/d5b/struct__st__abrk__coll__graph.eps>
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[12]
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 768--795
+[]
+ []
+
+File: d5/de4/struct__st__io__coll__graph.eps Graphic file (type eps)
+<d5/de4/struct__st__io__coll__graph.eps>
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 810--905
+[] 
  []
 
 
@@ -689,8 +1476,1049 @@ Package Fancyhdr Warning: \headheight is too small (5.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[4]
-Underfull \hbox (badness 10000) detected at line 72
+[13]
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 905--951
+[]
+ []
+
+File: d2/d9c/union__un__syscr1__coll__graph.eps Graphic file (type eps)
+<d2/d9c/union__un__syscr1__coll__graph.eps>
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 966--981
+[]
+ []
+
+File: d5/dac/union__un__syscr2__coll__graph.eps Graphic file (type eps)
+<d5/dac/union__un__syscr2__coll__graph.eps>
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[14]
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 996--1011
+[]
+ []
+
+File: d4/d62/union__un__iegr1__coll__graph.eps Graphic file (type eps)
+<d4/d62/union__un__iegr1__coll__graph.eps>
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[15]
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 1026--1041
+[]
+ []
+
+File: da/d51/union__un__iegr2__coll__graph.eps Graphic file (type eps)
+<da/d51/union__un__iegr2__coll__graph.eps>
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 1056--1071
+[]
+ []
+
+File: d0/def/union__un__ienr1__coll__graph.eps Graphic file (type eps)
+<d0/def/union__un__ienr1__coll__graph.eps>
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[16]
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 1086--1101
+[]
+ []
+
+File: df/da6/union__un__irr1__coll__graph.eps Graphic file (type eps)
+<df/da6/union__un__irr1__coll__graph.eps>
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[17]
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 1116--1131
+[]
+ []
+
+File: d2/d17/union__un__iwpr__coll__graph.eps Graphic file (type eps)
+<d2/d17/union__un__iwpr__coll__graph.eps>
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 1146--1161
+[]
+ []
+
+File: d2/dff/union__un__mstcr1__coll__graph.eps Graphic file (type eps)
+<d2/dff/union__un__mstcr1__coll__graph.eps>
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[18]
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 1176--1191
+[]
+ []
+
+File: d8/d82/union__st__lvd_8CR__coll__graph.eps Graphic file (type eps)
+<d8/d82/union__st__lvd_8CR__coll__graph.eps>
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 1206--1221
+[]
+ []
+
+File: da/da8/struct__st__lvd_8CR_8BIT__coll__graph.eps Graphic file (type eps)
+<da/da8/struct__st__lvd_8CR_8BIT__coll__graph.eps>
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[19]
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 1236--1275
+[]
+ []
+
+File: d3/dca/union__st__lvd_8SR__coll__graph.eps Graphic file (type eps)
+<d3/dca/union__st__lvd_8SR__coll__graph.eps>
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 1290--1305
+[]
+ []
+
+File: d5/dc9/struct__st__lvd_8SR_8BIT__coll__graph.eps Graphic file (type eps)
+<d5/dc9/struct__st__lvd_8SR_8BIT__coll__graph.eps>
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[20]
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 1320--1341
+[]
+ []
+
+File: de/d72/union__st__iic2_8ICCR1__coll__graph.eps Graphic file (type eps)
+<de/d72/union__st__iic2_8ICCR1__coll__graph.eps>
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 1356--1371
+[]
+ []
+
+File: de/d5c/struct__st__iic2_8ICCR1_8BIT__coll__graph.eps Graphic file (type e
+ps)
+<de/d5c/struct__st__iic2_8ICCR1_8BIT__coll__graph.eps>
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[21]
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 1386--1419
+[]
+ []
+
+File: df/d17/union__st__iic2_8ICCR2__coll__graph.eps Graphic file (type eps)
+<df/d17/union__st__iic2_8ICCR2__coll__graph.eps>
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 1434--1449
+[]
+ []
+
+File: d8/d46/struct__st__iic2_8ICCR2_8BIT__coll__graph.eps Graphic file (type e
+ps)
+<d8/d46/struct__st__iic2_8ICCR2_8BIT__coll__graph.eps>
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[22]
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 1464--1509
+[]
+ []
+
+File: d1/dd5/union__st__iic2_8ICMR__coll__graph.eps Graphic file (type eps)
+<d1/dd5/union__st__iic2_8ICMR__coll__graph.eps>
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 1524--1529
+[] 
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[23]
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 1529--1539
+[]
+ []
+
+File: d6/d9f/struct__st__iic2_8ICMR_8BIT__coll__graph.eps Graphic file (type ep
+s)
+<d6/d9f/struct__st__iic2_8ICMR_8BIT__coll__graph.eps>
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 1554--1587
+[]
+ []
+
+File: d5/dca/union__st__iic2_8ICIER__coll__graph.eps Graphic file (type eps)
+<d5/dca/union__st__iic2_8ICIER__coll__graph.eps>
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 1602--1607
+[] 
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[24]
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 1607--1617
+[]
+ []
+
+File: db/dca/struct__st__iic2_8ICIER_8BIT__coll__graph.eps Graphic file (type e
+ps)
+<db/dca/struct__st__iic2_8ICIER_8BIT__coll__graph.eps>
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 1632--1683
+[]
+ []
+
+File: d5/dbf/union__st__iic2_8ICSR__coll__graph.eps Graphic file (type eps)
+<d5/dbf/union__st__iic2_8ICSR__coll__graph.eps>
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[25]
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 1698--1713
+[]
+ []
+
+File: df/d97/struct__st__iic2_8ICSR_8BIT__coll__graph.eps Graphic file (type ep
+s)
+<df/d97/struct__st__iic2_8ICSR_8BIT__coll__graph.eps>
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 1728--1779
+[]
+ []
+
+File: d7/dbe/union__st__iic2_8SAR__coll__graph.eps Graphic file (type eps)
+<d7/dbe/union__st__iic2_8SAR__coll__graph.eps>
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[26]
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 1794--1809
+[]
+ []
+
+File: d0/d34/struct__st__iic2_8SAR_8BIT__coll__graph.eps Graphic file (type eps
+)
+<d0/d34/struct__st__iic2_8SAR_8BIT__coll__graph.eps>
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 1824--1839
+[]
+ []
+
+File: d2/d7d/union__st__tw_8TMRW__coll__graph.eps Graphic file (type eps)
+<d2/d7d/union__st__tw_8TMRW__coll__graph.eps>
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 1854--1869
+[]
+ []
+
+File: d8/de2/struct__st__tw_8TMRW_8BIT__coll__graph.eps Graphic file (type eps)
+
+<d8/de2/struct__st__tw_8TMRW_8BIT__coll__graph.eps>
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[27]
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 1884--1929
+[]
+ []
+
+File: dd/d07/union__st__tw_8TCRW__coll__graph.eps Graphic file (type eps)
+<dd/d07/union__st__tw_8TCRW__coll__graph.eps>
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 1944--1949
+[] 
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[28]
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 1949--1959
+[]
+ []
+
+File: db/db6/struct__st__tw_8TCRW_8BIT__coll__graph.eps Graphic file (type eps)
+
+<db/db6/struct__st__tw_8TCRW_8BIT__coll__graph.eps>
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 1974--2013
+[]
+ []
+
+File: de/da9/union__st__tw_8TIERW__coll__graph.eps Graphic file (type eps)
+<de/da9/union__st__tw_8TIERW__coll__graph.eps>
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[29]
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 2028--2043
+[]
+ []
+
+File: d1/df8/struct__st__tw_8TIERW_8BIT__coll__graph.eps Graphic file (type eps
+)
+<d1/df8/struct__st__tw_8TIERW_8BIT__coll__graph.eps>
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 2058--2097
+[]
+ []
+
+File: df/d77/union__st__tw_8TSRW__coll__graph.eps Graphic file (type eps)
+<df/d77/union__st__tw_8TSRW__coll__graph.eps>
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[30]
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 2112--2127
+[]
+ []
+
+File: d4/d17/struct__st__tw_8TSRW_8BIT__coll__graph.eps Graphic file (type eps)
+
+<d4/d17/struct__st__tw_8TSRW_8BIT__coll__graph.eps>
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 2142--2181
+[]
+ []
+
+File: d0/dd3/union__st__tw_8TIOR0__coll__graph.eps Graphic file (type eps)
+<d0/dd3/union__st__tw_8TIOR0__coll__graph.eps>
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[31]
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 2196--2211
+[]
+ []
+
+File: d4/dbd/struct__st__tw_8TIOR0_8BIT__coll__graph.eps Graphic file (type eps
+)
+<d4/dbd/struct__st__tw_8TIOR0_8BIT__coll__graph.eps>
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 2226--2247
+[]
+ []
+
+File: d8/d15/union__st__tw_8TIOR1__coll__graph.eps Graphic file (type eps)
+<d8/d15/union__st__tw_8TIOR1__coll__graph.eps>
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 2262--2277
+[]
+ []
+
+File: d0/d4d/struct__st__tw_8TIOR1_8BIT__coll__graph.eps Graphic file (type eps
+)
+<d0/d4d/struct__st__tw_8TIOR1_8BIT__coll__graph.eps>
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[32]
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 2292--2313
+[]
+ []
+
+File: d8/df8/union__st__flash_8FLMCR1__coll__graph.eps Graphic file (type eps)
+<d8/df8/union__st__flash_8FLMCR1__coll__graph.eps>
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 2328--2343
+[]
+ []
+
+File: d5/d0f/struct__st__flash_8FLMCR1_8BIT__coll__graph.eps Graphic file (type
+ eps)
+<d5/d0f/struct__st__flash_8FLMCR1_8BIT__coll__graph.eps>
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[33]
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 2358--2409
+[]
+ []
+
+File: de/dc2/union__st__flash_8FLMCR2__coll__graph.eps Graphic file (type eps)
+<de/dc2/union__st__flash_8FLMCR2__coll__graph.eps>
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 2424--2429
+[] 
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[34]
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 2429--2439
+[]
+ []
+
+File: de/d02/struct__st__flash_8FLMCR2_8BIT__coll__graph.eps Graphic file (type
+ eps)
+<de/d02/struct__st__flash_8FLMCR2_8BIT__coll__graph.eps>
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 2454--2463
+[]
+ []
+
+File: de/d9d/union__st__flash_8FLPWCR__coll__graph.eps Graphic file (type eps)
+<de/d9d/union__st__flash_8FLPWCR__coll__graph.eps>
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 2478--2493
+[]
+ []
+
+File: d4/d10/struct__st__flash_8FLPWCR_8BIT__coll__graph.eps Graphic file (type
+ eps)
+<d4/d10/struct__st__flash_8FLPWCR_8BIT__coll__graph.eps>
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[35]
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 2508--2517
+[]
+ []
+
+File: d9/df1/union__st__flash_8EBR1__coll__graph.eps Graphic file (type eps)
+<d9/df1/union__st__flash_8EBR1__coll__graph.eps>
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 2532--2547
+[]
+ []
+
+File: d6/d4d/struct__st__flash_8EBR1_8BIT__coll__graph.eps Graphic file (type e
+ps)
+<d6/d4d/struct__st__flash_8EBR1_8BIT__coll__graph.eps>
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 2562--2585
+[] 
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[36]
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 2585--2601
+[]
+ []
+
+File: db/ddc/union__st__flash_8FENR__coll__graph.eps Graphic file (type eps)
+<db/ddc/union__st__flash_8FENR__coll__graph.eps>
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 2616--2631
+[]
+ []
+
+File: d2/da3/struct__st__flash_8FENR_8BIT__coll__graph.eps Graphic file (type e
+ps)
+<d2/da3/struct__st__flash_8FENR_8BIT__coll__graph.eps>
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 2646--2655
+[]
+ []
+
+File: d1/d36/union__st__tv_8TCRV0__coll__graph.eps Graphic file (type eps)
+<d1/d36/union__st__tv_8TCRV0__coll__graph.eps>
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[37]
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 2670--2685
+[]
+ []
+
+File: d9/d91/struct__st__tv_8TCRV0_8BIT__coll__graph.eps Graphic file (type eps
+)
+<d9/d91/struct__st__tv_8TCRV0_8BIT__coll__graph.eps>
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 2700--2733
+[]
+ []
+
+File: d1/de3/union__st__tv_8TCSRV__coll__graph.eps Graphic file (type eps)
+<d1/de3/union__st__tv_8TCSRV__coll__graph.eps>
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 2748--2753
+[] 
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[38]
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 2753--2763
+[]
+ []
+
+File: d5/d9e/struct__st__tv_8TCSRV_8BIT__coll__graph.eps Graphic file (type eps
+)
+<d5/d9e/struct__st__tv_8TCSRV_8BIT__coll__graph.eps>
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 2778--2811
+[]
+ []
+
+File: df/d99/union__st__tv_8TCRV1__coll__graph.eps Graphic file (type eps)
+<df/d99/union__st__tv_8TCRV1__coll__graph.eps>
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 2826--2841
+[]
+ []
+
+File: dd/d3f/struct__st__tv_8TCRV1_8BIT__coll__graph.eps Graphic file (type eps
+)
+<dd/d3f/struct__st__tv_8TCRV1_8BIT__coll__graph.eps>
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[39]
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 2856--2883
+[]
+ []
+
+File: dd/de4/union__st__ta_8TMA__coll__graph.eps Graphic file (type eps)
+<dd/de4/union__st__ta_8TMA__coll__graph.eps>
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 2898--2913
+[]
+ []
+
+File: da/d9d/struct__st__ta_8TMA_8BIT__coll__graph.eps Graphic file (type eps)
+<da/d9d/struct__st__ta_8TMA_8BIT__coll__graph.eps>
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[40]
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 2928--2949
+[]
+ []
+
+File: d6/de4/union__st__sci3_8SMR__coll__graph.eps Graphic file (type eps)
+<d6/de4/union__st__sci3_8SMR__coll__graph.eps>
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 2964--2979
+[]
+ []
+
+File: de/dc9/struct__st__sci3_8SMR_8BIT__coll__graph.eps Graphic file (type eps
+)
+<de/dc9/struct__st__sci3_8SMR_8BIT__coll__graph.eps>
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[41]
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 2994--3039
+[]
+ []
+
+File: d1/d92/union__st__sci3_8SCR3__coll__graph.eps Graphic file (type eps)
+<d1/d92/union__st__sci3_8SCR3__coll__graph.eps>
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 3054--3069
+[]
+ []
+
+File: db/d6d/struct__st__sci3_8SCR3_8BIT__coll__graph.eps Graphic file (type ep
+s)
+<db/d6d/struct__st__sci3_8SCR3_8BIT__coll__graph.eps>
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[42]
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 3084--3129
+[]
+ []
+
+File: d0/dbc/union__st__sci3_8SSR__coll__graph.eps Graphic file (type eps)
+<d0/dbc/union__st__sci3_8SSR__coll__graph.eps>
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 3144--3159
+[]
+ []
+
+File: dc/db4/struct__st__sci3_8SSR_8BIT__coll__graph.eps Graphic file (type eps
+)
+<dc/db4/struct__st__sci3_8SSR_8BIT__coll__graph.eps>
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[43]
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 3174--3225
+[]
+ []
+
+File: d2/d00/union__st__ad_8ADCSR__coll__graph.eps Graphic file (type eps)
+<d2/d00/union__st__ad_8ADCSR__coll__graph.eps>
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 3240--3255
+[]
+ []
+
+File: da/d53/struct__st__ad_8ADCSR_8BIT__coll__graph.eps Graphic file (type eps
+)
+<da/d53/struct__st__ad_8ADCSR_8BIT__coll__graph.eps>
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[44]
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 3270--3309
+[]
+ []
+
+File: d3/ded/union__st__ad_8ADCR__coll__graph.eps Graphic file (type eps)
+<d3/ded/union__st__ad_8ADCR__coll__graph.eps>
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 3324--3339
+[]
+ []
+
+File: d7/dd9/struct__st__ad_8ADCR_8BIT__coll__graph.eps Graphic file (type eps)
+
+<d7/dd9/struct__st__ad_8ADCR_8BIT__coll__graph.eps>
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[45]
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 3354--3363
+[]
+ []
+
+File: d8/d54/union__st__wdt_8TCSRWD__coll__graph.eps Graphic file (type eps)
+<d8/d54/union__st__wdt_8TCSRWD__coll__graph.eps>
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 3378--3393
+[]
+ []
+
+File: dd/dc0/struct__st__wdt_8TCSRWD_8BIT__coll__graph.eps Graphic file (type e
+ps)
+<dd/dc0/struct__st__wdt_8TCSRWD_8BIT__coll__graph.eps>
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[46]
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 3408--3459
+[]
+ []
+
+File: dd/d05/union__st__wdt_8TMWD__coll__graph.eps Graphic file (type eps)
+<dd/d05/union__st__wdt_8TMWD__coll__graph.eps>
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 3474--3489
+[]
+ []
+
+File: d1/df8/struct__st__wdt_8TMWD_8BIT__coll__graph.eps Graphic file (type eps
+)
+<d1/df8/struct__st__wdt_8TMWD_8BIT__coll__graph.eps>
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 3504--3519
+[]
+ []
+
+File: d5/d6b/union__st__abrk_8CR__coll__graph.eps Graphic file (type eps)
+<d5/d6b/union__st__abrk_8CR__coll__graph.eps>
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[47]
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 3534--3549
+[]
+ []
+
+File: d4/d2d/struct__st__abrk_8CR_8BIT__coll__graph.eps Graphic file (type eps)
+
+<d4/d2d/struct__st__abrk_8CR_8BIT__coll__graph.eps>
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 3564--3591
+[]
+ []
+
+File: da/d53/union__st__abrk_8SR__coll__graph.eps Graphic file (type eps)
+<da/d53/union__st__abrk_8SR__coll__graph.eps>
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[48]
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 3606--3621
+[]
+ []
+
+File: d8/df5/struct__st__abrk_8SR_8BIT__coll__graph.eps Graphic file (type eps)
+
+<d8/df5/struct__st__abrk_8SR_8BIT__coll__graph.eps>
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 3636--3651
+[]
+ []
+
+File: d6/da8/union__st__io_8PUCR1__coll__graph.eps Graphic file (type eps)
+<d6/da8/union__st__io_8PUCR1__coll__graph.eps>
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[49]
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 3666--3681
+[]
+ []
+
+File: d7/de7/struct__st__io_8PUCR1_8BIT__coll__graph.eps Graphic file (type eps
+)
+<d7/de7/struct__st__io_8PUCR1_8BIT__coll__graph.eps>
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 3696--3747
+[]
+ []
+
+File: d0/ddc/union__st__io_8PUCR5__coll__graph.eps Graphic file (type eps)
+<d0/ddc/union__st__io_8PUCR5__coll__graph.eps>
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[50]
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 3762--3777
+[]
+ []
+
+File: de/da9/struct__st__io_8PUCR5_8BIT__coll__graph.eps Graphic file (type eps
+)
+<de/da9/struct__st__io_8PUCR5_8BIT__coll__graph.eps>
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 3792--3837
+[]
+ []
+
+File: d0/d9a/union__st__io_8PDR1__coll__graph.eps Graphic file (type eps)
+<d0/d9a/union__st__io_8PDR1__coll__graph.eps>
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[51]
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 3852--3867
+[]
+ []
+
+File: dc/d03/struct__st__io_8PDR1_8BIT__coll__graph.eps Graphic file (type eps)
+
+<dc/d03/struct__st__io_8PDR1_8BIT__coll__graph.eps>
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 3882--3933
+[]
+ []
+
+File: de/da6/union__st__io_8PDR2__coll__graph.eps Graphic file (type eps)
+<de/da6/union__st__io_8PDR2__coll__graph.eps>
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[52]
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 3948--3963
+[]
+ []
+
+File: d4/d1f/struct__st__io_8PDR2_8BIT__coll__graph.eps Graphic file (type eps)
+
+<d4/d1f/struct__st__io_8PDR2_8BIT__coll__graph.eps>
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 3978--4005
+[]
+ []
+
+File: d0/d8b/union__st__io_8PDR5__coll__graph.eps Graphic file (type eps)
+<d0/d8b/union__st__io_8PDR5__coll__graph.eps>
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 4020--4035
+[]
+ []
+
+File: db/d8d/struct__st__io_8PDR5_8BIT__coll__graph.eps Graphic file (type eps)
+
+<db/d8d/struct__st__io_8PDR5_8BIT__coll__graph.eps>
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[53]
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 4050--4101
+[]
+ []
+
+File: d2/d63/union__st__io_8PDR7__coll__graph.eps Graphic file (type eps)
+<d2/d63/union__st__io_8PDR7__coll__graph.eps>
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 4116--4131
+[]
+ []
+
+File: d1/d22/struct__st__io_8PDR7_8BIT__coll__graph.eps Graphic file (type eps)
+
+<d1/d22/struct__st__io_8PDR7_8BIT__coll__graph.eps>
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[54]
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 4146--4173
+[]
+ []
+
+File: dd/d42/union__st__io_8PDR8__coll__graph.eps Graphic file (type eps)
+<dd/d42/union__st__io_8PDR8__coll__graph.eps>
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 4188--4203
+[]
+ []
+
+File: de/d37/struct__st__io_8PDR8_8BIT__coll__graph.eps Graphic file (type eps)
+
+<de/d37/struct__st__io_8PDR8_8BIT__coll__graph.eps>
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[55]
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 4218--4269
+[]
+ []
+
+File: dd/de4/union__st__io_8PDRB__coll__graph.eps Graphic file (type eps)
+<dd/de4/union__st__io_8PDRB__coll__graph.eps>
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 4284--4299
+[]
+ []
+
+File: da/dc5/struct__st__io_8PDRB_8BIT__coll__graph.eps Graphic file (type eps)
+
+<da/dc5/struct__st__io_8PDRB_8BIT__coll__graph.eps>
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[56]
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 4314--4365
+[]
+ []
+
+File: d6/d70/union__st__io_8PMR1__coll__graph.eps Graphic file (type eps)
+<d6/d70/union__st__io_8PMR1__coll__graph.eps>
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 4380--4395
+[]
+ []
+
+File: dc/dd3/struct__st__io_8PMR1_8BIT__coll__graph.eps Graphic file (type eps)
+
+<dc/dd3/struct__st__io_8PMR1_8BIT__coll__graph.eps>
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[57]
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 4410--4455
+[]
+ []
+
+File: d2/d89/union__st__io_8PMR5__coll__graph.eps Graphic file (type eps)
+<d2/d89/union__st__io_8PMR5__coll__graph.eps>
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 4470--4485
+[]
+ []
+
+File: d9/d66/struct__st__io_8PMR5_8BIT__coll__graph.eps Graphic file (type eps)
+
+<d9/d66/struct__st__io_8PMR5_8BIT__coll__graph.eps>
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[58]
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 4500--4545
+[]
+ []
+
+File: d0/d74/struct__un__syscr1_8BIT__coll__graph.eps Graphic file (type eps)
+<d0/d74/struct__un__syscr1_8BIT__coll__graph.eps>
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 4560--4581
+[]
+ []
+
+File: d6/d7b/struct__un__syscr2_8BIT__coll__graph.eps Graphic file (type eps)
+<d6/d7b/struct__un__syscr2_8BIT__coll__graph.eps>
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[59]
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 4596--4629
+[]
+ []
+
+File: d5/d4b/struct__un__iegr1_8BIT__coll__graph.eps Graphic file (type eps)
+<d5/d4b/struct__un__iegr1_8BIT__coll__graph.eps>
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 4644--4683
+[]
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[60]
+File: d9/d20/struct__un__iegr2_8BIT__coll__graph.eps Graphic file (type eps)
+ <d9/d20/struct__un__iegr2_8BIT__coll__graph.eps>
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 4698--4743
+[]
+ []
+
+File: dc/df0/struct__un__ienr1_8BIT__coll__graph.eps Graphic file (type eps)
+<dc/df0/struct__un__ienr1_8BIT__coll__graph.eps>
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[61]
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 4758--4809
+[]
+ []
+
+File: db/d21/struct__un__irr1_8BIT__coll__graph.eps Graphic file (type eps)
+<db/d21/struct__un__irr1_8BIT__coll__graph.eps>
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 4824--4869
+[]
+ []
+
+File: d4/d13/struct__un__iwpr_8BIT__coll__graph.eps Graphic file (type eps)
+<d4/d13/struct__un__iwpr_8BIT__coll__graph.eps>
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[62]
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 4884--4929
+[]
+ []
+
+File: d7/d9c/struct__un__mstcr1_8BIT__coll__graph.eps Graphic file (type eps)
+<d7/d9c/struct__un__mstcr1_8BIT__coll__graph.eps>
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[63]
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 4944--4994
+[] 
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[64]) (./d7/d19/adc_8h.tex
+File: dd/dce/adc_8h__incl.eps Graphic file (type eps)
+ <dd/dce/adc_8h__incl.eps>
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 20.
+
+(/opt/local/share/texmf-texlive/tex/latex/base/omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 20.
+
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[65]
+Underfull \hbox (badness 10000) detected at line 63
 [][][]
  []
 
@@ -699,62 +2527,323 @@ Underfull \hbox (badness 10000) detected at line 77
 [][][]
  []
 
-File: d6/d1f/structPear____coll__graph.eps Graphic file (type eps)
-<d6/d1f/structPear____coll__graph.eps>
+LaTeX Font Info:    Font shape `JT1/gt/m/it' in size <10> not available
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 81.
+LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
+(Font)              scaled to size 9.60999pt on input line 81.
+LaTeX Font Info:    Font shape `JY1/gt/m/it' in size <10> not available
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 81.
+LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
+(Font)              scaled to size 9.60999pt on input line 81.
 
-LaTeX Font Warning: Font shape `JT1/mc/bc/n' undefined
-(Font)              using `JT1/mc/m/n' instead on input line 100.
+LaTeX Font Warning: Font shape `OT1/cmss/m/it' in size <10> not available
+(Font)              Font shape `OT1/cmss/m/sl' tried instead on input line 81.
 
 
-LaTeX Font Warning: Font shape `JY1/mc/bc/n' undefined
-(Font)              using `JY1/mc/m/n' instead on input line 100.
+LaTeX Font Warning: Font shape `OT1/cmss/m/it' in size <7> not available
+(Font)              Font shape `OT1/cmss/m/sl' tried instead on input line 81.
+
+LaTeX Font Info:    Try loading font information for OMS+cmtt on input line 93.
+
+LaTeX Font Info:    No file OMScmtt.fd. on input line 93.
+
+LaTeX Font Warning: Font shape `OMS/cmtt/m/n' undefined
+(Font)              using `OMS/cmsy/m/n' instead
+(Font)              for symbol `textbraceleft' on input line 93.
 
 
-LaTeX Font Warning: Font shape `OT1/cmr/bc/n' undefined
-(Font)              using `OT1/cmr/m/n' instead on input line 100.
-
-LaTeX Font Info:    Font shape `JT1/mc/bc/n' will be
-(Font)              scaled to size 9.60999pt on input line 100.
-LaTeX Font Info:    Font shape `JY1/mc/bc/n' will be
-(Font)              scaled to size 9.60999pt on input line 100.
-
-Underfull \hbox (badness 10000) in paragraph at lines 103--103
-[]\OT1/cmr/bc/n/10 addr[]S[]S[]R[]P[][][][]
+Underfull \hbox (badness 10000) detected at line 107
+[][][]
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 109--109
-[]\OT1/cmr/bc/n/10 con[]S[]S[]R[]P[][][][]N[]
- []
-
-
-Overfull \hbox (5.72954pt too wide) in paragraph at lines 100--127
-[]
- []
-
-File: d9/d5c/structStateTable____coll__graph.eps Graphic file (type eps)
-<d9/d5c/structStateTable____coll__graph.eps>
 
 Package Fancyhdr Warning: \headheight is too small (5.0pt): 
  Make it at least 16.0pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[5]
-Overfull \hbox (5.72954pt too wide) in paragraph at lines 141--156
-[]
+[66]
+Overfull \hbox (4.81955pt too wide) in paragraph at lines 153--160
+[] 
  []
 
-File: d1/d0e/structTransactionParam____coll__graph.eps Graphic file (type eps)
-<d1/d0e/structTransactionParam____coll__graph.eps>
+
+Underfull \hbox (badness 10000) detected at line 160
+[][][]
+ []
+
+
+Overfull \hbox (4.81955pt too wide) in paragraph at lines 177--181
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 181
+[][][]
+ []
+
+
+Overfull \hbox (4.81955pt too wide) in paragraph at lines 198--202
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 202
+[][][]
+ []
+
 
 Package Fancyhdr Warning: \headheight is too small (5.0pt): 
  Make it at least 16.0pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[6]
-Overfull \hbox (5.72954pt too wide) in paragraph at lines 170--190
+[67]
+Underfull \hbox (badness 10000) detected at line 218
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 234
+[][][]
+ []
+
+
+Overfull \hbox (4.81955pt too wide) in paragraph at lines 252--258
+[] 
+ []
+
+) (./dc/da7/assert_8h.tex
+Overfull \hbox (4.71483pt too wide) in paragraph at lines 259--1
+[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 259--1
+
+ []
+
+File: d8/dd7/assert_8h__incl.eps Graphic file (type eps)
+<d8/dd7/assert_8h__incl.eps>
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[68]
+Overfull \hbox (4.81955pt too wide) in paragraph at lines 62--66
+[] 
+ []
+
+) (./da/d92/envelope_8h.tex
+File: d2/dbf/envelope_8h__incl.eps Graphic file (type eps)
+ <d2/dbf/envelope_8h__incl.eps>
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[69]
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[70]) (./d3/dd2/ifstub_8h.tex
+File: d8/d42/ifstub_8h__incl.eps Graphic file (type eps)
+ <d8/d42/ifstub_8h__incl.eps>
+File: d8/d36/ifstub_8h__dep__incl.eps Graphic file (type eps)
+
+<d8/d36/ifstub_8h__dep__incl.eps>
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[71]
+File: d9/de9/structIFSTUB__Class__coll__graph.eps Graphic file (type eps)
+ <d9/de9/structIFSTUB__Class__coll__graph.eps>
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[72]
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 77--91
+[] 
+ []
+
+
+Overfull \hbox (4.81955pt too wide) in paragraph at lines 104--114
+[] 
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[73]
+Overfull \hbox (4.71483pt too wide) in paragraph at lines 115--121
+[] 
+ []
+
+
+Overfull \hbox (4.81955pt too wide) in paragraph at lines 135--145
+[] 
+ []
+
+
+Overfull \hbox (4.71483pt too wide) in paragraph at lines 146--152
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 167
+[][][]
+ []
+
+) (./d3/dee/ioctl_8h.tex
+File: db/d0c/ioctl_8h__incl.eps Graphic file (type eps)
+ <db/d0c/ioctl_8h__incl.eps>
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[74]
+File: d6/da7/ioctl_8h__dep__incl.eps Graphic file (type eps)
+ <d6/da7/ioctl_8h__dep__incl.eps>
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[75]
+Underfull \hbox (badness 10000) detected at line 69
+[][][]
+ []
+
+
+Overfull \hbox (4.81955pt too wide) in paragraph at lines 131--141
+[]
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[76]
+Overfull \hbox (4.81955pt too wide) in paragraph at lines 153--157
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 157
+[][][]
+ []
+
+) (./dd/de9/kbd__jp106_8h.tex
+LaTeX Font Info:    Font shape `JT1/mc/m/sl' in size <7> not available
+(Font)              Font shape `JT1/mc/m/n' tried instead on input line 89.
+LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
+(Font)              scaled to size 6.72699pt on input line 89.
+LaTeX Font Info:    Font shape `JY1/mc/m/sl' in size <7> not available
+(Font)              Font shape `JY1/mc/m/n' tried instead on input line 89.
+LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
+(Font)              scaled to size 6.72699pt on input line 89.
+
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[77]
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[78]
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[79]
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[80]) (./d2/ded/lcd_8h.tex
+File: d7/d15/lcd_8h__incl.eps Graphic file (type eps)
+ <d7/d15/lcd_8h__incl.eps>
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[81]
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[82]
+Overfull \hbox (4.81955pt too wide) in paragraph at lines 149--153
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 153
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 156
+[][][]
+ []
+
+
+Overfull \hbox (4.81955pt too wide) in paragraph at lines 174--180
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 180
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 183
+[][][]
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[83]
+Overfull \hbox (4.81955pt too wide) in paragraph at lines 201--207
 [] 
  []
 
@@ -764,8 +2853,1043 @@ Underfull \hbox (badness 10000) detected at line 207
  []
 
 
-Underfull \hbox (badness 10000) detected at line 237
+Underfull \hbox (badness 10000) detected at line 210
 [][][]
+ []
+
+
+Overfull \hbox (4.81955pt too wide) in paragraph at lines 228--236
+[]
+ []
+
+
+Overfull \hbox (4.81955pt too wide) in paragraph at lines 249--257
+[]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 268
+[][][]
+ []
+
+
+Overfull \hbox (4.81955pt too wide) in paragraph at lines 297--299
+[] 
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[84]
+Overfull \hbox (4.81955pt too wide) in paragraph at lines 299--305
+[]
+ []
+
+) (./db/da0/led_8h.tex
+Overfull \hbox (4.81955pt too wide) in paragraph at lines 319--1
+[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 319--1
+
+ []
+
+File: d6/d11/led_8h__incl.eps Graphic file (type eps)
+<d6/d11/led_8h__incl.eps>
+File: d6/dde/led_8h__dep__incl.eps Graphic file (type eps)
+ <d6/dde/led_8h__dep__incl.eps>
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[85]
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[86]
+Overfull \hbox (4.81955pt too wide) in paragraph at lines 106--110
+[] 
+ []
+
+
+Overfull \hbox (4.81955pt too wide) in paragraph at lines 128--132
+[] 
+ []
+
+
+Overfull \hbox (4.81955pt too wide) in paragraph at lines 150--154
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 169
+[][][]
+ []
+
+) (./db/d10/music_8h.tex
+File: d7/d6e/music_8h__incl.eps Graphic file (type eps)
+ <d7/d6e/music_8h__incl.eps>
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[87]
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[88]
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[89]
+Underfull \hbox (badness 10000) detected at line 115
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 119
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 126
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 130
+[][][]
+ []
+
+File: de/d9f/structMUSIC__Note__coll__graph.eps Graphic file (type eps)
+<de/d9f/structMUSIC__Note__coll__graph.eps>
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[90]
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 154--175
+[]
+ []
+
+File: d2/db5/structMUSIC__Part__coll__graph.eps Graphic file (type eps)
+<d2/db5/structMUSIC__Part__coll__graph.eps>
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[91]
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 192--207
+[]
+ []
+
+File: da/d34/structMUSIC__Score__coll__graph.eps Graphic file (type eps)
+<da/d34/structMUSIC__Score__coll__graph.eps>
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[92]
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 224--239
+[]
+ []
+
+File: da/d84/structMUSIC__Position__coll__graph.eps Graphic file (type eps)
+<da/d84/structMUSIC__Position__coll__graph.eps>
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[93]
+Underfull \hbox (badness 10000) in paragraph at lines 259--259
+[]\OT1/cmr/bc/n/10 note[][][]M[]U[]S[]I[]C[][][][]
+ []
+
+
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 256--270
+[] 
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[94]
+Underfull \hbox (badness 10000) detected at line 419
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 477
+[][][]
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[95]
+Overfull \hbox (4.81955pt too wide) in paragraph at lines 494--498
+[] 
+ []
+
+
+Overfull \hbox (4.81955pt too wide) in paragraph at lines 514--520
+[]
+ []
+
+
+Overfull \hbox (4.81955pt too wide) in paragraph at lines 532--538
+[]
+ []
+
+
+Overfull \hbox (4.81955pt too wide) in paragraph at lines 550--556
+[]
+ []
+
+
+Overfull \hbox (4.81955pt too wide) in paragraph at lines 568--574
+[]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 585
+[][][]
+ []
+
+
+Overfull \hbox (4.71483pt too wide) in paragraph at lines 602--610
+[]
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[96]
+Overfull \hbox (4.71483pt too wide) in paragraph at lines 622--630
+[]
+ []
+
+
+Overfull \hbox (4.71483pt too wide) in paragraph at lines 642--650
+[]
+ []
+
+
+Overfull \hbox (4.71483pt too wide) in paragraph at lines 662--670
+[]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 691
+[][][]
+ []
+
+) (./d8/d29/ps2_8h.tex
+File: d0/d3c/ps2_8h__incl.eps Graphic file (type eps)
+ <d0/d3c/ps2_8h__incl.eps>
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[97]
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[98]
+Underfull \hbox (badness 10000) detected at line 68
+[][][]
+ []
+
+
+Overfull \hbox (4.81955pt too wide) in paragraph at lines 136--147
+[] 
+ []
+
+) (./dc/d5d/push__switch_8h.tex
+Overfull \hbox (4.71483pt too wide) in paragraph at lines 148--1
+[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 148--1
+
+ []
+
+File: d7/d27/push__switch_8h__incl.eps Graphic file (type eps)
+<d7/d27/push__switch_8h__incl.eps>
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[99]
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[100]
+Underfull \hbox (badness 10000) detected at line 76
+[][][]
+ []
+
+
+Overfull \hbox (4.81955pt too wide) in paragraph at lines 116--121
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 121
+[][][]
+ []
+
+
+Overfull \hbox (4.81955pt too wide) in paragraph at lines 138--142
+[] 
+ []
+
+
+Overfull \hbox (4.71483pt too wide) in paragraph at lines 143--149
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 149
+[][][]
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[101]
+Overfull \hbox (4.81955pt too wide) in paragraph at lines 166--170
+[] 
+ []
+
+
+Overfull \hbox (4.71483pt too wide) in paragraph at lines 171--177
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 177
+[][][]
+ []
+
+
+Overfull \hbox (4.81955pt too wide) in paragraph at lines 194--198
+[] 
+ []
+
+
+Overfull \hbox (4.71483pt too wide) in paragraph at lines 199--205
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 205
+[][][]
+ []
+
+) (./da/de4/sci_8h.tex
+File: de/dc7/sci_8h__incl.eps Graphic file (type eps)
+ <de/dc7/sci_8h__incl.eps>
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[102]
+Underfull \hbox (badness 10000) detected at line 52
+[][][]
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[103]
+Overfull \hbox (4.81955pt too wide) in paragraph at lines 153--157
+[] 
+ []
+
+
+Overfull \hbox (4.71483pt too wide) in paragraph at lines 158--166
+[]
+ []
+
+
+Overfull \hbox (4.81955pt too wide) in paragraph at lines 181--191
+[] 
+ []
+
+
+Overfull \hbox (4.71483pt too wide) in paragraph at lines 192--200
+[]
+ []
+
+
+Overfull \hbox (4.81955pt too wide) in paragraph at lines 215--219
+[] 
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[104]
+Overfull \hbox (4.81955pt too wide) in paragraph at lines 219--225
+[] 
+ []
+
+
+Overfull \hbox (4.71483pt too wide) in paragraph at lines 226--234
+[]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 245
+[][][]
+ []
+
+) (./d9/d88/sound_8h.tex
+File: dd/d14/sound_8h__incl.eps Graphic file (type eps)
+ <dd/d14/sound_8h__incl.eps>
+File: d9/df5/sound_8h__dep__incl.eps Graphic file (type eps)
+
+<d9/df5/sound_8h__dep__incl.eps>
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[105]
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[106]
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[107]
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[108]
+Underfull \hbox (badness 10000) detected at line 195
+[][][]
+ []
+
+File: d4/d37/structSOUND__Envelope__coll__graph.eps Graphic file (type eps)
+<d4/d37/structSOUND__Envelope__coll__graph.eps>
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 219--234
+[]
+ []
+
+File: d6/d5d/structSOUND__Tone__coll__graph.eps Graphic file (type eps)
+<d6/d5d/structSOUND__Tone__coll__graph.eps>
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[109]
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 251--277
+[] 
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[110]
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[111]
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[112]
+Underfull \hbox (badness 10000) detected at line 873
+[][][]
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[113]
+Underfull \hbox (badness 10000) detected at line 924
+[][][]
+ []
+
+
+Overfull \hbox (4.81955pt too wide) in paragraph at lines 941--947
+[]
+ []
+
+
+Overfull \hbox (4.81955pt too wide) in paragraph at lines 959--965
+[]
+ []
+
+
+Overfull \hbox (4.81955pt too wide) in paragraph at lines 978--980
+[] 
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[114]
+Overfull \hbox (4.81955pt too wide) in paragraph at lines 980--987
+[]
+ []
+
+
+Overfull \hbox (4.81955pt too wide) in paragraph at lines 999--1005
+[]
+ []
+
+
+Overfull \hbox (4.71483pt too wide) in paragraph at lines 1017--1025
+[]
+ []
+
+
+Overfull \hbox (4.71483pt too wide) in paragraph at lines 1037--1045
+[]
+ []
+
+
+Overfull \hbox (4.71483pt too wide) in paragraph at lines 1057--1065
+[]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 1076
+[][][]
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[115]
+Underfull \hbox (badness 10000) detected at line 1102
+[][][]
+ []
+
+) (./d9/d67/ssrp_8h.tex
+File: d1/de2/ssrp_8h__incl.eps Graphic file (type eps)
+ <d1/de2/ssrp_8h__incl.eps>
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[116]
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[117]
+Underfull \hbox (badness 10000) detected at line 136
+[][][]
+ []
+
+File: de/d39/structSSRP__Header__coll__graph.eps Graphic file (type eps)
+<de/d39/structSSRP__Header__coll__graph.eps>
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[118]
+Overfull \hbox (5.72954pt too wide) in paragraph at lines 160--210
+[] 
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[119]
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[120]
+Overfull \hbox (4.81955pt too wide) in paragraph at lines 427--435
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 435
+[][][]
+ []
+
+
+Overfull \hbox (4.81955pt too wide) in paragraph at lines 456--460
+[] 
+ []
+
+
+Overfull \hbox (4.81955pt too wide) in paragraph at lines 478--482
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 482
+[][][]
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[121]
+Underfull \hbox (badness 10000) detected at line 547
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 578
+[][][]
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[122]
+Overfull \hbox (4.81955pt too wide) in paragraph at lines 654--664
+[] 
+ []
+
+
+Overfull \hbox (4.71483pt too wide) in paragraph at lines 665--673
+[]
+ []
+
+
+Overfull \hbox (4.81955pt too wide) in paragraph at lines 691--707
+[] 
+ []
+
+
+Overfull \hbox (4.71483pt too wide) in paragraph at lines 708--716
+[]
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[123]
+Overfull \hbox (4.81955pt too wide) in paragraph at lines 729--735
+[] 
+ []
+
+
+Overfull \hbox (4.71483pt too wide) in paragraph at lines 736--744
+[]
+ []
+
+
+Overfull \hbox (4.81955pt too wide) in paragraph at lines 756--762
+[]
+ []
+
+
+Overfull \hbox (4.81955pt too wide) in paragraph at lines 774--778
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 778
+[][][]
+ []
+
+
+Overfull \hbox (4.81955pt too wide) in paragraph at lines 795--799
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 799
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 815
+[][][]
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[124]
+Overfull \hbox (4.71483pt too wide) in paragraph at lines 832--840
+[]
+ []
+
+) (./df/d69/ssrp__skel_8h.tex
+File: de/d03/ssrp__skel_8h__incl.eps Graphic file (type eps)
+ <de/d03/ssrp__skel_8h__incl.eps>
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[125]
+Underfull \hbox (badness 10000) detected at line 36
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 68
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 87
+[][][]
+ []
+
+) (./d3/dce/stddef_8h.tex
+File: d8/dff/stddef_8h__dep__incl.eps Graphic file (type eps)
+ <d8/dff/stddef_8h__dep__incl.eps>
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[126]
+Overfull \hbox (4.81955pt too wide) in paragraph at lines 71--75
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 75
+[][][]
+ []
+
+
+Overfull \hbox (4.81955pt too wide) in paragraph at lines 95--101
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 101
+[][][]
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[127]
+Underfull \hbox (badness 10000) detected at line 210
+[][][]
+ []
+
+) (./d6/dd1/stdio_8h.tex
+File: d6/d0f/stdio_8h__incl.eps Graphic file (type eps)
+ <d6/d0f/stdio_8h__incl.eps>
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[128]
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[129]
+Overfull \hbox (4.81955pt too wide) in paragraph at lines 56--61
+[] 
+ []
+
+
+Overfull \hbox (4.81955pt too wide) in paragraph at lines 83--89
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 89
+[][][]
+ []
+
+) (./dc/d9c/stdlib_8h.tex
+File: d0/de4/stdlib_8h__incl.eps Graphic file (type eps)
+ <d0/de4/stdlib_8h__incl.eps>
+File: da/d24/stdlib_8h__dep__incl.eps Graphic file (type eps)
+
+<da/d24/stdlib_8h__dep__incl.eps>
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[130]
+Underfull \hbox (badness 10000) detected at line 68
+[][][]
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[131]
+Overfull \hbox (4.81955pt too wide) in paragraph at lines 99--103
+[] 
+ []
+
+
+Overfull \hbox (4.81955pt too wide) in paragraph at lines 134--138
+[] 
+ []
+
+
+Overfull \hbox (4.81955pt too wide) in paragraph at lines 155--161
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 161
+[][][]
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[132]
+Overfull \hbox (4.81955pt too wide) in paragraph at lines 181--187
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 187
+[][][]
+ []
+
+
+Overfull \hbox (4.81955pt too wide) in paragraph at lines 207--213
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 213
+[][][]
+ []
+
+
+Overfull \hbox (4.81955pt too wide) in paragraph at lines 238--246
+[]
+ []
+
+
+Overfull \hbox (4.81955pt too wide) in paragraph at lines 261--271
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 271
+[][][]
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[133]
+Underfull \hbox (badness 10000) detected at line 287
+[][][]
+ []
+
+) (./da/d66/string_8h.tex
+Overfull \hbox (4.81955pt too wide) in paragraph at lines 304--1
+[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 304--1
+
+ []
+
+File: db/dfb/string_8h__incl.eps Graphic file (type eps)
+<db/dfb/string_8h__incl.eps>
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[134]
+Overfull \hbox (4.81955pt too wide) in paragraph at lines 48--52
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 52
+[][][]
+ []
+
+
+Overfull \hbox (4.81955pt too wide) in paragraph at lines 71--79
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 79
+[][][]
+ []
+
+
+Overfull \hbox (4.81955pt too wide) in paragraph at lines 98--106
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 106
+[][][]
+ []
+
+) (./d8/d5d/unit__test_8h.tex
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[135]
+LaTeX Font Info:    Try loading font information for OMS+cmss on input line 43.
+
+LaTeX Font Info:    No file OMScmss.fd. on input line 43.
+
+
+LaTeX Font Warning: Font shape `OMS/cmss/m/n' undefined
+(Font)              using `OMS/cmsy/m/n' instead
+(Font)              for symbol `textbraceleft' on input line 43.
+
+
+Overfull \hbox (4.81955pt too wide) in paragraph at lines 48--54
+[] 
+ []
+
+
+Overfull \hbox (4.81955pt too wide) in paragraph at lines 80--84
+[] 
  []
 
 )
@@ -775,33 +3899,99 @@ Package Fancyhdr Warning: \headheight is too small (5.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[7] (./refman.ind
+[136] (./refman.ind
 Overfull \vbox (1.44444pt too high) has occurred while \output is active []
 
 
-[8
+[137
 
 
 
-])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 88.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 88.
+]
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 12.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[138]
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 12.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[139]
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 12.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[140]
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 12.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[141]
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 12.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[142]
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 12.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[143]
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 12.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[144]
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 12.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[145]
+
+Package Fancyhdr Warning: \headheight is too small (5.0pt): 
+ Make it at least 16.0pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[146])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 111.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 111.
  (./refman.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 88.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 88.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 111.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 111.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 88.
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 111.
  ) 
 Here is how much of TeX's memory you used:
- 6712 strings out of 493777
- 99240 string characters out of 6152750
- 306240 words of memory out of 5000000
- 10101 multiletter control sequences out of 15000+600000
- 16869 words of font info for 74 fonts, out of 8000000 for 9000
+ 8206 strings out of 493777
+ 158793 string characters out of 6152750
+ 358399 words of memory out of 5000000
+ 11239 multiletter control sequences out of 15000+600000
+ 18831 words of font info for 81 fonts, out of 8000000 for 9000
  934 hyphenation exceptions out of 8191
- 48i,15n,43p,2363b,631s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 48i,16n,43p,11118b,634s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on refman.dvi (10 pages, 53848 bytes).
+Output written on refman.dvi (150 pages, 846368 bytes).

@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.10"/>
+<title>H8SDK: include/h8sdk/push_switch.h ソースファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">H8SDK
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.10 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="../../index.html"><span>総合概要</span></a></li>
+      <li><a href="../../pages.html"><span>諸情報</span></a></li>
+      <li><a href="../../annotated.html"><span>クラス</span></a></li>
+      <li class="current"><a href="../../files.html"><span>ファイル</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="../../files.html"><span>ファイル一覧</span></a></li>
+      <li><a href="../../globals.html"><span>ファイルメンバ</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('dc/d5d/push__switch_8h_source.html','../../');});
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle">
+<div class="title">push_switch.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../dc/d5d/push__switch_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#ifndef PSW_H_</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#define PSW_H_</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> {</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d3/dce/stddef_8h.html">stddef.h</a>&quot;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="../../dc/d5d/push__switch_8h_aa47f0189e15d337406bc1bd760207db4.html#aa47f0189e15d337406bc1bd760207db4">   31</a></span>&#160;<span class="preprocessor">#define PSW_BORDER 0x800</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="../../dc/d5d/push__switch_8h_a66564168132ca9f7124309ee5b555b0c.html#a66564168132ca9f7124309ee5b555b0c">   36</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;{</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="../../dc/d5d/push__switch_8h_a66564168132ca9f7124309ee5b555b0c.html#a66564168132ca9f7124309ee5b555b0cac1ec17c9c817febb900692b7025ebf0d">   38</a></span>&#160;    <a class="code" href="../../dc/d5d/push__switch_8h_a66564168132ca9f7124309ee5b555b0c.html#a66564168132ca9f7124309ee5b555b0cac1ec17c9c817febb900692b7025ebf0d">PSW_SW1</a> = 0,</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="../../dc/d5d/push__switch_8h_a66564168132ca9f7124309ee5b555b0c.html#a66564168132ca9f7124309ee5b555b0cabdf66c87d4f6b20912cacee8492e318f">   40</a></span>&#160;    <a class="code" href="../../dc/d5d/push__switch_8h_a66564168132ca9f7124309ee5b555b0c.html#a66564168132ca9f7124309ee5b555b0cabdf66c87d4f6b20912cacee8492e318f">PSW_SW2</a>,</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="../../dc/d5d/push__switch_8h_a66564168132ca9f7124309ee5b555b0c.html#a66564168132ca9f7124309ee5b555b0cad1e811a43a157b49b5f6d49725444817">   43</a></span>&#160;    <a class="code" href="../../dc/d5d/push__switch_8h_a66564168132ca9f7124309ee5b555b0c.html#a66564168132ca9f7124309ee5b555b0cad1e811a43a157b49b5f6d49725444817">PSW_NUM_OF_TYPE</a></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;} <a class="code" href="../../dc/d5d/push__switch_8h_a66564168132ca9f7124309ee5b555b0c.html#a66564168132ca9f7124309ee5b555b0c">PSW_Type</a>;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../dc/d5d/push__switch_8h_a94048eedccacd964c5d7523ab9339619.html#a94048eedccacd964c5d7523ab9339619">PSW_init</a>(<a class="code" href="../../d3/dce/stddef_8h_afbf708854fe02af8475a9ba02f3196cb.html#afbf708854fe02af8475a9ba02f3196cb">_BOOL</a> interrupt);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<a class="code" href="../../d3/dce/stddef_8h_afbf708854fe02af8475a9ba02f3196cb.html#afbf708854fe02af8475a9ba02f3196cb">_BOOL</a> <a class="code" href="../../dc/d5d/push__switch_8h_a8f454027db6f5d98b8ee38f6efebc1d8.html#a8f454027db6f5d98b8ee38f6efebc1d8">PSW_get</a>(<a class="code" href="../../dc/d5d/push__switch_8h_a66564168132ca9f7124309ee5b555b0c.html#a66564168132ca9f7124309ee5b555b0c">PSW_Type</a> t);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<a class="code" href="../../d3/dce/stddef_8h_afbf708854fe02af8475a9ba02f3196cb.html#afbf708854fe02af8475a9ba02f3196cb">_BOOL</a> <a class="code" href="../../dc/d5d/push__switch_8h_a4c4bdfcba186bc9b2a1e8769c88e4746.html#a4c4bdfcba186bc9b2a1e8769c88e4746">PSW_oneShot</a>(<a class="code" href="../../dc/d5d/push__switch_8h_a66564168132ca9f7124309ee5b555b0c.html#a66564168132ca9f7124309ee5b555b0c">PSW_Type</a> t);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<a class="code" href="../../d3/dce/stddef_8h_afbf708854fe02af8475a9ba02f3196cb.html#afbf708854fe02af8475a9ba02f3196cb">_BOOL</a> <a class="code" href="../../dc/d5d/push__switch_8h_a4059e91200d2a27e3e893c727cccfd5b.html#a4059e91200d2a27e3e893c727cccfd5b">PSW_snapShot</a>(<a class="code" href="../../dc/d5d/push__switch_8h_a66564168132ca9f7124309ee5b555b0c.html#a66564168132ca9f7124309ee5b555b0c">PSW_Type</a> t);</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;}</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* PSW_H_ */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="push__switch_8h_a66564168132ca9f7124309ee5b555b0c_html_a66564168132ca9f7124309ee5b555b0cac1ec17c9c817febb900692b7025ebf0d"><div class="ttname"><a href="../../dc/d5d/push__switch_8h_a66564168132ca9f7124309ee5b555b0c.html#a66564168132ca9f7124309ee5b555b0cac1ec17c9c817febb900692b7025ebf0d">PSW_SW1</a></div><div class="ttdoc">S1番ポートのスイッチ </div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d5d/push__switch_8h_source.html#l00038">push_switch.h:38</a></div></div>
+<div class="ttc" id="push__switch_8h_a66564168132ca9f7124309ee5b555b0c_html_a66564168132ca9f7124309ee5b555b0c"><div class="ttname"><a href="../../dc/d5d/push__switch_8h_a66564168132ca9f7124309ee5b555b0c.html#a66564168132ca9f7124309ee5b555b0c">PSW_Type</a></div><div class="ttdeci">PSW_Type</div><div class="ttdoc">スイッチタイプ識別子 </div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d5d/push__switch_8h_source.html#l00036">push_switch.h:36</a></div></div>
+<div class="ttc" id="push__switch_8h_a66564168132ca9f7124309ee5b555b0c_html_a66564168132ca9f7124309ee5b555b0cad1e811a43a157b49b5f6d49725444817"><div class="ttname"><a href="../../dc/d5d/push__switch_8h_a66564168132ca9f7124309ee5b555b0c.html#a66564168132ca9f7124309ee5b555b0cad1e811a43a157b49b5f6d49725444817">PSW_NUM_OF_TYPE</a></div><div class="ttdoc">スイッチの数 </div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d5d/push__switch_8h_source.html#l00043">push_switch.h:43</a></div></div>
+<div class="ttc" id="push__switch_8h_a66564168132ca9f7124309ee5b555b0c_html_a66564168132ca9f7124309ee5b555b0cabdf66c87d4f6b20912cacee8492e318f"><div class="ttname"><a href="../../dc/d5d/push__switch_8h_a66564168132ca9f7124309ee5b555b0c.html#a66564168132ca9f7124309ee5b555b0cabdf66c87d4f6b20912cacee8492e318f">PSW_SW2</a></div><div class="ttdoc">S2番ポートのスイッチ </div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d5d/push__switch_8h_source.html#l00040">push_switch.h:40</a></div></div>
+<div class="ttc" id="stddef_8h_afbf708854fe02af8475a9ba02f3196cb_html_afbf708854fe02af8475a9ba02f3196cb"><div class="ttname"><a href="../../d3/dce/stddef_8h_afbf708854fe02af8475a9ba02f3196cb.html#afbf708854fe02af8475a9ba02f3196cb">_BOOL</a></div><div class="ttdeci">_BOOL</div><div class="ttdoc">ブール型 </div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dce/stddef_8h_source.html#l00069">stddef.h:69</a></div></div>
+<div class="ttc" id="stddef_8h_html"><div class="ttname"><a href="../../d3/dce/stddef_8h.html">stddef.h</a></div><div class="ttdoc">共通型、リテラル定義 </div></div>
+<div class="ttc" id="push__switch_8h_a4c4bdfcba186bc9b2a1e8769c88e4746_html_a4c4bdfcba186bc9b2a1e8769c88e4746"><div class="ttname"><a href="../../dc/d5d/push__switch_8h_a4c4bdfcba186bc9b2a1e8769c88e4746.html#a4c4bdfcba186bc9b2a1e8769c88e4746">PSW_oneShot</a></div><div class="ttdeci">_BOOL PSW_oneShot(PSW_Type t)</div><div class="ttdoc">スイッチ押下状態を一度だけ取得 </div></div>
+<div class="ttc" id="push__switch_8h_a4059e91200d2a27e3e893c727cccfd5b_html_a4059e91200d2a27e3e893c727cccfd5b"><div class="ttname"><a href="../../dc/d5d/push__switch_8h_a4059e91200d2a27e3e893c727cccfd5b.html#a4059e91200d2a27e3e893c727cccfd5b">PSW_snapShot</a></div><div class="ttdeci">_BOOL PSW_snapShot(PSW_Type t)</div><div class="ttdoc">スイッチ押下状態スナップショットの取得 </div></div>
+<div class="ttc" id="push__switch_8h_a8f454027db6f5d98b8ee38f6efebc1d8_html_a8f454027db6f5d98b8ee38f6efebc1d8"><div class="ttname"><a href="../../dc/d5d/push__switch_8h_a8f454027db6f5d98b8ee38f6efebc1d8.html#a8f454027db6f5d98b8ee38f6efebc1d8">PSW_get</a></div><div class="ttdeci">_BOOL PSW_get(PSW_Type t)</div><div class="ttdoc">スイッチ押下状態の取得 </div></div>
+<div class="ttc" id="push__switch_8h_a94048eedccacd964c5d7523ab9339619_html_a94048eedccacd964c5d7523ab9339619"><div class="ttname"><a href="../../dc/d5d/push__switch_8h_a94048eedccacd964c5d7523ab9339619.html#a94048eedccacd964c5d7523ab9339619">PSW_init</a></div><div class="ttdeci">void PSW_init(_BOOL interrupt)</div><div class="ttdoc">スイッチデバイス初期化。 </div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="../../dir_cccf68db23ba25fb97e4e5b2069f9a17.html">h8sdk</a></li><li class="navelem"><a class="el" href="../../dc/d5d/push__switch_8h.html">push_switch.h</a></li>
+    <li class="footer">2016年02月27日(土) 00時46分21秒作成 - H8SDK / 構成: 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.10 </li>
+  </ul>
+</div>
+</body>
+</html>

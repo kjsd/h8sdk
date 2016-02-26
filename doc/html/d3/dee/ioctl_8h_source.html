@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.10"/>
+<title>H8SDK: include/h8sdk/ioctl.h ソースファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">H8SDK
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.10 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="../../index.html"><span>総合概要</span></a></li>
+      <li><a href="../../pages.html"><span>諸情報</span></a></li>
+      <li><a href="../../annotated.html"><span>クラス</span></a></li>
+      <li class="current"><a href="../../files.html"><span>ファイル</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="../../files.html"><span>ファイル一覧</span></a></li>
+      <li><a href="../../globals.html"><span>ファイルメンバ</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('d3/dee/ioctl_8h_source.html','../../');});
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle">
+<div class="title">ioctl.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d3/dee/ioctl_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#ifndef IOCTL_H_</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#define IOCTL_H_</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> {</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d3/dce/stddef_8h.html">stddef.h</a>&quot;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="../../d3/dee/ioctl_8h_ada67108c6e5a5ec0258cbd4401f97662.html#ada67108c6e5a5ec0258cbd4401f97662">   34</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;{</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="../../d3/dee/ioctl_8h_ada67108c6e5a5ec0258cbd4401f97662.html#ada67108c6e5a5ec0258cbd4401f97662a365f8d0e42b202f1957bfed7a10a6a08">   36</a></span>&#160;    <a class="code" href="../../d3/dee/ioctl_8h_ada67108c6e5a5ec0258cbd4401f97662.html#ada67108c6e5a5ec0258cbd4401f97662a365f8d0e42b202f1957bfed7a10a6a08">IOCTL_REG_PCR1</a> = 0,</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="../../d3/dee/ioctl_8h_ada67108c6e5a5ec0258cbd4401f97662.html#ada67108c6e5a5ec0258cbd4401f97662a3266892c7e9a176b79b14f8a820b9810">   38</a></span>&#160;    <a class="code" href="../../d3/dee/ioctl_8h_ada67108c6e5a5ec0258cbd4401f97662.html#ada67108c6e5a5ec0258cbd4401f97662a3266892c7e9a176b79b14f8a820b9810">IOCTL_REG_PCR2</a>,</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="../../d3/dee/ioctl_8h_ada67108c6e5a5ec0258cbd4401f97662.html#ada67108c6e5a5ec0258cbd4401f97662ab9d0d4dffd9d1d0303ba0a4543b67282">   40</a></span>&#160;    <a class="code" href="../../d3/dee/ioctl_8h_ada67108c6e5a5ec0258cbd4401f97662.html#ada67108c6e5a5ec0258cbd4401f97662ab9d0d4dffd9d1d0303ba0a4543b67282">IOCTL_REG_PCR5</a>,</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="../../d3/dee/ioctl_8h_ada67108c6e5a5ec0258cbd4401f97662.html#ada67108c6e5a5ec0258cbd4401f97662ac73893b6e53a29073957a24712aefddb">   42</a></span>&#160;    <a class="code" href="../../d3/dee/ioctl_8h_ada67108c6e5a5ec0258cbd4401f97662.html#ada67108c6e5a5ec0258cbd4401f97662ac73893b6e53a29073957a24712aefddb">IOCTL_REG_PCR7</a>,</div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="../../d3/dee/ioctl_8h_ada67108c6e5a5ec0258cbd4401f97662.html#ada67108c6e5a5ec0258cbd4401f97662a7bd9494973aea96e01f5277bd1127229">   44</a></span>&#160;    <a class="code" href="../../d3/dee/ioctl_8h_ada67108c6e5a5ec0258cbd4401f97662.html#ada67108c6e5a5ec0258cbd4401f97662a7bd9494973aea96e01f5277bd1127229">IOCTL_REG_PCR8</a>,</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="../../d3/dee/ioctl_8h_ada67108c6e5a5ec0258cbd4401f97662.html#ada67108c6e5a5ec0258cbd4401f97662a7b6dddccac2070014c3877a13549f25f">   47</a></span>&#160;    <a class="code" href="../../d3/dee/ioctl_8h_ada67108c6e5a5ec0258cbd4401f97662.html#ada67108c6e5a5ec0258cbd4401f97662a7b6dddccac2070014c3877a13549f25f">IOCTL_NUM_OF_REG</a></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;} <a class="code" href="../../d3/dee/ioctl_8h_ada67108c6e5a5ec0258cbd4401f97662.html#ada67108c6e5a5ec0258cbd4401f97662">IOCTL_Reg</a>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d3/dee/ioctl_8h_a612c40c759c47ff99ee9eb3ba12d2c9f.html#a612c40c759c47ff99ee9eb3ba12d2c9f">IOCTL_init</a>();</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d3/dee/ioctl_8h_aa8d0d504f5e91de396d1cbb10d88314e.html#aa8d0d504f5e91de396d1cbb10d88314e">IOCTL_set</a>(<a class="code" href="../../d3/dee/ioctl_8h_ada67108c6e5a5ec0258cbd4401f97662.html#ada67108c6e5a5ec0258cbd4401f97662">IOCTL_Reg</a> reg, <a class="code" href="../../d3/dce/stddef_8h_aac464b47452ce9406f88ef194e2becc1.html#aac464b47452ce9406f88ef194e2becc1">_UBYTE</a> mask, <a class="code" href="../../d3/dce/stddef_8h_aac464b47452ce9406f88ef194e2becc1.html#aac464b47452ce9406f88ef194e2becc1">_UBYTE</a> val);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<a class="code" href="../../d3/dce/stddef_8h_aac464b47452ce9406f88ef194e2becc1.html#aac464b47452ce9406f88ef194e2becc1">_UBYTE</a> <a class="code" href="../../d3/dee/ioctl_8h_a3abacc0088f02290caa4cdfd00efabeb.html#a3abacc0088f02290caa4cdfd00efabeb">IOCTL_get</a>(<a class="code" href="../../d3/dee/ioctl_8h_ada67108c6e5a5ec0258cbd4401f97662.html#ada67108c6e5a5ec0258cbd4401f97662">IOCTL_Reg</a> reg);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;}</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* IOCTL_H_ */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="ioctl_8h_ada67108c6e5a5ec0258cbd4401f97662_html_ada67108c6e5a5ec0258cbd4401f97662"><div class="ttname"><a href="../../d3/dee/ioctl_8h_ada67108c6e5a5ec0258cbd4401f97662.html#ada67108c6e5a5ec0258cbd4401f97662">IOCTL_Reg</a></div><div class="ttdeci">IOCTL_Reg</div><div class="ttdoc">PCRレジスタリテラル定義型 </div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dee/ioctl_8h_source.html#l00034">ioctl.h:34</a></div></div>
+<div class="ttc" id="ioctl_8h_ada67108c6e5a5ec0258cbd4401f97662_html_ada67108c6e5a5ec0258cbd4401f97662a7b6dddccac2070014c3877a13549f25f"><div class="ttname"><a href="../../d3/dee/ioctl_8h_ada67108c6e5a5ec0258cbd4401f97662.html#ada67108c6e5a5ec0258cbd4401f97662a7b6dddccac2070014c3877a13549f25f">IOCTL_NUM_OF_REG</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dee/ioctl_8h_source.html#l00047">ioctl.h:47</a></div></div>
+<div class="ttc" id="ioctl_8h_aa8d0d504f5e91de396d1cbb10d88314e_html_aa8d0d504f5e91de396d1cbb10d88314e"><div class="ttname"><a href="../../d3/dee/ioctl_8h_aa8d0d504f5e91de396d1cbb10d88314e.html#aa8d0d504f5e91de396d1cbb10d88314e">IOCTL_set</a></div><div class="ttdeci">void IOCTL_set(IOCTL_Reg reg, _UBYTE mask, _UBYTE val)</div><div class="ttdoc">レジスタへ値セット </div></div>
+<div class="ttc" id="stddef_8h_aac464b47452ce9406f88ef194e2becc1_html_aac464b47452ce9406f88ef194e2becc1"><div class="ttname"><a href="../../d3/dce/stddef_8h_aac464b47452ce9406f88ef194e2becc1.html#aac464b47452ce9406f88ef194e2becc1">_UBYTE</a></div><div class="ttdeci">unsigned char _UBYTE</div><div class="ttdoc">符号なし8ビット整数型 </div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dce/stddef_8h_source.html#l00050">stddef.h:50</a></div></div>
+<div class="ttc" id="ioctl_8h_ada67108c6e5a5ec0258cbd4401f97662_html_ada67108c6e5a5ec0258cbd4401f97662a3266892c7e9a176b79b14f8a820b9810"><div class="ttname"><a href="../../d3/dee/ioctl_8h_ada67108c6e5a5ec0258cbd4401f97662.html#ada67108c6e5a5ec0258cbd4401f97662a3266892c7e9a176b79b14f8a820b9810">IOCTL_REG_PCR2</a></div><div class="ttdoc">PCR2. </div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dee/ioctl_8h_source.html#l00038">ioctl.h:38</a></div></div>
+<div class="ttc" id="ioctl_8h_a612c40c759c47ff99ee9eb3ba12d2c9f_html_a612c40c759c47ff99ee9eb3ba12d2c9f"><div class="ttname"><a href="../../d3/dee/ioctl_8h_a612c40c759c47ff99ee9eb3ba12d2c9f.html#a612c40c759c47ff99ee9eb3ba12d2c9f">IOCTL_init</a></div><div class="ttdeci">void IOCTL_init()</div><div class="ttdoc">初期化 </div></div>
+<div class="ttc" id="stddef_8h_html"><div class="ttname"><a href="../../d3/dce/stddef_8h.html">stddef.h</a></div><div class="ttdoc">共通型、リテラル定義 </div></div>
+<div class="ttc" id="ioctl_8h_ada67108c6e5a5ec0258cbd4401f97662_html_ada67108c6e5a5ec0258cbd4401f97662ab9d0d4dffd9d1d0303ba0a4543b67282"><div class="ttname"><a href="../../d3/dee/ioctl_8h_ada67108c6e5a5ec0258cbd4401f97662.html#ada67108c6e5a5ec0258cbd4401f97662ab9d0d4dffd9d1d0303ba0a4543b67282">IOCTL_REG_PCR5</a></div><div class="ttdoc">PCR5. </div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dee/ioctl_8h_source.html#l00040">ioctl.h:40</a></div></div>
+<div class="ttc" id="ioctl_8h_ada67108c6e5a5ec0258cbd4401f97662_html_ada67108c6e5a5ec0258cbd4401f97662ac73893b6e53a29073957a24712aefddb"><div class="ttname"><a href="../../d3/dee/ioctl_8h_ada67108c6e5a5ec0258cbd4401f97662.html#ada67108c6e5a5ec0258cbd4401f97662ac73893b6e53a29073957a24712aefddb">IOCTL_REG_PCR7</a></div><div class="ttdoc">PCR7. </div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dee/ioctl_8h_source.html#l00042">ioctl.h:42</a></div></div>
+<div class="ttc" id="ioctl_8h_ada67108c6e5a5ec0258cbd4401f97662_html_ada67108c6e5a5ec0258cbd4401f97662a7bd9494973aea96e01f5277bd1127229"><div class="ttname"><a href="../../d3/dee/ioctl_8h_ada67108c6e5a5ec0258cbd4401f97662.html#ada67108c6e5a5ec0258cbd4401f97662a7bd9494973aea96e01f5277bd1127229">IOCTL_REG_PCR8</a></div><div class="ttdoc">PCR8. </div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dee/ioctl_8h_source.html#l00044">ioctl.h:44</a></div></div>
+<div class="ttc" id="ioctl_8h_a3abacc0088f02290caa4cdfd00efabeb_html_a3abacc0088f02290caa4cdfd00efabeb"><div class="ttname"><a href="../../d3/dee/ioctl_8h_a3abacc0088f02290caa4cdfd00efabeb.html#a3abacc0088f02290caa4cdfd00efabeb">IOCTL_get</a></div><div class="ttdeci">_UBYTE IOCTL_get(IOCTL_Reg reg)</div><div class="ttdoc">レジスタ値取得 </div></div>
+<div class="ttc" id="ioctl_8h_ada67108c6e5a5ec0258cbd4401f97662_html_ada67108c6e5a5ec0258cbd4401f97662a365f8d0e42b202f1957bfed7a10a6a08"><div class="ttname"><a href="../../d3/dee/ioctl_8h_ada67108c6e5a5ec0258cbd4401f97662.html#ada67108c6e5a5ec0258cbd4401f97662a365f8d0e42b202f1957bfed7a10a6a08">IOCTL_REG_PCR1</a></div><div class="ttdoc">PCR1. </div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dee/ioctl_8h_source.html#l00036">ioctl.h:36</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="../../dir_cccf68db23ba25fb97e4e5b2069f9a17.html">h8sdk</a></li><li class="navelem"><a class="el" href="../../d3/dee/ioctl_8h.html">ioctl.h</a></li>
+    <li class="footer">2016年02月27日(土) 00時46分21秒作成 - H8SDK / 構成: 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.10 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,1104 @@
+\subsection{include/h8sdk/sound.h ファイル}
+\label{sound_8h}\index{include/h8sdk/sound.\+h@{include/h8sdk/sound.\+h}}
+
+
+サウンドドライバ  
+
+
+{\ttfamily \#include \char`\"{}stddef.\+h\char`\"{}}\\*
+sound.\+h の依存先関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=160pt]{dd/d14/sound_8h__incl}
+\end{center}
+\end{figure}
+被依存関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=306pt]{d9/df5/sound_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsubsection*{クラス}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{sound_8h_d0/d92/structSOUND__Envelope}{S\+O\+U\+N\+D\+\_\+\+Envelope}
+\begin{DoxyCompactList}\small\item\em エンベロープ定義型 \end{DoxyCompactList}\item 
+struct \hyperlink{sound_8h_d6/d3c/structSOUND__Tone}{S\+O\+U\+N\+D\+\_\+\+Tone}
+\begin{DoxyCompactList}\small\item\em 音定義型 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{マクロ定義}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{sound_8h_ae37af07d650f8e823223bfaf85dfeea5_ae37af07d650f8e823223bfaf85dfeea5}{S\+O\+U\+N\+D\+\_\+\+M\+A\+X\+\_\+\+P\+R\+O\+N\+O\+U\+N\+C\+E}~3
+\begin{DoxyCompactList}\small\item\em 最大同時発信音数 \end{DoxyCompactList}\item 
+\#define \hyperlink{sound_8h_a46743b97361463957ee0eb2202ff90d8_a46743b97361463957ee0eb2202ff90d8}{S\+O\+U\+N\+D\+\_\+\+M\+A\+X\+\_\+\+V\+O\+L\+U\+M\+E}~255
+\begin{DoxyCompactList}\small\item\em ボリュームの最大値 \end{DoxyCompactList}\item 
+\#define \hyperlink{sound_8h_aa5c5d06e5ffe7f4792f2a7613223b8bb_aa5c5d06e5ffe7f4792f2a7613223b8bb}{S\+O\+U\+N\+D\+\_\+\+P\+R\+O\+N\+O\+U\+N\+C\+E\+\_\+\+L\+E\+N}~2
+\item 
+\#define \hyperlink{sound_8h_a00e51ccb7bab9d21f8cd5611028ca051_a00e51ccb7bab9d21f8cd5611028ca051}{S\+O\+U\+N\+D\+\_\+\+N\+A}~0
+\begin{DoxyCompactList}\small\item\em 無音 \end{DoxyCompactList}\item 
+\#define \hyperlink{sound_8h_a7a8291aa331919d505eb896f5f23b84c_a7a8291aa331919d505eb896f5f23b84c}{S\+O\+U\+N\+D\+\_\+\+C0}~255
+\begin{DoxyCompactList}\small\item\em オクターブ0 ド \end{DoxyCompactList}\item 
+\#define \hyperlink{sound_8h_a5cf7b47c621b7f44cb936a18e7a227be_a5cf7b47c621b7f44cb936a18e7a227be}{S\+O\+U\+N\+D\+\_\+\+Cb0}~241
+\begin{DoxyCompactList}\small\item\em オクターブ0 ド\# \end{DoxyCompactList}\item 
+\#define \hyperlink{sound_8h_a78855daec2050679bd8ef984b6474384_a78855daec2050679bd8ef984b6474384}{S\+O\+U\+N\+D\+\_\+\+D0}~228
+\begin{DoxyCompactList}\small\item\em オクターブ0 レ \end{DoxyCompactList}\item 
+\#define \hyperlink{sound_8h_ae54a9c279cc372bd69b65dd9d06f3210_ae54a9c279cc372bd69b65dd9d06f3210}{S\+O\+U\+N\+D\+\_\+\+Db0}~214
+\begin{DoxyCompactList}\small\item\em オクターブ0 レ\# \end{DoxyCompactList}\item 
+\#define \hyperlink{sound_8h_a19424f95bd658c3fb08a40b37fa18ae6_a19424f95bd658c3fb08a40b37fa18ae6}{S\+O\+U\+N\+D\+\_\+\+E0}~203
+\begin{DoxyCompactList}\small\item\em オクターブ0 ミ \end{DoxyCompactList}\item 
+\#define \hyperlink{sound_8h_a9c24cc4b865b592ab72a04852c7d194e_a9c24cc4b865b592ab72a04852c7d194e}{S\+O\+U\+N\+D\+\_\+\+F0}~192
+\begin{DoxyCompactList}\small\item\em オクターブ0 ファ \end{DoxyCompactList}\item 
+\#define \hyperlink{sound_8h_aaff9a7f05ba2237c933648fc79631254_aaff9a7f05ba2237c933648fc79631254}{S\+O\+U\+N\+D\+\_\+\+Fb0}~180
+\begin{DoxyCompactList}\small\item\em オクターブ0 ファ\# \end{DoxyCompactList}\item 
+\#define \hyperlink{sound_8h_a49cb5ffcf2e6a7e6a450e6bb6bb1fd55_a49cb5ffcf2e6a7e6a450e6bb6bb1fd55}{S\+O\+U\+N\+D\+\_\+\+G0}~171
+\begin{DoxyCompactList}\small\item\em オクターブ0 ソ \end{DoxyCompactList}\item 
+\#define \hyperlink{sound_8h_a7f5a3ed6713d6224d6e31d0020fdd430_a7f5a3ed6713d6224d6e31d0020fdd430}{S\+O\+U\+N\+D\+\_\+\+Gb0}~161
+\begin{DoxyCompactList}\small\item\em オクターブ0 ソ\# \end{DoxyCompactList}\item 
+\#define \hyperlink{sound_8h_abcc3b3196f02e1825a756586cff6adb5_abcc3b3196f02e1825a756586cff6adb5}{S\+O\+U\+N\+D\+\_\+\+A0}~152
+\begin{DoxyCompactList}\small\item\em オクターブ0 ラ \end{DoxyCompactList}\item 
+\#define \hyperlink{sound_8h_aa63270be4b563c05e755e9e9c62485d4_aa63270be4b563c05e755e9e9c62485d4}{S\+O\+U\+N\+D\+\_\+\+Ab0}~143
+\begin{DoxyCompactList}\small\item\em オクターブ0 ラ\# \end{DoxyCompactList}\item 
+\#define \hyperlink{sound_8h_af77d6e42768c9e8407091ab9237c23e8_af77d6e42768c9e8407091ab9237c23e8}{S\+O\+U\+N\+D\+\_\+\+H0}~136
+\begin{DoxyCompactList}\small\item\em オクターブ0 シ \end{DoxyCompactList}\item 
+\#define \hyperlink{sound_8h_acc40de3e4447b500abf6a8f52690eb7a_acc40de3e4447b500abf6a8f52690eb7a}{S\+O\+U\+N\+D\+\_\+\+C1}~128
+\begin{DoxyCompactList}\small\item\em オクターブ1 ド \end{DoxyCompactList}\item 
+\#define \hyperlink{sound_8h_a71cd098d1835193a4082f62c92bd1560_a71cd098d1835193a4082f62c92bd1560}{S\+O\+U\+N\+D\+\_\+\+Cb1}~120
+\begin{DoxyCompactList}\small\item\em オクターブ1 ド\# \end{DoxyCompactList}\item 
+\#define \hyperlink{sound_8h_abc56b27ce3a779cca007c05bd85be4fd_abc56b27ce3a779cca007c05bd85be4fd}{S\+O\+U\+N\+D\+\_\+\+D1}~114
+\begin{DoxyCompactList}\small\item\em オクターブ1 レ \end{DoxyCompactList}\item 
+\#define \hyperlink{sound_8h_a38bf3c917fff3545f77a76715ad4b0f4_a38bf3c917fff3545f77a76715ad4b0f4}{S\+O\+U\+N\+D\+\_\+\+Db1}~107
+\begin{DoxyCompactList}\small\item\em オクターブ1 レ\# \end{DoxyCompactList}\item 
+\#define \hyperlink{sound_8h_a1009235392ed7690560707d81815b36b_a1009235392ed7690560707d81815b36b}{S\+O\+U\+N\+D\+\_\+\+E1}~101
+\begin{DoxyCompactList}\small\item\em オクターブ1 ミ \end{DoxyCompactList}\item 
+\#define \hyperlink{sound_8h_a48a50ebd455ec326ce52ba3f9e063baa_a48a50ebd455ec326ce52ba3f9e063baa}{S\+O\+U\+N\+D\+\_\+\+F1}~96
+\begin{DoxyCompactList}\small\item\em オクターブ1 ファ \end{DoxyCompactList}\item 
+\#define \hyperlink{sound_8h_adc081179e66a0f7fe8f58b07f0358ed8_adc081179e66a0f7fe8f58b07f0358ed8}{S\+O\+U\+N\+D\+\_\+\+Fb1}~90
+\begin{DoxyCompactList}\small\item\em オクターブ1 ファ\# \end{DoxyCompactList}\item 
+\#define \hyperlink{sound_8h_a077f7dc14c95e192d7edf3c8eb72c5da_a077f7dc14c95e192d7edf3c8eb72c5da}{S\+O\+U\+N\+D\+\_\+\+G1}~85
+\begin{DoxyCompactList}\small\item\em オクターブ1 ソ \end{DoxyCompactList}\item 
+\#define \hyperlink{sound_8h_af064bb5dbd237d2fe7e954ee31cd3ca4_af064bb5dbd237d2fe7e954ee31cd3ca4}{S\+O\+U\+N\+D\+\_\+\+Gb1}~80
+\begin{DoxyCompactList}\small\item\em オクターブ1 ソ\# \end{DoxyCompactList}\item 
+\#define \hyperlink{sound_8h_a0a5faefe8dfea062eb628bd9b6aba261_a0a5faefe8dfea062eb628bd9b6aba261}{S\+O\+U\+N\+D\+\_\+\+A1}~76
+\begin{DoxyCompactList}\small\item\em オクターブ1 ラ \end{DoxyCompactList}\item 
+\#define \hyperlink{sound_8h_acf1942377e486c3d28326ea144b0c9f0_acf1942377e486c3d28326ea144b0c9f0}{S\+O\+U\+N\+D\+\_\+\+Ab1}~72
+\begin{DoxyCompactList}\small\item\em オクターブ1 ラ\# \end{DoxyCompactList}\item 
+\#define \hyperlink{sound_8h_a779cc45580fd31304c432b2582e94953_a779cc45580fd31304c432b2582e94953}{S\+O\+U\+N\+D\+\_\+\+H1}~68
+\begin{DoxyCompactList}\small\item\em オクターブ1 シ \end{DoxyCompactList}\item 
+\#define \hyperlink{sound_8h_a041d01c58025c9f74835d33da716e51d_a041d01c58025c9f74835d33da716e51d}{S\+O\+U\+N\+D\+\_\+\+C2}~64
+\begin{DoxyCompactList}\small\item\em オクターブ2 ド \end{DoxyCompactList}\item 
+\#define \hyperlink{sound_8h_a2ea86474bf4acd9fa0b6cc36610a54db_a2ea86474bf4acd9fa0b6cc36610a54db}{S\+O\+U\+N\+D\+\_\+\+Cb2}~60
+\begin{DoxyCompactList}\small\item\em オクターブ2 ド\# \end{DoxyCompactList}\item 
+\#define \hyperlink{sound_8h_a24efb33152ca6f7c832a646cefc86f32_a24efb33152ca6f7c832a646cefc86f32}{S\+O\+U\+N\+D\+\_\+\+D2}~57
+\begin{DoxyCompactList}\small\item\em オクターブ2 レ \end{DoxyCompactList}\item 
+\#define \hyperlink{sound_8h_a7d2839cfd7ade12ff92a685da8405db3_a7d2839cfd7ade12ff92a685da8405db3}{S\+O\+U\+N\+D\+\_\+\+Db2}~54
+\begin{DoxyCompactList}\small\item\em オクターブ2 レ\# \end{DoxyCompactList}\item 
+\#define \hyperlink{sound_8h_a52d7912c62673a809f44656740543ba5_a52d7912c62673a809f44656740543ba5}{S\+O\+U\+N\+D\+\_\+\+E2}~51
+\begin{DoxyCompactList}\small\item\em オクターブ2 ミ \end{DoxyCompactList}\item 
+\#define \hyperlink{sound_8h_a5efc510793cd609c997915070db58dd0_a5efc510793cd609c997915070db58dd0}{S\+O\+U\+N\+D\+\_\+\+F2}~48
+\begin{DoxyCompactList}\small\item\em オクターブ2 ファ \end{DoxyCompactList}\item 
+\#define \hyperlink{sound_8h_a1aa4dea5958d3b0a7c9ff406073fdd37_a1aa4dea5958d3b0a7c9ff406073fdd37}{S\+O\+U\+N\+D\+\_\+\+Fb2}~45
+\begin{DoxyCompactList}\small\item\em オクターブ2 ファ\# \end{DoxyCompactList}\item 
+\#define \hyperlink{sound_8h_add206c6691e048cc1ce70f995384dbb8_add206c6691e048cc1ce70f995384dbb8}{S\+O\+U\+N\+D\+\_\+\+G2}~43
+\begin{DoxyCompactList}\small\item\em オクターブ2 ソ \end{DoxyCompactList}\item 
+\#define \hyperlink{sound_8h_a73fd8b78bb50cd9cdbd8a1c09400262d_a73fd8b78bb50cd9cdbd8a1c09400262d}{S\+O\+U\+N\+D\+\_\+\+Gb2}~40
+\begin{DoxyCompactList}\small\item\em オクターブ2 ソ\# \end{DoxyCompactList}\item 
+\#define \hyperlink{sound_8h_a87cc8e430711a16f8d53adec0fc30863_a87cc8e430711a16f8d53adec0fc30863}{S\+O\+U\+N\+D\+\_\+\+A2}~38
+\begin{DoxyCompactList}\small\item\em オクターブ2 ラ \end{DoxyCompactList}\item 
+\#define \hyperlink{sound_8h_aa355b76cc29205f9fdd6edd04802baa1_aa355b76cc29205f9fdd6edd04802baa1}{S\+O\+U\+N\+D\+\_\+\+Ab2}~36
+\begin{DoxyCompactList}\small\item\em オクターブ2 ラ\# \end{DoxyCompactList}\item 
+\#define \hyperlink{sound_8h_a8aeeeb1a420c4f8b23fe5c7960045a06_a8aeeeb1a420c4f8b23fe5c7960045a06}{S\+O\+U\+N\+D\+\_\+\+H2}~34
+\begin{DoxyCompactList}\small\item\em オクターブ2 シ \end{DoxyCompactList}\item 
+\#define \hyperlink{sound_8h_a6cb42a0945d4a26b716ea357b265a8e4_a6cb42a0945d4a26b716ea357b265a8e4}{S\+O\+U\+N\+D\+\_\+\+C3}~32
+\begin{DoxyCompactList}\small\item\em オクターブ3 ド \end{DoxyCompactList}\item 
+\#define \hyperlink{sound_8h_a3fbca825ab7829e2da07997cfb7be2b5_a3fbca825ab7829e2da07997cfb7be2b5}{S\+O\+U\+N\+D\+\_\+\+Cb3}~30
+\begin{DoxyCompactList}\small\item\em オクターブ3 ド\# \end{DoxyCompactList}\item 
+\#define \hyperlink{sound_8h_ab0ffa43b4f3def70d822938a28983c90_ab0ffa43b4f3def70d822938a28983c90}{S\+O\+U\+N\+D\+\_\+\+D3}~29
+\begin{DoxyCompactList}\small\item\em オクターブ3 レ \end{DoxyCompactList}\item 
+\#define \hyperlink{sound_8h_a1cfd87bf68ec505eec2f20f710ce0189_a1cfd87bf68ec505eec2f20f710ce0189}{S\+O\+U\+N\+D\+\_\+\+Db3}~27
+\begin{DoxyCompactList}\small\item\em オクターブ3 レ\# \end{DoxyCompactList}\item 
+\#define \hyperlink{sound_8h_a7c3d885a2a78b0ac306c3d275233e037_a7c3d885a2a78b0ac306c3d275233e037}{S\+O\+U\+N\+D\+\_\+\+E3}~25
+\begin{DoxyCompactList}\small\item\em オクターブ3 ミ \end{DoxyCompactList}\item 
+\#define \hyperlink{sound_8h_aee1dad36946f9a025e2067788b62e575_aee1dad36946f9a025e2067788b62e575}{S\+O\+U\+N\+D\+\_\+\+F3}~24
+\begin{DoxyCompactList}\small\item\em オクターブ3 ファ \end{DoxyCompactList}\item 
+\#define \hyperlink{sound_8h_a4502a83bac176348b5c7b0677341fc26_a4502a83bac176348b5c7b0677341fc26}{S\+O\+U\+N\+D\+\_\+\+Fb3}~23
+\begin{DoxyCompactList}\small\item\em オクターブ3 ファ\# \end{DoxyCompactList}\item 
+\#define \hyperlink{sound_8h_a3dc460e8030ea66b5b0af7074f32b3ac_a3dc460e8030ea66b5b0af7074f32b3ac}{S\+O\+U\+N\+D\+\_\+\+G3}~21
+\begin{DoxyCompactList}\small\item\em オクターブ3 ソ \end{DoxyCompactList}\item 
+\#define \hyperlink{sound_8h_a154622a25029a712f113945150b1325b_a154622a25029a712f113945150b1325b}{S\+O\+U\+N\+D\+\_\+\+Gb3}~20
+\begin{DoxyCompactList}\small\item\em オクターブ3 ソ\# \end{DoxyCompactList}\item 
+\#define \hyperlink{sound_8h_a9f45e8626868aaf3fe91e01a56686ecd_a9f45e8626868aaf3fe91e01a56686ecd}{S\+O\+U\+N\+D\+\_\+\+A3}~19
+\begin{DoxyCompactList}\small\item\em オクターブ3 ラ \end{DoxyCompactList}\item 
+\#define \hyperlink{sound_8h_a41403a0a136d706e529e4017966e1a10_a41403a0a136d706e529e4017966e1a10}{S\+O\+U\+N\+D\+\_\+\+Ab3}~18
+\begin{DoxyCompactList}\small\item\em オクターブ3 ラ\# \end{DoxyCompactList}\item 
+\#define \hyperlink{sound_8h_a931824d8aaced5b4db469aa58517d993_a931824d8aaced5b4db469aa58517d993}{S\+O\+U\+N\+D\+\_\+\+H3}~17
+\begin{DoxyCompactList}\small\item\em オクターブ3 シ \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{型定義}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{stddef_8h_afbf708854fe02af8475a9ba02f3196cb_afbf708854fe02af8475a9ba02f3196cb}{\+\_\+\+B\+O\+O\+L}($\ast$ \hyperlink{sound_8h_a25ea542ecfc47a97aed27c42ee791f3f_a25ea542ecfc47a97aed27c42ee791f3f}{S\+O\+U\+N\+D\+\_\+\+Api}) ()
+\begin{DoxyCompactList}\small\item\em 再生操作リクエスト\+A\+P\+Iの型 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{列挙型}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{sound_8h_abb21e5244ee60939e8a32ec932e9d7b3_abb21e5244ee60939e8a32ec932e9d7b3}{S\+O\+U\+N\+D\+\_\+\+State} \{ \\*
+\hyperlink{sound_8h_abb21e5244ee60939e8a32ec932e9d7b3_abb21e5244ee60939e8a32ec932e9d7b3ad0949bdef5777ac0e886e8b7a3ac9e93}{S\+O\+U\+N\+D\+\_\+\+S\+T\+\_\+\+S\+T\+O\+P} = 0, 
+\\*
+\hyperlink{sound_8h_abb21e5244ee60939e8a32ec932e9d7b3_abb21e5244ee60939e8a32ec932e9d7b3a69af3ab302bcb6f9e2dabc363ea2f322}{S\+O\+U\+N\+D\+\_\+\+S\+T\+\_\+\+P\+L\+A\+Y}, 
+\\*
+\hyperlink{sound_8h_abb21e5244ee60939e8a32ec932e9d7b3_abb21e5244ee60939e8a32ec932e9d7b3a8ce8853fb3709716f052d68eb827c92f}{S\+O\+U\+N\+D\+\_\+\+S\+T\+\_\+\+R\+E\+V\+E\+R\+S\+E}, 
+\\*
+\hyperlink{sound_8h_abb21e5244ee60939e8a32ec932e9d7b3_abb21e5244ee60939e8a32ec932e9d7b3ac0294a814acb2bcb5d3c4cefef53a22c}{S\+O\+U\+N\+D\+\_\+\+N\+U\+M\+\_\+\+O\+F\+\_\+\+S\+T\+A\+T\+E}
+ \}\begin{DoxyCompactList}\small\item\em 再生状態リテラル型 \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsubsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{sound_8h_ad3de2879fde7ab7812201bc42d3d4b8e_ad3de2879fde7ab7812201bc42d3d4b8e}{S\+O\+U\+N\+D\+\_\+init} ()
+\begin{DoxyCompactList}\small\item\em サウンドドライバ初期化 \end{DoxyCompactList}\item 
+\hyperlink{sound_8h_abb21e5244ee60939e8a32ec932e9d7b3_abb21e5244ee60939e8a32ec932e9d7b3}{S\+O\+U\+N\+D\+\_\+\+State} \hyperlink{sound_8h_ac4a032d84a215757679f6adca28a1d9b_ac4a032d84a215757679f6adca28a1d9b}{S\+O\+U\+N\+D\+\_\+get\+State} ()
+\begin{DoxyCompactList}\small\item\em 現在の再生状態取得 \end{DoxyCompactList}\item 
+void \hyperlink{sound_8h_adf9ab0e7c0d23c1addb15b92b19cda3a_adf9ab0e7c0d23c1addb15b92b19cda3a}{S\+O\+U\+N\+D\+\_\+set\+Volume} (\hyperlink{stddef_8h_aac464b47452ce9406f88ef194e2becc1_aac464b47452ce9406f88ef194e2becc1}{\+\_\+\+U\+B\+Y\+T\+E} val)
+\begin{DoxyCompactList}\small\item\em ボリューム設定 \end{DoxyCompactList}\item 
+void \hyperlink{sound_8h_a0d312ae4bc0fa617113f6b207948b216_a0d312ae4bc0fa617113f6b207948b216}{S\+O\+U\+N\+D\+\_\+set\+Evlp\+Cycle} (\hyperlink{stddef_8h_af4b45f5ec97da370bd2173b4fe891d76_af4b45f5ec97da370bd2173b4fe891d76}{\+\_\+\+U\+W\+O\+R\+D} val)
+\begin{DoxyCompactList}\small\item\em エンベロープ周期設定 \end{DoxyCompactList}\item 
+void \hyperlink{sound_8h_a96d64623d3a9b13dc1946eb89b67e6d4_a96d64623d3a9b13dc1946eb89b67e6d4}{S\+O\+U\+N\+D\+\_\+set\+Tone} (\hyperlink{stddef_8h_aac464b47452ce9406f88ef194e2becc1_aac464b47452ce9406f88ef194e2becc1}{\+\_\+\+U\+B\+Y\+T\+E} idx, const \hyperlink{sound_8h_d6/d3c/structSOUND__Tone}{S\+O\+U\+N\+D\+\_\+\+Tone} $\ast$tone)
+\begin{DoxyCompactList}\small\item\em 音登録 \end{DoxyCompactList}\item 
+void \hyperlink{sound_8h_a89125a6dfb8c0023aba543f2d0f24a8f_a89125a6dfb8c0023aba543f2d0f24a8f}{S\+O\+U\+N\+D\+\_\+remove\+Tone} (\hyperlink{stddef_8h_aac464b47452ce9406f88ef194e2becc1_aac464b47452ce9406f88ef194e2becc1}{\+\_\+\+U\+B\+Y\+T\+E} idx)
+\begin{DoxyCompactList}\small\item\em 音削除 \end{DoxyCompactList}\item 
+\hyperlink{stddef_8h_afbf708854fe02af8475a9ba02f3196cb_afbf708854fe02af8475a9ba02f3196cb}{\+\_\+\+B\+O\+O\+L} \hyperlink{sound_8h_a7ab16e900aec03cfe3707d0f33e5821c_a7ab16e900aec03cfe3707d0f33e5821c}{S\+O\+U\+N\+D\+\_\+play} ()
+\begin{DoxyCompactList}\small\item\em 音再生リクエスト \end{DoxyCompactList}\item 
+\hyperlink{stddef_8h_afbf708854fe02af8475a9ba02f3196cb_afbf708854fe02af8475a9ba02f3196cb}{\+\_\+\+B\+O\+O\+L} \hyperlink{sound_8h_aafc9cb1cbfabe6eced6a250c99cd1de0_aafc9cb1cbfabe6eced6a250c99cd1de0}{S\+O\+U\+N\+D\+\_\+reverse} ()
+\begin{DoxyCompactList}\small\item\em 音逆再生リクエスト \end{DoxyCompactList}\item 
+\hyperlink{stddef_8h_afbf708854fe02af8475a9ba02f3196cb_afbf708854fe02af8475a9ba02f3196cb}{\+\_\+\+B\+O\+O\+L} \hyperlink{sound_8h_a1504a4f21c440a59edeecd944b01c032_a1504a4f21c440a59edeecd944b01c032}{S\+O\+U\+N\+D\+\_\+stop} ()
+\begin{DoxyCompactList}\small\item\em 停止リクエスト \end{DoxyCompactList}\item 
+void \hyperlink{sound_8h_a5fc67e86da09d64eef5060e3393395b0_a5fc67e86da09d64eef5060e3393395b0}{S\+O\+U\+N\+D\+\_\+make\+Pulse} ()
+\begin{DoxyCompactList}\small\item\em 波形生成 \end{DoxyCompactList}\item 
+void \hyperlink{sound_8h_ac55bd0188c9aed90f2f859f1ac03ed61_ac55bd0188c9aed90f2f859f1ac03ed61}{S\+O\+U\+N\+D\+\_\+pronounce} ()
+\begin{DoxyCompactList}\small\item\em 音データ発音 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{変数}
+\begin{DoxyCompactItemize}
+\item 
+const \hyperlink{sound_8h_a25ea542ecfc47a97aed27c42ee791f3f_a25ea542ecfc47a97aed27c42ee791f3f}{S\+O\+U\+N\+D\+\_\+\+Api} \hyperlink{sound_8h_acf4c0032eb66261be38af2018b4119d3_acf4c0032eb66261be38af2018b4119d3}{S\+O\+U\+N\+D\+\_\+state\+\_\+handler} \mbox{[}\hyperlink{sound_8h_abb21e5244ee60939e8a32ec932e9d7b3_abb21e5244ee60939e8a32ec932e9d7b3ac0294a814acb2bcb5d3c4cefef53a22c}{S\+O\+U\+N\+D\+\_\+\+N\+U\+M\+\_\+\+O\+F\+\_\+\+S\+T\+A\+T\+E}\mbox{]}
+\begin{DoxyCompactList}\small\item\em 状態ハンドラ配列 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{詳解}
+サウンドドライバ 
+
+このモジュールは音を再生させるためのインタフェースを提供する。~\newline
+H8-\/\+B\+A\+S\+E2で使用できる3つのタイマを使い、音程、音長、強弱を表わす矩形波を スピーカポートへ出力する。
+
+\begin{DoxyAttention}{注意}
+Timer\+A, Timer\+V, Timer\+Wを他のモジュールで使用してはならない。
+\end{DoxyAttention}
+ 
+
+\subsubsection{クラス詳解}
+\index{S\+O\+U\+N\+D\+\_\+\+Envelope@{S\+O\+U\+N\+D\+\_\+\+Envelope}}\label{structSOUND__Envelope}
+\paragraph{struct S\+O\+U\+N\+D\+\_\+\+Envelope}
+エンベロープ定義型 
+
+音発生時の強弱レベルを定義する型 
+
+ sound.\+h の 154 行目に定義があります。
+
+
+
+S\+O\+U\+N\+D\+\_\+\+Envelope 連携図
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=198pt]{d4/d37/structSOUND__Envelope__coll__graph}
+\end{center}
+\end{figure}
+\begin{DoxyFields}{クラスメンバ}
+\hyperlink{stddef_8h_aac464b47452ce9406f88ef194e2becc1_aac464b47452ce9406f88ef194e2becc1}{\+\_\+\+U\+B\+Y\+T\+E} $\ast$\label{sound_8h_ad368fb20a4f66ce37f393a9e76669c2c}
+&
+data&
+エンベロープデータ列の先頭へのポインタ \\
+\hline
+
+\hyperlink{stddef_8h_af4b45f5ec97da370bd2173b4fe891d76_af4b45f5ec97da370bd2173b4fe891d76}{\+\_\+\+U\+W\+O\+R\+D}\label{sound_8h_af1860938a43db18c94c5e455a3d30f92}
+&
+size&
+エンベロープデータ列のサイズ \\
+\hline
+
+\end{DoxyFields}
+\index{S\+O\+U\+N\+D\+\_\+\+Tone@{S\+O\+U\+N\+D\+\_\+\+Tone}}\label{structSOUND__Tone}
+\paragraph{struct S\+O\+U\+N\+D\+\_\+\+Tone}
+音定義型 
+
+あるタイミングでの発生音を定義する型 
+
+ sound.\+h の 167 行目に定義があります。
+
+
+
+S\+O\+U\+N\+D\+\_\+\+Tone 連携図
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=274pt]{d6/d5d/structSOUND__Tone__coll__graph}
+\end{center}
+\end{figure}
+\begin{DoxyFields}{クラスメンバ}
+\hyperlink{stddef_8h_aac464b47452ce9406f88ef194e2becc1_aac464b47452ce9406f88ef194e2becc1}{\+\_\+\+U\+B\+Y\+T\+E}\label{sound_8h_a8135b8035953af27550de75620afe4d5}
+&
+freq&
+音の周波数 \\
+\hline
+
+\hyperlink{sound_8h_d0/d92/structSOUND__Envelope}{S\+O\+U\+N\+D\+\_\+\+Envelope} $\ast$\label{sound_8h_ac170c41399f920b778a6ea90b82660c3}
+&
+evlp&
+この音を発生させるときのエンベロープ \\
+\hline
+
+\hyperlink{sound_8h_d0/d92/structSOUND__Envelope}{S\+O\+U\+N\+D\+\_\+\+Envelope} $\ast$\label{sound_8h_a4d3e0cc4845c0d851a0fbfd43dd01c02}
+&
+reverb&
+再生後の残響効果。リバーブ \\
+\hline
+
+\hyperlink{stddef_8h_afbf708854fe02af8475a9ba02f3196cb_afbf708854fe02af8475a9ba02f3196cb}{\+\_\+\+B\+O\+O\+L}\label{sound_8h_a87a8f1fa6a5243bfec12dace400f4d95}
+&
+loop&
+リバーブのループフラグ \\
+\hline
+
+\end{DoxyFields}
+
+
+\subsubsection{マクロ定義詳解}
+\index{sound.\+h@{sound.\+h}!S\+O\+U\+N\+D\+\_\+\+M\+A\+X\+\_\+\+P\+R\+O\+N\+O\+U\+N\+C\+E@{S\+O\+U\+N\+D\+\_\+\+M\+A\+X\+\_\+\+P\+R\+O\+N\+O\+U\+N\+C\+E}}
+\index{S\+O\+U\+N\+D\+\_\+\+M\+A\+X\+\_\+\+P\+R\+O\+N\+O\+U\+N\+C\+E@{S\+O\+U\+N\+D\+\_\+\+M\+A\+X\+\_\+\+P\+R\+O\+N\+O\+U\+N\+C\+E}!sound.\+h@{sound.\+h}}
+\paragraph[{S\+O\+U\+N\+D\+\_\+\+M\+A\+X\+\_\+\+P\+R\+O\+N\+O\+U\+N\+C\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+O\+U\+N\+D\+\_\+\+M\+A\+X\+\_\+\+P\+R\+O\+N\+O\+U\+N\+C\+E~3}\label{sound_8h_ae37af07d650f8e823223bfaf85dfeea5_ae37af07d650f8e823223bfaf85dfeea5}
+
+
+最大同時発信音数 
+
+
+
+ sound.\+h の 31 行目に定義があります。
+
+\index{sound.\+h@{sound.\+h}!S\+O\+U\+N\+D\+\_\+\+M\+A\+X\+\_\+\+V\+O\+L\+U\+M\+E@{S\+O\+U\+N\+D\+\_\+\+M\+A\+X\+\_\+\+V\+O\+L\+U\+M\+E}}
+\index{S\+O\+U\+N\+D\+\_\+\+M\+A\+X\+\_\+\+V\+O\+L\+U\+M\+E@{S\+O\+U\+N\+D\+\_\+\+M\+A\+X\+\_\+\+V\+O\+L\+U\+M\+E}!sound.\+h@{sound.\+h}}
+\paragraph[{S\+O\+U\+N\+D\+\_\+\+M\+A\+X\+\_\+\+V\+O\+L\+U\+M\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+O\+U\+N\+D\+\_\+\+M\+A\+X\+\_\+\+V\+O\+L\+U\+M\+E~255}\label{sound_8h_a46743b97361463957ee0eb2202ff90d8_a46743b97361463957ee0eb2202ff90d8}
+
+
+ボリュームの最大値 
+
+
+
+ sound.\+h の 33 行目に定義があります。
+
+\index{sound.\+h@{sound.\+h}!S\+O\+U\+N\+D\+\_\+\+P\+R\+O\+N\+O\+U\+N\+C\+E\+\_\+\+L\+E\+N@{S\+O\+U\+N\+D\+\_\+\+P\+R\+O\+N\+O\+U\+N\+C\+E\+\_\+\+L\+E\+N}}
+\index{S\+O\+U\+N\+D\+\_\+\+P\+R\+O\+N\+O\+U\+N\+C\+E\+\_\+\+L\+E\+N@{S\+O\+U\+N\+D\+\_\+\+P\+R\+O\+N\+O\+U\+N\+C\+E\+\_\+\+L\+E\+N}!sound.\+h@{sound.\+h}}
+\paragraph[{S\+O\+U\+N\+D\+\_\+\+P\+R\+O\+N\+O\+U\+N\+C\+E\+\_\+\+L\+E\+N}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+O\+U\+N\+D\+\_\+\+P\+R\+O\+N\+O\+U\+N\+C\+E\+\_\+\+L\+E\+N~2}\label{sound_8h_aa5c5d06e5ffe7f4792f2a7613223b8bb_aa5c5d06e5ffe7f4792f2a7613223b8bb}
+
+
+ sound.\+h の 35 行目に定義があります。
+
+\index{sound.\+h@{sound.\+h}!S\+O\+U\+N\+D\+\_\+\+N\+A@{S\+O\+U\+N\+D\+\_\+\+N\+A}}
+\index{S\+O\+U\+N\+D\+\_\+\+N\+A@{S\+O\+U\+N\+D\+\_\+\+N\+A}!sound.\+h@{sound.\+h}}
+\paragraph[{S\+O\+U\+N\+D\+\_\+\+N\+A}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+O\+U\+N\+D\+\_\+\+N\+A~0}\label{sound_8h_a00e51ccb7bab9d21f8cd5611028ca051_a00e51ccb7bab9d21f8cd5611028ca051}
+
+
+無音 
+
+
+
+ sound.\+h の 38 行目に定義があります。
+
+\index{sound.\+h@{sound.\+h}!S\+O\+U\+N\+D\+\_\+\+C0@{S\+O\+U\+N\+D\+\_\+\+C0}}
+\index{S\+O\+U\+N\+D\+\_\+\+C0@{S\+O\+U\+N\+D\+\_\+\+C0}!sound.\+h@{sound.\+h}}
+\paragraph[{S\+O\+U\+N\+D\+\_\+\+C0}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+O\+U\+N\+D\+\_\+\+C0~255}\label{sound_8h_a7a8291aa331919d505eb896f5f23b84c_a7a8291aa331919d505eb896f5f23b84c}
+
+
+オクターブ0 ド 
+
+
+
+ sound.\+h の 40 行目に定義があります。
+
+\index{sound.\+h@{sound.\+h}!S\+O\+U\+N\+D\+\_\+\+Cb0@{S\+O\+U\+N\+D\+\_\+\+Cb0}}
+\index{S\+O\+U\+N\+D\+\_\+\+Cb0@{S\+O\+U\+N\+D\+\_\+\+Cb0}!sound.\+h@{sound.\+h}}
+\paragraph[{S\+O\+U\+N\+D\+\_\+\+Cb0}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+O\+U\+N\+D\+\_\+\+Cb0~241}\label{sound_8h_a5cf7b47c621b7f44cb936a18e7a227be_a5cf7b47c621b7f44cb936a18e7a227be}
+
+
+オクターブ0 ド\# 
+
+
+
+ sound.\+h の 42 行目に定義があります。
+
+\index{sound.\+h@{sound.\+h}!S\+O\+U\+N\+D\+\_\+\+D0@{S\+O\+U\+N\+D\+\_\+\+D0}}
+\index{S\+O\+U\+N\+D\+\_\+\+D0@{S\+O\+U\+N\+D\+\_\+\+D0}!sound.\+h@{sound.\+h}}
+\paragraph[{S\+O\+U\+N\+D\+\_\+\+D0}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+O\+U\+N\+D\+\_\+\+D0~228}\label{sound_8h_a78855daec2050679bd8ef984b6474384_a78855daec2050679bd8ef984b6474384}
+
+
+オクターブ0 レ 
+
+
+
+ sound.\+h の 44 行目に定義があります。
+
+\index{sound.\+h@{sound.\+h}!S\+O\+U\+N\+D\+\_\+\+Db0@{S\+O\+U\+N\+D\+\_\+\+Db0}}
+\index{S\+O\+U\+N\+D\+\_\+\+Db0@{S\+O\+U\+N\+D\+\_\+\+Db0}!sound.\+h@{sound.\+h}}
+\paragraph[{S\+O\+U\+N\+D\+\_\+\+Db0}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+O\+U\+N\+D\+\_\+\+Db0~214}\label{sound_8h_ae54a9c279cc372bd69b65dd9d06f3210_ae54a9c279cc372bd69b65dd9d06f3210}
+
+
+オクターブ0 レ\# 
+
+
+
+ sound.\+h の 46 行目に定義があります。
+
+\index{sound.\+h@{sound.\+h}!S\+O\+U\+N\+D\+\_\+\+E0@{S\+O\+U\+N\+D\+\_\+\+E0}}
+\index{S\+O\+U\+N\+D\+\_\+\+E0@{S\+O\+U\+N\+D\+\_\+\+E0}!sound.\+h@{sound.\+h}}
+\paragraph[{S\+O\+U\+N\+D\+\_\+\+E0}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+O\+U\+N\+D\+\_\+\+E0~203}\label{sound_8h_a19424f95bd658c3fb08a40b37fa18ae6_a19424f95bd658c3fb08a40b37fa18ae6}
+
+
+オクターブ0 ミ 
+
+
+
+ sound.\+h の 48 行目に定義があります。
+
+\index{sound.\+h@{sound.\+h}!S\+O\+U\+N\+D\+\_\+\+F0@{S\+O\+U\+N\+D\+\_\+\+F0}}
+\index{S\+O\+U\+N\+D\+\_\+\+F0@{S\+O\+U\+N\+D\+\_\+\+F0}!sound.\+h@{sound.\+h}}
+\paragraph[{S\+O\+U\+N\+D\+\_\+\+F0}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+O\+U\+N\+D\+\_\+\+F0~192}\label{sound_8h_a9c24cc4b865b592ab72a04852c7d194e_a9c24cc4b865b592ab72a04852c7d194e}
+
+
+オクターブ0 ファ 
+
+
+
+ sound.\+h の 50 行目に定義があります。
+
+\index{sound.\+h@{sound.\+h}!S\+O\+U\+N\+D\+\_\+\+Fb0@{S\+O\+U\+N\+D\+\_\+\+Fb0}}
+\index{S\+O\+U\+N\+D\+\_\+\+Fb0@{S\+O\+U\+N\+D\+\_\+\+Fb0}!sound.\+h@{sound.\+h}}
+\paragraph[{S\+O\+U\+N\+D\+\_\+\+Fb0}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+O\+U\+N\+D\+\_\+\+Fb0~180}\label{sound_8h_aaff9a7f05ba2237c933648fc79631254_aaff9a7f05ba2237c933648fc79631254}
+
+
+オクターブ0 ファ\# 
+
+
+
+ sound.\+h の 52 行目に定義があります。
+
+\index{sound.\+h@{sound.\+h}!S\+O\+U\+N\+D\+\_\+\+G0@{S\+O\+U\+N\+D\+\_\+\+G0}}
+\index{S\+O\+U\+N\+D\+\_\+\+G0@{S\+O\+U\+N\+D\+\_\+\+G0}!sound.\+h@{sound.\+h}}
+\paragraph[{S\+O\+U\+N\+D\+\_\+\+G0}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+O\+U\+N\+D\+\_\+\+G0~171}\label{sound_8h_a49cb5ffcf2e6a7e6a450e6bb6bb1fd55_a49cb5ffcf2e6a7e6a450e6bb6bb1fd55}
+
+
+オクターブ0 ソ 
+
+
+
+ sound.\+h の 54 行目に定義があります。
+
+\index{sound.\+h@{sound.\+h}!S\+O\+U\+N\+D\+\_\+\+Gb0@{S\+O\+U\+N\+D\+\_\+\+Gb0}}
+\index{S\+O\+U\+N\+D\+\_\+\+Gb0@{S\+O\+U\+N\+D\+\_\+\+Gb0}!sound.\+h@{sound.\+h}}
+\paragraph[{S\+O\+U\+N\+D\+\_\+\+Gb0}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+O\+U\+N\+D\+\_\+\+Gb0~161}\label{sound_8h_a7f5a3ed6713d6224d6e31d0020fdd430_a7f5a3ed6713d6224d6e31d0020fdd430}
+
+
+オクターブ0 ソ\# 
+
+
+
+ sound.\+h の 56 行目に定義があります。
+
+\index{sound.\+h@{sound.\+h}!S\+O\+U\+N\+D\+\_\+\+A0@{S\+O\+U\+N\+D\+\_\+\+A0}}
+\index{S\+O\+U\+N\+D\+\_\+\+A0@{S\+O\+U\+N\+D\+\_\+\+A0}!sound.\+h@{sound.\+h}}
+\paragraph[{S\+O\+U\+N\+D\+\_\+\+A0}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+O\+U\+N\+D\+\_\+\+A0~152}\label{sound_8h_abcc3b3196f02e1825a756586cff6adb5_abcc3b3196f02e1825a756586cff6adb5}
+
+
+オクターブ0 ラ 
+
+
+
+ sound.\+h の 58 行目に定義があります。
+
+\index{sound.\+h@{sound.\+h}!S\+O\+U\+N\+D\+\_\+\+Ab0@{S\+O\+U\+N\+D\+\_\+\+Ab0}}
+\index{S\+O\+U\+N\+D\+\_\+\+Ab0@{S\+O\+U\+N\+D\+\_\+\+Ab0}!sound.\+h@{sound.\+h}}
+\paragraph[{S\+O\+U\+N\+D\+\_\+\+Ab0}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+O\+U\+N\+D\+\_\+\+Ab0~143}\label{sound_8h_aa63270be4b563c05e755e9e9c62485d4_aa63270be4b563c05e755e9e9c62485d4}
+
+
+オクターブ0 ラ\# 
+
+
+
+ sound.\+h の 60 行目に定義があります。
+
+\index{sound.\+h@{sound.\+h}!S\+O\+U\+N\+D\+\_\+\+H0@{S\+O\+U\+N\+D\+\_\+\+H0}}
+\index{S\+O\+U\+N\+D\+\_\+\+H0@{S\+O\+U\+N\+D\+\_\+\+H0}!sound.\+h@{sound.\+h}}
+\paragraph[{S\+O\+U\+N\+D\+\_\+\+H0}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+O\+U\+N\+D\+\_\+\+H0~136}\label{sound_8h_af77d6e42768c9e8407091ab9237c23e8_af77d6e42768c9e8407091ab9237c23e8}
+
+
+オクターブ0 シ 
+
+
+
+ sound.\+h の 62 行目に定義があります。
+
+\index{sound.\+h@{sound.\+h}!S\+O\+U\+N\+D\+\_\+\+C1@{S\+O\+U\+N\+D\+\_\+\+C1}}
+\index{S\+O\+U\+N\+D\+\_\+\+C1@{S\+O\+U\+N\+D\+\_\+\+C1}!sound.\+h@{sound.\+h}}
+\paragraph[{S\+O\+U\+N\+D\+\_\+\+C1}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+O\+U\+N\+D\+\_\+\+C1~128}\label{sound_8h_acc40de3e4447b500abf6a8f52690eb7a_acc40de3e4447b500abf6a8f52690eb7a}
+
+
+オクターブ1 ド 
+
+
+
+ sound.\+h の 64 行目に定義があります。
+
+\index{sound.\+h@{sound.\+h}!S\+O\+U\+N\+D\+\_\+\+Cb1@{S\+O\+U\+N\+D\+\_\+\+Cb1}}
+\index{S\+O\+U\+N\+D\+\_\+\+Cb1@{S\+O\+U\+N\+D\+\_\+\+Cb1}!sound.\+h@{sound.\+h}}
+\paragraph[{S\+O\+U\+N\+D\+\_\+\+Cb1}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+O\+U\+N\+D\+\_\+\+Cb1~120}\label{sound_8h_a71cd098d1835193a4082f62c92bd1560_a71cd098d1835193a4082f62c92bd1560}
+
+
+オクターブ1 ド\# 
+
+
+
+ sound.\+h の 66 行目に定義があります。
+
+\index{sound.\+h@{sound.\+h}!S\+O\+U\+N\+D\+\_\+\+D1@{S\+O\+U\+N\+D\+\_\+\+D1}}
+\index{S\+O\+U\+N\+D\+\_\+\+D1@{S\+O\+U\+N\+D\+\_\+\+D1}!sound.\+h@{sound.\+h}}
+\paragraph[{S\+O\+U\+N\+D\+\_\+\+D1}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+O\+U\+N\+D\+\_\+\+D1~114}\label{sound_8h_abc56b27ce3a779cca007c05bd85be4fd_abc56b27ce3a779cca007c05bd85be4fd}
+
+
+オクターブ1 レ 
+
+
+
+ sound.\+h の 68 行目に定義があります。
+
+\index{sound.\+h@{sound.\+h}!S\+O\+U\+N\+D\+\_\+\+Db1@{S\+O\+U\+N\+D\+\_\+\+Db1}}
+\index{S\+O\+U\+N\+D\+\_\+\+Db1@{S\+O\+U\+N\+D\+\_\+\+Db1}!sound.\+h@{sound.\+h}}
+\paragraph[{S\+O\+U\+N\+D\+\_\+\+Db1}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+O\+U\+N\+D\+\_\+\+Db1~107}\label{sound_8h_a38bf3c917fff3545f77a76715ad4b0f4_a38bf3c917fff3545f77a76715ad4b0f4}
+
+
+オクターブ1 レ\# 
+
+
+
+ sound.\+h の 70 行目に定義があります。
+
+\index{sound.\+h@{sound.\+h}!S\+O\+U\+N\+D\+\_\+\+E1@{S\+O\+U\+N\+D\+\_\+\+E1}}
+\index{S\+O\+U\+N\+D\+\_\+\+E1@{S\+O\+U\+N\+D\+\_\+\+E1}!sound.\+h@{sound.\+h}}
+\paragraph[{S\+O\+U\+N\+D\+\_\+\+E1}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+O\+U\+N\+D\+\_\+\+E1~101}\label{sound_8h_a1009235392ed7690560707d81815b36b_a1009235392ed7690560707d81815b36b}
+
+
+オクターブ1 ミ 
+
+
+
+ sound.\+h の 72 行目に定義があります。
+
+\index{sound.\+h@{sound.\+h}!S\+O\+U\+N\+D\+\_\+\+F1@{S\+O\+U\+N\+D\+\_\+\+F1}}
+\index{S\+O\+U\+N\+D\+\_\+\+F1@{S\+O\+U\+N\+D\+\_\+\+F1}!sound.\+h@{sound.\+h}}
+\paragraph[{S\+O\+U\+N\+D\+\_\+\+F1}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+O\+U\+N\+D\+\_\+\+F1~96}\label{sound_8h_a48a50ebd455ec326ce52ba3f9e063baa_a48a50ebd455ec326ce52ba3f9e063baa}
+
+
+オクターブ1 ファ 
+
+
+
+ sound.\+h の 74 行目に定義があります。
+
+\index{sound.\+h@{sound.\+h}!S\+O\+U\+N\+D\+\_\+\+Fb1@{S\+O\+U\+N\+D\+\_\+\+Fb1}}
+\index{S\+O\+U\+N\+D\+\_\+\+Fb1@{S\+O\+U\+N\+D\+\_\+\+Fb1}!sound.\+h@{sound.\+h}}
+\paragraph[{S\+O\+U\+N\+D\+\_\+\+Fb1}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+O\+U\+N\+D\+\_\+\+Fb1~90}\label{sound_8h_adc081179e66a0f7fe8f58b07f0358ed8_adc081179e66a0f7fe8f58b07f0358ed8}
+
+
+オクターブ1 ファ\# 
+
+
+
+ sound.\+h の 76 行目に定義があります。
+
+\index{sound.\+h@{sound.\+h}!S\+O\+U\+N\+D\+\_\+\+G1@{S\+O\+U\+N\+D\+\_\+\+G1}}
+\index{S\+O\+U\+N\+D\+\_\+\+G1@{S\+O\+U\+N\+D\+\_\+\+G1}!sound.\+h@{sound.\+h}}
+\paragraph[{S\+O\+U\+N\+D\+\_\+\+G1}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+O\+U\+N\+D\+\_\+\+G1~85}\label{sound_8h_a077f7dc14c95e192d7edf3c8eb72c5da_a077f7dc14c95e192d7edf3c8eb72c5da}
+
+
+オクターブ1 ソ 
+
+
+
+ sound.\+h の 78 行目に定義があります。
+
+\index{sound.\+h@{sound.\+h}!S\+O\+U\+N\+D\+\_\+\+Gb1@{S\+O\+U\+N\+D\+\_\+\+Gb1}}
+\index{S\+O\+U\+N\+D\+\_\+\+Gb1@{S\+O\+U\+N\+D\+\_\+\+Gb1}!sound.\+h@{sound.\+h}}
+\paragraph[{S\+O\+U\+N\+D\+\_\+\+Gb1}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+O\+U\+N\+D\+\_\+\+Gb1~80}\label{sound_8h_af064bb5dbd237d2fe7e954ee31cd3ca4_af064bb5dbd237d2fe7e954ee31cd3ca4}
+
+
+オクターブ1 ソ\# 
+
+
+
+ sound.\+h の 80 行目に定義があります。
+
+\index{sound.\+h@{sound.\+h}!S\+O\+U\+N\+D\+\_\+\+A1@{S\+O\+U\+N\+D\+\_\+\+A1}}
+\index{S\+O\+U\+N\+D\+\_\+\+A1@{S\+O\+U\+N\+D\+\_\+\+A1}!sound.\+h@{sound.\+h}}
+\paragraph[{S\+O\+U\+N\+D\+\_\+\+A1}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+O\+U\+N\+D\+\_\+\+A1~76}\label{sound_8h_a0a5faefe8dfea062eb628bd9b6aba261_a0a5faefe8dfea062eb628bd9b6aba261}
+
+
+オクターブ1 ラ 
+
+
+
+ sound.\+h の 82 行目に定義があります。
+
+\index{sound.\+h@{sound.\+h}!S\+O\+U\+N\+D\+\_\+\+Ab1@{S\+O\+U\+N\+D\+\_\+\+Ab1}}
+\index{S\+O\+U\+N\+D\+\_\+\+Ab1@{S\+O\+U\+N\+D\+\_\+\+Ab1}!sound.\+h@{sound.\+h}}
+\paragraph[{S\+O\+U\+N\+D\+\_\+\+Ab1}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+O\+U\+N\+D\+\_\+\+Ab1~72}\label{sound_8h_acf1942377e486c3d28326ea144b0c9f0_acf1942377e486c3d28326ea144b0c9f0}
+
+
+オクターブ1 ラ\# 
+
+
+
+ sound.\+h の 84 行目に定義があります。
+
+\index{sound.\+h@{sound.\+h}!S\+O\+U\+N\+D\+\_\+\+H1@{S\+O\+U\+N\+D\+\_\+\+H1}}
+\index{S\+O\+U\+N\+D\+\_\+\+H1@{S\+O\+U\+N\+D\+\_\+\+H1}!sound.\+h@{sound.\+h}}
+\paragraph[{S\+O\+U\+N\+D\+\_\+\+H1}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+O\+U\+N\+D\+\_\+\+H1~68}\label{sound_8h_a779cc45580fd31304c432b2582e94953_a779cc45580fd31304c432b2582e94953}
+
+
+オクターブ1 シ 
+
+
+
+ sound.\+h の 86 行目に定義があります。
+
+\index{sound.\+h@{sound.\+h}!S\+O\+U\+N\+D\+\_\+\+C2@{S\+O\+U\+N\+D\+\_\+\+C2}}
+\index{S\+O\+U\+N\+D\+\_\+\+C2@{S\+O\+U\+N\+D\+\_\+\+C2}!sound.\+h@{sound.\+h}}
+\paragraph[{S\+O\+U\+N\+D\+\_\+\+C2}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+O\+U\+N\+D\+\_\+\+C2~64}\label{sound_8h_a041d01c58025c9f74835d33da716e51d_a041d01c58025c9f74835d33da716e51d}
+
+
+オクターブ2 ド 
+
+
+
+ sound.\+h の 88 行目に定義があります。
+
+\index{sound.\+h@{sound.\+h}!S\+O\+U\+N\+D\+\_\+\+Cb2@{S\+O\+U\+N\+D\+\_\+\+Cb2}}
+\index{S\+O\+U\+N\+D\+\_\+\+Cb2@{S\+O\+U\+N\+D\+\_\+\+Cb2}!sound.\+h@{sound.\+h}}
+\paragraph[{S\+O\+U\+N\+D\+\_\+\+Cb2}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+O\+U\+N\+D\+\_\+\+Cb2~60}\label{sound_8h_a2ea86474bf4acd9fa0b6cc36610a54db_a2ea86474bf4acd9fa0b6cc36610a54db}
+
+
+オクターブ2 ド\# 
+
+
+
+ sound.\+h の 90 行目に定義があります。
+
+\index{sound.\+h@{sound.\+h}!S\+O\+U\+N\+D\+\_\+\+D2@{S\+O\+U\+N\+D\+\_\+\+D2}}
+\index{S\+O\+U\+N\+D\+\_\+\+D2@{S\+O\+U\+N\+D\+\_\+\+D2}!sound.\+h@{sound.\+h}}
+\paragraph[{S\+O\+U\+N\+D\+\_\+\+D2}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+O\+U\+N\+D\+\_\+\+D2~57}\label{sound_8h_a24efb33152ca6f7c832a646cefc86f32_a24efb33152ca6f7c832a646cefc86f32}
+
+
+オクターブ2 レ 
+
+
+
+ sound.\+h の 92 行目に定義があります。
+
+\index{sound.\+h@{sound.\+h}!S\+O\+U\+N\+D\+\_\+\+Db2@{S\+O\+U\+N\+D\+\_\+\+Db2}}
+\index{S\+O\+U\+N\+D\+\_\+\+Db2@{S\+O\+U\+N\+D\+\_\+\+Db2}!sound.\+h@{sound.\+h}}
+\paragraph[{S\+O\+U\+N\+D\+\_\+\+Db2}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+O\+U\+N\+D\+\_\+\+Db2~54}\label{sound_8h_a7d2839cfd7ade12ff92a685da8405db3_a7d2839cfd7ade12ff92a685da8405db3}
+
+
+オクターブ2 レ\# 
+
+
+
+ sound.\+h の 94 行目に定義があります。
+
+\index{sound.\+h@{sound.\+h}!S\+O\+U\+N\+D\+\_\+\+E2@{S\+O\+U\+N\+D\+\_\+\+E2}}
+\index{S\+O\+U\+N\+D\+\_\+\+E2@{S\+O\+U\+N\+D\+\_\+\+E2}!sound.\+h@{sound.\+h}}
+\paragraph[{S\+O\+U\+N\+D\+\_\+\+E2}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+O\+U\+N\+D\+\_\+\+E2~51}\label{sound_8h_a52d7912c62673a809f44656740543ba5_a52d7912c62673a809f44656740543ba5}
+
+
+オクターブ2 ミ 
+
+
+
+ sound.\+h の 96 行目に定義があります。
+
+\index{sound.\+h@{sound.\+h}!S\+O\+U\+N\+D\+\_\+\+F2@{S\+O\+U\+N\+D\+\_\+\+F2}}
+\index{S\+O\+U\+N\+D\+\_\+\+F2@{S\+O\+U\+N\+D\+\_\+\+F2}!sound.\+h@{sound.\+h}}
+\paragraph[{S\+O\+U\+N\+D\+\_\+\+F2}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+O\+U\+N\+D\+\_\+\+F2~48}\label{sound_8h_a5efc510793cd609c997915070db58dd0_a5efc510793cd609c997915070db58dd0}
+
+
+オクターブ2 ファ 
+
+
+
+ sound.\+h の 98 行目に定義があります。
+
+\index{sound.\+h@{sound.\+h}!S\+O\+U\+N\+D\+\_\+\+Fb2@{S\+O\+U\+N\+D\+\_\+\+Fb2}}
+\index{S\+O\+U\+N\+D\+\_\+\+Fb2@{S\+O\+U\+N\+D\+\_\+\+Fb2}!sound.\+h@{sound.\+h}}
+\paragraph[{S\+O\+U\+N\+D\+\_\+\+Fb2}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+O\+U\+N\+D\+\_\+\+Fb2~45}\label{sound_8h_a1aa4dea5958d3b0a7c9ff406073fdd37_a1aa4dea5958d3b0a7c9ff406073fdd37}
+
+
+オクターブ2 ファ\# 
+
+
+
+ sound.\+h の 100 行目に定義があります。
+
+\index{sound.\+h@{sound.\+h}!S\+O\+U\+N\+D\+\_\+\+G2@{S\+O\+U\+N\+D\+\_\+\+G2}}
+\index{S\+O\+U\+N\+D\+\_\+\+G2@{S\+O\+U\+N\+D\+\_\+\+G2}!sound.\+h@{sound.\+h}}
+\paragraph[{S\+O\+U\+N\+D\+\_\+\+G2}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+O\+U\+N\+D\+\_\+\+G2~43}\label{sound_8h_add206c6691e048cc1ce70f995384dbb8_add206c6691e048cc1ce70f995384dbb8}
+
+
+オクターブ2 ソ 
+
+
+
+ sound.\+h の 102 行目に定義があります。
+
+\index{sound.\+h@{sound.\+h}!S\+O\+U\+N\+D\+\_\+\+Gb2@{S\+O\+U\+N\+D\+\_\+\+Gb2}}
+\index{S\+O\+U\+N\+D\+\_\+\+Gb2@{S\+O\+U\+N\+D\+\_\+\+Gb2}!sound.\+h@{sound.\+h}}
+\paragraph[{S\+O\+U\+N\+D\+\_\+\+Gb2}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+O\+U\+N\+D\+\_\+\+Gb2~40}\label{sound_8h_a73fd8b78bb50cd9cdbd8a1c09400262d_a73fd8b78bb50cd9cdbd8a1c09400262d}
+
+
+オクターブ2 ソ\# 
+
+
+
+ sound.\+h の 104 行目に定義があります。
+
+\index{sound.\+h@{sound.\+h}!S\+O\+U\+N\+D\+\_\+\+A2@{S\+O\+U\+N\+D\+\_\+\+A2}}
+\index{S\+O\+U\+N\+D\+\_\+\+A2@{S\+O\+U\+N\+D\+\_\+\+A2}!sound.\+h@{sound.\+h}}
+\paragraph[{S\+O\+U\+N\+D\+\_\+\+A2}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+O\+U\+N\+D\+\_\+\+A2~38}\label{sound_8h_a87cc8e430711a16f8d53adec0fc30863_a87cc8e430711a16f8d53adec0fc30863}
+
+
+オクターブ2 ラ 
+
+
+
+ sound.\+h の 106 行目に定義があります。
+
+\index{sound.\+h@{sound.\+h}!S\+O\+U\+N\+D\+\_\+\+Ab2@{S\+O\+U\+N\+D\+\_\+\+Ab2}}
+\index{S\+O\+U\+N\+D\+\_\+\+Ab2@{S\+O\+U\+N\+D\+\_\+\+Ab2}!sound.\+h@{sound.\+h}}
+\paragraph[{S\+O\+U\+N\+D\+\_\+\+Ab2}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+O\+U\+N\+D\+\_\+\+Ab2~36}\label{sound_8h_aa355b76cc29205f9fdd6edd04802baa1_aa355b76cc29205f9fdd6edd04802baa1}
+
+
+オクターブ2 ラ\# 
+
+
+
+ sound.\+h の 108 行目に定義があります。
+
+\index{sound.\+h@{sound.\+h}!S\+O\+U\+N\+D\+\_\+\+H2@{S\+O\+U\+N\+D\+\_\+\+H2}}
+\index{S\+O\+U\+N\+D\+\_\+\+H2@{S\+O\+U\+N\+D\+\_\+\+H2}!sound.\+h@{sound.\+h}}
+\paragraph[{S\+O\+U\+N\+D\+\_\+\+H2}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+O\+U\+N\+D\+\_\+\+H2~34}\label{sound_8h_a8aeeeb1a420c4f8b23fe5c7960045a06_a8aeeeb1a420c4f8b23fe5c7960045a06}
+
+
+オクターブ2 シ 
+
+
+
+ sound.\+h の 110 行目に定義があります。
+
+\index{sound.\+h@{sound.\+h}!S\+O\+U\+N\+D\+\_\+\+C3@{S\+O\+U\+N\+D\+\_\+\+C3}}
+\index{S\+O\+U\+N\+D\+\_\+\+C3@{S\+O\+U\+N\+D\+\_\+\+C3}!sound.\+h@{sound.\+h}}
+\paragraph[{S\+O\+U\+N\+D\+\_\+\+C3}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+O\+U\+N\+D\+\_\+\+C3~32}\label{sound_8h_a6cb42a0945d4a26b716ea357b265a8e4_a6cb42a0945d4a26b716ea357b265a8e4}
+
+
+オクターブ3 ド 
+
+
+
+ sound.\+h の 112 行目に定義があります。
+
+\index{sound.\+h@{sound.\+h}!S\+O\+U\+N\+D\+\_\+\+Cb3@{S\+O\+U\+N\+D\+\_\+\+Cb3}}
+\index{S\+O\+U\+N\+D\+\_\+\+Cb3@{S\+O\+U\+N\+D\+\_\+\+Cb3}!sound.\+h@{sound.\+h}}
+\paragraph[{S\+O\+U\+N\+D\+\_\+\+Cb3}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+O\+U\+N\+D\+\_\+\+Cb3~30}\label{sound_8h_a3fbca825ab7829e2da07997cfb7be2b5_a3fbca825ab7829e2da07997cfb7be2b5}
+
+
+オクターブ3 ド\# 
+
+
+
+ sound.\+h の 114 行目に定義があります。
+
+\index{sound.\+h@{sound.\+h}!S\+O\+U\+N\+D\+\_\+\+D3@{S\+O\+U\+N\+D\+\_\+\+D3}}
+\index{S\+O\+U\+N\+D\+\_\+\+D3@{S\+O\+U\+N\+D\+\_\+\+D3}!sound.\+h@{sound.\+h}}
+\paragraph[{S\+O\+U\+N\+D\+\_\+\+D3}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+O\+U\+N\+D\+\_\+\+D3~29}\label{sound_8h_ab0ffa43b4f3def70d822938a28983c90_ab0ffa43b4f3def70d822938a28983c90}
+
+
+オクターブ3 レ 
+
+
+
+ sound.\+h の 116 行目に定義があります。
+
+\index{sound.\+h@{sound.\+h}!S\+O\+U\+N\+D\+\_\+\+Db3@{S\+O\+U\+N\+D\+\_\+\+Db3}}
+\index{S\+O\+U\+N\+D\+\_\+\+Db3@{S\+O\+U\+N\+D\+\_\+\+Db3}!sound.\+h@{sound.\+h}}
+\paragraph[{S\+O\+U\+N\+D\+\_\+\+Db3}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+O\+U\+N\+D\+\_\+\+Db3~27}\label{sound_8h_a1cfd87bf68ec505eec2f20f710ce0189_a1cfd87bf68ec505eec2f20f710ce0189}
+
+
+オクターブ3 レ\# 
+
+
+
+ sound.\+h の 118 行目に定義があります。
+
+\index{sound.\+h@{sound.\+h}!S\+O\+U\+N\+D\+\_\+\+E3@{S\+O\+U\+N\+D\+\_\+\+E3}}
+\index{S\+O\+U\+N\+D\+\_\+\+E3@{S\+O\+U\+N\+D\+\_\+\+E3}!sound.\+h@{sound.\+h}}
+\paragraph[{S\+O\+U\+N\+D\+\_\+\+E3}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+O\+U\+N\+D\+\_\+\+E3~25}\label{sound_8h_a7c3d885a2a78b0ac306c3d275233e037_a7c3d885a2a78b0ac306c3d275233e037}
+
+
+オクターブ3 ミ 
+
+
+
+ sound.\+h の 120 行目に定義があります。
+
+\index{sound.\+h@{sound.\+h}!S\+O\+U\+N\+D\+\_\+\+F3@{S\+O\+U\+N\+D\+\_\+\+F3}}
+\index{S\+O\+U\+N\+D\+\_\+\+F3@{S\+O\+U\+N\+D\+\_\+\+F3}!sound.\+h@{sound.\+h}}
+\paragraph[{S\+O\+U\+N\+D\+\_\+\+F3}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+O\+U\+N\+D\+\_\+\+F3~24}\label{sound_8h_aee1dad36946f9a025e2067788b62e575_aee1dad36946f9a025e2067788b62e575}
+
+
+オクターブ3 ファ 
+
+
+
+ sound.\+h の 122 行目に定義があります。
+
+\index{sound.\+h@{sound.\+h}!S\+O\+U\+N\+D\+\_\+\+Fb3@{S\+O\+U\+N\+D\+\_\+\+Fb3}}
+\index{S\+O\+U\+N\+D\+\_\+\+Fb3@{S\+O\+U\+N\+D\+\_\+\+Fb3}!sound.\+h@{sound.\+h}}
+\paragraph[{S\+O\+U\+N\+D\+\_\+\+Fb3}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+O\+U\+N\+D\+\_\+\+Fb3~23}\label{sound_8h_a4502a83bac176348b5c7b0677341fc26_a4502a83bac176348b5c7b0677341fc26}
+
+
+オクターブ3 ファ\# 
+
+
+
+ sound.\+h の 124 行目に定義があります。
+
+\index{sound.\+h@{sound.\+h}!S\+O\+U\+N\+D\+\_\+\+G3@{S\+O\+U\+N\+D\+\_\+\+G3}}
+\index{S\+O\+U\+N\+D\+\_\+\+G3@{S\+O\+U\+N\+D\+\_\+\+G3}!sound.\+h@{sound.\+h}}
+\paragraph[{S\+O\+U\+N\+D\+\_\+\+G3}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+O\+U\+N\+D\+\_\+\+G3~21}\label{sound_8h_a3dc460e8030ea66b5b0af7074f32b3ac_a3dc460e8030ea66b5b0af7074f32b3ac}
+
+
+オクターブ3 ソ 
+
+
+
+ sound.\+h の 126 行目に定義があります。
+
+\index{sound.\+h@{sound.\+h}!S\+O\+U\+N\+D\+\_\+\+Gb3@{S\+O\+U\+N\+D\+\_\+\+Gb3}}
+\index{S\+O\+U\+N\+D\+\_\+\+Gb3@{S\+O\+U\+N\+D\+\_\+\+Gb3}!sound.\+h@{sound.\+h}}
+\paragraph[{S\+O\+U\+N\+D\+\_\+\+Gb3}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+O\+U\+N\+D\+\_\+\+Gb3~20}\label{sound_8h_a154622a25029a712f113945150b1325b_a154622a25029a712f113945150b1325b}
+
+
+オクターブ3 ソ\# 
+
+
+
+ sound.\+h の 128 行目に定義があります。
+
+\index{sound.\+h@{sound.\+h}!S\+O\+U\+N\+D\+\_\+\+A3@{S\+O\+U\+N\+D\+\_\+\+A3}}
+\index{S\+O\+U\+N\+D\+\_\+\+A3@{S\+O\+U\+N\+D\+\_\+\+A3}!sound.\+h@{sound.\+h}}
+\paragraph[{S\+O\+U\+N\+D\+\_\+\+A3}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+O\+U\+N\+D\+\_\+\+A3~19}\label{sound_8h_a9f45e8626868aaf3fe91e01a56686ecd_a9f45e8626868aaf3fe91e01a56686ecd}
+
+
+オクターブ3 ラ 
+
+
+
+ sound.\+h の 130 行目に定義があります。
+
+\index{sound.\+h@{sound.\+h}!S\+O\+U\+N\+D\+\_\+\+Ab3@{S\+O\+U\+N\+D\+\_\+\+Ab3}}
+\index{S\+O\+U\+N\+D\+\_\+\+Ab3@{S\+O\+U\+N\+D\+\_\+\+Ab3}!sound.\+h@{sound.\+h}}
+\paragraph[{S\+O\+U\+N\+D\+\_\+\+Ab3}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+O\+U\+N\+D\+\_\+\+Ab3~18}\label{sound_8h_a41403a0a136d706e529e4017966e1a10_a41403a0a136d706e529e4017966e1a10}
+
+
+オクターブ3 ラ\# 
+
+
+
+ sound.\+h の 132 行目に定義があります。
+
+\index{sound.\+h@{sound.\+h}!S\+O\+U\+N\+D\+\_\+\+H3@{S\+O\+U\+N\+D\+\_\+\+H3}}
+\index{S\+O\+U\+N\+D\+\_\+\+H3@{S\+O\+U\+N\+D\+\_\+\+H3}!sound.\+h@{sound.\+h}}
+\paragraph[{S\+O\+U\+N\+D\+\_\+\+H3}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+O\+U\+N\+D\+\_\+\+H3~17}\label{sound_8h_a931824d8aaced5b4db469aa58517d993_a931824d8aaced5b4db469aa58517d993}
+
+
+オクターブ3 シ 
+
+
+
+ sound.\+h の 134 行目に定義があります。
+
+
+
+\subsubsection{型定義詳解}
+\index{sound.\+h@{sound.\+h}!S\+O\+U\+N\+D\+\_\+\+Api@{S\+O\+U\+N\+D\+\_\+\+Api}}
+\index{S\+O\+U\+N\+D\+\_\+\+Api@{S\+O\+U\+N\+D\+\_\+\+Api}!sound.\+h@{sound.\+h}}
+\paragraph[{S\+O\+U\+N\+D\+\_\+\+Api}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf \+\_\+\+B\+O\+O\+L}($\ast$ S\+O\+U\+N\+D\+\_\+\+Api) ()}\label{sound_8h_a25ea542ecfc47a97aed27c42ee791f3f_a25ea542ecfc47a97aed27c42ee791f3f}
+
+
+再生操作リクエスト\+A\+P\+Iの型 
+
+
+
+ sound.\+h の 182 行目に定義があります。
+
+
+
+\subsubsection{列挙型詳解}
+\index{sound.\+h@{sound.\+h}!S\+O\+U\+N\+D\+\_\+\+State@{S\+O\+U\+N\+D\+\_\+\+State}}
+\index{S\+O\+U\+N\+D\+\_\+\+State@{S\+O\+U\+N\+D\+\_\+\+State}!sound.\+h@{sound.\+h}}
+\paragraph[{S\+O\+U\+N\+D\+\_\+\+State}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf S\+O\+U\+N\+D\+\_\+\+State}}\label{sound_8h_abb21e5244ee60939e8a32ec932e9d7b3_abb21e5244ee60939e8a32ec932e9d7b3}
+
+
+再生状態リテラル型 
+
+\begin{Desc}
+\item[列挙値]\par
+\begin{description}
+\index{S\+O\+U\+N\+D\+\_\+\+S\+T\+\_\+\+S\+T\+O\+P@{S\+O\+U\+N\+D\+\_\+\+S\+T\+\_\+\+S\+T\+O\+P}!sound.\+h@{sound.\+h}}\index{sound.\+h@{sound.\+h}!S\+O\+U\+N\+D\+\_\+\+S\+T\+\_\+\+S\+T\+O\+P@{S\+O\+U\+N\+D\+\_\+\+S\+T\+\_\+\+S\+T\+O\+P}}\item[{\em 
+S\+O\+U\+N\+D\+\_\+\+S\+T\+\_\+\+S\+T\+O\+P\label{sound_8h_abb21e5244ee60939e8a32ec932e9d7b3_abb21e5244ee60939e8a32ec932e9d7b3ad0949bdef5777ac0e886e8b7a3ac9e93}
+}]\index{S\+O\+U\+N\+D\+\_\+\+S\+T\+\_\+\+P\+L\+A\+Y@{S\+O\+U\+N\+D\+\_\+\+S\+T\+\_\+\+P\+L\+A\+Y}!sound.\+h@{sound.\+h}}\index{sound.\+h@{sound.\+h}!S\+O\+U\+N\+D\+\_\+\+S\+T\+\_\+\+P\+L\+A\+Y@{S\+O\+U\+N\+D\+\_\+\+S\+T\+\_\+\+P\+L\+A\+Y}}\item[{\em 
+S\+O\+U\+N\+D\+\_\+\+S\+T\+\_\+\+P\+L\+A\+Y\label{sound_8h_abb21e5244ee60939e8a32ec932e9d7b3_abb21e5244ee60939e8a32ec932e9d7b3a69af3ab302bcb6f9e2dabc363ea2f322}
+}]\index{S\+O\+U\+N\+D\+\_\+\+S\+T\+\_\+\+R\+E\+V\+E\+R\+S\+E@{S\+O\+U\+N\+D\+\_\+\+S\+T\+\_\+\+R\+E\+V\+E\+R\+S\+E}!sound.\+h@{sound.\+h}}\index{sound.\+h@{sound.\+h}!S\+O\+U\+N\+D\+\_\+\+S\+T\+\_\+\+R\+E\+V\+E\+R\+S\+E@{S\+O\+U\+N\+D\+\_\+\+S\+T\+\_\+\+R\+E\+V\+E\+R\+S\+E}}\item[{\em 
+S\+O\+U\+N\+D\+\_\+\+S\+T\+\_\+\+R\+E\+V\+E\+R\+S\+E\label{sound_8h_abb21e5244ee60939e8a32ec932e9d7b3_abb21e5244ee60939e8a32ec932e9d7b3a8ce8853fb3709716f052d68eb827c92f}
+}]\index{S\+O\+U\+N\+D\+\_\+\+N\+U\+M\+\_\+\+O\+F\+\_\+\+S\+T\+A\+T\+E@{S\+O\+U\+N\+D\+\_\+\+N\+U\+M\+\_\+\+O\+F\+\_\+\+S\+T\+A\+T\+E}!sound.\+h@{sound.\+h}}\index{sound.\+h@{sound.\+h}!S\+O\+U\+N\+D\+\_\+\+N\+U\+M\+\_\+\+O\+F\+\_\+\+S\+T\+A\+T\+E@{S\+O\+U\+N\+D\+\_\+\+N\+U\+M\+\_\+\+O\+F\+\_\+\+S\+T\+A\+T\+E}}\item[{\em 
+S\+O\+U\+N\+D\+\_\+\+N\+U\+M\+\_\+\+O\+F\+\_\+\+S\+T\+A\+T\+E\label{sound_8h_abb21e5244ee60939e8a32ec932e9d7b3_abb21e5244ee60939e8a32ec932e9d7b3ac0294a814acb2bcb5d3c4cefef53a22c}
+}]\end{description}
+\end{Desc}
+
+
+ sound.\+h の 140 行目に定義があります。
+
+
+\begin{DoxyCode}
+141 \{
+142     SOUND_ST_STOP = 0,
+143     SOUND_ST_PLAY,
+144     SOUND_ST_REVERSE,
+145 
+146     SOUND_NUM_OF_STATE
+147 \} SOUND_State;
+\end{DoxyCode}
+
+
+\subsubsection{関数詳解}
+\index{sound.\+h@{sound.\+h}!S\+O\+U\+N\+D\+\_\+init@{S\+O\+U\+N\+D\+\_\+init}}
+\index{S\+O\+U\+N\+D\+\_\+init@{S\+O\+U\+N\+D\+\_\+init}!sound.\+h@{sound.\+h}}
+\paragraph[{S\+O\+U\+N\+D\+\_\+init()}]{\setlength{\rightskip}{0pt plus 5cm}void S\+O\+U\+N\+D\+\_\+init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{sound_8h_ad3de2879fde7ab7812201bc42d3d4b8e_ad3de2879fde7ab7812201bc42d3d4b8e}
+
+
+サウンドドライバ初期化 
+
+タイマとポートの初期化を行う。他\+A\+P\+I使用前に必ず実行する。 \index{sound.\+h@{sound.\+h}!S\+O\+U\+N\+D\+\_\+get\+State@{S\+O\+U\+N\+D\+\_\+get\+State}}
+\index{S\+O\+U\+N\+D\+\_\+get\+State@{S\+O\+U\+N\+D\+\_\+get\+State}!sound.\+h@{sound.\+h}}
+\paragraph[{S\+O\+U\+N\+D\+\_\+get\+State()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+O\+U\+N\+D\+\_\+\+State} S\+O\+U\+N\+D\+\_\+get\+State (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{sound_8h_ac4a032d84a215757679f6adca28a1d9b_ac4a032d84a215757679f6adca28a1d9b}
+
+
+現在の再生状態取得 
+
+\begin{DoxyReturn}{戻り値}
+再生状態リテラル 
+\end{DoxyReturn}
+\index{sound.\+h@{sound.\+h}!S\+O\+U\+N\+D\+\_\+set\+Volume@{S\+O\+U\+N\+D\+\_\+set\+Volume}}
+\index{S\+O\+U\+N\+D\+\_\+set\+Volume@{S\+O\+U\+N\+D\+\_\+set\+Volume}!sound.\+h@{sound.\+h}}
+\paragraph[{S\+O\+U\+N\+D\+\_\+set\+Volume(\+\_\+\+U\+B\+Y\+T\+E val)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+O\+U\+N\+D\+\_\+set\+Volume (
+\begin{DoxyParamCaption}
+\item[{{\bf \+\_\+\+U\+B\+Y\+T\+E}}]{val}
+\end{DoxyParamCaption}
+)}\label{sound_8h_adf9ab0e7c0d23c1addb15b92b19cda3a_adf9ab0e7c0d23c1addb15b92b19cda3a}
+
+
+ボリューム設定 
+
+再生音量を設定する。0〜\+S\+O\+U\+N\+D\+\_\+\+M\+A\+X\+\_\+\+V\+O\+L\+U\+M\+E いつでも設定可能。
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\tt in}  & {\em val} & ボリューム値 \\
+\hline
+\end{DoxyParams}
+\index{sound.\+h@{sound.\+h}!S\+O\+U\+N\+D\+\_\+set\+Evlp\+Cycle@{S\+O\+U\+N\+D\+\_\+set\+Evlp\+Cycle}}
+\index{S\+O\+U\+N\+D\+\_\+set\+Evlp\+Cycle@{S\+O\+U\+N\+D\+\_\+set\+Evlp\+Cycle}!sound.\+h@{sound.\+h}}
+\paragraph[{S\+O\+U\+N\+D\+\_\+set\+Evlp\+Cycle(\+\_\+\+U\+W\+O\+R\+D val)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+O\+U\+N\+D\+\_\+set\+Evlp\+Cycle (
+\begin{DoxyParamCaption}
+\item[{{\bf \+\_\+\+U\+W\+O\+R\+D}}]{val}
+\end{DoxyParamCaption}
+)}\label{sound_8h_a0d312ae4bc0fa617113f6b207948b216_a0d312ae4bc0fa617113f6b207948b216}
+
+
+エンベロープ周期設定 
+
+エンベロープをセットする周期を設定する。 この設定値は再生音質とボリューム調節の細かさに影響し、両者はトレードオフの 関係にある。初期値は256。
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\tt in}  & {\em val} & 設定値 \\
+\hline
+\end{DoxyParams}
+\index{sound.\+h@{sound.\+h}!S\+O\+U\+N\+D\+\_\+set\+Tone@{S\+O\+U\+N\+D\+\_\+set\+Tone}}
+\index{S\+O\+U\+N\+D\+\_\+set\+Tone@{S\+O\+U\+N\+D\+\_\+set\+Tone}!sound.\+h@{sound.\+h}}
+\paragraph[{S\+O\+U\+N\+D\+\_\+set\+Tone(\+\_\+\+U\+B\+Y\+T\+E idx, const S\+O\+U\+N\+D\+\_\+\+Tone $\ast$tone)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+O\+U\+N\+D\+\_\+set\+Tone (
+\begin{DoxyParamCaption}
+\item[{{\bf \+\_\+\+U\+B\+Y\+T\+E}}]{idx, }
+\item[{const {\bf S\+O\+U\+N\+D\+\_\+\+Tone} $\ast$}]{tone}
+\end{DoxyParamCaption}
+)}\label{sound_8h_a96d64623d3a9b13dc1946eb89b67e6d4_a96d64623d3a9b13dc1946eb89b67e6d4}
+
+
+音登録 
+
+音を登録する。\+S\+O\+U\+N\+D\+\_\+\+M\+A\+X\+\_\+\+P\+R\+O\+N\+O\+U\+N\+C\+E個のバンクに同時にセットすることができる。 いつでも設定可能。
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\tt in}  & {\em idx} & バンクのインデックス。0〜\+S\+O\+U\+N\+D\+\_\+\+M\+A\+X\+\_\+\+P\+R\+O\+N\+O\+U\+N\+C\+E-\/1 \\
+\hline
+\mbox{\tt in}  & {\em tone} & 設定する\+S\+O\+U\+N\+D\+\_\+\+Toneへのポインタ ~\newline
+無音(\hyperlink{sound_8h_a8135b8035953af27550de75620afe4d5}{S\+O\+U\+N\+D\+\_\+\+Tone\+::freq} == 0)、または\+S\+O\+U\+N\+D\+\_\+\+Tone\+::evlpが\+N\+U\+L\+Lのデータを 登録することはできない。 \\
+\hline
+\end{DoxyParams}
+\index{sound.\+h@{sound.\+h}!S\+O\+U\+N\+D\+\_\+remove\+Tone@{S\+O\+U\+N\+D\+\_\+remove\+Tone}}
+\index{S\+O\+U\+N\+D\+\_\+remove\+Tone@{S\+O\+U\+N\+D\+\_\+remove\+Tone}!sound.\+h@{sound.\+h}}
+\paragraph[{S\+O\+U\+N\+D\+\_\+remove\+Tone(\+\_\+\+U\+B\+Y\+T\+E idx)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+O\+U\+N\+D\+\_\+remove\+Tone (
+\begin{DoxyParamCaption}
+\item[{{\bf \+\_\+\+U\+B\+Y\+T\+E}}]{idx}
+\end{DoxyParamCaption}
+)}\label{sound_8h_a89125a6dfb8c0023aba543f2d0f24a8f_a89125a6dfb8c0023aba543f2d0f24a8f}
+
+
+音削除 
+
+バンクを指定して設定された音を削除する。 いつでも設定可能。
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\tt in}  & {\em idx} & 削除するバンクのインデックス。0〜\+S\+O\+U\+N\+D\+\_\+\+M\+A\+X\+\_\+\+P\+R\+O\+N\+O\+U\+N\+C\+E-\/1 \\
+\hline
+\end{DoxyParams}
+\index{sound.\+h@{sound.\+h}!S\+O\+U\+N\+D\+\_\+play@{S\+O\+U\+N\+D\+\_\+play}}
+\index{S\+O\+U\+N\+D\+\_\+play@{S\+O\+U\+N\+D\+\_\+play}!sound.\+h@{sound.\+h}}
+\paragraph[{S\+O\+U\+N\+D\+\_\+play()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \+\_\+\+B\+O\+O\+L} S\+O\+U\+N\+D\+\_\+play (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{sound_8h_a7ab16e900aec03cfe3707d0f33e5821c_a7ab16e900aec03cfe3707d0f33e5821c}
+
+
+音再生リクエスト 
+
+音の再生。エンベロープは順方向。
+
+
+\begin{DoxyRetVals}{戻り値}
+{\em \+\_\+\+T\+R\+U\+E} & リクエスト受諾 \\
+\hline
+{\em \+\_\+\+F\+A\+L\+S\+E} & リクエスト拒否 \\
+\hline
+\end{DoxyRetVals}
+\index{sound.\+h@{sound.\+h}!S\+O\+U\+N\+D\+\_\+reverse@{S\+O\+U\+N\+D\+\_\+reverse}}
+\index{S\+O\+U\+N\+D\+\_\+reverse@{S\+O\+U\+N\+D\+\_\+reverse}!sound.\+h@{sound.\+h}}
+\paragraph[{S\+O\+U\+N\+D\+\_\+reverse()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \+\_\+\+B\+O\+O\+L} S\+O\+U\+N\+D\+\_\+reverse (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{sound_8h_aafc9cb1cbfabe6eced6a250c99cd1de0_aafc9cb1cbfabe6eced6a250c99cd1de0}
+
+
+音逆再生リクエスト 
+
+音の再生。エンベロープは逆方向。
+
+
+\begin{DoxyRetVals}{戻り値}
+{\em \+\_\+\+T\+R\+U\+E} & リクエスト受諾 \\
+\hline
+{\em \+\_\+\+F\+A\+L\+S\+E} & リクエスト拒否 \\
+\hline
+\end{DoxyRetVals}
+\index{sound.\+h@{sound.\+h}!S\+O\+U\+N\+D\+\_\+stop@{S\+O\+U\+N\+D\+\_\+stop}}
+\index{S\+O\+U\+N\+D\+\_\+stop@{S\+O\+U\+N\+D\+\_\+stop}!sound.\+h@{sound.\+h}}
+\paragraph[{S\+O\+U\+N\+D\+\_\+stop()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \+\_\+\+B\+O\+O\+L} S\+O\+U\+N\+D\+\_\+stop (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{sound_8h_a1504a4f21c440a59edeecd944b01c032_a1504a4f21c440a59edeecd944b01c032}
+
+
+停止リクエスト 
+
+再生中の音を停止させる。
+
+
+\begin{DoxyRetVals}{戻り値}
+{\em \+\_\+\+T\+R\+U\+E} & リクエスト受諾 \\
+\hline
+{\em \+\_\+\+F\+A\+L\+S\+E} & リクエスト拒否 \\
+\hline
+\end{DoxyRetVals}
+\index{sound.\+h@{sound.\+h}!S\+O\+U\+N\+D\+\_\+make\+Pulse@{S\+O\+U\+N\+D\+\_\+make\+Pulse}}
+\index{S\+O\+U\+N\+D\+\_\+make\+Pulse@{S\+O\+U\+N\+D\+\_\+make\+Pulse}!sound.\+h@{sound.\+h}}
+\paragraph[{S\+O\+U\+N\+D\+\_\+make\+Pulse()}]{\setlength{\rightskip}{0pt plus 5cm}void S\+O\+U\+N\+D\+\_\+make\+Pulse (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{sound_8h_a5fc67e86da09d64eef5060e3393395b0_a5fc67e86da09d64eef5060e3393395b0}
+
+
+波形生成 
+
+S\+O\+U\+N\+D\+\_\+pronounceにより解析された音情報により実際に矩形波を生成させる。 Timer\+V割り込みハンドラからこの\+A\+P\+Iを呼ぶ必要がある。割り込みフラグは内部で クリアしている。
+
+\begin{DoxySeeAlso}{参照}
+
+\end{DoxySeeAlso}
+\index{sound.\+h@{sound.\+h}!S\+O\+U\+N\+D\+\_\+pronounce@{S\+O\+U\+N\+D\+\_\+pronounce}}
+\index{S\+O\+U\+N\+D\+\_\+pronounce@{S\+O\+U\+N\+D\+\_\+pronounce}!sound.\+h@{sound.\+h}}
+\paragraph[{S\+O\+U\+N\+D\+\_\+pronounce()}]{\setlength{\rightskip}{0pt plus 5cm}void S\+O\+U\+N\+D\+\_\+pronounce (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{sound_8h_ac55bd0188c9aed90f2f859f1ac03ed61_ac55bd0188c9aed90f2f859f1ac03ed61}
+
+
+音データ発音 
+
+波形生成のためのタイマカウント情報などを設定する。 Timer\+A割り込みハンドラからこの\+A\+P\+Iを呼ぶ必要がある。割り込みフラグはクリア されない。 
+
+\subsubsection{変数詳解}
+\index{sound.\+h@{sound.\+h}!S\+O\+U\+N\+D\+\_\+state\+\_\+handler@{S\+O\+U\+N\+D\+\_\+state\+\_\+handler}}
+\index{S\+O\+U\+N\+D\+\_\+state\+\_\+handler@{S\+O\+U\+N\+D\+\_\+state\+\_\+handler}!sound.\+h@{sound.\+h}}
+\paragraph[{S\+O\+U\+N\+D\+\_\+state\+\_\+handler}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf S\+O\+U\+N\+D\+\_\+\+Api} S\+O\+U\+N\+D\+\_\+state\+\_\+handler\mbox{[}{\bf S\+O\+U\+N\+D\+\_\+\+N\+U\+M\+\_\+\+O\+F\+\_\+\+S\+T\+A\+T\+E}\mbox{]}}\label{sound_8h_acf4c0032eb66261be38af2018b4119d3_acf4c0032eb66261be38af2018b4119d3}
+
+
+状態ハンドラ配列 
+
+この配列に再生状態リテラルをインデックスとして与えれば、リテラルに応じた ハンドラが呼ばれる。
+
+\begin{DoxySeeAlso}{参照}
+\hyperlink{sound_8h_abb21e5244ee60939e8a32ec932e9d7b3_abb21e5244ee60939e8a32ec932e9d7b3}{S\+O\+U\+N\+D\+\_\+\+State} 
+\end{DoxySeeAlso}

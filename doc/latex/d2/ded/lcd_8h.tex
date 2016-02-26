@@ -1,0 +1,326 @@
+\subsection{include/h8sdk/lcd.h ファイル}
+\label{lcd_8h}\index{include/h8sdk/lcd.\+h@{include/h8sdk/lcd.\+h}}
+
+
+L\+C\+Dドライバ  
+
+
+{\ttfamily \#include \char`\"{}stddef.\+h\char`\"{}}\\*
+lcd.\+h の依存先関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=146pt]{d7/d15/lcd_8h__incl}
+\end{center}
+\end{figure}
+\subsubsection*{マクロ定義}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{lcd_8h_adae78cd0d04b19760d362972fe9b89ec_adae78cd0d04b19760d362972fe9b89ec}{L\+C\+D\+\_\+\+M\+A\+X\+\_\+\+C\+O\+L\+S}~16
+\begin{DoxyCompactList}\small\item\em L\+C\+D表示部の列数 \end{DoxyCompactList}\item 
+\#define \hyperlink{lcd_8h_a77ea70242c5ca6ad568f9857d2f19f5d_a77ea70242c5ca6ad568f9857d2f19f5d}{L\+C\+D\+\_\+\+M\+A\+X\+\_\+\+R\+O\+W\+S}~2
+\begin{DoxyCompactList}\small\item\em L\+C\+D表示部の行数 \end{DoxyCompactList}\item 
+\#define \hyperlink{lcd_8h_a5c9aa8fefb9889cd206088bffd11a775_a5c9aa8fefb9889cd206088bffd11a775}{L\+C\+D\+\_\+\+C\+G\+\_\+\+C\+O\+L\+S}~5
+\begin{DoxyCompactList}\small\item\em キャラクタ横ドット数 \end{DoxyCompactList}\item 
+\#define \hyperlink{lcd_8h_a5a12ffc5f6672964c86ad8a5aa29693d_a5a12ffc5f6672964c86ad8a5aa29693d}{L\+C\+D\+\_\+\+C\+G\+\_\+\+R\+O\+W\+S}~8
+\begin{DoxyCompactList}\small\item\em キャラクタ縦ドット数 \end{DoxyCompactList}\item 
+\#define \hyperlink{lcd_8h_a7420f2266a82b786e466b596afc165a5_a7420f2266a82b786e466b596afc165a5}{L\+C\+D\+\_\+\+C\+G\+\_\+\+M\+A\+X\+C\+H\+A\+R}~8
+\begin{DoxyCompactList}\small\item\em 登録可能な最大キャラクタ数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{lcd_8h_a0742e25c23ca1096ceba081b98fd58ba_a0742e25c23ca1096ceba081b98fd58ba}{L\+C\+D\+\_\+init} ()
+\begin{DoxyCompactList}\small\item\em L\+C\+Dデバイス初期化 \end{DoxyCompactList}\item 
+\hyperlink{stddef_8h_aefd1068e35d26c0e7d7079ddf2579174_aefd1068e35d26c0e7d7079ddf2579174}{\+\_\+\+S\+I\+N\+T} \hyperlink{lcd_8h_a3d46ceb22c2384020a98e15f10282b53_a3d46ceb22c2384020a98e15f10282b53}{L\+C\+D\+\_\+puts} (const \hyperlink{stddef_8h_aab65237ca9fbf4192a39cf12dd165942_aab65237ca9fbf4192a39cf12dd165942}{\+\_\+\+S\+B\+Y\+T\+E} $\ast$str)
+\begin{DoxyCompactList}\small\item\em 文字列出力 \end{DoxyCompactList}\item 
+\hyperlink{stddef_8h_aefd1068e35d26c0e7d7079ddf2579174_aefd1068e35d26c0e7d7079ddf2579174}{\+\_\+\+S\+I\+N\+T} \hyperlink{lcd_8h_aa7a8edd7456c3094ba77da7c3314541b_aa7a8edd7456c3094ba77da7c3314541b}{L\+C\+D\+\_\+write} (const \hyperlink{stddef_8h_aac464b47452ce9406f88ef194e2becc1_aac464b47452ce9406f88ef194e2becc1}{\+\_\+\+U\+B\+Y\+T\+E} $\ast$data, \hyperlink{stddef_8h_aefd1068e35d26c0e7d7079ddf2579174_aefd1068e35d26c0e7d7079ddf2579174}{\+\_\+\+S\+I\+N\+T} size)
+\begin{DoxyCompactList}\small\item\em バイトストリーム書き込み \end{DoxyCompactList}\item 
+\hyperlink{stddef_8h_aefd1068e35d26c0e7d7079ddf2579174_aefd1068e35d26c0e7d7079ddf2579174}{\+\_\+\+S\+I\+N\+T} \hyperlink{lcd_8h_a9c4a1acb160debcf4337e1dc195c40dc_a9c4a1acb160debcf4337e1dc195c40dc}{L\+C\+D\+\_\+read} (\hyperlink{stddef_8h_aac464b47452ce9406f88ef194e2becc1_aac464b47452ce9406f88ef194e2becc1}{\+\_\+\+U\+B\+Y\+T\+E} $\ast$buf, \hyperlink{stddef_8h_aefd1068e35d26c0e7d7079ddf2579174_aefd1068e35d26c0e7d7079ddf2579174}{\+\_\+\+S\+I\+N\+T} size)
+\begin{DoxyCompactList}\small\item\em バイトストリーム読み出し \end{DoxyCompactList}\item 
+void \hyperlink{lcd_8h_ad536893174ae082443b87af922b3852c_ad536893174ae082443b87af922b3852c}{L\+C\+D\+\_\+get\+Cursor} (\hyperlink{stddef_8h_aefd1068e35d26c0e7d7079ddf2579174_aefd1068e35d26c0e7d7079ddf2579174}{\+\_\+\+S\+I\+N\+T} $\ast$x, \hyperlink{stddef_8h_aefd1068e35d26c0e7d7079ddf2579174_aefd1068e35d26c0e7d7079ddf2579174}{\+\_\+\+S\+I\+N\+T} $\ast$y)
+\begin{DoxyCompactList}\small\item\em カーソル位置取得 \end{DoxyCompactList}\item 
+void \hyperlink{lcd_8h_a7e25b5084ae09e0b383b1f3b71514ea0_a7e25b5084ae09e0b383b1f3b71514ea0}{L\+C\+D\+\_\+set\+Cursor} (\hyperlink{stddef_8h_aefd1068e35d26c0e7d7079ddf2579174_aefd1068e35d26c0e7d7079ddf2579174}{\+\_\+\+S\+I\+N\+T} x, \hyperlink{stddef_8h_aefd1068e35d26c0e7d7079ddf2579174_aefd1068e35d26c0e7d7079ddf2579174}{\+\_\+\+S\+I\+N\+T} y)
+\begin{DoxyCompactList}\small\item\em カーソル移動 \end{DoxyCompactList}\item 
+void \hyperlink{lcd_8h_ae1ecaa7808dd788d1390286c170db3ea_ae1ecaa7808dd788d1390286c170db3ea}{L\+C\+D\+\_\+crlf} ()
+\begin{DoxyCompactList}\small\item\em 改行出力 \end{DoxyCompactList}\item 
+void \hyperlink{lcd_8h_a1fc9afd300632d22b71c8e366d66df96_a1fc9afd300632d22b71c8e366d66df96}{L\+C\+D\+\_\+cls} ()
+\begin{DoxyCompactList}\small\item\em 領域クリア \end{DoxyCompactList}\item 
+void \hyperlink{lcd_8h_a119366f31c4f931df7a28d7ba1c08f30_a119366f31c4f931df7a28d7ba1c08f30}{L\+C\+D\+\_\+set\+Char} (\hyperlink{stddef_8h_aac464b47452ce9406f88ef194e2becc1_aac464b47452ce9406f88ef194e2becc1}{\+\_\+\+U\+B\+Y\+T\+E} no, const \hyperlink{stddef_8h_aac464b47452ce9406f88ef194e2becc1_aac464b47452ce9406f88ef194e2becc1}{\+\_\+\+U\+B\+Y\+T\+E} $\ast$data)
+\begin{DoxyCompactList}\small\item\em キャラクタ登録 \end{DoxyCompactList}\item 
+void \hyperlink{lcd_8h_a2dc5607450697637cca698b53a40c35b_a2dc5607450697637cca698b53a40c35b}{L\+C\+D\+\_\+set\+Visual} (\hyperlink{stddef_8h_afbf708854fe02af8475a9ba02f3196cb_afbf708854fe02af8475a9ba02f3196cb}{\+\_\+\+B\+O\+O\+L} all, \hyperlink{stddef_8h_afbf708854fe02af8475a9ba02f3196cb_afbf708854fe02af8475a9ba02f3196cb}{\+\_\+\+B\+O\+O\+L} cur, \hyperlink{stddef_8h_afbf708854fe02af8475a9ba02f3196cb_afbf708854fe02af8475a9ba02f3196cb}{\+\_\+\+B\+O\+O\+L} blink)
+\begin{DoxyCompactList}\small\item\em 表示モード変更 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{詳解}
+L\+C\+Dドライバ 
+
+このモジュールは\+L\+C\+Dデバイス\+S\+C1602\+B\+Sへのインタフェースを提供する。
+
+ 
+
+\subsubsection{マクロ定義詳解}
+\index{lcd.\+h@{lcd.\+h}!L\+C\+D\+\_\+\+M\+A\+X\+\_\+\+C\+O\+L\+S@{L\+C\+D\+\_\+\+M\+A\+X\+\_\+\+C\+O\+L\+S}}
+\index{L\+C\+D\+\_\+\+M\+A\+X\+\_\+\+C\+O\+L\+S@{L\+C\+D\+\_\+\+M\+A\+X\+\_\+\+C\+O\+L\+S}!lcd.\+h@{lcd.\+h}}
+\paragraph[{L\+C\+D\+\_\+\+M\+A\+X\+\_\+\+C\+O\+L\+S}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\+C\+D\+\_\+\+M\+A\+X\+\_\+\+C\+O\+L\+S~16}\label{lcd_8h_adae78cd0d04b19760d362972fe9b89ec_adae78cd0d04b19760d362972fe9b89ec}
+
+
+L\+C\+D表示部の列数 
+
+
+
+ lcd.\+h の 29 行目に定義があります。
+
+\index{lcd.\+h@{lcd.\+h}!L\+C\+D\+\_\+\+M\+A\+X\+\_\+\+R\+O\+W\+S@{L\+C\+D\+\_\+\+M\+A\+X\+\_\+\+R\+O\+W\+S}}
+\index{L\+C\+D\+\_\+\+M\+A\+X\+\_\+\+R\+O\+W\+S@{L\+C\+D\+\_\+\+M\+A\+X\+\_\+\+R\+O\+W\+S}!lcd.\+h@{lcd.\+h}}
+\paragraph[{L\+C\+D\+\_\+\+M\+A\+X\+\_\+\+R\+O\+W\+S}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\+C\+D\+\_\+\+M\+A\+X\+\_\+\+R\+O\+W\+S~2}\label{lcd_8h_a77ea70242c5ca6ad568f9857d2f19f5d_a77ea70242c5ca6ad568f9857d2f19f5d}
+
+
+L\+C\+D表示部の行数 
+
+
+
+ lcd.\+h の 34 行目に定義があります。
+
+\index{lcd.\+h@{lcd.\+h}!L\+C\+D\+\_\+\+C\+G\+\_\+\+C\+O\+L\+S@{L\+C\+D\+\_\+\+C\+G\+\_\+\+C\+O\+L\+S}}
+\index{L\+C\+D\+\_\+\+C\+G\+\_\+\+C\+O\+L\+S@{L\+C\+D\+\_\+\+C\+G\+\_\+\+C\+O\+L\+S}!lcd.\+h@{lcd.\+h}}
+\paragraph[{L\+C\+D\+\_\+\+C\+G\+\_\+\+C\+O\+L\+S}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\+C\+D\+\_\+\+C\+G\+\_\+\+C\+O\+L\+S~5}\label{lcd_8h_a5c9aa8fefb9889cd206088bffd11a775_a5c9aa8fefb9889cd206088bffd11a775}
+
+
+キャラクタ横ドット数 
+
+
+
+ lcd.\+h の 39 行目に定義があります。
+
+\index{lcd.\+h@{lcd.\+h}!L\+C\+D\+\_\+\+C\+G\+\_\+\+R\+O\+W\+S@{L\+C\+D\+\_\+\+C\+G\+\_\+\+R\+O\+W\+S}}
+\index{L\+C\+D\+\_\+\+C\+G\+\_\+\+R\+O\+W\+S@{L\+C\+D\+\_\+\+C\+G\+\_\+\+R\+O\+W\+S}!lcd.\+h@{lcd.\+h}}
+\paragraph[{L\+C\+D\+\_\+\+C\+G\+\_\+\+R\+O\+W\+S}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\+C\+D\+\_\+\+C\+G\+\_\+\+R\+O\+W\+S~8}\label{lcd_8h_a5a12ffc5f6672964c86ad8a5aa29693d_a5a12ffc5f6672964c86ad8a5aa29693d}
+
+
+キャラクタ縦ドット数 
+
+
+
+ lcd.\+h の 44 行目に定義があります。
+
+\index{lcd.\+h@{lcd.\+h}!L\+C\+D\+\_\+\+C\+G\+\_\+\+M\+A\+X\+C\+H\+A\+R@{L\+C\+D\+\_\+\+C\+G\+\_\+\+M\+A\+X\+C\+H\+A\+R}}
+\index{L\+C\+D\+\_\+\+C\+G\+\_\+\+M\+A\+X\+C\+H\+A\+R@{L\+C\+D\+\_\+\+C\+G\+\_\+\+M\+A\+X\+C\+H\+A\+R}!lcd.\+h@{lcd.\+h}}
+\paragraph[{L\+C\+D\+\_\+\+C\+G\+\_\+\+M\+A\+X\+C\+H\+A\+R}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\+C\+D\+\_\+\+C\+G\+\_\+\+M\+A\+X\+C\+H\+A\+R~8}\label{lcd_8h_a7420f2266a82b786e466b596afc165a5_a7420f2266a82b786e466b596afc165a5}
+
+
+登録可能な最大キャラクタ数 
+
+
+
+ lcd.\+h の 49 行目に定義があります。
+
+
+
+\subsubsection{関数詳解}
+\index{lcd.\+h@{lcd.\+h}!L\+C\+D\+\_\+init@{L\+C\+D\+\_\+init}}
+\index{L\+C\+D\+\_\+init@{L\+C\+D\+\_\+init}!lcd.\+h@{lcd.\+h}}
+\paragraph[{L\+C\+D\+\_\+init()}]{\setlength{\rightskip}{0pt plus 5cm}void L\+C\+D\+\_\+init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{lcd_8h_a0742e25c23ca1096ceba081b98fd58ba_a0742e25c23ca1096ceba081b98fd58ba}
+
+
+L\+C\+Dデバイス初期化 
+
+デバイスを使用可能にする。全ての\+A\+P\+Iの前にこれを実行しておく。初期設 定値は、~\newline
+\begin{DoxyItemize}
+\item キャラクタ長8ビット \item 表示2桁 \item キャラクタサイズ5x10ドット \item カーソル\+O\+F\+F、ブリンク\+O\+F\+F \item カーソルインクリメントあり、表示シフトなし \end{DoxyItemize}
+\index{lcd.\+h@{lcd.\+h}!L\+C\+D\+\_\+puts@{L\+C\+D\+\_\+puts}}
+\index{L\+C\+D\+\_\+puts@{L\+C\+D\+\_\+puts}!lcd.\+h@{lcd.\+h}}
+\paragraph[{L\+C\+D\+\_\+puts(const \+\_\+\+S\+B\+Y\+T\+E $\ast$str)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \+\_\+\+S\+I\+N\+T} L\+C\+D\+\_\+puts (
+\begin{DoxyParamCaption}
+\item[{const {\bf \+\_\+\+S\+B\+Y\+T\+E} $\ast$}]{str}
+\end{DoxyParamCaption}
+)}\label{lcd_8h_a3d46ceb22c2384020a98e15f10282b53_a3d46ceb22c2384020a98e15f10282b53}
+
+
+文字列出力 
+
+文字列を\+L\+C\+Dに出力する。文字列は\+N\+U\+L終端されていなければならない。 特殊文字は \textquotesingle{}\textbackslash{}n\textquotesingle{} のみ。改行文字と解釈される。
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\tt in}  & {\em str} & 文字配列の先頭へのポインタ\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+出力された文字数
+\end{DoxyReturn}
+\begin{DoxyNote}{覚え書き}
+出力カーソルは表示部の領域をループする。 
+\end{DoxyNote}
+\index{lcd.\+h@{lcd.\+h}!L\+C\+D\+\_\+write@{L\+C\+D\+\_\+write}}
+\index{L\+C\+D\+\_\+write@{L\+C\+D\+\_\+write}!lcd.\+h@{lcd.\+h}}
+\paragraph[{L\+C\+D\+\_\+write(const \+\_\+\+U\+B\+Y\+T\+E $\ast$data, \+\_\+\+S\+I\+N\+T size)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \+\_\+\+S\+I\+N\+T} L\+C\+D\+\_\+write (
+\begin{DoxyParamCaption}
+\item[{const {\bf \+\_\+\+U\+B\+Y\+T\+E} $\ast$}]{data, }
+\item[{{\bf \+\_\+\+S\+I\+N\+T}}]{size}
+\end{DoxyParamCaption}
+)}\label{lcd_8h_aa7a8edd7456c3094ba77da7c3314541b_aa7a8edd7456c3094ba77da7c3314541b}
+
+
+バイトストリーム書き込み 
+
+汎用データ出力。カーソル現在位置から指定サイズ分のバイトデータを\+L\+C\+D に出力する。
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\tt in}  & {\em data} & データの先頭へのポインタ \\
+\hline
+\mbox{\tt in}  & {\em size} & 出力サイズ\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+出力されたバイト数
+\end{DoxyReturn}
+\begin{DoxyNote}{覚え書き}
+カーソルは表示部の領域をループする。 
+\end{DoxyNote}
+\index{lcd.\+h@{lcd.\+h}!L\+C\+D\+\_\+read@{L\+C\+D\+\_\+read}}
+\index{L\+C\+D\+\_\+read@{L\+C\+D\+\_\+read}!lcd.\+h@{lcd.\+h}}
+\paragraph[{L\+C\+D\+\_\+read(\+\_\+\+U\+B\+Y\+T\+E $\ast$buf, \+\_\+\+S\+I\+N\+T size)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \+\_\+\+S\+I\+N\+T} L\+C\+D\+\_\+read (
+\begin{DoxyParamCaption}
+\item[{{\bf \+\_\+\+U\+B\+Y\+T\+E} $\ast$}]{buf, }
+\item[{{\bf \+\_\+\+S\+I\+N\+T}}]{size}
+\end{DoxyParamCaption}
+)}\label{lcd_8h_a9c4a1acb160debcf4337e1dc195c40dc_a9c4a1acb160debcf4337e1dc195c40dc}
+
+
+バイトストリーム読み出し 
+
+汎用データ入力。カーソル現在位置から指定バイト読み出す。
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\tt in}  & {\em buf} & データを格納する領域の先頭へのポインタ \\
+\hline
+\mbox{\tt in}  & {\em size} & 読み出しサイズ\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+読み出されたバイト数
+\end{DoxyReturn}
+\begin{DoxyNote}{覚え書き}
+カーソルは表示部の領域をループする。 
+\end{DoxyNote}
+\index{lcd.\+h@{lcd.\+h}!L\+C\+D\+\_\+get\+Cursor@{L\+C\+D\+\_\+get\+Cursor}}
+\index{L\+C\+D\+\_\+get\+Cursor@{L\+C\+D\+\_\+get\+Cursor}!lcd.\+h@{lcd.\+h}}
+\paragraph[{L\+C\+D\+\_\+get\+Cursor(\+\_\+\+S\+I\+N\+T $\ast$x, \+\_\+\+S\+I\+N\+T $\ast$y)}]{\setlength{\rightskip}{0pt plus 5cm}void L\+C\+D\+\_\+get\+Cursor (
+\begin{DoxyParamCaption}
+\item[{{\bf \+\_\+\+S\+I\+N\+T} $\ast$}]{x, }
+\item[{{\bf \+\_\+\+S\+I\+N\+T} $\ast$}]{y}
+\end{DoxyParamCaption}
+)}\label{lcd_8h_ad536893174ae082443b87af922b3852c_ad536893174ae082443b87af922b3852c}
+
+
+カーソル位置取得 
+
+現在の出力位置を取得する。引数の位置指定は絶対値の 0 origin。原点は 左上隅、右下方向がプラスの領域。
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\tt in}  & {\em x} & 列方向の位置を格納するポインタ \\
+\hline
+\mbox{\tt in}  & {\em y} & 行方向の位置を格納するポインタ \\
+\hline
+\end{DoxyParams}
+\index{lcd.\+h@{lcd.\+h}!L\+C\+D\+\_\+set\+Cursor@{L\+C\+D\+\_\+set\+Cursor}}
+\index{L\+C\+D\+\_\+set\+Cursor@{L\+C\+D\+\_\+set\+Cursor}!lcd.\+h@{lcd.\+h}}
+\paragraph[{L\+C\+D\+\_\+set\+Cursor(\+\_\+\+S\+I\+N\+T x, \+\_\+\+S\+I\+N\+T y)}]{\setlength{\rightskip}{0pt plus 5cm}void L\+C\+D\+\_\+set\+Cursor (
+\begin{DoxyParamCaption}
+\item[{{\bf \+\_\+\+S\+I\+N\+T}}]{x, }
+\item[{{\bf \+\_\+\+S\+I\+N\+T}}]{y}
+\end{DoxyParamCaption}
+)}\label{lcd_8h_a7e25b5084ae09e0b383b1f3b71514ea0_a7e25b5084ae09e0b383b1f3b71514ea0}
+
+
+カーソル移動 
+
+出力位置を移動させる。表示部の範囲でのみ移動可能。引数の位置指定は 絶対値の 0 origin。原点は左上隅、右下方向がプラスの領域。範囲を越え た値指定は無視される。
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\tt in}  & {\em x} & 列方向の位置を指定する \\
+\hline
+\mbox{\tt in}  & {\em y} & 行方向の位置を指定する \\
+\hline
+\end{DoxyParams}
+\index{lcd.\+h@{lcd.\+h}!L\+C\+D\+\_\+crlf@{L\+C\+D\+\_\+crlf}}
+\index{L\+C\+D\+\_\+crlf@{L\+C\+D\+\_\+crlf}!lcd.\+h@{lcd.\+h}}
+\paragraph[{L\+C\+D\+\_\+crlf()}]{\setlength{\rightskip}{0pt plus 5cm}void L\+C\+D\+\_\+crlf (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{lcd_8h_ae1ecaa7808dd788d1390286c170db3ea_ae1ecaa7808dd788d1390286c170db3ea}
+
+
+改行出力 
+
+出力カーソルを一行下の最左列へ移動させる。
+
+\begin{DoxyNote}{覚え書き}
+出力カーソルは表示部の領域をループする。 
+\end{DoxyNote}
+\index{lcd.\+h@{lcd.\+h}!L\+C\+D\+\_\+cls@{L\+C\+D\+\_\+cls}}
+\index{L\+C\+D\+\_\+cls@{L\+C\+D\+\_\+cls}!lcd.\+h@{lcd.\+h}}
+\paragraph[{L\+C\+D\+\_\+cls()}]{\setlength{\rightskip}{0pt plus 5cm}void L\+C\+D\+\_\+cls (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{lcd_8h_a1fc9afd300632d22b71c8e366d66df96_a1fc9afd300632d22b71c8e366d66df96}
+
+
+領域クリア 
+
+L\+C\+Dバッファの内容をクリアする \index{lcd.\+h@{lcd.\+h}!L\+C\+D\+\_\+set\+Char@{L\+C\+D\+\_\+set\+Char}}
+\index{L\+C\+D\+\_\+set\+Char@{L\+C\+D\+\_\+set\+Char}!lcd.\+h@{lcd.\+h}}
+\paragraph[{L\+C\+D\+\_\+set\+Char(\+\_\+\+U\+B\+Y\+T\+E no, const \+\_\+\+U\+B\+Y\+T\+E $\ast$data)}]{\setlength{\rightskip}{0pt plus 5cm}void L\+C\+D\+\_\+set\+Char (
+\begin{DoxyParamCaption}
+\item[{{\bf \+\_\+\+U\+B\+Y\+T\+E}}]{no, }
+\item[{const {\bf \+\_\+\+U\+B\+Y\+T\+E} $\ast$}]{data}
+\end{DoxyParamCaption}
+)}\label{lcd_8h_a119366f31c4f931df7a28d7ba1c08f30_a119366f31c4f931df7a28d7ba1c08f30}
+
+
+キャラクタ登録 
+
+ユーザー作成キャラクタデータを新規に\+L\+C\+Dデバイスへ登録する。 同一ア ドレスで登録済みのキャラクタは上書きされる。
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\tt in}  & {\em no} & 登録アドレス。0〜\+L\+C\+D\+\_\+\+C\+G\+\_\+\+M\+A\+X\+C\+H\+A\+R-\/1 までを指定する \\
+\hline
+\mbox{\tt in}  & {\em data} & 登録キャラクタ配列先頭へのポインタ。\+L\+C\+D\+\_\+\+C\+G\+\_\+\+R\+O\+W\+Sバイ トの配列を\+L\+C\+D\+\_\+\+C\+G\+\_\+\+C\+O\+L\+S x L\+C\+D\+\_\+\+C\+G\+\_\+\+R\+O\+W\+Sのビットパターン行列とみなしたデー タ列を指定する。 \\
+\hline
+\end{DoxyParams}
+\index{lcd.\+h@{lcd.\+h}!L\+C\+D\+\_\+set\+Visual@{L\+C\+D\+\_\+set\+Visual}}
+\index{L\+C\+D\+\_\+set\+Visual@{L\+C\+D\+\_\+set\+Visual}!lcd.\+h@{lcd.\+h}}
+\paragraph[{L\+C\+D\+\_\+set\+Visual(\+\_\+\+B\+O\+O\+L all, \+\_\+\+B\+O\+O\+L cur, \+\_\+\+B\+O\+O\+L blink)}]{\setlength{\rightskip}{0pt plus 5cm}void L\+C\+D\+\_\+set\+Visual (
+\begin{DoxyParamCaption}
+\item[{{\bf \+\_\+\+B\+O\+O\+L}}]{all, }
+\item[{{\bf \+\_\+\+B\+O\+O\+L}}]{cur, }
+\item[{{\bf \+\_\+\+B\+O\+O\+L}}]{blink}
+\end{DoxyParamCaption}
+)}\label{lcd_8h_a2dc5607450697637cca698b53a40c35b_a2dc5607450697637cca698b53a40c35b}
+
+
+表示モード変更 
+
+カーソル、点滅などの表示モードを変更する。初期状態は、表示は\+\_\+\+T\+R\+U\+E、 カーソル、点滅は\+\_\+\+F\+A\+L\+S\+E。
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\tt in}  & {\em all} & 全表示のオン/オフ指定 \\
+\hline
+\mbox{\tt in}  & {\em cur} & カーソルのオン/オフ指定 \\
+\hline
+\mbox{\tt in}  & {\em blink} & カーソル位置のブリンクオン/オフ指定 \\
+\hline
+\end{DoxyParams}

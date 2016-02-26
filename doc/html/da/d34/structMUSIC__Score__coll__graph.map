@@ -1,0 +1,6 @@
+<map id="MUSIC_Score" name="MUSIC_Score">
+<area shape="rect" id="node2" href="$db/d10/music_8h.html#d2/d40/structMUSIC__Part" title="パート定義型 " alt="" coords="389,580,487,657"/>
+<area shape="rect" id="node3" href="$db/d10/music_8h.html#df/dbe/structMUSIC__Note" title="音符定義型 " alt="" coords="388,440,488,517"/>
+<area shape="rect" id="node4" href="$d9/d88/sound_8h.html#d6/d3c/structSOUND__Tone" title="音定義型 " alt="" coords="316,300,424,377"/>
+<area shape="rect" id="node7" href="$d9/d88/sound_8h.html#d0/d92/structSOUND__Envelope" title="エンベロープ定義型 " alt="" coords="154,145,287,223"/>
+</map>

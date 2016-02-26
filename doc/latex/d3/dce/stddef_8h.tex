@@ -1,0 +1,228 @@
+\subsection{include/h8sdk/stddef.h ファイル}
+\label{stddef_8h}\index{include/h8sdk/stddef.\+h@{include/h8sdk/stddef.\+h}}
+
+
+共通型、リテラル定義  
+
+
+被依存関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/dff/stddef_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsubsection*{マクロ定義}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{stddef_8h_afe7ee50840237d09629b5e8d0e5f80f2_afe7ee50840237d09629b5e8d0e5f80f2}{\+\_\+sizeof\+\_\+array}(x)~(sizeof(x)/sizeof(x\mbox{[}0\mbox{]}))
+\begin{DoxyCompactList}\small\item\em 配列の要素数取得 \end{DoxyCompactList}\item 
+\#define \hyperlink{stddef_8h_a8bbac17199ecc3ae9b3e09e3837d119f_a8bbac17199ecc3ae9b3e09e3837d119f}{\+\_\+offsetof}(type,  member)~((\hyperlink{stddef_8h_af4b45f5ec97da370bd2173b4fe891d76_af4b45f5ec97da370bd2173b4fe891d76}{\+\_\+\+U\+W\+O\+R\+D})\&((type$\ast$)0)-\/$>$(member))
+\begin{DoxyCompactList}\small\item\em 構造体メンバの要素へのオフセットを取得 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{型定義}
+\begin{DoxyCompactItemize}
+\item 
+typedef signed char \hyperlink{stddef_8h_aab65237ca9fbf4192a39cf12dd165942_aab65237ca9fbf4192a39cf12dd165942}{\+\_\+\+S\+B\+Y\+T\+E}
+\begin{DoxyCompactList}\small\item\em 符号あり8ビット整数型 \end{DoxyCompactList}\item 
+typedef unsigned char \hyperlink{stddef_8h_aac464b47452ce9406f88ef194e2becc1_aac464b47452ce9406f88ef194e2becc1}{\+\_\+\+U\+B\+Y\+T\+E}
+\begin{DoxyCompactList}\small\item\em 符号なし8ビット整数型 \end{DoxyCompactList}\item 
+typedef signed short \hyperlink{stddef_8h_a2c7cee059ec16036635c7e5500eb5e5d_a2c7cee059ec16036635c7e5500eb5e5d}{\+\_\+\+S\+W\+O\+R\+D}
+\begin{DoxyCompactList}\small\item\em 符号あり16ビット整数型 \end{DoxyCompactList}\item 
+typedef unsigned short \hyperlink{stddef_8h_af4b45f5ec97da370bd2173b4fe891d76_af4b45f5ec97da370bd2173b4fe891d76}{\+\_\+\+U\+W\+O\+R\+D}
+\begin{DoxyCompactList}\small\item\em 符号なし16ビット整数型 \end{DoxyCompactList}\item 
+typedef signed int \hyperlink{stddef_8h_aefd1068e35d26c0e7d7079ddf2579174_aefd1068e35d26c0e7d7079ddf2579174}{\+\_\+\+S\+I\+N\+T}
+\begin{DoxyCompactList}\small\item\em 符号あり16ビット整数型 \end{DoxyCompactList}\item 
+typedef unsigned int \hyperlink{stddef_8h_af1d4b529b856acadd9e1b43f5d794d24_af1d4b529b856acadd9e1b43f5d794d24}{\+\_\+\+U\+I\+N\+T}
+\begin{DoxyCompactList}\small\item\em 符号なし16ビット整数型 \end{DoxyCompactList}\item 
+typedef signed long \hyperlink{stddef_8h_a931e4fd9bf350284fc21e94cd5ee126f_a931e4fd9bf350284fc21e94cd5ee126f}{\+\_\+\+S\+D\+W\+O\+R\+D}
+\begin{DoxyCompactList}\small\item\em 符号あり32ビット整数型 \end{DoxyCompactList}\item 
+typedef unsigned long \hyperlink{stddef_8h_a1fd04328ad1e5a3e83788b99cddc35dd_a1fd04328ad1e5a3e83788b99cddc35dd}{\+\_\+\+U\+D\+W\+O\+R\+D}
+\begin{DoxyCompactList}\small\item\em 符号なし32ビット整数型 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{列挙型}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{stddef_8h_afbf708854fe02af8475a9ba02f3196cb_afbf708854fe02af8475a9ba02f3196cb}{\+\_\+\+B\+O\+O\+L} \{ \\*
+\hyperlink{stddef_8h_afbf708854fe02af8475a9ba02f3196cb_afbf708854fe02af8475a9ba02f3196cbae1655d02c01959d1d8c86857c44ea40d}{\+\_\+\+F\+A\+L\+S\+E} = 0, 
+\\*
+\hyperlink{stddef_8h_afbf708854fe02af8475a9ba02f3196cb_afbf708854fe02af8475a9ba02f3196cbae784f36ee3de121254ae0ce38716c51d}{\+\_\+\+T\+R\+U\+E} = $\sim$\+\_\+\+F\+A\+L\+S\+E
+ \}\begin{DoxyCompactList}\small\item\em ブール型 \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+
+
+\subsubsection{詳解}
+共通型、リテラル定義 
+
+ 
+
+\subsubsection{マクロ定義詳解}
+\index{stddef.\+h@{stddef.\+h}!\+\_\+sizeof\+\_\+array@{\+\_\+sizeof\+\_\+array}}
+\index{\+\_\+sizeof\+\_\+array@{\+\_\+sizeof\+\_\+array}!stddef.\+h@{stddef.\+h}}
+\paragraph[{\+\_\+sizeof\+\_\+array}]{\setlength{\rightskip}{0pt plus 5cm}\#define \+\_\+sizeof\+\_\+array(
+\begin{DoxyParamCaption}
+\item[{}]{x}
+\end{DoxyParamCaption}
+)~(sizeof(x)/sizeof(x\mbox{[}0\mbox{]}))}\label{stddef_8h_afe7ee50840237d09629b5e8d0e5f80f2_afe7ee50840237d09629b5e8d0e5f80f2}
+
+
+配列の要素数取得 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\tt in}  & {\em x} & 取得する配列名\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+配列の要素数 
+\end{DoxyReturn}
+
+
+ stddef.\+h の 84 行目に定義があります。
+
+\index{stddef.\+h@{stddef.\+h}!\+\_\+offsetof@{\+\_\+offsetof}}
+\index{\+\_\+offsetof@{\+\_\+offsetof}!stddef.\+h@{stddef.\+h}}
+\paragraph[{\+\_\+offsetof}]{\setlength{\rightskip}{0pt plus 5cm}\#define \+\_\+offsetof(
+\begin{DoxyParamCaption}
+\item[{}]{type, }
+\item[{}]{member}
+\end{DoxyParamCaption}
+)~(({\bf \+\_\+\+U\+W\+O\+R\+D})\&((type$\ast$)0)-\/$>$(member))}\label{stddef_8h_a8bbac17199ecc3ae9b3e09e3837d119f_a8bbac17199ecc3ae9b3e09e3837d119f}
+
+
+構造体メンバの要素へのオフセットを取得 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\tt in}  & {\em type} & memberの構造体型タイプ \\
+\hline
+\mbox{\tt in}  & {\em member} & オフセットを取得するメンバ名\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+memberまでのオフセット 
+\end{DoxyReturn}
+
+
+ stddef.\+h の 94 行目に定義があります。
+
+
+
+\subsubsection{型定義詳解}
+\index{stddef.\+h@{stddef.\+h}!\+\_\+\+S\+B\+Y\+T\+E@{\+\_\+\+S\+B\+Y\+T\+E}}
+\index{\+\_\+\+S\+B\+Y\+T\+E@{\+\_\+\+S\+B\+Y\+T\+E}!stddef.\+h@{stddef.\+h}}
+\paragraph[{\+\_\+\+S\+B\+Y\+T\+E}]{\setlength{\rightskip}{0pt plus 5cm}typedef signed char {\bf \+\_\+\+S\+B\+Y\+T\+E}}\label{stddef_8h_aab65237ca9fbf4192a39cf12dd165942_aab65237ca9fbf4192a39cf12dd165942}
+
+
+符号あり8ビット整数型 
+
+
+
+ stddef.\+h の 48 行目に定義があります。
+
+\index{stddef.\+h@{stddef.\+h}!\+\_\+\+U\+B\+Y\+T\+E@{\+\_\+\+U\+B\+Y\+T\+E}}
+\index{\+\_\+\+U\+B\+Y\+T\+E@{\+\_\+\+U\+B\+Y\+T\+E}!stddef.\+h@{stddef.\+h}}
+\paragraph[{\+\_\+\+U\+B\+Y\+T\+E}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned char {\bf \+\_\+\+U\+B\+Y\+T\+E}}\label{stddef_8h_aac464b47452ce9406f88ef194e2becc1_aac464b47452ce9406f88ef194e2becc1}
+
+
+符号なし8ビット整数型 
+
+
+
+ stddef.\+h の 50 行目に定義があります。
+
+\index{stddef.\+h@{stddef.\+h}!\+\_\+\+S\+W\+O\+R\+D@{\+\_\+\+S\+W\+O\+R\+D}}
+\index{\+\_\+\+S\+W\+O\+R\+D@{\+\_\+\+S\+W\+O\+R\+D}!stddef.\+h@{stddef.\+h}}
+\paragraph[{\+\_\+\+S\+W\+O\+R\+D}]{\setlength{\rightskip}{0pt plus 5cm}typedef signed short {\bf \+\_\+\+S\+W\+O\+R\+D}}\label{stddef_8h_a2c7cee059ec16036635c7e5500eb5e5d_a2c7cee059ec16036635c7e5500eb5e5d}
+
+
+符号あり16ビット整数型 
+
+
+
+ stddef.\+h の 52 行目に定義があります。
+
+\index{stddef.\+h@{stddef.\+h}!\+\_\+\+U\+W\+O\+R\+D@{\+\_\+\+U\+W\+O\+R\+D}}
+\index{\+\_\+\+U\+W\+O\+R\+D@{\+\_\+\+U\+W\+O\+R\+D}!stddef.\+h@{stddef.\+h}}
+\paragraph[{\+\_\+\+U\+W\+O\+R\+D}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned short {\bf \+\_\+\+U\+W\+O\+R\+D}}\label{stddef_8h_af4b45f5ec97da370bd2173b4fe891d76_af4b45f5ec97da370bd2173b4fe891d76}
+
+
+符号なし16ビット整数型 
+
+
+
+ stddef.\+h の 54 行目に定義があります。
+
+\index{stddef.\+h@{stddef.\+h}!\+\_\+\+S\+I\+N\+T@{\+\_\+\+S\+I\+N\+T}}
+\index{\+\_\+\+S\+I\+N\+T@{\+\_\+\+S\+I\+N\+T}!stddef.\+h@{stddef.\+h}}
+\paragraph[{\+\_\+\+S\+I\+N\+T}]{\setlength{\rightskip}{0pt plus 5cm}typedef signed int {\bf \+\_\+\+S\+I\+N\+T}}\label{stddef_8h_aefd1068e35d26c0e7d7079ddf2579174_aefd1068e35d26c0e7d7079ddf2579174}
+
+
+符号あり16ビット整数型 
+
+
+
+ stddef.\+h の 56 行目に定義があります。
+
+\index{stddef.\+h@{stddef.\+h}!\+\_\+\+U\+I\+N\+T@{\+\_\+\+U\+I\+N\+T}}
+\index{\+\_\+\+U\+I\+N\+T@{\+\_\+\+U\+I\+N\+T}!stddef.\+h@{stddef.\+h}}
+\paragraph[{\+\_\+\+U\+I\+N\+T}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned int {\bf \+\_\+\+U\+I\+N\+T}}\label{stddef_8h_af1d4b529b856acadd9e1b43f5d794d24_af1d4b529b856acadd9e1b43f5d794d24}
+
+
+符号なし16ビット整数型 
+
+
+
+ stddef.\+h の 58 行目に定義があります。
+
+\index{stddef.\+h@{stddef.\+h}!\+\_\+\+S\+D\+W\+O\+R\+D@{\+\_\+\+S\+D\+W\+O\+R\+D}}
+\index{\+\_\+\+S\+D\+W\+O\+R\+D@{\+\_\+\+S\+D\+W\+O\+R\+D}!stddef.\+h@{stddef.\+h}}
+\paragraph[{\+\_\+\+S\+D\+W\+O\+R\+D}]{\setlength{\rightskip}{0pt plus 5cm}typedef signed long {\bf \+\_\+\+S\+D\+W\+O\+R\+D}}\label{stddef_8h_a931e4fd9bf350284fc21e94cd5ee126f_a931e4fd9bf350284fc21e94cd5ee126f}
+
+
+符号あり32ビット整数型 
+
+
+
+ stddef.\+h の 60 行目に定義があります。
+
+\index{stddef.\+h@{stddef.\+h}!\+\_\+\+U\+D\+W\+O\+R\+D@{\+\_\+\+U\+D\+W\+O\+R\+D}}
+\index{\+\_\+\+U\+D\+W\+O\+R\+D@{\+\_\+\+U\+D\+W\+O\+R\+D}!stddef.\+h@{stddef.\+h}}
+\paragraph[{\+\_\+\+U\+D\+W\+O\+R\+D}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned long {\bf \+\_\+\+U\+D\+W\+O\+R\+D}}\label{stddef_8h_a1fd04328ad1e5a3e83788b99cddc35dd_a1fd04328ad1e5a3e83788b99cddc35dd}
+
+
+符号なし32ビット整数型 
+
+
+
+ stddef.\+h の 62 行目に定義があります。
+
+
+
+\subsubsection{列挙型詳解}
+\index{stddef.\+h@{stddef.\+h}!\+\_\+\+B\+O\+O\+L@{\+\_\+\+B\+O\+O\+L}}
+\index{\+\_\+\+B\+O\+O\+L@{\+\_\+\+B\+O\+O\+L}!stddef.\+h@{stddef.\+h}}
+\paragraph[{\+\_\+\+B\+O\+O\+L}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf \+\_\+\+B\+O\+O\+L}}\label{stddef_8h_afbf708854fe02af8475a9ba02f3196cb_afbf708854fe02af8475a9ba02f3196cb}
+
+
+ブール型 
+
+2値判定用ブール型。この型同士での評価以外には使用してはならない。 \begin{Desc}
+\item[列挙値]\par
+\begin{description}
+\index{\+\_\+\+F\+A\+L\+S\+E@{\+\_\+\+F\+A\+L\+S\+E}!stddef.\+h@{stddef.\+h}}\index{stddef.\+h@{stddef.\+h}!\+\_\+\+F\+A\+L\+S\+E@{\+\_\+\+F\+A\+L\+S\+E}}\item[{\em 
+\+\_\+\+F\+A\+L\+S\+E\label{stddef_8h_afbf708854fe02af8475a9ba02f3196cb_afbf708854fe02af8475a9ba02f3196cbae1655d02c01959d1d8c86857c44ea40d}
+}]偽 \index{\+\_\+\+T\+R\+U\+E@{\+\_\+\+T\+R\+U\+E}!stddef.\+h@{stddef.\+h}}\index{stddef.\+h@{stddef.\+h}!\+\_\+\+T\+R\+U\+E@{\+\_\+\+T\+R\+U\+E}}\item[{\em 
+\+\_\+\+T\+R\+U\+E\label{stddef_8h_afbf708854fe02af8475a9ba02f3196cb_afbf708854fe02af8475a9ba02f3196cbae784f36ee3de121254ae0ce38716c51d}
+}]真 \end{description}
+\end{Desc}
+
+
+ stddef.\+h の 69 行目に定義があります。
+
+
+\begin{DoxyCode}
+70 \{
+71     _FALSE = 0,
+73     _TRUE = ~_FALSE
+75 \} _BOOL;
+\end{DoxyCode}

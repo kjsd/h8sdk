@@ -1,0 +1,108 @@
+\subsection{include/h8sdk/string.h ファイル}
+\label{string_8h}\index{include/h8sdk/string.\+h@{include/h8sdk/string.\+h}}
+
+
+文字列操作ユーティリティライブラリ  
+
+
+{\ttfamily \#include \char`\"{}stddef.\+h\char`\"{}}\\*
+string.\+h の依存先関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=157pt]{db/dfb/string_8h__incl}
+\end{center}
+\end{figure}
+\subsubsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{stddef_8h_af4b45f5ec97da370bd2173b4fe891d76_af4b45f5ec97da370bd2173b4fe891d76}{\+\_\+\+U\+W\+O\+R\+D} \hyperlink{string_8h_a801262653a4a3445a4c288d4f3b0e105_a801262653a4a3445a4c288d4f3b0e105}{\+\_\+strlen} (const \hyperlink{stddef_8h_aab65237ca9fbf4192a39cf12dd165942_aab65237ca9fbf4192a39cf12dd165942}{\+\_\+\+S\+B\+Y\+T\+E} $\ast$str)
+\begin{DoxyCompactList}\small\item\em 文字列長取得 \end{DoxyCompactList}\item 
+void $\ast$ \hyperlink{string_8h_a1203f893f8aa984095f33d0f2eabb67a_a1203f893f8aa984095f33d0f2eabb67a}{\+\_\+memcpy} (void $\ast$dst, const void $\ast$src, \hyperlink{stddef_8h_af4b45f5ec97da370bd2173b4fe891d76_af4b45f5ec97da370bd2173b4fe891d76}{\+\_\+\+U\+W\+O\+R\+D} size)
+\begin{DoxyCompactList}\small\item\em メモリ領域コピー \end{DoxyCompactList}\item 
+void $\ast$ \hyperlink{string_8h_a63ec32665e0b5cd38f623c412bd2a23c_a63ec32665e0b5cd38f623c412bd2a23c}{\+\_\+memset} (void $\ast$dst, \hyperlink{stddef_8h_aefd1068e35d26c0e7d7079ddf2579174_aefd1068e35d26c0e7d7079ddf2579174}{\+\_\+\+S\+I\+N\+T} c, \hyperlink{stddef_8h_af4b45f5ec97da370bd2173b4fe891d76_af4b45f5ec97da370bd2173b4fe891d76}{\+\_\+\+U\+W\+O\+R\+D} size)
+\begin{DoxyCompactList}\small\item\em メモリ領域セット \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{詳解}
+文字列操作ユーティリティライブラリ 
+
+ 
+
+\subsubsection{関数詳解}
+\index{string.\+h@{string.\+h}!\+\_\+strlen@{\+\_\+strlen}}
+\index{\+\_\+strlen@{\+\_\+strlen}!string.\+h@{string.\+h}}
+\paragraph[{\+\_\+strlen(const \+\_\+\+S\+B\+Y\+T\+E $\ast$str)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \+\_\+\+U\+W\+O\+R\+D} \+\_\+strlen (
+\begin{DoxyParamCaption}
+\item[{const {\bf \+\_\+\+S\+B\+Y\+T\+E} $\ast$}]{str}
+\end{DoxyParamCaption}
+)}\label{string_8h_a801262653a4a3445a4c288d4f3b0e105_a801262653a4a3445a4c288d4f3b0e105}
+
+
+文字列長取得 
+
+指定文字列先頭から\+N\+U\+L\textquotesingle{}\textbackslash{}0\textquotesingle{}文字までの数を返す。\+N\+U\+Lは含まない。
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\tt in}  & {\em str} & 長さを取得する文字列先頭へのポインタ\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+文字列長 
+\end{DoxyReturn}
+\index{string.\+h@{string.\+h}!\+\_\+memcpy@{\+\_\+memcpy}}
+\index{\+\_\+memcpy@{\+\_\+memcpy}!string.\+h@{string.\+h}}
+\paragraph[{\+\_\+memcpy(void $\ast$dst, const void $\ast$src, \+\_\+\+U\+W\+O\+R\+D size)}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ \+\_\+memcpy (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{dst, }
+\item[{const void $\ast$}]{src, }
+\item[{{\bf \+\_\+\+U\+W\+O\+R\+D}}]{size}
+\end{DoxyParamCaption}
+)}\label{string_8h_a1203f893f8aa984095f33d0f2eabb67a_a1203f893f8aa984095f33d0f2eabb67a}
+
+
+メモリ領域コピー 
+
+メモリ領域を指定バイト分コピーする。領域は重なってはならない。
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\tt in}  & {\em dst} & コピー先へのポインタ \\
+\hline
+\mbox{\tt in}  & {\em src} & コピー元へのポインタ \\
+\hline
+\mbox{\tt in}  & {\em size} & コピーバイト数\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+dstへのポインタ 
+\end{DoxyReturn}
+\index{string.\+h@{string.\+h}!\+\_\+memset@{\+\_\+memset}}
+\index{\+\_\+memset@{\+\_\+memset}!string.\+h@{string.\+h}}
+\paragraph[{\+\_\+memset(void $\ast$dst, \+\_\+\+S\+I\+N\+T c, \+\_\+\+U\+W\+O\+R\+D size)}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ \+\_\+memset (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{dst, }
+\item[{{\bf \+\_\+\+S\+I\+N\+T}}]{c, }
+\item[{{\bf \+\_\+\+U\+W\+O\+R\+D}}]{size}
+\end{DoxyParamCaption}
+)}\label{string_8h_a63ec32665e0b5cd38f623c412bd2a23c_a63ec32665e0b5cd38f623c412bd2a23c}
+
+
+メモリ領域セット 
+
+メモリ領域に指定値をセットする。
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\tt in}  & {\em dst} & セット先へのポインタ \\
+\hline
+\mbox{\tt in}  & {\em c} & セットする値 \\
+\hline
+\mbox{\tt in}  & {\em size} & セットするバイト数\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+dstへのポインタ 
+\end{DoxyReturn}

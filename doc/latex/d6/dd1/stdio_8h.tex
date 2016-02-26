@@ -1,0 +1,115 @@
+\subsection{include/h8sdk/stdio.h ファイル}
+\label{stdio_8h}\index{include/h8sdk/stdio.\+h@{include/h8sdk/stdio.\+h}}
+
+
+I/\+Oユーティリティライブラリ  
+
+
+{\ttfamily \#include \char`\"{}ifstub.\+h\char`\"{}}\\*
+stdio.\+h の依存先関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=154pt]{d6/d0f/stdio_8h__incl}
+\end{center}
+\end{figure}
+\subsubsection*{マクロ定義}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{stdio_8h_a834ddbd1908772c714ef89b4d059cc78_a834ddbd1908772c714ef89b4d059cc78}{\+\_\+dprintf}(x)~(\hyperlink{stdio_8h_a0299be37924541f117e05d8e03637146_a0299be37924541f117e05d8e03637146}{\+\_\+printf} x)
+\begin{DoxyCompactList}\small\item\em デバッグ用文字列出力 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{stdio_8h_a0299be37924541f117e05d8e03637146_a0299be37924541f117e05d8e03637146}{\+\_\+printf} (const \hyperlink{stddef_8h_aab65237ca9fbf4192a39cf12dd165942_aab65237ca9fbf4192a39cf12dd165942}{\+\_\+\+S\+B\+Y\+T\+E} $\ast$format,...)
+\begin{DoxyCompactList}\small\item\em 書式付き文字出力 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{変数}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{ifstub_8h_a2b86f96c002b1ff617cbf71481538340_a2b86f96c002b1ff617cbf71481538340}{I\+F\+S\+T\+U\+B\+\_\+\+Type} \hyperlink{stdio_8h_aea3a442adf177c652a83bfd589f3012b_aea3a442adf177c652a83bfd589f3012b}{\+\_\+\+S\+T\+D\+O\+U\+T}
+\begin{DoxyCompactList}\small\item\em 標準出力ポート。デフォルトはシリアルポート \end{DoxyCompactList}\item 
+\hyperlink{ifstub_8h_a2b86f96c002b1ff617cbf71481538340_a2b86f96c002b1ff617cbf71481538340}{I\+F\+S\+T\+U\+B\+\_\+\+Type} \hyperlink{stdio_8h_ac3754e45e58bc6d5f99bcf60441f37f2_ac3754e45e58bc6d5f99bcf60441f37f2}{\+\_\+\+S\+T\+D\+I\+N}
+\begin{DoxyCompactList}\small\item\em 標準入力ポート。デフォルトはシリアルポート \end{DoxyCompactList}\item 
+\hyperlink{ifstub_8h_a2b86f96c002b1ff617cbf71481538340_a2b86f96c002b1ff617cbf71481538340}{I\+F\+S\+T\+U\+B\+\_\+\+Type} \hyperlink{stdio_8h_af3d47b785340ec12f0e04d6a6c9a751a_af3d47b785340ec12f0e04d6a6c9a751a}{\+\_\+\+S\+T\+D\+E\+R\+R}
+\begin{DoxyCompactList}\small\item\em 標準エラー出力ポート。デフォルトはシリアルポート \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{詳解}
+I/\+Oユーティリティライブラリ 
+
+ 
+
+\subsubsection{マクロ定義詳解}
+\index{stdio.\+h@{stdio.\+h}!\+\_\+dprintf@{\+\_\+dprintf}}
+\index{\+\_\+dprintf@{\+\_\+dprintf}!stdio.\+h@{stdio.\+h}}
+\paragraph[{\+\_\+dprintf}]{\setlength{\rightskip}{0pt plus 5cm}\#define \+\_\+dprintf(
+\begin{DoxyParamCaption}
+\item[{}]{x}
+\end{DoxyParamCaption}
+)~({\bf \+\_\+printf} x)}\label{stdio_8h_a834ddbd1908772c714ef89b4d059cc78_a834ddbd1908772c714ef89b4d059cc78}
+
+
+デバッグ用文字列出力 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\tt in}  & {\em x} & 出力書式とパラメータ。必ず括弧付きで呼び出すこと。~\newline
+e.\+g. \+\_\+dprintf((\char`\"{}aaa = \%d\textbackslash{}n\char`\"{}, aaa)); \\
+\hline
+\end{DoxyParams}
+
+
+ stdio.\+h の 59 行目に定義があります。
+
+
+
+\subsubsection{関数詳解}
+\index{stdio.\+h@{stdio.\+h}!\+\_\+printf@{\+\_\+printf}}
+\index{\+\_\+printf@{\+\_\+printf}!stdio.\+h@{stdio.\+h}}
+\paragraph[{\+\_\+printf(const \+\_\+\+S\+B\+Y\+T\+E $\ast$format,...)}]{\setlength{\rightskip}{0pt plus 5cm}void \+\_\+printf (
+\begin{DoxyParamCaption}
+\item[{const {\bf \+\_\+\+S\+B\+Y\+T\+E} $\ast$}]{format, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}\label{stdio_8h_a0299be37924541f117e05d8e03637146_a0299be37924541f117e05d8e03637146}
+
+
+書式付き文字出力 
+
+指定フォーマットのパターンに従って文字列を 呼び出し前にシリアルドライバモジュールが初期化されている必要がある。
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\tt in}  & {\em format} & 出力書式。使用できる変換形式は \char`\"{}\%d\char`\"{}(符号あり10進 数値), \char`\"{}\%u\char`\"{}(符号なし10進数値), \char`\"{}\%x\char`\"{}(16進数値), \char`\"{}\%o\char`\"{}(8進数値), \char`\"{}\%s\char`\"{}(文字列)のみ。\char`\"{}\%\char`\"{}を出力するときは \char`\"{}\%\%\char`\"{} と記述する。 \\
+\hline
+\mbox{\tt in}  & {\em ...} & 出力パラメータ列\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{参照}
+\hyperlink{sci_8h}{sci.\+h} 
+\end{DoxySeeAlso}
+
+
+\subsubsection{変数詳解}
+\index{stdio.\+h@{stdio.\+h}!\+\_\+\+S\+T\+D\+O\+U\+T@{\+\_\+\+S\+T\+D\+O\+U\+T}}
+\index{\+\_\+\+S\+T\+D\+O\+U\+T@{\+\_\+\+S\+T\+D\+O\+U\+T}!stdio.\+h@{stdio.\+h}}
+\paragraph[{\+\_\+\+S\+T\+D\+O\+U\+T}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+F\+S\+T\+U\+B\+\_\+\+Type} \+\_\+\+S\+T\+D\+O\+U\+T}\label{stdio_8h_aea3a442adf177c652a83bfd589f3012b_aea3a442adf177c652a83bfd589f3012b}
+
+
+標準出力ポート。デフォルトはシリアルポート 
+
+\index{stdio.\+h@{stdio.\+h}!\+\_\+\+S\+T\+D\+I\+N@{\+\_\+\+S\+T\+D\+I\+N}}
+\index{\+\_\+\+S\+T\+D\+I\+N@{\+\_\+\+S\+T\+D\+I\+N}!stdio.\+h@{stdio.\+h}}
+\paragraph[{\+\_\+\+S\+T\+D\+I\+N}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+F\+S\+T\+U\+B\+\_\+\+Type} \+\_\+\+S\+T\+D\+I\+N}\label{stdio_8h_ac3754e45e58bc6d5f99bcf60441f37f2_ac3754e45e58bc6d5f99bcf60441f37f2}
+
+
+標準入力ポート。デフォルトはシリアルポート 
+
+\index{stdio.\+h@{stdio.\+h}!\+\_\+\+S\+T\+D\+E\+R\+R@{\+\_\+\+S\+T\+D\+E\+R\+R}}
+\index{\+\_\+\+S\+T\+D\+E\+R\+R@{\+\_\+\+S\+T\+D\+E\+R\+R}!stdio.\+h@{stdio.\+h}}
+\paragraph[{\+\_\+\+S\+T\+D\+E\+R\+R}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+F\+S\+T\+U\+B\+\_\+\+Type} \+\_\+\+S\+T\+D\+E\+R\+R}\label{stdio_8h_af3d47b785340ec12f0e04d6a6c9a751a_af3d47b785340ec12f0e04d6a6c9a751a}
+
+
+標準エラー出力ポート。デフォルトはシリアルポート 
+

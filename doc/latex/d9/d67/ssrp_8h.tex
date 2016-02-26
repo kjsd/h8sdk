@@ -1,0 +1,859 @@
+\subsection{include/h8sdk/ssrp.h ファイル}
+\label{ssrp_8h}\index{include/h8sdk/ssrp.\+h@{include/h8sdk/ssrp.\+h}}
+
+
+S\+S\+R\+P通信プロトコル  
+
+
+{\ttfamily \#include \char`\"{}stddef.\+h\char`\"{}}\\*
+ssrp.\+h の依存先関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=152pt]{d1/de2/ssrp_8h__incl}
+\end{center}
+\end{figure}
+\subsubsection*{クラス}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{ssrp_8h_d2/df5/structSSRP__Header}{S\+S\+R\+P\+\_\+\+Header}
+\begin{DoxyCompactList}\small\item\em S\+S\+R\+Pパケットヘッダ \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{マクロ定義}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{ssrp_8h_af88c2fe13b4e079ac20a99bf959efccc_af88c2fe13b4e079ac20a99bf959efccc}{S\+S\+R\+P\+\_\+\+M\+A\+X\+\_\+\+N\+O\+D\+E}~16
+\begin{DoxyCompactList}\small\item\em 接続ノード最大数 \end{DoxyCompactList}\item 
+\#define \hyperlink{ssrp_8h_a6fd9568ebb3f45fd9b531322c2aa7cfd_a6fd9568ebb3f45fd9b531322c2aa7cfd}{S\+S\+R\+P\+\_\+\+M\+A\+X\+\_\+\+D\+A\+T\+A}~255
+\begin{DoxyCompactList}\small\item\em 最大送受信データサイズ \end{DoxyCompactList}\item 
+\#define \hyperlink{ssrp_8h_ac544437b8b63638505e1bb111063d56a_ac544437b8b63638505e1bb111063d56a}{S\+S\+R\+P\+\_\+\+A\+D\+D\+R\+\_\+\+I\+N\+V\+A\+L\+I\+D}~0
+\begin{DoxyCompactList}\small\item\em 無効なアドレス \end{DoxyCompactList}\item 
+\#define \hyperlink{ssrp_8h_a45cf2a260877004832aef2829f84d90d_a45cf2a260877004832aef2829f84d90d}{S\+S\+R\+P\+\_\+\+A\+D\+D\+R\+\_\+\+B\+R\+O\+A\+D\+C\+A\+S\+T}~0xff
+\begin{DoxyCompactList}\small\item\em ブロードキャストアドレス \end{DoxyCompactList}\item 
+\#define \hyperlink{ssrp_8h_a8ab83c225d7e98ee20fecf775e415082_a8ab83c225d7e98ee20fecf775e415082}{S\+S\+R\+P\+\_\+\+T\+M\+O\+\_\+\+R\+E\+C\+V}~255
+\begin{DoxyCompactList}\small\item\em 受信タイムアウト値 \end{DoxyCompactList}\item 
+\#define \hyperlink{ssrp_8h_a4ebcd371d2939b092bcf3669f8516dbd_a4ebcd371d2939b092bcf3669f8516dbd}{S\+S\+R\+P\+\_\+\+T\+M\+O\+\_\+\+S\+E\+N\+D}~-\/1
+\begin{DoxyCompactList}\small\item\em 送信タイムアウト値 \end{DoxyCompactList}\item 
+\#define \hyperlink{ssrp_8h_aa1031b596776a63602e2df610c63a148_aa1031b596776a63602e2df610c63a148}{S\+S\+R\+P\+\_\+\+C\+M\+D\+\_\+\+L\+O\+O\+P}~0x00
+\begin{DoxyCompactList}\small\item\em L\+O\+O\+Pコマンド値 \end{DoxyCompactList}\item 
+\#define \hyperlink{ssrp_8h_ababd7808112858fa10ac7143a748ea51_ababd7808112858fa10ac7143a748ea51}{S\+S\+R\+P\+\_\+\+C\+M\+D\+\_\+\+J\+O\+I\+N}~0x01
+\begin{DoxyCompactList}\small\item\em J\+O\+I\+Nコマンド値 \end{DoxyCompactList}\item 
+\#define \hyperlink{ssrp_8h_a5a91c530f07fd0d850782c090238634e_a5a91c530f07fd0d850782c090238634e}{S\+S\+R\+P\+\_\+\+C\+M\+D\+\_\+\+L\+E\+A\+V\+E}~0x02
+\begin{DoxyCompactList}\small\item\em L\+E\+A\+V\+Eコマンド値 \end{DoxyCompactList}\item 
+\#define \hyperlink{ssrp_8h_a8effb0515a3a94dc375d8d2f06daf627_a8effb0515a3a94dc375d8d2f06daf627}{S\+S\+R\+P\+\_\+\+V\+A\+L\+\_\+\+P\+R\+E\+A\+M\+B\+L\+E}~0xaa
+\begin{DoxyCompactList}\small\item\em プリアンブル値 \end{DoxyCompactList}\item 
+\#define \hyperlink{ssrp_8h_acb6a8cfed76fc5f18e699e7f476491ea_acb6a8cfed76fc5f18e699e7f476491ea}{S\+S\+R\+P\+\_\+\+P\+A\+C\+K\+E\+T\+\_\+\+S\+P\+C}~(1\+U $<$$<$ 8)
+\begin{DoxyCompactList}\small\item\em 定期処理の送信間隔 \end{DoxyCompactList}\item 
+\#define \hyperlink{ssrp_8h_a76d2edb3e4836c0d2444a1627ea57f1b_a76d2edb3e4836c0d2444a1627ea57f1b}{S\+S\+R\+P\+\_\+\+C\+M\+D\+\_\+\+E\+X}~0x80
+\begin{DoxyCompactList}\small\item\em 外部モジュール用コマンドマスク \end{DoxyCompactList}\item 
+\#define \hyperlink{ssrp_8h_ae0034a89b11e015781cdddd1c8ac788e_ae0034a89b11e015781cdddd1c8ac788e}{S\+S\+R\+P\+\_\+\+C\+M\+D\+\_\+\+I\+N\+V\+A\+L\+I\+D}~0xff
+\begin{DoxyCompactList}\small\item\em 無効なコマンド値 \end{DoxyCompactList}\item 
+\#define \hyperlink{ssrp_8h_a37fa1ba70b1bbcc342ebfc53a71a9fc5_a37fa1ba70b1bbcc342ebfc53a71a9fc5}{S\+S\+R\+P\+\_\+\+F\+L\+G\+\_\+\+E\+V\+T}~0x00
+\begin{DoxyCompactList}\small\item\em イベントフラグ値 \end{DoxyCompactList}\item 
+\#define \hyperlink{ssrp_8h_aee057c24ccb15f205354180ec08aa76c_aee057c24ccb15f205354180ec08aa76c}{S\+S\+R\+P\+\_\+\+F\+L\+G\+\_\+\+R\+E\+Q}~0x01
+\begin{DoxyCompactList}\small\item\em リクエストフラグ値 \end{DoxyCompactList}\item 
+\#define \hyperlink{ssrp_8h_a91a5d266efbbb5610972e92f977b0d7c_a91a5d266efbbb5610972e92f977b0d7c}{S\+S\+R\+P\+\_\+\+F\+L\+G\+\_\+\+R\+E\+S}~0x02
+\begin{DoxyCompactList}\small\item\em リクエストフラグ値 \end{DoxyCompactList}\item 
+\#define \hyperlink{ssrp_8h_a67e77a6c4c2d37ba09c35d52b201b460_a67e77a6c4c2d37ba09c35d52b201b460}{S\+S\+R\+P\+\_\+\+F\+L\+G\+\_\+\+I\+N\+V\+A\+L\+I\+D}~0xff
+\begin{DoxyCompactList}\small\item\em 無効なフラグ値 \end{DoxyCompactList}\item 
+\#define \hyperlink{ssrp_8h_ac33b3f1d187ccea5d71660f018bd26e9_ac33b3f1d187ccea5d71660f018bd26e9}{S\+S\+R\+P\+\_\+\+T\+R\+X\+I\+D\+\_\+\+I\+N\+V\+A\+L\+I\+D}~((1\+U $<$$<$ (sizeof(\+S\+S\+R\+P\+\_\+\+Transaction\+Id) $<$$<$ 3)) -\/ 1)
+\begin{DoxyCompactList}\small\item\em 無効なトランザクション\+I\+D \end{DoxyCompactList}\item 
+\#define \hyperlink{ssrp_8h_ab1086ff0ededa754c44f45661ab7df22_ab1086ff0ededa754c44f45661ab7df22}{S\+S\+R\+P\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+E\+Q}(hp,  com,  flg)                                          ~(((hp)-\/$>$command == (com)) \&\& ((hp)-\/$>$flag ==  (flg)))
+\begin{DoxyCompactList}\small\item\em コマンド/フラグ一致判定 \end{DoxyCompactList}\item 
+\#define \hyperlink{ssrp_8h_a1150c9c53b0bd3f8891bff0e4423881e_a1150c9c53b0bd3f8891bff0e4423881e}{S\+S\+R\+P\+\_\+\+I\+N\+V\+A\+L\+I\+D\+A\+T\+E\+\_\+\+P\+A\+C\+K\+E\+T}(hp)                                                        ~((hp)-\/$>$from = \hyperlink{ssrp_8h_ac544437b8b63638505e1bb111063d56a_ac544437b8b63638505e1bb111063d56a}{S\+S\+R\+P\+\_\+\+A\+D\+D\+R\+\_\+\+I\+N\+V\+A\+L\+I\+D}, (hp)-\/$>$to = \hyperlink{ssrp_8h_ac544437b8b63638505e1bb111063d56a_ac544437b8b63638505e1bb111063d56a}{S\+S\+R\+P\+\_\+\+A\+D\+D\+R\+\_\+\+I\+N\+V\+A\+L\+I\+D})
+\begin{DoxyCompactList}\small\item\em パケット無効化 \end{DoxyCompactList}\item 
+\#define \hyperlink{ssrp_8h_ab301b2d35121633f04aecb9df681a6fd_ab301b2d35121633f04aecb9df681a6fd}{S\+S\+R\+P\+\_\+\+I\+S\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+P\+A\+C\+K\+E\+T}(hp)                                                                        ~(((hp)-\/$>$from == \hyperlink{ssrp_8h_ac544437b8b63638505e1bb111063d56a_ac544437b8b63638505e1bb111063d56a}{S\+S\+R\+P\+\_\+\+A\+D\+D\+R\+\_\+\+I\+N\+V\+A\+L\+I\+D}) $\vert$$\vert$ ((hp)-\/$>$to == \hyperlink{ssrp_8h_ac544437b8b63638505e1bb111063d56a_ac544437b8b63638505e1bb111063d56a}{S\+S\+R\+P\+\_\+\+A\+D\+D\+R\+\_\+\+I\+N\+V\+A\+L\+I\+D}))
+\begin{DoxyCompactList}\small\item\em パケット無効判定 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{型定義}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{stddef_8h_aac464b47452ce9406f88ef194e2becc1_aac464b47452ce9406f88ef194e2becc1}{\+\_\+\+U\+B\+Y\+T\+E} \hyperlink{ssrp_8h_af52db94d5ce59044edabda26c25f92f9_af52db94d5ce59044edabda26c25f92f9}{S\+S\+R\+P\+\_\+\+Address}
+\begin{DoxyCompactList}\small\item\em アドレス型定義 \end{DoxyCompactList}\item 
+typedef \hyperlink{stddef_8h_aac464b47452ce9406f88ef194e2becc1_aac464b47452ce9406f88ef194e2becc1}{\+\_\+\+U\+B\+Y\+T\+E} \hyperlink{ssrp_8h_a90e773bf16f83fcbc70733b85f7ae614_a90e773bf16f83fcbc70733b85f7ae614}{S\+S\+R\+P\+\_\+\+Command}
+\begin{DoxyCompactList}\small\item\em コマンド型定義 \end{DoxyCompactList}\item 
+typedef \hyperlink{stddef_8h_aac464b47452ce9406f88ef194e2becc1_aac464b47452ce9406f88ef194e2becc1}{\+\_\+\+U\+B\+Y\+T\+E} \hyperlink{ssrp_8h_a1f7d2b0dad1935ce49334c86a67d202a_a1f7d2b0dad1935ce49334c86a67d202a}{S\+S\+R\+P\+\_\+\+Flag}
+\begin{DoxyCompactList}\small\item\em フラグ定義型 \end{DoxyCompactList}\item 
+typedef \hyperlink{stddef_8h_af4b45f5ec97da370bd2173b4fe891d76_af4b45f5ec97da370bd2173b4fe891d76}{\+\_\+\+U\+W\+O\+R\+D} \hyperlink{ssrp_8h_a4ffad5beeb1efa21afe8cd4070a9bdf8_a4ffad5beeb1efa21afe8cd4070a9bdf8}{S\+S\+R\+P\+\_\+\+Transaction\+Id}
+\begin{DoxyCompactList}\small\item\em トランザクション\+I\+Dの定義型 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{列挙型}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{ssrp_8h_a97957e4b5b03d11a84ca43c725d2ec75_a97957e4b5b03d11a84ca43c725d2ec75}{S\+S\+R\+P\+\_\+\+Transaction} \{ \\*
+\hyperlink{ssrp_8h_a97957e4b5b03d11a84ca43c725d2ec75_a97957e4b5b03d11a84ca43c725d2ec75a2133aaf05c96ed977f3a38f0e1b8a302}{S\+S\+R\+P\+\_\+\+T\+R\+X\+\_\+\+R\+E\+C\+V} = 0, 
+\\*
+\hyperlink{ssrp_8h_a97957e4b5b03d11a84ca43c725d2ec75_a97957e4b5b03d11a84ca43c725d2ec75a501ebd9cc910ea5cf349e15f7c495404}{S\+S\+R\+P\+\_\+\+T\+R\+X\+\_\+\+S\+E\+N\+D}, 
+\\*
+\hyperlink{ssrp_8h_a97957e4b5b03d11a84ca43c725d2ec75_a97957e4b5b03d11a84ca43c725d2ec75a48806600dd23a30a763927aeba5e6d4e}{S\+S\+R\+P\+\_\+\+N\+U\+M\+\_\+\+O\+F\+\_\+\+T\+R\+X}
+ \}\begin{DoxyCompactList}\small\item\em トランザクションタイプ識別子 \end{DoxyCompactList}
+\item 
+enum \hyperlink{ssrp_8h_a7dcaa29c248300ccd1e2b9932d59041e_a7dcaa29c248300ccd1e2b9932d59041e}{S\+S\+R\+P\+\_\+\+Connection} \{ \\*
+\hyperlink{ssrp_8h_a7dcaa29c248300ccd1e2b9932d59041e_a7dcaa29c248300ccd1e2b9932d59041ea58f77603447cc488475575ecf64d1d9b}{S\+S\+R\+P\+\_\+\+C\+O\+N\+\_\+\+F\+R\+O\+N\+T} = 0, 
+\\*
+\hyperlink{ssrp_8h_a7dcaa29c248300ccd1e2b9932d59041e_a7dcaa29c248300ccd1e2b9932d59041eade4f6d1e95da36f36ef4f294f2aa7292}{S\+S\+R\+P\+\_\+\+C\+O\+N\+\_\+\+B\+A\+C\+K}, 
+\\*
+\hyperlink{ssrp_8h_a7dcaa29c248300ccd1e2b9932d59041e_a7dcaa29c248300ccd1e2b9932d59041ea869b030c78d555aaf4e8c0694abf381b}{S\+S\+R\+P\+\_\+\+N\+U\+M\+\_\+\+O\+F\+\_\+\+C\+O\+N}
+ \}\begin{DoxyCompactList}\small\item\em コネクション種別定義型 \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsubsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{ssrp_8h_ad964f70ed8d9649a41baab0685d06bff_ad964f70ed8d9649a41baab0685d06bff}{S\+S\+R\+P\+\_\+init} (\hyperlink{ssrp_8h_af52db94d5ce59044edabda26c25f92f9_af52db94d5ce59044edabda26c25f92f9}{S\+S\+R\+P\+\_\+\+Address} myaddr)
+\begin{DoxyCompactList}\small\item\em S\+S\+R\+P初期化 \end{DoxyCompactList}\item 
+void \hyperlink{ssrp_8h_a98e54ef5676da8f5590762971431fe63_a98e54ef5676da8f5590762971431fe63}{S\+S\+R\+P\+\_\+start} ()
+\begin{DoxyCompactList}\small\item\em 接続開始 \end{DoxyCompactList}\item 
+void \hyperlink{ssrp_8h_a27cdf3443b5ccc86e5d644b71059a6f5_a27cdf3443b5ccc86e5d644b71059a6f5}{S\+S\+R\+P\+\_\+end} ()
+\begin{DoxyCompactList}\small\item\em 接続終了 \end{DoxyCompactList}\item 
+\hyperlink{stddef_8h_aefd1068e35d26c0e7d7079ddf2579174_aefd1068e35d26c0e7d7079ddf2579174}{\+\_\+\+S\+I\+N\+T} \hyperlink{ssrp_8h_a2f0f6be0666e4a658d60acf37794c464_a2f0f6be0666e4a658d60acf37794c464}{S\+S\+R\+P\+\_\+send} (\hyperlink{ssrp_8h_d2/df5/structSSRP__Header}{S\+S\+R\+P\+\_\+\+Header} $\ast$header, const \hyperlink{stddef_8h_aac464b47452ce9406f88ef194e2becc1_aac464b47452ce9406f88ef194e2becc1}{\+\_\+\+U\+B\+Y\+T\+E} $\ast$data, \hyperlink{stddef_8h_aac464b47452ce9406f88ef194e2becc1_aac464b47452ce9406f88ef194e2becc1}{\+\_\+\+U\+B\+Y\+T\+E} len, \hyperlink{stddef_8h_afbf708854fe02af8475a9ba02f3196cb_afbf708854fe02af8475a9ba02f3196cb}{\+\_\+\+B\+O\+O\+L} sync)
+\begin{DoxyCompactList}\small\item\em 汎用パケット送信 \end{DoxyCompactList}\item 
+\hyperlink{stddef_8h_aefd1068e35d26c0e7d7079ddf2579174_aefd1068e35d26c0e7d7079ddf2579174}{\+\_\+\+S\+I\+N\+T} \hyperlink{ssrp_8h_a04ccac7f6ab40db3f94a87dbdee7c4ba_a04ccac7f6ab40db3f94a87dbdee7c4ba}{S\+S\+R\+P\+\_\+sendto} (\hyperlink{ssrp_8h_af52db94d5ce59044edabda26c25f92f9_af52db94d5ce59044edabda26c25f92f9}{S\+S\+R\+P\+\_\+\+Address} to, \hyperlink{ssrp_8h_a90e773bf16f83fcbc70733b85f7ae614_a90e773bf16f83fcbc70733b85f7ae614}{S\+S\+R\+P\+\_\+\+Command} cmd, \hyperlink{ssrp_8h_a1f7d2b0dad1935ce49334c86a67d202a_a1f7d2b0dad1935ce49334c86a67d202a}{S\+S\+R\+P\+\_\+\+Flag} flg, const \hyperlink{stddef_8h_aac464b47452ce9406f88ef194e2becc1_aac464b47452ce9406f88ef194e2becc1}{\+\_\+\+U\+B\+Y\+T\+E} $\ast$data, \hyperlink{stddef_8h_aac464b47452ce9406f88ef194e2becc1_aac464b47452ce9406f88ef194e2becc1}{\+\_\+\+U\+B\+Y\+T\+E} len, \hyperlink{ssrp_8h_a4ffad5beeb1efa21afe8cd4070a9bdf8_a4ffad5beeb1efa21afe8cd4070a9bdf8}{S\+S\+R\+P\+\_\+\+Transaction\+Id} $\ast$trx\+\_\+id, \hyperlink{stddef_8h_afbf708854fe02af8475a9ba02f3196cb_afbf708854fe02af8475a9ba02f3196cb}{\+\_\+\+B\+O\+O\+L} sync)
+\begin{DoxyCompactList}\small\item\em パケット送信 \end{DoxyCompactList}\item 
+\hyperlink{stddef_8h_aefd1068e35d26c0e7d7079ddf2579174_aefd1068e35d26c0e7d7079ddf2579174}{\+\_\+\+S\+I\+N\+T} \hyperlink{ssrp_8h_a057ba3555e8181a3e871dd68bac779d6_a057ba3555e8181a3e871dd68bac779d6}{S\+S\+R\+P\+\_\+recvfrom} (\hyperlink{ssrp_8h_d2/df5/structSSRP__Header}{S\+S\+R\+P\+\_\+\+Header} $\ast$$\ast$header\+\_\+p, \hyperlink{stddef_8h_aac464b47452ce9406f88ef194e2becc1_aac464b47452ce9406f88ef194e2becc1}{\+\_\+\+U\+B\+Y\+T\+E} $\ast$$\ast$data\+\_\+p)
+\begin{DoxyCompactList}\small\item\em パケット受信 \end{DoxyCompactList}\item 
+void \hyperlink{ssrp_8h_afc3503104a5f854cf94ad33924c6a864_afc3503104a5f854cf94ad33924c6a864}{S\+S\+R\+P\+\_\+shutdown} (\hyperlink{ssrp_8h_a97957e4b5b03d11a84ca43c725d2ec75_a97957e4b5b03d11a84ca43c725d2ec75}{S\+S\+R\+P\+\_\+\+Transaction} tr)
+\begin{DoxyCompactList}\small\item\em 送受信トランザクションをリセット \end{DoxyCompactList}\item 
+\hyperlink{ssrp_8h_af52db94d5ce59044edabda26c25f92f9_af52db94d5ce59044edabda26c25f92f9}{S\+S\+R\+P\+\_\+\+Address} \hyperlink{ssrp_8h_a4d405bb7dc969ef985256e8c8088c7e4_a4d405bb7dc969ef985256e8c8088c7e4}{S\+S\+R\+P\+\_\+get\+Node} (\hyperlink{stddef_8h_aac464b47452ce9406f88ef194e2becc1_aac464b47452ce9406f88ef194e2becc1}{\+\_\+\+U\+B\+Y\+T\+E} idx)
+\begin{DoxyCompactList}\small\item\em ノードアドレス取得 \end{DoxyCompactList}\item 
+\hyperlink{ssrp_8h_af52db94d5ce59044edabda26c25f92f9_af52db94d5ce59044edabda26c25f92f9}{S\+S\+R\+P\+\_\+\+Address} \hyperlink{ssrp_8h_a0b9fca2ed26b4a74b8f69f356677fc84_a0b9fca2ed26b4a74b8f69f356677fc84}{S\+S\+R\+P\+\_\+get\+Pear} (\hyperlink{ssrp_8h_a7dcaa29c248300ccd1e2b9932d59041e_a7dcaa29c248300ccd1e2b9932d59041e}{S\+S\+R\+P\+\_\+\+Connection} con)
+\begin{DoxyCompactList}\small\item\em 接続先ノードアドレス取得 \end{DoxyCompactList}\item 
+\hyperlink{stddef_8h_aac464b47452ce9406f88ef194e2becc1_aac464b47452ce9406f88ef194e2becc1}{\+\_\+\+U\+B\+Y\+T\+E} \hyperlink{ssrp_8h_a9240dde7ea686a06a93a077fbe992d9f_a9240dde7ea686a06a93a077fbe992d9f}{S\+S\+R\+P\+\_\+get\+Total\+Pear} ()
+\begin{DoxyCompactList}\small\item\em ネットワークのノード数を取得する \end{DoxyCompactList}\item 
+\hyperlink{stddef_8h_afbf708854fe02af8475a9ba02f3196cb_afbf708854fe02af8475a9ba02f3196cb}{\+\_\+\+B\+O\+O\+L} \hyperlink{ssrp_8h_a3a7aa1a88902aa601273dc0bffc7ebee_a3a7aa1a88902aa601273dc0bffc7ebee}{S\+S\+R\+P\+\_\+ready} ()
+\begin{DoxyCompactList}\small\item\em 送受信可能状態の判定 \end{DoxyCompactList}\item 
+void \hyperlink{ssrp_8h_ac96d60ff1f8be5a2c06c6a6d076c97bb_ac96d60ff1f8be5a2c06c6a6d076c97bb}{S\+S\+R\+P\+\_\+exec} ()
+\begin{DoxyCompactList}\small\item\em 定期処理の実行 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{変数}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{stddef_8h_aab65237ca9fbf4192a39cf12dd165942_aab65237ca9fbf4192a39cf12dd165942}{\+\_\+\+S\+B\+Y\+T\+E} \hyperlink{ssrp_8h_aa4c37698233390ed91134a95341cb625_aa4c37698233390ed91134a95341cb625}{S\+S\+R\+P\+\_\+my\+\_\+addr} \mbox{[}$\,$\mbox{]}
+\begin{DoxyCompactList}\small\item\em 自ノードアドレス文字列 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{詳解}
+S\+S\+R\+P通信プロトコル 
+
+このモジュールは、一方通行のリング型ネットワーク上での通信プロトコル S\+S\+R\+P(\+Simple Single Ring Protocol)のシンプルな実装パターンである。
+
+\begin{DoxySeeAlso}{参照}
+\hyperlink{ifstub_8h}{ifstub.\+h}
+\end{DoxySeeAlso}
+ 
+
+\subsubsection{クラス詳解}
+\index{S\+S\+R\+P\+\_\+\+Header@{S\+S\+R\+P\+\_\+\+Header}}\label{structSSRP__Header}
+\paragraph{struct S\+S\+R\+P\+\_\+\+Header}
+S\+S\+R\+Pパケットヘッダ 
+
+S\+S\+R\+Pパケットの情報を表すヘッダ。パケットはこのヘッダとデータのペイロード から構成される。ヘッダのチェックサムは毎回\+S\+S\+R\+P内部でチェックされ、不一致 のパケットは受信しても破棄されるが、ペイロード部分の有効性に関しては S\+S\+R\+P内部では関知しない。 
+
+ ssrp.\+h の 185 行目に定義があります。
+
+
+
+S\+S\+R\+P\+\_\+\+Header 連携図
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=296pt]{de/d39/structSSRP__Header__coll__graph}
+\end{center}
+\end{figure}
+\begin{DoxyFields}{クラスメンバ}
+\hyperlink{ssrp_8h_af52db94d5ce59044edabda26c25f92f9_af52db94d5ce59044edabda26c25f92f9}{S\+S\+R\+P\+\_\+\+Address}\label{ssrp_8h_ab6d438068098a3360e18358de2a8f214}
+&
+from&
+送信先アドレス \\
+\hline
+
+\hyperlink{ssrp_8h_af52db94d5ce59044edabda26c25f92f9_af52db94d5ce59044edabda26c25f92f9}{S\+S\+R\+P\+\_\+\+Address}\label{ssrp_8h_ae55a21f95cf8ef17c8577c3b24b2d0ef}
+&
+to&
+送信元アドレス \\
+\hline
+
+\hyperlink{ssrp_8h_a90e773bf16f83fcbc70733b85f7ae614_a90e773bf16f83fcbc70733b85f7ae614}{S\+S\+R\+P\+\_\+\+Command}\label{ssrp_8h_a8d747d8673927a7aa0e2612906d07379}
+&
+command&
+コマンド \\
+\hline
+
+\hyperlink{ssrp_8h_a1f7d2b0dad1935ce49334c86a67d202a_a1f7d2b0dad1935ce49334c86a67d202a}{S\+S\+R\+P\+\_\+\+Flag}\label{ssrp_8h_a23f63d32ab94ce5892b4d130188fc2be}
+&
+flag&
+パケットフラグ \\
+\hline
+
+\hyperlink{stddef_8h_aac464b47452ce9406f88ef194e2becc1_aac464b47452ce9406f88ef194e2becc1}{\+\_\+\+U\+B\+Y\+T\+E}\label{ssrp_8h_ab58e808b1f76daa8a32677ad10cae063}
+&
+hop&
+ホップ数 各ノードによりパケットがリレーされるとこの値がインクリメントされる \\
+\hline
+
+\hyperlink{stddef_8h_aac464b47452ce9406f88ef194e2becc1_aac464b47452ce9406f88ef194e2becc1}{\+\_\+\+U\+B\+Y\+T\+E}\label{ssrp_8h_a3bbf1bebce268c4213b7e38ad393640e}
+&
+data\+\_\+length&
+データペイロード長 \\
+\hline
+
+\hyperlink{ssrp_8h_a4ffad5beeb1efa21afe8cd4070a9bdf8_a4ffad5beeb1efa21afe8cd4070a9bdf8}{S\+S\+R\+P\+\_\+\+Transaction\+Id}\label{ssrp_8h_adc8bbb3f5c854347348dcc13750f94e5}
+&
+trx\+\_\+id&
+トランザクション\+I\+D \\
+\hline
+
+\hyperlink{stddef_8h_af4b45f5ec97da370bd2173b4fe891d76_af4b45f5ec97da370bd2173b4fe891d76}{\+\_\+\+U\+W\+O\+R\+D}\label{ssrp_8h_a780386321e49bdafc39eb50f3a97d8a4}
+&
+cksum&
+ヘッダのチェックサム \\
+\hline
+
+\end{DoxyFields}
+
+
+\subsubsection{マクロ定義詳解}
+\index{ssrp.\+h@{ssrp.\+h}!S\+S\+R\+P\+\_\+\+M\+A\+X\+\_\+\+N\+O\+D\+E@{S\+S\+R\+P\+\_\+\+M\+A\+X\+\_\+\+N\+O\+D\+E}}
+\index{S\+S\+R\+P\+\_\+\+M\+A\+X\+\_\+\+N\+O\+D\+E@{S\+S\+R\+P\+\_\+\+M\+A\+X\+\_\+\+N\+O\+D\+E}!ssrp.\+h@{ssrp.\+h}}
+\paragraph[{S\+S\+R\+P\+\_\+\+M\+A\+X\+\_\+\+N\+O\+D\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+S\+R\+P\+\_\+\+M\+A\+X\+\_\+\+N\+O\+D\+E~16}\label{ssrp_8h_af88c2fe13b4e079ac20a99bf959efccc_af88c2fe13b4e079ac20a99bf959efccc}
+
+
+接続ノード最大数 
+
+
+
+ ssrp.\+h の 32 行目に定義があります。
+
+\index{ssrp.\+h@{ssrp.\+h}!S\+S\+R\+P\+\_\+\+M\+A\+X\+\_\+\+D\+A\+T\+A@{S\+S\+R\+P\+\_\+\+M\+A\+X\+\_\+\+D\+A\+T\+A}}
+\index{S\+S\+R\+P\+\_\+\+M\+A\+X\+\_\+\+D\+A\+T\+A@{S\+S\+R\+P\+\_\+\+M\+A\+X\+\_\+\+D\+A\+T\+A}!ssrp.\+h@{ssrp.\+h}}
+\paragraph[{S\+S\+R\+P\+\_\+\+M\+A\+X\+\_\+\+D\+A\+T\+A}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+S\+R\+P\+\_\+\+M\+A\+X\+\_\+\+D\+A\+T\+A~255}\label{ssrp_8h_a6fd9568ebb3f45fd9b531322c2aa7cfd_a6fd9568ebb3f45fd9b531322c2aa7cfd}
+
+
+最大送受信データサイズ 
+
+パケットのペイロード最大値 
+
+ ssrp.\+h の 39 行目に定義があります。
+
+\index{ssrp.\+h@{ssrp.\+h}!S\+S\+R\+P\+\_\+\+A\+D\+D\+R\+\_\+\+I\+N\+V\+A\+L\+I\+D@{S\+S\+R\+P\+\_\+\+A\+D\+D\+R\+\_\+\+I\+N\+V\+A\+L\+I\+D}}
+\index{S\+S\+R\+P\+\_\+\+A\+D\+D\+R\+\_\+\+I\+N\+V\+A\+L\+I\+D@{S\+S\+R\+P\+\_\+\+A\+D\+D\+R\+\_\+\+I\+N\+V\+A\+L\+I\+D}!ssrp.\+h@{ssrp.\+h}}
+\paragraph[{S\+S\+R\+P\+\_\+\+A\+D\+D\+R\+\_\+\+I\+N\+V\+A\+L\+I\+D}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+S\+R\+P\+\_\+\+A\+D\+D\+R\+\_\+\+I\+N\+V\+A\+L\+I\+D~0}\label{ssrp_8h_ac544437b8b63638505e1bb111063d56a_ac544437b8b63638505e1bb111063d56a}
+
+
+無効なアドレス 
+
+
+
+ ssrp.\+h の 43 行目に定義があります。
+
+\index{ssrp.\+h@{ssrp.\+h}!S\+S\+R\+P\+\_\+\+A\+D\+D\+R\+\_\+\+B\+R\+O\+A\+D\+C\+A\+S\+T@{S\+S\+R\+P\+\_\+\+A\+D\+D\+R\+\_\+\+B\+R\+O\+A\+D\+C\+A\+S\+T}}
+\index{S\+S\+R\+P\+\_\+\+A\+D\+D\+R\+\_\+\+B\+R\+O\+A\+D\+C\+A\+S\+T@{S\+S\+R\+P\+\_\+\+A\+D\+D\+R\+\_\+\+B\+R\+O\+A\+D\+C\+A\+S\+T}!ssrp.\+h@{ssrp.\+h}}
+\paragraph[{S\+S\+R\+P\+\_\+\+A\+D\+D\+R\+\_\+\+B\+R\+O\+A\+D\+C\+A\+S\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+S\+R\+P\+\_\+\+A\+D\+D\+R\+\_\+\+B\+R\+O\+A\+D\+C\+A\+S\+T~0xff}\label{ssrp_8h_a45cf2a260877004832aef2829f84d90d_a45cf2a260877004832aef2829f84d90d}
+
+
+ブロードキャストアドレス 
+
+
+
+ ssrp.\+h の 47 行目に定義があります。
+
+\index{ssrp.\+h@{ssrp.\+h}!S\+S\+R\+P\+\_\+\+T\+M\+O\+\_\+\+R\+E\+C\+V@{S\+S\+R\+P\+\_\+\+T\+M\+O\+\_\+\+R\+E\+C\+V}}
+\index{S\+S\+R\+P\+\_\+\+T\+M\+O\+\_\+\+R\+E\+C\+V@{S\+S\+R\+P\+\_\+\+T\+M\+O\+\_\+\+R\+E\+C\+V}!ssrp.\+h@{ssrp.\+h}}
+\paragraph[{S\+S\+R\+P\+\_\+\+T\+M\+O\+\_\+\+R\+E\+C\+V}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+S\+R\+P\+\_\+\+T\+M\+O\+\_\+\+R\+E\+C\+V~255}\label{ssrp_8h_a8ab83c225d7e98ee20fecf775e415082_a8ab83c225d7e98ee20fecf775e415082}
+
+
+受信タイムアウト値 
+
+
+
+ ssrp.\+h の 51 行目に定義があります。
+
+\index{ssrp.\+h@{ssrp.\+h}!S\+S\+R\+P\+\_\+\+T\+M\+O\+\_\+\+S\+E\+N\+D@{S\+S\+R\+P\+\_\+\+T\+M\+O\+\_\+\+S\+E\+N\+D}}
+\index{S\+S\+R\+P\+\_\+\+T\+M\+O\+\_\+\+S\+E\+N\+D@{S\+S\+R\+P\+\_\+\+T\+M\+O\+\_\+\+S\+E\+N\+D}!ssrp.\+h@{ssrp.\+h}}
+\paragraph[{S\+S\+R\+P\+\_\+\+T\+M\+O\+\_\+\+S\+E\+N\+D}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+S\+R\+P\+\_\+\+T\+M\+O\+\_\+\+S\+E\+N\+D~-\/1}\label{ssrp_8h_a4ebcd371d2939b092bcf3669f8516dbd_a4ebcd371d2939b092bcf3669f8516dbd}
+
+
+送信タイムアウト値 
+
+
+
+ ssrp.\+h の 55 行目に定義があります。
+
+\index{ssrp.\+h@{ssrp.\+h}!S\+S\+R\+P\+\_\+\+C\+M\+D\+\_\+\+L\+O\+O\+P@{S\+S\+R\+P\+\_\+\+C\+M\+D\+\_\+\+L\+O\+O\+P}}
+\index{S\+S\+R\+P\+\_\+\+C\+M\+D\+\_\+\+L\+O\+O\+P@{S\+S\+R\+P\+\_\+\+C\+M\+D\+\_\+\+L\+O\+O\+P}!ssrp.\+h@{ssrp.\+h}}
+\paragraph[{S\+S\+R\+P\+\_\+\+C\+M\+D\+\_\+\+L\+O\+O\+P}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+S\+R\+P\+\_\+\+C\+M\+D\+\_\+\+L\+O\+O\+P~0x00}\label{ssrp_8h_aa1031b596776a63602e2df610c63a148_aa1031b596776a63602e2df610c63a148}
+
+
+L\+O\+O\+Pコマンド値 
+
+ネットワーク接続ノードをカウントするコマンド 
+
+ ssrp.\+h の 62 行目に定義があります。
+
+\index{ssrp.\+h@{ssrp.\+h}!S\+S\+R\+P\+\_\+\+C\+M\+D\+\_\+\+J\+O\+I\+N@{S\+S\+R\+P\+\_\+\+C\+M\+D\+\_\+\+J\+O\+I\+N}}
+\index{S\+S\+R\+P\+\_\+\+C\+M\+D\+\_\+\+J\+O\+I\+N@{S\+S\+R\+P\+\_\+\+C\+M\+D\+\_\+\+J\+O\+I\+N}!ssrp.\+h@{ssrp.\+h}}
+\paragraph[{S\+S\+R\+P\+\_\+\+C\+M\+D\+\_\+\+J\+O\+I\+N}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+S\+R\+P\+\_\+\+C\+M\+D\+\_\+\+J\+O\+I\+N~0x01}\label{ssrp_8h_ababd7808112858fa10ac7143a748ea51_ababd7808112858fa10ac7143a748ea51}
+
+
+J\+O\+I\+Nコマンド値 
+
+ネットワークへ参加するコマンド 
+
+ ssrp.\+h の 69 行目に定義があります。
+
+\index{ssrp.\+h@{ssrp.\+h}!S\+S\+R\+P\+\_\+\+C\+M\+D\+\_\+\+L\+E\+A\+V\+E@{S\+S\+R\+P\+\_\+\+C\+M\+D\+\_\+\+L\+E\+A\+V\+E}}
+\index{S\+S\+R\+P\+\_\+\+C\+M\+D\+\_\+\+L\+E\+A\+V\+E@{S\+S\+R\+P\+\_\+\+C\+M\+D\+\_\+\+L\+E\+A\+V\+E}!ssrp.\+h@{ssrp.\+h}}
+\paragraph[{S\+S\+R\+P\+\_\+\+C\+M\+D\+\_\+\+L\+E\+A\+V\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+S\+R\+P\+\_\+\+C\+M\+D\+\_\+\+L\+E\+A\+V\+E~0x02}\label{ssrp_8h_a5a91c530f07fd0d850782c090238634e_a5a91c530f07fd0d850782c090238634e}
+
+
+L\+E\+A\+V\+Eコマンド値 
+
+ネットワークから離脱するコマンド 
+
+ ssrp.\+h の 76 行目に定義があります。
+
+\index{ssrp.\+h@{ssrp.\+h}!S\+S\+R\+P\+\_\+\+V\+A\+L\+\_\+\+P\+R\+E\+A\+M\+B\+L\+E@{S\+S\+R\+P\+\_\+\+V\+A\+L\+\_\+\+P\+R\+E\+A\+M\+B\+L\+E}}
+\index{S\+S\+R\+P\+\_\+\+V\+A\+L\+\_\+\+P\+R\+E\+A\+M\+B\+L\+E@{S\+S\+R\+P\+\_\+\+V\+A\+L\+\_\+\+P\+R\+E\+A\+M\+B\+L\+E}!ssrp.\+h@{ssrp.\+h}}
+\paragraph[{S\+S\+R\+P\+\_\+\+V\+A\+L\+\_\+\+P\+R\+E\+A\+M\+B\+L\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+S\+R\+P\+\_\+\+V\+A\+L\+\_\+\+P\+R\+E\+A\+M\+B\+L\+E~0xaa}\label{ssrp_8h_a8effb0515a3a94dc375d8d2f06daf627_a8effb0515a3a94dc375d8d2f06daf627}
+
+
+プリアンブル値 
+
+パケット送信前に付加するプリアンブル値 
+
+ ssrp.\+h の 83 行目に定義があります。
+
+\index{ssrp.\+h@{ssrp.\+h}!S\+S\+R\+P\+\_\+\+P\+A\+C\+K\+E\+T\+\_\+\+S\+P\+C@{S\+S\+R\+P\+\_\+\+P\+A\+C\+K\+E\+T\+\_\+\+S\+P\+C}}
+\index{S\+S\+R\+P\+\_\+\+P\+A\+C\+K\+E\+T\+\_\+\+S\+P\+C@{S\+S\+R\+P\+\_\+\+P\+A\+C\+K\+E\+T\+\_\+\+S\+P\+C}!ssrp.\+h@{ssrp.\+h}}
+\paragraph[{S\+S\+R\+P\+\_\+\+P\+A\+C\+K\+E\+T\+\_\+\+S\+P\+C}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+S\+R\+P\+\_\+\+P\+A\+C\+K\+E\+T\+\_\+\+S\+P\+C~(1\+U $<$$<$ 8)}\label{ssrp_8h_acb6a8cfed76fc5f18e699e7f476491ea_acb6a8cfed76fc5f18e699e7f476491ea}
+
+
+定期処理の送信間隔 
+
+J\+O\+I\+N、\+L\+O\+O\+Pなど、定期処理時の送信間隔 
+
+ ssrp.\+h の 90 行目に定義があります。
+
+\index{ssrp.\+h@{ssrp.\+h}!S\+S\+R\+P\+\_\+\+C\+M\+D\+\_\+\+E\+X@{S\+S\+R\+P\+\_\+\+C\+M\+D\+\_\+\+E\+X}}
+\index{S\+S\+R\+P\+\_\+\+C\+M\+D\+\_\+\+E\+X@{S\+S\+R\+P\+\_\+\+C\+M\+D\+\_\+\+E\+X}!ssrp.\+h@{ssrp.\+h}}
+\paragraph[{S\+S\+R\+P\+\_\+\+C\+M\+D\+\_\+\+E\+X}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+S\+R\+P\+\_\+\+C\+M\+D\+\_\+\+E\+X~0x80}\label{ssrp_8h_a76d2edb3e4836c0d2444a1627ea57f1b_a76d2edb3e4836c0d2444a1627ea57f1b}
+
+
+外部モジュール用コマンドマスク 
+
+
+
+ ssrp.\+h の 115 行目に定義があります。
+
+\index{ssrp.\+h@{ssrp.\+h}!S\+S\+R\+P\+\_\+\+C\+M\+D\+\_\+\+I\+N\+V\+A\+L\+I\+D@{S\+S\+R\+P\+\_\+\+C\+M\+D\+\_\+\+I\+N\+V\+A\+L\+I\+D}}
+\index{S\+S\+R\+P\+\_\+\+C\+M\+D\+\_\+\+I\+N\+V\+A\+L\+I\+D@{S\+S\+R\+P\+\_\+\+C\+M\+D\+\_\+\+I\+N\+V\+A\+L\+I\+D}!ssrp.\+h@{ssrp.\+h}}
+\paragraph[{S\+S\+R\+P\+\_\+\+C\+M\+D\+\_\+\+I\+N\+V\+A\+L\+I\+D}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+S\+R\+P\+\_\+\+C\+M\+D\+\_\+\+I\+N\+V\+A\+L\+I\+D~0xff}\label{ssrp_8h_ae0034a89b11e015781cdddd1c8ac788e_ae0034a89b11e015781cdddd1c8ac788e}
+
+
+無効なコマンド値 
+
+
+
+ ssrp.\+h の 119 行目に定義があります。
+
+\index{ssrp.\+h@{ssrp.\+h}!S\+S\+R\+P\+\_\+\+F\+L\+G\+\_\+\+E\+V\+T@{S\+S\+R\+P\+\_\+\+F\+L\+G\+\_\+\+E\+V\+T}}
+\index{S\+S\+R\+P\+\_\+\+F\+L\+G\+\_\+\+E\+V\+T@{S\+S\+R\+P\+\_\+\+F\+L\+G\+\_\+\+E\+V\+T}!ssrp.\+h@{ssrp.\+h}}
+\paragraph[{S\+S\+R\+P\+\_\+\+F\+L\+G\+\_\+\+E\+V\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+S\+R\+P\+\_\+\+F\+L\+G\+\_\+\+E\+V\+T~0x00}\label{ssrp_8h_a37fa1ba70b1bbcc342ebfc53a71a9fc5_a37fa1ba70b1bbcc342ebfc53a71a9fc5}
+
+
+イベントフラグ値 
+
+このフラグが設定されたパケットは通知のみのイベントである。 
+
+ ssrp.\+h の 133 行目に定義があります。
+
+\index{ssrp.\+h@{ssrp.\+h}!S\+S\+R\+P\+\_\+\+F\+L\+G\+\_\+\+R\+E\+Q@{S\+S\+R\+P\+\_\+\+F\+L\+G\+\_\+\+R\+E\+Q}}
+\index{S\+S\+R\+P\+\_\+\+F\+L\+G\+\_\+\+R\+E\+Q@{S\+S\+R\+P\+\_\+\+F\+L\+G\+\_\+\+R\+E\+Q}!ssrp.\+h@{ssrp.\+h}}
+\paragraph[{S\+S\+R\+P\+\_\+\+F\+L\+G\+\_\+\+R\+E\+Q}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+S\+R\+P\+\_\+\+F\+L\+G\+\_\+\+R\+E\+Q~0x01}\label{ssrp_8h_aee057c24ccb15f205354180ec08aa76c_aee057c24ccb15f205354180ec08aa76c}
+
+
+リクエストフラグ値 
+
+このフラグが設定されたパケットはレスポンスが必要なリクエストである。 
+
+ ssrp.\+h の 139 行目に定義があります。
+
+\index{ssrp.\+h@{ssrp.\+h}!S\+S\+R\+P\+\_\+\+F\+L\+G\+\_\+\+R\+E\+S@{S\+S\+R\+P\+\_\+\+F\+L\+G\+\_\+\+R\+E\+S}}
+\index{S\+S\+R\+P\+\_\+\+F\+L\+G\+\_\+\+R\+E\+S@{S\+S\+R\+P\+\_\+\+F\+L\+G\+\_\+\+R\+E\+S}!ssrp.\+h@{ssrp.\+h}}
+\paragraph[{S\+S\+R\+P\+\_\+\+F\+L\+G\+\_\+\+R\+E\+S}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+S\+R\+P\+\_\+\+F\+L\+G\+\_\+\+R\+E\+S~0x02}\label{ssrp_8h_a91a5d266efbbb5610972e92f977b0d7c_a91a5d266efbbb5610972e92f977b0d7c}
+
+
+リクエストフラグ値 
+
+このフラグが設定されたパケットはリクエストに対するレスポンスである。 
+
+ ssrp.\+h の 145 行目に定義があります。
+
+\index{ssrp.\+h@{ssrp.\+h}!S\+S\+R\+P\+\_\+\+F\+L\+G\+\_\+\+I\+N\+V\+A\+L\+I\+D@{S\+S\+R\+P\+\_\+\+F\+L\+G\+\_\+\+I\+N\+V\+A\+L\+I\+D}}
+\index{S\+S\+R\+P\+\_\+\+F\+L\+G\+\_\+\+I\+N\+V\+A\+L\+I\+D@{S\+S\+R\+P\+\_\+\+F\+L\+G\+\_\+\+I\+N\+V\+A\+L\+I\+D}!ssrp.\+h@{ssrp.\+h}}
+\paragraph[{S\+S\+R\+P\+\_\+\+F\+L\+G\+\_\+\+I\+N\+V\+A\+L\+I\+D}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+S\+R\+P\+\_\+\+F\+L\+G\+\_\+\+I\+N\+V\+A\+L\+I\+D~0xff}\label{ssrp_8h_a67e77a6c4c2d37ba09c35d52b201b460_a67e77a6c4c2d37ba09c35d52b201b460}
+
+
+無効なフラグ値 
+
+
+
+ ssrp.\+h の 149 行目に定義があります。
+
+\index{ssrp.\+h@{ssrp.\+h}!S\+S\+R\+P\+\_\+\+T\+R\+X\+I\+D\+\_\+\+I\+N\+V\+A\+L\+I\+D@{S\+S\+R\+P\+\_\+\+T\+R\+X\+I\+D\+\_\+\+I\+N\+V\+A\+L\+I\+D}}
+\index{S\+S\+R\+P\+\_\+\+T\+R\+X\+I\+D\+\_\+\+I\+N\+V\+A\+L\+I\+D@{S\+S\+R\+P\+\_\+\+T\+R\+X\+I\+D\+\_\+\+I\+N\+V\+A\+L\+I\+D}!ssrp.\+h@{ssrp.\+h}}
+\paragraph[{S\+S\+R\+P\+\_\+\+T\+R\+X\+I\+D\+\_\+\+I\+N\+V\+A\+L\+I\+D}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+S\+R\+P\+\_\+\+T\+R\+X\+I\+D\+\_\+\+I\+N\+V\+A\+L\+I\+D~((1\+U $<$$<$ (sizeof(\+S\+S\+R\+P\+\_\+\+Transaction\+Id) $<$$<$ 3)) -\/ 1)}\label{ssrp_8h_ac33b3f1d187ccea5d71660f018bd26e9_ac33b3f1d187ccea5d71660f018bd26e9}
+
+
+無効なトランザクション\+I\+D 
+
+
+
+ ssrp.\+h の 175 行目に定義があります。
+
+\index{ssrp.\+h@{ssrp.\+h}!S\+S\+R\+P\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+E\+Q@{S\+S\+R\+P\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+E\+Q}}
+\index{S\+S\+R\+P\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+E\+Q@{S\+S\+R\+P\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+E\+Q}!ssrp.\+h@{ssrp.\+h}}
+\paragraph[{S\+S\+R\+P\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+E\+Q}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+S\+R\+P\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+E\+Q(
+\begin{DoxyParamCaption}
+\item[{}]{hp, }
+\item[{}]{com, }
+\item[{}]{flg}
+\end{DoxyParamCaption}
+)~(((hp)-\/$>$command == (com)) \&\& ((hp)-\/$>$flag ==  (flg)))}\label{ssrp_8h_ab1086ff0ededa754c44f45661ab7df22_ab1086ff0ededa754c44f45661ab7df22}
+
+
+コマンド/フラグ一致判定 
+
+ヘッダのコマンドエリアとフラグエリアが指定されたものと同じかどうかの 判定を行う
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\tt in}  & {\em hp} & 比較元ヘッダへのポインタ \\
+\hline
+\mbox{\tt in}  & {\em com} & 判定するコマンド値 \\
+\hline
+\mbox{\tt in}  & {\em flg} & 判定するフラグ値\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+コマンド/フラグ両方一致していれば正の値。そうでなければ0 
+\end{DoxyReturn}
+
+
+ ssrp.\+h の 237 行目に定義があります。
+
+\index{ssrp.\+h@{ssrp.\+h}!S\+S\+R\+P\+\_\+\+I\+N\+V\+A\+L\+I\+D\+A\+T\+E\+\_\+\+P\+A\+C\+K\+E\+T@{S\+S\+R\+P\+\_\+\+I\+N\+V\+A\+L\+I\+D\+A\+T\+E\+\_\+\+P\+A\+C\+K\+E\+T}}
+\index{S\+S\+R\+P\+\_\+\+I\+N\+V\+A\+L\+I\+D\+A\+T\+E\+\_\+\+P\+A\+C\+K\+E\+T@{S\+S\+R\+P\+\_\+\+I\+N\+V\+A\+L\+I\+D\+A\+T\+E\+\_\+\+P\+A\+C\+K\+E\+T}!ssrp.\+h@{ssrp.\+h}}
+\paragraph[{S\+S\+R\+P\+\_\+\+I\+N\+V\+A\+L\+I\+D\+A\+T\+E\+\_\+\+P\+A\+C\+K\+E\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+S\+R\+P\+\_\+\+I\+N\+V\+A\+L\+I\+D\+A\+T\+E\+\_\+\+P\+A\+C\+K\+E\+T(
+\begin{DoxyParamCaption}
+\item[{}]{hp}
+\end{DoxyParamCaption}
+)~((hp)-\/$>$from = {\bf S\+S\+R\+P\+\_\+\+A\+D\+D\+R\+\_\+\+I\+N\+V\+A\+L\+I\+D}, (hp)-\/$>$to = {\bf S\+S\+R\+P\+\_\+\+A\+D\+D\+R\+\_\+\+I\+N\+V\+A\+L\+I\+D})}\label{ssrp_8h_a1150c9c53b0bd3f8891bff0e4423881e_a1150c9c53b0bd3f8891bff0e4423881e}
+
+
+パケット無効化 
+
+指定されたヘッダのパケットを初期化して無効とする。
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\tt in}  & {\em hp} & 無効化するヘッダへのポインタ \\
+\hline
+\end{DoxyParams}
+
+
+ ssrp.\+h の 247 行目に定義があります。
+
+\index{ssrp.\+h@{ssrp.\+h}!S\+S\+R\+P\+\_\+\+I\+S\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+P\+A\+C\+K\+E\+T@{S\+S\+R\+P\+\_\+\+I\+S\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+P\+A\+C\+K\+E\+T}}
+\index{S\+S\+R\+P\+\_\+\+I\+S\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+P\+A\+C\+K\+E\+T@{S\+S\+R\+P\+\_\+\+I\+S\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+P\+A\+C\+K\+E\+T}!ssrp.\+h@{ssrp.\+h}}
+\paragraph[{S\+S\+R\+P\+\_\+\+I\+S\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+P\+A\+C\+K\+E\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+S\+R\+P\+\_\+\+I\+S\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+P\+A\+C\+K\+E\+T(
+\begin{DoxyParamCaption}
+\item[{}]{hp}
+\end{DoxyParamCaption}
+)~(((hp)-\/$>$from == {\bf S\+S\+R\+P\+\_\+\+A\+D\+D\+R\+\_\+\+I\+N\+V\+A\+L\+I\+D}) $\vert$$\vert$ ((hp)-\/$>$to == {\bf S\+S\+R\+P\+\_\+\+A\+D\+D\+R\+\_\+\+I\+N\+V\+A\+L\+I\+D}))}\label{ssrp_8h_ab301b2d35121633f04aecb9df681a6fd_ab301b2d35121633f04aecb9df681a6fd}
+
+
+パケット無効判定 
+
+指定されたヘッダのパケットが無効なものかどうかを判定する
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\tt in}  & {\em hp} & 判定するヘッダへのポインタ\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+無効化されたパケットならば正の値。そうでなければ0 
+\end{DoxyReturn}
+
+
+ ssrp.\+h の 259 行目に定義があります。
+
+
+
+\subsubsection{型定義詳解}
+\index{ssrp.\+h@{ssrp.\+h}!S\+S\+R\+P\+\_\+\+Address@{S\+S\+R\+P\+\_\+\+Address}}
+\index{S\+S\+R\+P\+\_\+\+Address@{S\+S\+R\+P\+\_\+\+Address}!ssrp.\+h@{ssrp.\+h}}
+\paragraph[{S\+S\+R\+P\+\_\+\+Address}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf \+\_\+\+U\+B\+Y\+T\+E} {\bf S\+S\+R\+P\+\_\+\+Address}}\label{ssrp_8h_af52db94d5ce59044edabda26c25f92f9_af52db94d5ce59044edabda26c25f92f9}
+
+
+アドレス型定義 
+
+
+
+ ssrp.\+h の 95 行目に定義があります。
+
+\index{ssrp.\+h@{ssrp.\+h}!S\+S\+R\+P\+\_\+\+Command@{S\+S\+R\+P\+\_\+\+Command}}
+\index{S\+S\+R\+P\+\_\+\+Command@{S\+S\+R\+P\+\_\+\+Command}!ssrp.\+h@{ssrp.\+h}}
+\paragraph[{S\+S\+R\+P\+\_\+\+Command}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf \+\_\+\+U\+B\+Y\+T\+E} {\bf S\+S\+R\+P\+\_\+\+Command}}\label{ssrp_8h_a90e773bf16f83fcbc70733b85f7ae614_a90e773bf16f83fcbc70733b85f7ae614}
+
+
+コマンド型定義 
+
+このコマンドによって他ノードとデータの連携を取る。 0x00〜0x7fまでは内部用に予約されている。外部モジュールから送信するパケット のコマンド値は\+S\+S\+R\+P\+\_\+\+C\+M\+D\+\_\+\+E\+Xと\+O\+Rを取らなければならない。 
+
+ ssrp.\+h の 111 行目に定義があります。
+
+\index{ssrp.\+h@{ssrp.\+h}!S\+S\+R\+P\+\_\+\+Flag@{S\+S\+R\+P\+\_\+\+Flag}}
+\index{S\+S\+R\+P\+\_\+\+Flag@{S\+S\+R\+P\+\_\+\+Flag}!ssrp.\+h@{ssrp.\+h}}
+\paragraph[{S\+S\+R\+P\+\_\+\+Flag}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf \+\_\+\+U\+B\+Y\+T\+E} {\bf S\+S\+R\+P\+\_\+\+Flag}}\label{ssrp_8h_a1f7d2b0dad1935ce49334c86a67d202a_a1f7d2b0dad1935ce49334c86a67d202a}
+
+
+フラグ定義型 
+
+パケットの属性を表すフラグ型。このフラグにより、リクエスト/レスポンス/ イベントかどうかの判定を行う。 
+
+ ssrp.\+h の 127 行目に定義があります。
+
+\index{ssrp.\+h@{ssrp.\+h}!S\+S\+R\+P\+\_\+\+Transaction\+Id@{S\+S\+R\+P\+\_\+\+Transaction\+Id}}
+\index{S\+S\+R\+P\+\_\+\+Transaction\+Id@{S\+S\+R\+P\+\_\+\+Transaction\+Id}!ssrp.\+h@{ssrp.\+h}}
+\paragraph[{S\+S\+R\+P\+\_\+\+Transaction\+Id}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf \+\_\+\+U\+W\+O\+R\+D} {\bf S\+S\+R\+P\+\_\+\+Transaction\+Id}}\label{ssrp_8h_a4ffad5beeb1efa21afe8cd4070a9bdf8_a4ffad5beeb1efa21afe8cd4070a9bdf8}
+
+
+トランザクション\+I\+Dの定義型 
+
+トランザクションを識別するための\+I\+D。自ノードからパケットを発信する毎に インクリメントされる送信カウンタ。パケットヘッダに毎回設定される。 
+
+ ssrp.\+h の 171 行目に定義があります。
+
+
+
+\subsubsection{列挙型詳解}
+\index{ssrp.\+h@{ssrp.\+h}!S\+S\+R\+P\+\_\+\+Transaction@{S\+S\+R\+P\+\_\+\+Transaction}}
+\index{S\+S\+R\+P\+\_\+\+Transaction@{S\+S\+R\+P\+\_\+\+Transaction}!ssrp.\+h@{ssrp.\+h}}
+\paragraph[{S\+S\+R\+P\+\_\+\+Transaction}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf S\+S\+R\+P\+\_\+\+Transaction}}\label{ssrp_8h_a97957e4b5b03d11a84ca43c725d2ec75_a97957e4b5b03d11a84ca43c725d2ec75}
+
+
+トランザクションタイプ識別子 
+
+\begin{Desc}
+\item[列挙値]\par
+\begin{description}
+\index{S\+S\+R\+P\+\_\+\+T\+R\+X\+\_\+\+R\+E\+C\+V@{S\+S\+R\+P\+\_\+\+T\+R\+X\+\_\+\+R\+E\+C\+V}!ssrp.\+h@{ssrp.\+h}}\index{ssrp.\+h@{ssrp.\+h}!S\+S\+R\+P\+\_\+\+T\+R\+X\+\_\+\+R\+E\+C\+V@{S\+S\+R\+P\+\_\+\+T\+R\+X\+\_\+\+R\+E\+C\+V}}\item[{\em 
+S\+S\+R\+P\+\_\+\+T\+R\+X\+\_\+\+R\+E\+C\+V\label{ssrp_8h_a97957e4b5b03d11a84ca43c725d2ec75_a97957e4b5b03d11a84ca43c725d2ec75a2133aaf05c96ed977f3a38f0e1b8a302}
+}]受信タイプ \index{S\+S\+R\+P\+\_\+\+T\+R\+X\+\_\+\+S\+E\+N\+D@{S\+S\+R\+P\+\_\+\+T\+R\+X\+\_\+\+S\+E\+N\+D}!ssrp.\+h@{ssrp.\+h}}\index{ssrp.\+h@{ssrp.\+h}!S\+S\+R\+P\+\_\+\+T\+R\+X\+\_\+\+S\+E\+N\+D@{S\+S\+R\+P\+\_\+\+T\+R\+X\+\_\+\+S\+E\+N\+D}}\item[{\em 
+S\+S\+R\+P\+\_\+\+T\+R\+X\+\_\+\+S\+E\+N\+D\label{ssrp_8h_a97957e4b5b03d11a84ca43c725d2ec75_a97957e4b5b03d11a84ca43c725d2ec75a501ebd9cc910ea5cf349e15f7c495404}
+}]送信タイプ \index{S\+S\+R\+P\+\_\+\+N\+U\+M\+\_\+\+O\+F\+\_\+\+T\+R\+X@{S\+S\+R\+P\+\_\+\+N\+U\+M\+\_\+\+O\+F\+\_\+\+T\+R\+X}!ssrp.\+h@{ssrp.\+h}}\index{ssrp.\+h@{ssrp.\+h}!S\+S\+R\+P\+\_\+\+N\+U\+M\+\_\+\+O\+F\+\_\+\+T\+R\+X@{S\+S\+R\+P\+\_\+\+N\+U\+M\+\_\+\+O\+F\+\_\+\+T\+R\+X}}\item[{\em 
+S\+S\+R\+P\+\_\+\+N\+U\+M\+\_\+\+O\+F\+\_\+\+T\+R\+X\label{ssrp_8h_a97957e4b5b03d11a84ca43c725d2ec75_a97957e4b5b03d11a84ca43c725d2ec75a48806600dd23a30a763927aeba5e6d4e}
+}]トランザクションタイプの数 \end{description}
+\end{Desc}
+
+
+ ssrp.\+h の 154 行目に定義があります。
+
+
+\begin{DoxyCode}
+155 \{
+156     SSRP_TRX_RECV = 0,
+158     SSRP_TRX_SEND,
+160 
+161     SSRP_NUM_OF_TRX
+163 \} SSRP_Transaction;    
+\end{DoxyCode}
+\index{ssrp.\+h@{ssrp.\+h}!S\+S\+R\+P\+\_\+\+Connection@{S\+S\+R\+P\+\_\+\+Connection}}
+\index{S\+S\+R\+P\+\_\+\+Connection@{S\+S\+R\+P\+\_\+\+Connection}!ssrp.\+h@{ssrp.\+h}}
+\paragraph[{S\+S\+R\+P\+\_\+\+Connection}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf S\+S\+R\+P\+\_\+\+Connection}}\label{ssrp_8h_a7dcaa29c248300ccd1e2b9932d59041e_a7dcaa29c248300ccd1e2b9932d59041e}
+
+
+コネクション種別定義型 
+
+S\+S\+R\+Pはリングプロトコルなので接続は前と後の二つ。 \begin{Desc}
+\item[列挙値]\par
+\begin{description}
+\index{S\+S\+R\+P\+\_\+\+C\+O\+N\+\_\+\+F\+R\+O\+N\+T@{S\+S\+R\+P\+\_\+\+C\+O\+N\+\_\+\+F\+R\+O\+N\+T}!ssrp.\+h@{ssrp.\+h}}\index{ssrp.\+h@{ssrp.\+h}!S\+S\+R\+P\+\_\+\+C\+O\+N\+\_\+\+F\+R\+O\+N\+T@{S\+S\+R\+P\+\_\+\+C\+O\+N\+\_\+\+F\+R\+O\+N\+T}}\item[{\em 
+S\+S\+R\+P\+\_\+\+C\+O\+N\+\_\+\+F\+R\+O\+N\+T\label{ssrp_8h_a7dcaa29c248300ccd1e2b9932d59041e_a7dcaa29c248300ccd1e2b9932d59041ea58f77603447cc488475575ecf64d1d9b}
+}]前への接続 \index{S\+S\+R\+P\+\_\+\+C\+O\+N\+\_\+\+B\+A\+C\+K@{S\+S\+R\+P\+\_\+\+C\+O\+N\+\_\+\+B\+A\+C\+K}!ssrp.\+h@{ssrp.\+h}}\index{ssrp.\+h@{ssrp.\+h}!S\+S\+R\+P\+\_\+\+C\+O\+N\+\_\+\+B\+A\+C\+K@{S\+S\+R\+P\+\_\+\+C\+O\+N\+\_\+\+B\+A\+C\+K}}\item[{\em 
+S\+S\+R\+P\+\_\+\+C\+O\+N\+\_\+\+B\+A\+C\+K\label{ssrp_8h_a7dcaa29c248300ccd1e2b9932d59041e_a7dcaa29c248300ccd1e2b9932d59041eade4f6d1e95da36f36ef4f294f2aa7292}
+}]後への接続 \index{S\+S\+R\+P\+\_\+\+N\+U\+M\+\_\+\+O\+F\+\_\+\+C\+O\+N@{S\+S\+R\+P\+\_\+\+N\+U\+M\+\_\+\+O\+F\+\_\+\+C\+O\+N}!ssrp.\+h@{ssrp.\+h}}\index{ssrp.\+h@{ssrp.\+h}!S\+S\+R\+P\+\_\+\+N\+U\+M\+\_\+\+O\+F\+\_\+\+C\+O\+N@{S\+S\+R\+P\+\_\+\+N\+U\+M\+\_\+\+O\+F\+\_\+\+C\+O\+N}}\item[{\em 
+S\+S\+R\+P\+\_\+\+N\+U\+M\+\_\+\+O\+F\+\_\+\+C\+O\+N\label{ssrp_8h_a7dcaa29c248300ccd1e2b9932d59041e_a7dcaa29c248300ccd1e2b9932d59041ea869b030c78d555aaf4e8c0694abf381b}
+}]接続種別の数 \end{description}
+\end{Desc}
+
+
+ ssrp.\+h の 214 行目に定義があります。
+
+
+\begin{DoxyCode}
+215 \{
+216     SSRP_CON_FRONT = 0,
+218     SSRP_CON_BACK,
+220 
+221     SSRP_NUM_OF_CON
+223 \} SSRP_Connection;
+\end{DoxyCode}
+
+
+\subsubsection{関数詳解}
+\index{ssrp.\+h@{ssrp.\+h}!S\+S\+R\+P\+\_\+init@{S\+S\+R\+P\+\_\+init}}
+\index{S\+S\+R\+P\+\_\+init@{S\+S\+R\+P\+\_\+init}!ssrp.\+h@{ssrp.\+h}}
+\paragraph[{S\+S\+R\+P\+\_\+init(\+S\+S\+R\+P\+\_\+\+Address myaddr)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+S\+R\+P\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+S\+R\+P\+\_\+\+Address}}]{myaddr}
+\end{DoxyParamCaption}
+)}\label{ssrp_8h_ad964f70ed8d9649a41baab0685d06bff_ad964f70ed8d9649a41baab0685d06bff}
+
+
+S\+S\+R\+P初期化 
+
+S\+S\+R\+Pモジュールを初期化する。他\+A\+P\+I使用前に必ず実行する。 \index{ssrp.\+h@{ssrp.\+h}!S\+S\+R\+P\+\_\+start@{S\+S\+R\+P\+\_\+start}}
+\index{S\+S\+R\+P\+\_\+start@{S\+S\+R\+P\+\_\+start}!ssrp.\+h@{ssrp.\+h}}
+\paragraph[{S\+S\+R\+P\+\_\+start()}]{\setlength{\rightskip}{0pt plus 5cm}void S\+S\+R\+P\+\_\+start (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{ssrp_8h_a98e54ef5676da8f5590762971431fe63_a98e54ef5676da8f5590762971431fe63}
+
+
+接続開始 
+
+自ノードを\+S\+S\+R\+Pネットワークに参加させる。以降\+S\+S\+R\+P\+\_\+execにより自律接続処理が 行われるようになる。 \index{ssrp.\+h@{ssrp.\+h}!S\+S\+R\+P\+\_\+end@{S\+S\+R\+P\+\_\+end}}
+\index{S\+S\+R\+P\+\_\+end@{S\+S\+R\+P\+\_\+end}!ssrp.\+h@{ssrp.\+h}}
+\paragraph[{S\+S\+R\+P\+\_\+end()}]{\setlength{\rightskip}{0pt plus 5cm}void S\+S\+R\+P\+\_\+end (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{ssrp_8h_a27cdf3443b5ccc86e5d644b71059a6f5_a27cdf3443b5ccc86e5d644b71059a6f5}
+
+
+接続終了 
+
+自ノードを\+S\+S\+R\+Pネットワークから脱退させる。以降の\+S\+S\+R\+P\+\_\+execはパケット ルーティング処理のみとなる。 \index{ssrp.\+h@{ssrp.\+h}!S\+S\+R\+P\+\_\+send@{S\+S\+R\+P\+\_\+send}}
+\index{S\+S\+R\+P\+\_\+send@{S\+S\+R\+P\+\_\+send}!ssrp.\+h@{ssrp.\+h}}
+\paragraph[{S\+S\+R\+P\+\_\+send(\+S\+S\+R\+P\+\_\+\+Header $\ast$header, const \+\_\+\+U\+B\+Y\+T\+E $\ast$data, \+\_\+\+U\+B\+Y\+T\+E len, \+\_\+\+B\+O\+O\+L sync)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \+\_\+\+S\+I\+N\+T} S\+S\+R\+P\+\_\+send (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+S\+R\+P\+\_\+\+Header} $\ast$}]{header, }
+\item[{const {\bf \+\_\+\+U\+B\+Y\+T\+E} $\ast$}]{data, }
+\item[{{\bf \+\_\+\+U\+B\+Y\+T\+E}}]{len, }
+\item[{{\bf \+\_\+\+B\+O\+O\+L}}]{sync}
+\end{DoxyParamCaption}
+)}\label{ssrp_8h_a2f0f6be0666e4a658d60acf37794c464_a2f0f6be0666e4a658d60acf37794c464}
+
+
+汎用パケット送信 
+
+ヘッダを指定してパケットを送信する。非同期送信の場合、ペイロードを指定サイズ 分送り切れないことがあるが、この場合次以降もトランザクションは継続しており、 指定するdataポインタの位置を変えれば続きからデータを送ることができる。 送信を諦めてトランザクションをリセットする場合は\+S\+S\+R\+P\+\_\+shutdownを使用する。
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\tt in}  & {\em header} & 送信するヘッダへのポインタ \\
+\hline
+\mbox{\tt in}  & {\em data} & 送信するデータペイロードへのポインタ \\
+\hline
+\mbox{\tt in}  & {\em len} & 送信するデータのサイズ \\
+\hline
+\mbox{\tt in}  & {\em sync} & \+\_\+\+T\+R\+U\+E\+:同期送信 \+\_\+\+F\+A\+L\+S\+E\+:非同期送信\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em 正の値} & 送信完了したデータサイズ \\
+\hline
+{\em 負の値} & 送信エラー \\
+\hline
+\end{DoxyRetVals}
+\index{ssrp.\+h@{ssrp.\+h}!S\+S\+R\+P\+\_\+sendto@{S\+S\+R\+P\+\_\+sendto}}
+\index{S\+S\+R\+P\+\_\+sendto@{S\+S\+R\+P\+\_\+sendto}!ssrp.\+h@{ssrp.\+h}}
+\paragraph[{S\+S\+R\+P\+\_\+sendto(\+S\+S\+R\+P\+\_\+\+Address to, S\+S\+R\+P\+\_\+\+Command cmd, S\+S\+R\+P\+\_\+\+Flag flg, const \+\_\+\+U\+B\+Y\+T\+E $\ast$data, \+\_\+\+U\+B\+Y\+T\+E len, S\+S\+R\+P\+\_\+\+Transaction\+Id $\ast$trx\+\_\+id, \+\_\+\+B\+O\+O\+L sync)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \+\_\+\+S\+I\+N\+T} S\+S\+R\+P\+\_\+sendto (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+S\+R\+P\+\_\+\+Address}}]{to, }
+\item[{{\bf S\+S\+R\+P\+\_\+\+Command}}]{cmd, }
+\item[{{\bf S\+S\+R\+P\+\_\+\+Flag}}]{flg, }
+\item[{const {\bf \+\_\+\+U\+B\+Y\+T\+E} $\ast$}]{data, }
+\item[{{\bf \+\_\+\+U\+B\+Y\+T\+E}}]{len, }
+\item[{{\bf S\+S\+R\+P\+\_\+\+Transaction\+Id} $\ast$}]{trx\+\_\+id, }
+\item[{{\bf \+\_\+\+B\+O\+O\+L}}]{sync}
+\end{DoxyParamCaption}
+)}\label{ssrp_8h_a04ccac7f6ab40db3f94a87dbdee7c4ba_a04ccac7f6ab40db3f94a87dbdee7c4ba}
+
+
+パケット送信 
+
+パラメータを指定してパケットを送信する。自動的に自ノードからの送信パケット となる。それ以外の特徴は\+S\+S\+R\+P\+\_\+sendと同じ。
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\tt in}  & {\em to} & 送信先アドレス \\
+\hline
+\mbox{\tt in}  & {\em cmd} & コマンド \\
+\hline
+\mbox{\tt in}  & {\em flg} & フラグ \\
+\hline
+\mbox{\tt in}  & {\em data} & データペイロードの先頭へのポインタ \\
+\hline
+\mbox{\tt in}  & {\em len} & 送信するデータサイズ \\
+\hline
+\mbox{\tt out}  & {\em trx\+\_\+id} & トランザクション\+I\+Dを保存する領域へのポインタ。\+N\+U\+L\+Lなら 無視される \\
+\hline
+\mbox{\tt in}  & {\em sync} & \+\_\+\+T\+R\+U\+E\+:同期送信 \+\_\+\+F\+A\+L\+S\+E\+:非同期送信\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em 正の値} & 送信完了したデータサイズ \\
+\hline
+{\em 負の値} & 送信エラー \\
+\hline
+\end{DoxyRetVals}
+\index{ssrp.\+h@{ssrp.\+h}!S\+S\+R\+P\+\_\+recvfrom@{S\+S\+R\+P\+\_\+recvfrom}}
+\index{S\+S\+R\+P\+\_\+recvfrom@{S\+S\+R\+P\+\_\+recvfrom}!ssrp.\+h@{ssrp.\+h}}
+\paragraph[{S\+S\+R\+P\+\_\+recvfrom(\+S\+S\+R\+P\+\_\+\+Header $\ast$$\ast$header\+\_\+p, \+\_\+\+U\+B\+Y\+T\+E $\ast$$\ast$data\+\_\+p)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \+\_\+\+S\+I\+N\+T} S\+S\+R\+P\+\_\+recvfrom (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+S\+R\+P\+\_\+\+Header} $\ast$$\ast$}]{header\+\_\+p, }
+\item[{{\bf \+\_\+\+U\+B\+Y\+T\+E} $\ast$$\ast$}]{data\+\_\+p}
+\end{DoxyParamCaption}
+)}\label{ssrp_8h_a057ba3555e8181a3e871dd68bac779d6_a057ba3555e8181a3e871dd68bac779d6}
+
+
+パケット受信 
+
+現在内部で保持されているパケットデータを取得する。実際のパケット受信は S\+S\+R\+P\+\_\+execにより実行され1パケット分のヘッダとデータが保持されているため、 これはそれらを取得するだけの\+A\+P\+Iである。よってブロックはしない。 また、取得できるのは自ノード宛かブロードキャストパケットのみである。
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\tt out}  & {\em header\+\_\+p} & 受信パケットのヘッダポインタを格納するポインタ \\
+\hline
+\mbox{\tt out}  & {\em data\+\_\+p} & 受信パケットのデータペイロードポインタを格納するポインタ\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em 正の値} & 受信パケットのデータペイロードサイズ \\
+\hline
+{\em 負の値} & 受信パケット無し \\
+\hline
+\end{DoxyRetVals}
+\index{ssrp.\+h@{ssrp.\+h}!S\+S\+R\+P\+\_\+shutdown@{S\+S\+R\+P\+\_\+shutdown}}
+\index{S\+S\+R\+P\+\_\+shutdown@{S\+S\+R\+P\+\_\+shutdown}!ssrp.\+h@{ssrp.\+h}}
+\paragraph[{S\+S\+R\+P\+\_\+shutdown(\+S\+S\+R\+P\+\_\+\+Transaction tr)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+S\+R\+P\+\_\+shutdown (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+S\+R\+P\+\_\+\+Transaction}}]{tr}
+\end{DoxyParamCaption}
+)}\label{ssrp_8h_afc3503104a5f854cf94ad33924c6a864_afc3503104a5f854cf94ad33924c6a864}
+
+
+送受信トランザクションをリセット 
+
+現在処理中のトランザクションをリセットして未送信/未受信状態へ戻す。
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\tt in}  & {\em tr} & リセットするトランザクションの種別 \\
+\hline
+\end{DoxyParams}
+\index{ssrp.\+h@{ssrp.\+h}!S\+S\+R\+P\+\_\+get\+Node@{S\+S\+R\+P\+\_\+get\+Node}}
+\index{S\+S\+R\+P\+\_\+get\+Node@{S\+S\+R\+P\+\_\+get\+Node}!ssrp.\+h@{ssrp.\+h}}
+\paragraph[{S\+S\+R\+P\+\_\+get\+Node(\+\_\+\+U\+B\+Y\+T\+E idx)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+S\+R\+P\+\_\+\+Address} S\+S\+R\+P\+\_\+get\+Node (
+\begin{DoxyParamCaption}
+\item[{{\bf \+\_\+\+U\+B\+Y\+T\+E}}]{idx}
+\end{DoxyParamCaption}
+)}\label{ssrp_8h_a4d405bb7dc969ef985256e8c8088c7e4_a4d405bb7dc969ef985256e8c8088c7e4}
+
+
+ノードアドレス取得 
+
+ネットワークに参加しているノードのアドレスを取得する。
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\tt in}  & {\em idx} & 取得するノードのインデックス\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+ノードのアドレス 
+\end{DoxyReturn}
+\index{ssrp.\+h@{ssrp.\+h}!S\+S\+R\+P\+\_\+get\+Pear@{S\+S\+R\+P\+\_\+get\+Pear}}
+\index{S\+S\+R\+P\+\_\+get\+Pear@{S\+S\+R\+P\+\_\+get\+Pear}!ssrp.\+h@{ssrp.\+h}}
+\paragraph[{S\+S\+R\+P\+\_\+get\+Pear(\+S\+S\+R\+P\+\_\+\+Connection con)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+S\+R\+P\+\_\+\+Address} S\+S\+R\+P\+\_\+get\+Pear (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+S\+R\+P\+\_\+\+Connection}}]{con}
+\end{DoxyParamCaption}
+)}\label{ssrp_8h_a0b9fca2ed26b4a74b8f69f356677fc84_a0b9fca2ed26b4a74b8f69f356677fc84}
+
+
+接続先ノードアドレス取得 
+
+接続されているノードのアドレスを接続種別に取得する。
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\tt in}  & {\em con} & 取得するノードの接続種別\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+ノードのアドレス 
+\end{DoxyReturn}
+\index{ssrp.\+h@{ssrp.\+h}!S\+S\+R\+P\+\_\+get\+Total\+Pear@{S\+S\+R\+P\+\_\+get\+Total\+Pear}}
+\index{S\+S\+R\+P\+\_\+get\+Total\+Pear@{S\+S\+R\+P\+\_\+get\+Total\+Pear}!ssrp.\+h@{ssrp.\+h}}
+\paragraph[{S\+S\+R\+P\+\_\+get\+Total\+Pear()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \+\_\+\+U\+B\+Y\+T\+E} S\+S\+R\+P\+\_\+get\+Total\+Pear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{ssrp_8h_a9240dde7ea686a06a93a077fbe992d9f_a9240dde7ea686a06a93a077fbe992d9f}
+
+
+ネットワークのノード数を取得する 
+
+S\+S\+R\+Pネットワークに参加しているノードの総数を取得する。自ノードも含む。
+
+\begin{DoxyReturn}{戻り値}
+ノード総数 
+\end{DoxyReturn}
+\index{ssrp.\+h@{ssrp.\+h}!S\+S\+R\+P\+\_\+ready@{S\+S\+R\+P\+\_\+ready}}
+\index{S\+S\+R\+P\+\_\+ready@{S\+S\+R\+P\+\_\+ready}!ssrp.\+h@{ssrp.\+h}}
+\paragraph[{S\+S\+R\+P\+\_\+ready()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \+\_\+\+B\+O\+O\+L} S\+S\+R\+P\+\_\+ready (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{ssrp_8h_a3a7aa1a88902aa601273dc0bffc7ebee_a3a7aa1a88902aa601273dc0bffc7ebee}
+
+
+送受信可能状態の判定 
+
+S\+S\+R\+Pは最初に他ノードとのコネクションを張るが、この処理が完了しないと 送受信処理は行えないため、その状態判定に使用する。
+
+
+\begin{DoxyRetVals}{戻り値}
+{\em \+\_\+\+T\+R\+U\+E} & 接続済み。送受信可能 \\
+\hline
+{\em \+\_\+\+F\+A\+L\+S\+E} & 未接続。送受信不可 \\
+\hline
+\end{DoxyRetVals}
+\index{ssrp.\+h@{ssrp.\+h}!S\+S\+R\+P\+\_\+exec@{S\+S\+R\+P\+\_\+exec}}
+\index{S\+S\+R\+P\+\_\+exec@{S\+S\+R\+P\+\_\+exec}!ssrp.\+h@{ssrp.\+h}}
+\paragraph[{S\+S\+R\+P\+\_\+exec()}]{\setlength{\rightskip}{0pt plus 5cm}void S\+S\+R\+P\+\_\+exec (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{ssrp_8h_ac96d60ff1f8be5a2c06c6a6d076c97bb_ac96d60ff1f8be5a2c06c6a6d076c97bb}
+
+
+定期処理の実行 
+
+接続処理やパケットリレー、パケット受信などを行う。この\+A\+P\+Iを定期的に実行 することで\+S\+S\+R\+Pが駆動する。\+S\+S\+R\+P\+\_\+startが未実行の場合はパケットリレーのみが 行われる。 
+
+\subsubsection{変数詳解}
+\index{ssrp.\+h@{ssrp.\+h}!S\+S\+R\+P\+\_\+my\+\_\+addr@{S\+S\+R\+P\+\_\+my\+\_\+addr}}
+\index{S\+S\+R\+P\+\_\+my\+\_\+addr@{S\+S\+R\+P\+\_\+my\+\_\+addr}!ssrp.\+h@{ssrp.\+h}}
+\paragraph[{S\+S\+R\+P\+\_\+my\+\_\+addr}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \+\_\+\+S\+B\+Y\+T\+E} S\+S\+R\+P\+\_\+my\+\_\+addr\mbox{[}$\,$\mbox{]}}\label{ssrp_8h_aa4c37698233390ed91134a95341cb625_aa4c37698233390ed91134a95341cb625}
+
+
+自ノードアドレス文字列 
+
+S\+S\+R\+P\+\_\+\+Addrの値が2桁の16進数字列で設定される。 

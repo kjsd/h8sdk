@@ -1,0 +1,5 @@
+<map id="MUSIC_Part" name="MUSIC_Part">
+<area shape="rect" id="node2" href="$db/d10/music_8h.html#df/dbe/structMUSIC__Note" title="音符定義型 " alt="" coords="273,440,373,517"/>
+<area shape="rect" id="node3" href="$d9/d88/sound_8h.html#d6/d3c/structSOUND__Tone" title="音定義型 " alt="" coords="158,300,266,377"/>
+<area shape="rect" id="node6" href="$d9/d88/sound_8h.html#d0/d92/structSOUND__Envelope" title="エンベロープ定義型 " alt="" coords="96,145,229,223"/>
+</map>

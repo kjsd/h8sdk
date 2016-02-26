@@ -1,0 +1,15 @@
+\begin{theindex}
+
+  \item {main}
+    \subitem {test.\+h}, \hyperpage{2}
+
+  \indexspace
+
+  \item {T\+E\+S\+T\+\_\+\+F\+A\+I\+L\+U\+R\+E}
+    \subitem {test.\+h}, \hyperpage{2}
+  \item {test.\+h}
+    \subitem {main}, \hyperpage{2}
+    \subitem {T\+E\+S\+T\+\_\+\+F\+A\+I\+L\+U\+R\+E}, \hyperpage{2}
+  \item {test/test.\+h}, \hyperpage{1}
+
+\end{theindex}

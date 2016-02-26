@@ -1,0 +1,112 @@
+\subsection{include/h8sdk/unit\+\_\+test.h ファイル}
+\label{unit__test_8h}\index{include/h8sdk/unit\+\_\+test.\+h@{include/h8sdk/unit\+\_\+test.\+h}}
+
+
+ユニットテストモジュール  
+
+
+\subsubsection*{マクロ定義}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{unit__test_8h_a43398eef18d5cba509bb5f3db3ee8ca0_a43398eef18d5cba509bb5f3db3ee8ca0}{U\+T\+E\+S\+T\+\_\+assert}(message,  test)                              ~do \{ if (!(test)) return message; \} while (0)
+\begin{DoxyCompactList}\small\item\em 条件評価 \end{DoxyCompactList}\item 
+\#define \hyperlink{unit__test_8h_a264adea8243e5b630fba52f2eb0f3b89_a264adea8243e5b630fba52f2eb0f3b89}{U\+T\+E\+S\+T\+\_\+run}(test)                                                      
+\begin{DoxyCompactList}\small\item\em テスト関数実行 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{型定義}
+\begin{DoxyCompactItemize}
+\item 
+typedef char $\ast$($\ast$ \hyperlink{unit__test_8h_ab45728c52edb48f928e7c19aaaa52eec_ab45728c52edb48f928e7c19aaaa52eec}{U\+T\+E\+S\+T\+\_\+\+Func}) ()
+\begin{DoxyCompactList}\small\item\em テスト関数型 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{変数}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{unit__test_8h_acd7569f2b3fd36e6f3b47850e36ccdb0_acd7569f2b3fd36e6f3b47850e36ccdb0}{U\+T\+E\+S\+T\+\_\+run\+\_\+count}
+\begin{DoxyCompactList}\small\item\em テスト回数パラメータ \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{詳解}
+ユニットテストモジュール 
+
+ 
+
+\subsubsection{マクロ定義詳解}
+\index{unit\+\_\+test.\+h@{unit\+\_\+test.\+h}!U\+T\+E\+S\+T\+\_\+assert@{U\+T\+E\+S\+T\+\_\+assert}}
+\index{U\+T\+E\+S\+T\+\_\+assert@{U\+T\+E\+S\+T\+\_\+assert}!unit\+\_\+test.\+h@{unit\+\_\+test.\+h}}
+\paragraph[{U\+T\+E\+S\+T\+\_\+assert}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+T\+E\+S\+T\+\_\+assert(
+\begin{DoxyParamCaption}
+\item[{}]{message, }
+\item[{}]{test}
+\end{DoxyParamCaption}
+)~do \{ if (!(test)) return message; \} while (0)}\label{unit__test_8h_a43398eef18d5cba509bb5f3db3ee8ca0_a43398eef18d5cba509bb5f3db3ee8ca0}
+
+
+条件評価 
+
+指定された条件を評価し、偽ならば指定文字列を返して呼び出し元関数を 抜ける。
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\tt in}  & {\em message} & 評価が偽のときのメッセージ \\
+\hline
+\mbox{\tt in}  & {\em test} & 評価式 \\
+\hline
+\end{DoxyParams}
+
+
+ unit\+\_\+test.\+h の 46 行目に定義があります。
+
+\index{unit\+\_\+test.\+h@{unit\+\_\+test.\+h}!U\+T\+E\+S\+T\+\_\+run@{U\+T\+E\+S\+T\+\_\+run}}
+\index{U\+T\+E\+S\+T\+\_\+run@{U\+T\+E\+S\+T\+\_\+run}!unit\+\_\+test.\+h@{unit\+\_\+test.\+h}}
+\paragraph[{U\+T\+E\+S\+T\+\_\+run}]{\setlength{\rightskip}{0pt plus 5cm}\#define U\+T\+E\+S\+T\+\_\+run(
+\begin{DoxyParamCaption}
+\item[{}]{test}
+\end{DoxyParamCaption}
+)}\label{unit__test_8h_a264adea8243e5b630fba52f2eb0f3b89_a264adea8243e5b630fba52f2eb0f3b89}
+{\bfseries 値\+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{do} \{                                            \(\backslash\)
+        char *message = (test)();                   \(\backslash\)
+        UTEST\_run\_count++;                          \(\backslash\)
+        if (message) return message;                \(\backslash\)
+    \} while (0)
+\end{DoxyCode}
+
+
+テスト関数実行 
+
+指定されたテスト関数を実行し、失敗した場合はメッセージを返して呼び 出し元関数を抜ける。
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\tt in}  & {\em test} & 実行するテスト関数へのポインタ \\
+\hline
+\end{DoxyParams}
+
+
+ unit\+\_\+test.\+h の 57 行目に定義があります。
+
+
+
+\subsubsection{型定義詳解}
+\index{unit\+\_\+test.\+h@{unit\+\_\+test.\+h}!U\+T\+E\+S\+T\+\_\+\+Func@{U\+T\+E\+S\+T\+\_\+\+Func}}
+\index{U\+T\+E\+S\+T\+\_\+\+Func@{U\+T\+E\+S\+T\+\_\+\+Func}!unit\+\_\+test.\+h@{unit\+\_\+test.\+h}}
+\paragraph[{U\+T\+E\+S\+T\+\_\+\+Func}]{\setlength{\rightskip}{0pt plus 5cm}typedef char$\ast$($\ast$ U\+T\+E\+S\+T\+\_\+\+Func) ()}\label{unit__test_8h_ab45728c52edb48f928e7c19aaaa52eec_ab45728c52edb48f928e7c19aaaa52eec}
+
+
+テスト関数型 
+
+U\+T\+E\+S\+T\+\_\+runに与えるテスト関数の型 
+
+ unit\+\_\+test.\+h の 27 行目に定義があります。
+
+
+
+\subsubsection{変数詳解}
+\index{unit\+\_\+test.\+h@{unit\+\_\+test.\+h}!U\+T\+E\+S\+T\+\_\+run\+\_\+count@{U\+T\+E\+S\+T\+\_\+run\+\_\+count}}
+\index{U\+T\+E\+S\+T\+\_\+run\+\_\+count@{U\+T\+E\+S\+T\+\_\+run\+\_\+count}!unit\+\_\+test.\+h@{unit\+\_\+test.\+h}}
+\paragraph[{U\+T\+E\+S\+T\+\_\+run\+\_\+count}]{\setlength{\rightskip}{0pt plus 5cm}int U\+T\+E\+S\+T\+\_\+run\+\_\+count}\label{unit__test_8h_acd7569f2b3fd36e6f3b47850e36ccdb0_acd7569f2b3fd36e6f3b47850e36ccdb0}
+
+
+テスト回数パラメータ 
+
+U\+T\+E\+S\+T\+\_\+runを実行する度にカウントアップする。テストモジュール本体で実 装しておく。 

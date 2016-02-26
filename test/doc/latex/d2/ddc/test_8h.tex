@@ -1,0 +1,69 @@
+\subsection{test/test.h ファイル}
+\label{test_8h}\index{test/test.\+h@{test/test.\+h}}
+
+
+H8\+S\+D\+Kユニットテストモジュール  
+
+
+{\ttfamily \#include $<$h8sdk/unit\+\_\+test.\+h$>$}\\*
+test.\+h の依存先関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=136pt]{de/dc1/test_8h__incl}
+\end{center}
+\end{figure}
+\subsubsection*{マクロ定義}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{test_8h_acefd270dacb1cf3685e5069fb5ea292c_acefd270dacb1cf3685e5069fb5ea292c}{T\+E\+S\+T\+\_\+\+F\+A\+I\+L\+U\+R\+E}(x)~\+\_\+printf(\char`\"{}$\ast$$\ast$$\ast$ Failed\+: \%s\textbackslash{}r\textbackslash{}n\char`\"{}, (x));
+\end{DoxyCompactItemize}
+\subsubsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{test_8h_a6288eba0f8e8ad3ab1544ad731eb7667_a6288eba0f8e8ad3ab1544ad731eb7667}{main} (void)
+\begin{DoxyCompactList}\small\item\em ユーザーエントリ関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{詳解}
+H8\+S\+D\+Kユニットテストモジュール 
+
+H8\+S\+D\+Kインタフェースのテストを行う。実行する前に\+H8基板と\+P\+Cをシリアル ポートで接続し、シリアル出力を\+P\+Cからモニタリングすること。接続設定 は\+S\+C\+I\+\_\+initを参照。~\newline
+テスト対象となるモジュールはコンパイルスイッチによって決定する。マ クロ定義は以下。
+
+\begin{DoxyItemize}
+\item {\ttfamily T\+E\+S\+T\+\_\+\+A\+S\+S\+E\+R\+T} assert.\+hのテストを有効 \item {\ttfamily T\+E\+S\+T\+\_\+\+S\+T\+D\+C} stdio.\+h, stdlib.\+h, string.\+h のテストを有効 \item {\ttfamily T\+E\+S\+T\+\_\+\+L\+C\+D} lcd.\+hのテストを有効 \item {\ttfamily T\+E\+S\+T\+\_\+\+P\+U\+S\+H\+\_\+\+S\+W\+I\+T\+C\+H} push\+\_\+switch.\+hのテストを有効 \item {\ttfamily T\+E\+S\+T\+\_\+\+A\+D\+C} adc.\+hのテストを有効 \item {\ttfamily T\+E\+S\+T\+\_\+\+P\+S2} ps2.\+hのテストを有効 \item {\ttfamily T\+E\+S\+T\+\_\+\+S\+O\+U\+N\+D} sound.\+hのテストを有効 \item {\ttfamily T\+E\+S\+T\+\_\+\+M\+U\+S\+I\+C} music.\+hのテストを有効 \item {\ttfamily T\+E\+S\+T\+\_\+\+S\+S\+R\+P} ssrp.\+hのテストを有効\end{DoxyItemize}
+\begin{DoxyNote}{覚え書き}
+\begin{DoxyItemize}
+\item music.\+hのテストをするときは\+U\+S\+E\+\_\+\+M\+U\+S\+I\+C\+\_\+\+R\+E\+C\+O\+R\+D、ssrp.\+hのテストをす るときは\+U\+S\+E\+\_\+\+L\+O\+O\+P\+B\+A\+C\+K\+\_\+\+S\+S\+R\+Pをdefineしてコンパイルした\+H8\+S\+D\+Kを用意する こと。 \item P\+S/2ドライバをテストするときは基板から\+E8aエミュレータを外すこと。 \item assertモジュールをテストするときは他のドライバとモジュールのテ ストは行われず、確認方法もデバッガ(H\+E\+Wなど)を使うしかない。 \item 全てのモジュールをテストすることはメモリ容量上できないので、テ スト対象ではないモジュールはh8sdk.\+libから外しておく。\end{DoxyItemize}
+ 
+\end{DoxyNote}
+
+
+\subsubsection{マクロ定義詳解}
+\index{test.\+h@{test.\+h}!T\+E\+S\+T\+\_\+\+F\+A\+I\+L\+U\+R\+E@{T\+E\+S\+T\+\_\+\+F\+A\+I\+L\+U\+R\+E}}
+\index{T\+E\+S\+T\+\_\+\+F\+A\+I\+L\+U\+R\+E@{T\+E\+S\+T\+\_\+\+F\+A\+I\+L\+U\+R\+E}!test.\+h@{test.\+h}}
+\paragraph[{T\+E\+S\+T\+\_\+\+F\+A\+I\+L\+U\+R\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+E\+S\+T\+\_\+\+F\+A\+I\+L\+U\+R\+E(
+\begin{DoxyParamCaption}
+\item[{}]{x}
+\end{DoxyParamCaption}
+)~\+\_\+printf(\char`\"{}$\ast$$\ast$$\ast$ Failed\+: \%s\textbackslash{}r\textbackslash{}n\char`\"{}, (x));}\label{test_8h_acefd270dacb1cf3685e5069fb5ea292c_acefd270dacb1cf3685e5069fb5ea292c}
+
+
+ test.\+h の 56 行目に定義があります。
+
+
+
+\subsubsection{関数詳解}
+\index{test.\+h@{test.\+h}!main@{main}}
+\index{main@{main}!test.\+h@{test.\+h}}
+\paragraph[{main(void)}]{\setlength{\rightskip}{0pt plus 5cm}void main (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{test_8h_a6288eba0f8e8ad3ab1544ad731eb7667_a6288eba0f8e8ad3ab1544ad731eb7667}
+
+
+ユーザーエントリ関数 
+

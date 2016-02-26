@@ -1,0 +1,89 @@
+\subsection{include/h8sdk/ssrp\+\_\+skel.h ファイル}
+\label{ssrp__skel_8h}\index{include/h8sdk/ssrp\+\_\+skel.\+h@{include/h8sdk/ssrp\+\_\+skel.\+h}}
+
+
+S\+S\+R\+Pスケルトン  
+
+
+{\ttfamily \#include \char`\"{}stddef.\+h\char`\"{}}\\*
+ssrp\+\_\+skel.\+h の依存先関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=143pt]{de/d03/ssrp__skel_8h__incl}
+\end{center}
+\end{figure}
+\subsubsection*{マクロ定義}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{ssrp__skel_8h_afb8d035bce479337376e668f945a7108_afb8d035bce479337376e668f945a7108}{S\+S\+R\+P\+\_\+\+S\+K\+E\+L\+\_\+\+L\+O\+O\+P\+B\+A\+C\+K\+\_\+\+A\+D\+D\+R}~0xfe
+\end{DoxyCompactItemize}
+\subsubsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{stddef_8h_aefd1068e35d26c0e7d7079ddf2579174_aefd1068e35d26c0e7d7079ddf2579174}{\+\_\+\+S\+I\+N\+T} \hyperlink{ssrp__skel_8h_ab2e28ef1ff83be3a847336df494d38ae_ab2e28ef1ff83be3a847336df494d38ae}{S\+S\+R\+P\+\_\+\+S\+K\+E\+L\+\_\+write} (const \hyperlink{stddef_8h_aac464b47452ce9406f88ef194e2becc1_aac464b47452ce9406f88ef194e2becc1}{\+\_\+\+U\+B\+Y\+T\+E} $\ast$data, \hyperlink{stddef_8h_aac464b47452ce9406f88ef194e2becc1_aac464b47452ce9406f88ef194e2becc1}{\+\_\+\+U\+B\+Y\+T\+E} size, \hyperlink{stddef_8h_afbf708854fe02af8475a9ba02f3196cb_afbf708854fe02af8475a9ba02f3196cb}{\+\_\+\+B\+O\+O\+L} sync, \hyperlink{stddef_8h_aefd1068e35d26c0e7d7079ddf2579174_aefd1068e35d26c0e7d7079ddf2579174}{\+\_\+\+S\+I\+N\+T} tmo\+\_\+ms)
+\begin{DoxyCompactList}\small\item\em バイトストリーム送信 \end{DoxyCompactList}\item 
+\hyperlink{stddef_8h_aefd1068e35d26c0e7d7079ddf2579174_aefd1068e35d26c0e7d7079ddf2579174}{\+\_\+\+S\+I\+N\+T} \hyperlink{ssrp__skel_8h_a102cdac7558ea62fdd9090cbdae677ac_a102cdac7558ea62fdd9090cbdae677ac}{S\+S\+R\+P\+\_\+\+S\+K\+E\+L\+\_\+read} (\hyperlink{stddef_8h_aac464b47452ce9406f88ef194e2becc1_aac464b47452ce9406f88ef194e2becc1}{\+\_\+\+U\+B\+Y\+T\+E} $\ast$buf, \hyperlink{stddef_8h_aac464b47452ce9406f88ef194e2becc1_aac464b47452ce9406f88ef194e2becc1}{\+\_\+\+U\+B\+Y\+T\+E} size, \hyperlink{stddef_8h_afbf708854fe02af8475a9ba02f3196cb_afbf708854fe02af8475a9ba02f3196cb}{\+\_\+\+B\+O\+O\+L} sync, \hyperlink{stddef_8h_aefd1068e35d26c0e7d7079ddf2579174_aefd1068e35d26c0e7d7079ddf2579174}{\+\_\+\+S\+I\+N\+T} tmo\+\_\+ms)
+\begin{DoxyCompactList}\small\item\em バイトストリーム受信 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{詳解}
+S\+S\+R\+Pスケルトン 
+
+このモジュールは\+S\+S\+R\+P通信をループバックで行うためのスケルトンである。
+
+\begin{DoxySeeAlso}{参照}
+\hyperlink{ssrp_8h}{ssrp.\+h}
+\end{DoxySeeAlso}
+ 
+
+\subsubsection{マクロ定義詳解}
+\index{ssrp\+\_\+skel.\+h@{ssrp\+\_\+skel.\+h}!S\+S\+R\+P\+\_\+\+S\+K\+E\+L\+\_\+\+L\+O\+O\+P\+B\+A\+C\+K\+\_\+\+A\+D\+D\+R@{S\+S\+R\+P\+\_\+\+S\+K\+E\+L\+\_\+\+L\+O\+O\+P\+B\+A\+C\+K\+\_\+\+A\+D\+D\+R}}
+\index{S\+S\+R\+P\+\_\+\+S\+K\+E\+L\+\_\+\+L\+O\+O\+P\+B\+A\+C\+K\+\_\+\+A\+D\+D\+R@{S\+S\+R\+P\+\_\+\+S\+K\+E\+L\+\_\+\+L\+O\+O\+P\+B\+A\+C\+K\+\_\+\+A\+D\+D\+R}!ssrp\+\_\+skel.\+h@{ssrp\+\_\+skel.\+h}}
+\paragraph[{S\+S\+R\+P\+\_\+\+S\+K\+E\+L\+\_\+\+L\+O\+O\+P\+B\+A\+C\+K\+\_\+\+A\+D\+D\+R}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+S\+R\+P\+\_\+\+S\+K\+E\+L\+\_\+\+L\+O\+O\+P\+B\+A\+C\+K\+\_\+\+A\+D\+D\+R~0xfe}\label{ssrp__skel_8h_afb8d035bce479337376e668f945a7108_afb8d035bce479337376e668f945a7108}
+
+
+ ssrp\+\_\+skel.\+h の 28 行目に定義があります。
+
+
+
+\subsubsection{関数詳解}
+\index{ssrp\+\_\+skel.\+h@{ssrp\+\_\+skel.\+h}!S\+S\+R\+P\+\_\+\+S\+K\+E\+L\+\_\+write@{S\+S\+R\+P\+\_\+\+S\+K\+E\+L\+\_\+write}}
+\index{S\+S\+R\+P\+\_\+\+S\+K\+E\+L\+\_\+write@{S\+S\+R\+P\+\_\+\+S\+K\+E\+L\+\_\+write}!ssrp\+\_\+skel.\+h@{ssrp\+\_\+skel.\+h}}
+\paragraph[{S\+S\+R\+P\+\_\+\+S\+K\+E\+L\+\_\+write(const \+\_\+\+U\+B\+Y\+T\+E $\ast$data, \+\_\+\+U\+B\+Y\+T\+E size, \+\_\+\+B\+O\+O\+L sync, \+\_\+\+S\+I\+N\+T tmo\+\_\+ms)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \+\_\+\+S\+I\+N\+T} S\+S\+R\+P\+\_\+\+S\+K\+E\+L\+\_\+write (
+\begin{DoxyParamCaption}
+\item[{const {\bf \+\_\+\+U\+B\+Y\+T\+E} $\ast$}]{data, }
+\item[{{\bf \+\_\+\+U\+B\+Y\+T\+E}}]{size, }
+\item[{{\bf \+\_\+\+B\+O\+O\+L}}]{sync, }
+\item[{{\bf \+\_\+\+S\+I\+N\+T}}]{tmo\+\_\+ms}
+\end{DoxyParamCaption}
+)}\label{ssrp__skel_8h_ab2e28ef1ff83be3a847336df494d38ae_ab2e28ef1ff83be3a847336df494d38ae}
+
+
+バイトストリーム送信 
+
+常に成功する送信\+A\+P\+I。送信データは破棄される。 その他仕様はifstub.\+hに準拠。
+
+\begin{DoxySeeAlso}{参照}
+\hyperlink{ifstub_8h}{ifstub.\+h} 
+\end{DoxySeeAlso}
+\index{ssrp\+\_\+skel.\+h@{ssrp\+\_\+skel.\+h}!S\+S\+R\+P\+\_\+\+S\+K\+E\+L\+\_\+read@{S\+S\+R\+P\+\_\+\+S\+K\+E\+L\+\_\+read}}
+\index{S\+S\+R\+P\+\_\+\+S\+K\+E\+L\+\_\+read@{S\+S\+R\+P\+\_\+\+S\+K\+E\+L\+\_\+read}!ssrp\+\_\+skel.\+h@{ssrp\+\_\+skel.\+h}}
+\paragraph[{S\+S\+R\+P\+\_\+\+S\+K\+E\+L\+\_\+read(\+\_\+\+U\+B\+Y\+T\+E $\ast$buf, \+\_\+\+U\+B\+Y\+T\+E size, \+\_\+\+B\+O\+O\+L sync, \+\_\+\+S\+I\+N\+T tmo\+\_\+ms)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \+\_\+\+S\+I\+N\+T} S\+S\+R\+P\+\_\+\+S\+K\+E\+L\+\_\+read (
+\begin{DoxyParamCaption}
+\item[{{\bf \+\_\+\+U\+B\+Y\+T\+E} $\ast$}]{buf, }
+\item[{{\bf \+\_\+\+U\+B\+Y\+T\+E}}]{size, }
+\item[{{\bf \+\_\+\+B\+O\+O\+L}}]{sync, }
+\item[{{\bf \+\_\+\+S\+I\+N\+T}}]{tmo\+\_\+ms}
+\end{DoxyParamCaption}
+)}\label{ssrp__skel_8h_a102cdac7558ea62fdd9090cbdae677ac_a102cdac7558ea62fdd9090cbdae677ac}
+
+
+バイトストリーム受信 
+
+S\+S\+R\+Pの内部状態に応じて常に適切な受信データを返す。 その他仕様はifstub.\+hに準拠。
+
+\begin{DoxySeeAlso}{参照}
+\hyperlink{ifstub_8h}{ifstub.\+h} 
+\end{DoxySeeAlso}

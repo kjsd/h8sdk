@@ -1,0 +1,146 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.10"/>
+<title>H8SDK: include/h8sdk/adc.h ソースファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">H8SDK
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.10 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="../../index.html"><span>総合概要</span></a></li>
+      <li><a href="../../pages.html"><span>諸情報</span></a></li>
+      <li><a href="../../annotated.html"><span>クラス</span></a></li>
+      <li class="current"><a href="../../files.html"><span>ファイル</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="../../files.html"><span>ファイル一覧</span></a></li>
+      <li><a href="../../globals.html"><span>ファイルメンバ</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('d7/d19/adc_8h_source.html','../../');});
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle">
+<div class="title">adc.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d7/d19/adc_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#ifndef _ADC_H_</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#define _ADC_H_</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> {</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d3/dce/stddef_8h.html">stddef.h</a>&quot;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="../../d7/d19/adc_8h_a184c6673e1a242cded56d57b9600e591.html#a184c6673e1a242cded56d57b9600e591">   34</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;{</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="../../d7/d19/adc_8h_a184c6673e1a242cded56d57b9600e591.html#a184c6673e1a242cded56d57b9600e591ae58688800227d2e53c5c826f175d0676">   36</a></span>&#160;    <a class="code" href="../../d7/d19/adc_8h_a184c6673e1a242cded56d57b9600e591.html#a184c6673e1a242cded56d57b9600e591ae58688800227d2e53c5c826f175d0676">ADC_NORMAL</a> = 0,</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="../../d7/d19/adc_8h_a184c6673e1a242cded56d57b9600e591.html#a184c6673e1a242cded56d57b9600e591ac421996f600e6f84ea8a08b3c89bda41">   38</a></span>&#160;    <a class="code" href="../../d7/d19/adc_8h_a184c6673e1a242cded56d57b9600e591.html#a184c6673e1a242cded56d57b9600e591ac421996f600e6f84ea8a08b3c89bda41">ADC_SCAN</a>,</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="../../d7/d19/adc_8h_a184c6673e1a242cded56d57b9600e591.html#a184c6673e1a242cded56d57b9600e591aec9562b03bab4f1d385bf577c4a50940">   40</a></span>&#160;    <a class="code" href="../../d7/d19/adc_8h_a184c6673e1a242cded56d57b9600e591.html#a184c6673e1a242cded56d57b9600e591aec9562b03bab4f1d385bf577c4a50940">ADC_NUM_OF_MODE</a></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;} <a class="code" href="../../d7/d19/adc_8h_a184c6673e1a242cded56d57b9600e591.html#a184c6673e1a242cded56d57b9600e591">ADC_Mode</a>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="../../d7/d19/adc_8h_ad7b9fa1ae8a65e534cce7d26fa0984f6.html#ad7b9fa1ae8a65e534cce7d26fa0984f6">   47</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;{</div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="../../d7/d19/adc_8h_ad7b9fa1ae8a65e534cce7d26fa0984f6.html#ad7b9fa1ae8a65e534cce7d26fa0984f6a2b312b52fe5d414d9bd2cba051dcd72a">   49</a></span>&#160;    <a class="code" href="../../d7/d19/adc_8h_ad7b9fa1ae8a65e534cce7d26fa0984f6.html#ad7b9fa1ae8a65e534cce7d26fa0984f6a2b312b52fe5d414d9bd2cba051dcd72a">ADC_AN0</a> = 0,</div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="../../d7/d19/adc_8h_ad7b9fa1ae8a65e534cce7d26fa0984f6.html#ad7b9fa1ae8a65e534cce7d26fa0984f6a1c51560713abb867567f99d4c78763bd">   51</a></span>&#160;    <a class="code" href="../../d7/d19/adc_8h_ad7b9fa1ae8a65e534cce7d26fa0984f6.html#ad7b9fa1ae8a65e534cce7d26fa0984f6a1c51560713abb867567f99d4c78763bd">ADC_AN1</a>,</div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="../../d7/d19/adc_8h_ad7b9fa1ae8a65e534cce7d26fa0984f6.html#ad7b9fa1ae8a65e534cce7d26fa0984f6acfaa570d9fd2190be56d1fc8cb23ef32">   53</a></span>&#160;    <a class="code" href="../../d7/d19/adc_8h_ad7b9fa1ae8a65e534cce7d26fa0984f6.html#ad7b9fa1ae8a65e534cce7d26fa0984f6acfaa570d9fd2190be56d1fc8cb23ef32">ADC_AN2</a>,</div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="../../d7/d19/adc_8h_ad7b9fa1ae8a65e534cce7d26fa0984f6.html#ad7b9fa1ae8a65e534cce7d26fa0984f6adf2a7a958cab5ddfa2a8cde10bc6ab93">   55</a></span>&#160;    <a class="code" href="../../d7/d19/adc_8h_ad7b9fa1ae8a65e534cce7d26fa0984f6.html#ad7b9fa1ae8a65e534cce7d26fa0984f6adf2a7a958cab5ddfa2a8cde10bc6ab93">ADC_AN3</a>,</div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="../../d7/d19/adc_8h_ad7b9fa1ae8a65e534cce7d26fa0984f6.html#ad7b9fa1ae8a65e534cce7d26fa0984f6a3d2f32aec0a1ff17b92c055b8b05f9c6">   57</a></span>&#160;    <a class="code" href="../../d7/d19/adc_8h_ad7b9fa1ae8a65e534cce7d26fa0984f6.html#ad7b9fa1ae8a65e534cce7d26fa0984f6a3d2f32aec0a1ff17b92c055b8b05f9c6">ADC_NUM_OF_CHANNEL</a></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;} <a class="code" href="../../d7/d19/adc_8h_ad7b9fa1ae8a65e534cce7d26fa0984f6.html#ad7b9fa1ae8a65e534cce7d26fa0984f6">ADC_Channel</a>;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d7/d19/adc_8h_ade9427cdb56898519822987924abac56.html#ade9427cdb56898519822987924abac56">ADC_init</a>(<a class="code" href="../../d7/d19/adc_8h_a184c6673e1a242cded56d57b9600e591.html#a184c6673e1a242cded56d57b9600e591">ADC_Mode</a> mode, <a class="code" href="../../d3/dce/stddef_8h_afbf708854fe02af8475a9ba02f3196cb.html#afbf708854fe02af8475a9ba02f3196cb">_BOOL</a> interrupt);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d7/d19/adc_8h_a57fd0ce331f38600a2db2ffbba308372.html#a57fd0ce331f38600a2db2ffbba308372">ADC_enable</a>(<a class="code" href="../../d7/d19/adc_8h_ad7b9fa1ae8a65e534cce7d26fa0984f6.html#ad7b9fa1ae8a65e534cce7d26fa0984f6">ADC_Channel</a> ch);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d7/d19/adc_8h_ae2f308dccaf207cc9242332c7671029d.html#ae2f308dccaf207cc9242332c7671029d">ADC_disable</a>(<a class="code" href="../../d7/d19/adc_8h_ad7b9fa1ae8a65e534cce7d26fa0984f6.html#ad7b9fa1ae8a65e534cce7d26fa0984f6">ADC_Channel</a> ch);</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d7/d19/adc_8h_a32572a51eecfb3116590f3093fb16300.html#a32572a51eecfb3116590f3093fb16300">ADC_start</a>();</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d7/d19/adc_8h_a9bf6b42d8730704dd47b5a025e6b419a.html#a9bf6b42d8730704dd47b5a025e6b419a">ADC_stop</a>();</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;<a class="code" href="../../d3/dce/stddef_8h_a931e4fd9bf350284fc21e94cd5ee126f.html#a931e4fd9bf350284fc21e94cd5ee126f">_SDWORD</a> <a class="code" href="../../d7/d19/adc_8h_a47c7c4daf8f782717d6ae97bc0054aa3.html#a47c7c4daf8f782717d6ae97bc0054aa3">ADC_get</a>(<a class="code" href="../../d7/d19/adc_8h_ad7b9fa1ae8a65e534cce7d26fa0984f6.html#ad7b9fa1ae8a65e534cce7d26fa0984f6">ADC_Channel</a> anx, <a class="code" href="../../d3/dce/stddef_8h_afbf708854fe02af8475a9ba02f3196cb.html#afbf708854fe02af8475a9ba02f3196cb">_BOOL</a> last);</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;}</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* _ADC_H_ */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="adc_8h_a184c6673e1a242cded56d57b9600e591_html_a184c6673e1a242cded56d57b9600e591ae58688800227d2e53c5c826f175d0676"><div class="ttname"><a href="../../d7/d19/adc_8h_a184c6673e1a242cded56d57b9600e591.html#a184c6673e1a242cded56d57b9600e591ae58688800227d2e53c5c826f175d0676">ADC_NORMAL</a></div><div class="ttdoc">ノーマルモード </div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d19/adc_8h_source.html#l00036">adc.h:36</a></div></div>
+<div class="ttc" id="adc_8h_a9bf6b42d8730704dd47b5a025e6b419a_html_a9bf6b42d8730704dd47b5a025e6b419a"><div class="ttname"><a href="../../d7/d19/adc_8h_a9bf6b42d8730704dd47b5a025e6b419a.html#a9bf6b42d8730704dd47b5a025e6b419a">ADC_stop</a></div><div class="ttdeci">void ADC_stop()</div><div class="ttdoc">A/D変換停止 </div></div>
+<div class="ttc" id="adc_8h_ad7b9fa1ae8a65e534cce7d26fa0984f6_html_ad7b9fa1ae8a65e534cce7d26fa0984f6"><div class="ttname"><a href="../../d7/d19/adc_8h_ad7b9fa1ae8a65e534cce7d26fa0984f6.html#ad7b9fa1ae8a65e534cce7d26fa0984f6">ADC_Channel</a></div><div class="ttdeci">ADC_Channel</div><div class="ttdoc">チャネル識別子 </div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d19/adc_8h_source.html#l00047">adc.h:47</a></div></div>
+<div class="ttc" id="adc_8h_ade9427cdb56898519822987924abac56_html_ade9427cdb56898519822987924abac56"><div class="ttname"><a href="../../d7/d19/adc_8h_ade9427cdb56898519822987924abac56.html#ade9427cdb56898519822987924abac56">ADC_init</a></div><div class="ttdeci">void ADC_init(ADC_Mode mode, _BOOL interrupt)</div><div class="ttdoc">A/Dコンバータ初期化 </div></div>
+<div class="ttc" id="adc_8h_a47c7c4daf8f782717d6ae97bc0054aa3_html_a47c7c4daf8f782717d6ae97bc0054aa3"><div class="ttname"><a href="../../d7/d19/adc_8h_a47c7c4daf8f782717d6ae97bc0054aa3.html#a47c7c4daf8f782717d6ae97bc0054aa3">ADC_get</a></div><div class="ttdeci">_SDWORD ADC_get(ADC_Channel anx, _BOOL last)</div><div class="ttdoc">A/D変換データを取得する </div></div>
+<div class="ttc" id="adc_8h_a184c6673e1a242cded56d57b9600e591_html_a184c6673e1a242cded56d57b9600e591ac421996f600e6f84ea8a08b3c89bda41"><div class="ttname"><a href="../../d7/d19/adc_8h_a184c6673e1a242cded56d57b9600e591.html#a184c6673e1a242cded56d57b9600e591ac421996f600e6f84ea8a08b3c89bda41">ADC_SCAN</a></div><div class="ttdoc">スキャンモード </div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d19/adc_8h_source.html#l00038">adc.h:38</a></div></div>
+<div class="ttc" id="adc_8h_ad7b9fa1ae8a65e534cce7d26fa0984f6_html_ad7b9fa1ae8a65e534cce7d26fa0984f6adf2a7a958cab5ddfa2a8cde10bc6ab93"><div class="ttname"><a href="../../d7/d19/adc_8h_ad7b9fa1ae8a65e534cce7d26fa0984f6.html#ad7b9fa1ae8a65e534cce7d26fa0984f6adf2a7a958cab5ddfa2a8cde10bc6ab93">ADC_AN3</a></div><div class="ttdoc">チャネルポートAN3 </div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d19/adc_8h_source.html#l00055">adc.h:55</a></div></div>
+<div class="ttc" id="adc_8h_a32572a51eecfb3116590f3093fb16300_html_a32572a51eecfb3116590f3093fb16300"><div class="ttname"><a href="../../d7/d19/adc_8h_a32572a51eecfb3116590f3093fb16300.html#a32572a51eecfb3116590f3093fb16300">ADC_start</a></div><div class="ttdeci">void ADC_start()</div><div class="ttdoc">A/D変換開始 </div></div>
+<div class="ttc" id="adc_8h_a57fd0ce331f38600a2db2ffbba308372_html_a57fd0ce331f38600a2db2ffbba308372"><div class="ttname"><a href="../../d7/d19/adc_8h_a57fd0ce331f38600a2db2ffbba308372.html#a57fd0ce331f38600a2db2ffbba308372">ADC_enable</a></div><div class="ttdeci">void ADC_enable(ADC_Channel ch)</div><div class="ttdoc">チャネル有効化 </div></div>
+<div class="ttc" id="adc_8h_a184c6673e1a242cded56d57b9600e591_html_a184c6673e1a242cded56d57b9600e591aec9562b03bab4f1d385bf577c4a50940"><div class="ttname"><a href="../../d7/d19/adc_8h_a184c6673e1a242cded56d57b9600e591.html#a184c6673e1a242cded56d57b9600e591aec9562b03bab4f1d385bf577c4a50940">ADC_NUM_OF_MODE</a></div><div class="ttdoc">モード数 </div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d19/adc_8h_source.html#l00040">adc.h:40</a></div></div>
+<div class="ttc" id="stddef_8h_a931e4fd9bf350284fc21e94cd5ee126f_html_a931e4fd9bf350284fc21e94cd5ee126f"><div class="ttname"><a href="../../d3/dce/stddef_8h_a931e4fd9bf350284fc21e94cd5ee126f.html#a931e4fd9bf350284fc21e94cd5ee126f">_SDWORD</a></div><div class="ttdeci">signed long _SDWORD</div><div class="ttdoc">符号あり32ビット整数型 </div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dce/stddef_8h_source.html#l00060">stddef.h:60</a></div></div>
+<div class="ttc" id="adc_8h_a184c6673e1a242cded56d57b9600e591_html_a184c6673e1a242cded56d57b9600e591"><div class="ttname"><a href="../../d7/d19/adc_8h_a184c6673e1a242cded56d57b9600e591.html#a184c6673e1a242cded56d57b9600e591">ADC_Mode</a></div><div class="ttdeci">ADC_Mode</div><div class="ttdoc">設定モード識別子 </div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d19/adc_8h_source.html#l00034">adc.h:34</a></div></div>
+<div class="ttc" id="stddef_8h_afbf708854fe02af8475a9ba02f3196cb_html_afbf708854fe02af8475a9ba02f3196cb"><div class="ttname"><a href="../../d3/dce/stddef_8h_afbf708854fe02af8475a9ba02f3196cb.html#afbf708854fe02af8475a9ba02f3196cb">_BOOL</a></div><div class="ttdeci">_BOOL</div><div class="ttdoc">ブール型 </div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dce/stddef_8h_source.html#l00069">stddef.h:69</a></div></div>
+<div class="ttc" id="stddef_8h_html"><div class="ttname"><a href="../../d3/dce/stddef_8h.html">stddef.h</a></div><div class="ttdoc">共通型、リテラル定義 </div></div>
+<div class="ttc" id="adc_8h_ad7b9fa1ae8a65e534cce7d26fa0984f6_html_ad7b9fa1ae8a65e534cce7d26fa0984f6a3d2f32aec0a1ff17b92c055b8b05f9c6"><div class="ttname"><a href="../../d7/d19/adc_8h_ad7b9fa1ae8a65e534cce7d26fa0984f6.html#ad7b9fa1ae8a65e534cce7d26fa0984f6a3d2f32aec0a1ff17b92c055b8b05f9c6">ADC_NUM_OF_CHANNEL</a></div><div class="ttdoc">チャネルポート数 </div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d19/adc_8h_source.html#l00057">adc.h:57</a></div></div>
+<div class="ttc" id="adc_8h_ad7b9fa1ae8a65e534cce7d26fa0984f6_html_ad7b9fa1ae8a65e534cce7d26fa0984f6a1c51560713abb867567f99d4c78763bd"><div class="ttname"><a href="../../d7/d19/adc_8h_ad7b9fa1ae8a65e534cce7d26fa0984f6.html#ad7b9fa1ae8a65e534cce7d26fa0984f6a1c51560713abb867567f99d4c78763bd">ADC_AN1</a></div><div class="ttdoc">チャネルポートAN1 </div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d19/adc_8h_source.html#l00051">adc.h:51</a></div></div>
+<div class="ttc" id="adc_8h_ae2f308dccaf207cc9242332c7671029d_html_ae2f308dccaf207cc9242332c7671029d"><div class="ttname"><a href="../../d7/d19/adc_8h_ae2f308dccaf207cc9242332c7671029d.html#ae2f308dccaf207cc9242332c7671029d">ADC_disable</a></div><div class="ttdeci">void ADC_disable(ADC_Channel ch)</div><div class="ttdoc">チャネル無効化 </div></div>
+<div class="ttc" id="adc_8h_ad7b9fa1ae8a65e534cce7d26fa0984f6_html_ad7b9fa1ae8a65e534cce7d26fa0984f6acfaa570d9fd2190be56d1fc8cb23ef32"><div class="ttname"><a href="../../d7/d19/adc_8h_ad7b9fa1ae8a65e534cce7d26fa0984f6.html#ad7b9fa1ae8a65e534cce7d26fa0984f6acfaa570d9fd2190be56d1fc8cb23ef32">ADC_AN2</a></div><div class="ttdoc">チャネルポートAN2 </div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d19/adc_8h_source.html#l00053">adc.h:53</a></div></div>
+<div class="ttc" id="adc_8h_ad7b9fa1ae8a65e534cce7d26fa0984f6_html_ad7b9fa1ae8a65e534cce7d26fa0984f6a2b312b52fe5d414d9bd2cba051dcd72a"><div class="ttname"><a href="../../d7/d19/adc_8h_ad7b9fa1ae8a65e534cce7d26fa0984f6.html#ad7b9fa1ae8a65e534cce7d26fa0984f6a2b312b52fe5d414d9bd2cba051dcd72a">ADC_AN0</a></div><div class="ttdoc">チャネルポートAN0 </div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d19/adc_8h_source.html#l00049">adc.h:49</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="../../dir_cccf68db23ba25fb97e4e5b2069f9a17.html">h8sdk</a></li><li class="navelem"><a class="el" href="../../d7/d19/adc_8h.html">adc.h</a></li>
+    <li class="footer">2016年02月27日(土) 00時46分21秒作成 - H8SDK / 構成: 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.10 </li>
+  </ul>
+</div>
+</body>
+</html>

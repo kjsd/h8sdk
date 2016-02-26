@@ -1,0 +1,307 @@
+\subsection{include/h8sdk/stdlib.h ファイル}
+\label{stdlib_8h}\index{include/h8sdk/stdlib.\+h@{include/h8sdk/stdlib.\+h}}
+
+
+ユーティリティライブラリ  
+
+
+{\ttfamily \#include \char`\"{}stddef.\+h\char`\"{}}\\*
+stdlib.\+h の依存先関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=156pt]{d0/de4/stdlib_8h__incl}
+\end{center}
+\end{figure}
+被依存関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=160pt]{da/d24/stdlib_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsubsection*{マクロ定義}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{stdlib_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+L\+L}~((void$\ast$)0)
+\begin{DoxyCompactList}\small\item\em N\+U\+L\+Lポインタ識別子 \end{DoxyCompactList}\item 
+\#define \hyperlink{stdlib_8h_a09ec6c9b71b1fc7389557ff54b39b5cb_a09ec6c9b71b1fc7389557ff54b39b5cb}{\+\_\+usleep}(us)                                                      
+\begin{DoxyCompactList}\small\item\em マイクロ秒スリープ \end{DoxyCompactList}\item 
+\#define \hyperlink{stdlib_8h_af540592c225c081e9b1423f257a240c1_af540592c225c081e9b1423f257a240c1}{\+\_\+msleep}(ms)                                                      
+\begin{DoxyCompactList}\small\item\em ミリ秒スリープ \end{DoxyCompactList}\item 
+\#define \hyperlink{stdlib_8h_ac9ca88c6f8f5736ffa1c2ec2b25efb88_ac9ca88c6f8f5736ffa1c2ec2b25efb88}{\+\_\+next\+\_\+ring}(now,  last)~((now) == (last) ? 0\+: (now) + 1)
+\begin{DoxyCompactList}\small\item\em リングバッファの次のインデックスを取得 \end{DoxyCompactList}\item 
+\#define \hyperlink{stdlib_8h_a4eede692f007e3fe43aa70025af238f9_a4eede692f007e3fe43aa70025af238f9}{\+\_\+prev\+\_\+ring}(now,  last)~((now) == 0 ? (last)\+: (now) -\/ 1)
+\begin{DoxyCompactList}\small\item\em リングバッファの前のインデックスを取得 \end{DoxyCompactList}\item 
+\#define \hyperlink{stdlib_8h_ae8d5719c510ca168d76e46106dbd8ccb_ae8d5719c510ca168d76e46106dbd8ccb}{\+\_\+hash}(x,  size)~((x) \% (size))
+\begin{DoxyCompactList}\small\item\em ハッシュ関数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{stddef_8h_af4b45f5ec97da370bd2173b4fe891d76_af4b45f5ec97da370bd2173b4fe891d76}{\+\_\+\+U\+W\+O\+R\+D} \hyperlink{stdlib_8h_ae621ec4eb313512cd46c749a0d9583b7_ae621ec4eb313512cd46c749a0d9583b7}{\+\_\+check\+\_\+sum} (void $\ast$ary, \hyperlink{stddef_8h_af4b45f5ec97da370bd2173b4fe891d76_af4b45f5ec97da370bd2173b4fe891d76}{\+\_\+\+U\+W\+O\+R\+D} sz)
+\begin{DoxyCompactList}\small\item\em チェックサム計算 \end{DoxyCompactList}\item 
+\hyperlink{stddef_8h_af1d4b529b856acadd9e1b43f5d794d24_af1d4b529b856acadd9e1b43f5d794d24}{\+\_\+\+U\+I\+N\+T} \hyperlink{stdlib_8h_a6c4af00cd660a34b8a46424194ae4f7f_a6c4af00cd660a34b8a46424194ae4f7f}{\+\_\+itoa} (\hyperlink{stddef_8h_af1d4b529b856acadd9e1b43f5d794d24_af1d4b529b856acadd9e1b43f5d794d24}{\+\_\+\+U\+I\+N\+T} in, \hyperlink{stddef_8h_aefd1068e35d26c0e7d7079ddf2579174_aefd1068e35d26c0e7d7079ddf2579174}{\+\_\+\+S\+I\+N\+T} base, \hyperlink{stddef_8h_aab65237ca9fbf4192a39cf12dd165942_aab65237ca9fbf4192a39cf12dd165942}{\+\_\+\+S\+B\+Y\+T\+E} $\ast$out, \hyperlink{stddef_8h_af1d4b529b856acadd9e1b43f5d794d24_af1d4b529b856acadd9e1b43f5d794d24}{\+\_\+\+U\+I\+N\+T} size)
+\begin{DoxyCompactList}\small\item\em 数値文字列変換 \end{DoxyCompactList}\item 
+\hyperlink{stddef_8h_a931e4fd9bf350284fc21e94cd5ee126f_a931e4fd9bf350284fc21e94cd5ee126f}{\+\_\+\+S\+D\+W\+O\+R\+D} \hyperlink{stdlib_8h_a116df1dac9168ab8f49c08f34c1e316e_a116df1dac9168ab8f49c08f34c1e316e}{\+\_\+rand} ()
+\begin{DoxyCompactList}\small\item\em 乱数取得 \end{DoxyCompactList}\item 
+void \hyperlink{stdlib_8h_a7f79ebf65f54b48399029275b2e007b3_a7f79ebf65f54b48399029275b2e007b3}{\+\_\+srand} (\hyperlink{stddef_8h_a931e4fd9bf350284fc21e94cd5ee126f_a931e4fd9bf350284fc21e94cd5ee126f}{\+\_\+\+S\+D\+W\+O\+R\+D} s)
+\begin{DoxyCompactList}\small\item\em 乱数の種設定 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{詳解}
+ユーティリティライブラリ 
+
+ 
+
+\subsubsection{マクロ定義詳解}
+\index{stdlib.\+h@{stdlib.\+h}!N\+U\+L\+L@{N\+U\+L\+L}}
+\index{N\+U\+L\+L@{N\+U\+L\+L}!stdlib.\+h@{stdlib.\+h}}
+\paragraph[{N\+U\+L\+L}]{\setlength{\rightskip}{0pt plus 5cm}\#define N\+U\+L\+L~((void$\ast$)0)}\label{stdlib_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4_a070d2ce7b6bb7e5c05602aa8c308d0c4}
+
+
+N\+U\+L\+Lポインタ識別子 
+
+無効なポインタを表すリテラル
+
+\begin{DoxyNote}{覚え書き}
+このリテラルのみ\+H8\+S\+D\+K命名規則の例外とする 
+\end{DoxyNote}
+
+
+ stdlib.\+h の 31 行目に定義があります。
+
+\index{stdlib.\+h@{stdlib.\+h}!\+\_\+usleep@{\+\_\+usleep}}
+\index{\+\_\+usleep@{\+\_\+usleep}!stdlib.\+h@{stdlib.\+h}}
+\paragraph[{\+\_\+usleep}]{\setlength{\rightskip}{0pt plus 5cm}\#define \+\_\+usleep(
+\begin{DoxyParamCaption}
+\item[{}]{us}
+\end{DoxyParamCaption}
+)}\label{stdlib_8h_a09ec6c9b71b1fc7389557ff54b39b5cb_a09ec6c9b71b1fc7389557ff54b39b5cb}
+{\bfseries 値\+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{do}                                          \(\backslash\)
+    \{                                           \(\backslash\)
+        \_UWORD i;                               \(\backslash\)
+        const _UWORD border = (us) * 3;         \(\backslash\)
+        for (i = 0; i < border; i++);           \(\backslash\)
+    \}                                           \(\backslash\)
+    while (_FALSE)
+\end{DoxyCode}
+
+
+マイクロ秒スリープ 
+
+スリープ関数。ただのビジーループのため精度は環境によって大きく変化する
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\tt in}  & {\em us} & スリープする時間。マイクロ秒 \\
+\hline
+\end{DoxyParams}
+
+
+ stdlib.\+h の 40 行目に定義があります。
+
+\index{stdlib.\+h@{stdlib.\+h}!\+\_\+msleep@{\+\_\+msleep}}
+\index{\+\_\+msleep@{\+\_\+msleep}!stdlib.\+h@{stdlib.\+h}}
+\paragraph[{\+\_\+msleep}]{\setlength{\rightskip}{0pt plus 5cm}\#define \+\_\+msleep(
+\begin{DoxyParamCaption}
+\item[{}]{ms}
+\end{DoxyParamCaption}
+)}\label{stdlib_8h_af540592c225c081e9b1423f257a240c1_af540592c225c081e9b1423f257a240c1}
+{\bfseries 値\+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{do}                                          \(\backslash\)
+    \{                                           \(\backslash\)
+        \_UWORD i;                               \(\backslash\)
+        const _UWORD border = (ms);             \(\backslash\)
+        for (i = 0; i < border; i++)            \(\backslash\)
+        \{                                       \(\backslash\)
+            \_usleep(1000);                      \(\backslash\)
+        \}                                       \(\backslash\)
+    \}                                           \(\backslash\)
+    while (_FALSE)
+\end{DoxyCode}
+
+
+ミリ秒スリープ 
+
+スリープ関数。ただのビジーループのため精度は環境によって大きく変化する
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\tt in}  & {\em ms} & ウェイトする時間。ミリ秒 \\
+\hline
+\end{DoxyParams}
+
+
+ stdlib.\+h の 56 行目に定義があります。
+
+\index{stdlib.\+h@{stdlib.\+h}!\+\_\+next\+\_\+ring@{\+\_\+next\+\_\+ring}}
+\index{\+\_\+next\+\_\+ring@{\+\_\+next\+\_\+ring}!stdlib.\+h@{stdlib.\+h}}
+\paragraph[{\+\_\+next\+\_\+ring}]{\setlength{\rightskip}{0pt plus 5cm}\#define \+\_\+next\+\_\+ring(
+\begin{DoxyParamCaption}
+\item[{}]{now, }
+\item[{}]{last}
+\end{DoxyParamCaption}
+)~((now) == (last) ? 0\+: (now) + 1)}\label{stdlib_8h_ac9ca88c6f8f5736ffa1c2ec2b25efb88_ac9ca88c6f8f5736ffa1c2ec2b25efb88}
+
+
+リングバッファの次のインデックスを取得 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\tt in}  & {\em now} & 現在のインデックス値 \\
+\hline
+\mbox{\tt in}  & {\em last} & 最後のインデックス値\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+次のインデックス値 
+\end{DoxyReturn}
+
+
+ stdlib.\+h の 76 行目に定義があります。
+
+\index{stdlib.\+h@{stdlib.\+h}!\+\_\+prev\+\_\+ring@{\+\_\+prev\+\_\+ring}}
+\index{\+\_\+prev\+\_\+ring@{\+\_\+prev\+\_\+ring}!stdlib.\+h@{stdlib.\+h}}
+\paragraph[{\+\_\+prev\+\_\+ring}]{\setlength{\rightskip}{0pt plus 5cm}\#define \+\_\+prev\+\_\+ring(
+\begin{DoxyParamCaption}
+\item[{}]{now, }
+\item[{}]{last}
+\end{DoxyParamCaption}
+)~((now) == 0 ? (last)\+: (now) -\/ 1)}\label{stdlib_8h_a4eede692f007e3fe43aa70025af238f9_a4eede692f007e3fe43aa70025af238f9}
+
+
+リングバッファの前のインデックスを取得 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\tt in}  & {\em now} & 現在のインデックス値 \\
+\hline
+\mbox{\tt in}  & {\em last} & 最後のインデックス値\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+前のインデックス値 
+\end{DoxyReturn}
+
+
+ stdlib.\+h の 85 行目に定義があります。
+
+\index{stdlib.\+h@{stdlib.\+h}!\+\_\+hash@{\+\_\+hash}}
+\index{\+\_\+hash@{\+\_\+hash}!stdlib.\+h@{stdlib.\+h}}
+\paragraph[{\+\_\+hash}]{\setlength{\rightskip}{0pt plus 5cm}\#define \+\_\+hash(
+\begin{DoxyParamCaption}
+\item[{}]{x, }
+\item[{}]{size}
+\end{DoxyParamCaption}
+)~((x) \% (size))}\label{stdlib_8h_ae8d5719c510ca168d76e46106dbd8ccb_ae8d5719c510ca168d76e46106dbd8ccb}
+
+
+ハッシュ関数 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\tt in}  & {\em x} & ハッシュ計算対象 \\
+\hline
+\mbox{\tt in}  & {\em size} & ハッシュテーブルのサイズ\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+xのハッシュ値 
+\end{DoxyReturn}
+
+
+ stdlib.\+h の 95 行目に定義があります。
+
+
+
+\subsubsection{関数詳解}
+\index{stdlib.\+h@{stdlib.\+h}!\+\_\+check\+\_\+sum@{\+\_\+check\+\_\+sum}}
+\index{\+\_\+check\+\_\+sum@{\+\_\+check\+\_\+sum}!stdlib.\+h@{stdlib.\+h}}
+\paragraph[{\+\_\+check\+\_\+sum(void $\ast$ary, \+\_\+\+U\+W\+O\+R\+D sz)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \+\_\+\+U\+W\+O\+R\+D} \+\_\+check\+\_\+sum (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{ary, }
+\item[{{\bf \+\_\+\+U\+W\+O\+R\+D}}]{sz}
+\end{DoxyParamCaption}
+)}\label{stdlib_8h_ae621ec4eb313512cd46c749a0d9583b7_ae621ec4eb313512cd46c749a0d9583b7}
+
+
+チェックサム計算 
+
+16ビット単位で指定データの総和を取る
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\tt in}  & {\em ary} & データ配列先頭へのポインタ \\
+\hline
+\mbox{\tt in}  & {\em sz} & データサイズ\\
+\hline
+\end{DoxyParams}
+return チェックサム値 \index{stdlib.\+h@{stdlib.\+h}!\+\_\+itoa@{\+\_\+itoa}}
+\index{\+\_\+itoa@{\+\_\+itoa}!stdlib.\+h@{stdlib.\+h}}
+\paragraph[{\+\_\+itoa(\+\_\+\+U\+I\+N\+T in, \+\_\+\+S\+I\+N\+T base, \+\_\+\+S\+B\+Y\+T\+E $\ast$out, \+\_\+\+U\+I\+N\+T size)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \+\_\+\+U\+I\+N\+T} \+\_\+itoa (
+\begin{DoxyParamCaption}
+\item[{{\bf \+\_\+\+U\+I\+N\+T}}]{in, }
+\item[{{\bf \+\_\+\+S\+I\+N\+T}}]{base, }
+\item[{{\bf \+\_\+\+S\+B\+Y\+T\+E} $\ast$}]{out, }
+\item[{{\bf \+\_\+\+U\+I\+N\+T}}]{size}
+\end{DoxyParamCaption}
+)}\label{stdlib_8h_a6c4af00cd660a34b8a46424194ae4f7f_a6c4af00cd660a34b8a46424194ae4f7f}
+
+
+数値文字列変換 
+
+数値を指定進数表記の数字列に変換する。\+N\+U\+L終端はしない。 10進数を越える数字列の場合は10以降アルファベット表記となる。
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\tt in}  & {\em in} & 変換する数値。符号無し整数。 \\
+\hline
+\mbox{\tt in}  & {\em base} & 進数 \\
+\hline
+\mbox{\tt out}  & {\em out} & 結果を格納する文字配列先頭へのポインタ \\
+\hline
+\mbox{\tt in}  & {\em size} & outのサイズ\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+変換桁数 
+\end{DoxyReturn}
+\index{stdlib.\+h@{stdlib.\+h}!\+\_\+rand@{\+\_\+rand}}
+\index{\+\_\+rand@{\+\_\+rand}!stdlib.\+h@{stdlib.\+h}}
+\paragraph[{\+\_\+rand()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \+\_\+\+S\+D\+W\+O\+R\+D} \+\_\+rand (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{stdlib_8h_a116df1dac9168ab8f49c08f34c1e316e_a116df1dac9168ab8f49c08f34c1e316e}
+
+
+乱数取得 
+
+乱数値を取得する。精度は15bit。
+
+\begin{DoxyReturn}{戻り値}
+乱数値 
+\end{DoxyReturn}
+\index{stdlib.\+h@{stdlib.\+h}!\+\_\+srand@{\+\_\+srand}}
+\index{\+\_\+srand@{\+\_\+srand}!stdlib.\+h@{stdlib.\+h}}
+\paragraph[{\+\_\+srand(\+\_\+\+S\+D\+W\+O\+R\+D s)}]{\setlength{\rightskip}{0pt plus 5cm}void \+\_\+srand (
+\begin{DoxyParamCaption}
+\item[{{\bf \+\_\+\+S\+D\+W\+O\+R\+D}}]{s}
+\end{DoxyParamCaption}
+)}\label{stdlib_8h_a7f79ebf65f54b48399029275b2e007b3_a7f79ebf65f54b48399029275b2e007b3}
+
+
+乱数の種設定 
+
+乱数の種をセットする。
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\tt in}  & {\em s} & 乱数の種 \\
+\hline
+\end{DoxyParams}

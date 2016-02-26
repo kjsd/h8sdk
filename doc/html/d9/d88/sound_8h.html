@@ -1,0 +1,448 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.10"/>
+<title>H8SDK: include/h8sdk/sound.h ファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">H8SDK
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.10 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="../../index.html"><span>総合概要</span></a></li>
+      <li><a href="../../pages.html"><span>諸情報</span></a></li>
+      <li><a href="../../annotated.html"><span>クラス</span></a></li>
+      <li class="current"><a href="../../files.html"><span>ファイル</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="../../files.html"><span>ファイル一覧</span></a></li>
+      <li><a href="../../globals.html"><span>ファイルメンバ</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('d9/d88/sound_8h.html','../../');});
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">クラス</a> &#124;
+<a href="#define-members">マクロ定義</a> &#124;
+<a href="#typedef-members">型定義</a> &#124;
+<a href="#enum-members">列挙型</a> &#124;
+<a href="#func-members">関数</a> &#124;
+<a href="#var-members">変数</a>  </div>
+  <div class="headertitle">
+<div class="title">sound.h ファイル</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>サウンドドライバ  
+<a href="#details">[詳解]</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="../../d3/dce/stddef_8h_source.html">stddef.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+sound.h の依存先関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dd/d14/sound_8h__incl.png" border="0" usemap="#include_2h8sdk_2sound_8h" alt=""/></div>
+<map name="include_2h8sdk_2sound_8h" id="include_2h8sdk_2sound_8h">
+<area shape="rect" id="node2" href="../../d3/dce/stddef_8h.html" title="共通型、リテラル定義 " alt="" coords="48,80,117,107"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+被依存関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d9/df5/sound_8h__dep__incl.png" border="0" usemap="#include_2h8sdk_2sound_8hdep" alt=""/></div>
+<map name="include_2h8sdk_2sound_8hdep" id="include_2h8sdk_2sound_8hdep">
+<area shape="rect" id="node2" href="../../da/d92/envelope_8h.html" title="エンベロープデータ定義 " alt="" coords="5,80,177,107"/>
+<area shape="rect" id="node3" href="../../db/d10/music_8h.html" title="楽曲演奏モジュール " alt="" coords="201,80,355,107"/>
+</map>
+</div>
+</div>
+<p><a href="../../d9/d88/sound_8h_source.html">[ソースコード]</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+クラス</h2></td></tr>
+<tr class="memitem:d0/d92/structSOUND__Envelope"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d88/sound_8h.html#d0/d92/structSOUND__Envelope">SOUND_Envelope</a></td></tr>
+<tr class="memdesc:d0/d92/structSOUND__Envelope"><td class="mdescLeft">&#160;</td><td class="mdescRight">エンベロープ定義型  <a href="../../d9/d88/sound_8h.html#d0/d92/structSOUND__Envelope">[詳解]</a><br /></td></tr>
+<tr class="separator:d0/d92/structSOUND__Envelope"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:d6/d3c/structSOUND__Tone"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d88/sound_8h.html#d6/d3c/structSOUND__Tone">SOUND_Tone</a></td></tr>
+<tr class="memdesc:d6/d3c/structSOUND__Tone"><td class="mdescLeft">&#160;</td><td class="mdescRight">音定義型  <a href="../../d9/d88/sound_8h.html#d6/d3c/structSOUND__Tone">[詳解]</a><br /></td></tr>
+<tr class="separator:d6/d3c/structSOUND__Tone"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+マクロ定義</h2></td></tr>
+<tr class="memitem:ae37af07d650f8e823223bfaf85dfeea5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d88/sound_8h_ae37af07d650f8e823223bfaf85dfeea5.html#ae37af07d650f8e823223bfaf85dfeea5">SOUND_MAX_PRONOUNCE</a>&#160;&#160;&#160;3</td></tr>
+<tr class="memdesc:ae37af07d650f8e823223bfaf85dfeea5"><td class="mdescLeft">&#160;</td><td class="mdescRight">最大同時発信音数  <a href="../../d9/d88/sound_8h_ae37af07d650f8e823223bfaf85dfeea5.html#ae37af07d650f8e823223bfaf85dfeea5">[詳解]</a><br /></td></tr>
+<tr class="separator:ae37af07d650f8e823223bfaf85dfeea5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46743b97361463957ee0eb2202ff90d8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d88/sound_8h_a46743b97361463957ee0eb2202ff90d8.html#a46743b97361463957ee0eb2202ff90d8">SOUND_MAX_VOLUME</a>&#160;&#160;&#160;255</td></tr>
+<tr class="memdesc:a46743b97361463957ee0eb2202ff90d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">ボリュームの最大値  <a href="../../d9/d88/sound_8h_a46743b97361463957ee0eb2202ff90d8.html#a46743b97361463957ee0eb2202ff90d8">[詳解]</a><br /></td></tr>
+<tr class="separator:a46743b97361463957ee0eb2202ff90d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5c5d06e5ffe7f4792f2a7613223b8bb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d88/sound_8h_aa5c5d06e5ffe7f4792f2a7613223b8bb.html#aa5c5d06e5ffe7f4792f2a7613223b8bb">SOUND_PRONOUNCE_LEN</a>&#160;&#160;&#160;2</td></tr>
+<tr class="separator:aa5c5d06e5ffe7f4792f2a7613223b8bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00e51ccb7bab9d21f8cd5611028ca051"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d88/sound_8h_a00e51ccb7bab9d21f8cd5611028ca051.html#a00e51ccb7bab9d21f8cd5611028ca051">SOUND_NA</a>&#160;&#160;&#160;0</td></tr>
+<tr class="memdesc:a00e51ccb7bab9d21f8cd5611028ca051"><td class="mdescLeft">&#160;</td><td class="mdescRight">無音  <a href="../../d9/d88/sound_8h_a00e51ccb7bab9d21f8cd5611028ca051.html#a00e51ccb7bab9d21f8cd5611028ca051">[詳解]</a><br /></td></tr>
+<tr class="separator:a00e51ccb7bab9d21f8cd5611028ca051"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a8291aa331919d505eb896f5f23b84c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d88/sound_8h_a7a8291aa331919d505eb896f5f23b84c.html#a7a8291aa331919d505eb896f5f23b84c">SOUND_C0</a>&#160;&#160;&#160;255</td></tr>
+<tr class="memdesc:a7a8291aa331919d505eb896f5f23b84c"><td class="mdescLeft">&#160;</td><td class="mdescRight">オクターブ0 ド  <a href="../../d9/d88/sound_8h_a7a8291aa331919d505eb896f5f23b84c.html#a7a8291aa331919d505eb896f5f23b84c">[詳解]</a><br /></td></tr>
+<tr class="separator:a7a8291aa331919d505eb896f5f23b84c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5cf7b47c621b7f44cb936a18e7a227be"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d88/sound_8h_a5cf7b47c621b7f44cb936a18e7a227be.html#a5cf7b47c621b7f44cb936a18e7a227be">SOUND_Cb0</a>&#160;&#160;&#160;241</td></tr>
+<tr class="memdesc:a5cf7b47c621b7f44cb936a18e7a227be"><td class="mdescLeft">&#160;</td><td class="mdescRight">オクターブ0 ド#  <a href="../../d9/d88/sound_8h_a5cf7b47c621b7f44cb936a18e7a227be.html#a5cf7b47c621b7f44cb936a18e7a227be">[詳解]</a><br /></td></tr>
+<tr class="separator:a5cf7b47c621b7f44cb936a18e7a227be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78855daec2050679bd8ef984b6474384"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d88/sound_8h_a78855daec2050679bd8ef984b6474384.html#a78855daec2050679bd8ef984b6474384">SOUND_D0</a>&#160;&#160;&#160;228</td></tr>
+<tr class="memdesc:a78855daec2050679bd8ef984b6474384"><td class="mdescLeft">&#160;</td><td class="mdescRight">オクターブ0 レ  <a href="../../d9/d88/sound_8h_a78855daec2050679bd8ef984b6474384.html#a78855daec2050679bd8ef984b6474384">[詳解]</a><br /></td></tr>
+<tr class="separator:a78855daec2050679bd8ef984b6474384"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae54a9c279cc372bd69b65dd9d06f3210"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d88/sound_8h_ae54a9c279cc372bd69b65dd9d06f3210.html#ae54a9c279cc372bd69b65dd9d06f3210">SOUND_Db0</a>&#160;&#160;&#160;214</td></tr>
+<tr class="memdesc:ae54a9c279cc372bd69b65dd9d06f3210"><td class="mdescLeft">&#160;</td><td class="mdescRight">オクターブ0 レ#  <a href="../../d9/d88/sound_8h_ae54a9c279cc372bd69b65dd9d06f3210.html#ae54a9c279cc372bd69b65dd9d06f3210">[詳解]</a><br /></td></tr>
+<tr class="separator:ae54a9c279cc372bd69b65dd9d06f3210"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19424f95bd658c3fb08a40b37fa18ae6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d88/sound_8h_a19424f95bd658c3fb08a40b37fa18ae6.html#a19424f95bd658c3fb08a40b37fa18ae6">SOUND_E0</a>&#160;&#160;&#160;203</td></tr>
+<tr class="memdesc:a19424f95bd658c3fb08a40b37fa18ae6"><td class="mdescLeft">&#160;</td><td class="mdescRight">オクターブ0 ミ  <a href="../../d9/d88/sound_8h_a19424f95bd658c3fb08a40b37fa18ae6.html#a19424f95bd658c3fb08a40b37fa18ae6">[詳解]</a><br /></td></tr>
+<tr class="separator:a19424f95bd658c3fb08a40b37fa18ae6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c24cc4b865b592ab72a04852c7d194e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d88/sound_8h_a9c24cc4b865b592ab72a04852c7d194e.html#a9c24cc4b865b592ab72a04852c7d194e">SOUND_F0</a>&#160;&#160;&#160;192</td></tr>
+<tr class="memdesc:a9c24cc4b865b592ab72a04852c7d194e"><td class="mdescLeft">&#160;</td><td class="mdescRight">オクターブ0 ファ  <a href="../../d9/d88/sound_8h_a9c24cc4b865b592ab72a04852c7d194e.html#a9c24cc4b865b592ab72a04852c7d194e">[詳解]</a><br /></td></tr>
+<tr class="separator:a9c24cc4b865b592ab72a04852c7d194e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaff9a7f05ba2237c933648fc79631254"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d88/sound_8h_aaff9a7f05ba2237c933648fc79631254.html#aaff9a7f05ba2237c933648fc79631254">SOUND_Fb0</a>&#160;&#160;&#160;180</td></tr>
+<tr class="memdesc:aaff9a7f05ba2237c933648fc79631254"><td class="mdescLeft">&#160;</td><td class="mdescRight">オクターブ0 ファ#  <a href="../../d9/d88/sound_8h_aaff9a7f05ba2237c933648fc79631254.html#aaff9a7f05ba2237c933648fc79631254">[詳解]</a><br /></td></tr>
+<tr class="separator:aaff9a7f05ba2237c933648fc79631254"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49cb5ffcf2e6a7e6a450e6bb6bb1fd55"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d88/sound_8h_a49cb5ffcf2e6a7e6a450e6bb6bb1fd55.html#a49cb5ffcf2e6a7e6a450e6bb6bb1fd55">SOUND_G0</a>&#160;&#160;&#160;171</td></tr>
+<tr class="memdesc:a49cb5ffcf2e6a7e6a450e6bb6bb1fd55"><td class="mdescLeft">&#160;</td><td class="mdescRight">オクターブ0 ソ  <a href="../../d9/d88/sound_8h_a49cb5ffcf2e6a7e6a450e6bb6bb1fd55.html#a49cb5ffcf2e6a7e6a450e6bb6bb1fd55">[詳解]</a><br /></td></tr>
+<tr class="separator:a49cb5ffcf2e6a7e6a450e6bb6bb1fd55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f5a3ed6713d6224d6e31d0020fdd430"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d88/sound_8h_a7f5a3ed6713d6224d6e31d0020fdd430.html#a7f5a3ed6713d6224d6e31d0020fdd430">SOUND_Gb0</a>&#160;&#160;&#160;161</td></tr>
+<tr class="memdesc:a7f5a3ed6713d6224d6e31d0020fdd430"><td class="mdescLeft">&#160;</td><td class="mdescRight">オクターブ0 ソ#  <a href="../../d9/d88/sound_8h_a7f5a3ed6713d6224d6e31d0020fdd430.html#a7f5a3ed6713d6224d6e31d0020fdd430">[詳解]</a><br /></td></tr>
+<tr class="separator:a7f5a3ed6713d6224d6e31d0020fdd430"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abcc3b3196f02e1825a756586cff6adb5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d88/sound_8h_abcc3b3196f02e1825a756586cff6adb5.html#abcc3b3196f02e1825a756586cff6adb5">SOUND_A0</a>&#160;&#160;&#160;152</td></tr>
+<tr class="memdesc:abcc3b3196f02e1825a756586cff6adb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">オクターブ0 ラ  <a href="../../d9/d88/sound_8h_abcc3b3196f02e1825a756586cff6adb5.html#abcc3b3196f02e1825a756586cff6adb5">[詳解]</a><br /></td></tr>
+<tr class="separator:abcc3b3196f02e1825a756586cff6adb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa63270be4b563c05e755e9e9c62485d4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d88/sound_8h_aa63270be4b563c05e755e9e9c62485d4.html#aa63270be4b563c05e755e9e9c62485d4">SOUND_Ab0</a>&#160;&#160;&#160;143</td></tr>
+<tr class="memdesc:aa63270be4b563c05e755e9e9c62485d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">オクターブ0 ラ#  <a href="../../d9/d88/sound_8h_aa63270be4b563c05e755e9e9c62485d4.html#aa63270be4b563c05e755e9e9c62485d4">[詳解]</a><br /></td></tr>
+<tr class="separator:aa63270be4b563c05e755e9e9c62485d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af77d6e42768c9e8407091ab9237c23e8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d88/sound_8h_af77d6e42768c9e8407091ab9237c23e8.html#af77d6e42768c9e8407091ab9237c23e8">SOUND_H0</a>&#160;&#160;&#160;136</td></tr>
+<tr class="memdesc:af77d6e42768c9e8407091ab9237c23e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">オクターブ0 シ  <a href="../../d9/d88/sound_8h_af77d6e42768c9e8407091ab9237c23e8.html#af77d6e42768c9e8407091ab9237c23e8">[詳解]</a><br /></td></tr>
+<tr class="separator:af77d6e42768c9e8407091ab9237c23e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc40de3e4447b500abf6a8f52690eb7a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d88/sound_8h_acc40de3e4447b500abf6a8f52690eb7a.html#acc40de3e4447b500abf6a8f52690eb7a">SOUND_C1</a>&#160;&#160;&#160;128</td></tr>
+<tr class="memdesc:acc40de3e4447b500abf6a8f52690eb7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">オクターブ1 ド  <a href="../../d9/d88/sound_8h_acc40de3e4447b500abf6a8f52690eb7a.html#acc40de3e4447b500abf6a8f52690eb7a">[詳解]</a><br /></td></tr>
+<tr class="separator:acc40de3e4447b500abf6a8f52690eb7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71cd098d1835193a4082f62c92bd1560"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d88/sound_8h_a71cd098d1835193a4082f62c92bd1560.html#a71cd098d1835193a4082f62c92bd1560">SOUND_Cb1</a>&#160;&#160;&#160;120</td></tr>
+<tr class="memdesc:a71cd098d1835193a4082f62c92bd1560"><td class="mdescLeft">&#160;</td><td class="mdescRight">オクターブ1 ド#  <a href="../../d9/d88/sound_8h_a71cd098d1835193a4082f62c92bd1560.html#a71cd098d1835193a4082f62c92bd1560">[詳解]</a><br /></td></tr>
+<tr class="separator:a71cd098d1835193a4082f62c92bd1560"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc56b27ce3a779cca007c05bd85be4fd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d88/sound_8h_abc56b27ce3a779cca007c05bd85be4fd.html#abc56b27ce3a779cca007c05bd85be4fd">SOUND_D1</a>&#160;&#160;&#160;114</td></tr>
+<tr class="memdesc:abc56b27ce3a779cca007c05bd85be4fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">オクターブ1 レ  <a href="../../d9/d88/sound_8h_abc56b27ce3a779cca007c05bd85be4fd.html#abc56b27ce3a779cca007c05bd85be4fd">[詳解]</a><br /></td></tr>
+<tr class="separator:abc56b27ce3a779cca007c05bd85be4fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38bf3c917fff3545f77a76715ad4b0f4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d88/sound_8h_a38bf3c917fff3545f77a76715ad4b0f4.html#a38bf3c917fff3545f77a76715ad4b0f4">SOUND_Db1</a>&#160;&#160;&#160;107</td></tr>
+<tr class="memdesc:a38bf3c917fff3545f77a76715ad4b0f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">オクターブ1 レ#  <a href="../../d9/d88/sound_8h_a38bf3c917fff3545f77a76715ad4b0f4.html#a38bf3c917fff3545f77a76715ad4b0f4">[詳解]</a><br /></td></tr>
+<tr class="separator:a38bf3c917fff3545f77a76715ad4b0f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1009235392ed7690560707d81815b36b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d88/sound_8h_a1009235392ed7690560707d81815b36b.html#a1009235392ed7690560707d81815b36b">SOUND_E1</a>&#160;&#160;&#160;101</td></tr>
+<tr class="memdesc:a1009235392ed7690560707d81815b36b"><td class="mdescLeft">&#160;</td><td class="mdescRight">オクターブ1 ミ  <a href="../../d9/d88/sound_8h_a1009235392ed7690560707d81815b36b.html#a1009235392ed7690560707d81815b36b">[詳解]</a><br /></td></tr>
+<tr class="separator:a1009235392ed7690560707d81815b36b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48a50ebd455ec326ce52ba3f9e063baa"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d88/sound_8h_a48a50ebd455ec326ce52ba3f9e063baa.html#a48a50ebd455ec326ce52ba3f9e063baa">SOUND_F1</a>&#160;&#160;&#160;96</td></tr>
+<tr class="memdesc:a48a50ebd455ec326ce52ba3f9e063baa"><td class="mdescLeft">&#160;</td><td class="mdescRight">オクターブ1 ファ  <a href="../../d9/d88/sound_8h_a48a50ebd455ec326ce52ba3f9e063baa.html#a48a50ebd455ec326ce52ba3f9e063baa">[詳解]</a><br /></td></tr>
+<tr class="separator:a48a50ebd455ec326ce52ba3f9e063baa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc081179e66a0f7fe8f58b07f0358ed8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d88/sound_8h_adc081179e66a0f7fe8f58b07f0358ed8.html#adc081179e66a0f7fe8f58b07f0358ed8">SOUND_Fb1</a>&#160;&#160;&#160;90</td></tr>
+<tr class="memdesc:adc081179e66a0f7fe8f58b07f0358ed8"><td class="mdescLeft">&#160;</td><td class="mdescRight">オクターブ1 ファ#  <a href="../../d9/d88/sound_8h_adc081179e66a0f7fe8f58b07f0358ed8.html#adc081179e66a0f7fe8f58b07f0358ed8">[詳解]</a><br /></td></tr>
+<tr class="separator:adc081179e66a0f7fe8f58b07f0358ed8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a077f7dc14c95e192d7edf3c8eb72c5da"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d88/sound_8h_a077f7dc14c95e192d7edf3c8eb72c5da.html#a077f7dc14c95e192d7edf3c8eb72c5da">SOUND_G1</a>&#160;&#160;&#160;85</td></tr>
+<tr class="memdesc:a077f7dc14c95e192d7edf3c8eb72c5da"><td class="mdescLeft">&#160;</td><td class="mdescRight">オクターブ1 ソ  <a href="../../d9/d88/sound_8h_a077f7dc14c95e192d7edf3c8eb72c5da.html#a077f7dc14c95e192d7edf3c8eb72c5da">[詳解]</a><br /></td></tr>
+<tr class="separator:a077f7dc14c95e192d7edf3c8eb72c5da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af064bb5dbd237d2fe7e954ee31cd3ca4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d88/sound_8h_af064bb5dbd237d2fe7e954ee31cd3ca4.html#af064bb5dbd237d2fe7e954ee31cd3ca4">SOUND_Gb1</a>&#160;&#160;&#160;80</td></tr>
+<tr class="memdesc:af064bb5dbd237d2fe7e954ee31cd3ca4"><td class="mdescLeft">&#160;</td><td class="mdescRight">オクターブ1 ソ#  <a href="../../d9/d88/sound_8h_af064bb5dbd237d2fe7e954ee31cd3ca4.html#af064bb5dbd237d2fe7e954ee31cd3ca4">[詳解]</a><br /></td></tr>
+<tr class="separator:af064bb5dbd237d2fe7e954ee31cd3ca4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a5faefe8dfea062eb628bd9b6aba261"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d88/sound_8h_a0a5faefe8dfea062eb628bd9b6aba261.html#a0a5faefe8dfea062eb628bd9b6aba261">SOUND_A1</a>&#160;&#160;&#160;76</td></tr>
+<tr class="memdesc:a0a5faefe8dfea062eb628bd9b6aba261"><td class="mdescLeft">&#160;</td><td class="mdescRight">オクターブ1 ラ  <a href="../../d9/d88/sound_8h_a0a5faefe8dfea062eb628bd9b6aba261.html#a0a5faefe8dfea062eb628bd9b6aba261">[詳解]</a><br /></td></tr>
+<tr class="separator:a0a5faefe8dfea062eb628bd9b6aba261"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf1942377e486c3d28326ea144b0c9f0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d88/sound_8h_acf1942377e486c3d28326ea144b0c9f0.html#acf1942377e486c3d28326ea144b0c9f0">SOUND_Ab1</a>&#160;&#160;&#160;72</td></tr>
+<tr class="memdesc:acf1942377e486c3d28326ea144b0c9f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">オクターブ1 ラ#  <a href="../../d9/d88/sound_8h_acf1942377e486c3d28326ea144b0c9f0.html#acf1942377e486c3d28326ea144b0c9f0">[詳解]</a><br /></td></tr>
+<tr class="separator:acf1942377e486c3d28326ea144b0c9f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a779cc45580fd31304c432b2582e94953"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d88/sound_8h_a779cc45580fd31304c432b2582e94953.html#a779cc45580fd31304c432b2582e94953">SOUND_H1</a>&#160;&#160;&#160;68</td></tr>
+<tr class="memdesc:a779cc45580fd31304c432b2582e94953"><td class="mdescLeft">&#160;</td><td class="mdescRight">オクターブ1 シ  <a href="../../d9/d88/sound_8h_a779cc45580fd31304c432b2582e94953.html#a779cc45580fd31304c432b2582e94953">[詳解]</a><br /></td></tr>
+<tr class="separator:a779cc45580fd31304c432b2582e94953"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a041d01c58025c9f74835d33da716e51d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d88/sound_8h_a041d01c58025c9f74835d33da716e51d.html#a041d01c58025c9f74835d33da716e51d">SOUND_C2</a>&#160;&#160;&#160;64</td></tr>
+<tr class="memdesc:a041d01c58025c9f74835d33da716e51d"><td class="mdescLeft">&#160;</td><td class="mdescRight">オクターブ2 ド  <a href="../../d9/d88/sound_8h_a041d01c58025c9f74835d33da716e51d.html#a041d01c58025c9f74835d33da716e51d">[詳解]</a><br /></td></tr>
+<tr class="separator:a041d01c58025c9f74835d33da716e51d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ea86474bf4acd9fa0b6cc36610a54db"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d88/sound_8h_a2ea86474bf4acd9fa0b6cc36610a54db.html#a2ea86474bf4acd9fa0b6cc36610a54db">SOUND_Cb2</a>&#160;&#160;&#160;60</td></tr>
+<tr class="memdesc:a2ea86474bf4acd9fa0b6cc36610a54db"><td class="mdescLeft">&#160;</td><td class="mdescRight">オクターブ2 ド#  <a href="../../d9/d88/sound_8h_a2ea86474bf4acd9fa0b6cc36610a54db.html#a2ea86474bf4acd9fa0b6cc36610a54db">[詳解]</a><br /></td></tr>
+<tr class="separator:a2ea86474bf4acd9fa0b6cc36610a54db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24efb33152ca6f7c832a646cefc86f32"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d88/sound_8h_a24efb33152ca6f7c832a646cefc86f32.html#a24efb33152ca6f7c832a646cefc86f32">SOUND_D2</a>&#160;&#160;&#160;57</td></tr>
+<tr class="memdesc:a24efb33152ca6f7c832a646cefc86f32"><td class="mdescLeft">&#160;</td><td class="mdescRight">オクターブ2 レ  <a href="../../d9/d88/sound_8h_a24efb33152ca6f7c832a646cefc86f32.html#a24efb33152ca6f7c832a646cefc86f32">[詳解]</a><br /></td></tr>
+<tr class="separator:a24efb33152ca6f7c832a646cefc86f32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d2839cfd7ade12ff92a685da8405db3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d88/sound_8h_a7d2839cfd7ade12ff92a685da8405db3.html#a7d2839cfd7ade12ff92a685da8405db3">SOUND_Db2</a>&#160;&#160;&#160;54</td></tr>
+<tr class="memdesc:a7d2839cfd7ade12ff92a685da8405db3"><td class="mdescLeft">&#160;</td><td class="mdescRight">オクターブ2 レ#  <a href="../../d9/d88/sound_8h_a7d2839cfd7ade12ff92a685da8405db3.html#a7d2839cfd7ade12ff92a685da8405db3">[詳解]</a><br /></td></tr>
+<tr class="separator:a7d2839cfd7ade12ff92a685da8405db3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52d7912c62673a809f44656740543ba5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d88/sound_8h_a52d7912c62673a809f44656740543ba5.html#a52d7912c62673a809f44656740543ba5">SOUND_E2</a>&#160;&#160;&#160;51</td></tr>
+<tr class="memdesc:a52d7912c62673a809f44656740543ba5"><td class="mdescLeft">&#160;</td><td class="mdescRight">オクターブ2 ミ  <a href="../../d9/d88/sound_8h_a52d7912c62673a809f44656740543ba5.html#a52d7912c62673a809f44656740543ba5">[詳解]</a><br /></td></tr>
+<tr class="separator:a52d7912c62673a809f44656740543ba5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5efc510793cd609c997915070db58dd0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d88/sound_8h_a5efc510793cd609c997915070db58dd0.html#a5efc510793cd609c997915070db58dd0">SOUND_F2</a>&#160;&#160;&#160;48</td></tr>
+<tr class="memdesc:a5efc510793cd609c997915070db58dd0"><td class="mdescLeft">&#160;</td><td class="mdescRight">オクターブ2 ファ  <a href="../../d9/d88/sound_8h_a5efc510793cd609c997915070db58dd0.html#a5efc510793cd609c997915070db58dd0">[詳解]</a><br /></td></tr>
+<tr class="separator:a5efc510793cd609c997915070db58dd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1aa4dea5958d3b0a7c9ff406073fdd37"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d88/sound_8h_a1aa4dea5958d3b0a7c9ff406073fdd37.html#a1aa4dea5958d3b0a7c9ff406073fdd37">SOUND_Fb2</a>&#160;&#160;&#160;45</td></tr>
+<tr class="memdesc:a1aa4dea5958d3b0a7c9ff406073fdd37"><td class="mdescLeft">&#160;</td><td class="mdescRight">オクターブ2 ファ#  <a href="../../d9/d88/sound_8h_a1aa4dea5958d3b0a7c9ff406073fdd37.html#a1aa4dea5958d3b0a7c9ff406073fdd37">[詳解]</a><br /></td></tr>
+<tr class="separator:a1aa4dea5958d3b0a7c9ff406073fdd37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add206c6691e048cc1ce70f995384dbb8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d88/sound_8h_add206c6691e048cc1ce70f995384dbb8.html#add206c6691e048cc1ce70f995384dbb8">SOUND_G2</a>&#160;&#160;&#160;43</td></tr>
+<tr class="memdesc:add206c6691e048cc1ce70f995384dbb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">オクターブ2 ソ  <a href="../../d9/d88/sound_8h_add206c6691e048cc1ce70f995384dbb8.html#add206c6691e048cc1ce70f995384dbb8">[詳解]</a><br /></td></tr>
+<tr class="separator:add206c6691e048cc1ce70f995384dbb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73fd8b78bb50cd9cdbd8a1c09400262d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d88/sound_8h_a73fd8b78bb50cd9cdbd8a1c09400262d.html#a73fd8b78bb50cd9cdbd8a1c09400262d">SOUND_Gb2</a>&#160;&#160;&#160;40</td></tr>
+<tr class="memdesc:a73fd8b78bb50cd9cdbd8a1c09400262d"><td class="mdescLeft">&#160;</td><td class="mdescRight">オクターブ2 ソ#  <a href="../../d9/d88/sound_8h_a73fd8b78bb50cd9cdbd8a1c09400262d.html#a73fd8b78bb50cd9cdbd8a1c09400262d">[詳解]</a><br /></td></tr>
+<tr class="separator:a73fd8b78bb50cd9cdbd8a1c09400262d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87cc8e430711a16f8d53adec0fc30863"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d88/sound_8h_a87cc8e430711a16f8d53adec0fc30863.html#a87cc8e430711a16f8d53adec0fc30863">SOUND_A2</a>&#160;&#160;&#160;38</td></tr>
+<tr class="memdesc:a87cc8e430711a16f8d53adec0fc30863"><td class="mdescLeft">&#160;</td><td class="mdescRight">オクターブ2 ラ  <a href="../../d9/d88/sound_8h_a87cc8e430711a16f8d53adec0fc30863.html#a87cc8e430711a16f8d53adec0fc30863">[詳解]</a><br /></td></tr>
+<tr class="separator:a87cc8e430711a16f8d53adec0fc30863"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa355b76cc29205f9fdd6edd04802baa1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d88/sound_8h_aa355b76cc29205f9fdd6edd04802baa1.html#aa355b76cc29205f9fdd6edd04802baa1">SOUND_Ab2</a>&#160;&#160;&#160;36</td></tr>
+<tr class="memdesc:aa355b76cc29205f9fdd6edd04802baa1"><td class="mdescLeft">&#160;</td><td class="mdescRight">オクターブ2 ラ#  <a href="../../d9/d88/sound_8h_aa355b76cc29205f9fdd6edd04802baa1.html#aa355b76cc29205f9fdd6edd04802baa1">[詳解]</a><br /></td></tr>
+<tr class="separator:aa355b76cc29205f9fdd6edd04802baa1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8aeeeb1a420c4f8b23fe5c7960045a06"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d88/sound_8h_a8aeeeb1a420c4f8b23fe5c7960045a06.html#a8aeeeb1a420c4f8b23fe5c7960045a06">SOUND_H2</a>&#160;&#160;&#160;34</td></tr>
+<tr class="memdesc:a8aeeeb1a420c4f8b23fe5c7960045a06"><td class="mdescLeft">&#160;</td><td class="mdescRight">オクターブ2 シ  <a href="../../d9/d88/sound_8h_a8aeeeb1a420c4f8b23fe5c7960045a06.html#a8aeeeb1a420c4f8b23fe5c7960045a06">[詳解]</a><br /></td></tr>
+<tr class="separator:a8aeeeb1a420c4f8b23fe5c7960045a06"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6cb42a0945d4a26b716ea357b265a8e4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d88/sound_8h_a6cb42a0945d4a26b716ea357b265a8e4.html#a6cb42a0945d4a26b716ea357b265a8e4">SOUND_C3</a>&#160;&#160;&#160;32</td></tr>
+<tr class="memdesc:a6cb42a0945d4a26b716ea357b265a8e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">オクターブ3 ド  <a href="../../d9/d88/sound_8h_a6cb42a0945d4a26b716ea357b265a8e4.html#a6cb42a0945d4a26b716ea357b265a8e4">[詳解]</a><br /></td></tr>
+<tr class="separator:a6cb42a0945d4a26b716ea357b265a8e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3fbca825ab7829e2da07997cfb7be2b5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d88/sound_8h_a3fbca825ab7829e2da07997cfb7be2b5.html#a3fbca825ab7829e2da07997cfb7be2b5">SOUND_Cb3</a>&#160;&#160;&#160;30</td></tr>
+<tr class="memdesc:a3fbca825ab7829e2da07997cfb7be2b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">オクターブ3 ド#  <a href="../../d9/d88/sound_8h_a3fbca825ab7829e2da07997cfb7be2b5.html#a3fbca825ab7829e2da07997cfb7be2b5">[詳解]</a><br /></td></tr>
+<tr class="separator:a3fbca825ab7829e2da07997cfb7be2b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0ffa43b4f3def70d822938a28983c90"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d88/sound_8h_ab0ffa43b4f3def70d822938a28983c90.html#ab0ffa43b4f3def70d822938a28983c90">SOUND_D3</a>&#160;&#160;&#160;29</td></tr>
+<tr class="memdesc:ab0ffa43b4f3def70d822938a28983c90"><td class="mdescLeft">&#160;</td><td class="mdescRight">オクターブ3 レ  <a href="../../d9/d88/sound_8h_ab0ffa43b4f3def70d822938a28983c90.html#ab0ffa43b4f3def70d822938a28983c90">[詳解]</a><br /></td></tr>
+<tr class="separator:ab0ffa43b4f3def70d822938a28983c90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1cfd87bf68ec505eec2f20f710ce0189"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d88/sound_8h_a1cfd87bf68ec505eec2f20f710ce0189.html#a1cfd87bf68ec505eec2f20f710ce0189">SOUND_Db3</a>&#160;&#160;&#160;27</td></tr>
+<tr class="memdesc:a1cfd87bf68ec505eec2f20f710ce0189"><td class="mdescLeft">&#160;</td><td class="mdescRight">オクターブ3 レ#  <a href="../../d9/d88/sound_8h_a1cfd87bf68ec505eec2f20f710ce0189.html#a1cfd87bf68ec505eec2f20f710ce0189">[詳解]</a><br /></td></tr>
+<tr class="separator:a1cfd87bf68ec505eec2f20f710ce0189"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c3d885a2a78b0ac306c3d275233e037"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d88/sound_8h_a7c3d885a2a78b0ac306c3d275233e037.html#a7c3d885a2a78b0ac306c3d275233e037">SOUND_E3</a>&#160;&#160;&#160;25</td></tr>
+<tr class="memdesc:a7c3d885a2a78b0ac306c3d275233e037"><td class="mdescLeft">&#160;</td><td class="mdescRight">オクターブ3 ミ  <a href="../../d9/d88/sound_8h_a7c3d885a2a78b0ac306c3d275233e037.html#a7c3d885a2a78b0ac306c3d275233e037">[詳解]</a><br /></td></tr>
+<tr class="separator:a7c3d885a2a78b0ac306c3d275233e037"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee1dad36946f9a025e2067788b62e575"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d88/sound_8h_aee1dad36946f9a025e2067788b62e575.html#aee1dad36946f9a025e2067788b62e575">SOUND_F3</a>&#160;&#160;&#160;24</td></tr>
+<tr class="memdesc:aee1dad36946f9a025e2067788b62e575"><td class="mdescLeft">&#160;</td><td class="mdescRight">オクターブ3 ファ  <a href="../../d9/d88/sound_8h_aee1dad36946f9a025e2067788b62e575.html#aee1dad36946f9a025e2067788b62e575">[詳解]</a><br /></td></tr>
+<tr class="separator:aee1dad36946f9a025e2067788b62e575"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4502a83bac176348b5c7b0677341fc26"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d88/sound_8h_a4502a83bac176348b5c7b0677341fc26.html#a4502a83bac176348b5c7b0677341fc26">SOUND_Fb3</a>&#160;&#160;&#160;23</td></tr>
+<tr class="memdesc:a4502a83bac176348b5c7b0677341fc26"><td class="mdescLeft">&#160;</td><td class="mdescRight">オクターブ3 ファ#  <a href="../../d9/d88/sound_8h_a4502a83bac176348b5c7b0677341fc26.html#a4502a83bac176348b5c7b0677341fc26">[詳解]</a><br /></td></tr>
+<tr class="separator:a4502a83bac176348b5c7b0677341fc26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3dc460e8030ea66b5b0af7074f32b3ac"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d88/sound_8h_a3dc460e8030ea66b5b0af7074f32b3ac.html#a3dc460e8030ea66b5b0af7074f32b3ac">SOUND_G3</a>&#160;&#160;&#160;21</td></tr>
+<tr class="memdesc:a3dc460e8030ea66b5b0af7074f32b3ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">オクターブ3 ソ  <a href="../../d9/d88/sound_8h_a3dc460e8030ea66b5b0af7074f32b3ac.html#a3dc460e8030ea66b5b0af7074f32b3ac">[詳解]</a><br /></td></tr>
+<tr class="separator:a3dc460e8030ea66b5b0af7074f32b3ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a154622a25029a712f113945150b1325b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d88/sound_8h_a154622a25029a712f113945150b1325b.html#a154622a25029a712f113945150b1325b">SOUND_Gb3</a>&#160;&#160;&#160;20</td></tr>
+<tr class="memdesc:a154622a25029a712f113945150b1325b"><td class="mdescLeft">&#160;</td><td class="mdescRight">オクターブ3 ソ#  <a href="../../d9/d88/sound_8h_a154622a25029a712f113945150b1325b.html#a154622a25029a712f113945150b1325b">[詳解]</a><br /></td></tr>
+<tr class="separator:a154622a25029a712f113945150b1325b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f45e8626868aaf3fe91e01a56686ecd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d88/sound_8h_a9f45e8626868aaf3fe91e01a56686ecd.html#a9f45e8626868aaf3fe91e01a56686ecd">SOUND_A3</a>&#160;&#160;&#160;19</td></tr>
+<tr class="memdesc:a9f45e8626868aaf3fe91e01a56686ecd"><td class="mdescLeft">&#160;</td><td class="mdescRight">オクターブ3 ラ  <a href="../../d9/d88/sound_8h_a9f45e8626868aaf3fe91e01a56686ecd.html#a9f45e8626868aaf3fe91e01a56686ecd">[詳解]</a><br /></td></tr>
+<tr class="separator:a9f45e8626868aaf3fe91e01a56686ecd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41403a0a136d706e529e4017966e1a10"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d88/sound_8h_a41403a0a136d706e529e4017966e1a10.html#a41403a0a136d706e529e4017966e1a10">SOUND_Ab3</a>&#160;&#160;&#160;18</td></tr>
+<tr class="memdesc:a41403a0a136d706e529e4017966e1a10"><td class="mdescLeft">&#160;</td><td class="mdescRight">オクターブ3 ラ#  <a href="../../d9/d88/sound_8h_a41403a0a136d706e529e4017966e1a10.html#a41403a0a136d706e529e4017966e1a10">[詳解]</a><br /></td></tr>
+<tr class="separator:a41403a0a136d706e529e4017966e1a10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a931824d8aaced5b4db469aa58517d993"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d88/sound_8h_a931824d8aaced5b4db469aa58517d993.html#a931824d8aaced5b4db469aa58517d993">SOUND_H3</a>&#160;&#160;&#160;17</td></tr>
+<tr class="memdesc:a931824d8aaced5b4db469aa58517d993"><td class="mdescLeft">&#160;</td><td class="mdescRight">オクターブ3 シ  <a href="../../d9/d88/sound_8h_a931824d8aaced5b4db469aa58517d993.html#a931824d8aaced5b4db469aa58517d993">[詳解]</a><br /></td></tr>
+<tr class="separator:a931824d8aaced5b4db469aa58517d993"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+型定義</h2></td></tr>
+<tr class="memitem:a25ea542ecfc47a97aed27c42ee791f3f"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="../../d3/dce/stddef_8h_afbf708854fe02af8475a9ba02f3196cb.html#afbf708854fe02af8475a9ba02f3196cb">_BOOL</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d88/sound_8h_a25ea542ecfc47a97aed27c42ee791f3f.html#a25ea542ecfc47a97aed27c42ee791f3f">SOUND_Api</a>) ()</td></tr>
+<tr class="memdesc:a25ea542ecfc47a97aed27c42ee791f3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">再生操作リクエストAPIの型  <a href="../../d9/d88/sound_8h_a25ea542ecfc47a97aed27c42ee791f3f.html#a25ea542ecfc47a97aed27c42ee791f3f">[詳解]</a><br /></td></tr>
+<tr class="separator:a25ea542ecfc47a97aed27c42ee791f3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+列挙型</h2></td></tr>
+<tr class="memitem:abb21e5244ee60939e8a32ec932e9d7b3"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d88/sound_8h_abb21e5244ee60939e8a32ec932e9d7b3.html#abb21e5244ee60939e8a32ec932e9d7b3">SOUND_State</a> { <br />
+&#160;&#160;<a class="el" href="../../d9/d88/sound_8h_abb21e5244ee60939e8a32ec932e9d7b3.html#abb21e5244ee60939e8a32ec932e9d7b3ad0949bdef5777ac0e886e8b7a3ac9e93">SOUND_ST_STOP</a> = 0, 
+<br />
+&#160;&#160;<a class="el" href="../../d9/d88/sound_8h_abb21e5244ee60939e8a32ec932e9d7b3.html#abb21e5244ee60939e8a32ec932e9d7b3a69af3ab302bcb6f9e2dabc363ea2f322">SOUND_ST_PLAY</a>, 
+<br />
+&#160;&#160;<a class="el" href="../../d9/d88/sound_8h_abb21e5244ee60939e8a32ec932e9d7b3.html#abb21e5244ee60939e8a32ec932e9d7b3a8ce8853fb3709716f052d68eb827c92f">SOUND_ST_REVERSE</a>, 
+<br />
+&#160;&#160;<a class="el" href="../../d9/d88/sound_8h_abb21e5244ee60939e8a32ec932e9d7b3.html#abb21e5244ee60939e8a32ec932e9d7b3ac0294a814acb2bcb5d3c4cefef53a22c">SOUND_NUM_OF_STATE</a>
+<br />
+ }<tr class="memdesc:abb21e5244ee60939e8a32ec932e9d7b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">再生状態リテラル型  <a href="../../d9/d88/sound_8h_abb21e5244ee60939e8a32ec932e9d7b3.html#abb21e5244ee60939e8a32ec932e9d7b3">[詳解]</a><br /></td></tr>
+<tr class="separator:abb21e5244ee60939e8a32ec932e9d7b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:ad3de2879fde7ab7812201bc42d3d4b8e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d88/sound_8h_ad3de2879fde7ab7812201bc42d3d4b8e.html#ad3de2879fde7ab7812201bc42d3d4b8e">SOUND_init</a> ()</td></tr>
+<tr class="memdesc:ad3de2879fde7ab7812201bc42d3d4b8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">サウンドドライバ初期化  <a href="../../d9/d88/sound_8h_ad3de2879fde7ab7812201bc42d3d4b8e.html#ad3de2879fde7ab7812201bc42d3d4b8e">[詳解]</a><br /></td></tr>
+<tr class="separator:ad3de2879fde7ab7812201bc42d3d4b8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4a032d84a215757679f6adca28a1d9b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d9/d88/sound_8h_abb21e5244ee60939e8a32ec932e9d7b3.html#abb21e5244ee60939e8a32ec932e9d7b3">SOUND_State</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d88/sound_8h_ac4a032d84a215757679f6adca28a1d9b.html#ac4a032d84a215757679f6adca28a1d9b">SOUND_getState</a> ()</td></tr>
+<tr class="memdesc:ac4a032d84a215757679f6adca28a1d9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">現在の再生状態取得  <a href="../../d9/d88/sound_8h_ac4a032d84a215757679f6adca28a1d9b.html#ac4a032d84a215757679f6adca28a1d9b">[詳解]</a><br /></td></tr>
+<tr class="separator:ac4a032d84a215757679f6adca28a1d9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf9ab0e7c0d23c1addb15b92b19cda3a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d88/sound_8h_adf9ab0e7c0d23c1addb15b92b19cda3a.html#adf9ab0e7c0d23c1addb15b92b19cda3a">SOUND_setVolume</a> (<a class="el" href="../../d3/dce/stddef_8h_aac464b47452ce9406f88ef194e2becc1.html#aac464b47452ce9406f88ef194e2becc1">_UBYTE</a> val)</td></tr>
+<tr class="memdesc:adf9ab0e7c0d23c1addb15b92b19cda3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">ボリューム設定  <a href="../../d9/d88/sound_8h_adf9ab0e7c0d23c1addb15b92b19cda3a.html#adf9ab0e7c0d23c1addb15b92b19cda3a">[詳解]</a><br /></td></tr>
+<tr class="separator:adf9ab0e7c0d23c1addb15b92b19cda3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d312ae4bc0fa617113f6b207948b216"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d88/sound_8h_a0d312ae4bc0fa617113f6b207948b216.html#a0d312ae4bc0fa617113f6b207948b216">SOUND_setEvlpCycle</a> (<a class="el" href="../../d3/dce/stddef_8h_af4b45f5ec97da370bd2173b4fe891d76.html#af4b45f5ec97da370bd2173b4fe891d76">_UWORD</a> val)</td></tr>
+<tr class="memdesc:a0d312ae4bc0fa617113f6b207948b216"><td class="mdescLeft">&#160;</td><td class="mdescRight">エンベロープ周期設定  <a href="../../d9/d88/sound_8h_a0d312ae4bc0fa617113f6b207948b216.html#a0d312ae4bc0fa617113f6b207948b216">[詳解]</a><br /></td></tr>
+<tr class="separator:a0d312ae4bc0fa617113f6b207948b216"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96d64623d3a9b13dc1946eb89b67e6d4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d88/sound_8h_a96d64623d3a9b13dc1946eb89b67e6d4.html#a96d64623d3a9b13dc1946eb89b67e6d4">SOUND_setTone</a> (<a class="el" href="../../d3/dce/stddef_8h_aac464b47452ce9406f88ef194e2becc1.html#aac464b47452ce9406f88ef194e2becc1">_UBYTE</a> idx, const <a class="el" href="../../d9/d88/sound_8h.html#d6/d3c/structSOUND__Tone">SOUND_Tone</a> *tone)</td></tr>
+<tr class="memdesc:a96d64623d3a9b13dc1946eb89b67e6d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">音登録  <a href="../../d9/d88/sound_8h_a96d64623d3a9b13dc1946eb89b67e6d4.html#a96d64623d3a9b13dc1946eb89b67e6d4">[詳解]</a><br /></td></tr>
+<tr class="separator:a96d64623d3a9b13dc1946eb89b67e6d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89125a6dfb8c0023aba543f2d0f24a8f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d88/sound_8h_a89125a6dfb8c0023aba543f2d0f24a8f.html#a89125a6dfb8c0023aba543f2d0f24a8f">SOUND_removeTone</a> (<a class="el" href="../../d3/dce/stddef_8h_aac464b47452ce9406f88ef194e2becc1.html#aac464b47452ce9406f88ef194e2becc1">_UBYTE</a> idx)</td></tr>
+<tr class="memdesc:a89125a6dfb8c0023aba543f2d0f24a8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">音削除  <a href="../../d9/d88/sound_8h_a89125a6dfb8c0023aba543f2d0f24a8f.html#a89125a6dfb8c0023aba543f2d0f24a8f">[詳解]</a><br /></td></tr>
+<tr class="separator:a89125a6dfb8c0023aba543f2d0f24a8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ab16e900aec03cfe3707d0f33e5821c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d3/dce/stddef_8h_afbf708854fe02af8475a9ba02f3196cb.html#afbf708854fe02af8475a9ba02f3196cb">_BOOL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d88/sound_8h_a7ab16e900aec03cfe3707d0f33e5821c.html#a7ab16e900aec03cfe3707d0f33e5821c">SOUND_play</a> ()</td></tr>
+<tr class="memdesc:a7ab16e900aec03cfe3707d0f33e5821c"><td class="mdescLeft">&#160;</td><td class="mdescRight">音再生リクエスト  <a href="../../d9/d88/sound_8h_a7ab16e900aec03cfe3707d0f33e5821c.html#a7ab16e900aec03cfe3707d0f33e5821c">[詳解]</a><br /></td></tr>
+<tr class="separator:a7ab16e900aec03cfe3707d0f33e5821c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aafc9cb1cbfabe6eced6a250c99cd1de0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d3/dce/stddef_8h_afbf708854fe02af8475a9ba02f3196cb.html#afbf708854fe02af8475a9ba02f3196cb">_BOOL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d88/sound_8h_aafc9cb1cbfabe6eced6a250c99cd1de0.html#aafc9cb1cbfabe6eced6a250c99cd1de0">SOUND_reverse</a> ()</td></tr>
+<tr class="memdesc:aafc9cb1cbfabe6eced6a250c99cd1de0"><td class="mdescLeft">&#160;</td><td class="mdescRight">音逆再生リクエスト  <a href="../../d9/d88/sound_8h_aafc9cb1cbfabe6eced6a250c99cd1de0.html#aafc9cb1cbfabe6eced6a250c99cd1de0">[詳解]</a><br /></td></tr>
+<tr class="separator:aafc9cb1cbfabe6eced6a250c99cd1de0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1504a4f21c440a59edeecd944b01c032"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d3/dce/stddef_8h_afbf708854fe02af8475a9ba02f3196cb.html#afbf708854fe02af8475a9ba02f3196cb">_BOOL</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d88/sound_8h_a1504a4f21c440a59edeecd944b01c032.html#a1504a4f21c440a59edeecd944b01c032">SOUND_stop</a> ()</td></tr>
+<tr class="memdesc:a1504a4f21c440a59edeecd944b01c032"><td class="mdescLeft">&#160;</td><td class="mdescRight">停止リクエスト  <a href="../../d9/d88/sound_8h_a1504a4f21c440a59edeecd944b01c032.html#a1504a4f21c440a59edeecd944b01c032">[詳解]</a><br /></td></tr>
+<tr class="separator:a1504a4f21c440a59edeecd944b01c032"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5fc67e86da09d64eef5060e3393395b0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d88/sound_8h_a5fc67e86da09d64eef5060e3393395b0.html#a5fc67e86da09d64eef5060e3393395b0">SOUND_makePulse</a> ()</td></tr>
+<tr class="memdesc:a5fc67e86da09d64eef5060e3393395b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">波形生成  <a href="../../d9/d88/sound_8h_a5fc67e86da09d64eef5060e3393395b0.html#a5fc67e86da09d64eef5060e3393395b0">[詳解]</a><br /></td></tr>
+<tr class="separator:a5fc67e86da09d64eef5060e3393395b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac55bd0188c9aed90f2f859f1ac03ed61"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d88/sound_8h_ac55bd0188c9aed90f2f859f1ac03ed61.html#ac55bd0188c9aed90f2f859f1ac03ed61">SOUND_pronounce</a> ()</td></tr>
+<tr class="memdesc:ac55bd0188c9aed90f2f859f1ac03ed61"><td class="mdescLeft">&#160;</td><td class="mdescRight">音データ発音  <a href="../../d9/d88/sound_8h_ac55bd0188c9aed90f2f859f1ac03ed61.html#ac55bd0188c9aed90f2f859f1ac03ed61">[詳解]</a><br /></td></tr>
+<tr class="separator:ac55bd0188c9aed90f2f859f1ac03ed61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+変数</h2></td></tr>
+<tr class="memitem:acf4c0032eb66261be38af2018b4119d3"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../d9/d88/sound_8h_a25ea542ecfc47a97aed27c42ee791f3f.html#a25ea542ecfc47a97aed27c42ee791f3f">SOUND_Api</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d88/sound_8h_acf4c0032eb66261be38af2018b4119d3.html#acf4c0032eb66261be38af2018b4119d3">SOUND_state_handler</a> [<a class="el" href="../../d9/d88/sound_8h_abb21e5244ee60939e8a32ec932e9d7b3.html#abb21e5244ee60939e8a32ec932e9d7b3ac0294a814acb2bcb5d3c4cefef53a22c">SOUND_NUM_OF_STATE</a>]</td></tr>
+<tr class="memdesc:acf4c0032eb66261be38af2018b4119d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">状態ハンドラ配列  <a href="../../d9/d88/sound_8h_acf4c0032eb66261be38af2018b4119d3.html#acf4c0032eb66261be38af2018b4119d3">[詳解]</a><br /></td></tr>
+<tr class="separator:acf4c0032eb66261be38af2018b4119d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>サウンドドライバ </p>
+<p>このモジュールは音を再生させるためのインタフェースを提供する。<br />
+H8-BASE2で使用できる3つのタイマを使い、音程、音長、強弱を表わす矩形波を スピーカポートへ出力する。</p>
+<dl class="section attention"><dt>注意</dt><dd>TimerA, TimerV, TimerWを他のモジュールで使用してはならない。</dd></dl>
+<p> 
+@version $Id:$
+
+@author Kenji MINOURA / kenji@kandj.org
+
+Copyright (c) 2008 K&J Software Design, Ltd All rights reserved.
+ </p>
+
+<p> <a class="el" href="../../d9/d88/sound_8h_source.html">sound.h</a> に定義があります。</p>
+</div><hr/><h2 class="groupheader">クラス詳解</h2>
+<a name="d0/d92/structSOUND__Envelope" id="d0/d92/structSOUND__Envelope"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct SOUND_Envelope</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="textblock"><p>エンベロープ定義型 </p>
+<p>音発生時の強弱レベルを定義する型 </p>
+
+<p> <a class="el" href="../../d9/d88/sound_8h_source.html">sound.h</a> の <a class="el" href="../../d9/d88/sound_8h_source.html#l00154">154</a> 行目に定義があります。</p>
+</div><div class="dynheader">
+SOUND_Envelope 連携図</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d4/d37/structSOUND__Envelope__coll__graph.png" border="0" usemap="#SOUND__Envelope_coll__map" alt="Collaboration graph"/></div>
+<map name="SOUND__Envelope_coll__map" id="SOUND__Envelope_coll__map">
+</map>
+</div>
+<table class="fieldtable">
+<tr><th colspan="3">クラスメンバ</th></tr>
+<tr><td class="fieldtype">
+<a class="anchor" id="ad368fb20a4f66ce37f393a9e76669c2c"></a><a class="el" href="../../d3/dce/stddef_8h_aac464b47452ce9406f88ef194e2becc1.html#aac464b47452ce9406f88ef194e2becc1">_UBYTE</a> *</td>
+<td class="fieldname">
+data</td>
+<td class="fielddoc">
+エンベロープデータ列の先頭へのポインタ </td></tr>
+<tr><td class="fieldtype">
+<a class="anchor" id="af1860938a43db18c94c5e455a3d30f92"></a><a class="el" href="../../d3/dce/stddef_8h_af4b45f5ec97da370bd2173b4fe891d76.html#af4b45f5ec97da370bd2173b4fe891d76">_UWORD</a></td>
+<td class="fieldname">
+size</td>
+<td class="fielddoc">
+エンベロープデータ列のサイズ </td></tr>
+</table>
+
+</div>
+</div>
+<a name="d6/d3c/structSOUND__Tone" id="d6/d3c/structSOUND__Tone"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct SOUND_Tone</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="textblock"><p>音定義型 </p>
+<p>あるタイミングでの発生音を定義する型 </p>
+
+<p> <a class="el" href="../../d9/d88/sound_8h_source.html">sound.h</a> の <a class="el" href="../../d9/d88/sound_8h_source.html#l00167">167</a> 行目に定義があります。</p>
+</div><div class="dynheader">
+SOUND_Tone 連携図</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d6/d5d/structSOUND__Tone__coll__graph.png" border="0" usemap="#SOUND__Tone_coll__map" alt="Collaboration graph"/></div>
+<map name="SOUND__Tone_coll__map" id="SOUND__Tone_coll__map">
+<area shape="rect" id="node4" href="../../d9/d88/sound_8h.html#d0/d92/structSOUND__Envelope" title="エンベロープ定義型 " alt="" coords="179,145,312,223"/>
+</map>
+</div>
+<table class="fieldtable">
+<tr><th colspan="3">クラスメンバ</th></tr>
+<tr><td class="fieldtype">
+<a class="anchor" id="a8135b8035953af27550de75620afe4d5"></a><a class="el" href="../../d3/dce/stddef_8h_aac464b47452ce9406f88ef194e2becc1.html#aac464b47452ce9406f88ef194e2becc1">_UBYTE</a></td>
+<td class="fieldname">
+freq</td>
+<td class="fielddoc">
+音の周波数 </td></tr>
+<tr><td class="fieldtype">
+<a class="anchor" id="ac170c41399f920b778a6ea90b82660c3"></a><a class="el" href="../../d9/d88/sound_8h.html#d0/d92/structSOUND__Envelope">SOUND_Envelope</a> *</td>
+<td class="fieldname">
+evlp</td>
+<td class="fielddoc">
+この音を発生させるときのエンベロープ </td></tr>
+<tr><td class="fieldtype">
+<a class="anchor" id="a4d3e0cc4845c0d851a0fbfd43dd01c02"></a><a class="el" href="../../d9/d88/sound_8h.html#d0/d92/structSOUND__Envelope">SOUND_Envelope</a> *</td>
+<td class="fieldname">
+reverb</td>
+<td class="fielddoc">
+再生後の残響効果。リバーブ </td></tr>
+<tr><td class="fieldtype">
+<a class="anchor" id="a87a8f1fa6a5243bfec12dace400f4d95"></a><a class="el" href="../../d3/dce/stddef_8h_afbf708854fe02af8475a9ba02f3196cb.html#afbf708854fe02af8475a9ba02f3196cb">_BOOL</a></td>
+<td class="fieldname">
+loop</td>
+<td class="fielddoc">
+リバーブのループフラグ </td></tr>
+</table>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="../../dir_cccf68db23ba25fb97e4e5b2069f9a17.html">h8sdk</a></li><li class="navelem"><a class="el" href="../../d9/d88/sound_8h.html">sound.h</a></li>
+    <li class="footer">2016年02月27日(土) 00時46分21秒作成 - H8SDK / 構成: 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.10 </li>
+  </ul>
+</div>
+</body>
+</html>

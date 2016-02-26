@@ -1,0 +1,692 @@
+\subsection{include/h8sdk/music.h ファイル}
+\label{music_8h}\index{include/h8sdk/music.\+h@{include/h8sdk/music.\+h}}
+
+
+楽曲演奏モジュール  
+
+
+{\ttfamily \#include \char`\"{}sound.\+h\char`\"{}}\\*
+music.\+h の依存先関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=159pt]{d7/d6e/music_8h__incl}
+\end{center}
+\end{figure}
+\subsubsection*{クラス}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{music_8h_df/dbe/structMUSIC__Note}{M\+U\+S\+I\+C\+\_\+\+Note}
+\begin{DoxyCompactList}\small\item\em 音符定義型 \end{DoxyCompactList}\item 
+struct \hyperlink{music_8h_d2/d40/structMUSIC__Part}{M\+U\+S\+I\+C\+\_\+\+Part}
+\begin{DoxyCompactList}\small\item\em パート定義型 \end{DoxyCompactList}\item 
+struct \hyperlink{music_8h_d3/dd6/structMUSIC__Score}{M\+U\+S\+I\+C\+\_\+\+Score}
+\begin{DoxyCompactList}\small\item\em 楽譜定義型 \end{DoxyCompactList}\item 
+struct \hyperlink{music_8h_dd/d9f/structMUSIC__Position}{M\+U\+S\+I\+C\+\_\+\+Position}
+\begin{DoxyCompactList}\small\item\em 再生位置 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{マクロ定義}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{music_8h_a219b820b86dd148d59b29a762f1d775a_a219b820b86dd148d59b29a762f1d775a}{M\+U\+S\+I\+C\+\_\+\+M\+A\+X\+\_\+\+P\+A\+R\+T}~\hyperlink{sound_8h_ae37af07d650f8e823223bfaf85dfeea5_ae37af07d650f8e823223bfaf85dfeea5}{S\+O\+U\+N\+D\+\_\+\+M\+A\+X\+\_\+\+P\+R\+O\+N\+O\+U\+N\+C\+E}
+\begin{DoxyCompactList}\small\item\em 最大再生パート数 \end{DoxyCompactList}\item 
+\#define \hyperlink{music_8h_a5b78950ab14bd552dbb539b8912dada4_a5b78950ab14bd552dbb539b8912dada4}{M\+U\+S\+I\+C\+\_\+\+L0}~768
+\begin{DoxyCompactList}\small\item\em 全音符 \end{DoxyCompactList}\item 
+\#define \hyperlink{music_8h_a4788b753af96dd3806987f9f43b2808c_a4788b753af96dd3806987f9f43b2808c}{M\+U\+S\+I\+C\+\_\+\+L2}~384
+\begin{DoxyCompactList}\small\item\em 2分音符 \end{DoxyCompactList}\item 
+\#define \hyperlink{music_8h_a1a06339426dad29d1eeb5a23b4be9726_a1a06339426dad29d1eeb5a23b4be9726}{M\+U\+S\+I\+C\+\_\+\+L4}~192
+\begin{DoxyCompactList}\small\item\em 4分音符 \end{DoxyCompactList}\item 
+\#define \hyperlink{music_8h_aed1118b9891aebc618d044baeef53056_aed1118b9891aebc618d044baeef53056}{M\+U\+S\+I\+C\+\_\+\+L8}~96
+\begin{DoxyCompactList}\small\item\em 8分音符 \end{DoxyCompactList}\item 
+\#define \hyperlink{music_8h_ac38d2aa39e73d6bf993e350e43172fc2_ac38d2aa39e73d6bf993e350e43172fc2}{M\+U\+S\+I\+C\+\_\+\+L16}~48
+\begin{DoxyCompactList}\small\item\em 16分音符 \end{DoxyCompactList}\item 
+\#define \hyperlink{music_8h_a63721aef2801ea3c18b73eeb6a1bb28f_a63721aef2801ea3c18b73eeb6a1bb28f}{M\+U\+S\+I\+C\+\_\+\+L32}~24
+\begin{DoxyCompactList}\small\item\em 32分音符 \end{DoxyCompactList}\item 
+\#define \hyperlink{music_8h_ab39506114b70023be5b84b891acac4f5_ab39506114b70023be5b84b891acac4f5}{M\+U\+S\+I\+C\+\_\+\+L64}~12
+\begin{DoxyCompactList}\small\item\em 64分音符 \end{DoxyCompactList}\item 
+\#define \hyperlink{music_8h_a4d436e1851fe844fe2eceb5c428c645e_a4d436e1851fe844fe2eceb5c428c645e}{M\+U\+S\+I\+C\+\_\+\+L128}~6
+\begin{DoxyCompactList}\small\item\em 128分音符 \end{DoxyCompactList}\item 
+\#define \hyperlink{music_8h_a7fef6bc530066e840077bad2399af558_a7fef6bc530066e840077bad2399af558}{M\+U\+S\+I\+C\+\_\+\+L3\+C}~64
+\begin{DoxyCompactList}\small\item\em 3連符 \end{DoxyCompactList}\item 
+\#define \hyperlink{music_8h_a4ffa962d26402e1549bbb77cec186912_a4ffa962d26402e1549bbb77cec186912}{M\+U\+S\+I\+C\+\_\+\+L6\+C}~32
+\begin{DoxyCompactList}\small\item\em 6連符 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{型定義}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{stddef_8h_afbf708854fe02af8475a9ba02f3196cb_afbf708854fe02af8475a9ba02f3196cb}{\+\_\+\+B\+O\+O\+L}($\ast$ \hyperlink{music_8h_a29e828a1710e2f01e14484306a5a35f6_a29e828a1710e2f01e14484306a5a35f6}{M\+U\+S\+I\+C\+\_\+\+Api}) ()
+\begin{DoxyCompactList}\small\item\em 再生操作リクエスト\+A\+P\+Iの型 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{列挙型}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{music_8h_a44fb51174ff72905a037ea2b766dc041_a44fb51174ff72905a037ea2b766dc041}{M\+U\+S\+I\+C\+\_\+\+State} \{ \\*
+\hyperlink{music_8h_a44fb51174ff72905a037ea2b766dc041_a44fb51174ff72905a037ea2b766dc041a95bce91dffc55299d04611d944336a65}{M\+U\+S\+I\+C\+\_\+\+S\+T\+\_\+\+S\+T\+O\+P} = 0, 
+\\*
+\hyperlink{music_8h_a44fb51174ff72905a037ea2b766dc041_a44fb51174ff72905a037ea2b766dc041a57f13009933f2d859d6eadc2fd270ace}{M\+U\+S\+I\+C\+\_\+\+S\+T\+\_\+\+P\+L\+A\+Y}, 
+\\*
+\hyperlink{music_8h_a44fb51174ff72905a037ea2b766dc041_a44fb51174ff72905a037ea2b766dc041a1323e9d7c5afb9f636504d9b6c163404}{M\+U\+S\+I\+C\+\_\+\+S\+T\+\_\+\+R\+E\+V\+E\+R\+S\+E}, 
+\\*
+\hyperlink{music_8h_a44fb51174ff72905a037ea2b766dc041_a44fb51174ff72905a037ea2b766dc041a33c1f2fc3364f1bcb41099f04582ab10}{M\+U\+S\+I\+C\+\_\+\+S\+T\+\_\+\+P\+A\+U\+S\+E}, 
+\\*
+\hyperlink{music_8h_a44fb51174ff72905a037ea2b766dc041_a44fb51174ff72905a037ea2b766dc041a693393721edbeba92e83b88506652a57}{M\+U\+S\+I\+C\+\_\+\+N\+U\+M\+\_\+\+O\+F\+\_\+\+S\+T\+A\+T\+E}
+ \}\begin{DoxyCompactList}\small\item\em 再生状態リテラル型 \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsubsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{music_8h_a238be89109438967c9e64f56401e0a8c_a238be89109438967c9e64f56401e0a8c}{M\+U\+S\+I\+C\+\_\+init} ()
+\begin{DoxyCompactList}\small\item\em 初期化 \end{DoxyCompactList}\item 
+\hyperlink{music_8h_a44fb51174ff72905a037ea2b766dc041_a44fb51174ff72905a037ea2b766dc041}{M\+U\+S\+I\+C\+\_\+\+State} \hyperlink{music_8h_a513969bbe9e0541a9712758cce80bd21_a513969bbe9e0541a9712758cce80bd21}{M\+U\+S\+I\+C\+\_\+get\+State} ()
+\begin{DoxyCompactList}\small\item\em 現在の再生状態取得 \end{DoxyCompactList}\item 
+void \hyperlink{music_8h_a372f19fae5dda083a8c38a9ad270f1fe_a372f19fae5dda083a8c38a9ad270f1fe}{M\+U\+S\+I\+C\+\_\+set\+Tempo} (\hyperlink{stddef_8h_aac464b47452ce9406f88ef194e2becc1_aac464b47452ce9406f88ef194e2becc1}{\+\_\+\+U\+B\+Y\+T\+E} val)
+\begin{DoxyCompactList}\small\item\em テンポ設定 \end{DoxyCompactList}\item 
+void \hyperlink{music_8h_a1792d32ccccbe2360cf76dd7dee0bb71_a1792d32ccccbe2360cf76dd7dee0bb71}{M\+U\+S\+I\+C\+\_\+set\+Loop} (\hyperlink{stddef_8h_afbf708854fe02af8475a9ba02f3196cb_afbf708854fe02af8475a9ba02f3196cb}{\+\_\+\+B\+O\+O\+L} val)
+\begin{DoxyCompactList}\small\item\em 再生ループ設定 \end{DoxyCompactList}\item 
+void \hyperlink{music_8h_ac74db7eae65c95911016d6a2b7673536_ac74db7eae65c95911016d6a2b7673536}{M\+U\+S\+I\+C\+\_\+get\+Position} (\hyperlink{music_8h_dd/d9f/structMUSIC__Position}{M\+U\+S\+I\+C\+\_\+\+Position} $\ast$pos)
+\begin{DoxyCompactList}\small\item\em 再生位置取得 \end{DoxyCompactList}\item 
+void \hyperlink{music_8h_a49f47cd07af4fdaa38f5c23c835f2db1_a49f47cd07af4fdaa38f5c23c835f2db1}{M\+U\+S\+I\+C\+\_\+set\+Position} (const \hyperlink{music_8h_dd/d9f/structMUSIC__Position}{M\+U\+S\+I\+C\+\_\+\+Position} $\ast$pos)
+\begin{DoxyCompactList}\small\item\em 再生位置設定 \end{DoxyCompactList}\item 
+void \hyperlink{music_8h_aa6d0fea87bf8436f1abda3968ef54a47_aa6d0fea87bf8436f1abda3968ef54a47}{M\+U\+S\+I\+C\+\_\+set\+Score} (const \hyperlink{music_8h_d3/dd6/structMUSIC__Score}{M\+U\+S\+I\+C\+\_\+\+Score} $\ast$score)
+\begin{DoxyCompactList}\small\item\em 楽曲登録 \end{DoxyCompactList}\item 
+const \hyperlink{music_8h_d3/dd6/structMUSIC__Score}{M\+U\+S\+I\+C\+\_\+\+Score} $\ast$ \hyperlink{music_8h_a685ed593f10455fd1286fcc7ab1011e7_a685ed593f10455fd1286fcc7ab1011e7}{M\+U\+S\+I\+C\+\_\+get\+Score} ()
+\begin{DoxyCompactList}\small\item\em 楽曲取得 \end{DoxyCompactList}\item 
+\hyperlink{stddef_8h_afbf708854fe02af8475a9ba02f3196cb_afbf708854fe02af8475a9ba02f3196cb}{\+\_\+\+B\+O\+O\+L} \hyperlink{music_8h_a9d41a9ee0630a3ffb22c5f0885d39ee5_a9d41a9ee0630a3ffb22c5f0885d39ee5}{M\+U\+S\+I\+C\+\_\+play} ()
+\begin{DoxyCompactList}\small\item\em 楽曲再生リクエスト \end{DoxyCompactList}\item 
+\hyperlink{stddef_8h_afbf708854fe02af8475a9ba02f3196cb_afbf708854fe02af8475a9ba02f3196cb}{\+\_\+\+B\+O\+O\+L} \hyperlink{music_8h_af043ae70cb6cffbf9ab4c4e759187a69_af043ae70cb6cffbf9ab4c4e759187a69}{M\+U\+S\+I\+C\+\_\+reverse} ()
+\begin{DoxyCompactList}\small\item\em 楽曲逆再生リクエスト \end{DoxyCompactList}\item 
+\hyperlink{stddef_8h_afbf708854fe02af8475a9ba02f3196cb_afbf708854fe02af8475a9ba02f3196cb}{\+\_\+\+B\+O\+O\+L} \hyperlink{music_8h_ab3bfb05da259d13f35fee514ebabc18e_ab3bfb05da259d13f35fee514ebabc18e}{M\+U\+S\+I\+C\+\_\+pause} ()
+\begin{DoxyCompactList}\small\item\em 楽曲一時停止リクエスト \end{DoxyCompactList}\item 
+\hyperlink{stddef_8h_afbf708854fe02af8475a9ba02f3196cb_afbf708854fe02af8475a9ba02f3196cb}{\+\_\+\+B\+O\+O\+L} \hyperlink{music_8h_a1b5b16eb8fa1e378eb6434f3314a6570_a1b5b16eb8fa1e378eb6434f3314a6570}{M\+U\+S\+I\+C\+\_\+stop} ()
+\begin{DoxyCompactList}\small\item\em 楽曲停止リクエスト \end{DoxyCompactList}\item 
+void \hyperlink{music_8h_a8c9b9d27f433de83744467ef60bc2bf1_a8c9b9d27f433de83744467ef60bc2bf1}{M\+U\+S\+I\+C\+\_\+render} ()
+\begin{DoxyCompactList}\small\item\em 楽曲演奏/録音 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{変数}
+\begin{DoxyCompactItemize}
+\item 
+const \hyperlink{music_8h_a29e828a1710e2f01e14484306a5a35f6_a29e828a1710e2f01e14484306a5a35f6}{M\+U\+S\+I\+C\+\_\+\+Api} \hyperlink{music_8h_acb57fda4b6e51190cd6b34b9a2a48e1c_acb57fda4b6e51190cd6b34b9a2a48e1c}{M\+U\+S\+I\+C\+\_\+state\+\_\+handler} \mbox{[}\hyperlink{music_8h_a44fb51174ff72905a037ea2b766dc041_a44fb51174ff72905a037ea2b766dc041a693393721edbeba92e83b88506652a57}{M\+U\+S\+I\+C\+\_\+\+N\+U\+M\+\_\+\+O\+F\+\_\+\+S\+T\+A\+T\+E}\mbox{]}
+\begin{DoxyCompactList}\small\item\em 状態ハンドラ配列 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{詳解}
+楽曲演奏モジュール 
+
+このモジュールは楽曲の再生/録音インタフェースを提供する。~\newline
+サウンドドライバ必須のため、このモジュールを使うときは、外部でサウ ンドドライバの初期化をする必要はない。録音機能を有効にするときは U\+S\+E\+\_\+\+M\+U\+S\+I\+C\+\_\+\+R\+E\+C\+O\+R\+D をdefineしてコンパイルする。
+
+\begin{DoxyNote}{覚え書き}
+録音機能を有効にするためのメモリ領域は、サウンドドライバの最大同時 発信音数(\+S\+O\+U\+N\+D\+\_\+\+M\+A\+X\+\_\+\+P\+R\+O\+N\+O\+U\+N\+C\+E)が1のときで最低36バイトのメモリ領域が 必要であり、以降増える度に26バイトの領域を必要とする。これで和音を 含む音符ひとつを録音可能である。~\newline
+さらに、録音可能な音符(\+M\+U\+S\+I\+C\+\_\+\+N\+O\+T\+E\+\_\+\+O\+F\+\_\+\+R\+E\+C\+O\+R\+D\+\_\+\+P\+A\+R\+T)は、ひとつ増えるた びに14バイトの領域が必要となるが、最大同時発信音数を係数として増大 するため、録音音符サイズ×最大同時発信音数分の領域が必要になる。以 上より、録音時に必要なメモリサイズは、
+\end{DoxyNote}
+\begin{DoxyParagraph}{}
+
+\begin{DoxyCode}
+10 + (10 + 14 * MUSIC\_NOTE\_OF\_RECORD\_PART) * SOUND_MAX_PRONOUNCE
+\end{DoxyCode}
+
+\end{DoxyParagraph}
+\begin{DoxyParagraph}{}
+で表される。大体3和音の音符5つで250バイトほど必要になる。~\newline
+ 
+\end{DoxyParagraph}
+\begin{DoxySeeAlso}{参照}
+\hyperlink{sound_8h}{sound.\+h}
+\end{DoxySeeAlso}
+ 
+
+\subsubsection{クラス詳解}
+\index{M\+U\+S\+I\+C\+\_\+\+Note@{M\+U\+S\+I\+C\+\_\+\+Note}}\label{structMUSIC__Note}
+\paragraph{struct M\+U\+S\+I\+C\+\_\+\+Note}
+音符定義型 
+
+単音の音階、音色、音長を定義する型。 
+
+ music.\+h の 95 行目に定義があります。
+
+
+
+M\+U\+S\+I\+C\+\_\+\+Note 連携図
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=309pt]{de/d9f/structMUSIC__Note__coll__graph}
+\end{center}
+\end{figure}
+\begin{DoxyFields}{クラスメンバ}
+\hyperlink{sound_8h_d6/d3c/structSOUND__Tone}{S\+O\+U\+N\+D\+\_\+\+Tone}\label{music_8h_aea1e6d760788604e27607df5396e84af}
+&
+tone&
+発生させる音データ(音階、音色) \\
+\hline
+
+\hyperlink{stddef_8h_a1fd04328ad1e5a3e83788b99cddc35dd_a1fd04328ad1e5a3e83788b99cddc35dd}{\+\_\+\+U\+D\+W\+O\+R\+D}\label{music_8h_a35d44582fe88f2d916ddca02f8b17a6b}
+&
+begin&
+発音を開始する楽曲カウント値(絶対値) \\
+\hline
+
+\hyperlink{stddef_8h_af4b45f5ec97da370bd2173b4fe891d76_af4b45f5ec97da370bd2173b4fe891d76}{\+\_\+\+U\+W\+O\+R\+D}\label{music_8h_a3c43ff3e1874869792634760dd25e495}
+&
+len&
+音長。beginからの相対値 \\
+\hline
+
+\end{DoxyFields}
+\index{M\+U\+S\+I\+C\+\_\+\+Part@{M\+U\+S\+I\+C\+\_\+\+Part}}\label{structMUSIC__Part}
+\paragraph{struct M\+U\+S\+I\+C\+\_\+\+Part}
+パート定義型 
+
+複数の音符列から成る単パートを定義する型 
+
+ music.\+h の 110 行目に定義があります。
+
+
+
+M\+U\+S\+I\+C\+\_\+\+Part 連携図
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/db5/structMUSIC__Part__coll__graph}
+\end{center}
+\end{figure}
+\begin{DoxyFields}{クラスメンバ}
+\hyperlink{music_8h_df/dbe/structMUSIC__Note}{M\+U\+S\+I\+C\+\_\+\+Note} $\ast$\label{music_8h_a91806b7116535402ee7e7cfc28f9e8c9}
+&
+notes&
+\\
+\hline
+
+\hyperlink{stddef_8h_af4b45f5ec97da370bd2173b4fe891d76_af4b45f5ec97da370bd2173b4fe891d76}{\+\_\+\+U\+W\+O\+R\+D}\label{music_8h_a674fdda1614f13dcc71a9b3bacea25bf}
+&
+size&
+音符データ列 \\
+\hline
+
+\end{DoxyFields}
+\index{M\+U\+S\+I\+C\+\_\+\+Score@{M\+U\+S\+I\+C\+\_\+\+Score}}\label{structMUSIC__Score}
+\paragraph{struct M\+U\+S\+I\+C\+\_\+\+Score}
+楽譜定義型 
+
+複数のパートから成る最終的な演奏楽曲を表す楽譜を定義する型 
+
+ music.\+h の 123 行目に定義があります。
+
+
+
+M\+U\+S\+I\+C\+\_\+\+Score 連携図
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/d34/structMUSIC__Score__coll__graph}
+\end{center}
+\end{figure}
+\begin{DoxyFields}{クラスメンバ}
+\hyperlink{music_8h_d2/d40/structMUSIC__Part}{M\+U\+S\+I\+C\+\_\+\+Part} $\ast$\label{music_8h_af4e6c89e5ceb122f4819e89a224a72e4}
+&
+parts&
+\\
+\hline
+
+\hyperlink{stddef_8h_af4b45f5ec97da370bd2173b4fe891d76_af4b45f5ec97da370bd2173b4fe891d76}{\+\_\+\+U\+W\+O\+R\+D}\label{music_8h_a6cedd2913163d9b246021f1b9cc859d6}
+&
+size&
+パートデータ列 \\
+\hline
+
+\end{DoxyFields}
+\index{M\+U\+S\+I\+C\+\_\+\+Position@{M\+U\+S\+I\+C\+\_\+\+Position}}\label{structMUSIC__Position}
+\paragraph{struct M\+U\+S\+I\+C\+\_\+\+Position}
+再生位置 
+
+再生位置情報の定義 
+
+ music.\+h の 136 行目に定義があります。
+
+
+
+M\+U\+S\+I\+C\+\_\+\+Position 連携図
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=134pt]{da/d84/structMUSIC__Position__coll__graph}
+\end{center}
+\end{figure}
+\begin{DoxyFields}{クラスメンバ}
+\hyperlink{stddef_8h_af4b45f5ec97da370bd2173b4fe891d76_af4b45f5ec97da370bd2173b4fe891d76}{\+\_\+\+U\+W\+O\+R\+D}\label{music_8h_a1125dd2805c17a4780d5d8383af58261}
+&
+note\mbox{[}\hyperlink{music_8h_a219b820b86dd148d59b29a762f1d775a_a219b820b86dd148d59b29a762f1d775a}{M\+U\+S\+I\+C\+\_\+\+M\+A\+X\+\_\+\+P\+A\+R\+T}\mbox{]}&
+パート毎の音符データ列の位置 \\
+\hline
+
+\hyperlink{stddef_8h_a1fd04328ad1e5a3e83788b99cddc35dd_a1fd04328ad1e5a3e83788b99cddc35dd}{\+\_\+\+U\+D\+W\+O\+R\+D}\label{music_8h_af92c102791e74260155ab93bd6e303bd}
+&
+count&
+楽曲の再生カウント \\
+\hline
+
+\end{DoxyFields}
+
+
+\subsubsection{マクロ定義詳解}
+\index{music.\+h@{music.\+h}!M\+U\+S\+I\+C\+\_\+\+M\+A\+X\+\_\+\+P\+A\+R\+T@{M\+U\+S\+I\+C\+\_\+\+M\+A\+X\+\_\+\+P\+A\+R\+T}}
+\index{M\+U\+S\+I\+C\+\_\+\+M\+A\+X\+\_\+\+P\+A\+R\+T@{M\+U\+S\+I\+C\+\_\+\+M\+A\+X\+\_\+\+P\+A\+R\+T}!music.\+h@{music.\+h}}
+\paragraph[{M\+U\+S\+I\+C\+\_\+\+M\+A\+X\+\_\+\+P\+A\+R\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+U\+S\+I\+C\+\_\+\+M\+A\+X\+\_\+\+P\+A\+R\+T~{\bf S\+O\+U\+N\+D\+\_\+\+M\+A\+X\+\_\+\+P\+R\+O\+N\+O\+U\+N\+C\+E}}\label{music_8h_a219b820b86dd148d59b29a762f1d775a_a219b820b86dd148d59b29a762f1d775a}
+
+
+最大再生パート数 
+
+
+
+ music.\+h の 50 行目に定義があります。
+
+\index{music.\+h@{music.\+h}!M\+U\+S\+I\+C\+\_\+\+L0@{M\+U\+S\+I\+C\+\_\+\+L0}}
+\index{M\+U\+S\+I\+C\+\_\+\+L0@{M\+U\+S\+I\+C\+\_\+\+L0}!music.\+h@{music.\+h}}
+\paragraph[{M\+U\+S\+I\+C\+\_\+\+L0}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+U\+S\+I\+C\+\_\+\+L0~768}\label{music_8h_a5b78950ab14bd552dbb539b8912dada4_a5b78950ab14bd552dbb539b8912dada4}
+
+
+全音符 
+
+
+
+ music.\+h の 53 行目に定義があります。
+
+\index{music.\+h@{music.\+h}!M\+U\+S\+I\+C\+\_\+\+L2@{M\+U\+S\+I\+C\+\_\+\+L2}}
+\index{M\+U\+S\+I\+C\+\_\+\+L2@{M\+U\+S\+I\+C\+\_\+\+L2}!music.\+h@{music.\+h}}
+\paragraph[{M\+U\+S\+I\+C\+\_\+\+L2}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+U\+S\+I\+C\+\_\+\+L2~384}\label{music_8h_a4788b753af96dd3806987f9f43b2808c_a4788b753af96dd3806987f9f43b2808c}
+
+
+2分音符 
+
+
+
+ music.\+h の 55 行目に定義があります。
+
+\index{music.\+h@{music.\+h}!M\+U\+S\+I\+C\+\_\+\+L4@{M\+U\+S\+I\+C\+\_\+\+L4}}
+\index{M\+U\+S\+I\+C\+\_\+\+L4@{M\+U\+S\+I\+C\+\_\+\+L4}!music.\+h@{music.\+h}}
+\paragraph[{M\+U\+S\+I\+C\+\_\+\+L4}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+U\+S\+I\+C\+\_\+\+L4~192}\label{music_8h_a1a06339426dad29d1eeb5a23b4be9726_a1a06339426dad29d1eeb5a23b4be9726}
+
+
+4分音符 
+
+
+
+ music.\+h の 57 行目に定義があります。
+
+\index{music.\+h@{music.\+h}!M\+U\+S\+I\+C\+\_\+\+L8@{M\+U\+S\+I\+C\+\_\+\+L8}}
+\index{M\+U\+S\+I\+C\+\_\+\+L8@{M\+U\+S\+I\+C\+\_\+\+L8}!music.\+h@{music.\+h}}
+\paragraph[{M\+U\+S\+I\+C\+\_\+\+L8}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+U\+S\+I\+C\+\_\+\+L8~96}\label{music_8h_aed1118b9891aebc618d044baeef53056_aed1118b9891aebc618d044baeef53056}
+
+
+8分音符 
+
+
+
+ music.\+h の 59 行目に定義があります。
+
+\index{music.\+h@{music.\+h}!M\+U\+S\+I\+C\+\_\+\+L16@{M\+U\+S\+I\+C\+\_\+\+L16}}
+\index{M\+U\+S\+I\+C\+\_\+\+L16@{M\+U\+S\+I\+C\+\_\+\+L16}!music.\+h@{music.\+h}}
+\paragraph[{M\+U\+S\+I\+C\+\_\+\+L16}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+U\+S\+I\+C\+\_\+\+L16~48}\label{music_8h_ac38d2aa39e73d6bf993e350e43172fc2_ac38d2aa39e73d6bf993e350e43172fc2}
+
+
+16分音符 
+
+
+
+ music.\+h の 61 行目に定義があります。
+
+\index{music.\+h@{music.\+h}!M\+U\+S\+I\+C\+\_\+\+L32@{M\+U\+S\+I\+C\+\_\+\+L32}}
+\index{M\+U\+S\+I\+C\+\_\+\+L32@{M\+U\+S\+I\+C\+\_\+\+L32}!music.\+h@{music.\+h}}
+\paragraph[{M\+U\+S\+I\+C\+\_\+\+L32}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+U\+S\+I\+C\+\_\+\+L32~24}\label{music_8h_a63721aef2801ea3c18b73eeb6a1bb28f_a63721aef2801ea3c18b73eeb6a1bb28f}
+
+
+32分音符 
+
+
+
+ music.\+h の 63 行目に定義があります。
+
+\index{music.\+h@{music.\+h}!M\+U\+S\+I\+C\+\_\+\+L64@{M\+U\+S\+I\+C\+\_\+\+L64}}
+\index{M\+U\+S\+I\+C\+\_\+\+L64@{M\+U\+S\+I\+C\+\_\+\+L64}!music.\+h@{music.\+h}}
+\paragraph[{M\+U\+S\+I\+C\+\_\+\+L64}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+U\+S\+I\+C\+\_\+\+L64~12}\label{music_8h_ab39506114b70023be5b84b891acac4f5_ab39506114b70023be5b84b891acac4f5}
+
+
+64分音符 
+
+
+
+ music.\+h の 65 行目に定義があります。
+
+\index{music.\+h@{music.\+h}!M\+U\+S\+I\+C\+\_\+\+L128@{M\+U\+S\+I\+C\+\_\+\+L128}}
+\index{M\+U\+S\+I\+C\+\_\+\+L128@{M\+U\+S\+I\+C\+\_\+\+L128}!music.\+h@{music.\+h}}
+\paragraph[{M\+U\+S\+I\+C\+\_\+\+L128}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+U\+S\+I\+C\+\_\+\+L128~6}\label{music_8h_a4d436e1851fe844fe2eceb5c428c645e_a4d436e1851fe844fe2eceb5c428c645e}
+
+
+128分音符 
+
+
+
+ music.\+h の 67 行目に定義があります。
+
+\index{music.\+h@{music.\+h}!M\+U\+S\+I\+C\+\_\+\+L3\+C@{M\+U\+S\+I\+C\+\_\+\+L3\+C}}
+\index{M\+U\+S\+I\+C\+\_\+\+L3\+C@{M\+U\+S\+I\+C\+\_\+\+L3\+C}!music.\+h@{music.\+h}}
+\paragraph[{M\+U\+S\+I\+C\+\_\+\+L3\+C}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+U\+S\+I\+C\+\_\+\+L3\+C~64}\label{music_8h_a7fef6bc530066e840077bad2399af558_a7fef6bc530066e840077bad2399af558}
+
+
+3連符 
+
+
+
+ music.\+h の 69 行目に定義があります。
+
+\index{music.\+h@{music.\+h}!M\+U\+S\+I\+C\+\_\+\+L6\+C@{M\+U\+S\+I\+C\+\_\+\+L6\+C}}
+\index{M\+U\+S\+I\+C\+\_\+\+L6\+C@{M\+U\+S\+I\+C\+\_\+\+L6\+C}!music.\+h@{music.\+h}}
+\paragraph[{M\+U\+S\+I\+C\+\_\+\+L6\+C}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+U\+S\+I\+C\+\_\+\+L6\+C~32}\label{music_8h_a4ffa962d26402e1549bbb77cec186912_a4ffa962d26402e1549bbb77cec186912}
+
+
+6連符 
+
+
+
+ music.\+h の 71 行目に定義があります。
+
+
+
+\subsubsection{型定義詳解}
+\index{music.\+h@{music.\+h}!M\+U\+S\+I\+C\+\_\+\+Api@{M\+U\+S\+I\+C\+\_\+\+Api}}
+\index{M\+U\+S\+I\+C\+\_\+\+Api@{M\+U\+S\+I\+C\+\_\+\+Api}!music.\+h@{music.\+h}}
+\paragraph[{M\+U\+S\+I\+C\+\_\+\+Api}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf \+\_\+\+B\+O\+O\+L}($\ast$ M\+U\+S\+I\+C\+\_\+\+Api) ()}\label{music_8h_a29e828a1710e2f01e14484306a5a35f6_a29e828a1710e2f01e14484306a5a35f6}
+
+
+再生操作リクエスト\+A\+P\+Iの型 
+
+
+
+ music.\+h の 147 行目に定義があります。
+
+
+
+\subsubsection{列挙型詳解}
+\index{music.\+h@{music.\+h}!M\+U\+S\+I\+C\+\_\+\+State@{M\+U\+S\+I\+C\+\_\+\+State}}
+\index{M\+U\+S\+I\+C\+\_\+\+State@{M\+U\+S\+I\+C\+\_\+\+State}!music.\+h@{music.\+h}}
+\paragraph[{M\+U\+S\+I\+C\+\_\+\+State}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf M\+U\+S\+I\+C\+\_\+\+State}}\label{music_8h_a44fb51174ff72905a037ea2b766dc041_a44fb51174ff72905a037ea2b766dc041}
+
+
+再生状態リテラル型 
+
+\begin{Desc}
+\item[列挙値]\par
+\begin{description}
+\index{M\+U\+S\+I\+C\+\_\+\+S\+T\+\_\+\+S\+T\+O\+P@{M\+U\+S\+I\+C\+\_\+\+S\+T\+\_\+\+S\+T\+O\+P}!music.\+h@{music.\+h}}\index{music.\+h@{music.\+h}!M\+U\+S\+I\+C\+\_\+\+S\+T\+\_\+\+S\+T\+O\+P@{M\+U\+S\+I\+C\+\_\+\+S\+T\+\_\+\+S\+T\+O\+P}}\item[{\em 
+M\+U\+S\+I\+C\+\_\+\+S\+T\+\_\+\+S\+T\+O\+P\label{music_8h_a44fb51174ff72905a037ea2b766dc041_a44fb51174ff72905a037ea2b766dc041a95bce91dffc55299d04611d944336a65}
+}]\index{M\+U\+S\+I\+C\+\_\+\+S\+T\+\_\+\+P\+L\+A\+Y@{M\+U\+S\+I\+C\+\_\+\+S\+T\+\_\+\+P\+L\+A\+Y}!music.\+h@{music.\+h}}\index{music.\+h@{music.\+h}!M\+U\+S\+I\+C\+\_\+\+S\+T\+\_\+\+P\+L\+A\+Y@{M\+U\+S\+I\+C\+\_\+\+S\+T\+\_\+\+P\+L\+A\+Y}}\item[{\em 
+M\+U\+S\+I\+C\+\_\+\+S\+T\+\_\+\+P\+L\+A\+Y\label{music_8h_a44fb51174ff72905a037ea2b766dc041_a44fb51174ff72905a037ea2b766dc041a57f13009933f2d859d6eadc2fd270ace}
+}]\index{M\+U\+S\+I\+C\+\_\+\+S\+T\+\_\+\+R\+E\+V\+E\+R\+S\+E@{M\+U\+S\+I\+C\+\_\+\+S\+T\+\_\+\+R\+E\+V\+E\+R\+S\+E}!music.\+h@{music.\+h}}\index{music.\+h@{music.\+h}!M\+U\+S\+I\+C\+\_\+\+S\+T\+\_\+\+R\+E\+V\+E\+R\+S\+E@{M\+U\+S\+I\+C\+\_\+\+S\+T\+\_\+\+R\+E\+V\+E\+R\+S\+E}}\item[{\em 
+M\+U\+S\+I\+C\+\_\+\+S\+T\+\_\+\+R\+E\+V\+E\+R\+S\+E\label{music_8h_a44fb51174ff72905a037ea2b766dc041_a44fb51174ff72905a037ea2b766dc041a1323e9d7c5afb9f636504d9b6c163404}
+}]\index{M\+U\+S\+I\+C\+\_\+\+S\+T\+\_\+\+P\+A\+U\+S\+E@{M\+U\+S\+I\+C\+\_\+\+S\+T\+\_\+\+P\+A\+U\+S\+E}!music.\+h@{music.\+h}}\index{music.\+h@{music.\+h}!M\+U\+S\+I\+C\+\_\+\+S\+T\+\_\+\+P\+A\+U\+S\+E@{M\+U\+S\+I\+C\+\_\+\+S\+T\+\_\+\+P\+A\+U\+S\+E}}\item[{\em 
+M\+U\+S\+I\+C\+\_\+\+S\+T\+\_\+\+P\+A\+U\+S\+E\label{music_8h_a44fb51174ff72905a037ea2b766dc041_a44fb51174ff72905a037ea2b766dc041a33c1f2fc3364f1bcb41099f04582ab10}
+}]\index{M\+U\+S\+I\+C\+\_\+\+N\+U\+M\+\_\+\+O\+F\+\_\+\+S\+T\+A\+T\+E@{M\+U\+S\+I\+C\+\_\+\+N\+U\+M\+\_\+\+O\+F\+\_\+\+S\+T\+A\+T\+E}!music.\+h@{music.\+h}}\index{music.\+h@{music.\+h}!M\+U\+S\+I\+C\+\_\+\+N\+U\+M\+\_\+\+O\+F\+\_\+\+S\+T\+A\+T\+E@{M\+U\+S\+I\+C\+\_\+\+N\+U\+M\+\_\+\+O\+F\+\_\+\+S\+T\+A\+T\+E}}\item[{\em 
+M\+U\+S\+I\+C\+\_\+\+N\+U\+M\+\_\+\+O\+F\+\_\+\+S\+T\+A\+T\+E\label{music_8h_a44fb51174ff72905a037ea2b766dc041_a44fb51174ff72905a037ea2b766dc041a693393721edbeba92e83b88506652a57}
+}]\end{description}
+\end{Desc}
+
+
+ music.\+h の 77 行目に定義があります。
+
+
+\begin{DoxyCode}
+78 \{
+79     MUSIC_ST_STOP = 0,
+80     MUSIC_ST_PLAY,
+81     MUSIC_ST_REVERSE,
+82     MUSIC_ST_PAUSE,
+83 \textcolor{preprocessor}{#ifdef USE\_MUSIC\_RECORD}
+84     MUSIC\_ST\_RECORD,
+85 \textcolor{preprocessor}{#endif }\textcolor{comment}{/* USE\_MUSIC\_RECORD */}\textcolor{preprocessor}{}
+86 
+87     MUSIC_NUM_OF_STATE
+88 \} MUSIC_State;
+\end{DoxyCode}
+
+
+\subsubsection{関数詳解}
+\index{music.\+h@{music.\+h}!M\+U\+S\+I\+C\+\_\+init@{M\+U\+S\+I\+C\+\_\+init}}
+\index{M\+U\+S\+I\+C\+\_\+init@{M\+U\+S\+I\+C\+\_\+init}!music.\+h@{music.\+h}}
+\paragraph[{M\+U\+S\+I\+C\+\_\+init()}]{\setlength{\rightskip}{0pt plus 5cm}void M\+U\+S\+I\+C\+\_\+init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{music_8h_a238be89109438967c9e64f56401e0a8c_a238be89109438967c9e64f56401e0a8c}
+
+
+初期化 
+
+サウンドドライバを初期化しモジュールを使用可能にする。 他\+A\+P\+I使用前に必ず実行する。 \index{music.\+h@{music.\+h}!M\+U\+S\+I\+C\+\_\+get\+State@{M\+U\+S\+I\+C\+\_\+get\+State}}
+\index{M\+U\+S\+I\+C\+\_\+get\+State@{M\+U\+S\+I\+C\+\_\+get\+State}!music.\+h@{music.\+h}}
+\paragraph[{M\+U\+S\+I\+C\+\_\+get\+State()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf M\+U\+S\+I\+C\+\_\+\+State} M\+U\+S\+I\+C\+\_\+get\+State (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{music_8h_a513969bbe9e0541a9712758cce80bd21_a513969bbe9e0541a9712758cce80bd21}
+
+
+現在の再生状態取得 
+
+\begin{DoxyReturn}{戻り値}
+再生状態リテラル 
+\end{DoxyReturn}
+\index{music.\+h@{music.\+h}!M\+U\+S\+I\+C\+\_\+set\+Tempo@{M\+U\+S\+I\+C\+\_\+set\+Tempo}}
+\index{M\+U\+S\+I\+C\+\_\+set\+Tempo@{M\+U\+S\+I\+C\+\_\+set\+Tempo}!music.\+h@{music.\+h}}
+\paragraph[{M\+U\+S\+I\+C\+\_\+set\+Tempo(\+\_\+\+U\+B\+Y\+T\+E val)}]{\setlength{\rightskip}{0pt plus 5cm}void M\+U\+S\+I\+C\+\_\+set\+Tempo (
+\begin{DoxyParamCaption}
+\item[{{\bf \+\_\+\+U\+B\+Y\+T\+E}}]{val}
+\end{DoxyParamCaption}
+)}\label{music_8h_a372f19fae5dda083a8c38a9ad270f1fe_a372f19fae5dda083a8c38a9ad270f1fe}
+
+
+テンポ設定 
+
+再生速度を設定する。0〜\+M\+U\+S\+I\+C\+\_\+\+M\+A\+X\+\_\+\+T\+E\+M\+P\+O いつでも設定可能。
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\tt in}  & {\em val} & テンポ値\\
+\hline
+\end{DoxyParams}
+\begin{DoxyRefDesc}{バグ}
+\item[\hyperlink{bug__bug000001}{バグ}]この\+A\+P\+Iは未実装。呼び出すとハングアップする。 \end{DoxyRefDesc}
+\index{music.\+h@{music.\+h}!M\+U\+S\+I\+C\+\_\+set\+Loop@{M\+U\+S\+I\+C\+\_\+set\+Loop}}
+\index{M\+U\+S\+I\+C\+\_\+set\+Loop@{M\+U\+S\+I\+C\+\_\+set\+Loop}!music.\+h@{music.\+h}}
+\paragraph[{M\+U\+S\+I\+C\+\_\+set\+Loop(\+\_\+\+B\+O\+O\+L val)}]{\setlength{\rightskip}{0pt plus 5cm}void M\+U\+S\+I\+C\+\_\+set\+Loop (
+\begin{DoxyParamCaption}
+\item[{{\bf \+\_\+\+B\+O\+O\+L}}]{val}
+\end{DoxyParamCaption}
+)}\label{music_8h_a1792d32ccccbe2360cf76dd7dee0bb71_a1792d32ccccbe2360cf76dd7dee0bb71}
+
+
+再生ループ設定 
+
+ループ再生するかどうかを設定する。デフォルトはオフ。 いつでも設定可能。
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\tt in}  & {\em val} & T\+R\+U\+E\+:ループする。\+F\+A\+L\+S\+E\+:ループしない \\
+\hline
+\end{DoxyParams}
+\index{music.\+h@{music.\+h}!M\+U\+S\+I\+C\+\_\+get\+Position@{M\+U\+S\+I\+C\+\_\+get\+Position}}
+\index{M\+U\+S\+I\+C\+\_\+get\+Position@{M\+U\+S\+I\+C\+\_\+get\+Position}!music.\+h@{music.\+h}}
+\paragraph[{M\+U\+S\+I\+C\+\_\+get\+Position(\+M\+U\+S\+I\+C\+\_\+\+Position $\ast$pos)}]{\setlength{\rightskip}{0pt plus 5cm}void M\+U\+S\+I\+C\+\_\+get\+Position (
+\begin{DoxyParamCaption}
+\item[{{\bf M\+U\+S\+I\+C\+\_\+\+Position} $\ast$}]{pos}
+\end{DoxyParamCaption}
+)}\label{music_8h_ac74db7eae65c95911016d6a2b7673536_ac74db7eae65c95911016d6a2b7673536}
+
+
+再生位置取得 
+
+現在の再生位置を取得する。
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\tt out}  & {\em pos} & 再生中のポジション情報を格納する領域へのポインタ \\
+\hline
+\end{DoxyParams}
+\index{music.\+h@{music.\+h}!M\+U\+S\+I\+C\+\_\+set\+Position@{M\+U\+S\+I\+C\+\_\+set\+Position}}
+\index{M\+U\+S\+I\+C\+\_\+set\+Position@{M\+U\+S\+I\+C\+\_\+set\+Position}!music.\+h@{music.\+h}}
+\paragraph[{M\+U\+S\+I\+C\+\_\+set\+Position(const M\+U\+S\+I\+C\+\_\+\+Position $\ast$pos)}]{\setlength{\rightskip}{0pt plus 5cm}void M\+U\+S\+I\+C\+\_\+set\+Position (
+\begin{DoxyParamCaption}
+\item[{const {\bf M\+U\+S\+I\+C\+\_\+\+Position} $\ast$}]{pos}
+\end{DoxyParamCaption}
+)}\label{music_8h_a49f47cd07af4fdaa38f5c23c835f2db1_a49f47cd07af4fdaa38f5c23c835f2db1}
+
+
+再生位置設定 
+
+再生位置を指定値へ変更する。いつでも設定可能。
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\tt in}  & {\em pos} & 再生位置情報データへのポインタ \\
+\hline
+\end{DoxyParams}
+\index{music.\+h@{music.\+h}!M\+U\+S\+I\+C\+\_\+set\+Score@{M\+U\+S\+I\+C\+\_\+set\+Score}}
+\index{M\+U\+S\+I\+C\+\_\+set\+Score@{M\+U\+S\+I\+C\+\_\+set\+Score}!music.\+h@{music.\+h}}
+\paragraph[{M\+U\+S\+I\+C\+\_\+set\+Score(const M\+U\+S\+I\+C\+\_\+\+Score $\ast$score)}]{\setlength{\rightskip}{0pt plus 5cm}void M\+U\+S\+I\+C\+\_\+set\+Score (
+\begin{DoxyParamCaption}
+\item[{const {\bf M\+U\+S\+I\+C\+\_\+\+Score} $\ast$}]{score}
+\end{DoxyParamCaption}
+)}\label{music_8h_aa6d0fea87bf8436f1abda3968ef54a47_aa6d0fea87bf8436f1abda3968ef54a47}
+
+
+楽曲登録 
+
+再生する楽曲を登録する。
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\tt in}  & {\em score} & 楽曲データ \\
+\hline
+\end{DoxyParams}
+\index{music.\+h@{music.\+h}!M\+U\+S\+I\+C\+\_\+get\+Score@{M\+U\+S\+I\+C\+\_\+get\+Score}}
+\index{M\+U\+S\+I\+C\+\_\+get\+Score@{M\+U\+S\+I\+C\+\_\+get\+Score}!music.\+h@{music.\+h}}
+\paragraph[{M\+U\+S\+I\+C\+\_\+get\+Score()}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf M\+U\+S\+I\+C\+\_\+\+Score}$\ast$ M\+U\+S\+I\+C\+\_\+get\+Score (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{music_8h_a685ed593f10455fd1286fcc7ab1011e7_a685ed593f10455fd1286fcc7ab1011e7}
+
+
+楽曲取得 
+
+現在登録/録音されている楽曲データを取得する。
+
+\begin{DoxyReturn}{戻り値}
+楽曲データへのポインタ 
+\end{DoxyReturn}
+\index{music.\+h@{music.\+h}!M\+U\+S\+I\+C\+\_\+play@{M\+U\+S\+I\+C\+\_\+play}}
+\index{M\+U\+S\+I\+C\+\_\+play@{M\+U\+S\+I\+C\+\_\+play}!music.\+h@{music.\+h}}
+\paragraph[{M\+U\+S\+I\+C\+\_\+play()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \+\_\+\+B\+O\+O\+L} M\+U\+S\+I\+C\+\_\+play (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{music_8h_a9d41a9ee0630a3ffb22c5f0885d39ee5_a9d41a9ee0630a3ffb22c5f0885d39ee5}
+
+
+楽曲再生リクエスト 
+
+登録/録音されている楽曲を順に再生させる。
+
+
+\begin{DoxyRetVals}{戻り値}
+{\em T\+R\+U\+E} & リクエスト受諾 \\
+\hline
+{\em F\+A\+L\+S\+E} & リクエスト拒否 \\
+\hline
+\end{DoxyRetVals}
+\index{music.\+h@{music.\+h}!M\+U\+S\+I\+C\+\_\+reverse@{M\+U\+S\+I\+C\+\_\+reverse}}
+\index{M\+U\+S\+I\+C\+\_\+reverse@{M\+U\+S\+I\+C\+\_\+reverse}!music.\+h@{music.\+h}}
+\paragraph[{M\+U\+S\+I\+C\+\_\+reverse()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \+\_\+\+B\+O\+O\+L} M\+U\+S\+I\+C\+\_\+reverse (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{music_8h_af043ae70cb6cffbf9ab4c4e759187a69_af043ae70cb6cffbf9ab4c4e759187a69}
+
+
+楽曲逆再生リクエスト 
+
+登録/録音されている楽曲を逆から再生させる。
+
+
+\begin{DoxyRetVals}{戻り値}
+{\em T\+R\+U\+E} & リクエスト受諾 \\
+\hline
+{\em F\+A\+L\+S\+E} & リクエスト拒否 \\
+\hline
+\end{DoxyRetVals}
+\index{music.\+h@{music.\+h}!M\+U\+S\+I\+C\+\_\+pause@{M\+U\+S\+I\+C\+\_\+pause}}
+\index{M\+U\+S\+I\+C\+\_\+pause@{M\+U\+S\+I\+C\+\_\+pause}!music.\+h@{music.\+h}}
+\paragraph[{M\+U\+S\+I\+C\+\_\+pause()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \+\_\+\+B\+O\+O\+L} M\+U\+S\+I\+C\+\_\+pause (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{music_8h_ab3bfb05da259d13f35fee514ebabc18e_ab3bfb05da259d13f35fee514ebabc18e}
+
+
+楽曲一時停止リクエスト 
+
+再生中の楽曲を一時停止させる。
+
+
+\begin{DoxyRetVals}{戻り値}
+{\em T\+R\+U\+E} & リクエスト受諾 \\
+\hline
+{\em F\+A\+L\+S\+E} & リクエスト拒否 \\
+\hline
+\end{DoxyRetVals}
+\index{music.\+h@{music.\+h}!M\+U\+S\+I\+C\+\_\+stop@{M\+U\+S\+I\+C\+\_\+stop}}
+\index{M\+U\+S\+I\+C\+\_\+stop@{M\+U\+S\+I\+C\+\_\+stop}!music.\+h@{music.\+h}}
+\paragraph[{M\+U\+S\+I\+C\+\_\+stop()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \+\_\+\+B\+O\+O\+L} M\+U\+S\+I\+C\+\_\+stop (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{music_8h_a1b5b16eb8fa1e378eb6434f3314a6570_a1b5b16eb8fa1e378eb6434f3314a6570}
+
+
+楽曲停止リクエスト 
+
+再生中の楽曲を停止させる。次回再生時は先頭からになる。
+
+
+\begin{DoxyRetVals}{戻り値}
+{\em T\+R\+U\+E} & リクエスト受諾 \\
+\hline
+{\em F\+A\+L\+S\+E} & リクエスト拒否 \\
+\hline
+\end{DoxyRetVals}
+\index{music.\+h@{music.\+h}!M\+U\+S\+I\+C\+\_\+render@{M\+U\+S\+I\+C\+\_\+render}}
+\index{M\+U\+S\+I\+C\+\_\+render@{M\+U\+S\+I\+C\+\_\+render}!music.\+h@{music.\+h}}
+\paragraph[{M\+U\+S\+I\+C\+\_\+render()}]{\setlength{\rightskip}{0pt plus 5cm}void M\+U\+S\+I\+C\+\_\+render (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{music_8h_a8c9b9d27f433de83744467ef60bc2bf1_a8c9b9d27f433de83744467ef60bc2bf1}
+
+
+楽曲演奏/録音 
+
+演奏状態(M\+U\+S\+I\+C\+\_\+play、\+M\+U\+S\+I\+C\+\_\+reverse)もしくは録音状態(\+M\+U\+S\+I\+C\+\_\+record)に ある場合、この\+A\+P\+Iを呼ぶことで楽曲の演奏/録音が実行される。内部では 呼び出し回数が音長(\+M\+U\+S\+I\+C\+\_\+\+Note\+::len)としてカウントされており、逐次楽 譜を読み進めながら音の再生を行っている。なので、通常は\+Timer\+A割り込 みハンドラから呼ばれるようにしておけばよい。 
+
+\subsubsection{変数詳解}
+\index{music.\+h@{music.\+h}!M\+U\+S\+I\+C\+\_\+state\+\_\+handler@{M\+U\+S\+I\+C\+\_\+state\+\_\+handler}}
+\index{M\+U\+S\+I\+C\+\_\+state\+\_\+handler@{M\+U\+S\+I\+C\+\_\+state\+\_\+handler}!music.\+h@{music.\+h}}
+\paragraph[{M\+U\+S\+I\+C\+\_\+state\+\_\+handler}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf M\+U\+S\+I\+C\+\_\+\+Api} M\+U\+S\+I\+C\+\_\+state\+\_\+handler\mbox{[}{\bf M\+U\+S\+I\+C\+\_\+\+N\+U\+M\+\_\+\+O\+F\+\_\+\+S\+T\+A\+T\+E}\mbox{]}}\label{music_8h_acb57fda4b6e51190cd6b34b9a2a48e1c_acb57fda4b6e51190cd6b34b9a2a48e1c}
+
+
+状態ハンドラ配列 
+
+この配列に再生状態リテラルをインデックスとして与えれば、リテラル値 に応じたハンドラが呼ばれる。
+
+\begin{DoxySeeAlso}{参照}
+\hyperlink{music_8h_a44fb51174ff72905a037ea2b766dc041_a44fb51174ff72905a037ea2b766dc041}{M\+U\+S\+I\+C\+\_\+\+State} 
+\end{DoxySeeAlso}

@@ -1,0 +1,69 @@
+\subsection{include/h8sdk/assert.h ファイル}
+\label{assert_8h}\index{include/h8sdk/assert.\+h@{include/h8sdk/assert.\+h}}
+
+
+アサート  
+
+
+{\ttfamily \#include \char`\"{}stddef.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}stdlib.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}led.\+h\char`\"{}}\\*
+assert.\+h の依存先関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=268pt]{d8/dd7/assert_8h__incl}
+\end{center}
+\end{figure}
+\subsubsection*{マクロ定義}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{assert_8h_a981c85fb63ead3e920cfe332abed4099_a981c85fb63ead3e920cfe332abed4099}{\+\_\+assert}(x)                                                        
+\begin{DoxyCompactList}\small\item\em アサート \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{詳解}
+アサート 
+
+ 
+
+\subsubsection{マクロ定義詳解}
+\index{assert.\+h@{assert.\+h}!\+\_\+assert@{\+\_\+assert}}
+\index{\+\_\+assert@{\+\_\+assert}!assert.\+h@{assert.\+h}}
+\paragraph[{\+\_\+assert}]{\setlength{\rightskip}{0pt plus 5cm}\#define \+\_\+assert(
+\begin{DoxyParamCaption}
+\item[{}]{x}
+\end{DoxyParamCaption}
+)}\label{assert_8h_a981c85fb63ead3e920cfe332abed4099_a981c85fb63ead3e920cfe332abed4099}
+{\bfseries 値\+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{if} (!(x))                                   \(\backslash\)
+    \{                                           \(\backslash\)
+        LED\_INIT;                               \(\backslash\)
+        while (_TRUE)                           \(\backslash\)
+        \{                                       \(\backslash\)
+            LED\_ON(LED_D5);                     \(\backslash\)
+            LED\_OFF(LED_D6);                    \(\backslash\)
+            \_msleep(500);                       \(\backslash\)
+            LED\_OFF(LED_D5);                    \(\backslash\)
+            LED\_ON(LED_D6);                     \(\backslash\)
+            \_msleep(500);                       \(\backslash\)
+        \}                                       \(\backslash\)
+    \}
+\end{DoxyCode}
+
+
+アサート 
+
+実装ミス以外ではありえないバグをチェックするための実行時エラーチェッ カ。デバッグ専用。リリースバイナリからは外される。
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\tt in}  & {\em x} & 評価するパラメータ。これが偽になると処理を緊急停止して L\+E\+D点滅で状態異常を知らせる。 \\
+\hline
+\end{DoxyParams}
+
+
+ assert.\+h の 38 行目に定義があります。
+

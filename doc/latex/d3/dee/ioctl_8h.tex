@@ -1,0 +1,159 @@
+\subsection{include/h8sdk/ioctl.h ファイル}
+\label{ioctl_8h}\index{include/h8sdk/ioctl.\+h@{include/h8sdk/ioctl.\+h}}
+
+
+I/\+Oポートコントローラ  
+
+
+{\ttfamily \#include \char`\"{}stddef.\+h\char`\"{}}\\*
+ioctl.\+h の依存先関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=151pt]{db/d0c/ioctl_8h__incl}
+\end{center}
+\end{figure}
+被依存関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=160pt]{d6/da7/ioctl_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsubsection*{列挙型}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{ioctl_8h_ada67108c6e5a5ec0258cbd4401f97662_ada67108c6e5a5ec0258cbd4401f97662}{I\+O\+C\+T\+L\+\_\+\+Reg} \{ \\*
+\hyperlink{ioctl_8h_ada67108c6e5a5ec0258cbd4401f97662_ada67108c6e5a5ec0258cbd4401f97662a365f8d0e42b202f1957bfed7a10a6a08}{I\+O\+C\+T\+L\+\_\+\+R\+E\+G\+\_\+\+P\+C\+R1} = 0, 
+\\*
+\hyperlink{ioctl_8h_ada67108c6e5a5ec0258cbd4401f97662_ada67108c6e5a5ec0258cbd4401f97662a3266892c7e9a176b79b14f8a820b9810}{I\+O\+C\+T\+L\+\_\+\+R\+E\+G\+\_\+\+P\+C\+R2}, 
+\\*
+\hyperlink{ioctl_8h_ada67108c6e5a5ec0258cbd4401f97662_ada67108c6e5a5ec0258cbd4401f97662ab9d0d4dffd9d1d0303ba0a4543b67282}{I\+O\+C\+T\+L\+\_\+\+R\+E\+G\+\_\+\+P\+C\+R5}, 
+\\*
+\hyperlink{ioctl_8h_ada67108c6e5a5ec0258cbd4401f97662_ada67108c6e5a5ec0258cbd4401f97662ac73893b6e53a29073957a24712aefddb}{I\+O\+C\+T\+L\+\_\+\+R\+E\+G\+\_\+\+P\+C\+R7}, 
+\\*
+\hyperlink{ioctl_8h_ada67108c6e5a5ec0258cbd4401f97662_ada67108c6e5a5ec0258cbd4401f97662a7bd9494973aea96e01f5277bd1127229}{I\+O\+C\+T\+L\+\_\+\+R\+E\+G\+\_\+\+P\+C\+R8}, 
+\\*
+\hyperlink{ioctl_8h_ada67108c6e5a5ec0258cbd4401f97662_ada67108c6e5a5ec0258cbd4401f97662a7b6dddccac2070014c3877a13549f25f}{I\+O\+C\+T\+L\+\_\+\+N\+U\+M\+\_\+\+O\+F\+\_\+\+R\+E\+G}
+ \}\begin{DoxyCompactList}\small\item\em P\+C\+Rレジスタリテラル定義型 \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsubsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{ioctl_8h_a612c40c759c47ff99ee9eb3ba12d2c9f_a612c40c759c47ff99ee9eb3ba12d2c9f}{I\+O\+C\+T\+L\+\_\+init} ()
+\begin{DoxyCompactList}\small\item\em 初期化 \end{DoxyCompactList}\item 
+void \hyperlink{ioctl_8h_aa8d0d504f5e91de396d1cbb10d88314e_aa8d0d504f5e91de396d1cbb10d88314e}{I\+O\+C\+T\+L\+\_\+set} (\hyperlink{ioctl_8h_ada67108c6e5a5ec0258cbd4401f97662_ada67108c6e5a5ec0258cbd4401f97662}{I\+O\+C\+T\+L\+\_\+\+Reg} reg, \hyperlink{stddef_8h_aac464b47452ce9406f88ef194e2becc1_aac464b47452ce9406f88ef194e2becc1}{\+\_\+\+U\+B\+Y\+T\+E} mask, \hyperlink{stddef_8h_aac464b47452ce9406f88ef194e2becc1_aac464b47452ce9406f88ef194e2becc1}{\+\_\+\+U\+B\+Y\+T\+E} val)
+\begin{DoxyCompactList}\small\item\em レジスタへ値セット \end{DoxyCompactList}\item 
+\hyperlink{stddef_8h_aac464b47452ce9406f88ef194e2becc1_aac464b47452ce9406f88ef194e2becc1}{\+\_\+\+U\+B\+Y\+T\+E} \hyperlink{ioctl_8h_a3abacc0088f02290caa4cdfd00efabeb_a3abacc0088f02290caa4cdfd00efabeb}{I\+O\+C\+T\+L\+\_\+get} (\hyperlink{ioctl_8h_ada67108c6e5a5ec0258cbd4401f97662_ada67108c6e5a5ec0258cbd4401f97662}{I\+O\+C\+T\+L\+\_\+\+Reg} reg)
+\begin{DoxyCompactList}\small\item\em レジスタ値取得 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{詳解}
+I/\+Oポートコントローラ 
+
+このモジュールは各ポートコントロールレジスタ(\+P\+C\+R)への多重アクセスを 管理する。\+P\+C\+Rは読み込みが不安定のため、複数の独立したモジュールから 設定する場合、前に設定された値が後のもので上書きされて失われてしま う。このモジュールはそれを防ぐために\+P\+C\+Rへの多重アクセスの同期を取る 役割を担う。ただし、割り込みハンドラからの設定はサポートされない。
+
+ 
+
+\subsubsection{列挙型詳解}
+\index{ioctl.\+h@{ioctl.\+h}!I\+O\+C\+T\+L\+\_\+\+Reg@{I\+O\+C\+T\+L\+\_\+\+Reg}}
+\index{I\+O\+C\+T\+L\+\_\+\+Reg@{I\+O\+C\+T\+L\+\_\+\+Reg}!ioctl.\+h@{ioctl.\+h}}
+\paragraph[{I\+O\+C\+T\+L\+\_\+\+Reg}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf I\+O\+C\+T\+L\+\_\+\+Reg}}\label{ioctl_8h_ada67108c6e5a5ec0258cbd4401f97662_ada67108c6e5a5ec0258cbd4401f97662}
+
+
+P\+C\+Rレジスタリテラル定義型 
+
+\begin{Desc}
+\item[列挙値]\par
+\begin{description}
+\index{I\+O\+C\+T\+L\+\_\+\+R\+E\+G\+\_\+\+P\+C\+R1@{I\+O\+C\+T\+L\+\_\+\+R\+E\+G\+\_\+\+P\+C\+R1}!ioctl.\+h@{ioctl.\+h}}\index{ioctl.\+h@{ioctl.\+h}!I\+O\+C\+T\+L\+\_\+\+R\+E\+G\+\_\+\+P\+C\+R1@{I\+O\+C\+T\+L\+\_\+\+R\+E\+G\+\_\+\+P\+C\+R1}}\item[{\em 
+I\+O\+C\+T\+L\+\_\+\+R\+E\+G\+\_\+\+P\+C\+R1\label{ioctl_8h_ada67108c6e5a5ec0258cbd4401f97662_ada67108c6e5a5ec0258cbd4401f97662a365f8d0e42b202f1957bfed7a10a6a08}
+}]P\+C\+R1. \index{I\+O\+C\+T\+L\+\_\+\+R\+E\+G\+\_\+\+P\+C\+R2@{I\+O\+C\+T\+L\+\_\+\+R\+E\+G\+\_\+\+P\+C\+R2}!ioctl.\+h@{ioctl.\+h}}\index{ioctl.\+h@{ioctl.\+h}!I\+O\+C\+T\+L\+\_\+\+R\+E\+G\+\_\+\+P\+C\+R2@{I\+O\+C\+T\+L\+\_\+\+R\+E\+G\+\_\+\+P\+C\+R2}}\item[{\em 
+I\+O\+C\+T\+L\+\_\+\+R\+E\+G\+\_\+\+P\+C\+R2\label{ioctl_8h_ada67108c6e5a5ec0258cbd4401f97662_ada67108c6e5a5ec0258cbd4401f97662a3266892c7e9a176b79b14f8a820b9810}
+}]P\+C\+R2. \index{I\+O\+C\+T\+L\+\_\+\+R\+E\+G\+\_\+\+P\+C\+R5@{I\+O\+C\+T\+L\+\_\+\+R\+E\+G\+\_\+\+P\+C\+R5}!ioctl.\+h@{ioctl.\+h}}\index{ioctl.\+h@{ioctl.\+h}!I\+O\+C\+T\+L\+\_\+\+R\+E\+G\+\_\+\+P\+C\+R5@{I\+O\+C\+T\+L\+\_\+\+R\+E\+G\+\_\+\+P\+C\+R5}}\item[{\em 
+I\+O\+C\+T\+L\+\_\+\+R\+E\+G\+\_\+\+P\+C\+R5\label{ioctl_8h_ada67108c6e5a5ec0258cbd4401f97662_ada67108c6e5a5ec0258cbd4401f97662ab9d0d4dffd9d1d0303ba0a4543b67282}
+}]P\+C\+R5. \index{I\+O\+C\+T\+L\+\_\+\+R\+E\+G\+\_\+\+P\+C\+R7@{I\+O\+C\+T\+L\+\_\+\+R\+E\+G\+\_\+\+P\+C\+R7}!ioctl.\+h@{ioctl.\+h}}\index{ioctl.\+h@{ioctl.\+h}!I\+O\+C\+T\+L\+\_\+\+R\+E\+G\+\_\+\+P\+C\+R7@{I\+O\+C\+T\+L\+\_\+\+R\+E\+G\+\_\+\+P\+C\+R7}}\item[{\em 
+I\+O\+C\+T\+L\+\_\+\+R\+E\+G\+\_\+\+P\+C\+R7\label{ioctl_8h_ada67108c6e5a5ec0258cbd4401f97662_ada67108c6e5a5ec0258cbd4401f97662ac73893b6e53a29073957a24712aefddb}
+}]P\+C\+R7. \index{I\+O\+C\+T\+L\+\_\+\+R\+E\+G\+\_\+\+P\+C\+R8@{I\+O\+C\+T\+L\+\_\+\+R\+E\+G\+\_\+\+P\+C\+R8}!ioctl.\+h@{ioctl.\+h}}\index{ioctl.\+h@{ioctl.\+h}!I\+O\+C\+T\+L\+\_\+\+R\+E\+G\+\_\+\+P\+C\+R8@{I\+O\+C\+T\+L\+\_\+\+R\+E\+G\+\_\+\+P\+C\+R8}}\item[{\em 
+I\+O\+C\+T\+L\+\_\+\+R\+E\+G\+\_\+\+P\+C\+R8\label{ioctl_8h_ada67108c6e5a5ec0258cbd4401f97662_ada67108c6e5a5ec0258cbd4401f97662a7bd9494973aea96e01f5277bd1127229}
+}]P\+C\+R8. \index{I\+O\+C\+T\+L\+\_\+\+N\+U\+M\+\_\+\+O\+F\+\_\+\+R\+E\+G@{I\+O\+C\+T\+L\+\_\+\+N\+U\+M\+\_\+\+O\+F\+\_\+\+R\+E\+G}!ioctl.\+h@{ioctl.\+h}}\index{ioctl.\+h@{ioctl.\+h}!I\+O\+C\+T\+L\+\_\+\+N\+U\+M\+\_\+\+O\+F\+\_\+\+R\+E\+G@{I\+O\+C\+T\+L\+\_\+\+N\+U\+M\+\_\+\+O\+F\+\_\+\+R\+E\+G}}\item[{\em 
+I\+O\+C\+T\+L\+\_\+\+N\+U\+M\+\_\+\+O\+F\+\_\+\+R\+E\+G\label{ioctl_8h_ada67108c6e5a5ec0258cbd4401f97662_ada67108c6e5a5ec0258cbd4401f97662a7b6dddccac2070014c3877a13549f25f}
+}]\end{description}
+\end{Desc}
+
+
+ ioctl.\+h の 34 行目に定義があります。
+
+
+\begin{DoxyCode}
+35 \{
+36     IOCTL_REG_PCR1 = 0,
+38     IOCTL_REG_PCR2,
+40     IOCTL_REG_PCR5,
+42     IOCTL_REG_PCR7,
+44     IOCTL_REG_PCR8,
+46 
+47     IOCTL_NUM_OF_REG
+48 \} IOCTL_Reg;
+\end{DoxyCode}
+
+
+\subsubsection{関数詳解}
+\index{ioctl.\+h@{ioctl.\+h}!I\+O\+C\+T\+L\+\_\+init@{I\+O\+C\+T\+L\+\_\+init}}
+\index{I\+O\+C\+T\+L\+\_\+init@{I\+O\+C\+T\+L\+\_\+init}!ioctl.\+h@{ioctl.\+h}}
+\paragraph[{I\+O\+C\+T\+L\+\_\+init()}]{\setlength{\rightskip}{0pt plus 5cm}void I\+O\+C\+T\+L\+\_\+init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{ioctl_8h_a612c40c759c47ff99ee9eb3ba12d2c9f_a612c40c759c47ff99ee9eb3ba12d2c9f}
+
+
+初期化 
+
+モジュールの初期化と\+P\+C\+Rレジスタのゼロクリアを行う \index{ioctl.\+h@{ioctl.\+h}!I\+O\+C\+T\+L\+\_\+set@{I\+O\+C\+T\+L\+\_\+set}}
+\index{I\+O\+C\+T\+L\+\_\+set@{I\+O\+C\+T\+L\+\_\+set}!ioctl.\+h@{ioctl.\+h}}
+\paragraph[{I\+O\+C\+T\+L\+\_\+set(\+I\+O\+C\+T\+L\+\_\+\+Reg reg, \+\_\+\+U\+B\+Y\+T\+E mask, \+\_\+\+U\+B\+Y\+T\+E val)}]{\setlength{\rightskip}{0pt plus 5cm}void I\+O\+C\+T\+L\+\_\+set (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+O\+C\+T\+L\+\_\+\+Reg}}]{reg, }
+\item[{{\bf \+\_\+\+U\+B\+Y\+T\+E}}]{mask, }
+\item[{{\bf \+\_\+\+U\+B\+Y\+T\+E}}]{val}
+\end{DoxyParamCaption}
+)}\label{ioctl_8h_aa8d0d504f5e91de396d1cbb10d88314e_aa8d0d504f5e91de396d1cbb10d88314e}
+
+
+レジスタへ値セット 
+
+指定\+P\+C\+Rレジスタへビットマスクを指定して値をセットする。 マスクビット以外の値は保持される。
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\tt in}  & {\em reg} & セットするレジスタ \\
+\hline
+\mbox{\tt in}  & {\em mask} & セットする値の有効ビットマスク \\
+\hline
+\mbox{\tt in}  & {\em val} & セットする値 \\
+\hline
+\end{DoxyParams}
+\index{ioctl.\+h@{ioctl.\+h}!I\+O\+C\+T\+L\+\_\+get@{I\+O\+C\+T\+L\+\_\+get}}
+\index{I\+O\+C\+T\+L\+\_\+get@{I\+O\+C\+T\+L\+\_\+get}!ioctl.\+h@{ioctl.\+h}}
+\paragraph[{I\+O\+C\+T\+L\+\_\+get(\+I\+O\+C\+T\+L\+\_\+\+Reg reg)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \+\_\+\+U\+B\+Y\+T\+E} I\+O\+C\+T\+L\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+O\+C\+T\+L\+\_\+\+Reg}}]{reg}
+\end{DoxyParamCaption}
+)}\label{ioctl_8h_a3abacc0088f02290caa4cdfd00efabeb_a3abacc0088f02290caa4cdfd00efabeb}
+
+
+レジスタ値取得 
+
+現在の指定\+P\+C\+Rレジスタ値を取得する。内部で保持されている値が返り、実 際の\+I/\+Oポートへのアクセスは行わない。
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\tt in}  & {\em reg} & 値を取得するレジスタ\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+レジスタ値 
+\end{DoxyReturn}

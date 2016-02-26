@@ -1,0 +1,191 @@
+\subsection{include/h8sdk/led.h ファイル}
+\label{led_8h}\index{include/h8sdk/led.\+h@{include/h8sdk/led.\+h}}
+
+
+L\+E\+Dドライバ  
+
+
+{\ttfamily \#include \char`\"{}stddef.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}3694s.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}ioctl.\+h\char`\"{}}\\*
+led.\+h の依存先関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=183pt]{d6/d11/led_8h__incl}
+\end{center}
+\end{figure}
+被依存関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=160pt]{d6/dde/led_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsubsection*{マクロ定義}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{led_8h_ac2c029b1f7239de0df5bb5d18661d5d0_ac2c029b1f7239de0df5bb5d18661d5d0}{L\+E\+D\+\_\+\+B\+A\+S\+E}~(1\+U $<$$<$ 1)
+\begin{DoxyCompactList}\small\item\em L\+E\+Dが接続されている\+G\+P\+I\+Oレジスタのベース値 \end{DoxyCompactList}\item 
+\#define \hyperlink{led_8h_a1f0e386ef1dfc57ee3b3aad637fff932_a1f0e386ef1dfc57ee3b3aad637fff932}{L\+E\+D\+\_\+\+I\+N\+I\+T}
+\begin{DoxyCompactList}\small\item\em L\+E\+D初期化 \end{DoxyCompactList}\item 
+\#define \hyperlink{led_8h_a22da7f6a1189952d15f0dad98650d66d_a22da7f6a1189952d15f0dad98650d66d}{L\+E\+D\+\_\+\+O\+N}(t)~(\+\_\+\+I\+O.\+P\+D\+R8.\+B\+Y\+T\+E \&= $\sim$(\hyperlink{led_8h_ac2c029b1f7239de0df5bb5d18661d5d0_ac2c029b1f7239de0df5bb5d18661d5d0}{L\+E\+D\+\_\+\+B\+A\+S\+E} $<$$<$ (t)))
+\begin{DoxyCompactList}\small\item\em L\+E\+D点灯 \end{DoxyCompactList}\item 
+\#define \hyperlink{led_8h_a62bba2f9c4e7d65d04151ac924de5e13_a62bba2f9c4e7d65d04151ac924de5e13}{L\+E\+D\+\_\+\+O\+F\+F}(t)~(\+\_\+\+I\+O.\+P\+D\+R8.\+B\+Y\+T\+E $\vert$= \hyperlink{led_8h_ac2c029b1f7239de0df5bb5d18661d5d0_ac2c029b1f7239de0df5bb5d18661d5d0}{L\+E\+D\+\_\+\+B\+A\+S\+E} $<$$<$ (t))
+\begin{DoxyCompactList}\small\item\em L\+E\+D消灯 \end{DoxyCompactList}\item 
+\#define \hyperlink{led_8h_a63ff3d552ff396f9054d631f67dd6f77_a63ff3d552ff396f9054d631f67dd6f77}{L\+E\+D\+\_\+\+T\+U\+R\+N}(t)~(\+\_\+\+I\+O.\+P\+D\+R8.\+B\+Y\+T\+E $^\wedge$= \hyperlink{led_8h_ac2c029b1f7239de0df5bb5d18661d5d0_ac2c029b1f7239de0df5bb5d18661d5d0}{L\+E\+D\+\_\+\+B\+A\+S\+E} $<$$<$ (t))
+\begin{DoxyCompactList}\small\item\em L\+E\+D表示反転 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{列挙型}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{led_8h_a058b30c4dad8492729144d11afa6ddb1_a058b30c4dad8492729144d11afa6ddb1}{L\+E\+D\+\_\+\+Type} \{ \\*
+\hyperlink{led_8h_a058b30c4dad8492729144d11afa6ddb1_a058b30c4dad8492729144d11afa6ddb1a376e447725418dcb340bfa577b884066}{L\+E\+D\+\_\+\+D5} = 0, 
+\\*
+\hyperlink{led_8h_a058b30c4dad8492729144d11afa6ddb1_a058b30c4dad8492729144d11afa6ddb1adf13aab65cdf330e59d514c0c1c28496}{L\+E\+D\+\_\+\+D6}, 
+\\*
+\hyperlink{led_8h_a058b30c4dad8492729144d11afa6ddb1_a058b30c4dad8492729144d11afa6ddb1a6c2579969e8acd0e164f7b6799a4f977}{L\+E\+D\+\_\+\+N\+U\+M\+\_\+\+O\+F\+\_\+\+T\+Y\+P\+E}
+ \}\begin{DoxyCompactList}\small\item\em L\+E\+Dタイプ識別子 \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+
+
+\subsubsection{詳解}
+L\+E\+Dドライバ 
+
+このモジュールは\+L\+E\+Dデバイスへのインタフェースを提供する。
+
+ 
+
+\subsubsection{マクロ定義詳解}
+\index{led.\+h@{led.\+h}!L\+E\+D\+\_\+\+B\+A\+S\+E@{L\+E\+D\+\_\+\+B\+A\+S\+E}}
+\index{L\+E\+D\+\_\+\+B\+A\+S\+E@{L\+E\+D\+\_\+\+B\+A\+S\+E}!led.\+h@{led.\+h}}
+\paragraph[{L\+E\+D\+\_\+\+B\+A\+S\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\+E\+D\+\_\+\+B\+A\+S\+E~(1\+U $<$$<$ 1)}\label{led_8h_ac2c029b1f7239de0df5bb5d18661d5d0_ac2c029b1f7239de0df5bb5d18661d5d0}
+
+
+L\+E\+Dが接続されている\+G\+P\+I\+Oレジスタのベース値 
+
+
+
+ led.\+h の 45 行目に定義があります。
+
+\index{led.\+h@{led.\+h}!L\+E\+D\+\_\+\+I\+N\+I\+T@{L\+E\+D\+\_\+\+I\+N\+I\+T}}
+\index{L\+E\+D\+\_\+\+I\+N\+I\+T@{L\+E\+D\+\_\+\+I\+N\+I\+T}!led.\+h@{led.\+h}}
+\paragraph[{L\+E\+D\+\_\+\+I\+N\+I\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\+E\+D\+\_\+\+I\+N\+I\+T}\label{led_8h_a1f0e386ef1dfc57ee3b3aad637fff932_a1f0e386ef1dfc57ee3b3aad637fff932}
+{\bfseries 値\+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{do}                                                                \(\backslash\)
+    \{                                                                 \(\backslash\)
+        IOCTL\_set(IOCTL_REG_PCR8, 0x06, 0x06);                        \(\backslash\)
+        \_IO.PDR8.BYTE |= (LED_BASE << LED_D5 | LED_BASE << LED_D6);   \(\backslash\)
+    \}                                                                 \(\backslash\)
+    while (_FALSE)
+\end{DoxyCode}
+
+
+L\+E\+D初期化 
+
+L\+E\+Dデバイスを使用可能に設定する。全ての\+A\+P\+Iの前にこれを実行しておく。 
+
+ led.\+h の 52 行目に定義があります。
+
+\index{led.\+h@{led.\+h}!L\+E\+D\+\_\+\+O\+N@{L\+E\+D\+\_\+\+O\+N}}
+\index{L\+E\+D\+\_\+\+O\+N@{L\+E\+D\+\_\+\+O\+N}!led.\+h@{led.\+h}}
+\paragraph[{L\+E\+D\+\_\+\+O\+N}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\+E\+D\+\_\+\+O\+N(
+\begin{DoxyParamCaption}
+\item[{}]{t}
+\end{DoxyParamCaption}
+)~(\+\_\+\+I\+O.\+P\+D\+R8.\+B\+Y\+T\+E \&= $\sim$({\bf L\+E\+D\+\_\+\+B\+A\+S\+E} $<$$<$ (t)))}\label{led_8h_a22da7f6a1189952d15f0dad98650d66d_a22da7f6a1189952d15f0dad98650d66d}
+
+
+L\+E\+D点灯 
+
+L\+E\+Dをひとつ点灯させる。
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\tt in}  & {\em t} & 点灯させる\+L\+E\+Dの種類。\+L\+E\+D\+\_\+\+Type \\
+\hline
+\end{DoxyParams}
+
+
+ led.\+h の 67 行目に定義があります。
+
+\index{led.\+h@{led.\+h}!L\+E\+D\+\_\+\+O\+F\+F@{L\+E\+D\+\_\+\+O\+F\+F}}
+\index{L\+E\+D\+\_\+\+O\+F\+F@{L\+E\+D\+\_\+\+O\+F\+F}!led.\+h@{led.\+h}}
+\paragraph[{L\+E\+D\+\_\+\+O\+F\+F}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\+E\+D\+\_\+\+O\+F\+F(
+\begin{DoxyParamCaption}
+\item[{}]{t}
+\end{DoxyParamCaption}
+)~(\+\_\+\+I\+O.\+P\+D\+R8.\+B\+Y\+T\+E $\vert$= {\bf L\+E\+D\+\_\+\+B\+A\+S\+E} $<$$<$ (t))}\label{led_8h_a62bba2f9c4e7d65d04151ac924de5e13_a62bba2f9c4e7d65d04151ac924de5e13}
+
+
+L\+E\+D消灯 
+
+L\+E\+Dをひとつ消灯させる。
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\tt in}  & {\em t} & 消灯させる\+L\+E\+Dの種類。\+L\+E\+D\+\_\+\+Type \\
+\hline
+\end{DoxyParams}
+
+
+ led.\+h の 76 行目に定義があります。
+
+\index{led.\+h@{led.\+h}!L\+E\+D\+\_\+\+T\+U\+R\+N@{L\+E\+D\+\_\+\+T\+U\+R\+N}}
+\index{L\+E\+D\+\_\+\+T\+U\+R\+N@{L\+E\+D\+\_\+\+T\+U\+R\+N}!led.\+h@{led.\+h}}
+\paragraph[{L\+E\+D\+\_\+\+T\+U\+R\+N}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\+E\+D\+\_\+\+T\+U\+R\+N(
+\begin{DoxyParamCaption}
+\item[{}]{t}
+\end{DoxyParamCaption}
+)~(\+\_\+\+I\+O.\+P\+D\+R8.\+B\+Y\+T\+E $^\wedge$= {\bf L\+E\+D\+\_\+\+B\+A\+S\+E} $<$$<$ (t))}\label{led_8h_a63ff3d552ff396f9054d631f67dd6f77_a63ff3d552ff396f9054d631f67dd6f77}
+
+
+L\+E\+D表示反転 
+
+指定された\+L\+E\+Dの表示を現在のものと反転させる。
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\tt in}  & {\em t} & 反転させる\+L\+E\+Dの種類。\+L\+E\+D\+\_\+\+Type \\
+\hline
+\end{DoxyParams}
+
+
+ led.\+h の 85 行目に定義があります。
+
+
+
+\subsubsection{列挙型詳解}
+\index{led.\+h@{led.\+h}!L\+E\+D\+\_\+\+Type@{L\+E\+D\+\_\+\+Type}}
+\index{L\+E\+D\+\_\+\+Type@{L\+E\+D\+\_\+\+Type}!led.\+h@{led.\+h}}
+\paragraph[{L\+E\+D\+\_\+\+Type}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf L\+E\+D\+\_\+\+Type}}\label{led_8h_a058b30c4dad8492729144d11afa6ddb1_a058b30c4dad8492729144d11afa6ddb1}
+
+
+L\+E\+Dタイプ識別子 
+
+\begin{Desc}
+\item[列挙値]\par
+\begin{description}
+\index{L\+E\+D\+\_\+\+D5@{L\+E\+D\+\_\+\+D5}!led.\+h@{led.\+h}}\index{led.\+h@{led.\+h}!L\+E\+D\+\_\+\+D5@{L\+E\+D\+\_\+\+D5}}\item[{\em 
+L\+E\+D\+\_\+\+D5\label{led_8h_a058b30c4dad8492729144d11afa6ddb1_a058b30c4dad8492729144d11afa6ddb1a376e447725418dcb340bfa577b884066}
+}]D5番ポートの\+L\+E\+D. \index{L\+E\+D\+\_\+\+D6@{L\+E\+D\+\_\+\+D6}!led.\+h@{led.\+h}}\index{led.\+h@{led.\+h}!L\+E\+D\+\_\+\+D6@{L\+E\+D\+\_\+\+D6}}\item[{\em 
+L\+E\+D\+\_\+\+D6\label{led_8h_a058b30c4dad8492729144d11afa6ddb1_a058b30c4dad8492729144d11afa6ddb1adf13aab65cdf330e59d514c0c1c28496}
+}]D6番ポートの\+L\+E\+D. \index{L\+E\+D\+\_\+\+N\+U\+M\+\_\+\+O\+F\+\_\+\+T\+Y\+P\+E@{L\+E\+D\+\_\+\+N\+U\+M\+\_\+\+O\+F\+\_\+\+T\+Y\+P\+E}!led.\+h@{led.\+h}}\index{led.\+h@{led.\+h}!L\+E\+D\+\_\+\+N\+U\+M\+\_\+\+O\+F\+\_\+\+T\+Y\+P\+E@{L\+E\+D\+\_\+\+N\+U\+M\+\_\+\+O\+F\+\_\+\+T\+Y\+P\+E}}\item[{\em 
+L\+E\+D\+\_\+\+N\+U\+M\+\_\+\+O\+F\+\_\+\+T\+Y\+P\+E\label{led_8h_a058b30c4dad8492729144d11afa6ddb1_a058b30c4dad8492729144d11afa6ddb1a6c2579969e8acd0e164f7b6799a4f977}
+}]L\+E\+Dタイプの数 \end{description}
+\end{Desc}
+
+
+ led.\+h の 31 行目に定義があります。
+
+
+\begin{DoxyCode}
+32 \{
+33     LED_D5 = 0,
+35     LED_D6,
+37 
+38     LED_NUM_OF_TYPE
+40 \} LED_Type;
+\end{DoxyCode}

@@ -1,0 +1,153 @@
+\subsection{include/h8sdk/ps2.h ファイル}
+\label{ps2_8h}\index{include/h8sdk/ps2.\+h@{include/h8sdk/ps2.\+h}}
+
+
+P\+S/2ドライバ  
+
+
+{\ttfamily \#include \char`\"{}stddef.\+h\char`\"{}}\\*
+ps2.\+h の依存先関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=149pt]{d0/d3c/ps2_8h__incl}
+\end{center}
+\end{figure}
+\subsubsection*{マクロ定義}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{ps2_8h_a2cd015df52183305c4a3e91f6f35d087_a2cd015df52183305c4a3e91f6f35d087}{P\+S2\+\_\+\+M\+A\+X\+\_\+\+R\+X\+B\+U\+F}~8
+\end{DoxyCompactItemize}
+\subsubsection*{列挙型}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{ps2_8h_af69f908bec8e74d387cd5510dff2c1a3_af69f908bec8e74d387cd5510dff2c1a3}{P\+S2\+\_\+\+Status} \{ \\*
+\hyperlink{ps2_8h_af69f908bec8e74d387cd5510dff2c1a3_af69f908bec8e74d387cd5510dff2c1a3a399bd01192694d2fec00800befc6fb1e}{P\+S2\+\_\+\+E\+R\+R\+\_\+\+O\+K} = 0, 
+\\*
+\hyperlink{ps2_8h_af69f908bec8e74d387cd5510dff2c1a3_af69f908bec8e74d387cd5510dff2c1a3a40cb92a14d84f9f4bc7e72c8b47812de}{P\+S2\+\_\+\+E\+R\+R\+\_\+\+F\+R\+A\+M\+I\+N\+G}, 
+\\*
+\hyperlink{ps2_8h_af69f908bec8e74d387cd5510dff2c1a3_af69f908bec8e74d387cd5510dff2c1a3a3e134d9dd2d1cb5ed15561562ee253aa}{P\+S2\+\_\+\+E\+R\+R\+\_\+\+P\+A\+R\+I\+T\+Y}, 
+\\*
+\hyperlink{ps2_8h_af69f908bec8e74d387cd5510dff2c1a3_af69f908bec8e74d387cd5510dff2c1a3a5f8a9e26ea7405a27014a1465432fdde}{P\+S2\+\_\+\+N\+U\+M\+\_\+\+O\+F\+\_\+\+E\+R\+R}
+ \}
+\end{DoxyCompactItemize}
+\subsubsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{ps2_8h_ab0b647dfe8288c9dc8979e39d857da2e_ab0b647dfe8288c9dc8979e39d857da2e}{P\+S2\+\_\+init} ()
+\begin{DoxyCompactList}\small\item\em P\+S2ポート初期化 \end{DoxyCompactList}\item 
+void \hyperlink{ps2_8h_a357c99ffcca784faa4315630ba109c26_a357c99ffcca784faa4315630ba109c26}{P\+S2\+\_\+communicate} ()
+\begin{DoxyCompactList}\small\item\em 送受信実行 \end{DoxyCompactList}\item 
+\hyperlink{stddef_8h_aefd1068e35d26c0e7d7079ddf2579174_aefd1068e35d26c0e7d7079ddf2579174}{\+\_\+\+S\+I\+N\+T} \hyperlink{ps2_8h_aeb03cb5d2199008f8b0cf6793300bdab_aeb03cb5d2199008f8b0cf6793300bdab}{P\+S2\+\_\+read} (\hyperlink{stddef_8h_aac464b47452ce9406f88ef194e2becc1_aac464b47452ce9406f88ef194e2becc1}{\+\_\+\+U\+B\+Y\+T\+E} $\ast$buf, \hyperlink{stddef_8h_aac464b47452ce9406f88ef194e2becc1_aac464b47452ce9406f88ef194e2becc1}{\+\_\+\+U\+B\+Y\+T\+E} size, \hyperlink{stddef_8h_afbf708854fe02af8475a9ba02f3196cb_afbf708854fe02af8475a9ba02f3196cb}{\+\_\+\+B\+O\+O\+L} sync, \hyperlink{stddef_8h_aefd1068e35d26c0e7d7079ddf2579174_aefd1068e35d26c0e7d7079ddf2579174}{\+\_\+\+S\+I\+N\+T} tmo\+\_\+ms)
+\begin{DoxyCompactList}\small\item\em バイトストリーム受信 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{詳解}
+P\+S/2ドライバ 
+
+このモジュールは\+P\+S/2ポートへのインタフェースを提供する。
+
+ 
+
+\subsubsection{マクロ定義詳解}
+\index{ps2.\+h@{ps2.\+h}!P\+S2\+\_\+\+M\+A\+X\+\_\+\+R\+X\+B\+U\+F@{P\+S2\+\_\+\+M\+A\+X\+\_\+\+R\+X\+B\+U\+F}}
+\index{P\+S2\+\_\+\+M\+A\+X\+\_\+\+R\+X\+B\+U\+F@{P\+S2\+\_\+\+M\+A\+X\+\_\+\+R\+X\+B\+U\+F}!ps2.\+h@{ps2.\+h}}
+\paragraph[{P\+S2\+\_\+\+M\+A\+X\+\_\+\+R\+X\+B\+U\+F}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+S2\+\_\+\+M\+A\+X\+\_\+\+R\+X\+B\+U\+F~8}\label{ps2_8h_a2cd015df52183305c4a3e91f6f35d087_a2cd015df52183305c4a3e91f6f35d087}
+
+
+ ps2.\+h の 26 行目に定義があります。
+
+
+
+\subsubsection{列挙型詳解}
+\index{ps2.\+h@{ps2.\+h}!P\+S2\+\_\+\+Status@{P\+S2\+\_\+\+Status}}
+\index{P\+S2\+\_\+\+Status@{P\+S2\+\_\+\+Status}!ps2.\+h@{ps2.\+h}}
+\paragraph[{P\+S2\+\_\+\+Status}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf P\+S2\+\_\+\+Status}}\label{ps2_8h_af69f908bec8e74d387cd5510dff2c1a3_af69f908bec8e74d387cd5510dff2c1a3}
+\begin{Desc}
+\item[列挙値]\par
+\begin{description}
+\index{P\+S2\+\_\+\+E\+R\+R\+\_\+\+O\+K@{P\+S2\+\_\+\+E\+R\+R\+\_\+\+O\+K}!ps2.\+h@{ps2.\+h}}\index{ps2.\+h@{ps2.\+h}!P\+S2\+\_\+\+E\+R\+R\+\_\+\+O\+K@{P\+S2\+\_\+\+E\+R\+R\+\_\+\+O\+K}}\item[{\em 
+P\+S2\+\_\+\+E\+R\+R\+\_\+\+O\+K\label{ps2_8h_af69f908bec8e74d387cd5510dff2c1a3_af69f908bec8e74d387cd5510dff2c1a3a399bd01192694d2fec00800befc6fb1e}
+}]\index{P\+S2\+\_\+\+E\+R\+R\+\_\+\+F\+R\+A\+M\+I\+N\+G@{P\+S2\+\_\+\+E\+R\+R\+\_\+\+F\+R\+A\+M\+I\+N\+G}!ps2.\+h@{ps2.\+h}}\index{ps2.\+h@{ps2.\+h}!P\+S2\+\_\+\+E\+R\+R\+\_\+\+F\+R\+A\+M\+I\+N\+G@{P\+S2\+\_\+\+E\+R\+R\+\_\+\+F\+R\+A\+M\+I\+N\+G}}\item[{\em 
+P\+S2\+\_\+\+E\+R\+R\+\_\+\+F\+R\+A\+M\+I\+N\+G\label{ps2_8h_af69f908bec8e74d387cd5510dff2c1a3_af69f908bec8e74d387cd5510dff2c1a3a40cb92a14d84f9f4bc7e72c8b47812de}
+}]\index{P\+S2\+\_\+\+E\+R\+R\+\_\+\+P\+A\+R\+I\+T\+Y@{P\+S2\+\_\+\+E\+R\+R\+\_\+\+P\+A\+R\+I\+T\+Y}!ps2.\+h@{ps2.\+h}}\index{ps2.\+h@{ps2.\+h}!P\+S2\+\_\+\+E\+R\+R\+\_\+\+P\+A\+R\+I\+T\+Y@{P\+S2\+\_\+\+E\+R\+R\+\_\+\+P\+A\+R\+I\+T\+Y}}\item[{\em 
+P\+S2\+\_\+\+E\+R\+R\+\_\+\+P\+A\+R\+I\+T\+Y\label{ps2_8h_af69f908bec8e74d387cd5510dff2c1a3_af69f908bec8e74d387cd5510dff2c1a3a3e134d9dd2d1cb5ed15561562ee253aa}
+}]\index{P\+S2\+\_\+\+N\+U\+M\+\_\+\+O\+F\+\_\+\+E\+R\+R@{P\+S2\+\_\+\+N\+U\+M\+\_\+\+O\+F\+\_\+\+E\+R\+R}!ps2.\+h@{ps2.\+h}}\index{ps2.\+h@{ps2.\+h}!P\+S2\+\_\+\+N\+U\+M\+\_\+\+O\+F\+\_\+\+E\+R\+R@{P\+S2\+\_\+\+N\+U\+M\+\_\+\+O\+F\+\_\+\+E\+R\+R}}\item[{\em 
+P\+S2\+\_\+\+N\+U\+M\+\_\+\+O\+F\+\_\+\+E\+R\+R\label{ps2_8h_af69f908bec8e74d387cd5510dff2c1a3_af69f908bec8e74d387cd5510dff2c1a3a5f8a9e26ea7405a27014a1465432fdde}
+}]\end{description}
+\end{Desc}
+
+
+ ps2.\+h の 28 行目に定義があります。
+
+
+\begin{DoxyCode}
+29 \{
+30     PS2_ERR_OK = 0,
+31     PS2_ERR_FRAMING,
+32     PS2_ERR_PARITY,
+33 
+34     PS2_NUM_OF_ERR
+35 \} PS2_Status;
+\end{DoxyCode}
+
+
+\subsubsection{関数詳解}
+\index{ps2.\+h@{ps2.\+h}!P\+S2\+\_\+init@{P\+S2\+\_\+init}}
+\index{P\+S2\+\_\+init@{P\+S2\+\_\+init}!ps2.\+h@{ps2.\+h}}
+\paragraph[{P\+S2\+\_\+init()}]{\setlength{\rightskip}{0pt plus 5cm}void P\+S2\+\_\+init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{ps2_8h_ab0b647dfe8288c9dc8979e39d857da2e_ab0b647dfe8288c9dc8979e39d857da2e}
+
+
+P\+S2ポート初期化 
+
+デバイスを使用可能にする。全ての\+A\+P\+Iの前にこれを実行しておく。 \index{ps2.\+h@{ps2.\+h}!P\+S2\+\_\+communicate@{P\+S2\+\_\+communicate}}
+\index{P\+S2\+\_\+communicate@{P\+S2\+\_\+communicate}!ps2.\+h@{ps2.\+h}}
+\paragraph[{P\+S2\+\_\+communicate()}]{\setlength{\rightskip}{0pt plus 5cm}void P\+S2\+\_\+communicate (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{ps2_8h_a357c99ffcca784faa4315630ba109c26_a357c99ffcca784faa4315630ba109c26}
+
+
+送受信実行 
+
+P\+S/2デバイスへ送受信処理を委託する。割り込みハンドラから呼ばれるの が前提。 \index{ps2.\+h@{ps2.\+h}!P\+S2\+\_\+read@{P\+S2\+\_\+read}}
+\index{P\+S2\+\_\+read@{P\+S2\+\_\+read}!ps2.\+h@{ps2.\+h}}
+\paragraph[{P\+S2\+\_\+read(\+\_\+\+U\+B\+Y\+T\+E $\ast$buf, \+\_\+\+U\+B\+Y\+T\+E size, \+\_\+\+B\+O\+O\+L sync, \+\_\+\+S\+I\+N\+T tmo\+\_\+ms)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \+\_\+\+S\+I\+N\+T} P\+S2\+\_\+read (
+\begin{DoxyParamCaption}
+\item[{{\bf \+\_\+\+U\+B\+Y\+T\+E} $\ast$}]{buf, }
+\item[{{\bf \+\_\+\+U\+B\+Y\+T\+E}}]{size, }
+\item[{{\bf \+\_\+\+B\+O\+O\+L}}]{sync, }
+\item[{{\bf \+\_\+\+S\+I\+N\+T}}]{tmo\+\_\+ms}
+\end{DoxyParamCaption}
+)}\label{ps2_8h_aeb03cb5d2199008f8b0cf6793300bdab_aeb03cb5d2199008f8b0cf6793300bdab}
+
+
+バイトストリーム受信 
+
+内部バッファに溜まっているデータを取得する。同期/非同期受信の両方に 対応。内部バッファには非同期で随時受信データが溜まっていくため、定 期的にこの\+A\+P\+Iを実行しないとバッファが溢れデータロスが発生する。
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\tt in}  & {\em buf} & 受信データを格納するバッファの先頭へのポインタ \\
+\hline
+\mbox{\tt in}  & {\em size} & 受信サイズ \\
+\hline
+\mbox{\tt in}  & {\em sync} & \+\_\+\+T\+R\+U\+E\+: 同期型。size分受信できるか、タイムアウトする までブロックする。~\newline
+\+\_\+\+F\+A\+L\+S\+E\+: 非同期型。タイムアウトは無効 \\
+\hline
+\mbox{\tt in}  & {\em tmo\+\_\+ms} & 同期受信時のタイムアウト値。ミリセカンド。\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em 正の値} & 受信完了サイズ \\
+\hline
+{\em 負の値} & 受信エラー \\
+\hline
+\end{DoxyRetVals}

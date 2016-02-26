@@ -1,0 +1,199 @@
+\subsection{include/h8sdk/ifstub.h ファイル}
+\label{ifstub_8h}\index{include/h8sdk/ifstub.\+h@{include/h8sdk/ifstub.\+h}}
+
+
+通信インタフェーススタブ  
+
+
+{\ttfamily \#include \char`\"{}stddef.\+h\char`\"{}}\\*
+ifstub.\+h の依存先関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=157pt]{d8/d42/ifstub_8h__incl}
+\end{center}
+\end{figure}
+被依存関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=157pt]{d8/d36/ifstub_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsubsection*{クラス}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{ifstub_8h_da/da7/structIFSTUB__Class}{I\+F\+S\+T\+U\+B\+\_\+\+Class}
+\begin{DoxyCompactList}\small\item\em スタブ本体型 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{型定義}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{stddef_8h_aefd1068e35d26c0e7d7079ddf2579174_aefd1068e35d26c0e7d7079ddf2579174}{\+\_\+\+S\+I\+N\+T}($\ast$ \hyperlink{ifstub_8h_aa9d065d1024ada655c29137cc02240a3_aa9d065d1024ada655c29137cc02240a3}{I\+F\+S\+T\+U\+B\+\_\+\+Write\+Stream}) (const \hyperlink{stddef_8h_aac464b47452ce9406f88ef194e2becc1_aac464b47452ce9406f88ef194e2becc1}{\+\_\+\+U\+B\+Y\+T\+E} $\ast$data, \hyperlink{stddef_8h_aac464b47452ce9406f88ef194e2becc1_aac464b47452ce9406f88ef194e2becc1}{\+\_\+\+U\+B\+Y\+T\+E} size, \hyperlink{stddef_8h_afbf708854fe02af8475a9ba02f3196cb_afbf708854fe02af8475a9ba02f3196cb}{\+\_\+\+B\+O\+O\+L} sync, \hyperlink{stddef_8h_aefd1068e35d26c0e7d7079ddf2579174_aefd1068e35d26c0e7d7079ddf2579174}{\+\_\+\+S\+I\+N\+T} tmo\+\_\+ms)
+\begin{DoxyCompactList}\small\item\em バイトストリーム送信 \end{DoxyCompactList}\item 
+typedef \hyperlink{stddef_8h_aefd1068e35d26c0e7d7079ddf2579174_aefd1068e35d26c0e7d7079ddf2579174}{\+\_\+\+S\+I\+N\+T}($\ast$ \hyperlink{ifstub_8h_a620340ac755d877dfbe38fee8263e6fe_a620340ac755d877dfbe38fee8263e6fe}{I\+F\+S\+T\+U\+B\+\_\+\+Read\+Stream}) (\hyperlink{stddef_8h_aac464b47452ce9406f88ef194e2becc1_aac464b47452ce9406f88ef194e2becc1}{\+\_\+\+U\+B\+Y\+T\+E} $\ast$buf, \hyperlink{stddef_8h_aac464b47452ce9406f88ef194e2becc1_aac464b47452ce9406f88ef194e2becc1}{\+\_\+\+U\+B\+Y\+T\+E} size, \hyperlink{stddef_8h_afbf708854fe02af8475a9ba02f3196cb_afbf708854fe02af8475a9ba02f3196cb}{\+\_\+\+B\+O\+O\+L} sync, \hyperlink{stddef_8h_aefd1068e35d26c0e7d7079ddf2579174_aefd1068e35d26c0e7d7079ddf2579174}{\+\_\+\+S\+I\+N\+T} tmo\+\_\+ms)
+\begin{DoxyCompactList}\small\item\em バイトストリーム受信 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{列挙型}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{ifstub_8h_a2b86f96c002b1ff617cbf71481538340_a2b86f96c002b1ff617cbf71481538340}{I\+F\+S\+T\+U\+B\+\_\+\+Type} \{ \\*
+\hyperlink{ifstub_8h_a2b86f96c002b1ff617cbf71481538340_a2b86f96c002b1ff617cbf71481538340a25882835bf749c565dfc3f63fc48003e}{I\+F\+S\+T\+U\+B\+\_\+\+S\+C\+I} = 0, 
+\\*
+\hyperlink{ifstub_8h_a2b86f96c002b1ff617cbf71481538340_a2b86f96c002b1ff617cbf71481538340aff528f210c2f81545db5aad87260ce22}{I\+F\+S\+T\+U\+B\+\_\+\+N\+U\+M\+\_\+\+O\+F\+\_\+\+T\+Y\+P\+E}
+ \}\begin{DoxyCompactList}\small\item\em インタフェースタイプ型定義 \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsubsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+const \hyperlink{ifstub_8h_da/da7/structIFSTUB__Class}{I\+F\+S\+T\+U\+B\+\_\+\+Class} $\ast$ \hyperlink{ifstub_8h_a40dd3c6220e2970e452dea86ebfee513_a40dd3c6220e2970e452dea86ebfee513}{I\+F\+S\+T\+U\+B\+\_\+get\+Instance} (\hyperlink{ifstub_8h_a2b86f96c002b1ff617cbf71481538340_a2b86f96c002b1ff617cbf71481538340}{I\+F\+S\+T\+U\+B\+\_\+\+Type} t)
+\end{DoxyCompactItemize}
+
+
+\subsubsection{詳解}
+通信インタフェーススタブ 
+
+このモジュールは他基板と通信するときのインタフェースのみを定義した スタブである。
+
+ 
+
+\subsubsection{クラス詳解}
+\index{I\+F\+S\+T\+U\+B\+\_\+\+Class@{I\+F\+S\+T\+U\+B\+\_\+\+Class}}\label{structIFSTUB__Class}
+\paragraph{struct I\+F\+S\+T\+U\+B\+\_\+\+Class}
+スタブ本体型 
+
+ ifstub.\+h の 79 行目に定義があります。
+
+
+
+I\+F\+S\+T\+U\+B\+\_\+\+Class 連携図
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=127pt]{d9/de9/structIFSTUB__Class__coll__graph}
+\end{center}
+\end{figure}
+\begin{DoxyFields}{クラスメンバ}
+\hyperlink{ifstub_8h_aa9d065d1024ada655c29137cc02240a3_aa9d065d1024ada655c29137cc02240a3}{I\+F\+S\+T\+U\+B\+\_\+\+Write\+Stream}\label{ifstub_8h_a614c7ab257545b1f3f655662c5eaadcd}
+&
+write&
+出力メソッド \\
+\hline
+
+\hyperlink{ifstub_8h_a620340ac755d877dfbe38fee8263e6fe_a620340ac755d877dfbe38fee8263e6fe}{I\+F\+S\+T\+U\+B\+\_\+\+Read\+Stream}\label{ifstub_8h_a8e34fb2d165bf4811e25e30ecda1019c}
+&
+read&
+入力メソッド \\
+\hline
+
+\end{DoxyFields}
+
+
+\subsubsection{型定義詳解}
+\index{ifstub.\+h@{ifstub.\+h}!I\+F\+S\+T\+U\+B\+\_\+\+Write\+Stream@{I\+F\+S\+T\+U\+B\+\_\+\+Write\+Stream}}
+\index{I\+F\+S\+T\+U\+B\+\_\+\+Write\+Stream@{I\+F\+S\+T\+U\+B\+\_\+\+Write\+Stream}!ifstub.\+h@{ifstub.\+h}}
+\paragraph[{I\+F\+S\+T\+U\+B\+\_\+\+Write\+Stream}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf \+\_\+\+S\+I\+N\+T}($\ast$ I\+F\+S\+T\+U\+B\+\_\+\+Write\+Stream) (const {\bf \+\_\+\+U\+B\+Y\+T\+E} $\ast$data, {\bf \+\_\+\+U\+B\+Y\+T\+E} size, {\bf \+\_\+\+B\+O\+O\+L} sync, {\bf \+\_\+\+S\+I\+N\+T} tmo\+\_\+ms)}\label{ifstub_8h_aa9d065d1024ada655c29137cc02240a3_aa9d065d1024ada655c29137cc02240a3}
+
+
+バイトストリーム送信 
+
+汎用バイトデータを送信予約する。同期/非同期送信の両方に対応。 指定データは内部バッファへ格納され、次回の送信可能時に処理が実行される。
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\tt in}  & {\em data} & 送信データの先頭へのポインタ \\
+\hline
+\mbox{\tt in}  & {\em size} & 送信サイズ \\
+\hline
+\mbox{\tt in}  & {\em sync} & \+\_\+\+T\+R\+U\+E\+: 同期型。size分送信できるか、タイムアウトするまで ブロックする。\+\_\+\+F\+A\+L\+S\+E\+: 非同期型。タイムアウトは無効 \\
+\hline
+\mbox{\tt in}  & {\em tmo\+\_\+ms} & 同期送信時のタイムアウト値。ミリセカンド。\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em 正の値} & 送信完了サイズ \\
+\hline
+{\em 負の値} & 送信エラー \\
+\hline
+\end{DoxyRetVals}
+
+
+ ifstub.\+h の 56 行目に定義があります。
+
+\index{ifstub.\+h@{ifstub.\+h}!I\+F\+S\+T\+U\+B\+\_\+\+Read\+Stream@{I\+F\+S\+T\+U\+B\+\_\+\+Read\+Stream}}
+\index{I\+F\+S\+T\+U\+B\+\_\+\+Read\+Stream@{I\+F\+S\+T\+U\+B\+\_\+\+Read\+Stream}!ifstub.\+h@{ifstub.\+h}}
+\paragraph[{I\+F\+S\+T\+U\+B\+\_\+\+Read\+Stream}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf \+\_\+\+S\+I\+N\+T}($\ast$ I\+F\+S\+T\+U\+B\+\_\+\+Read\+Stream) ({\bf \+\_\+\+U\+B\+Y\+T\+E} $\ast$buf, {\bf \+\_\+\+U\+B\+Y\+T\+E} size, {\bf \+\_\+\+B\+O\+O\+L} sync, {\bf \+\_\+\+S\+I\+N\+T} tmo\+\_\+ms)}\label{ifstub_8h_a620340ac755d877dfbe38fee8263e6fe_a620340ac755d877dfbe38fee8263e6fe}
+
+
+バイトストリーム受信 
+
+内部バッファに溜まっているデータを取得する。同期/非同期受信の両方に対応。 内部バッファには非同期で随時受信データが溜まっていくため、定期的に この\+A\+P\+Iを実行しないとバッファが溢れデータロスが発生する。
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\tt in}  & {\em buf} & 受信データを格納するバッファの先頭へのポインタ \\
+\hline
+\mbox{\tt in}  & {\em size} & 受信サイズ \\
+\hline
+\mbox{\tt in}  & {\em sync} & \+\_\+\+T\+R\+U\+E\+: 同期型。size分受信できるか、タイムアウトするまで ブロックする。\+\_\+\+F\+A\+L\+S\+E\+: 非同期型。タイムアウトは無効 \\
+\hline
+\mbox{\tt in}  & {\em tmo\+\_\+ms} & 同期受信時のタイムアウト値。ミリセカンド。\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{戻り値}
+{\em 正の値} & 受信完了サイズ \\
+\hline
+{\em 負の値} & 受信エラー \\
+\hline
+\end{DoxyRetVals}
+
+
+ ifstub.\+h の 75 行目に定義があります。
+
+
+
+\subsubsection{列挙型詳解}
+\index{ifstub.\+h@{ifstub.\+h}!I\+F\+S\+T\+U\+B\+\_\+\+Type@{I\+F\+S\+T\+U\+B\+\_\+\+Type}}
+\index{I\+F\+S\+T\+U\+B\+\_\+\+Type@{I\+F\+S\+T\+U\+B\+\_\+\+Type}!ifstub.\+h@{ifstub.\+h}}
+\paragraph[{I\+F\+S\+T\+U\+B\+\_\+\+Type}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf I\+F\+S\+T\+U\+B\+\_\+\+Type}}\label{ifstub_8h_a2b86f96c002b1ff617cbf71481538340_a2b86f96c002b1ff617cbf71481538340}
+
+
+インタフェースタイプ型定義 
+
+\begin{Desc}
+\item[列挙値]\par
+\begin{description}
+\index{I\+F\+S\+T\+U\+B\+\_\+\+S\+C\+I@{I\+F\+S\+T\+U\+B\+\_\+\+S\+C\+I}!ifstub.\+h@{ifstub.\+h}}\index{ifstub.\+h@{ifstub.\+h}!I\+F\+S\+T\+U\+B\+\_\+\+S\+C\+I@{I\+F\+S\+T\+U\+B\+\_\+\+S\+C\+I}}\item[{\em 
+I\+F\+S\+T\+U\+B\+\_\+\+S\+C\+I\label{ifstub_8h_a2b86f96c002b1ff617cbf71481538340_a2b86f96c002b1ff617cbf71481538340a25882835bf749c565dfc3f63fc48003e}
+}]シルアルポート \index{I\+F\+S\+T\+U\+B\+\_\+\+N\+U\+M\+\_\+\+O\+F\+\_\+\+T\+Y\+P\+E@{I\+F\+S\+T\+U\+B\+\_\+\+N\+U\+M\+\_\+\+O\+F\+\_\+\+T\+Y\+P\+E}!ifstub.\+h@{ifstub.\+h}}\index{ifstub.\+h@{ifstub.\+h}!I\+F\+S\+T\+U\+B\+\_\+\+N\+U\+M\+\_\+\+O\+F\+\_\+\+T\+Y\+P\+E@{I\+F\+S\+T\+U\+B\+\_\+\+N\+U\+M\+\_\+\+O\+F\+\_\+\+T\+Y\+P\+E}}\item[{\em 
+I\+F\+S\+T\+U\+B\+\_\+\+N\+U\+M\+\_\+\+O\+F\+\_\+\+T\+Y\+P\+E\label{ifstub_8h_a2b86f96c002b1ff617cbf71481538340_a2b86f96c002b1ff617cbf71481538340aff528f210c2f81545db5aad87260ce22}
+}]\end{description}
+\end{Desc}
+
+
+ ifstub.\+h の 29 行目に定義があります。
+
+
+\begin{DoxyCode}
+30 \{
+31     IFSTUB_SCI = 0,
+33 \textcolor{preprocessor}{#ifdef USE\_LOOPBACK\_SSRP}
+34     IFSTUB\_SSRP\_SKELETON,
+36 \textcolor{preprocessor}{#endif }\textcolor{comment}{/* USE\_LOOPBACK\_SSRP */}\textcolor{preprocessor}{}
+37 
+38     IFSTUB_NUM_OF_TYPE
+39 \} IFSTUB_Type;
+\end{DoxyCode}
+
+
+\subsubsection{関数詳解}
+\index{ifstub.\+h@{ifstub.\+h}!I\+F\+S\+T\+U\+B\+\_\+get\+Instance@{I\+F\+S\+T\+U\+B\+\_\+get\+Instance}}
+\index{I\+F\+S\+T\+U\+B\+\_\+get\+Instance@{I\+F\+S\+T\+U\+B\+\_\+get\+Instance}!ifstub.\+h@{ifstub.\+h}}
+\paragraph[{I\+F\+S\+T\+U\+B\+\_\+get\+Instance(\+I\+F\+S\+T\+U\+B\+\_\+\+Type t)}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf I\+F\+S\+T\+U\+B\+\_\+\+Class}$\ast$ I\+F\+S\+T\+U\+B\+\_\+get\+Instance (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+F\+S\+T\+U\+B\+\_\+\+Type}}]{t}
+\end{DoxyParamCaption}
+)}\label{ifstub_8h_a40dd3c6220e2970e452dea86ebfee513_a40dd3c6220e2970e452dea86ebfee513}

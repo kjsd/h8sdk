@@ -1,0 +1,119 @@
+\subsection{include/h8sdk/envelope.h ファイル}
+\label{envelope_8h}\index{include/h8sdk/envelope.\+h@{include/h8sdk/envelope.\+h}}
+
+
+エンベロープデータ定義  
+
+
+{\ttfamily \#include \char`\"{}sound.\+h\char`\"{}}\\*
+envelope.\+h の依存先関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=173pt]{d2/dbf/envelope_8h__incl}
+\end{center}
+\end{figure}
+\subsubsection*{変数}
+\begin{DoxyCompactItemize}
+\item 
+const \hyperlink{sound_8h_d0/d92/structSOUND__Envelope}{S\+O\+U\+N\+D\+\_\+\+Envelope} \hyperlink{envelope_8h_a155d27ad170ccebc7a70c73de0c272fb_a155d27ad170ccebc7a70c73de0c272fb}{E\+N\+V\+E\+L\+O\+P\+E\+\_\+na}
+\begin{DoxyCompactList}\small\item\em 無音 \end{DoxyCompactList}\item 
+const \hyperlink{sound_8h_d0/d92/structSOUND__Envelope}{S\+O\+U\+N\+D\+\_\+\+Envelope} \hyperlink{envelope_8h_acb3b812bae69a00850c71f5327fac2e2_acb3b812bae69a00850c71f5327fac2e2}{E\+N\+V\+E\+L\+O\+P\+E\+\_\+piano}
+\begin{DoxyCompactList}\small\item\em ピアノ \end{DoxyCompactList}\item 
+const \hyperlink{sound_8h_d0/d92/structSOUND__Envelope}{S\+O\+U\+N\+D\+\_\+\+Envelope} \hyperlink{envelope_8h_aef7f2e51b519928969cbf6bb8efca28b_aef7f2e51b519928969cbf6bb8efca28b}{E\+N\+V\+E\+L\+O\+P\+E\+\_\+piano\+\_\+reverb}
+\begin{DoxyCompactList}\small\item\em リバーブ(ピアノ) \end{DoxyCompactList}\item 
+const \hyperlink{sound_8h_d0/d92/structSOUND__Envelope}{S\+O\+U\+N\+D\+\_\+\+Envelope} \hyperlink{envelope_8h_ab2df1d6cfff8d64ac4c51583e5757db0_ab2df1d6cfff8d64ac4c51583e5757db0}{E\+N\+V\+E\+L\+O\+P\+E\+\_\+flute}
+\begin{DoxyCompactList}\small\item\em フルート \end{DoxyCompactList}\item 
+const \hyperlink{sound_8h_d0/d92/structSOUND__Envelope}{S\+O\+U\+N\+D\+\_\+\+Envelope} \hyperlink{envelope_8h_ad5379a690b39299d142fa77bc61ad33d_ad5379a690b39299d142fa77bc61ad33d}{E\+N\+V\+E\+L\+O\+P\+E\+\_\+flute\+\_\+reverb}
+\begin{DoxyCompactList}\small\item\em リバーブ(フルート) \end{DoxyCompactList}\item 
+const \hyperlink{sound_8h_d0/d92/structSOUND__Envelope}{S\+O\+U\+N\+D\+\_\+\+Envelope} \hyperlink{envelope_8h_a4259b4df3aaf60a617620fd5053d4779_a4259b4df3aaf60a617620fd5053d4779}{E\+N\+V\+E\+L\+O\+P\+E\+\_\+drum}
+\begin{DoxyCompactList}\small\item\em ドラム \end{DoxyCompactList}\item 
+const \hyperlink{sound_8h_d0/d92/structSOUND__Envelope}{S\+O\+U\+N\+D\+\_\+\+Envelope} \hyperlink{envelope_8h_a64e82900a8bb3283e52171b1dffe4671_a64e82900a8bb3283e52171b1dffe4671}{E\+N\+V\+E\+L\+O\+P\+E\+\_\+trumpet}
+\begin{DoxyCompactList}\small\item\em トランペット \end{DoxyCompactList}\item 
+const \hyperlink{sound_8h_d0/d92/structSOUND__Envelope}{S\+O\+U\+N\+D\+\_\+\+Envelope} \hyperlink{envelope_8h_add0470ed0e929a88f3d7d34102e8511b_add0470ed0e929a88f3d7d34102e8511b}{E\+N\+V\+E\+L\+O\+P\+E\+\_\+trumpet\+\_\+reverb}
+\begin{DoxyCompactList}\small\item\em リバーブ(トランペット) \end{DoxyCompactList}\item 
+const \hyperlink{sound_8h_d0/d92/structSOUND__Envelope}{S\+O\+U\+N\+D\+\_\+\+Envelope} \hyperlink{envelope_8h_a8032eea1996dd0a2f63c1fa84f61d449_a8032eea1996dd0a2f63c1fa84f61d449}{E\+N\+V\+E\+L\+O\+P\+E\+\_\+harp}
+\begin{DoxyCompactList}\small\item\em ハープ \end{DoxyCompactList}\item 
+const \hyperlink{sound_8h_d0/d92/structSOUND__Envelope}{S\+O\+U\+N\+D\+\_\+\+Envelope} \hyperlink{envelope_8h_acb0fb5da94d32bb1177e380892005456_acb0fb5da94d32bb1177e380892005456}{E\+N\+V\+E\+L\+O\+P\+E\+\_\+harp\+\_\+reverb}
+\begin{DoxyCompactList}\small\item\em リバーブ(ハープ) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{詳解}
+エンベロープデータ定義 
+
+各種エンベロープの時系列変化データが定義されている。 192個で4分音符分
+
+ 
+
+\subsubsection{変数詳解}
+\index{envelope.\+h@{envelope.\+h}!E\+N\+V\+E\+L\+O\+P\+E\+\_\+na@{E\+N\+V\+E\+L\+O\+P\+E\+\_\+na}}
+\index{E\+N\+V\+E\+L\+O\+P\+E\+\_\+na@{E\+N\+V\+E\+L\+O\+P\+E\+\_\+na}!envelope.\+h@{envelope.\+h}}
+\paragraph[{E\+N\+V\+E\+L\+O\+P\+E\+\_\+na}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf S\+O\+U\+N\+D\+\_\+\+Envelope} E\+N\+V\+E\+L\+O\+P\+E\+\_\+na}\label{envelope_8h_a155d27ad170ccebc7a70c73de0c272fb_a155d27ad170ccebc7a70c73de0c272fb}
+
+
+無音 
+
+\index{envelope.\+h@{envelope.\+h}!E\+N\+V\+E\+L\+O\+P\+E\+\_\+piano@{E\+N\+V\+E\+L\+O\+P\+E\+\_\+piano}}
+\index{E\+N\+V\+E\+L\+O\+P\+E\+\_\+piano@{E\+N\+V\+E\+L\+O\+P\+E\+\_\+piano}!envelope.\+h@{envelope.\+h}}
+\paragraph[{E\+N\+V\+E\+L\+O\+P\+E\+\_\+piano}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf S\+O\+U\+N\+D\+\_\+\+Envelope} E\+N\+V\+E\+L\+O\+P\+E\+\_\+piano}\label{envelope_8h_acb3b812bae69a00850c71f5327fac2e2_acb3b812bae69a00850c71f5327fac2e2}
+
+
+ピアノ 
+
+\index{envelope.\+h@{envelope.\+h}!E\+N\+V\+E\+L\+O\+P\+E\+\_\+piano\+\_\+reverb@{E\+N\+V\+E\+L\+O\+P\+E\+\_\+piano\+\_\+reverb}}
+\index{E\+N\+V\+E\+L\+O\+P\+E\+\_\+piano\+\_\+reverb@{E\+N\+V\+E\+L\+O\+P\+E\+\_\+piano\+\_\+reverb}!envelope.\+h@{envelope.\+h}}
+\paragraph[{E\+N\+V\+E\+L\+O\+P\+E\+\_\+piano\+\_\+reverb}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf S\+O\+U\+N\+D\+\_\+\+Envelope} E\+N\+V\+E\+L\+O\+P\+E\+\_\+piano\+\_\+reverb}\label{envelope_8h_aef7f2e51b519928969cbf6bb8efca28b_aef7f2e51b519928969cbf6bb8efca28b}
+
+
+リバーブ(ピアノ) 
+
+\index{envelope.\+h@{envelope.\+h}!E\+N\+V\+E\+L\+O\+P\+E\+\_\+flute@{E\+N\+V\+E\+L\+O\+P\+E\+\_\+flute}}
+\index{E\+N\+V\+E\+L\+O\+P\+E\+\_\+flute@{E\+N\+V\+E\+L\+O\+P\+E\+\_\+flute}!envelope.\+h@{envelope.\+h}}
+\paragraph[{E\+N\+V\+E\+L\+O\+P\+E\+\_\+flute}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf S\+O\+U\+N\+D\+\_\+\+Envelope} E\+N\+V\+E\+L\+O\+P\+E\+\_\+flute}\label{envelope_8h_ab2df1d6cfff8d64ac4c51583e5757db0_ab2df1d6cfff8d64ac4c51583e5757db0}
+
+
+フルート 
+
+\index{envelope.\+h@{envelope.\+h}!E\+N\+V\+E\+L\+O\+P\+E\+\_\+flute\+\_\+reverb@{E\+N\+V\+E\+L\+O\+P\+E\+\_\+flute\+\_\+reverb}}
+\index{E\+N\+V\+E\+L\+O\+P\+E\+\_\+flute\+\_\+reverb@{E\+N\+V\+E\+L\+O\+P\+E\+\_\+flute\+\_\+reverb}!envelope.\+h@{envelope.\+h}}
+\paragraph[{E\+N\+V\+E\+L\+O\+P\+E\+\_\+flute\+\_\+reverb}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf S\+O\+U\+N\+D\+\_\+\+Envelope} E\+N\+V\+E\+L\+O\+P\+E\+\_\+flute\+\_\+reverb}\label{envelope_8h_ad5379a690b39299d142fa77bc61ad33d_ad5379a690b39299d142fa77bc61ad33d}
+
+
+リバーブ(フルート) 
+
+\index{envelope.\+h@{envelope.\+h}!E\+N\+V\+E\+L\+O\+P\+E\+\_\+drum@{E\+N\+V\+E\+L\+O\+P\+E\+\_\+drum}}
+\index{E\+N\+V\+E\+L\+O\+P\+E\+\_\+drum@{E\+N\+V\+E\+L\+O\+P\+E\+\_\+drum}!envelope.\+h@{envelope.\+h}}
+\paragraph[{E\+N\+V\+E\+L\+O\+P\+E\+\_\+drum}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf S\+O\+U\+N\+D\+\_\+\+Envelope} E\+N\+V\+E\+L\+O\+P\+E\+\_\+drum}\label{envelope_8h_a4259b4df3aaf60a617620fd5053d4779_a4259b4df3aaf60a617620fd5053d4779}
+
+
+ドラム 
+
+\index{envelope.\+h@{envelope.\+h}!E\+N\+V\+E\+L\+O\+P\+E\+\_\+trumpet@{E\+N\+V\+E\+L\+O\+P\+E\+\_\+trumpet}}
+\index{E\+N\+V\+E\+L\+O\+P\+E\+\_\+trumpet@{E\+N\+V\+E\+L\+O\+P\+E\+\_\+trumpet}!envelope.\+h@{envelope.\+h}}
+\paragraph[{E\+N\+V\+E\+L\+O\+P\+E\+\_\+trumpet}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf S\+O\+U\+N\+D\+\_\+\+Envelope} E\+N\+V\+E\+L\+O\+P\+E\+\_\+trumpet}\label{envelope_8h_a64e82900a8bb3283e52171b1dffe4671_a64e82900a8bb3283e52171b1dffe4671}
+
+
+トランペット 
+
+\index{envelope.\+h@{envelope.\+h}!E\+N\+V\+E\+L\+O\+P\+E\+\_\+trumpet\+\_\+reverb@{E\+N\+V\+E\+L\+O\+P\+E\+\_\+trumpet\+\_\+reverb}}
+\index{E\+N\+V\+E\+L\+O\+P\+E\+\_\+trumpet\+\_\+reverb@{E\+N\+V\+E\+L\+O\+P\+E\+\_\+trumpet\+\_\+reverb}!envelope.\+h@{envelope.\+h}}
+\paragraph[{E\+N\+V\+E\+L\+O\+P\+E\+\_\+trumpet\+\_\+reverb}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf S\+O\+U\+N\+D\+\_\+\+Envelope} E\+N\+V\+E\+L\+O\+P\+E\+\_\+trumpet\+\_\+reverb}\label{envelope_8h_add0470ed0e929a88f3d7d34102e8511b_add0470ed0e929a88f3d7d34102e8511b}
+
+
+リバーブ(トランペット) 
+
+\index{envelope.\+h@{envelope.\+h}!E\+N\+V\+E\+L\+O\+P\+E\+\_\+harp@{E\+N\+V\+E\+L\+O\+P\+E\+\_\+harp}}
+\index{E\+N\+V\+E\+L\+O\+P\+E\+\_\+harp@{E\+N\+V\+E\+L\+O\+P\+E\+\_\+harp}!envelope.\+h@{envelope.\+h}}
+\paragraph[{E\+N\+V\+E\+L\+O\+P\+E\+\_\+harp}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf S\+O\+U\+N\+D\+\_\+\+Envelope} E\+N\+V\+E\+L\+O\+P\+E\+\_\+harp}\label{envelope_8h_a8032eea1996dd0a2f63c1fa84f61d449_a8032eea1996dd0a2f63c1fa84f61d449}
+
+
+ハープ 
+
+\index{envelope.\+h@{envelope.\+h}!E\+N\+V\+E\+L\+O\+P\+E\+\_\+harp\+\_\+reverb@{E\+N\+V\+E\+L\+O\+P\+E\+\_\+harp\+\_\+reverb}}
+\index{E\+N\+V\+E\+L\+O\+P\+E\+\_\+harp\+\_\+reverb@{E\+N\+V\+E\+L\+O\+P\+E\+\_\+harp\+\_\+reverb}!envelope.\+h@{envelope.\+h}}
+\paragraph[{E\+N\+V\+E\+L\+O\+P\+E\+\_\+harp\+\_\+reverb}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf S\+O\+U\+N\+D\+\_\+\+Envelope} E\+N\+V\+E\+L\+O\+P\+E\+\_\+harp\+\_\+reverb}\label{envelope_8h_acb0fb5da94d32bb1177e380892005456_acb0fb5da94d32bb1177e380892005456}
+
+
+リバーブ(ハープ) 
+

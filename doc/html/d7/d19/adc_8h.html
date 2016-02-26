@@ -1,0 +1,163 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.10"/>
+<title>H8SDK: include/h8sdk/adc.h ファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">H8SDK
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.10 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="../../index.html"><span>総合概要</span></a></li>
+      <li><a href="../../pages.html"><span>諸情報</span></a></li>
+      <li><a href="../../annotated.html"><span>クラス</span></a></li>
+      <li class="current"><a href="../../files.html"><span>ファイル</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="../../files.html"><span>ファイル一覧</span></a></li>
+      <li><a href="../../globals.html"><span>ファイルメンバ</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('d7/d19/adc_8h.html','../../');});
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#enum-members">列挙型</a> &#124;
+<a href="#func-members">関数</a>  </div>
+  <div class="headertitle">
+<div class="title">adc.h ファイル</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>A/Dコンバータドライバ  
+<a href="#details">[詳解]</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="../../d3/dce/stddef_8h_source.html">stddef.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+adc.h の依存先関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dd/dce/adc_8h__incl.png" border="0" usemap="#include_2h8sdk_2adc_8h" alt=""/></div>
+<map name="include_2h8sdk_2adc_8h" id="include_2h8sdk_2adc_8h">
+<area shape="rect" id="node2" href="../../d3/dce/stddef_8h.html" title="共通型、リテラル定義 " alt="" coords="41,80,110,107"/>
+</map>
+</div>
+</div>
+<p><a href="../../d7/d19/adc_8h_source.html">[ソースコード]</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+列挙型</h2></td></tr>
+<tr class="memitem:a184c6673e1a242cded56d57b9600e591"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d19/adc_8h_a184c6673e1a242cded56d57b9600e591.html#a184c6673e1a242cded56d57b9600e591">ADC_Mode</a> { <br />
+&#160;&#160;<a class="el" href="../../d7/d19/adc_8h_a184c6673e1a242cded56d57b9600e591.html#a184c6673e1a242cded56d57b9600e591ae58688800227d2e53c5c826f175d0676">ADC_NORMAL</a> = 0, 
+<br />
+&#160;&#160;<a class="el" href="../../d7/d19/adc_8h_a184c6673e1a242cded56d57b9600e591.html#a184c6673e1a242cded56d57b9600e591ac421996f600e6f84ea8a08b3c89bda41">ADC_SCAN</a>, 
+<br />
+&#160;&#160;<a class="el" href="../../d7/d19/adc_8h_a184c6673e1a242cded56d57b9600e591.html#a184c6673e1a242cded56d57b9600e591aec9562b03bab4f1d385bf577c4a50940">ADC_NUM_OF_MODE</a>
+<br />
+ }<tr class="memdesc:a184c6673e1a242cded56d57b9600e591"><td class="mdescLeft">&#160;</td><td class="mdescRight">設定モード識別子  <a href="../../d7/d19/adc_8h_a184c6673e1a242cded56d57b9600e591.html#a184c6673e1a242cded56d57b9600e591">[詳解]</a><br /></td></tr>
+<tr class="separator:a184c6673e1a242cded56d57b9600e591"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</td></tr>
+<tr class="memitem:ad7b9fa1ae8a65e534cce7d26fa0984f6"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d19/adc_8h_ad7b9fa1ae8a65e534cce7d26fa0984f6.html#ad7b9fa1ae8a65e534cce7d26fa0984f6">ADC_Channel</a> { <br />
+&#160;&#160;<a class="el" href="../../d7/d19/adc_8h_ad7b9fa1ae8a65e534cce7d26fa0984f6.html#ad7b9fa1ae8a65e534cce7d26fa0984f6a2b312b52fe5d414d9bd2cba051dcd72a">ADC_AN0</a> = 0, 
+<br />
+&#160;&#160;<a class="el" href="../../d7/d19/adc_8h_ad7b9fa1ae8a65e534cce7d26fa0984f6.html#ad7b9fa1ae8a65e534cce7d26fa0984f6a1c51560713abb867567f99d4c78763bd">ADC_AN1</a>, 
+<br />
+&#160;&#160;<a class="el" href="../../d7/d19/adc_8h_ad7b9fa1ae8a65e534cce7d26fa0984f6.html#ad7b9fa1ae8a65e534cce7d26fa0984f6acfaa570d9fd2190be56d1fc8cb23ef32">ADC_AN2</a>, 
+<br />
+&#160;&#160;<a class="el" href="../../d7/d19/adc_8h_ad7b9fa1ae8a65e534cce7d26fa0984f6.html#ad7b9fa1ae8a65e534cce7d26fa0984f6adf2a7a958cab5ddfa2a8cde10bc6ab93">ADC_AN3</a>, 
+<br />
+&#160;&#160;<a class="el" href="../../d7/d19/adc_8h_ad7b9fa1ae8a65e534cce7d26fa0984f6.html#ad7b9fa1ae8a65e534cce7d26fa0984f6a3d2f32aec0a1ff17b92c055b8b05f9c6">ADC_NUM_OF_CHANNEL</a>
+<br />
+ }<tr class="memdesc:ad7b9fa1ae8a65e534cce7d26fa0984f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">チャネル識別子  <a href="../../d7/d19/adc_8h_ad7b9fa1ae8a65e534cce7d26fa0984f6.html#ad7b9fa1ae8a65e534cce7d26fa0984f6">[詳解]</a><br /></td></tr>
+<tr class="separator:ad7b9fa1ae8a65e534cce7d26fa0984f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:ade9427cdb56898519822987924abac56"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d19/adc_8h_ade9427cdb56898519822987924abac56.html#ade9427cdb56898519822987924abac56">ADC_init</a> (<a class="el" href="../../d7/d19/adc_8h_a184c6673e1a242cded56d57b9600e591.html#a184c6673e1a242cded56d57b9600e591">ADC_Mode</a> mode, <a class="el" href="../../d3/dce/stddef_8h_afbf708854fe02af8475a9ba02f3196cb.html#afbf708854fe02af8475a9ba02f3196cb">_BOOL</a> interrupt)</td></tr>
+<tr class="memdesc:ade9427cdb56898519822987924abac56"><td class="mdescLeft">&#160;</td><td class="mdescRight">A/Dコンバータ初期化  <a href="../../d7/d19/adc_8h_ade9427cdb56898519822987924abac56.html#ade9427cdb56898519822987924abac56">[詳解]</a><br /></td></tr>
+<tr class="separator:ade9427cdb56898519822987924abac56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57fd0ce331f38600a2db2ffbba308372"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d19/adc_8h_a57fd0ce331f38600a2db2ffbba308372.html#a57fd0ce331f38600a2db2ffbba308372">ADC_enable</a> (<a class="el" href="../../d7/d19/adc_8h_ad7b9fa1ae8a65e534cce7d26fa0984f6.html#ad7b9fa1ae8a65e534cce7d26fa0984f6">ADC_Channel</a> ch)</td></tr>
+<tr class="memdesc:a57fd0ce331f38600a2db2ffbba308372"><td class="mdescLeft">&#160;</td><td class="mdescRight">チャネル有効化  <a href="../../d7/d19/adc_8h_a57fd0ce331f38600a2db2ffbba308372.html#a57fd0ce331f38600a2db2ffbba308372">[詳解]</a><br /></td></tr>
+<tr class="separator:a57fd0ce331f38600a2db2ffbba308372"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2f308dccaf207cc9242332c7671029d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d19/adc_8h_ae2f308dccaf207cc9242332c7671029d.html#ae2f308dccaf207cc9242332c7671029d">ADC_disable</a> (<a class="el" href="../../d7/d19/adc_8h_ad7b9fa1ae8a65e534cce7d26fa0984f6.html#ad7b9fa1ae8a65e534cce7d26fa0984f6">ADC_Channel</a> ch)</td></tr>
+<tr class="memdesc:ae2f308dccaf207cc9242332c7671029d"><td class="mdescLeft">&#160;</td><td class="mdescRight">チャネル無効化  <a href="../../d7/d19/adc_8h_ae2f308dccaf207cc9242332c7671029d.html#ae2f308dccaf207cc9242332c7671029d">[詳解]</a><br /></td></tr>
+<tr class="separator:ae2f308dccaf207cc9242332c7671029d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32572a51eecfb3116590f3093fb16300"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d19/adc_8h_a32572a51eecfb3116590f3093fb16300.html#a32572a51eecfb3116590f3093fb16300">ADC_start</a> ()</td></tr>
+<tr class="memdesc:a32572a51eecfb3116590f3093fb16300"><td class="mdescLeft">&#160;</td><td class="mdescRight">A/D変換開始  <a href="../../d7/d19/adc_8h_a32572a51eecfb3116590f3093fb16300.html#a32572a51eecfb3116590f3093fb16300">[詳解]</a><br /></td></tr>
+<tr class="separator:a32572a51eecfb3116590f3093fb16300"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9bf6b42d8730704dd47b5a025e6b419a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d19/adc_8h_a9bf6b42d8730704dd47b5a025e6b419a.html#a9bf6b42d8730704dd47b5a025e6b419a">ADC_stop</a> ()</td></tr>
+<tr class="memdesc:a9bf6b42d8730704dd47b5a025e6b419a"><td class="mdescLeft">&#160;</td><td class="mdescRight">A/D変換停止  <a href="../../d7/d19/adc_8h_a9bf6b42d8730704dd47b5a025e6b419a.html#a9bf6b42d8730704dd47b5a025e6b419a">[詳解]</a><br /></td></tr>
+<tr class="separator:a9bf6b42d8730704dd47b5a025e6b419a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47c7c4daf8f782717d6ae97bc0054aa3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d3/dce/stddef_8h_a931e4fd9bf350284fc21e94cd5ee126f.html#a931e4fd9bf350284fc21e94cd5ee126f">_SDWORD</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d19/adc_8h_a47c7c4daf8f782717d6ae97bc0054aa3.html#a47c7c4daf8f782717d6ae97bc0054aa3">ADC_get</a> (<a class="el" href="../../d7/d19/adc_8h_ad7b9fa1ae8a65e534cce7d26fa0984f6.html#ad7b9fa1ae8a65e534cce7d26fa0984f6">ADC_Channel</a> anx, <a class="el" href="../../d3/dce/stddef_8h_afbf708854fe02af8475a9ba02f3196cb.html#afbf708854fe02af8475a9ba02f3196cb">_BOOL</a> last)</td></tr>
+<tr class="memdesc:a47c7c4daf8f782717d6ae97bc0054aa3"><td class="mdescLeft">&#160;</td><td class="mdescRight">A/D変換データを取得する  <a href="../../d7/d19/adc_8h_a47c7c4daf8f782717d6ae97bc0054aa3.html#a47c7c4daf8f782717d6ae97bc0054aa3">[詳解]</a><br /></td></tr>
+<tr class="separator:a47c7c4daf8f782717d6ae97bc0054aa3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>A/Dコンバータドライバ </p>
+<p>このモジュールはA/Dコンバータへのインタフェースを提供する。<br />
+初期化、使用チャネルの設定を行うことで変換データを取得できるように なる。</p>
+<dl class="section see"><dt>参照</dt><dd>H83694グループ_ハードウェアマニュアル.pdf 16章</dd></dl>
+<p> 
+@version $Id:$
+
+@author Kenji MINOURA / kenji@kandj.org
+
+Copyright (c) 2008 K&J Software Design, Ltd All rights reserved.
+ </p>
+
+<p> <a class="el" href="../../d7/d19/adc_8h_source.html">adc.h</a> に定義があります。</p>
+</div></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="../../dir_cccf68db23ba25fb97e4e5b2069f9a17.html">h8sdk</a></li><li class="navelem"><a class="el" href="../../d7/d19/adc_8h.html">adc.h</a></li>
+    <li class="footer">2016年02月27日(土) 00時46分21秒作成 - H8SDK / 構成: 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.10 </li>
+  </ul>
+</div>
+</body>
+</html>

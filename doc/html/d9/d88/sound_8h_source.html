@@ -1,0 +1,282 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.10"/>
+<title>H8SDK: include/h8sdk/sound.h ソースファイル</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">H8SDK
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.10 -->
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="../../index.html"><span>総合概要</span></a></li>
+      <li><a href="../../pages.html"><span>諸情報</span></a></li>
+      <li><a href="../../annotated.html"><span>クラス</span></a></li>
+      <li class="current"><a href="../../files.html"><span>ファイル</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="../../files.html"><span>ファイル一覧</span></a></li>
+      <li><a href="../../globals.html"><span>ファイルメンバ</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('d9/d88/sound_8h_source.html','../../');});
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle">
+<div class="title">sound.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d9/d88/sound_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#ifndef SOUND_H_</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#define SOUND_H_</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> {</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d3/dce/stddef_8h.html">stddef.h</a>&quot;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="../../d9/d88/sound_8h_ae37af07d650f8e823223bfaf85dfeea5.html#ae37af07d650f8e823223bfaf85dfeea5">   31</a></span>&#160;<span class="preprocessor">#define SOUND_MAX_PRONOUNCE 3</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="../../d9/d88/sound_8h_a46743b97361463957ee0eb2202ff90d8.html#a46743b97361463957ee0eb2202ff90d8">   33</a></span>&#160;<span class="preprocessor">#define SOUND_MAX_VOLUME 255</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="../../d9/d88/sound_8h_aa5c5d06e5ffe7f4792f2a7613223b8bb.html#aa5c5d06e5ffe7f4792f2a7613223b8bb">   35</a></span>&#160;<span class="preprocessor">#define SOUND_PRONOUNCE_LEN 2</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="../../d9/d88/sound_8h_a00e51ccb7bab9d21f8cd5611028ca051.html#a00e51ccb7bab9d21f8cd5611028ca051">   38</a></span>&#160;<span class="preprocessor">#define SOUND_NA 0</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="../../d9/d88/sound_8h_a7a8291aa331919d505eb896f5f23b84c.html#a7a8291aa331919d505eb896f5f23b84c">   40</a></span>&#160;<span class="preprocessor">#define SOUND_C0 255</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="../../d9/d88/sound_8h_a5cf7b47c621b7f44cb936a18e7a227be.html#a5cf7b47c621b7f44cb936a18e7a227be">   42</a></span>&#160;<span class="preprocessor">#define SOUND_Cb0 241</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="../../d9/d88/sound_8h_a78855daec2050679bd8ef984b6474384.html#a78855daec2050679bd8ef984b6474384">   44</a></span>&#160;<span class="preprocessor">#define SOUND_D0 228</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="../../d9/d88/sound_8h_ae54a9c279cc372bd69b65dd9d06f3210.html#ae54a9c279cc372bd69b65dd9d06f3210">   46</a></span>&#160;<span class="preprocessor">#define SOUND_Db0 214</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="../../d9/d88/sound_8h_a19424f95bd658c3fb08a40b37fa18ae6.html#a19424f95bd658c3fb08a40b37fa18ae6">   48</a></span>&#160;<span class="preprocessor">#define SOUND_E0 203</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="../../d9/d88/sound_8h_a9c24cc4b865b592ab72a04852c7d194e.html#a9c24cc4b865b592ab72a04852c7d194e">   50</a></span>&#160;<span class="preprocessor">#define SOUND_F0 192</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="../../d9/d88/sound_8h_aaff9a7f05ba2237c933648fc79631254.html#aaff9a7f05ba2237c933648fc79631254">   52</a></span>&#160;<span class="preprocessor">#define SOUND_Fb0 180</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="../../d9/d88/sound_8h_a49cb5ffcf2e6a7e6a450e6bb6bb1fd55.html#a49cb5ffcf2e6a7e6a450e6bb6bb1fd55">   54</a></span>&#160;<span class="preprocessor">#define SOUND_G0 171</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="../../d9/d88/sound_8h_a7f5a3ed6713d6224d6e31d0020fdd430.html#a7f5a3ed6713d6224d6e31d0020fdd430">   56</a></span>&#160;<span class="preprocessor">#define SOUND_Gb0 161</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="../../d9/d88/sound_8h_abcc3b3196f02e1825a756586cff6adb5.html#abcc3b3196f02e1825a756586cff6adb5">   58</a></span>&#160;<span class="preprocessor">#define SOUND_A0 152</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="../../d9/d88/sound_8h_aa63270be4b563c05e755e9e9c62485d4.html#aa63270be4b563c05e755e9e9c62485d4">   60</a></span>&#160;<span class="preprocessor">#define SOUND_Ab0 143</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="../../d9/d88/sound_8h_af77d6e42768c9e8407091ab9237c23e8.html#af77d6e42768c9e8407091ab9237c23e8">   62</a></span>&#160;<span class="preprocessor">#define SOUND_H0 136</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="../../d9/d88/sound_8h_acc40de3e4447b500abf6a8f52690eb7a.html#acc40de3e4447b500abf6a8f52690eb7a">   64</a></span>&#160;<span class="preprocessor">#define SOUND_C1 128</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="../../d9/d88/sound_8h_a71cd098d1835193a4082f62c92bd1560.html#a71cd098d1835193a4082f62c92bd1560">   66</a></span>&#160;<span class="preprocessor">#define SOUND_Cb1 120</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="../../d9/d88/sound_8h_abc56b27ce3a779cca007c05bd85be4fd.html#abc56b27ce3a779cca007c05bd85be4fd">   68</a></span>&#160;<span class="preprocessor">#define SOUND_D1 114</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="../../d9/d88/sound_8h_a38bf3c917fff3545f77a76715ad4b0f4.html#a38bf3c917fff3545f77a76715ad4b0f4">   70</a></span>&#160;<span class="preprocessor">#define SOUND_Db1 107</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
+<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="../../d9/d88/sound_8h_a1009235392ed7690560707d81815b36b.html#a1009235392ed7690560707d81815b36b">   72</a></span>&#160;<span class="preprocessor">#define SOUND_E1 101</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
+<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="../../d9/d88/sound_8h_a48a50ebd455ec326ce52ba3f9e063baa.html#a48a50ebd455ec326ce52ba3f9e063baa">   74</a></span>&#160;<span class="preprocessor">#define SOUND_F1 96</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
+<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="../../d9/d88/sound_8h_adc081179e66a0f7fe8f58b07f0358ed8.html#adc081179e66a0f7fe8f58b07f0358ed8">   76</a></span>&#160;<span class="preprocessor">#define SOUND_Fb1 90</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="../../d9/d88/sound_8h_a077f7dc14c95e192d7edf3c8eb72c5da.html#a077f7dc14c95e192d7edf3c8eb72c5da">   78</a></span>&#160;<span class="preprocessor">#define SOUND_G1 85</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
+<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="../../d9/d88/sound_8h_af064bb5dbd237d2fe7e954ee31cd3ca4.html#af064bb5dbd237d2fe7e954ee31cd3ca4">   80</a></span>&#160;<span class="preprocessor">#define SOUND_Gb1 80</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
+<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="../../d9/d88/sound_8h_a0a5faefe8dfea062eb628bd9b6aba261.html#a0a5faefe8dfea062eb628bd9b6aba261">   82</a></span>&#160;<span class="preprocessor">#define SOUND_A1 76</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
+<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="../../d9/d88/sound_8h_acf1942377e486c3d28326ea144b0c9f0.html#acf1942377e486c3d28326ea144b0c9f0">   84</a></span>&#160;<span class="preprocessor">#define SOUND_Ab1 72</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="../../d9/d88/sound_8h_a779cc45580fd31304c432b2582e94953.html#a779cc45580fd31304c432b2582e94953">   86</a></span>&#160;<span class="preprocessor">#define SOUND_H1 68</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
+<div class="line"><a name="l00088"></a><span class="lineno"><a class="line" href="../../d9/d88/sound_8h_a041d01c58025c9f74835d33da716e51d.html#a041d01c58025c9f74835d33da716e51d">   88</a></span>&#160;<span class="preprocessor">#define SOUND_C2 64</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
+<div class="line"><a name="l00090"></a><span class="lineno"><a class="line" href="../../d9/d88/sound_8h_a2ea86474bf4acd9fa0b6cc36610a54db.html#a2ea86474bf4acd9fa0b6cc36610a54db">   90</a></span>&#160;<span class="preprocessor">#define SOUND_Cb2 60</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
+<div class="line"><a name="l00092"></a><span class="lineno"><a class="line" href="../../d9/d88/sound_8h_a24efb33152ca6f7c832a646cefc86f32.html#a24efb33152ca6f7c832a646cefc86f32">   92</a></span>&#160;<span class="preprocessor">#define SOUND_D2 57</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
+<div class="line"><a name="l00094"></a><span class="lineno"><a class="line" href="../../d9/d88/sound_8h_a7d2839cfd7ade12ff92a685da8405db3.html#a7d2839cfd7ade12ff92a685da8405db3">   94</a></span>&#160;<span class="preprocessor">#define SOUND_Db2 54</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
+<div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="../../d9/d88/sound_8h_a52d7912c62673a809f44656740543ba5.html#a52d7912c62673a809f44656740543ba5">   96</a></span>&#160;<span class="preprocessor">#define SOUND_E2 51</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
+<div class="line"><a name="l00098"></a><span class="lineno"><a class="line" href="../../d9/d88/sound_8h_a5efc510793cd609c997915070db58dd0.html#a5efc510793cd609c997915070db58dd0">   98</a></span>&#160;<span class="preprocessor">#define SOUND_F2 48</span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
+<div class="line"><a name="l00100"></a><span class="lineno"><a class="line" href="../../d9/d88/sound_8h_a1aa4dea5958d3b0a7c9ff406073fdd37.html#a1aa4dea5958d3b0a7c9ff406073fdd37">  100</a></span>&#160;<span class="preprocessor">#define SOUND_Fb2 45</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
+<div class="line"><a name="l00102"></a><span class="lineno"><a class="line" href="../../d9/d88/sound_8h_add206c6691e048cc1ce70f995384dbb8.html#add206c6691e048cc1ce70f995384dbb8">  102</a></span>&#160;<span class="preprocessor">#define SOUND_G2 43</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;</div>
+<div class="line"><a name="l00104"></a><span class="lineno"><a class="line" href="../../d9/d88/sound_8h_a73fd8b78bb50cd9cdbd8a1c09400262d.html#a73fd8b78bb50cd9cdbd8a1c09400262d">  104</a></span>&#160;<span class="preprocessor">#define SOUND_Gb2 40</span></div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
+<div class="line"><a name="l00106"></a><span class="lineno"><a class="line" href="../../d9/d88/sound_8h_a87cc8e430711a16f8d53adec0fc30863.html#a87cc8e430711a16f8d53adec0fc30863">  106</a></span>&#160;<span class="preprocessor">#define SOUND_A2 38</span></div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
+<div class="line"><a name="l00108"></a><span class="lineno"><a class="line" href="../../d9/d88/sound_8h_aa355b76cc29205f9fdd6edd04802baa1.html#aa355b76cc29205f9fdd6edd04802baa1">  108</a></span>&#160;<span class="preprocessor">#define SOUND_Ab2 36</span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
+<div class="line"><a name="l00110"></a><span class="lineno"><a class="line" href="../../d9/d88/sound_8h_a8aeeeb1a420c4f8b23fe5c7960045a06.html#a8aeeeb1a420c4f8b23fe5c7960045a06">  110</a></span>&#160;<span class="preprocessor">#define SOUND_H2 34</span></div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;</div>
+<div class="line"><a name="l00112"></a><span class="lineno"><a class="line" href="../../d9/d88/sound_8h_a6cb42a0945d4a26b716ea357b265a8e4.html#a6cb42a0945d4a26b716ea357b265a8e4">  112</a></span>&#160;<span class="preprocessor">#define SOUND_C3 32</span></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;</div>
+<div class="line"><a name="l00114"></a><span class="lineno"><a class="line" href="../../d9/d88/sound_8h_a3fbca825ab7829e2da07997cfb7be2b5.html#a3fbca825ab7829e2da07997cfb7be2b5">  114</a></span>&#160;<span class="preprocessor">#define SOUND_Cb3 30</span></div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;</div>
+<div class="line"><a name="l00116"></a><span class="lineno"><a class="line" href="../../d9/d88/sound_8h_ab0ffa43b4f3def70d822938a28983c90.html#ab0ffa43b4f3def70d822938a28983c90">  116</a></span>&#160;<span class="preprocessor">#define SOUND_D3 29</span></div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
+<div class="line"><a name="l00118"></a><span class="lineno"><a class="line" href="../../d9/d88/sound_8h_a1cfd87bf68ec505eec2f20f710ce0189.html#a1cfd87bf68ec505eec2f20f710ce0189">  118</a></span>&#160;<span class="preprocessor">#define SOUND_Db3 27</span></div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;</div>
+<div class="line"><a name="l00120"></a><span class="lineno"><a class="line" href="../../d9/d88/sound_8h_a7c3d885a2a78b0ac306c3d275233e037.html#a7c3d885a2a78b0ac306c3d275233e037">  120</a></span>&#160;<span class="preprocessor">#define SOUND_E3 25</span></div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;</div>
+<div class="line"><a name="l00122"></a><span class="lineno"><a class="line" href="../../d9/d88/sound_8h_aee1dad36946f9a025e2067788b62e575.html#aee1dad36946f9a025e2067788b62e575">  122</a></span>&#160;<span class="preprocessor">#define SOUND_F3 24</span></div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;</div>
+<div class="line"><a name="l00124"></a><span class="lineno"><a class="line" href="../../d9/d88/sound_8h_a4502a83bac176348b5c7b0677341fc26.html#a4502a83bac176348b5c7b0677341fc26">  124</a></span>&#160;<span class="preprocessor">#define SOUND_Fb3 23</span></div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;</div>
+<div class="line"><a name="l00126"></a><span class="lineno"><a class="line" href="../../d9/d88/sound_8h_a3dc460e8030ea66b5b0af7074f32b3ac.html#a3dc460e8030ea66b5b0af7074f32b3ac">  126</a></span>&#160;<span class="preprocessor">#define SOUND_G3 21</span></div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;</div>
+<div class="line"><a name="l00128"></a><span class="lineno"><a class="line" href="../../d9/d88/sound_8h_a154622a25029a712f113945150b1325b.html#a154622a25029a712f113945150b1325b">  128</a></span>&#160;<span class="preprocessor">#define SOUND_Gb3 20</span></div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;</div>
+<div class="line"><a name="l00130"></a><span class="lineno"><a class="line" href="../../d9/d88/sound_8h_a9f45e8626868aaf3fe91e01a56686ecd.html#a9f45e8626868aaf3fe91e01a56686ecd">  130</a></span>&#160;<span class="preprocessor">#define SOUND_A3 19</span></div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;</div>
+<div class="line"><a name="l00132"></a><span class="lineno"><a class="line" href="../../d9/d88/sound_8h_a41403a0a136d706e529e4017966e1a10.html#a41403a0a136d706e529e4017966e1a10">  132</a></span>&#160;<span class="preprocessor">#define SOUND_Ab3 18</span></div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;</div>
+<div class="line"><a name="l00134"></a><span class="lineno"><a class="line" href="../../d9/d88/sound_8h_a931824d8aaced5b4db469aa58517d993.html#a931824d8aaced5b4db469aa58517d993">  134</a></span>&#160;<span class="preprocessor">#define SOUND_H3 17</span></div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;</div>
+<div class="line"><a name="l00140"></a><span class="lineno"><a class="line" href="../../d9/d88/sound_8h_abb21e5244ee60939e8a32ec932e9d7b3.html#abb21e5244ee60939e8a32ec932e9d7b3">  140</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span></div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;{</div>
+<div class="line"><a name="l00142"></a><span class="lineno"><a class="line" href="../../d9/d88/sound_8h_abb21e5244ee60939e8a32ec932e9d7b3.html#abb21e5244ee60939e8a32ec932e9d7b3ad0949bdef5777ac0e886e8b7a3ac9e93">  142</a></span>&#160;    <a class="code" href="../../d9/d88/sound_8h_abb21e5244ee60939e8a32ec932e9d7b3.html#abb21e5244ee60939e8a32ec932e9d7b3ad0949bdef5777ac0e886e8b7a3ac9e93">SOUND_ST_STOP</a> = 0,</div>
+<div class="line"><a name="l00143"></a><span class="lineno"><a class="line" href="../../d9/d88/sound_8h_abb21e5244ee60939e8a32ec932e9d7b3.html#abb21e5244ee60939e8a32ec932e9d7b3a69af3ab302bcb6f9e2dabc363ea2f322">  143</a></span>&#160;    <a class="code" href="../../d9/d88/sound_8h_abb21e5244ee60939e8a32ec932e9d7b3.html#abb21e5244ee60939e8a32ec932e9d7b3a69af3ab302bcb6f9e2dabc363ea2f322">SOUND_ST_PLAY</a>,</div>
+<div class="line"><a name="l00144"></a><span class="lineno"><a class="line" href="../../d9/d88/sound_8h_abb21e5244ee60939e8a32ec932e9d7b3.html#abb21e5244ee60939e8a32ec932e9d7b3a8ce8853fb3709716f052d68eb827c92f">  144</a></span>&#160;    <a class="code" href="../../d9/d88/sound_8h_abb21e5244ee60939e8a32ec932e9d7b3.html#abb21e5244ee60939e8a32ec932e9d7b3a8ce8853fb3709716f052d68eb827c92f">SOUND_ST_REVERSE</a>,</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;</div>
+<div class="line"><a name="l00146"></a><span class="lineno"><a class="line" href="../../d9/d88/sound_8h_abb21e5244ee60939e8a32ec932e9d7b3.html#abb21e5244ee60939e8a32ec932e9d7b3ac0294a814acb2bcb5d3c4cefef53a22c">  146</a></span>&#160;    <a class="code" href="../../d9/d88/sound_8h_abb21e5244ee60939e8a32ec932e9d7b3.html#abb21e5244ee60939e8a32ec932e9d7b3ac0294a814acb2bcb5d3c4cefef53a22c">SOUND_NUM_OF_STATE</a></div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;} <a class="code" href="../../d9/d88/sound_8h_abb21e5244ee60939e8a32ec932e9d7b3.html#abb21e5244ee60939e8a32ec932e9d7b3">SOUND_State</a>;</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;</div>
+<div class="line"><a name="l00154"></a><span class="lineno"><a class="line" href="../../d9/d88/sound_8h.html">  154</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct</span></div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;{</div>
+<div class="line"><a name="l00156"></a><span class="lineno"><a class="line" href="../../d9/d88/sound_8h.html#ad368fb20a4f66ce37f393a9e76669c2c">  156</a></span>&#160;    <a class="code" href="../../d3/dce/stddef_8h_aac464b47452ce9406f88ef194e2becc1.html#aac464b47452ce9406f88ef194e2becc1">_UBYTE</a>* <a class="code" href="../../d9/d88/sound_8h.html#ad368fb20a4f66ce37f393a9e76669c2c">data</a>;</div>
+<div class="line"><a name="l00158"></a><span class="lineno"><a class="line" href="../../d9/d88/sound_8h.html#af1860938a43db18c94c5e455a3d30f92">  158</a></span>&#160;    <a class="code" href="../../d3/dce/stddef_8h_af4b45f5ec97da370bd2173b4fe891d76.html#af4b45f5ec97da370bd2173b4fe891d76">_UWORD</a> <a class="code" href="../../d9/d88/sound_8h.html#af1860938a43db18c94c5e455a3d30f92">size</a>;</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;} <a class="code" href="../../d9/d88/sound_8h.html#d0/d92/structSOUND__Envelope">SOUND_Envelope</a>;</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;</div>
+<div class="line"><a name="l00167"></a><span class="lineno"><a class="line" href="../../d9/d88/sound_8h.html">  167</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct</span></div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;{</div>
+<div class="line"><a name="l00169"></a><span class="lineno"><a class="line" href="../../d9/d88/sound_8h.html#a8135b8035953af27550de75620afe4d5">  169</a></span>&#160;    <a class="code" href="../../d3/dce/stddef_8h_aac464b47452ce9406f88ef194e2becc1.html#aac464b47452ce9406f88ef194e2becc1">_UBYTE</a> <a class="code" href="../../d9/d88/sound_8h.html#a8135b8035953af27550de75620afe4d5">freq</a>;</div>
+<div class="line"><a name="l00171"></a><span class="lineno"><a class="line" href="../../d9/d88/sound_8h.html#ac170c41399f920b778a6ea90b82660c3">  171</a></span>&#160;    <a class="code" href="../../d9/d88/sound_8h.html#d0/d92/structSOUND__Envelope">SOUND_Envelope</a>* <a class="code" href="../../d9/d88/sound_8h.html#ac170c41399f920b778a6ea90b82660c3">evlp</a>;</div>
+<div class="line"><a name="l00173"></a><span class="lineno"><a class="line" href="../../d9/d88/sound_8h.html#a4d3e0cc4845c0d851a0fbfd43dd01c02">  173</a></span>&#160;    <a class="code" href="../../d9/d88/sound_8h.html#d0/d92/structSOUND__Envelope">SOUND_Envelope</a>* <a class="code" href="../../d9/d88/sound_8h.html#a4d3e0cc4845c0d851a0fbfd43dd01c02">reverb</a>;</div>
+<div class="line"><a name="l00175"></a><span class="lineno"><a class="line" href="../../d9/d88/sound_8h.html#a87a8f1fa6a5243bfec12dace400f4d95">  175</a></span>&#160;    <a class="code" href="../../d3/dce/stddef_8h_afbf708854fe02af8475a9ba02f3196cb.html#afbf708854fe02af8475a9ba02f3196cb">_BOOL</a> <a class="code" href="../../d9/d88/sound_8h.html#a87a8f1fa6a5243bfec12dace400f4d95">loop</a>;</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;} <a class="code" href="../../d9/d88/sound_8h.html#d6/d3c/structSOUND__Tone">SOUND_Tone</a>;</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;</div>
+<div class="line"><a name="l00182"></a><span class="lineno"><a class="line" href="../../d9/d88/sound_8h_a25ea542ecfc47a97aed27c42ee791f3f.html#a25ea542ecfc47a97aed27c42ee791f3f">  182</a></span>&#160;<span class="keyword">typedef</span> <a class="code" href="../../d3/dce/stddef_8h_afbf708854fe02af8475a9ba02f3196cb.html#afbf708854fe02af8475a9ba02f3196cb">_BOOL</a> (*<a class="code" href="../../d9/d88/sound_8h_a25ea542ecfc47a97aed27c42ee791f3f.html#a25ea542ecfc47a97aed27c42ee791f3f">SOUND_Api</a>)();</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;<span class="keyword">extern</span> <span class="keyword">const</span> <a class="code" href="../../d9/d88/sound_8h_a25ea542ecfc47a97aed27c42ee791f3f.html#a25ea542ecfc47a97aed27c42ee791f3f">SOUND_Api</a> <a class="code" href="../../d9/d88/sound_8h_acf4c0032eb66261be38af2018b4119d3.html#acf4c0032eb66261be38af2018b4119d3">SOUND_state_handler</a>[<a class="code" href="../../d9/d88/sound_8h_abb21e5244ee60939e8a32ec932e9d7b3.html#abb21e5244ee60939e8a32ec932e9d7b3ac0294a814acb2bcb5d3c4cefef53a22c">SOUND_NUM_OF_STATE</a>];</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d9/d88/sound_8h_ad3de2879fde7ab7812201bc42d3d4b8e.html#ad3de2879fde7ab7812201bc42d3d4b8e">SOUND_init</a>();</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;<a class="code" href="../../d9/d88/sound_8h_abb21e5244ee60939e8a32ec932e9d7b3.html#abb21e5244ee60939e8a32ec932e9d7b3">SOUND_State</a> <a class="code" href="../../d9/d88/sound_8h_ac4a032d84a215757679f6adca28a1d9b.html#ac4a032d84a215757679f6adca28a1d9b">SOUND_getState</a>();</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d9/d88/sound_8h_adf9ab0e7c0d23c1addb15b92b19cda3a.html#adf9ab0e7c0d23c1addb15b92b19cda3a">SOUND_setVolume</a>(<a class="code" href="../../d3/dce/stddef_8h_aac464b47452ce9406f88ef194e2becc1.html#aac464b47452ce9406f88ef194e2becc1">_UBYTE</a> val);</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d9/d88/sound_8h_a0d312ae4bc0fa617113f6b207948b216.html#a0d312ae4bc0fa617113f6b207948b216">SOUND_setEvlpCycle</a>(<a class="code" href="../../d3/dce/stddef_8h_af4b45f5ec97da370bd2173b4fe891d76.html#af4b45f5ec97da370bd2173b4fe891d76">_UWORD</a> val);</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d9/d88/sound_8h_a96d64623d3a9b13dc1946eb89b67e6d4.html#a96d64623d3a9b13dc1946eb89b67e6d4">SOUND_setTone</a>(<a class="code" href="../../d3/dce/stddef_8h_aac464b47452ce9406f88ef194e2becc1.html#aac464b47452ce9406f88ef194e2becc1">_UBYTE</a> idx, <span class="keyword">const</span> <a class="code" href="../../d9/d88/sound_8h.html#d6/d3c/structSOUND__Tone">SOUND_Tone</a>* tone);</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d9/d88/sound_8h_a89125a6dfb8c0023aba543f2d0f24a8f.html#a89125a6dfb8c0023aba543f2d0f24a8f">SOUND_removeTone</a>(<a class="code" href="../../d3/dce/stddef_8h_aac464b47452ce9406f88ef194e2becc1.html#aac464b47452ce9406f88ef194e2becc1">_UBYTE</a> idx);</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;<a class="code" href="../../d3/dce/stddef_8h_afbf708854fe02af8475a9ba02f3196cb.html#afbf708854fe02af8475a9ba02f3196cb">_BOOL</a> <a class="code" href="../../d9/d88/sound_8h_a7ab16e900aec03cfe3707d0f33e5821c.html#a7ab16e900aec03cfe3707d0f33e5821c">SOUND_play</a>();</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;<a class="code" href="../../d3/dce/stddef_8h_afbf708854fe02af8475a9ba02f3196cb.html#afbf708854fe02af8475a9ba02f3196cb">_BOOL</a> <a class="code" href="../../d9/d88/sound_8h_aafc9cb1cbfabe6eced6a250c99cd1de0.html#aafc9cb1cbfabe6eced6a250c99cd1de0">SOUND_reverse</a>();</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;<a class="code" href="../../d3/dce/stddef_8h_afbf708854fe02af8475a9ba02f3196cb.html#afbf708854fe02af8475a9ba02f3196cb">_BOOL</a> <a class="code" href="../../d9/d88/sound_8h_a1504a4f21c440a59edeecd944b01c032.html#a1504a4f21c440a59edeecd944b01c032">SOUND_stop</a>();</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d9/d88/sound_8h_a5fc67e86da09d64eef5060e3393395b0.html#a5fc67e86da09d64eef5060e3393395b0">SOUND_makePulse</a>();</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d9/d88/sound_8h_ac55bd0188c9aed90f2f859f1ac03ed61.html#ac55bd0188c9aed90f2f859f1ac03ed61">SOUND_pronounce</a>();</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;}</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* SOUND_H_ */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="sound_8h_ac55bd0188c9aed90f2f859f1ac03ed61_html_ac55bd0188c9aed90f2f859f1ac03ed61"><div class="ttname"><a href="../../d9/d88/sound_8h_ac55bd0188c9aed90f2f859f1ac03ed61.html#ac55bd0188c9aed90f2f859f1ac03ed61">SOUND_pronounce</a></div><div class="ttdeci">void SOUND_pronounce()</div><div class="ttdoc">音データ発音 </div></div>
+<div class="ttc" id="sound_8h_abb21e5244ee60939e8a32ec932e9d7b3_html_abb21e5244ee60939e8a32ec932e9d7b3a8ce8853fb3709716f052d68eb827c92f"><div class="ttname"><a href="../../d9/d88/sound_8h_abb21e5244ee60939e8a32ec932e9d7b3.html#abb21e5244ee60939e8a32ec932e9d7b3a8ce8853fb3709716f052d68eb827c92f">SOUND_ST_REVERSE</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d88/sound_8h_source.html#l00144">sound.h:144</a></div></div>
+<div class="ttc" id="sound_8h_abb21e5244ee60939e8a32ec932e9d7b3_html_abb21e5244ee60939e8a32ec932e9d7b3ac0294a814acb2bcb5d3c4cefef53a22c"><div class="ttname"><a href="../../d9/d88/sound_8h_abb21e5244ee60939e8a32ec932e9d7b3.html#abb21e5244ee60939e8a32ec932e9d7b3ac0294a814acb2bcb5d3c4cefef53a22c">SOUND_NUM_OF_STATE</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d88/sound_8h_source.html#l00146">sound.h:146</a></div></div>
+<div class="ttc" id="sound_8h_abb21e5244ee60939e8a32ec932e9d7b3_html_abb21e5244ee60939e8a32ec932e9d7b3a69af3ab302bcb6f9e2dabc363ea2f322"><div class="ttname"><a href="../../d9/d88/sound_8h_abb21e5244ee60939e8a32ec932e9d7b3.html#abb21e5244ee60939e8a32ec932e9d7b3a69af3ab302bcb6f9e2dabc363ea2f322">SOUND_ST_PLAY</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d88/sound_8h_source.html#l00143">sound.h:143</a></div></div>
+<div class="ttc" id="sound_8h_ac4a032d84a215757679f6adca28a1d9b_html_ac4a032d84a215757679f6adca28a1d9b"><div class="ttname"><a href="../../d9/d88/sound_8h_ac4a032d84a215757679f6adca28a1d9b.html#ac4a032d84a215757679f6adca28a1d9b">SOUND_getState</a></div><div class="ttdeci">SOUND_State SOUND_getState()</div><div class="ttdoc">現在の再生状態取得 </div></div>
+<div class="ttc" id="sound_8h_a7ab16e900aec03cfe3707d0f33e5821c_html_a7ab16e900aec03cfe3707d0f33e5821c"><div class="ttname"><a href="../../d9/d88/sound_8h_a7ab16e900aec03cfe3707d0f33e5821c.html#a7ab16e900aec03cfe3707d0f33e5821c">SOUND_play</a></div><div class="ttdeci">_BOOL SOUND_play()</div><div class="ttdoc">音再生リクエスト </div></div>
+<div class="ttc" id="sound_8h_html_ad368fb20a4f66ce37f393a9e76669c2c"><div class="ttname"><a href="../../d9/d88/sound_8h.html#ad368fb20a4f66ce37f393a9e76669c2c">SOUND_Envelope::data</a></div><div class="ttdeci">_UBYTE * data</div><div class="ttdoc">エンベロープデータ列の先頭へのポインタ </div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d88/sound_8h_source.html#l00156">sound.h:156</a></div></div>
+<div class="ttc" id="sound_8h_a25ea542ecfc47a97aed27c42ee791f3f_html_a25ea542ecfc47a97aed27c42ee791f3f"><div class="ttname"><a href="../../d9/d88/sound_8h_a25ea542ecfc47a97aed27c42ee791f3f.html#a25ea542ecfc47a97aed27c42ee791f3f">SOUND_Api</a></div><div class="ttdeci">_BOOL(* SOUND_Api)()</div><div class="ttdoc">再生操作リクエストAPIの型 </div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d88/sound_8h_source.html#l00182">sound.h:182</a></div></div>
+<div class="ttc" id="sound_8h_a0d312ae4bc0fa617113f6b207948b216_html_a0d312ae4bc0fa617113f6b207948b216"><div class="ttname"><a href="../../d9/d88/sound_8h_a0d312ae4bc0fa617113f6b207948b216.html#a0d312ae4bc0fa617113f6b207948b216">SOUND_setEvlpCycle</a></div><div class="ttdeci">void SOUND_setEvlpCycle(_UWORD val)</div><div class="ttdoc">エンベロープ周期設定 </div></div>
+<div class="ttc" id="sound_8h_html_ac170c41399f920b778a6ea90b82660c3"><div class="ttname"><a href="../../d9/d88/sound_8h.html#ac170c41399f920b778a6ea90b82660c3">SOUND_Tone::evlp</a></div><div class="ttdeci">SOUND_Envelope * evlp</div><div class="ttdoc">この音を発生させるときのエンベロープ </div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d88/sound_8h_source.html#l00171">sound.h:171</a></div></div>
+<div class="ttc" id="sound_8h_a5fc67e86da09d64eef5060e3393395b0_html_a5fc67e86da09d64eef5060e3393395b0"><div class="ttname"><a href="../../d9/d88/sound_8h_a5fc67e86da09d64eef5060e3393395b0.html#a5fc67e86da09d64eef5060e3393395b0">SOUND_makePulse</a></div><div class="ttdeci">void SOUND_makePulse()</div><div class="ttdoc">波形生成 </div></div>
+<div class="ttc" id="stddef_8h_aac464b47452ce9406f88ef194e2becc1_html_aac464b47452ce9406f88ef194e2becc1"><div class="ttname"><a href="../../d3/dce/stddef_8h_aac464b47452ce9406f88ef194e2becc1.html#aac464b47452ce9406f88ef194e2becc1">_UBYTE</a></div><div class="ttdeci">unsigned char _UBYTE</div><div class="ttdoc">符号なし8ビット整数型 </div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dce/stddef_8h_source.html#l00050">stddef.h:50</a></div></div>
+<div class="ttc" id="sound_8h_a89125a6dfb8c0023aba543f2d0f24a8f_html_a89125a6dfb8c0023aba543f2d0f24a8f"><div class="ttname"><a href="../../d9/d88/sound_8h_a89125a6dfb8c0023aba543f2d0f24a8f.html#a89125a6dfb8c0023aba543f2d0f24a8f">SOUND_removeTone</a></div><div class="ttdeci">void SOUND_removeTone(_UBYTE idx)</div><div class="ttdoc">音削除 </div></div>
+<div class="ttc" id="sound_8h_aafc9cb1cbfabe6eced6a250c99cd1de0_html_aafc9cb1cbfabe6eced6a250c99cd1de0"><div class="ttname"><a href="../../d9/d88/sound_8h_aafc9cb1cbfabe6eced6a250c99cd1de0.html#aafc9cb1cbfabe6eced6a250c99cd1de0">SOUND_reverse</a></div><div class="ttdeci">_BOOL SOUND_reverse()</div><div class="ttdoc">音逆再生リクエスト </div></div>
+<div class="ttc" id="stddef_8h_afbf708854fe02af8475a9ba02f3196cb_html_afbf708854fe02af8475a9ba02f3196cb"><div class="ttname"><a href="../../d3/dce/stddef_8h_afbf708854fe02af8475a9ba02f3196cb.html#afbf708854fe02af8475a9ba02f3196cb">_BOOL</a></div><div class="ttdeci">_BOOL</div><div class="ttdoc">ブール型 </div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dce/stddef_8h_source.html#l00069">stddef.h:69</a></div></div>
+<div class="ttc" id="sound_8h_abb21e5244ee60939e8a32ec932e9d7b3_html_abb21e5244ee60939e8a32ec932e9d7b3ad0949bdef5777ac0e886e8b7a3ac9e93"><div class="ttname"><a href="../../d9/d88/sound_8h_abb21e5244ee60939e8a32ec932e9d7b3.html#abb21e5244ee60939e8a32ec932e9d7b3ad0949bdef5777ac0e886e8b7a3ac9e93">SOUND_ST_STOP</a></div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d88/sound_8h_source.html#l00142">sound.h:142</a></div></div>
+<div class="ttc" id="stddef_8h_html"><div class="ttname"><a href="../../d3/dce/stddef_8h.html">stddef.h</a></div><div class="ttdoc">共通型、リテラル定義 </div></div>
+<div class="ttc" id="sound_8h_html_d6/d3c/structSOUND__Tone"><div class="ttname"><a href="../../d9/d88/sound_8h.html#d6/d3c/structSOUND__Tone">SOUND_Tone</a></div><div class="ttdoc">音定義型 </div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d88/sound_8h_source.html#l00167">sound.h:167</a></div></div>
+<div class="ttc" id="sound_8h_ad3de2879fde7ab7812201bc42d3d4b8e_html_ad3de2879fde7ab7812201bc42d3d4b8e"><div class="ttname"><a href="../../d9/d88/sound_8h_ad3de2879fde7ab7812201bc42d3d4b8e.html#ad3de2879fde7ab7812201bc42d3d4b8e">SOUND_init</a></div><div class="ttdeci">void SOUND_init()</div><div class="ttdoc">サウンドドライバ初期化 </div></div>
+<div class="ttc" id="stddef_8h_af4b45f5ec97da370bd2173b4fe891d76_html_af4b45f5ec97da370bd2173b4fe891d76"><div class="ttname"><a href="../../d3/dce/stddef_8h_af4b45f5ec97da370bd2173b4fe891d76.html#af4b45f5ec97da370bd2173b4fe891d76">_UWORD</a></div><div class="ttdeci">unsigned short _UWORD</div><div class="ttdoc">符号なし16ビット整数型 </div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dce/stddef_8h_source.html#l00054">stddef.h:54</a></div></div>
+<div class="ttc" id="sound_8h_html_d0/d92/structSOUND__Envelope"><div class="ttname"><a href="../../d9/d88/sound_8h.html#d0/d92/structSOUND__Envelope">SOUND_Envelope</a></div><div class="ttdoc">エンベロープ定義型 </div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d88/sound_8h_source.html#l00154">sound.h:154</a></div></div>
+<div class="ttc" id="sound_8h_a1504a4f21c440a59edeecd944b01c032_html_a1504a4f21c440a59edeecd944b01c032"><div class="ttname"><a href="../../d9/d88/sound_8h_a1504a4f21c440a59edeecd944b01c032.html#a1504a4f21c440a59edeecd944b01c032">SOUND_stop</a></div><div class="ttdeci">_BOOL SOUND_stop()</div><div class="ttdoc">停止リクエスト </div></div>
+<div class="ttc" id="sound_8h_a96d64623d3a9b13dc1946eb89b67e6d4_html_a96d64623d3a9b13dc1946eb89b67e6d4"><div class="ttname"><a href="../../d9/d88/sound_8h_a96d64623d3a9b13dc1946eb89b67e6d4.html#a96d64623d3a9b13dc1946eb89b67e6d4">SOUND_setTone</a></div><div class="ttdeci">void SOUND_setTone(_UBYTE idx, const SOUND_Tone *tone)</div><div class="ttdoc">音登録 </div></div>
+<div class="ttc" id="sound_8h_acf4c0032eb66261be38af2018b4119d3_html_acf4c0032eb66261be38af2018b4119d3"><div class="ttname"><a href="../../d9/d88/sound_8h_acf4c0032eb66261be38af2018b4119d3.html#acf4c0032eb66261be38af2018b4119d3">SOUND_state_handler</a></div><div class="ttdeci">const SOUND_Api SOUND_state_handler[SOUND_NUM_OF_STATE]</div><div class="ttdoc">状態ハンドラ配列 </div></div>
+<div class="ttc" id="sound_8h_html_a8135b8035953af27550de75620afe4d5"><div class="ttname"><a href="../../d9/d88/sound_8h.html#a8135b8035953af27550de75620afe4d5">SOUND_Tone::freq</a></div><div class="ttdeci">_UBYTE freq</div><div class="ttdoc">音の周波数 </div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d88/sound_8h_source.html#l00169">sound.h:169</a></div></div>
+<div class="ttc" id="sound_8h_abb21e5244ee60939e8a32ec932e9d7b3_html_abb21e5244ee60939e8a32ec932e9d7b3"><div class="ttname"><a href="../../d9/d88/sound_8h_abb21e5244ee60939e8a32ec932e9d7b3.html#abb21e5244ee60939e8a32ec932e9d7b3">SOUND_State</a></div><div class="ttdeci">SOUND_State</div><div class="ttdoc">再生状態リテラル型 </div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d88/sound_8h_source.html#l00140">sound.h:140</a></div></div>
+<div class="ttc" id="sound_8h_html_af1860938a43db18c94c5e455a3d30f92"><div class="ttname"><a href="../../d9/d88/sound_8h.html#af1860938a43db18c94c5e455a3d30f92">SOUND_Envelope::size</a></div><div class="ttdeci">_UWORD size</div><div class="ttdoc">エンベロープデータ列のサイズ </div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d88/sound_8h_source.html#l00158">sound.h:158</a></div></div>
+<div class="ttc" id="sound_8h_html_a4d3e0cc4845c0d851a0fbfd43dd01c02"><div class="ttname"><a href="../../d9/d88/sound_8h.html#a4d3e0cc4845c0d851a0fbfd43dd01c02">SOUND_Tone::reverb</a></div><div class="ttdeci">SOUND_Envelope * reverb</div><div class="ttdoc">再生後の残響効果。リバーブ </div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d88/sound_8h_source.html#l00173">sound.h:173</a></div></div>
+<div class="ttc" id="sound_8h_adf9ab0e7c0d23c1addb15b92b19cda3a_html_adf9ab0e7c0d23c1addb15b92b19cda3a"><div class="ttname"><a href="../../d9/d88/sound_8h_adf9ab0e7c0d23c1addb15b92b19cda3a.html#adf9ab0e7c0d23c1addb15b92b19cda3a">SOUND_setVolume</a></div><div class="ttdeci">void SOUND_setVolume(_UBYTE val)</div><div class="ttdoc">ボリューム設定 </div></div>
+<div class="ttc" id="sound_8h_html_a87a8f1fa6a5243bfec12dace400f4d95"><div class="ttname"><a href="../../d9/d88/sound_8h.html#a87a8f1fa6a5243bfec12dace400f4d95">SOUND_Tone::loop</a></div><div class="ttdeci">_BOOL loop</div><div class="ttdoc">リバーブのループフラグ </div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d88/sound_8h_source.html#l00175">sound.h:175</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="../../dir_cccf68db23ba25fb97e4e5b2069f9a17.html">h8sdk</a></li><li class="navelem"><a class="el" href="../../d9/d88/sound_8h.html">sound.h</a></li>
+    <li class="footer">2016年02月27日(土) 00時46分21秒作成 - H8SDK / 構成: 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.10 </li>
+  </ul>
+</div>
+</body>
+</html>

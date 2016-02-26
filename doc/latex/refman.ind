@@ -1,133 +1,1413 @@
 \begin{theindex}
 
-  \item {C\+T\+R\+L\+\_\+\+I\+N\+\_\+}
-    \subitem {lcd\+\_\+def.\+h}, \hyperpage{2}
-  \item {C\+T\+R\+L\+\_\+\+O\+U\+T\+\_\+}
-    \subitem {lcd\+\_\+def.\+h}, \hyperpage{2}
+  \item {\+\_\+\+A\+B\+R\+K}
+    \subitem {3694s.\+h}, \hyperpage{65}
+  \item {\+\_\+\+A\+D}
+    \subitem {3694s.\+h}, \hyperpage{65}
+  \item {\+\_\+\+B\+O\+O\+L}
+    \subitem {stddef.\+h}, \hyperpage{129}
+  \item {\+\_\+\+F\+A\+L\+S\+E}
+    \subitem {stddef.\+h}, \hyperpage{129}
+  \item {\+\_\+\+F\+L\+A\+S\+H}
+    \subitem {3694s.\+h}, \hyperpage{65}
+  \item {\+\_\+\+I\+E\+G\+R1}
+    \subitem {3694s.\+h}, \hyperpage{66}
+  \item {\+\_\+\+I\+E\+G\+R2}
+    \subitem {3694s.\+h}, \hyperpage{66}
+  \item {\+\_\+\+I\+E\+N\+R1}
+    \subitem {3694s.\+h}, \hyperpage{66}
+  \item {\+\_\+\+I\+I\+C2}
+    \subitem {3694s.\+h}, \hyperpage{65}
+  \item {\+\_\+\+I\+O}
+    \subitem {3694s.\+h}, \hyperpage{65}
+  \item {\+\_\+\+I\+R\+R1}
+    \subitem {3694s.\+h}, \hyperpage{66}
+  \item {\+\_\+\+I\+W\+P\+R}
+    \subitem {3694s.\+h}, \hyperpage{66}
+  \item {\+\_\+\+L\+V\+D}
+    \subitem {3694s.\+h}, \hyperpage{65}
+  \item {\+\_\+\+M\+S\+T\+C\+R1}
+    \subitem {3694s.\+h}, \hyperpage{66}
+  \item {\+\_\+\+S\+B\+Y\+T\+E}
+    \subitem {stddef.\+h}, \hyperpage{129}
+  \item {\+\_\+\+S\+C\+I3}
+    \subitem {3694s.\+h}, \hyperpage{65}
+  \item {\+\_\+\+S\+D\+W\+O\+R\+D}
+    \subitem {stddef.\+h}, \hyperpage{129}
+  \item {\+\_\+\+S\+I\+N\+T}
+    \subitem {stddef.\+h}, \hyperpage{129}
+  \item {\+\_\+\+S\+T\+D\+E\+R\+R}
+    \subitem {stdio.\+h}, \hyperpage{131}
+  \item {\+\_\+\+S\+T\+D\+I\+N}
+    \subitem {stdio.\+h}, \hyperpage{131}
+  \item {\+\_\+\+S\+T\+D\+O\+U\+T}
+    \subitem {stdio.\+h}, \hyperpage{131}
+  \item {\+\_\+\+S\+W\+O\+R\+D}
+    \subitem {stddef.\+h}, \hyperpage{129}
+  \item {\+\_\+\+S\+Y\+S\+C\+R1}
+    \subitem {3694s.\+h}, \hyperpage{65}
+  \item {\+\_\+\+S\+Y\+S\+C\+R2}
+    \subitem {3694s.\+h}, \hyperpage{65}
+  \item {\+\_\+\+T\+A}
+    \subitem {3694s.\+h}, \hyperpage{65}
+  \item {\+\_\+\+T\+R\+U\+E}
+    \subitem {stddef.\+h}, \hyperpage{129}
+  \item {\+\_\+\+T\+V}
+    \subitem {3694s.\+h}, \hyperpage{65}
+  \item {\+\_\+\+T\+W}
+    \subitem {3694s.\+h}, \hyperpage{65}
+  \item {\+\_\+\+U\+B\+Y\+T\+E}
+    \subitem {stddef.\+h}, \hyperpage{129}
+  \item {\+\_\+\+U\+D\+W\+O\+R\+D}
+    \subitem {stddef.\+h}, \hyperpage{129}
+  \item {\+\_\+\+U\+I\+N\+T}
+    \subitem {stddef.\+h}, \hyperpage{129}
+  \item {\+\_\+\+U\+W\+O\+R\+D}
+    \subitem {stddef.\+h}, \hyperpage{129}
+  \item {\+\_\+\+W\+D\+T}
+    \subitem {3694s.\+h}, \hyperpage{65}
+  \item {\+\_\+assert}
+    \subitem {assert.\+h}, \hyperpage{70}
+  \item {\+\_\+check\+\_\+sum}
+    \subitem {stdlib.\+h}, \hyperpage{134}
+  \item {\+\_\+dprintf}
+    \subitem {stdio.\+h}, \hyperpage{130}
+  \item {\+\_\+hash}
+    \subitem {stdlib.\+h}, \hyperpage{134}
+  \item {\+\_\+itoa}
+    \subitem {stdlib.\+h}, \hyperpage{134}
+  \item {\+\_\+memcpy}
+    \subitem {string.\+h}, \hyperpage{136}
+  \item {\+\_\+memset}
+    \subitem {string.\+h}, \hyperpage{136}
+  \item {\+\_\+msleep}
+    \subitem {stdlib.\+h}, \hyperpage{133}
+  \item {\+\_\+next\+\_\+ring}
+    \subitem {stdlib.\+h}, \hyperpage{133}
+  \item {\+\_\+offsetof}
+    \subitem {stddef.\+h}, \hyperpage{128}
+  \item {\+\_\+prev\+\_\+ring}
+    \subitem {stdlib.\+h}, \hyperpage{133}
+  \item {\+\_\+printf}
+    \subitem {stdio.\+h}, \hyperpage{131}
+  \item {\+\_\+rand}
+    \subitem {stdlib.\+h}, \hyperpage{134}
+  \item {\+\_\+sizeof\+\_\+array}
+    \subitem {stddef.\+h}, \hyperpage{128}
+  \item {\+\_\+srand}
+    \subitem {stdlib.\+h}, \hyperpage{135}
+  \item {\+\_\+st\+\_\+abrk}, \hyperpage{12}
+  \item {\+\_\+st\+\_\+abrk.\+C\+R}, \hyperpage{48}
+  \item {\+\_\+st\+\_\+abrk.\+C\+R.\+B\+I\+T}, \hyperpage{48}
+  \item {\+\_\+st\+\_\+abrk.\+S\+R}, \hyperpage{49}
+  \item {\+\_\+st\+\_\+abrk.\+S\+R.\+B\+I\+T}, \hyperpage{49}
+  \item {\+\_\+st\+\_\+ad}, \hyperpage{11}
+  \item {\+\_\+st\+\_\+ad.\+A\+D\+C\+R}, \hyperpage{45}
+  \item {\+\_\+st\+\_\+ad.\+A\+D\+C\+R.\+B\+I\+T}, \hyperpage{46}
+  \item {\+\_\+st\+\_\+ad.\+A\+D\+C\+S\+R}, \hyperpage{44}
+  \item {\+\_\+st\+\_\+ad.\+A\+D\+C\+S\+R.\+B\+I\+T}, \hyperpage{45}
+  \item {\+\_\+st\+\_\+flash}, \hyperpage{8}
+  \item {\+\_\+st\+\_\+flash.\+E\+B\+R1}, \hyperpage{36}
+  \item {\+\_\+st\+\_\+flash.\+E\+B\+R1.\+B\+I\+T}, \hyperpage{36}
+  \item {\+\_\+st\+\_\+flash.\+F\+E\+N\+R}, \hyperpage{37}
+  \item {\+\_\+st\+\_\+flash.\+F\+E\+N\+R.\+B\+I\+T}, \hyperpage{37}
+  \item {\+\_\+st\+\_\+flash.\+F\+L\+M\+C\+R1}, \hyperpage{33}
+  \item {\+\_\+st\+\_\+flash.\+F\+L\+M\+C\+R1.\+B\+I\+T}, 
+		\hyperpage{33}
+  \item {\+\_\+st\+\_\+flash.\+F\+L\+M\+C\+R2}, \hyperpage{34}
+  \item {\+\_\+st\+\_\+flash.\+F\+L\+M\+C\+R2.\+B\+I\+T}, 
+		\hyperpage{35}
+  \item {\+\_\+st\+\_\+flash.\+F\+L\+P\+W\+C\+R}, \hyperpage{35}
+  \item {\+\_\+st\+\_\+flash.\+F\+L\+P\+W\+C\+R.\+B\+I\+T}, 
+		\hyperpage{35}
+  \item {\+\_\+st\+\_\+iic2}, \hyperpage{6}
+  \item {\+\_\+st\+\_\+iic2.\+I\+C\+C\+R1}, \hyperpage{21}
+  \item {\+\_\+st\+\_\+iic2.\+I\+C\+C\+R1.\+B\+I\+T}, \hyperpage{21}
+  \item {\+\_\+st\+\_\+iic2.\+I\+C\+C\+R2}, \hyperpage{22}
+  \item {\+\_\+st\+\_\+iic2.\+I\+C\+C\+R2.\+B\+I\+T}, \hyperpage{22}
+  \item {\+\_\+st\+\_\+iic2.\+I\+C\+I\+E\+R}, \hyperpage{24}
+  \item {\+\_\+st\+\_\+iic2.\+I\+C\+I\+E\+R.\+B\+I\+T}, \hyperpage{25}
+  \item {\+\_\+st\+\_\+iic2.\+I\+C\+M\+R}, \hyperpage{23}
+  \item {\+\_\+st\+\_\+iic2.\+I\+C\+M\+R.\+B\+I\+T}, \hyperpage{24}
+  \item {\+\_\+st\+\_\+iic2.\+I\+C\+S\+R}, \hyperpage{25}
+  \item {\+\_\+st\+\_\+iic2.\+I\+C\+S\+R.\+B\+I\+T}, \hyperpage{26}
+  \item {\+\_\+st\+\_\+iic2.\+S\+A\+R}, \hyperpage{26}
+  \item {\+\_\+st\+\_\+iic2.\+S\+A\+R.\+B\+I\+T}, \hyperpage{27}
+  \item {\+\_\+st\+\_\+io}, \hyperpage{13}
+  \item {\+\_\+st\+\_\+io.\+P\+D\+R1}, \hyperpage{52}
+  \item {\+\_\+st\+\_\+io.\+P\+D\+R1.\+B\+I\+T}, \hyperpage{52}
+  \item {\+\_\+st\+\_\+io.\+P\+D\+R2}, \hyperpage{53}
+  \item {\+\_\+st\+\_\+io.\+P\+D\+R2.\+B\+I\+T}, \hyperpage{53}
+  \item {\+\_\+st\+\_\+io.\+P\+D\+R5}, \hyperpage{54}
+  \item {\+\_\+st\+\_\+io.\+P\+D\+R5.\+B\+I\+T}, \hyperpage{54}
+  \item {\+\_\+st\+\_\+io.\+P\+D\+R7}, \hyperpage{55}
+  \item {\+\_\+st\+\_\+io.\+P\+D\+R7.\+B\+I\+T}, \hyperpage{55}
+  \item {\+\_\+st\+\_\+io.\+P\+D\+R8}, \hyperpage{56}
+  \item {\+\_\+st\+\_\+io.\+P\+D\+R8.\+B\+I\+T}, \hyperpage{56}
+  \item {\+\_\+st\+\_\+io.\+P\+D\+R\+B}, \hyperpage{57}
+  \item {\+\_\+st\+\_\+io.\+P\+D\+R\+B.\+B\+I\+T}, \hyperpage{57}
+  \item {\+\_\+st\+\_\+io.\+P\+M\+R1}, \hyperpage{58}
+  \item {\+\_\+st\+\_\+io.\+P\+M\+R1.\+B\+I\+T}, \hyperpage{58}
+  \item {\+\_\+st\+\_\+io.\+P\+M\+R5}, \hyperpage{59}
+  \item {\+\_\+st\+\_\+io.\+P\+M\+R5.\+B\+I\+T}, \hyperpage{59}
+  \item {\+\_\+st\+\_\+io.\+P\+U\+C\+R1}, \hyperpage{50}
+  \item {\+\_\+st\+\_\+io.\+P\+U\+C\+R1.\+B\+I\+T}, \hyperpage{50}
+  \item {\+\_\+st\+\_\+io.\+P\+U\+C\+R5}, \hyperpage{51}
+  \item {\+\_\+st\+\_\+io.\+P\+U\+C\+R5.\+B\+I\+T}, \hyperpage{51}
+  \item {\+\_\+st\+\_\+lvd}, \hyperpage{6}
+  \item {\+\_\+st\+\_\+lvd.\+C\+R}, \hyperpage{19}
+  \item {\+\_\+st\+\_\+lvd.\+C\+R.\+B\+I\+T}, \hyperpage{19}
+  \item {\+\_\+st\+\_\+lvd.\+S\+R}, \hyperpage{20}
+  \item {\+\_\+st\+\_\+lvd.\+S\+R.\+B\+I\+T}, \hyperpage{21}
+  \item {\+\_\+st\+\_\+sci3}, \hyperpage{10}
+  \item {\+\_\+st\+\_\+sci3.\+S\+C\+R3}, \hyperpage{42}
+  \item {\+\_\+st\+\_\+sci3.\+S\+C\+R3.\+B\+I\+T}, \hyperpage{42}
+  \item {\+\_\+st\+\_\+sci3.\+S\+M\+R}, \hyperpage{41}
+  \item {\+\_\+st\+\_\+sci3.\+S\+M\+R.\+B\+I\+T}, \hyperpage{41}
+  \item {\+\_\+st\+\_\+sci3.\+S\+S\+R}, \hyperpage{43}
+  \item {\+\_\+st\+\_\+sci3.\+S\+S\+R.\+B\+I\+T}, \hyperpage{44}
+  \item {\+\_\+st\+\_\+ta}, \hyperpage{9}
+  \item {\+\_\+st\+\_\+ta.\+T\+M\+A}, \hyperpage{40}
+  \item {\+\_\+st\+\_\+ta.\+T\+M\+A.\+B\+I\+T}, \hyperpage{40}
+  \item {\+\_\+st\+\_\+tv}, \hyperpage{8}
+  \item {\+\_\+st\+\_\+tv.\+T\+C\+R\+V0}, \hyperpage{37}
+  \item {\+\_\+st\+\_\+tv.\+T\+C\+R\+V0.\+B\+I\+T}, \hyperpage{38}
+  \item {\+\_\+st\+\_\+tv.\+T\+C\+R\+V1}, \hyperpage{39}
+  \item {\+\_\+st\+\_\+tv.\+T\+C\+R\+V1.\+B\+I\+T}, \hyperpage{39}
+  \item {\+\_\+st\+\_\+tv.\+T\+C\+S\+R\+V}, \hyperpage{38}
+  \item {\+\_\+st\+\_\+tv.\+T\+C\+S\+R\+V.\+B\+I\+T}, \hyperpage{39}
+  \item {\+\_\+st\+\_\+tw}, \hyperpage{7}
+  \item {\+\_\+st\+\_\+tw.\+T\+C\+R\+W}, \hyperpage{28}
+  \item {\+\_\+st\+\_\+tw.\+T\+C\+R\+W.\+B\+I\+T}, \hyperpage{29}
+  \item {\+\_\+st\+\_\+tw.\+T\+I\+E\+R\+W}, \hyperpage{29}
+  \item {\+\_\+st\+\_\+tw.\+T\+I\+E\+R\+W.\+B\+I\+T}, \hyperpage{30}
+  \item {\+\_\+st\+\_\+tw.\+T\+I\+O\+R0}, \hyperpage{31}
+  \item {\+\_\+st\+\_\+tw.\+T\+I\+O\+R0.\+B\+I\+T}, \hyperpage{32}
+  \item {\+\_\+st\+\_\+tw.\+T\+I\+O\+R1}, \hyperpage{32}
+  \item {\+\_\+st\+\_\+tw.\+T\+I\+O\+R1.\+B\+I\+T}, \hyperpage{32}
+  \item {\+\_\+st\+\_\+tw.\+T\+M\+R\+W}, \hyperpage{27}
+  \item {\+\_\+st\+\_\+tw.\+T\+M\+R\+W.\+B\+I\+T}, \hyperpage{27}
+  \item {\+\_\+st\+\_\+tw.\+T\+S\+R\+W}, \hyperpage{30}
+  \item {\+\_\+st\+\_\+tw.\+T\+S\+R\+W.\+B\+I\+T}, \hyperpage{31}
+  \item {\+\_\+st\+\_\+wdt}, \hyperpage{11}
+  \item {\+\_\+st\+\_\+wdt.\+T\+C\+S\+R\+W\+D}, \hyperpage{46}
+  \item {\+\_\+st\+\_\+wdt.\+T\+C\+S\+R\+W\+D.\+B\+I\+T}, 
+		\hyperpage{46}
+  \item {\+\_\+st\+\_\+wdt.\+T\+M\+W\+D}, \hyperpage{47}
+  \item {\+\_\+st\+\_\+wdt.\+T\+M\+W\+D.\+B\+I\+T}, \hyperpage{48}
+  \item {\+\_\+strlen}
+    \subitem {string.\+h}, \hyperpage{135}
+  \item {\+\_\+un\+\_\+iegr1}, \hyperpage{15}
+  \item {\+\_\+un\+\_\+iegr1.\+B\+I\+T}, \hyperpage{61}
+  \item {\+\_\+un\+\_\+iegr2}, \hyperpage{16}
+  \item {\+\_\+un\+\_\+iegr2.\+B\+I\+T}, \hyperpage{61}
+  \item {\+\_\+un\+\_\+ienr1}, \hyperpage{16}
+  \item {\+\_\+un\+\_\+ienr1.\+B\+I\+T}, \hyperpage{62}
+  \item {\+\_\+un\+\_\+irr1}, \hyperpage{17}
+  \item {\+\_\+un\+\_\+irr1.\+B\+I\+T}, \hyperpage{63}
+  \item {\+\_\+un\+\_\+iwpr}, \hyperpage{18}
+  \item {\+\_\+un\+\_\+iwpr.\+B\+I\+T}, \hyperpage{63}
+  \item {\+\_\+un\+\_\+mstcr1}, \hyperpage{18}
+  \item {\+\_\+un\+\_\+mstcr1.\+B\+I\+T}, \hyperpage{64}
+  \item {\+\_\+un\+\_\+syscr1}, \hyperpage{14}
+  \item {\+\_\+un\+\_\+syscr1.\+B\+I\+T}, \hyperpage{60}
+  \item {\+\_\+un\+\_\+syscr2}, \hyperpage{14}
+  \item {\+\_\+un\+\_\+syscr2.\+B\+I\+T}, \hyperpage{60}
+  \item {\+\_\+usleep}
+    \subitem {stdlib.\+h}, \hyperpage{132}
+  \item {3694s.\+h}
+    \subitem {\+\_\+\+A\+B\+R\+K}, \hyperpage{65}
+    \subitem {\+\_\+\+A\+D}, \hyperpage{65}
+    \subitem {\+\_\+\+F\+L\+A\+S\+H}, \hyperpage{65}
+    \subitem {\+\_\+\+I\+E\+G\+R1}, \hyperpage{66}
+    \subitem {\+\_\+\+I\+E\+G\+R2}, \hyperpage{66}
+    \subitem {\+\_\+\+I\+E\+N\+R1}, \hyperpage{66}
+    \subitem {\+\_\+\+I\+I\+C2}, \hyperpage{65}
+    \subitem {\+\_\+\+I\+O}, \hyperpage{65}
+    \subitem {\+\_\+\+I\+R\+R1}, \hyperpage{66}
+    \subitem {\+\_\+\+I\+W\+P\+R}, \hyperpage{66}
+    \subitem {\+\_\+\+L\+V\+D}, \hyperpage{65}
+    \subitem {\+\_\+\+M\+S\+T\+C\+R1}, \hyperpage{66}
+    \subitem {\+\_\+\+S\+C\+I3}, \hyperpage{65}
+    \subitem {\+\_\+\+S\+Y\+S\+C\+R1}, \hyperpage{65}
+    \subitem {\+\_\+\+S\+Y\+S\+C\+R2}, \hyperpage{65}
+    \subitem {\+\_\+\+T\+A}, \hyperpage{65}
+    \subitem {\+\_\+\+T\+V}, \hyperpage{65}
+    \subitem {\+\_\+\+T\+W}, \hyperpage{65}
+    \subitem {\+\_\+\+W\+D\+T}, \hyperpage{65}
 
   \indexspace
 
-  \item {D\+A\+T\+A\+\_\+\+I\+N\+\_\+}
-    \subitem {lcd\+\_\+def.\+h}, \hyperpage{2}
-  \item {D\+A\+T\+A\+\_\+\+O\+U\+T\+\_\+}
-    \subitem {lcd\+\_\+def.\+h}, \hyperpage{2}
+  \item {A\+D\+C\+\_\+\+A\+N0}
+    \subitem {adc.\+h}, \hyperpage{67}
+  \item {A\+D\+C\+\_\+\+A\+N1}
+    \subitem {adc.\+h}, \hyperpage{67}
+  \item {A\+D\+C\+\_\+\+A\+N2}
+    \subitem {adc.\+h}, \hyperpage{67}
+  \item {A\+D\+C\+\_\+\+A\+N3}
+    \subitem {adc.\+h}, \hyperpage{67}
+  \item {A\+D\+C\+\_\+\+Channel}
+    \subitem {adc.\+h}, \hyperpage{67}
+  \item {A\+D\+C\+\_\+\+Mode}
+    \subitem {adc.\+h}, \hyperpage{67}
+  \item {A\+D\+C\+\_\+\+N\+O\+R\+M\+A\+L}
+    \subitem {adc.\+h}, \hyperpage{67}
+  \item {A\+D\+C\+\_\+\+N\+U\+M\+\_\+\+O\+F\+\_\+\+C\+H\+A\+N\+N\+E\+L}
+    \subitem {adc.\+h}, \hyperpage{67}
+  \item {A\+D\+C\+\_\+\+N\+U\+M\+\_\+\+O\+F\+\_\+\+M\+O\+D\+E}
+    \subitem {adc.\+h}, \hyperpage{67}
+  \item {A\+D\+C\+\_\+\+S\+C\+A\+N}
+    \subitem {adc.\+h}, \hyperpage{67}
+  \item {A\+D\+C\+\_\+disable}
+    \subitem {adc.\+h}, \hyperpage{68}
+  \item {A\+D\+C\+\_\+enable}
+    \subitem {adc.\+h}, \hyperpage{68}
+  \item {A\+D\+C\+\_\+get}
+    \subitem {adc.\+h}, \hyperpage{69}
+  \item {A\+D\+C\+\_\+init}
+    \subitem {adc.\+h}, \hyperpage{68}
+  \item {A\+D\+C\+\_\+start}
+    \subitem {adc.\+h}, \hyperpage{68}
+  \item {A\+D\+C\+\_\+stop}
+    \subitem {adc.\+h}, \hyperpage{69}
+  \item {adc.\+h}
+    \subitem {A\+D\+C\+\_\+\+A\+N0}, \hyperpage{67}
+    \subitem {A\+D\+C\+\_\+\+A\+N1}, \hyperpage{67}
+    \subitem {A\+D\+C\+\_\+\+A\+N2}, \hyperpage{67}
+    \subitem {A\+D\+C\+\_\+\+A\+N3}, \hyperpage{67}
+    \subitem {A\+D\+C\+\_\+\+Channel}, \hyperpage{67}
+    \subitem {A\+D\+C\+\_\+\+Mode}, \hyperpage{67}
+    \subitem {A\+D\+C\+\_\+\+N\+O\+R\+M\+A\+L}, \hyperpage{67}
+    \subitem {A\+D\+C\+\_\+\+N\+U\+M\+\_\+\+O\+F\+\_\+\+C\+H\+A\+N\+N\+E\+L}, 
+		\hyperpage{67}
+    \subitem {A\+D\+C\+\_\+\+N\+U\+M\+\_\+\+O\+F\+\_\+\+M\+O\+D\+E}, 
+		\hyperpage{67}
+    \subitem {A\+D\+C\+\_\+\+S\+C\+A\+N}, \hyperpage{67}
+    \subitem {A\+D\+C\+\_\+disable}, \hyperpage{68}
+    \subitem {A\+D\+C\+\_\+enable}, \hyperpage{68}
+    \subitem {A\+D\+C\+\_\+get}, \hyperpage{69}
+    \subitem {A\+D\+C\+\_\+init}, \hyperpage{68}
+    \subitem {A\+D\+C\+\_\+start}, \hyperpage{68}
+    \subitem {A\+D\+C\+\_\+stop}, \hyperpage{69}
+  \item {assert.\+h}
+    \subitem {\+\_\+assert}, \hyperpage{70}
 
   \indexspace
 
-  \item {F\+L\+G\+\_\+\+B\+U\+S\+Y\+\_\+}
-    \subitem {lcd\+\_\+def.\+h}, \hyperpage{2}
-  \item {F\+L\+G\+\_\+\+C\+G\+R\+A\+M\+\_\+}
-    \subitem {lcd\+\_\+def.\+h}, \hyperpage{2}
-  \item {F\+L\+G\+\_\+\+D\+D\+R\+A\+M\+\_\+}
-    \subitem {lcd\+\_\+def.\+h}, \hyperpage{2}
-  \item {F\+L\+G\+\_\+\+R\+E\+A\+D\+\_\+}
-    \subitem {lcd\+\_\+def.\+h}, \hyperpage{2}
-  \item {F\+L\+G\+\_\+\+W\+R\+I\+T\+E\+\_\+}
-    \subitem {lcd\+\_\+def.\+h}, \hyperpage{2}
+  \item {E\+N\+V\+E\+L\+O\+P\+E\+\_\+drum}
+    \subitem {envelope.\+h}, \hyperpage{72}
+  \item {E\+N\+V\+E\+L\+O\+P\+E\+\_\+flute}
+    \subitem {envelope.\+h}, \hyperpage{72}
+  \item {E\+N\+V\+E\+L\+O\+P\+E\+\_\+flute\+\_\+reverb}
+    \subitem {envelope.\+h}, \hyperpage{72}
+  \item {E\+N\+V\+E\+L\+O\+P\+E\+\_\+harp}
+    \subitem {envelope.\+h}, \hyperpage{72}
+  \item {E\+N\+V\+E\+L\+O\+P\+E\+\_\+harp\+\_\+reverb}
+    \subitem {envelope.\+h}, \hyperpage{72}
+  \item {E\+N\+V\+E\+L\+O\+P\+E\+\_\+na}
+    \subitem {envelope.\+h}, \hyperpage{71}
+  \item {E\+N\+V\+E\+L\+O\+P\+E\+\_\+piano}
+    \subitem {envelope.\+h}, \hyperpage{71}
+  \item {E\+N\+V\+E\+L\+O\+P\+E\+\_\+piano\+\_\+reverb}
+    \subitem {envelope.\+h}, \hyperpage{71}
+  \item {E\+N\+V\+E\+L\+O\+P\+E\+\_\+trumpet}
+    \subitem {envelope.\+h}, \hyperpage{72}
+  \item {E\+N\+V\+E\+L\+O\+P\+E\+\_\+trumpet\+\_\+reverb}
+    \subitem {envelope.\+h}, \hyperpage{72}
+  \item {envelope.\+h}
+    \subitem {E\+N\+V\+E\+L\+O\+P\+E\+\_\+drum}, \hyperpage{72}
+    \subitem {E\+N\+V\+E\+L\+O\+P\+E\+\_\+flute}, \hyperpage{72}
+    \subitem {E\+N\+V\+E\+L\+O\+P\+E\+\_\+flute\+\_\+reverb}, 
+		\hyperpage{72}
+    \subitem {E\+N\+V\+E\+L\+O\+P\+E\+\_\+harp}, \hyperpage{72}
+    \subitem {E\+N\+V\+E\+L\+O\+P\+E\+\_\+harp\+\_\+reverb}, 
+		\hyperpage{72}
+    \subitem {E\+N\+V\+E\+L\+O\+P\+E\+\_\+na}, \hyperpage{71}
+    \subitem {E\+N\+V\+E\+L\+O\+P\+E\+\_\+piano}, \hyperpage{71}
+    \subitem {E\+N\+V\+E\+L\+O\+P\+E\+\_\+piano\+\_\+reverb}, 
+		\hyperpage{71}
+    \subitem {E\+N\+V\+E\+L\+O\+P\+E\+\_\+trumpet}, \hyperpage{72}
+    \subitem {E\+N\+V\+E\+L\+O\+P\+E\+\_\+trumpet\+\_\+reverb}, 
+		\hyperpage{72}
 
   \indexspace
 
-  \item {lcd\+\_\+def.\+h}
-    \subitem {C\+T\+R\+L\+\_\+\+I\+N\+\_\+}, \hyperpage{2}
-    \subitem {C\+T\+R\+L\+\_\+\+O\+U\+T\+\_\+}, \hyperpage{2}
-    \subitem {D\+A\+T\+A\+\_\+\+I\+N\+\_\+}, \hyperpage{2}
-    \subitem {D\+A\+T\+A\+\_\+\+O\+U\+T\+\_\+}, \hyperpage{2}
-    \subitem {F\+L\+G\+\_\+\+B\+U\+S\+Y\+\_\+}, \hyperpage{2}
-    \subitem {F\+L\+G\+\_\+\+C\+G\+R\+A\+M\+\_\+}, \hyperpage{2}
-    \subitem {F\+L\+G\+\_\+\+D\+D\+R\+A\+M\+\_\+}, \hyperpage{2}
-    \subitem {F\+L\+G\+\_\+\+R\+E\+A\+D\+\_\+}, \hyperpage{2}
-    \subitem {F\+L\+G\+\_\+\+W\+R\+I\+T\+E\+\_\+}, \hyperpage{2}
-    \subitem {R\+E\+G\+\_\+\+D\+A\+T\+A\+\_\+}, \hyperpage{2}
-    \subitem {R\+E\+G\+\_\+\+E\+\_\+}, \hyperpage{2}
-    \subitem {R\+E\+G\+\_\+\+R\+S\+\_\+}, \hyperpage{2}
-    \subitem {R\+E\+G\+\_\+\+R\+W\+\_\+}, \hyperpage{2}
-    \subitem {Registor\+\_\+}, \hyperpage{2}
-    \subitem {S\+Y\+M\+\_\+\+D\+A\+T\+A\+\_\+}, \hyperpage{2}
-    \subitem {S\+Y\+M\+\_\+\+I\+N\+S\+T\+\_\+}, \hyperpage{2}
+  \item {I\+F\+S\+T\+U\+B\+\_\+\+Class}, \hyperpage{73}
+  \item {I\+F\+S\+T\+U\+B\+\_\+\+N\+U\+M\+\_\+\+O\+F\+\_\+\+T\+Y\+P\+E}
+    \subitem {ifstub.\+h}, \hyperpage{75}
+  \item {I\+F\+S\+T\+U\+B\+\_\+\+Read\+Stream}
+    \subitem {ifstub.\+h}, \hyperpage{75}
+  \item {I\+F\+S\+T\+U\+B\+\_\+\+S\+C\+I}
+    \subitem {ifstub.\+h}, \hyperpage{75}
+  \item {I\+F\+S\+T\+U\+B\+\_\+\+Type}
+    \subitem {ifstub.\+h}, \hyperpage{75}
+  \item {I\+F\+S\+T\+U\+B\+\_\+\+Write\+Stream}
+    \subitem {ifstub.\+h}, \hyperpage{74}
+  \item {I\+F\+S\+T\+U\+B\+\_\+get\+Instance}
+    \subitem {ifstub.\+h}, \hyperpage{75}
+  \item {I\+O\+C\+T\+L\+\_\+\+N\+U\+M\+\_\+\+O\+F\+\_\+\+R\+E\+G}
+    \subitem {ioctl.\+h}, \hyperpage{77}
+  \item {I\+O\+C\+T\+L\+\_\+\+R\+E\+G\+\_\+\+P\+C\+R1}
+    \subitem {ioctl.\+h}, \hyperpage{77}
+  \item {I\+O\+C\+T\+L\+\_\+\+R\+E\+G\+\_\+\+P\+C\+R2}
+    \subitem {ioctl.\+h}, \hyperpage{77}
+  \item {I\+O\+C\+T\+L\+\_\+\+R\+E\+G\+\_\+\+P\+C\+R5}
+    \subitem {ioctl.\+h}, \hyperpage{77}
+  \item {I\+O\+C\+T\+L\+\_\+\+R\+E\+G\+\_\+\+P\+C\+R7}
+    \subitem {ioctl.\+h}, \hyperpage{77}
+  \item {I\+O\+C\+T\+L\+\_\+\+R\+E\+G\+\_\+\+P\+C\+R8}
+    \subitem {ioctl.\+h}, \hyperpage{77}
+  \item {I\+O\+C\+T\+L\+\_\+\+Reg}
+    \subitem {ioctl.\+h}, \hyperpage{77}
+  \item {I\+O\+C\+T\+L\+\_\+get}
+    \subitem {ioctl.\+h}, \hyperpage{77}
+  \item {I\+O\+C\+T\+L\+\_\+init}
+    \subitem {ioctl.\+h}, \hyperpage{77}
+  \item {I\+O\+C\+T\+L\+\_\+set}
+    \subitem {ioctl.\+h}, \hyperpage{77}
+  \item {ifstub.\+h}
+    \subitem {I\+F\+S\+T\+U\+B\+\_\+\+N\+U\+M\+\_\+\+O\+F\+\_\+\+T\+Y\+P\+E}, 
+		\hyperpage{75}
+    \subitem {I\+F\+S\+T\+U\+B\+\_\+\+Read\+Stream}, \hyperpage{75}
+    \subitem {I\+F\+S\+T\+U\+B\+\_\+\+S\+C\+I}, \hyperpage{75}
+    \subitem {I\+F\+S\+T\+U\+B\+\_\+\+Type}, \hyperpage{75}
+    \subitem {I\+F\+S\+T\+U\+B\+\_\+\+Write\+Stream}, \hyperpage{74}
+    \subitem {I\+F\+S\+T\+U\+B\+\_\+get\+Instance}, \hyperpage{75}
+  \item {include/h8sdk/3694s.\+h}, \hyperpage{1}
+  \item {include/h8sdk/adc.\+h}, \hyperpage{66}
+  \item {include/h8sdk/assert.\+h}, \hyperpage{69}
+  \item {include/h8sdk/envelope.\+h}, \hyperpage{70}
+  \item {include/h8sdk/ifstub.\+h}, \hyperpage{72}
+  \item {include/h8sdk/ioctl.\+h}, \hyperpage{75}
+  \item {include/h8sdk/kbd\+\_\+jp106.\+h}, \hyperpage{78}
+  \item {include/h8sdk/lcd.\+h}, \hyperpage{82}
+  \item {include/h8sdk/led.\+h}, \hyperpage{86}
+  \item {include/h8sdk/music.\+h}, \hyperpage{88}
+  \item {include/h8sdk/ps2.\+h}, \hyperpage{99}
+  \item {include/h8sdk/push\+\_\+switch.\+h}, \hyperpage{100}
+  \item {include/h8sdk/sci.\+h}, \hyperpage{103}
+  \item {include/h8sdk/sound.\+h}, \hyperpage{106}
+  \item {include/h8sdk/ssrp.\+h}, \hyperpage{117}
+  \item {include/h8sdk/ssrp\+\_\+skel.\+h}, \hyperpage{126}
+  \item {include/h8sdk/stddef.\+h}, \hyperpage{127}
+  \item {include/h8sdk/stdio.\+h}, \hyperpage{129}
+  \item {include/h8sdk/stdlib.\+h}, \hyperpage{131}
+  \item {include/h8sdk/string.\+h}, \hyperpage{135}
+  \item {include/h8sdk/unit\+\_\+test.\+h}, \hyperpage{136}
+  \item {ioctl.\+h}
+    \subitem {I\+O\+C\+T\+L\+\_\+\+N\+U\+M\+\_\+\+O\+F\+\_\+\+R\+E\+G}, 
+		\hyperpage{77}
+    \subitem {I\+O\+C\+T\+L\+\_\+\+R\+E\+G\+\_\+\+P\+C\+R1}, 
+		\hyperpage{77}
+    \subitem {I\+O\+C\+T\+L\+\_\+\+R\+E\+G\+\_\+\+P\+C\+R2}, 
+		\hyperpage{77}
+    \subitem {I\+O\+C\+T\+L\+\_\+\+R\+E\+G\+\_\+\+P\+C\+R5}, 
+		\hyperpage{77}
+    \subitem {I\+O\+C\+T\+L\+\_\+\+R\+E\+G\+\_\+\+P\+C\+R7}, 
+		\hyperpage{77}
+    \subitem {I\+O\+C\+T\+L\+\_\+\+R\+E\+G\+\_\+\+P\+C\+R8}, 
+		\hyperpage{77}
+    \subitem {I\+O\+C\+T\+L\+\_\+\+Reg}, \hyperpage{77}
+    \subitem {I\+O\+C\+T\+L\+\_\+get}, \hyperpage{77}
+    \subitem {I\+O\+C\+T\+L\+\_\+init}, \hyperpage{77}
+    \subitem {I\+O\+C\+T\+L\+\_\+set}, \hyperpage{77}
 
   \indexspace
 
-  \item {music\+\_\+def.\+h}
-    \subitem {N\+O\+T\+E\+\_\+}, \hyperpage{3}
-    \subitem {P\+A\+R\+T\+\_\+}, \hyperpage{3}
+  \item {K\+B\+D\+\_\+\+J\+P106\+\_\+0}
+    \subitem {kbd\+\_\+jp106.\+h}, \hyperpage{80}
+  \item {K\+B\+D\+\_\+\+J\+P106\+\_\+1}
+    \subitem {kbd\+\_\+jp106.\+h}, \hyperpage{80}
+  \item {K\+B\+D\+\_\+\+J\+P106\+\_\+2}
+    \subitem {kbd\+\_\+jp106.\+h}, \hyperpage{80}
+  \item {K\+B\+D\+\_\+\+J\+P106\+\_\+3}
+    \subitem {kbd\+\_\+jp106.\+h}, \hyperpage{80}
+  \item {K\+B\+D\+\_\+\+J\+P106\+\_\+4}
+    \subitem {kbd\+\_\+jp106.\+h}, \hyperpage{80}
+  \item {K\+B\+D\+\_\+\+J\+P106\+\_\+5}
+    \subitem {kbd\+\_\+jp106.\+h}, \hyperpage{80}
+  \item {K\+B\+D\+\_\+\+J\+P106\+\_\+6}
+    \subitem {kbd\+\_\+jp106.\+h}, \hyperpage{80}
+  \item {K\+B\+D\+\_\+\+J\+P106\+\_\+7}
+    \subitem {kbd\+\_\+jp106.\+h}, \hyperpage{80}
+  \item {K\+B\+D\+\_\+\+J\+P106\+\_\+8}
+    \subitem {kbd\+\_\+jp106.\+h}, \hyperpage{80}
+  \item {K\+B\+D\+\_\+\+J\+P106\+\_\+9}
+    \subitem {kbd\+\_\+jp106.\+h}, \hyperpage{80}
+  \item {K\+B\+D\+\_\+\+J\+P106\+\_\+\+A}
+    \subitem {kbd\+\_\+jp106.\+h}, \hyperpage{81}
+  \item {K\+B\+D\+\_\+\+J\+P106\+\_\+\+A\+L\+T}
+    \subitem {kbd\+\_\+jp106.\+h}, \hyperpage{82}
+  \item {K\+B\+D\+\_\+\+J\+P106\+\_\+\+A\+T}
+    \subitem {kbd\+\_\+jp106.\+h}, \hyperpage{81}
+  \item {K\+B\+D\+\_\+\+J\+P106\+\_\+\+B}
+    \subitem {kbd\+\_\+jp106.\+h}, \hyperpage{82}
+  \item {K\+B\+D\+\_\+\+J\+P106\+\_\+\+B\+A\+C\+K\+S\+L\+A\+S\+H}
+    \subitem {kbd\+\_\+jp106.\+h}, \hyperpage{82}
+  \item {K\+B\+D\+\_\+\+J\+P106\+\_\+\+B\+R\+E\+A\+K}
+    \subitem {kbd\+\_\+jp106.\+h}, \hyperpage{79}
+  \item {K\+B\+D\+\_\+\+J\+P106\+\_\+\+B\+S}
+    \subitem {kbd\+\_\+jp106.\+h}, \hyperpage{80}
+  \item {K\+B\+D\+\_\+\+J\+P106\+\_\+\+C}
+    \subitem {kbd\+\_\+jp106.\+h}, \hyperpage{82}
+  \item {K\+B\+D\+\_\+\+J\+P106\+\_\+\+C\+A\+P\+S\+L\+O\+C\+K}
+    \subitem {kbd\+\_\+jp106.\+h}, \hyperpage{81}
+  \item {K\+B\+D\+\_\+\+J\+P106\+\_\+\+C\+O\+L\+O\+N}
+    \subitem {kbd\+\_\+jp106.\+h}, \hyperpage{81}
+  \item {K\+B\+D\+\_\+\+J\+P106\+\_\+\+C\+O\+M\+M\+A}
+    \subitem {kbd\+\_\+jp106.\+h}, \hyperpage{82}
+  \item {K\+B\+D\+\_\+\+J\+P106\+\_\+\+C\+T\+R\+L}
+    \subitem {kbd\+\_\+jp106.\+h}, \hyperpage{82}
+  \item {K\+B\+D\+\_\+\+J\+P106\+\_\+\+D}
+    \subitem {kbd\+\_\+jp106.\+h}, \hyperpage{81}
+  \item {K\+B\+D\+\_\+\+J\+P106\+\_\+\+E}
+    \subitem {kbd\+\_\+jp106.\+h}, \hyperpage{81}
+  \item {K\+B\+D\+\_\+\+J\+P106\+\_\+\+E\+N}
+    \subitem {kbd\+\_\+jp106.\+h}, \hyperpage{80}
+  \item {K\+B\+D\+\_\+\+J\+P106\+\_\+\+E\+N\+T\+E\+R}
+    \subitem {kbd\+\_\+jp106.\+h}, \hyperpage{81}
+  \item {K\+B\+D\+\_\+\+J\+P106\+\_\+\+E\+S\+C}
+    \subitem {kbd\+\_\+jp106.\+h}, \hyperpage{79}
+  \item {K\+B\+D\+\_\+\+J\+P106\+\_\+\+F}
+    \subitem {kbd\+\_\+jp106.\+h}, \hyperpage{81}
+  \item {K\+B\+D\+\_\+\+J\+P106\+\_\+\+F1}
+    \subitem {kbd\+\_\+jp106.\+h}, \hyperpage{79}
+  \item {K\+B\+D\+\_\+\+J\+P106\+\_\+\+F10}
+    \subitem {kbd\+\_\+jp106.\+h}, \hyperpage{80}
+  \item {K\+B\+D\+\_\+\+J\+P106\+\_\+\+F11}
+    \subitem {kbd\+\_\+jp106.\+h}, \hyperpage{80}
+  \item {K\+B\+D\+\_\+\+J\+P106\+\_\+\+F12}
+    \subitem {kbd\+\_\+jp106.\+h}, \hyperpage{80}
+  \item {K\+B\+D\+\_\+\+J\+P106\+\_\+\+F2}
+    \subitem {kbd\+\_\+jp106.\+h}, \hyperpage{80}
+  \item {K\+B\+D\+\_\+\+J\+P106\+\_\+\+F3}
+    \subitem {kbd\+\_\+jp106.\+h}, \hyperpage{80}
+  \item {K\+B\+D\+\_\+\+J\+P106\+\_\+\+F4}
+    \subitem {kbd\+\_\+jp106.\+h}, \hyperpage{80}
+  \item {K\+B\+D\+\_\+\+J\+P106\+\_\+\+F5}
+    \subitem {kbd\+\_\+jp106.\+h}, \hyperpage{80}
+  \item {K\+B\+D\+\_\+\+J\+P106\+\_\+\+F6}
+    \subitem {kbd\+\_\+jp106.\+h}, \hyperpage{80}
+  \item {K\+B\+D\+\_\+\+J\+P106\+\_\+\+F7}
+    \subitem {kbd\+\_\+jp106.\+h}, \hyperpage{80}
+  \item {K\+B\+D\+\_\+\+J\+P106\+\_\+\+F8}
+    \subitem {kbd\+\_\+jp106.\+h}, \hyperpage{80}
+  \item {K\+B\+D\+\_\+\+J\+P106\+\_\+\+F9}
+    \subitem {kbd\+\_\+jp106.\+h}, \hyperpage{80}
+  \item {K\+B\+D\+\_\+\+J\+P106\+\_\+\+G}
+    \subitem {kbd\+\_\+jp106.\+h}, \hyperpage{81}
+  \item {K\+B\+D\+\_\+\+J\+P106\+\_\+\+H}
+    \subitem {kbd\+\_\+jp106.\+h}, \hyperpage{81}
+  \item {K\+B\+D\+\_\+\+J\+P106\+\_\+\+H\+A\+N\+K\+A\+K\+U}
+    \subitem {kbd\+\_\+jp106.\+h}, \hyperpage{80}
+  \item {K\+B\+D\+\_\+\+J\+P106\+\_\+\+H\+A\+T}
+    \subitem {kbd\+\_\+jp106.\+h}, \hyperpage{80}
+  \item {K\+B\+D\+\_\+\+J\+P106\+\_\+\+H\+E\+N\+K\+A\+N}
+    \subitem {kbd\+\_\+jp106.\+h}, \hyperpage{82}
+  \item {K\+B\+D\+\_\+\+J\+P106\+\_\+\+I}
+    \subitem {kbd\+\_\+jp106.\+h}, \hyperpage{81}
+  \item {K\+B\+D\+\_\+\+J\+P106\+\_\+\+J}
+    \subitem {kbd\+\_\+jp106.\+h}, \hyperpage{81}
+  \item {K\+B\+D\+\_\+\+J\+P106\+\_\+\+K}
+    \subitem {kbd\+\_\+jp106.\+h}, \hyperpage{81}
+  \item {K\+B\+D\+\_\+\+J\+P106\+\_\+\+K\+A\+N\+A}
+    \subitem {kbd\+\_\+jp106.\+h}, \hyperpage{82}
+  \item {K\+B\+D\+\_\+\+J\+P106\+\_\+\+L}
+    \subitem {kbd\+\_\+jp106.\+h}, \hyperpage{81}
+  \item {K\+B\+D\+\_\+\+J\+P106\+\_\+\+L\+B\+R\+A\+C\+K\+E\+T}
+    \subitem {kbd\+\_\+jp106.\+h}, \hyperpage{81}
+  \item {K\+B\+D\+\_\+\+J\+P106\+\_\+\+L\+S\+H\+I\+F\+T}
+    \subitem {kbd\+\_\+jp106.\+h}, \hyperpage{81}
+  \item {K\+B\+D\+\_\+\+J\+P106\+\_\+\+M}
+    \subitem {kbd\+\_\+jp106.\+h}, \hyperpage{82}
+  \item {K\+B\+D\+\_\+\+J\+P106\+\_\+\+M\+I\+N\+U\+S}
+    \subitem {kbd\+\_\+jp106.\+h}, \hyperpage{80}
+  \item {K\+B\+D\+\_\+\+J\+P106\+\_\+\+M\+U\+H\+E\+N\+K\+A\+N}
+    \subitem {kbd\+\_\+jp106.\+h}, \hyperpage{82}
+  \item {K\+B\+D\+\_\+\+J\+P106\+\_\+\+N}
+    \subitem {kbd\+\_\+jp106.\+h}, \hyperpage{82}
+  \item {K\+B\+D\+\_\+\+J\+P106\+\_\+\+N\+A}
+    \subitem {kbd\+\_\+jp106.\+h}, \hyperpage{79}
+  \item {K\+B\+D\+\_\+\+J\+P106\+\_\+\+O}
+    \subitem {kbd\+\_\+jp106.\+h}, \hyperpage{81}
+  \item {K\+B\+D\+\_\+\+J\+P106\+\_\+\+P}
+    \subitem {kbd\+\_\+jp106.\+h}, \hyperpage{81}
+  \item {K\+B\+D\+\_\+\+J\+P106\+\_\+\+P\+E\+R\+I\+O\+D}
+    \subitem {kbd\+\_\+jp106.\+h}, \hyperpage{82}
+  \item {K\+B\+D\+\_\+\+J\+P106\+\_\+\+Q}
+    \subitem {kbd\+\_\+jp106.\+h}, \hyperpage{80, 81}
+  \item {K\+B\+D\+\_\+\+J\+P106\+\_\+\+R}
+    \subitem {kbd\+\_\+jp106.\+h}, \hyperpage{81}
+  \item {K\+B\+D\+\_\+\+J\+P106\+\_\+\+R\+B\+R\+A\+C\+K\+E\+T}
+    \subitem {kbd\+\_\+jp106.\+h}, \hyperpage{81}
+  \item {K\+B\+D\+\_\+\+J\+P106\+\_\+\+R\+S\+H\+I\+F\+T}
+    \subitem {kbd\+\_\+jp106.\+h}, \hyperpage{82}
+  \item {K\+B\+D\+\_\+\+J\+P106\+\_\+\+S}
+    \subitem {kbd\+\_\+jp106.\+h}, \hyperpage{81}
+  \item {K\+B\+D\+\_\+\+J\+P106\+\_\+\+S\+E\+M\+I\+C\+O\+L\+O\+N}
+    \subitem {kbd\+\_\+jp106.\+h}, \hyperpage{81}
+  \item {K\+B\+D\+\_\+\+J\+P106\+\_\+\+S\+L\+A\+S\+H}
+    \subitem {kbd\+\_\+jp106.\+h}, \hyperpage{82}
+  \item {K\+B\+D\+\_\+\+J\+P106\+\_\+\+S\+P\+A\+C\+E}
+    \subitem {kbd\+\_\+jp106.\+h}, \hyperpage{82}
+  \item {K\+B\+D\+\_\+\+J\+P106\+\_\+\+T}
+    \subitem {kbd\+\_\+jp106.\+h}, \hyperpage{81}
+  \item {K\+B\+D\+\_\+\+J\+P106\+\_\+\+T\+A\+B}
+    \subitem {kbd\+\_\+jp106.\+h}, \hyperpage{80}
+  \item {K\+B\+D\+\_\+\+J\+P106\+\_\+\+U}
+    \subitem {kbd\+\_\+jp106.\+h}, \hyperpage{81}
+  \item {K\+B\+D\+\_\+\+J\+P106\+\_\+\+V}
+    \subitem {kbd\+\_\+jp106.\+h}, \hyperpage{82}
+  \item {K\+B\+D\+\_\+\+J\+P106\+\_\+\+W}
+    \subitem {kbd\+\_\+jp106.\+h}, \hyperpage{80}
+  \item {K\+B\+D\+\_\+\+J\+P106\+\_\+\+X}
+    \subitem {kbd\+\_\+jp106.\+h}, \hyperpage{81}
+  \item {K\+B\+D\+\_\+\+J\+P106\+\_\+\+Y}
+    \subitem {kbd\+\_\+jp106.\+h}, \hyperpage{81}
+  \item {K\+B\+D\+\_\+\+J\+P106\+\_\+\+Z}
+    \subitem {kbd\+\_\+jp106.\+h}, \hyperpage{81}
+  \item {kbd\+\_\+jp106.\+h}
+    \subitem {K\+B\+D\+\_\+\+J\+P106\+\_\+0}, \hyperpage{80}
+    \subitem {K\+B\+D\+\_\+\+J\+P106\+\_\+1}, \hyperpage{80}
+    \subitem {K\+B\+D\+\_\+\+J\+P106\+\_\+2}, \hyperpage{80}
+    \subitem {K\+B\+D\+\_\+\+J\+P106\+\_\+3}, \hyperpage{80}
+    \subitem {K\+B\+D\+\_\+\+J\+P106\+\_\+4}, \hyperpage{80}
+    \subitem {K\+B\+D\+\_\+\+J\+P106\+\_\+5}, \hyperpage{80}
+    \subitem {K\+B\+D\+\_\+\+J\+P106\+\_\+6}, \hyperpage{80}
+    \subitem {K\+B\+D\+\_\+\+J\+P106\+\_\+7}, \hyperpage{80}
+    \subitem {K\+B\+D\+\_\+\+J\+P106\+\_\+8}, \hyperpage{80}
+    \subitem {K\+B\+D\+\_\+\+J\+P106\+\_\+9}, \hyperpage{80}
+    \subitem {K\+B\+D\+\_\+\+J\+P106\+\_\+\+A}, \hyperpage{81}
+    \subitem {K\+B\+D\+\_\+\+J\+P106\+\_\+\+A\+L\+T}, \hyperpage{82}
+    \subitem {K\+B\+D\+\_\+\+J\+P106\+\_\+\+A\+T}, \hyperpage{81}
+    \subitem {K\+B\+D\+\_\+\+J\+P106\+\_\+\+B}, \hyperpage{82}
+    \subitem {K\+B\+D\+\_\+\+J\+P106\+\_\+\+B\+A\+C\+K\+S\+L\+A\+S\+H}, 
+		\hyperpage{82}
+    \subitem {K\+B\+D\+\_\+\+J\+P106\+\_\+\+B\+R\+E\+A\+K}, 
+		\hyperpage{79}
+    \subitem {K\+B\+D\+\_\+\+J\+P106\+\_\+\+B\+S}, \hyperpage{80}
+    \subitem {K\+B\+D\+\_\+\+J\+P106\+\_\+\+C}, \hyperpage{82}
+    \subitem {K\+B\+D\+\_\+\+J\+P106\+\_\+\+C\+A\+P\+S\+L\+O\+C\+K}, 
+		\hyperpage{81}
+    \subitem {K\+B\+D\+\_\+\+J\+P106\+\_\+\+C\+O\+L\+O\+N}, 
+		\hyperpage{81}
+    \subitem {K\+B\+D\+\_\+\+J\+P106\+\_\+\+C\+O\+M\+M\+A}, 
+		\hyperpage{82}
+    \subitem {K\+B\+D\+\_\+\+J\+P106\+\_\+\+C\+T\+R\+L}, \hyperpage{82}
+    \subitem {K\+B\+D\+\_\+\+J\+P106\+\_\+\+D}, \hyperpage{81}
+    \subitem {K\+B\+D\+\_\+\+J\+P106\+\_\+\+E}, \hyperpage{81}
+    \subitem {K\+B\+D\+\_\+\+J\+P106\+\_\+\+E\+N}, \hyperpage{80}
+    \subitem {K\+B\+D\+\_\+\+J\+P106\+\_\+\+E\+N\+T\+E\+R}, 
+		\hyperpage{81}
+    \subitem {K\+B\+D\+\_\+\+J\+P106\+\_\+\+E\+S\+C}, \hyperpage{79}
+    \subitem {K\+B\+D\+\_\+\+J\+P106\+\_\+\+F}, \hyperpage{81}
+    \subitem {K\+B\+D\+\_\+\+J\+P106\+\_\+\+F1}, \hyperpage{79}
+    \subitem {K\+B\+D\+\_\+\+J\+P106\+\_\+\+F10}, \hyperpage{80}
+    \subitem {K\+B\+D\+\_\+\+J\+P106\+\_\+\+F11}, \hyperpage{80}
+    \subitem {K\+B\+D\+\_\+\+J\+P106\+\_\+\+F12}, \hyperpage{80}
+    \subitem {K\+B\+D\+\_\+\+J\+P106\+\_\+\+F2}, \hyperpage{80}
+    \subitem {K\+B\+D\+\_\+\+J\+P106\+\_\+\+F3}, \hyperpage{80}
+    \subitem {K\+B\+D\+\_\+\+J\+P106\+\_\+\+F4}, \hyperpage{80}
+    \subitem {K\+B\+D\+\_\+\+J\+P106\+\_\+\+F5}, \hyperpage{80}
+    \subitem {K\+B\+D\+\_\+\+J\+P106\+\_\+\+F6}, \hyperpage{80}
+    \subitem {K\+B\+D\+\_\+\+J\+P106\+\_\+\+F7}, \hyperpage{80}
+    \subitem {K\+B\+D\+\_\+\+J\+P106\+\_\+\+F8}, \hyperpage{80}
+    \subitem {K\+B\+D\+\_\+\+J\+P106\+\_\+\+F9}, \hyperpage{80}
+    \subitem {K\+B\+D\+\_\+\+J\+P106\+\_\+\+G}, \hyperpage{81}
+    \subitem {K\+B\+D\+\_\+\+J\+P106\+\_\+\+H}, \hyperpage{81}
+    \subitem {K\+B\+D\+\_\+\+J\+P106\+\_\+\+H\+A\+N\+K\+A\+K\+U}, 
+		\hyperpage{80}
+    \subitem {K\+B\+D\+\_\+\+J\+P106\+\_\+\+H\+A\+T}, \hyperpage{80}
+    \subitem {K\+B\+D\+\_\+\+J\+P106\+\_\+\+H\+E\+N\+K\+A\+N}, 
+		\hyperpage{82}
+    \subitem {K\+B\+D\+\_\+\+J\+P106\+\_\+\+I}, \hyperpage{81}
+    \subitem {K\+B\+D\+\_\+\+J\+P106\+\_\+\+J}, \hyperpage{81}
+    \subitem {K\+B\+D\+\_\+\+J\+P106\+\_\+\+K}, \hyperpage{81}
+    \subitem {K\+B\+D\+\_\+\+J\+P106\+\_\+\+K\+A\+N\+A}, \hyperpage{82}
+    \subitem {K\+B\+D\+\_\+\+J\+P106\+\_\+\+L}, \hyperpage{81}
+    \subitem {K\+B\+D\+\_\+\+J\+P106\+\_\+\+L\+B\+R\+A\+C\+K\+E\+T}, 
+		\hyperpage{81}
+    \subitem {K\+B\+D\+\_\+\+J\+P106\+\_\+\+L\+S\+H\+I\+F\+T}, 
+		\hyperpage{81}
+    \subitem {K\+B\+D\+\_\+\+J\+P106\+\_\+\+M}, \hyperpage{82}
+    \subitem {K\+B\+D\+\_\+\+J\+P106\+\_\+\+M\+I\+N\+U\+S}, 
+		\hyperpage{80}
+    \subitem {K\+B\+D\+\_\+\+J\+P106\+\_\+\+M\+U\+H\+E\+N\+K\+A\+N}, 
+		\hyperpage{82}
+    \subitem {K\+B\+D\+\_\+\+J\+P106\+\_\+\+N}, \hyperpage{82}
+    \subitem {K\+B\+D\+\_\+\+J\+P106\+\_\+\+N\+A}, \hyperpage{79}
+    \subitem {K\+B\+D\+\_\+\+J\+P106\+\_\+\+O}, \hyperpage{81}
+    \subitem {K\+B\+D\+\_\+\+J\+P106\+\_\+\+P}, \hyperpage{81}
+    \subitem {K\+B\+D\+\_\+\+J\+P106\+\_\+\+P\+E\+R\+I\+O\+D}, 
+		\hyperpage{82}
+    \subitem {K\+B\+D\+\_\+\+J\+P106\+\_\+\+Q}, \hyperpage{80, 81}
+    \subitem {K\+B\+D\+\_\+\+J\+P106\+\_\+\+R}, \hyperpage{81}
+    \subitem {K\+B\+D\+\_\+\+J\+P106\+\_\+\+R\+B\+R\+A\+C\+K\+E\+T}, 
+		\hyperpage{81}
+    \subitem {K\+B\+D\+\_\+\+J\+P106\+\_\+\+R\+S\+H\+I\+F\+T}, 
+		\hyperpage{82}
+    \subitem {K\+B\+D\+\_\+\+J\+P106\+\_\+\+S}, \hyperpage{81}
+    \subitem {K\+B\+D\+\_\+\+J\+P106\+\_\+\+S\+E\+M\+I\+C\+O\+L\+O\+N}, 
+		\hyperpage{81}
+    \subitem {K\+B\+D\+\_\+\+J\+P106\+\_\+\+S\+L\+A\+S\+H}, 
+		\hyperpage{82}
+    \subitem {K\+B\+D\+\_\+\+J\+P106\+\_\+\+S\+P\+A\+C\+E}, 
+		\hyperpage{82}
+    \subitem {K\+B\+D\+\_\+\+J\+P106\+\_\+\+T}, \hyperpage{81}
+    \subitem {K\+B\+D\+\_\+\+J\+P106\+\_\+\+T\+A\+B}, \hyperpage{80}
+    \subitem {K\+B\+D\+\_\+\+J\+P106\+\_\+\+U}, \hyperpage{81}
+    \subitem {K\+B\+D\+\_\+\+J\+P106\+\_\+\+V}, \hyperpage{82}
+    \subitem {K\+B\+D\+\_\+\+J\+P106\+\_\+\+W}, \hyperpage{80}
+    \subitem {K\+B\+D\+\_\+\+J\+P106\+\_\+\+X}, \hyperpage{81}
+    \subitem {K\+B\+D\+\_\+\+J\+P106\+\_\+\+Y}, \hyperpage{81}
+    \subitem {K\+B\+D\+\_\+\+J\+P106\+\_\+\+Z}, \hyperpage{81}
 
   \indexspace
 
-  \item {N\+O\+T\+E\+\_\+}
-    \subitem {music\+\_\+def.\+h}, \hyperpage{3}
-  \item {N\+U\+M\+\_\+\+O\+F\+\_\+\+S\+T\+A\+T\+E\+\_\+}
-    \subitem {ssrp\+\_\+def.\+h}, \hyperpage{7}
-  \item {N\+U\+M\+\_\+\+O\+F\+\_\+\+T\+R\+X\+S\+T\+\_\+}
-    \subitem {ssrp\+\_\+def.\+h}, \hyperpage{7}
+  \item {L\+C\+D\+\_\+\+C\+G\+\_\+\+C\+O\+L\+S}
+    \subitem {lcd.\+h}, \hyperpage{83}
+  \item {L\+C\+D\+\_\+\+C\+G\+\_\+\+M\+A\+X\+C\+H\+A\+R}
+    \subitem {lcd.\+h}, \hyperpage{83}
+  \item {L\+C\+D\+\_\+\+C\+G\+\_\+\+R\+O\+W\+S}
+    \subitem {lcd.\+h}, \hyperpage{83}
+  \item {L\+C\+D\+\_\+\+M\+A\+X\+\_\+\+C\+O\+L\+S}
+    \subitem {lcd.\+h}, \hyperpage{83}
+  \item {L\+C\+D\+\_\+\+M\+A\+X\+\_\+\+R\+O\+W\+S}
+    \subitem {lcd.\+h}, \hyperpage{83}
+  \item {L\+C\+D\+\_\+cls}
+    \subitem {lcd.\+h}, \hyperpage{85}
+  \item {L\+C\+D\+\_\+crlf}
+    \subitem {lcd.\+h}, \hyperpage{85}
+  \item {L\+C\+D\+\_\+get\+Cursor}
+    \subitem {lcd.\+h}, \hyperpage{85}
+  \item {L\+C\+D\+\_\+init}
+    \subitem {lcd.\+h}, \hyperpage{84}
+  \item {L\+C\+D\+\_\+puts}
+    \subitem {lcd.\+h}, \hyperpage{84}
+  \item {L\+C\+D\+\_\+read}
+    \subitem {lcd.\+h}, \hyperpage{84}
+  \item {L\+C\+D\+\_\+set\+Char}
+    \subitem {lcd.\+h}, \hyperpage{85}
+  \item {L\+C\+D\+\_\+set\+Cursor}
+    \subitem {lcd.\+h}, \hyperpage{85}
+  \item {L\+C\+D\+\_\+set\+Visual}
+    \subitem {lcd.\+h}, \hyperpage{86}
+  \item {L\+C\+D\+\_\+write}
+    \subitem {lcd.\+h}, \hyperpage{84}
+  \item {L\+E\+D\+\_\+\+B\+A\+S\+E}
+    \subitem {led.\+h}, \hyperpage{87}
+  \item {L\+E\+D\+\_\+\+D5}
+    \subitem {led.\+h}, \hyperpage{88}
+  \item {L\+E\+D\+\_\+\+D6}
+    \subitem {led.\+h}, \hyperpage{88}
+  \item {L\+E\+D\+\_\+\+I\+N\+I\+T}
+    \subitem {led.\+h}, \hyperpage{87}
+  \item {L\+E\+D\+\_\+\+N\+U\+M\+\_\+\+O\+F\+\_\+\+T\+Y\+P\+E}
+    \subitem {led.\+h}, \hyperpage{88}
+  \item {L\+E\+D\+\_\+\+O\+F\+F}
+    \subitem {led.\+h}, \hyperpage{88}
+  \item {L\+E\+D\+\_\+\+O\+N}
+    \subitem {led.\+h}, \hyperpage{87}
+  \item {L\+E\+D\+\_\+\+T\+U\+R\+N}
+    \subitem {led.\+h}, \hyperpage{88}
+  \item {L\+E\+D\+\_\+\+Type}
+    \subitem {led.\+h}, \hyperpage{88}
+  \item {lcd.\+h}
+    \subitem {L\+C\+D\+\_\+\+C\+G\+\_\+\+C\+O\+L\+S}, \hyperpage{83}
+    \subitem {L\+C\+D\+\_\+\+C\+G\+\_\+\+M\+A\+X\+C\+H\+A\+R}, 
+		\hyperpage{83}
+    \subitem {L\+C\+D\+\_\+\+C\+G\+\_\+\+R\+O\+W\+S}, \hyperpage{83}
+    \subitem {L\+C\+D\+\_\+\+M\+A\+X\+\_\+\+C\+O\+L\+S}, \hyperpage{83}
+    \subitem {L\+C\+D\+\_\+\+M\+A\+X\+\_\+\+R\+O\+W\+S}, \hyperpage{83}
+    \subitem {L\+C\+D\+\_\+cls}, \hyperpage{85}
+    \subitem {L\+C\+D\+\_\+crlf}, \hyperpage{85}
+    \subitem {L\+C\+D\+\_\+get\+Cursor}, \hyperpage{85}
+    \subitem {L\+C\+D\+\_\+init}, \hyperpage{84}
+    \subitem {L\+C\+D\+\_\+puts}, \hyperpage{84}
+    \subitem {L\+C\+D\+\_\+read}, \hyperpage{84}
+    \subitem {L\+C\+D\+\_\+set\+Char}, \hyperpage{85}
+    \subitem {L\+C\+D\+\_\+set\+Cursor}, \hyperpage{85}
+    \subitem {L\+C\+D\+\_\+set\+Visual}, \hyperpage{86}
+    \subitem {L\+C\+D\+\_\+write}, \hyperpage{84}
+  \item {led.\+h}
+    \subitem {L\+E\+D\+\_\+\+B\+A\+S\+E}, \hyperpage{87}
+    \subitem {L\+E\+D\+\_\+\+D5}, \hyperpage{88}
+    \subitem {L\+E\+D\+\_\+\+D6}, \hyperpage{88}
+    \subitem {L\+E\+D\+\_\+\+I\+N\+I\+T}, \hyperpage{87}
+    \subitem {L\+E\+D\+\_\+\+N\+U\+M\+\_\+\+O\+F\+\_\+\+T\+Y\+P\+E}, 
+		\hyperpage{88}
+    \subitem {L\+E\+D\+\_\+\+O\+F\+F}, \hyperpage{88}
+    \subitem {L\+E\+D\+\_\+\+O\+N}, \hyperpage{87}
+    \subitem {L\+E\+D\+\_\+\+T\+U\+R\+N}, \hyperpage{88}
+    \subitem {L\+E\+D\+\_\+\+Type}, \hyperpage{88}
 
   \indexspace
 
-  \item {P\+A\+R\+T\+\_\+}
-    \subitem {music\+\_\+def.\+h}, \hyperpage{3}
-  \item {Pear\+\_\+}, \hyperpage{5}
+  \item {M\+U\+S\+I\+C\+\_\+\+Api}
+    \subitem {music.\+h}, \hyperpage{96}
+  \item {M\+U\+S\+I\+C\+\_\+\+L0}
+    \subitem {music.\+h}, \hyperpage{95}
+  \item {M\+U\+S\+I\+C\+\_\+\+L128}
+    \subitem {music.\+h}, \hyperpage{96}
+  \item {M\+U\+S\+I\+C\+\_\+\+L16}
+    \subitem {music.\+h}, \hyperpage{95}
+  \item {M\+U\+S\+I\+C\+\_\+\+L2}
+    \subitem {music.\+h}, \hyperpage{95}
+  \item {M\+U\+S\+I\+C\+\_\+\+L32}
+    \subitem {music.\+h}, \hyperpage{95}
+  \item {M\+U\+S\+I\+C\+\_\+\+L3\+C}
+    \subitem {music.\+h}, \hyperpage{96}
+  \item {M\+U\+S\+I\+C\+\_\+\+L4}
+    \subitem {music.\+h}, \hyperpage{95}
+  \item {M\+U\+S\+I\+C\+\_\+\+L64}
+    \subitem {music.\+h}, \hyperpage{95}
+  \item {M\+U\+S\+I\+C\+\_\+\+L6\+C}
+    \subitem {music.\+h}, \hyperpage{96}
+  \item {M\+U\+S\+I\+C\+\_\+\+L8}
+    \subitem {music.\+h}, \hyperpage{95}
+  \item {M\+U\+S\+I\+C\+\_\+\+M\+A\+X\+\_\+\+P\+A\+R\+T}
+    \subitem {music.\+h}, \hyperpage{95}
+  \item {M\+U\+S\+I\+C\+\_\+\+N\+U\+M\+\_\+\+O\+F\+\_\+\+S\+T\+A\+T\+E}
+    \subitem {music.\+h}, \hyperpage{96}
+  \item {M\+U\+S\+I\+C\+\_\+\+Note}, \hyperpage{91}
+  \item {M\+U\+S\+I\+C\+\_\+\+Part}, \hyperpage{92}
+  \item {M\+U\+S\+I\+C\+\_\+\+Position}, \hyperpage{94}
+  \item {M\+U\+S\+I\+C\+\_\+\+S\+T\+\_\+\+P\+A\+U\+S\+E}
+    \subitem {music.\+h}, \hyperpage{96}
+  \item {M\+U\+S\+I\+C\+\_\+\+S\+T\+\_\+\+P\+L\+A\+Y}
+    \subitem {music.\+h}, \hyperpage{96}
+  \item {M\+U\+S\+I\+C\+\_\+\+S\+T\+\_\+\+R\+E\+V\+E\+R\+S\+E}
+    \subitem {music.\+h}, \hyperpage{96}
+  \item {M\+U\+S\+I\+C\+\_\+\+S\+T\+\_\+\+S\+T\+O\+P}
+    \subitem {music.\+h}, \hyperpage{96}
+  \item {M\+U\+S\+I\+C\+\_\+\+Score}, \hyperpage{93}
+  \item {M\+U\+S\+I\+C\+\_\+\+State}
+    \subitem {music.\+h}, \hyperpage{96}
+  \item {M\+U\+S\+I\+C\+\_\+get\+Position}
+    \subitem {music.\+h}, \hyperpage{97}
+  \item {M\+U\+S\+I\+C\+\_\+get\+Score}
+    \subitem {music.\+h}, \hyperpage{97}
+  \item {M\+U\+S\+I\+C\+\_\+get\+State}
+    \subitem {music.\+h}, \hyperpage{96}
+  \item {M\+U\+S\+I\+C\+\_\+init}
+    \subitem {music.\+h}, \hyperpage{96}
+  \item {M\+U\+S\+I\+C\+\_\+pause}
+    \subitem {music.\+h}, \hyperpage{98}
+  \item {M\+U\+S\+I\+C\+\_\+play}
+    \subitem {music.\+h}, \hyperpage{97}
+  \item {M\+U\+S\+I\+C\+\_\+render}
+    \subitem {music.\+h}, \hyperpage{98}
+  \item {M\+U\+S\+I\+C\+\_\+reverse}
+    \subitem {music.\+h}, \hyperpage{97}
+  \item {M\+U\+S\+I\+C\+\_\+set\+Loop}
+    \subitem {music.\+h}, \hyperpage{97}
+  \item {M\+U\+S\+I\+C\+\_\+set\+Position}
+    \subitem {music.\+h}, \hyperpage{97}
+  \item {M\+U\+S\+I\+C\+\_\+set\+Score}
+    \subitem {music.\+h}, \hyperpage{97}
+  \item {M\+U\+S\+I\+C\+\_\+set\+Tempo}
+    \subitem {music.\+h}, \hyperpage{96}
+  \item {M\+U\+S\+I\+C\+\_\+state\+\_\+handler}
+    \subitem {music.\+h}, \hyperpage{98}
+  \item {M\+U\+S\+I\+C\+\_\+stop}
+    \subitem {music.\+h}, \hyperpage{98}
+  \item {music.\+h}
+    \subitem {M\+U\+S\+I\+C\+\_\+\+Api}, \hyperpage{96}
+    \subitem {M\+U\+S\+I\+C\+\_\+\+L0}, \hyperpage{95}
+    \subitem {M\+U\+S\+I\+C\+\_\+\+L128}, \hyperpage{96}
+    \subitem {M\+U\+S\+I\+C\+\_\+\+L16}, \hyperpage{95}
+    \subitem {M\+U\+S\+I\+C\+\_\+\+L2}, \hyperpage{95}
+    \subitem {M\+U\+S\+I\+C\+\_\+\+L32}, \hyperpage{95}
+    \subitem {M\+U\+S\+I\+C\+\_\+\+L3\+C}, \hyperpage{96}
+    \subitem {M\+U\+S\+I\+C\+\_\+\+L4}, \hyperpage{95}
+    \subitem {M\+U\+S\+I\+C\+\_\+\+L64}, \hyperpage{95}
+    \subitem {M\+U\+S\+I\+C\+\_\+\+L6\+C}, \hyperpage{96}
+    \subitem {M\+U\+S\+I\+C\+\_\+\+L8}, \hyperpage{95}
+    \subitem {M\+U\+S\+I\+C\+\_\+\+M\+A\+X\+\_\+\+P\+A\+R\+T}, 
+		\hyperpage{95}
+    \subitem {M\+U\+S\+I\+C\+\_\+\+N\+U\+M\+\_\+\+O\+F\+\_\+\+S\+T\+A\+T\+E}, 
+		\hyperpage{96}
+    \subitem {M\+U\+S\+I\+C\+\_\+\+S\+T\+\_\+\+P\+A\+U\+S\+E}, 
+		\hyperpage{96}
+    \subitem {M\+U\+S\+I\+C\+\_\+\+S\+T\+\_\+\+P\+L\+A\+Y}, 
+		\hyperpage{96}
+    \subitem {M\+U\+S\+I\+C\+\_\+\+S\+T\+\_\+\+R\+E\+V\+E\+R\+S\+E}, 
+		\hyperpage{96}
+    \subitem {M\+U\+S\+I\+C\+\_\+\+S\+T\+\_\+\+S\+T\+O\+P}, 
+		\hyperpage{96}
+    \subitem {M\+U\+S\+I\+C\+\_\+\+State}, \hyperpage{96}
+    \subitem {M\+U\+S\+I\+C\+\_\+get\+Position}, \hyperpage{97}
+    \subitem {M\+U\+S\+I\+C\+\_\+get\+Score}, \hyperpage{97}
+    \subitem {M\+U\+S\+I\+C\+\_\+get\+State}, \hyperpage{96}
+    \subitem {M\+U\+S\+I\+C\+\_\+init}, \hyperpage{96}
+    \subitem {M\+U\+S\+I\+C\+\_\+pause}, \hyperpage{98}
+    \subitem {M\+U\+S\+I\+C\+\_\+play}, \hyperpage{97}
+    \subitem {M\+U\+S\+I\+C\+\_\+render}, \hyperpage{98}
+    \subitem {M\+U\+S\+I\+C\+\_\+reverse}, \hyperpage{97}
+    \subitem {M\+U\+S\+I\+C\+\_\+set\+Loop}, \hyperpage{97}
+    \subitem {M\+U\+S\+I\+C\+\_\+set\+Position}, \hyperpage{97}
+    \subitem {M\+U\+S\+I\+C\+\_\+set\+Score}, \hyperpage{97}
+    \subitem {M\+U\+S\+I\+C\+\_\+set\+Tempo}, \hyperpage{96}
+    \subitem {M\+U\+S\+I\+C\+\_\+state\+\_\+handler}, \hyperpage{98}
+    \subitem {M\+U\+S\+I\+C\+\_\+stop}, \hyperpage{98}
 
   \indexspace
 
-  \item {R\+E\+G\+\_\+\+D\+A\+T\+A\+\_\+}
-    \subitem {lcd\+\_\+def.\+h}, \hyperpage{2}
-  \item {R\+E\+G\+\_\+\+E\+\_\+}
-    \subitem {lcd\+\_\+def.\+h}, \hyperpage{2}
-  \item {R\+E\+G\+\_\+\+R\+S\+\_\+}
-    \subitem {lcd\+\_\+def.\+h}, \hyperpage{2}
-  \item {R\+E\+G\+\_\+\+R\+W\+\_\+}
-    \subitem {lcd\+\_\+def.\+h}, \hyperpage{2}
-  \item {Registor\+\_\+}
-    \subitem {lcd\+\_\+def.\+h}, \hyperpage{2}
+  \item {N\+U\+L\+L}
+    \subitem {stdlib.\+h}, \hyperpage{132}
 
   \indexspace
 
-  \item {S\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+}
-    \subitem {ssrp\+\_\+def.\+h}, \hyperpage{7}
-  \item {S\+T\+\_\+\+D\+E\+A\+L\+L\+O\+C\+A\+T\+E\+\_\+}
-    \subitem {ssrp\+\_\+def.\+h}, \hyperpage{7}
-  \item {S\+T\+\_\+\+D\+I\+S\+C\+O\+N\+N\+E\+C\+T\+\_\+}
-    \subitem {ssrp\+\_\+def.\+h}, \hyperpage{7}
-  \item {S\+Y\+M\+\_\+\+D\+A\+T\+A\+\_\+}
-    \subitem {lcd\+\_\+def.\+h}, \hyperpage{2}
-  \item {S\+Y\+M\+\_\+\+I\+N\+S\+T\+\_\+}
-    \subitem {lcd\+\_\+def.\+h}, \hyperpage{2}
-  \item {src/lcd\+\_\+def.\+h}, \hyperpage{1}
-  \item {src/music\+\_\+def.\+h}, \hyperpage{3}
-  \item {src/ssrp\+\_\+def.\+h}, \hyperpage{3}
-  \item {ssrp\+\_\+def.\+h}
-    \subitem {N\+U\+M\+\_\+\+O\+F\+\_\+\+S\+T\+A\+T\+E\+\_\+}, 
-		\hyperpage{7}
-    \subitem {N\+U\+M\+\_\+\+O\+F\+\_\+\+T\+R\+X\+S\+T\+\_\+}, 
-		\hyperpage{7}
-    \subitem {S\+T\+\_\+\+C\+O\+N\+N\+E\+C\+T\+\_\+}, \hyperpage{7}
-    \subitem {S\+T\+\_\+\+D\+E\+A\+L\+L\+O\+C\+A\+T\+E\+\_\+}, 
-		\hyperpage{7}
-    \subitem {S\+T\+\_\+\+D\+I\+S\+C\+O\+N\+N\+E\+C\+T\+\_\+}, 
-		\hyperpage{7}
-    \subitem {State\+\_\+}, \hyperpage{7}
-    \subitem {State\+Handle\+\_\+}, \hyperpage{7}
-    \subitem {T\+R\+X\+S\+T\+\_\+\+D\+A\+T\+A\+\_\+}, \hyperpage{7}
-    \subitem {T\+R\+X\+S\+T\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+}, 
-		\hyperpage{7}
-    \subitem {T\+R\+X\+S\+T\+\_\+\+P\+R\+E\+A\+M\+B\+L\+E\+\_\+}, 
-		\hyperpage{7}
-    \subitem {Transaction\+State\+\_\+}, \hyperpage{7}
-  \item {State\+\_\+}
-    \subitem {ssrp\+\_\+def.\+h}, \hyperpage{7}
-  \item {State\+Handle\+\_\+}
-    \subitem {ssrp\+\_\+def.\+h}, \hyperpage{7}
-  \item {State\+Table\+\_\+}, \hyperpage{5}
+  \item {P\+S2\+\_\+\+E\+R\+R\+\_\+\+F\+R\+A\+M\+I\+N\+G}
+    \subitem {ps2.\+h}, \hyperpage{100}
+  \item {P\+S2\+\_\+\+E\+R\+R\+\_\+\+O\+K}
+    \subitem {ps2.\+h}, \hyperpage{100}
+  \item {P\+S2\+\_\+\+E\+R\+R\+\_\+\+P\+A\+R\+I\+T\+Y}
+    \subitem {ps2.\+h}, \hyperpage{100}
+  \item {P\+S2\+\_\+\+M\+A\+X\+\_\+\+R\+X\+B\+U\+F}
+    \subitem {ps2.\+h}, \hyperpage{99}
+  \item {P\+S2\+\_\+\+N\+U\+M\+\_\+\+O\+F\+\_\+\+E\+R\+R}
+    \subitem {ps2.\+h}, \hyperpage{100}
+  \item {P\+S2\+\_\+\+Status}
+    \subitem {ps2.\+h}, \hyperpage{100}
+  \item {P\+S2\+\_\+communicate}
+    \subitem {ps2.\+h}, \hyperpage{100}
+  \item {P\+S2\+\_\+init}
+    \subitem {ps2.\+h}, \hyperpage{100}
+  \item {P\+S2\+\_\+read}
+    \subitem {ps2.\+h}, \hyperpage{100}
+  \item {P\+S\+W\+\_\+\+B\+O\+R\+D\+E\+R}
+    \subitem {push\+\_\+switch.\+h}, \hyperpage{101}
+  \item {P\+S\+W\+\_\+\+N\+U\+M\+\_\+\+O\+F\+\_\+\+T\+Y\+P\+E}
+    \subitem {push\+\_\+switch.\+h}, \hyperpage{102}
+  \item {P\+S\+W\+\_\+\+S\+W1}
+    \subitem {push\+\_\+switch.\+h}, \hyperpage{102}
+  \item {P\+S\+W\+\_\+\+S\+W2}
+    \subitem {push\+\_\+switch.\+h}, \hyperpage{102}
+  \item {P\+S\+W\+\_\+\+Type}
+    \subitem {push\+\_\+switch.\+h}, \hyperpage{102}
+  \item {P\+S\+W\+\_\+get}
+    \subitem {push\+\_\+switch.\+h}, \hyperpage{102}
+  \item {P\+S\+W\+\_\+init}
+    \subitem {push\+\_\+switch.\+h}, \hyperpage{102}
+  \item {P\+S\+W\+\_\+one\+Shot}
+    \subitem {push\+\_\+switch.\+h}, \hyperpage{102}
+  \item {P\+S\+W\+\_\+snap\+Shot}
+    \subitem {push\+\_\+switch.\+h}, \hyperpage{103}
+  \item {ps2.\+h}
+    \subitem {P\+S2\+\_\+\+E\+R\+R\+\_\+\+F\+R\+A\+M\+I\+N\+G}, 
+		\hyperpage{100}
+    \subitem {P\+S2\+\_\+\+E\+R\+R\+\_\+\+O\+K}, \hyperpage{100}
+    \subitem {P\+S2\+\_\+\+E\+R\+R\+\_\+\+P\+A\+R\+I\+T\+Y}, 
+		\hyperpage{100}
+    \subitem {P\+S2\+\_\+\+M\+A\+X\+\_\+\+R\+X\+B\+U\+F}, 
+		\hyperpage{99}
+    \subitem {P\+S2\+\_\+\+N\+U\+M\+\_\+\+O\+F\+\_\+\+E\+R\+R}, 
+		\hyperpage{100}
+    \subitem {P\+S2\+\_\+\+Status}, \hyperpage{100}
+    \subitem {P\+S2\+\_\+communicate}, \hyperpage{100}
+    \subitem {P\+S2\+\_\+init}, \hyperpage{100}
+    \subitem {P\+S2\+\_\+read}, \hyperpage{100}
+  \item {push\+\_\+switch.\+h}
+    \subitem {P\+S\+W\+\_\+\+B\+O\+R\+D\+E\+R}, \hyperpage{101}
+    \subitem {P\+S\+W\+\_\+\+N\+U\+M\+\_\+\+O\+F\+\_\+\+T\+Y\+P\+E}, 
+		\hyperpage{102}
+    \subitem {P\+S\+W\+\_\+\+S\+W1}, \hyperpage{102}
+    \subitem {P\+S\+W\+\_\+\+S\+W2}, \hyperpage{102}
+    \subitem {P\+S\+W\+\_\+\+Type}, \hyperpage{102}
+    \subitem {P\+S\+W\+\_\+get}, \hyperpage{102}
+    \subitem {P\+S\+W\+\_\+init}, \hyperpage{102}
+    \subitem {P\+S\+W\+\_\+one\+Shot}, \hyperpage{102}
+    \subitem {P\+S\+W\+\_\+snap\+Shot}, \hyperpage{103}
 
   \indexspace
 
-  \item {T\+R\+X\+S\+T\+\_\+\+D\+A\+T\+A\+\_\+}
-    \subitem {ssrp\+\_\+def.\+h}, \hyperpage{7}
-  \item {T\+R\+X\+S\+T\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+}
-    \subitem {ssrp\+\_\+def.\+h}, \hyperpage{7}
-  \item {T\+R\+X\+S\+T\+\_\+\+P\+R\+E\+A\+M\+B\+L\+E\+\_\+}
-    \subitem {ssrp\+\_\+def.\+h}, \hyperpage{7}
-  \item {Transaction\+Param\+\_\+}, \hyperpage{6}
-  \item {Transaction\+State\+\_\+}
-    \subitem {ssrp\+\_\+def.\+h}, \hyperpage{7}
+  \item {S\+C\+I\+\_\+\+E\+R\+R\+\_\+\+F\+R\+A\+M\+I\+N\+G}
+    \subitem {sci.\+h}, \hyperpage{104}
+  \item {S\+C\+I\+\_\+\+E\+R\+R\+\_\+\+O\+V\+E\+R\+R\+U\+N}
+    \subitem {sci.\+h}, \hyperpage{104}
+  \item {S\+C\+I\+\_\+\+E\+R\+R\+\_\+\+P\+A\+R\+I\+T\+Y}
+    \subitem {sci.\+h}, \hyperpage{104}
+  \item {S\+C\+I\+\_\+\+M\+A\+X\+\_\+\+R\+X\+B\+U\+F}
+    \subitem {sci.\+h}, \hyperpage{104}
+  \item {S\+C\+I\+\_\+\+M\+A\+X\+\_\+\+T\+X\+B\+U\+F}
+    \subitem {sci.\+h}, \hyperpage{104}
+  \item {S\+C\+I\+\_\+communicate}
+    \subitem {sci.\+h}, \hyperpage{105}
+  \item {S\+C\+I\+\_\+get\+Last\+Error}
+    \subitem {sci.\+h}, \hyperpage{106}
+  \item {S\+C\+I\+\_\+init}
+    \subitem {sci.\+h}, \hyperpage{104}
+  \item {S\+C\+I\+\_\+puts}
+    \subitem {sci.\+h}, \hyperpage{105}
+  \item {S\+C\+I\+\_\+read}
+    \subitem {sci.\+h}, \hyperpage{105}
+  \item {S\+C\+I\+\_\+write}
+    \subitem {sci.\+h}, \hyperpage{105}
+  \item {S\+O\+U\+N\+D\+\_\+\+A0}
+    \subitem {sound.\+h}, \hyperpage{112}
+  \item {S\+O\+U\+N\+D\+\_\+\+A1}
+    \subitem {sound.\+h}, \hyperpage{113}
+  \item {S\+O\+U\+N\+D\+\_\+\+A2}
+    \subitem {sound.\+h}, \hyperpage{113}
+  \item {S\+O\+U\+N\+D\+\_\+\+A3}
+    \subitem {sound.\+h}, \hyperpage{114}
+  \item {S\+O\+U\+N\+D\+\_\+\+Ab0}
+    \subitem {sound.\+h}, \hyperpage{112}
+  \item {S\+O\+U\+N\+D\+\_\+\+Ab1}
+    \subitem {sound.\+h}, \hyperpage{113}
+  \item {S\+O\+U\+N\+D\+\_\+\+Ab2}
+    \subitem {sound.\+h}, \hyperpage{113}
+  \item {S\+O\+U\+N\+D\+\_\+\+Ab3}
+    \subitem {sound.\+h}, \hyperpage{114}
+  \item {S\+O\+U\+N\+D\+\_\+\+Api}
+    \subitem {sound.\+h}, \hyperpage{114}
+  \item {S\+O\+U\+N\+D\+\_\+\+C0}
+    \subitem {sound.\+h}, \hyperpage{111}
+  \item {S\+O\+U\+N\+D\+\_\+\+C1}
+    \subitem {sound.\+h}, \hyperpage{112}
+  \item {S\+O\+U\+N\+D\+\_\+\+C2}
+    \subitem {sound.\+h}, \hyperpage{113}
+  \item {S\+O\+U\+N\+D\+\_\+\+C3}
+    \subitem {sound.\+h}, \hyperpage{114}
+  \item {S\+O\+U\+N\+D\+\_\+\+Cb0}
+    \subitem {sound.\+h}, \hyperpage{112}
+  \item {S\+O\+U\+N\+D\+\_\+\+Cb1}
+    \subitem {sound.\+h}, \hyperpage{112}
+  \item {S\+O\+U\+N\+D\+\_\+\+Cb2}
+    \subitem {sound.\+h}, \hyperpage{113}
+  \item {S\+O\+U\+N\+D\+\_\+\+Cb3}
+    \subitem {sound.\+h}, \hyperpage{114}
+  \item {S\+O\+U\+N\+D\+\_\+\+D0}
+    \subitem {sound.\+h}, \hyperpage{112}
+  \item {S\+O\+U\+N\+D\+\_\+\+D1}
+    \subitem {sound.\+h}, \hyperpage{112}
+  \item {S\+O\+U\+N\+D\+\_\+\+D2}
+    \subitem {sound.\+h}, \hyperpage{113}
+  \item {S\+O\+U\+N\+D\+\_\+\+D3}
+    \subitem {sound.\+h}, \hyperpage{114}
+  \item {S\+O\+U\+N\+D\+\_\+\+Db0}
+    \subitem {sound.\+h}, \hyperpage{112}
+  \item {S\+O\+U\+N\+D\+\_\+\+Db1}
+    \subitem {sound.\+h}, \hyperpage{112}
+  \item {S\+O\+U\+N\+D\+\_\+\+Db2}
+    \subitem {sound.\+h}, \hyperpage{113}
+  \item {S\+O\+U\+N\+D\+\_\+\+Db3}
+    \subitem {sound.\+h}, \hyperpage{114}
+  \item {S\+O\+U\+N\+D\+\_\+\+E0}
+    \subitem {sound.\+h}, \hyperpage{112}
+  \item {S\+O\+U\+N\+D\+\_\+\+E1}
+    \subitem {sound.\+h}, \hyperpage{112}
+  \item {S\+O\+U\+N\+D\+\_\+\+E2}
+    \subitem {sound.\+h}, \hyperpage{113}
+  \item {S\+O\+U\+N\+D\+\_\+\+E3}
+    \subitem {sound.\+h}, \hyperpage{114}
+  \item {S\+O\+U\+N\+D\+\_\+\+Envelope}, \hyperpage{110}
+  \item {S\+O\+U\+N\+D\+\_\+\+F0}
+    \subitem {sound.\+h}, \hyperpage{112}
+  \item {S\+O\+U\+N\+D\+\_\+\+F1}
+    \subitem {sound.\+h}, \hyperpage{112}
+  \item {S\+O\+U\+N\+D\+\_\+\+F2}
+    \subitem {sound.\+h}, \hyperpage{113}
+  \item {S\+O\+U\+N\+D\+\_\+\+F3}
+    \subitem {sound.\+h}, \hyperpage{114}
+  \item {S\+O\+U\+N\+D\+\_\+\+Fb0}
+    \subitem {sound.\+h}, \hyperpage{112}
+  \item {S\+O\+U\+N\+D\+\_\+\+Fb1}
+    \subitem {sound.\+h}, \hyperpage{113}
+  \item {S\+O\+U\+N\+D\+\_\+\+Fb2}
+    \subitem {sound.\+h}, \hyperpage{113}
+  \item {S\+O\+U\+N\+D\+\_\+\+Fb3}
+    \subitem {sound.\+h}, \hyperpage{114}
+  \item {S\+O\+U\+N\+D\+\_\+\+G0}
+    \subitem {sound.\+h}, \hyperpage{112}
+  \item {S\+O\+U\+N\+D\+\_\+\+G1}
+    \subitem {sound.\+h}, \hyperpage{113}
+  \item {S\+O\+U\+N\+D\+\_\+\+G2}
+    \subitem {sound.\+h}, \hyperpage{113}
+  \item {S\+O\+U\+N\+D\+\_\+\+G3}
+    \subitem {sound.\+h}, \hyperpage{114}
+  \item {S\+O\+U\+N\+D\+\_\+\+Gb0}
+    \subitem {sound.\+h}, \hyperpage{112}
+  \item {S\+O\+U\+N\+D\+\_\+\+Gb1}
+    \subitem {sound.\+h}, \hyperpage{113}
+  \item {S\+O\+U\+N\+D\+\_\+\+Gb2}
+    \subitem {sound.\+h}, \hyperpage{113}
+  \item {S\+O\+U\+N\+D\+\_\+\+Gb3}
+    \subitem {sound.\+h}, \hyperpage{114}
+  \item {S\+O\+U\+N\+D\+\_\+\+H0}
+    \subitem {sound.\+h}, \hyperpage{112}
+  \item {S\+O\+U\+N\+D\+\_\+\+H1}
+    \subitem {sound.\+h}, \hyperpage{113}
+  \item {S\+O\+U\+N\+D\+\_\+\+H2}
+    \subitem {sound.\+h}, \hyperpage{114}
+  \item {S\+O\+U\+N\+D\+\_\+\+H3}
+    \subitem {sound.\+h}, \hyperpage{114}
+  \item {S\+O\+U\+N\+D\+\_\+\+M\+A\+X\+\_\+\+P\+R\+O\+N\+O\+U\+N\+C\+E}
+    \subitem {sound.\+h}, \hyperpage{111}
+  \item {S\+O\+U\+N\+D\+\_\+\+M\+A\+X\+\_\+\+V\+O\+L\+U\+M\+E}
+    \subitem {sound.\+h}, \hyperpage{111}
+  \item {S\+O\+U\+N\+D\+\_\+\+N\+A}
+    \subitem {sound.\+h}, \hyperpage{111}
+  \item {S\+O\+U\+N\+D\+\_\+\+N\+U\+M\+\_\+\+O\+F\+\_\+\+S\+T\+A\+T\+E}
+    \subitem {sound.\+h}, \hyperpage{115}
+  \item {S\+O\+U\+N\+D\+\_\+\+P\+R\+O\+N\+O\+U\+N\+C\+E\+\_\+\+L\+E\+N}
+    \subitem {sound.\+h}, \hyperpage{111}
+  \item {S\+O\+U\+N\+D\+\_\+\+S\+T\+\_\+\+P\+L\+A\+Y}
+    \subitem {sound.\+h}, \hyperpage{114}
+  \item {S\+O\+U\+N\+D\+\_\+\+S\+T\+\_\+\+R\+E\+V\+E\+R\+S\+E}
+    \subitem {sound.\+h}, \hyperpage{115}
+  \item {S\+O\+U\+N\+D\+\_\+\+S\+T\+\_\+\+S\+T\+O\+P}
+    \subitem {sound.\+h}, \hyperpage{114}
+  \item {S\+O\+U\+N\+D\+\_\+\+State}
+    \subitem {sound.\+h}, \hyperpage{114}
+  \item {S\+O\+U\+N\+D\+\_\+\+Tone}, \hyperpage{110}
+  \item {S\+O\+U\+N\+D\+\_\+get\+State}
+    \subitem {sound.\+h}, \hyperpage{115}
+  \item {S\+O\+U\+N\+D\+\_\+init}
+    \subitem {sound.\+h}, \hyperpage{115}
+  \item {S\+O\+U\+N\+D\+\_\+make\+Pulse}
+    \subitem {sound.\+h}, \hyperpage{116}
+  \item {S\+O\+U\+N\+D\+\_\+play}
+    \subitem {sound.\+h}, \hyperpage{116}
+  \item {S\+O\+U\+N\+D\+\_\+pronounce}
+    \subitem {sound.\+h}, \hyperpage{116}
+  \item {S\+O\+U\+N\+D\+\_\+remove\+Tone}
+    \subitem {sound.\+h}, \hyperpage{116}
+  \item {S\+O\+U\+N\+D\+\_\+reverse}
+    \subitem {sound.\+h}, \hyperpage{116}
+  \item {S\+O\+U\+N\+D\+\_\+set\+Evlp\+Cycle}
+    \subitem {sound.\+h}, \hyperpage{115}
+  \item {S\+O\+U\+N\+D\+\_\+set\+Tone}
+    \subitem {sound.\+h}, \hyperpage{115}
+  \item {S\+O\+U\+N\+D\+\_\+set\+Volume}
+    \subitem {sound.\+h}, \hyperpage{115}
+  \item {S\+O\+U\+N\+D\+\_\+state\+\_\+handler}
+    \subitem {sound.\+h}, \hyperpage{116}
+  \item {S\+O\+U\+N\+D\+\_\+stop}
+    \subitem {sound.\+h}, \hyperpage{116}
+  \item {S\+S\+R\+P\+\_\+\+A\+D\+D\+R\+\_\+\+B\+R\+O\+A\+D\+C\+A\+S\+T}
+    \subitem {ssrp.\+h}, \hyperpage{120}
+  \item {S\+S\+R\+P\+\_\+\+A\+D\+D\+R\+\_\+\+I\+N\+V\+A\+L\+I\+D}
+    \subitem {ssrp.\+h}, \hyperpage{120}
+  \item {S\+S\+R\+P\+\_\+\+Address}
+    \subitem {ssrp.\+h}, \hyperpage{122}
+  \item {S\+S\+R\+P\+\_\+\+C\+M\+D\+\_\+\+E\+X}
+    \subitem {ssrp.\+h}, \hyperpage{121}
+  \item {S\+S\+R\+P\+\_\+\+C\+M\+D\+\_\+\+I\+N\+V\+A\+L\+I\+D}
+    \subitem {ssrp.\+h}, \hyperpage{121}
+  \item {S\+S\+R\+P\+\_\+\+C\+M\+D\+\_\+\+J\+O\+I\+N}
+    \subitem {ssrp.\+h}, \hyperpage{121}
+  \item {S\+S\+R\+P\+\_\+\+C\+M\+D\+\_\+\+L\+E\+A\+V\+E}
+    \subitem {ssrp.\+h}, \hyperpage{121}
+  \item {S\+S\+R\+P\+\_\+\+C\+M\+D\+\_\+\+L\+O\+O\+P}
+    \subitem {ssrp.\+h}, \hyperpage{121}
+  \item {S\+S\+R\+P\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+E\+Q}
+    \subitem {ssrp.\+h}, \hyperpage{122}
+  \item {S\+S\+R\+P\+\_\+\+C\+O\+N\+\_\+\+B\+A\+C\+K}
+    \subitem {ssrp.\+h}, \hyperpage{123}
+  \item {S\+S\+R\+P\+\_\+\+C\+O\+N\+\_\+\+F\+R\+O\+N\+T}
+    \subitem {ssrp.\+h}, \hyperpage{123}
+  \item {S\+S\+R\+P\+\_\+\+Command}
+    \subitem {ssrp.\+h}, \hyperpage{122}
+  \item {S\+S\+R\+P\+\_\+\+Connection}
+    \subitem {ssrp.\+h}, \hyperpage{123}
+  \item {S\+S\+R\+P\+\_\+\+F\+L\+G\+\_\+\+E\+V\+T}
+    \subitem {ssrp.\+h}, \hyperpage{121}
+  \item {S\+S\+R\+P\+\_\+\+F\+L\+G\+\_\+\+I\+N\+V\+A\+L\+I\+D}
+    \subitem {ssrp.\+h}, \hyperpage{121}
+  \item {S\+S\+R\+P\+\_\+\+F\+L\+G\+\_\+\+R\+E\+Q}
+    \subitem {ssrp.\+h}, \hyperpage{121}
+  \item {S\+S\+R\+P\+\_\+\+F\+L\+G\+\_\+\+R\+E\+S}
+    \subitem {ssrp.\+h}, \hyperpage{121}
+  \item {S\+S\+R\+P\+\_\+\+Flag}
+    \subitem {ssrp.\+h}, \hyperpage{122}
+  \item {S\+S\+R\+P\+\_\+\+Header}, \hyperpage{119}
+  \item {S\+S\+R\+P\+\_\+\+I\+N\+V\+A\+L\+I\+D\+A\+T\+E\+\_\+\+P\+A\+C\+K\+E\+T}
+    \subitem {ssrp.\+h}, \hyperpage{122}
+  \item {S\+S\+R\+P\+\_\+\+I\+S\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+P\+A\+C\+K\+E\+T}
+    \subitem {ssrp.\+h}, \hyperpage{122}
+  \item {S\+S\+R\+P\+\_\+\+M\+A\+X\+\_\+\+D\+A\+T\+A}
+    \subitem {ssrp.\+h}, \hyperpage{120}
+  \item {S\+S\+R\+P\+\_\+\+M\+A\+X\+\_\+\+N\+O\+D\+E}
+    \subitem {ssrp.\+h}, \hyperpage{120}
+  \item {S\+S\+R\+P\+\_\+\+N\+U\+M\+\_\+\+O\+F\+\_\+\+C\+O\+N}
+    \subitem {ssrp.\+h}, \hyperpage{123}
+  \item {S\+S\+R\+P\+\_\+\+N\+U\+M\+\_\+\+O\+F\+\_\+\+T\+R\+X}
+    \subitem {ssrp.\+h}, \hyperpage{123}
+  \item {S\+S\+R\+P\+\_\+\+P\+A\+C\+K\+E\+T\+\_\+\+S\+P\+C}
+    \subitem {ssrp.\+h}, \hyperpage{121}
+  \item {S\+S\+R\+P\+\_\+\+S\+K\+E\+L\+\_\+\+L\+O\+O\+P\+B\+A\+C\+K\+\_\+\+A\+D\+D\+R}
+    \subitem {ssrp\+\_\+skel.\+h}, \hyperpage{127}
+  \item {S\+S\+R\+P\+\_\+\+S\+K\+E\+L\+\_\+read}
+    \subitem {ssrp\+\_\+skel.\+h}, \hyperpage{127}
+  \item {S\+S\+R\+P\+\_\+\+S\+K\+E\+L\+\_\+write}
+    \subitem {ssrp\+\_\+skel.\+h}, \hyperpage{127}
+  \item {S\+S\+R\+P\+\_\+\+T\+M\+O\+\_\+\+R\+E\+C\+V}
+    \subitem {ssrp.\+h}, \hyperpage{120}
+  \item {S\+S\+R\+P\+\_\+\+T\+M\+O\+\_\+\+S\+E\+N\+D}
+    \subitem {ssrp.\+h}, \hyperpage{121}
+  \item {S\+S\+R\+P\+\_\+\+T\+R\+X\+\_\+\+R\+E\+C\+V}
+    \subitem {ssrp.\+h}, \hyperpage{123}
+  \item {S\+S\+R\+P\+\_\+\+T\+R\+X\+\_\+\+S\+E\+N\+D}
+    \subitem {ssrp.\+h}, \hyperpage{123}
+  \item {S\+S\+R\+P\+\_\+\+T\+R\+X\+I\+D\+\_\+\+I\+N\+V\+A\+L\+I\+D}
+    \subitem {ssrp.\+h}, \hyperpage{121}
+  \item {S\+S\+R\+P\+\_\+\+Transaction}
+    \subitem {ssrp.\+h}, \hyperpage{123}
+  \item {S\+S\+R\+P\+\_\+\+Transaction\+Id}
+    \subitem {ssrp.\+h}, \hyperpage{123}
+  \item {S\+S\+R\+P\+\_\+\+V\+A\+L\+\_\+\+P\+R\+E\+A\+M\+B\+L\+E}
+    \subitem {ssrp.\+h}, \hyperpage{121}
+  \item {S\+S\+R\+P\+\_\+end}
+    \subitem {ssrp.\+h}, \hyperpage{123}
+  \item {S\+S\+R\+P\+\_\+exec}
+    \subitem {ssrp.\+h}, \hyperpage{126}
+  \item {S\+S\+R\+P\+\_\+get\+Node}
+    \subitem {ssrp.\+h}, \hyperpage{125}
+  \item {S\+S\+R\+P\+\_\+get\+Pear}
+    \subitem {ssrp.\+h}, \hyperpage{125}
+  \item {S\+S\+R\+P\+\_\+get\+Total\+Pear}
+    \subitem {ssrp.\+h}, \hyperpage{125}
+  \item {S\+S\+R\+P\+\_\+init}
+    \subitem {ssrp.\+h}, \hyperpage{123}
+  \item {S\+S\+R\+P\+\_\+my\+\_\+addr}
+    \subitem {ssrp.\+h}, \hyperpage{126}
+  \item {S\+S\+R\+P\+\_\+ready}
+    \subitem {ssrp.\+h}, \hyperpage{125}
+  \item {S\+S\+R\+P\+\_\+recvfrom}
+    \subitem {ssrp.\+h}, \hyperpage{124}
+  \item {S\+S\+R\+P\+\_\+send}
+    \subitem {ssrp.\+h}, \hyperpage{123}
+  \item {S\+S\+R\+P\+\_\+sendto}
+    \subitem {ssrp.\+h}, \hyperpage{124}
+  \item {S\+S\+R\+P\+\_\+shutdown}
+    \subitem {ssrp.\+h}, \hyperpage{125}
+  \item {S\+S\+R\+P\+\_\+start}
+    \subitem {ssrp.\+h}, \hyperpage{123}
+  \item {sci.\+h}
+    \subitem {S\+C\+I\+\_\+\+E\+R\+R\+\_\+\+F\+R\+A\+M\+I\+N\+G}, 
+		\hyperpage{104}
+    \subitem {S\+C\+I\+\_\+\+E\+R\+R\+\_\+\+O\+V\+E\+R\+R\+U\+N}, 
+		\hyperpage{104}
+    \subitem {S\+C\+I\+\_\+\+E\+R\+R\+\_\+\+P\+A\+R\+I\+T\+Y}, 
+		\hyperpage{104}
+    \subitem {S\+C\+I\+\_\+\+M\+A\+X\+\_\+\+R\+X\+B\+U\+F}, 
+		\hyperpage{104}
+    \subitem {S\+C\+I\+\_\+\+M\+A\+X\+\_\+\+T\+X\+B\+U\+F}, 
+		\hyperpage{104}
+    \subitem {S\+C\+I\+\_\+communicate}, \hyperpage{105}
+    \subitem {S\+C\+I\+\_\+get\+Last\+Error}, \hyperpage{106}
+    \subitem {S\+C\+I\+\_\+init}, \hyperpage{104}
+    \subitem {S\+C\+I\+\_\+puts}, \hyperpage{105}
+    \subitem {S\+C\+I\+\_\+read}, \hyperpage{105}
+    \subitem {S\+C\+I\+\_\+write}, \hyperpage{105}
+  \item {sound.\+h}
+    \subitem {S\+O\+U\+N\+D\+\_\+\+A0}, \hyperpage{112}
+    \subitem {S\+O\+U\+N\+D\+\_\+\+A1}, \hyperpage{113}
+    \subitem {S\+O\+U\+N\+D\+\_\+\+A2}, \hyperpage{113}
+    \subitem {S\+O\+U\+N\+D\+\_\+\+A3}, \hyperpage{114}
+    \subitem {S\+O\+U\+N\+D\+\_\+\+Ab0}, \hyperpage{112}
+    \subitem {S\+O\+U\+N\+D\+\_\+\+Ab1}, \hyperpage{113}
+    \subitem {S\+O\+U\+N\+D\+\_\+\+Ab2}, \hyperpage{113}
+    \subitem {S\+O\+U\+N\+D\+\_\+\+Ab3}, \hyperpage{114}
+    \subitem {S\+O\+U\+N\+D\+\_\+\+Api}, \hyperpage{114}
+    \subitem {S\+O\+U\+N\+D\+\_\+\+C0}, \hyperpage{111}
+    \subitem {S\+O\+U\+N\+D\+\_\+\+C1}, \hyperpage{112}
+    \subitem {S\+O\+U\+N\+D\+\_\+\+C2}, \hyperpage{113}
+    \subitem {S\+O\+U\+N\+D\+\_\+\+C3}, \hyperpage{114}
+    \subitem {S\+O\+U\+N\+D\+\_\+\+Cb0}, \hyperpage{112}
+    \subitem {S\+O\+U\+N\+D\+\_\+\+Cb1}, \hyperpage{112}
+    \subitem {S\+O\+U\+N\+D\+\_\+\+Cb2}, \hyperpage{113}
+    \subitem {S\+O\+U\+N\+D\+\_\+\+Cb3}, \hyperpage{114}
+    \subitem {S\+O\+U\+N\+D\+\_\+\+D0}, \hyperpage{112}
+    \subitem {S\+O\+U\+N\+D\+\_\+\+D1}, \hyperpage{112}
+    \subitem {S\+O\+U\+N\+D\+\_\+\+D2}, \hyperpage{113}
+    \subitem {S\+O\+U\+N\+D\+\_\+\+D3}, \hyperpage{114}
+    \subitem {S\+O\+U\+N\+D\+\_\+\+Db0}, \hyperpage{112}
+    \subitem {S\+O\+U\+N\+D\+\_\+\+Db1}, \hyperpage{112}
+    \subitem {S\+O\+U\+N\+D\+\_\+\+Db2}, \hyperpage{113}
+    \subitem {S\+O\+U\+N\+D\+\_\+\+Db3}, \hyperpage{114}
+    \subitem {S\+O\+U\+N\+D\+\_\+\+E0}, \hyperpage{112}
+    \subitem {S\+O\+U\+N\+D\+\_\+\+E1}, \hyperpage{112}
+    \subitem {S\+O\+U\+N\+D\+\_\+\+E2}, \hyperpage{113}
+    \subitem {S\+O\+U\+N\+D\+\_\+\+E3}, \hyperpage{114}
+    \subitem {S\+O\+U\+N\+D\+\_\+\+F0}, \hyperpage{112}
+    \subitem {S\+O\+U\+N\+D\+\_\+\+F1}, \hyperpage{112}
+    \subitem {S\+O\+U\+N\+D\+\_\+\+F2}, \hyperpage{113}
+    \subitem {S\+O\+U\+N\+D\+\_\+\+F3}, \hyperpage{114}
+    \subitem {S\+O\+U\+N\+D\+\_\+\+Fb0}, \hyperpage{112}
+    \subitem {S\+O\+U\+N\+D\+\_\+\+Fb1}, \hyperpage{113}
+    \subitem {S\+O\+U\+N\+D\+\_\+\+Fb2}, \hyperpage{113}
+    \subitem {S\+O\+U\+N\+D\+\_\+\+Fb3}, \hyperpage{114}
+    \subitem {S\+O\+U\+N\+D\+\_\+\+G0}, \hyperpage{112}
+    \subitem {S\+O\+U\+N\+D\+\_\+\+G1}, \hyperpage{113}
+    \subitem {S\+O\+U\+N\+D\+\_\+\+G2}, \hyperpage{113}
+    \subitem {S\+O\+U\+N\+D\+\_\+\+G3}, \hyperpage{114}
+    \subitem {S\+O\+U\+N\+D\+\_\+\+Gb0}, \hyperpage{112}
+    \subitem {S\+O\+U\+N\+D\+\_\+\+Gb1}, \hyperpage{113}
+    \subitem {S\+O\+U\+N\+D\+\_\+\+Gb2}, \hyperpage{113}
+    \subitem {S\+O\+U\+N\+D\+\_\+\+Gb3}, \hyperpage{114}
+    \subitem {S\+O\+U\+N\+D\+\_\+\+H0}, \hyperpage{112}
+    \subitem {S\+O\+U\+N\+D\+\_\+\+H1}, \hyperpage{113}
+    \subitem {S\+O\+U\+N\+D\+\_\+\+H2}, \hyperpage{114}
+    \subitem {S\+O\+U\+N\+D\+\_\+\+H3}, \hyperpage{114}
+    \subitem {S\+O\+U\+N\+D\+\_\+\+M\+A\+X\+\_\+\+P\+R\+O\+N\+O\+U\+N\+C\+E}, 
+		\hyperpage{111}
+    \subitem {S\+O\+U\+N\+D\+\_\+\+M\+A\+X\+\_\+\+V\+O\+L\+U\+M\+E}, 
+		\hyperpage{111}
+    \subitem {S\+O\+U\+N\+D\+\_\+\+N\+A}, \hyperpage{111}
+    \subitem {S\+O\+U\+N\+D\+\_\+\+N\+U\+M\+\_\+\+O\+F\+\_\+\+S\+T\+A\+T\+E}, 
+		\hyperpage{115}
+    \subitem {S\+O\+U\+N\+D\+\_\+\+P\+R\+O\+N\+O\+U\+N\+C\+E\+\_\+\+L\+E\+N}, 
+		\hyperpage{111}
+    \subitem {S\+O\+U\+N\+D\+\_\+\+S\+T\+\_\+\+P\+L\+A\+Y}, 
+		\hyperpage{114}
+    \subitem {S\+O\+U\+N\+D\+\_\+\+S\+T\+\_\+\+R\+E\+V\+E\+R\+S\+E}, 
+		\hyperpage{115}
+    \subitem {S\+O\+U\+N\+D\+\_\+\+S\+T\+\_\+\+S\+T\+O\+P}, 
+		\hyperpage{114}
+    \subitem {S\+O\+U\+N\+D\+\_\+\+State}, \hyperpage{114}
+    \subitem {S\+O\+U\+N\+D\+\_\+get\+State}, \hyperpage{115}
+    \subitem {S\+O\+U\+N\+D\+\_\+init}, \hyperpage{115}
+    \subitem {S\+O\+U\+N\+D\+\_\+make\+Pulse}, \hyperpage{116}
+    \subitem {S\+O\+U\+N\+D\+\_\+play}, \hyperpage{116}
+    \subitem {S\+O\+U\+N\+D\+\_\+pronounce}, \hyperpage{116}
+    \subitem {S\+O\+U\+N\+D\+\_\+remove\+Tone}, \hyperpage{116}
+    \subitem {S\+O\+U\+N\+D\+\_\+reverse}, \hyperpage{116}
+    \subitem {S\+O\+U\+N\+D\+\_\+set\+Evlp\+Cycle}, \hyperpage{115}
+    \subitem {S\+O\+U\+N\+D\+\_\+set\+Tone}, \hyperpage{115}
+    \subitem {S\+O\+U\+N\+D\+\_\+set\+Volume}, \hyperpage{115}
+    \subitem {S\+O\+U\+N\+D\+\_\+state\+\_\+handler}, \hyperpage{116}
+    \subitem {S\+O\+U\+N\+D\+\_\+stop}, \hyperpage{116}
+  \item {ssrp.\+h}
+    \subitem {S\+S\+R\+P\+\_\+\+A\+D\+D\+R\+\_\+\+B\+R\+O\+A\+D\+C\+A\+S\+T}, 
+		\hyperpage{120}
+    \subitem {S\+S\+R\+P\+\_\+\+A\+D\+D\+R\+\_\+\+I\+N\+V\+A\+L\+I\+D}, 
+		\hyperpage{120}
+    \subitem {S\+S\+R\+P\+\_\+\+Address}, \hyperpage{122}
+    \subitem {S\+S\+R\+P\+\_\+\+C\+M\+D\+\_\+\+E\+X}, \hyperpage{121}
+    \subitem {S\+S\+R\+P\+\_\+\+C\+M\+D\+\_\+\+I\+N\+V\+A\+L\+I\+D}, 
+		\hyperpage{121}
+    \subitem {S\+S\+R\+P\+\_\+\+C\+M\+D\+\_\+\+J\+O\+I\+N}, 
+		\hyperpage{121}
+    \subitem {S\+S\+R\+P\+\_\+\+C\+M\+D\+\_\+\+L\+E\+A\+V\+E}, 
+		\hyperpage{121}
+    \subitem {S\+S\+R\+P\+\_\+\+C\+M\+D\+\_\+\+L\+O\+O\+P}, 
+		\hyperpage{121}
+    \subitem {S\+S\+R\+P\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+E\+Q}, 
+		\hyperpage{122}
+    \subitem {S\+S\+R\+P\+\_\+\+C\+O\+N\+\_\+\+B\+A\+C\+K}, 
+		\hyperpage{123}
+    \subitem {S\+S\+R\+P\+\_\+\+C\+O\+N\+\_\+\+F\+R\+O\+N\+T}, 
+		\hyperpage{123}
+    \subitem {S\+S\+R\+P\+\_\+\+Command}, \hyperpage{122}
+    \subitem {S\+S\+R\+P\+\_\+\+Connection}, \hyperpage{123}
+    \subitem {S\+S\+R\+P\+\_\+\+F\+L\+G\+\_\+\+E\+V\+T}, 
+		\hyperpage{121}
+    \subitem {S\+S\+R\+P\+\_\+\+F\+L\+G\+\_\+\+I\+N\+V\+A\+L\+I\+D}, 
+		\hyperpage{121}
+    \subitem {S\+S\+R\+P\+\_\+\+F\+L\+G\+\_\+\+R\+E\+Q}, 
+		\hyperpage{121}
+    \subitem {S\+S\+R\+P\+\_\+\+F\+L\+G\+\_\+\+R\+E\+S}, 
+		\hyperpage{121}
+    \subitem {S\+S\+R\+P\+\_\+\+Flag}, \hyperpage{122}
+    \subitem {S\+S\+R\+P\+\_\+\+I\+N\+V\+A\+L\+I\+D\+A\+T\+E\+\_\+\+P\+A\+C\+K\+E\+T}, 
+		\hyperpage{122}
+    \subitem {S\+S\+R\+P\+\_\+\+I\+S\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+P\+A\+C\+K\+E\+T}, 
+		\hyperpage{122}
+    \subitem {S\+S\+R\+P\+\_\+\+M\+A\+X\+\_\+\+D\+A\+T\+A}, 
+		\hyperpage{120}
+    \subitem {S\+S\+R\+P\+\_\+\+M\+A\+X\+\_\+\+N\+O\+D\+E}, 
+		\hyperpage{120}
+    \subitem {S\+S\+R\+P\+\_\+\+N\+U\+M\+\_\+\+O\+F\+\_\+\+C\+O\+N}, 
+		\hyperpage{123}
+    \subitem {S\+S\+R\+P\+\_\+\+N\+U\+M\+\_\+\+O\+F\+\_\+\+T\+R\+X}, 
+		\hyperpage{123}
+    \subitem {S\+S\+R\+P\+\_\+\+P\+A\+C\+K\+E\+T\+\_\+\+S\+P\+C}, 
+		\hyperpage{121}
+    \subitem {S\+S\+R\+P\+\_\+\+T\+M\+O\+\_\+\+R\+E\+C\+V}, 
+		\hyperpage{120}
+    \subitem {S\+S\+R\+P\+\_\+\+T\+M\+O\+\_\+\+S\+E\+N\+D}, 
+		\hyperpage{121}
+    \subitem {S\+S\+R\+P\+\_\+\+T\+R\+X\+\_\+\+R\+E\+C\+V}, 
+		\hyperpage{123}
+    \subitem {S\+S\+R\+P\+\_\+\+T\+R\+X\+\_\+\+S\+E\+N\+D}, 
+		\hyperpage{123}
+    \subitem {S\+S\+R\+P\+\_\+\+T\+R\+X\+I\+D\+\_\+\+I\+N\+V\+A\+L\+I\+D}, 
+		\hyperpage{121}
+    \subitem {S\+S\+R\+P\+\_\+\+Transaction}, \hyperpage{123}
+    \subitem {S\+S\+R\+P\+\_\+\+Transaction\+Id}, \hyperpage{123}
+    \subitem {S\+S\+R\+P\+\_\+\+V\+A\+L\+\_\+\+P\+R\+E\+A\+M\+B\+L\+E}, 
+		\hyperpage{121}
+    \subitem {S\+S\+R\+P\+\_\+end}, \hyperpage{123}
+    \subitem {S\+S\+R\+P\+\_\+exec}, \hyperpage{126}
+    \subitem {S\+S\+R\+P\+\_\+get\+Node}, \hyperpage{125}
+    \subitem {S\+S\+R\+P\+\_\+get\+Pear}, \hyperpage{125}
+    \subitem {S\+S\+R\+P\+\_\+get\+Total\+Pear}, \hyperpage{125}
+    \subitem {S\+S\+R\+P\+\_\+init}, \hyperpage{123}
+    \subitem {S\+S\+R\+P\+\_\+my\+\_\+addr}, \hyperpage{126}
+    \subitem {S\+S\+R\+P\+\_\+ready}, \hyperpage{125}
+    \subitem {S\+S\+R\+P\+\_\+recvfrom}, \hyperpage{124}
+    \subitem {S\+S\+R\+P\+\_\+send}, \hyperpage{123}
+    \subitem {S\+S\+R\+P\+\_\+sendto}, \hyperpage{124}
+    \subitem {S\+S\+R\+P\+\_\+shutdown}, \hyperpage{125}
+    \subitem {S\+S\+R\+P\+\_\+start}, \hyperpage{123}
+  \item {ssrp\+\_\+skel.\+h}
+    \subitem {S\+S\+R\+P\+\_\+\+S\+K\+E\+L\+\_\+\+L\+O\+O\+P\+B\+A\+C\+K\+\_\+\+A\+D\+D\+R}, 
+		\hyperpage{127}
+    \subitem {S\+S\+R\+P\+\_\+\+S\+K\+E\+L\+\_\+read}, \hyperpage{127}
+    \subitem {S\+S\+R\+P\+\_\+\+S\+K\+E\+L\+\_\+write}, \hyperpage{127}
+  \item {stddef.\+h}
+    \subitem {\+\_\+\+B\+O\+O\+L}, \hyperpage{129}
+    \subitem {\+\_\+\+F\+A\+L\+S\+E}, \hyperpage{129}
+    \subitem {\+\_\+\+S\+B\+Y\+T\+E}, \hyperpage{129}
+    \subitem {\+\_\+\+S\+D\+W\+O\+R\+D}, \hyperpage{129}
+    \subitem {\+\_\+\+S\+I\+N\+T}, \hyperpage{129}
+    \subitem {\+\_\+\+S\+W\+O\+R\+D}, \hyperpage{129}
+    \subitem {\+\_\+\+T\+R\+U\+E}, \hyperpage{129}
+    \subitem {\+\_\+\+U\+B\+Y\+T\+E}, \hyperpage{129}
+    \subitem {\+\_\+\+U\+D\+W\+O\+R\+D}, \hyperpage{129}
+    \subitem {\+\_\+\+U\+I\+N\+T}, \hyperpage{129}
+    \subitem {\+\_\+\+U\+W\+O\+R\+D}, \hyperpage{129}
+    \subitem {\+\_\+offsetof}, \hyperpage{128}
+    \subitem {\+\_\+sizeof\+\_\+array}, \hyperpage{128}
+  \item {stdio.\+h}
+    \subitem {\+\_\+\+S\+T\+D\+E\+R\+R}, \hyperpage{131}
+    \subitem {\+\_\+\+S\+T\+D\+I\+N}, \hyperpage{131}
+    \subitem {\+\_\+\+S\+T\+D\+O\+U\+T}, \hyperpage{131}
+    \subitem {\+\_\+dprintf}, \hyperpage{130}
+    \subitem {\+\_\+printf}, \hyperpage{131}
+  \item {stdlib.\+h}
+    \subitem {\+\_\+check\+\_\+sum}, \hyperpage{134}
+    \subitem {\+\_\+hash}, \hyperpage{134}
+    \subitem {\+\_\+itoa}, \hyperpage{134}
+    \subitem {\+\_\+msleep}, \hyperpage{133}
+    \subitem {\+\_\+next\+\_\+ring}, \hyperpage{133}
+    \subitem {\+\_\+prev\+\_\+ring}, \hyperpage{133}
+    \subitem {\+\_\+rand}, \hyperpage{134}
+    \subitem {\+\_\+srand}, \hyperpage{135}
+    \subitem {\+\_\+usleep}, \hyperpage{132}
+    \subitem {N\+U\+L\+L}, \hyperpage{132}
+  \item {string.\+h}
+    \subitem {\+\_\+memcpy}, \hyperpage{136}
+    \subitem {\+\_\+memset}, \hyperpage{136}
+    \subitem {\+\_\+strlen}, \hyperpage{135}
+
+  \indexspace
+
+  \item {U\+T\+E\+S\+T\+\_\+\+Func}
+    \subitem {unit\+\_\+test.\+h}, \hyperpage{137}
+  \item {U\+T\+E\+S\+T\+\_\+assert}
+    \subitem {unit\+\_\+test.\+h}, \hyperpage{137}
+  \item {U\+T\+E\+S\+T\+\_\+run}
+    \subitem {unit\+\_\+test.\+h}, \hyperpage{137}
+  \item {U\+T\+E\+S\+T\+\_\+run\+\_\+count}
+    \subitem {unit\+\_\+test.\+h}, \hyperpage{137}
+  \item {unit\+\_\+test.\+h}
+    \subitem {U\+T\+E\+S\+T\+\_\+\+Func}, \hyperpage{137}
+    \subitem {U\+T\+E\+S\+T\+\_\+assert}, \hyperpage{137}
+    \subitem {U\+T\+E\+S\+T\+\_\+run}, \hyperpage{137}
+    \subitem {U\+T\+E\+S\+T\+\_\+run\+\_\+count}, \hyperpage{137}
 
 \end{theindex}
