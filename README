@@ -9,42 +9,42 @@ H8 Software Development Kit(以下H8SDKと呼ぶ)の使用方法が記述された
 構成物
 ======
 - build
- H8SDKの構築に必要なファイルが格納されています。ライブラリ本体はここに
- 作成されます。H8SDKアプリケーションビルド時には以下の適切なライブラリ
- パスを設定してリンクして下さい。
+H8SDKの構築に必要なファイルが格納されています。ライブラリ本体はここに
+作成されます。H8SDKアプリケーションビルド時には以下の適切なライブラリ
+パスを設定してリンクして下さい。
 
- - build/h8sdk/Debug/h8sdk.lib
-   デバッグ版ライブラリ
+- build/h8sdk/Debug/h8sdk.lib
+デバッグ版ライブラリ
 
- - build/h8sdk/Release/h8sdk.lib
-   リリース版ライブラリ
+- build/h8sdk/Release/h8sdk.lib
+リリース版ライブラリ
 
 - doc
- インタフェース仕様書などのドキュメント類です。
+インタフェース仕様書などのドキュメント類です。
 
 - include
- H8SDKのヘッダがあります。H8SDKアプリケーションコンパイル時は、ここへ
- インクルードパスを通しておく必要があります。
+H8SDKのヘッダがあります。H8SDKアプリケーションコンパイル時は、ここへ
+インクルードパスを通しておく必要があります。
 
 - src
- H8SDKの実装コード群です。
+H8SDKの実装コード群です。
 
 - test
- H8SDKのユニットテストモジュールです。test/doc/latex/refman.pdfに使い
- 方の詳細があります。
+H8SDKのユニットテストモジュールです。test/doc/html/index.html，または
+test/doc/latex/refman.pdfに使い方の詳細があります。
 
 - Makefile
-  インタフェース仕様書を作成するためのルールが記述されています。通常は
-  特に必要ありません。実行にはGNU makeと、doxygen/latexが必要です。
+インタフェース仕様書を作成するためのルールが記述されています。通常は
+特に必要ありません。実行にはGNU makeと、doxygen/latexが必要です。
 
 - README.txt
- このファイルです。
+このファイルです。
 
 何が必要？
 ==========
 - High-Performance Embedded Workshop(HEW)
 
-コンパイル
+lコンパイル
 ==========
 1. build/h8sdk.hws をダブルクリックして開きます。
 2. 必要に応じてビルドモジュールの変更やマクロを定義します。詳細はイン
@@ -53,7 +53,7 @@ H8 Software Development Kit(以下H8SDKと呼ぶ)の使用方法が記述された
 
 使い方
 ======
-アプリケーション作成者向けの文書は doc/latex/refman.pdf にあります。
+アプリケーション作成者向けの文書は doc/html/index.html，または
+doc/latex/refman.pdf にあります。
 
-
-以上。
+// Kenji MINOURA (kenji@kandj.org)
