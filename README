@@ -34,9 +34,8 @@ H8 Software Development Kit(以下H8SDKと呼ぶ)の使用方法が記述された
  方の詳細があります。
 
 - Makefile
- インタフェース仕様書を作成するためのルールが記述されています。通常は
- 特に必要ありません。実行にはGNU makeと、別途doxygen/latexパッケージ
- (doxygen_package_for_win32.zip)が必要です。
+  インタフェース仕様書を作成するためのルールが記述されています。通常は
+  特に必要ありません。実行にはGNU makeと、doxygen/latexが必要です。
 
 - README.txt
  このファイルです。
